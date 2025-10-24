@@ -20,28 +20,25 @@ import {
   ShieldCheck,
   FileText,
   BookOpen,
-  Database,
-  Layers,
-  Cpu,
-  LineChart,
   Rocket,
   ClipboardList,
   CheckCircle2,
   Target,
-  CalendarCheck
+  TrendingUp,
+  Loader2
 } from 'lucide-react'
 import './App.css'
 import InteractivePlayground from './sections/InteractivePlayground.jsx'
 import { loadContactData, persistContactData, saveContactDraft } from './lib/contactStorage.js'
+import { createGoogleAdsCampaign, getBackendHealth } from './lib/googleAds.js'
 
 const NAV_ITEMS = [
   { id: 'services', label: 'Plataforma', color: 'border-purple-500' },
   { id: 'music', label: 'Música IA', color: 'border-cyan-400' },
   { id: 'playground', label: 'Demo Interativa', color: 'border-blue-500' },
   { id: 'legal', label: 'Agente Legal', color: 'border-pink-500' },
-  { id: 'architecture', label: 'Arquitetura', color: 'border-green-400' },
+  { id: 'campaigns', label: 'Google Ads', color: 'border-green-400' },
   { id: 'pricing', label: 'Pricing', color: 'border-orange-400' },
-  { id: 'roadmap', label: 'Roadmap', color: 'border-yellow-400' },
   { id: 'about', label: 'Sobre', color: 'border-teal-400' },
   { id: 'contact', label: 'Contato', color: 'border-blue-400' }
 ]
@@ -122,6 +119,30 @@ const MUSIC_WORKFLOW = [
   'Logs armazenam prompt, provider e direitos comerciais para auditoria.'
 ]
 
+const GOOGLE_ADS_OBJECTIVES = [
+  {
+    value: 'BRAND_AWARENESS',
+    label: 'Reconhecimento de marca',
+    description: 'Ideal para lançamentos e clipes focados em alcance, priorizando visualizações qualificadas.'
+  },
+  {
+    value: 'LEADS',
+    label: 'Captação de leads',
+    description: 'Direciona fãs para landing pages, formulários de pré-save e comunidades exclusivas.'
+  },
+  {
+    value: 'SALES',
+    label: 'Vendas / pré-save',
+    description: 'Otimizado para conversões, merchandising e tickets de turnê com foco em CPA.'
+  }
+]
+
+const GOOGLE_ADS_TIPS = [
+  'Configuração validada com Google Ads API v16, utilizando refresh token oficial.',
+  'Orçamentos são convertidos automaticamente para micros e vinculados a budgets dedicados.',
+  'Campanhas são criadas em modo pausado para revisão criativa antes da veiculação.'
+]
+
 const LEGAL_CAPABILITIES = [
   {
     icon: ShieldCheck,
@@ -141,33 +162,6 @@ const LEGAL_CAPABILITIES = [
     description:
       'Pipeline de RAG com Pinecone e embeddings GPT-4 para manter o conhecimento jurídico sempre atualizado.'
   }
-]
-
-const ARCHITECTURE_LAYERS = [
-  {
-    title: 'Frontend',
-    items: ['React + Next.js', 'Dashboard com geração guiada', 'Componentes otimizados para conversão'],
-    icon: Layers
-  },
-  {
-    title: 'Backend',
-    items: ['Node.js + Python', 'Orquestração de filas e webhooks', 'Integrações com provedores de IA'],
-    icon: Cpu
-  },
-  {
-    title: 'Dados',
-    items: ['PostgreSQL (Supabase)', 'Pinecone para RAG', 'Logs auditáveis de prompts e direitos'],
-    icon: Database
-  }
-]
-
-const INTEGRATION_HIGHLIGHTS = [
-  '🎥 Kling, Runway e Wan2.5 para vídeo',
-  '💬 InVideo AI para edição via chat',
-  '🎵 Suno AI + MusicGPT com fallback Mubert/Soundraw',
-  '⚖️ GPT-4 / Claude 3.5 com RAG jurídico',
-  '📊 Qwen + Whisper para análise de áudio',
-  '💳 Stripe, PayPal, Metricool, SendGrid e Google Analytics'
 ]
 
 const SERVICE_PLANS = [
@@ -234,81 +228,6 @@ const SAAS_PLANS = [
   }
 ]
 
-const ROADMAP_PHASES = [
-  {
-    phase: 'Fase 1 · MVP',
-    timeline: 'Mês 1-2',
-    status: 'Em andamento',
-    items: [
-      'Setup Vercel + Next.js, banco PostgreSQL e autenticação',
-      'Landing page, Stripe e fundações do dashboard',
-      'Upload de música e Kling API em progresso'
-    ]
-  },
-  {
-    phase: 'Fase 2 · Música IA',
-    timeline: 'Mês 2-3',
-    status: '🆕 Novo',
-    items: [
-      'Integração dual Suno + MusicGPT com fila e webhooks',
-      'UI avançada com preview, stems e tooltips educacionais',
-      'Beta com 5 clientes para ajustar prompts e SLAs'
-    ]
-  },
-  {
-    phase: 'Fase 3 · Agente Legal',
-    timeline: 'Mês 3-4',
-    status: '🆕 Novo',
-    items: [
-      'Coleta de legislações e termos Suno/Kling/Runway/OpenAI',
-      'RAG com Pinecone + GPT-4/Claude 3.5 para respostas com referências',
-      'Chat com histórico, FAQ e disclaimers legais'
-    ]
-  },
-  {
-    phase: 'Fase 4-7 · Expansão',
-    timeline: 'Mês 4-8',
-    status: 'Planejado',
-    items: [
-      'Integração InVideo AI, Metricool e automações',
-      'Testes de carga, documentação e onboarding',
-      'Beta fechado seguido de lançamento público'
-    ]
-  }
-]
-
-const WEEKLY_FOCUS = [
-  {
-    title: 'Geração de Música',
-    tasks: [
-      'Criar contas no GoAPI.ai e MusicGPT e validar chaves',
-      'Testar 5 faixas em cada provider e avaliar qualidade',
-      'Documentar estratégia dual-provider e resultados'
-    ]
-  },
-  {
-    title: 'Agente Legal',
-    tasks: [
-      'Mapear documentos legais prioritários',
-      'Baixar leis, termos de serviço e casos judiciais',
-      'Protótipo de prompt com GPT-4 para avaliar tom e formato'
-    ]
-  },
-  {
-    title: 'Google Ads API',
-    tasks: ['Aguardar propagação da aprovação', 'Testar criação de campanha via API', 'Planejar primeira campanha Titanio']
-  }
-]
-
-const DOCUMENTS_NEEDED = [
-  'US Copyright Act (Title 17) e DMCA',
-  'EU AI Act e AI Liability Directive',
-  'Leis brasileiras 9.610/98 (Direitos Autorais) e 13.709/18 (LGPD)',
-  'Termos de serviço: Suno, Kling, Runway, OpenAI, YouTube, Spotify',
-  'Casos: Andersen v. Stability AI, Getty v. Stability, Thaler v. Perlmutter, Authors Guild v. OpenAI',
-  'Guias: US Copyright Office AI Works, WIPO AI & IP Policy'
-]
-
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('hero')
@@ -319,6 +238,21 @@ function App() {
   const [contactPrefillSource, setContactPrefillSource] = useState(null)
   const [contactInitialized, setContactInitialized] = useState(false)
   const [isSubmittingContact, setIsSubmittingContact] = useState(false)
+  const [campaignForm, setCampaignForm] = useState({
+    name: '',
+    objective: GOOGLE_ADS_OBJECTIVES[0].value,
+    dailyBudget: '150',
+    startDate: '',
+    endDate: '',
+    targetUrl: '',
+    cpaGoal: ''
+  })
+  const [campaignErrors, setCampaignErrors] = useState({})
+  const [campaignStatus, setCampaignStatus] = useState('idle')
+  const [campaignFeedback, setCampaignFeedback] = useState('')
+  const [isCreatingCampaign, setIsCreatingCampaign] = useState(false)
+  const [campaignResult, setCampaignResult] = useState(null)
+  const [backendHealth, setBackendHealth] = useState(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -339,6 +273,29 @@ function App() {
 
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  useEffect(() => {
+    let isActive = true
+
+    const checkBackend = async () => {
+      try {
+        const result = await getBackendHealth()
+        if (isActive) {
+          setBackendHealth(result)
+        }
+      } catch {
+        if (isActive) {
+          setBackendHealth({ ok: false })
+        }
+      }
+    }
+
+    checkBackend()
+
+    return () => {
+      isActive = false
+    }
   }, [])
 
   useEffect(() => {
@@ -392,12 +349,37 @@ function App() {
     return () => clearTimeout(timeout)
   }, [contactStatus])
 
+  useEffect(() => {
+    if (campaignStatus === 'idle') {
+      return undefined
+    }
+
+    const timeout = setTimeout(() => {
+      setCampaignStatus('idle')
+      setCampaignFeedback('')
+    }, 6000)
+
+    return () => clearTimeout(timeout)
+  }, [campaignStatus])
+
   const handleContactChange = (field) => (event) => {
     const value = event.target.value
     setContactForm((prev) => ({ ...prev, [field]: value }))
     if (contactStatus !== 'idle') {
       setContactStatus('idle')
       setContactFeedback('')
+    }
+  }
+
+  const handleCampaignChange = (field) => (event) => {
+    const value = event.target.value
+    setCampaignForm((prev) => ({ ...prev, [field]: value }))
+    if (campaignStatus !== 'idle') {
+      setCampaignStatus('idle')
+      setCampaignFeedback('')
+    }
+    if (campaignErrors[field]) {
+      setCampaignErrors((prev) => ({ ...prev, [field]: undefined }))
     }
   }
 
@@ -417,6 +399,51 @@ function App() {
     if (contactForm.details.trim().length < 20) {
       errors.details = 'Descreva seu projeto com pelo menos 20 caracteres para entendermos o contexto.'
     }
+    return errors
+  }
+
+  const validateCampaignForm = () => {
+    const errors = {}
+    if (!campaignForm.name.trim()) {
+      errors.name = 'Informe o nome da campanha.'
+    } else if (campaignForm.name.trim().length < 3) {
+      errors.name = 'O nome deve ter pelo menos 3 caracteres.'
+    }
+
+    const budgetValue = Number.parseFloat(campaignForm.dailyBudget)
+    if (Number.isNaN(budgetValue) || budgetValue <= 0) {
+      errors.dailyBudget = 'Informe um orçamento diário válido (ex.: 150).' 
+    }
+
+    if (!campaignForm.startDate) {
+      errors.startDate = 'Informe a data de início.'
+    } else if (Number.isNaN(new Date(campaignForm.startDate).getTime())) {
+      errors.startDate = 'Data de início inválida.'
+    }
+
+    if (campaignForm.endDate) {
+      const end = new Date(campaignForm.endDate)
+      if (Number.isNaN(end.getTime())) {
+        errors.endDate = 'Data de término inválida.'
+      } else if (campaignForm.startDate) {
+        const start = new Date(campaignForm.startDate)
+        if (!Number.isNaN(start.getTime()) && end < start) {
+          errors.endDate = 'A data de término deve ser igual ou posterior ao início.'
+        }
+      }
+    }
+
+    if (campaignForm.cpaGoal) {
+      const cpaValue = Number.parseFloat(campaignForm.cpaGoal)
+      if (Number.isNaN(cpaValue) || cpaValue <= 0) {
+        errors.cpaGoal = 'Informe um CPA válido ou deixe em branco.'
+      }
+    }
+
+    if (campaignForm.targetUrl && !/^https?:\/\//i.test(campaignForm.targetUrl.trim())) {
+      errors.targetUrl = 'Informe uma URL válida iniciando com http:// ou https://.'
+    }
+
     return errors
   }
 
@@ -455,6 +482,55 @@ function App() {
       setContactFeedback('Não foi possível salvar seu briefing agora. Tente novamente em instantes.')
     } finally {
       setIsSubmittingContact(false)
+    }
+  }
+
+  const handleCampaignSubmit = async (event) => {
+    event.preventDefault()
+    const errors = validateCampaignForm()
+    setCampaignErrors(errors)
+    if (Object.keys(errors).length > 0) {
+      return
+    }
+
+    if (!backendHealth?.ok) {
+      setCampaignStatus('error')
+      setCampaignFeedback('API do Titanio Studio indisponível. Inicie o servidor e configure as credenciais do Google Ads.')
+      return
+    }
+
+    setIsCreatingCampaign(true)
+    setCampaignResult(null)
+    try {
+      const payload = {
+        name: campaignForm.name.trim(),
+        objective: campaignForm.objective,
+        dailyBudget: campaignForm.dailyBudget,
+        startDate: campaignForm.startDate,
+        endDate: campaignForm.endDate || undefined,
+        targetUrl: campaignForm.targetUrl?.trim() || undefined,
+        cpaGoal: campaignForm.cpaGoal ? campaignForm.cpaGoal : undefined
+      }
+
+      const response = await createGoogleAdsCampaign(payload)
+      setCampaignStatus('success')
+      setCampaignFeedback(response.message || 'Campanha criada com sucesso no Google Ads.')
+      setCampaignResult(response.campaign)
+      setCampaignErrors({})
+      setCampaignForm((prev) => ({
+        ...prev,
+        name: '',
+        dailyBudget: prev.dailyBudget,
+        startDate: prev.startDate,
+        endDate: prev.endDate,
+        targetUrl: '',
+        cpaGoal: ''
+      }))
+    } catch (error) {
+      setCampaignStatus('error')
+      setCampaignFeedback(error.message || 'Não foi possível criar a campanha. Verifique as credenciais.')
+    } finally {
+      setIsCreatingCampaign(false)
     }
   }
 
@@ -531,24 +607,24 @@ function App() {
           <p className="hero-subtitle">
             Titanio Studio é a plataforma SaaS para criar músicas com Suno AI ou MusicGPT, gerar videoclipes em Kling/Runway, editar via chat, publicar automaticamente e receber orientação legal em um único fluxo.
           </p>
-          <div className="hero-ctas">
-            <Button
-              size="lg"
-              className="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-8 py-6 text-lg"
-              onClick={() => scrollToSection('services')}
-            >
-              Ver Plataforma 3.0
-              <ArrowRight className="ml-2" size={20} />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400/10 font-semibold px-8 py-6 text-lg"
-              onClick={() => scrollToSection('roadmap')}
-            >
-              Conferir Roadmap
-            </Button>
-          </div>
+            <div className="hero-ctas">
+              <Button
+                size="lg"
+                className="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-8 py-6 text-lg"
+                onClick={() => scrollToSection('services')}
+              >
+                Ver Plataforma 3.0
+                <ArrowRight className="ml-2" size={20} />
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400/10 font-semibold px-8 py-6 text-lg"
+                onClick={() => scrollToSection('campaigns')}
+              >
+                Configurar Google Ads
+              </Button>
+            </div>
         </div>
       </section>
 
@@ -653,44 +729,219 @@ function App() {
         </div>
       </section>
 
-      {/* Architecture Section */}
-      <section id="architecture" className="section-container bg-black">
+      {/* Google Ads Section */}
+      <section id="campaigns" className="section-container bg-black">
         <div className="container mx-auto px-6 py-20">
-          <h2 className="section-title">Arquitetura Atualizada</h2>
-          <p className="text-center text-gray-400 text-lg mt-4 max-w-3xl mx-auto">
-            Uma stack moderna com camadas independentes para frontend, backend e dados. Cada módulo de IA é integrado via filas e webhooks, garantindo rastreabilidade total dos prompts e conformidade com termos de serviço.
-          </p>
-
-          <div className="grid md:grid-cols-3 gap-8 mt-12">
-            {ARCHITECTURE_LAYERS.map((layer) => (
-              <ArchitectureCard key={layer.title} layer={layer} />
-            ))}
+          <div className="max-w-4xl mx-auto text-center">
+            <span className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-400 uppercase tracking-widest">
+              <TrendingUp size={16} /> Google Ads API integrada
+            </span>
+            <h2 className="section-title mt-4">Campanhas ativas para lançamentos de artistas em minutos</h2>
+            <p className="text-gray-400 text-lg mt-6">
+              Conecte suas credenciais oficiais do Google Ads, defina objetivos, orçamento e datas e publique campanhas em modo
+              pausado direto do Titanio Studio. Ideal para dar suporte às estreias de videoclipes sem sair do fluxo de produção.
+            </p>
           </div>
 
-          <div className="mt-16 grid md:grid-cols-2 gap-10">
-            <div className="bg-black/60 border border-white/10 rounded-xl p-8">
-              <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                <LineChart size={24} className="text-cyan-400" /> Integrações de IA
-              </h3>
-              <ul className="space-y-3 text-gray-300">
-                {INTEGRATION_HIGHLIGHTS.map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <Sparkles className="mt-1 text-cyan-400" size={18} />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="bg-black/60 border border-white/10 rounded-xl p-8">
-              <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                <Rocket size={24} className="text-purple-400" /> Metas Financeiras
-              </h3>
-              <p className="text-gray-300 leading-relaxed">
-                Custos mensais estimados entre $344-589 com break-even em um cliente Basic/mês. Margem média projetada em 91,6% e receita potencial de $86,950 no ano 1 considerando add-on de música em 50% dos projetos.
-              </p>
-              <p className="text-gray-400 text-sm mt-4">
-                Monitoramento de CAC, LTV e margem é feito via dashboards Mixpanel + Stripe, alimentados pelos mesmos logs de produção.
-              </p>
+          <div className="grid lg:grid-cols-2 gap-10 mt-12">
+            <form onSubmit={handleCampaignSubmit} className="bg-black/60 border border-emerald-500/30 rounded-xl p-8 space-y-6">
+              <div className="flex items-center justify-between bg-black/50 border border-white/10 rounded-lg p-4">
+                <div>
+                  <p className="text-sm font-semibold text-white">Status da API</p>
+                  <p className="text-xs text-gray-400 mt-1">
+                    {backendHealth?.ok
+                      ? backendHealth?.data?.googleAdsConfigured
+                        ? 'Conexão ativa. Pronto para criar campanhas.'
+                        : 'Servidor ativo, configure as variáveis de ambiente do Google Ads para finalizar.'
+                      : 'Servidor inativo ou não configurado. Inicie `pnpm server` e adicione as credenciais.'}
+                  </p>
+                </div>
+                <span
+                  className={`inline-flex items-center gap-2 text-xs font-semibold px-3 py-1 rounded-full ${
+                    backendHealth?.ok
+                      ? backendHealth?.data?.googleAdsConfigured
+                        ? 'bg-emerald-500/20 text-emerald-300'
+                        : 'bg-yellow-500/20 text-yellow-300'
+                      : 'bg-red-500/20 text-red-300'
+                  }`}
+                >
+                  <span className="w-2 h-2 rounded-full bg-current" />
+                  {backendHealth?.ok
+                    ? backendHealth?.data?.googleAdsConfigured
+                      ? 'Conectado'
+                      : 'Configuração pendente'
+                    : 'Offline'}
+                </span>
+              </div>
+
+              <div>
+                <label className="block text-sm font-semibold text-white mb-1">Nome da campanha</label>
+                <input
+                  type="text"
+                  value={campaignForm.name}
+                  onChange={handleCampaignChange('name')}
+                  className="w-full bg-black/60 border border-white/10 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-emerald-400"
+                  placeholder="Lançamento Clipe - Artista X"
+                />
+                {campaignErrors.name && <p className="text-red-400 text-xs mt-1">{campaignErrors.name}</p>}
+              </div>
+
+              <div>
+                <label className="block text-sm font-semibold text-white mb-1">Objetivo</label>
+                <select
+                  value={campaignForm.objective}
+                  onChange={handleCampaignChange('objective')}
+                  className="w-full bg-black/60 border border-white/10 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-emerald-400"
+                >
+                  {GOOGLE_ADS_OBJECTIVES.map((objective) => (
+                    <option key={objective.value} value={objective.value}>
+                      {objective.label}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-semibold text-white mb-1">Orçamento diário (USD)</label>
+                  <input
+                    type="number"
+                    step="0.01"
+                    min="1"
+                    value={campaignForm.dailyBudget}
+                    onChange={handleCampaignChange('dailyBudget')}
+                    className="w-full bg-black/60 border border-white/10 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-emerald-400"
+                    placeholder="150"
+                  />
+                  {campaignErrors.dailyBudget && <p className="text-red-400 text-xs mt-1">{campaignErrors.dailyBudget}</p>}
+                </div>
+                <div>
+                  <label className="block text-sm font-semibold text-white mb-1">CPA desejado (opcional)</label>
+                  <input
+                    type="number"
+                    step="0.01"
+                    min="0"
+                    value={campaignForm.cpaGoal}
+                    onChange={handleCampaignChange('cpaGoal')}
+                    className="w-full bg-black/60 border border-white/10 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-emerald-400"
+                    placeholder="12.50"
+                  />
+                  {campaignErrors.cpaGoal && <p className="text-red-400 text-xs mt-1">{campaignErrors.cpaGoal}</p>}
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-semibold text-white mb-1">Início</label>
+                  <input
+                    type="date"
+                    value={campaignForm.startDate}
+                    onChange={handleCampaignChange('startDate')}
+                    className="w-full bg-black/60 border border-white/10 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-emerald-400"
+                  />
+                  {campaignErrors.startDate && <p className="text-red-400 text-xs mt-1">{campaignErrors.startDate}</p>}
+                </div>
+                <div>
+                  <label className="block text-sm font-semibold text-white mb-1">Término (opcional)</label>
+                  <input
+                    type="date"
+                    value={campaignForm.endDate}
+                    onChange={handleCampaignChange('endDate')}
+                    className="w-full bg-black/60 border border-white/10 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-emerald-400"
+                  />
+                  {campaignErrors.endDate && <p className="text-red-400 text-xs mt-1">{campaignErrors.endDate}</p>}
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-sm font-semibold text-white mb-1">Landing page (opcional)</label>
+                <input
+                  type="url"
+                  value={campaignForm.targetUrl}
+                  onChange={handleCampaignChange('targetUrl')}
+                  className="w-full bg-black/60 border border-white/10 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-emerald-400"
+                  placeholder="https://meulink.bio/artista"
+                />
+                {campaignErrors.targetUrl && <p className="text-red-400 text-xs mt-1">{campaignErrors.targetUrl}</p>}
+              </div>
+
+              {campaignStatus !== 'idle' && (
+                <div
+                  className={`rounded-lg border px-4 py-3 text-sm ${
+                    campaignStatus === 'success'
+                      ? 'border-emerald-500/50 bg-emerald-500/10 text-emerald-200'
+                      : 'border-red-500/50 bg-red-500/10 text-red-200'
+                  }`}
+                >
+                  {campaignFeedback}
+                  {campaignResult?.campaignResourceName && (
+                    <div className="mt-3 text-xs text-white/80 space-y-1">
+                      <p>
+                        Campanha: <code className="font-mono">{campaignResult.campaignResourceName}</code>
+                      </p>
+                      <p>
+                        Orçamento: <code className="font-mono">{campaignResult.budgetResourceName}</code>
+                      </p>
+                    </div>
+                  )}
+                </div>
+              )}
+
+              <Button
+                type="submit"
+                disabled={isCreatingCampaign || !backendHealth?.ok}
+                className="w-full justify-center bg-emerald-500 hover:bg-emerald-600 text-black font-semibold"
+              >
+                {isCreatingCampaign ? (
+                  <span className="inline-flex items-center gap-2">
+                    <Loader2 className="animate-spin" size={16} /> Criando campanha...
+                  </span>
+                ) : (
+                  'Criar campanha no Google Ads'
+                )}
+              </Button>
+            </form>
+
+            <div className="space-y-6">
+              <div className="bg-black/60 border border-white/10 rounded-xl p-8">
+                <h3 className="text-2xl font-bold text-white mb-4">Objetivos recomendados</h3>
+                <div className="space-y-4">
+                  {GOOGLE_ADS_OBJECTIVES.map((objective) => (
+                    <div key={objective.value} className="border border-white/10 rounded-lg p-4 bg-black/40">
+                      <p className="text-sm font-semibold text-emerald-300">{objective.label}</p>
+                      <p className="text-gray-300 text-sm mt-2">{objective.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="bg-black/60 border border-white/10 rounded-xl p-8">
+                <h3 className="text-2xl font-bold text-white mb-4">Boas práticas Titanio</h3>
+                <ul className="space-y-3 text-gray-300 text-sm">
+                  {GOOGLE_ADS_TIPS.map((tip) => (
+                    <li key={tip} className="flex items-start gap-3">
+                      <CheckCircle2 size={18} className="mt-1 text-emerald-400" />
+                      <span>{tip}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="bg-black/60 border border-white/10 rounded-xl p-8">
+                <h3 className="text-2xl font-bold text-white mb-4">Variáveis necessárias</h3>
+                <ul className="space-y-2 text-xs font-mono text-gray-300">
+                  <li>GOOGLE_ADS_CLIENT_ID</li>
+                  <li>GOOGLE_ADS_CLIENT_SECRET</li>
+                  <li>GOOGLE_ADS_REFRESH_TOKEN</li>
+                  <li>GOOGLE_ADS_DEVELOPER_TOKEN</li>
+                  <li>GOOGLE_ADS_CUSTOMER_ID</li>
+                  <li>GOOGLE_ADS_LOGIN_CUSTOMER_ID (opcional para MCC)</li>
+                </ul>
+                <p className="text-gray-400 text-xs mt-4">
+                  Execute <code className="font-mono">pnpm server</code> para iniciar a API local na porta 4000 e defina
+                  <code className="font-mono"> VITE_BACKEND_URL</code> no frontend ao publicar.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -716,58 +967,6 @@ function App() {
             <p>
               Receita projetada de $85,000 em serviços + $1,950 em add-ons de música IA, totalizando $86,950 com lucro estimado de $79,849. Break-even atingido com apenas um cliente Basic por mês.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Roadmap Section */}
-      <section id="roadmap" className="section-container bg-black">
-        <div className="container mx-auto px-6 py-20">
-          <h2 className="section-title">Roadmap 2025</h2>
-          <p className="text-center text-gray-400 text-lg mt-4 max-w-3xl mx-auto">
-            Linha do tempo focada em lançar a versão completa em até 8 meses, iniciando pelo MVP já em progresso e expandindo com música IA dual-provider e agente legal proprietário.
-          </p>
-
-          <div className="mt-12 grid lg:grid-cols-2 gap-10">
-            {ROADMAP_PHASES.map((phase) => (
-              <RoadmapPhase key={phase.phase} phase={phase} />
-            ))}
-          </div>
-
-          <div className="mt-16 grid lg:grid-cols-2 gap-10">
-            <div className="bg-black/60 border border-white/10 rounded-xl p-8">
-              <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                <CalendarCheck size={24} className="text-purple-400" /> Prioridades da Semana
-              </h3>
-              <div className="space-y-6">
-                {WEEKLY_FOCUS.map((focus) => (
-                  <div key={focus.title}>
-                    <h4 className="text-lg font-semibold text-white mb-2">{focus.title}</h4>
-                    <ul className="space-y-2 text-gray-300 text-sm">
-                      {focus.tasks.map((task) => (
-                        <li key={task} className="flex items-start gap-2">
-                          <Sparkles size={16} className="mt-1 text-purple-400" />
-                          <span>{task}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="bg-black/60 border border-white/10 rounded-xl p-8">
-              <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                <BookOpen size={24} className="text-cyan-400" /> Documentação Necessária
-              </h3>
-              <ul className="space-y-3 text-gray-300">
-                {DOCUMENTS_NEEDED.map((doc) => (
-                  <li key={doc} className="flex items-start gap-3">
-                    <FileText size={18} className="mt-1 text-cyan-400" />
-                    <span>{doc}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
           </div>
         </div>
       </section>
@@ -1024,26 +1223,6 @@ function LegalCapabilityCard({ capability }) {
   )
 }
 
-// Architecture Card
-function ArchitectureCard({ layer }) {
-  const Icon = layer.icon
-
-  return (
-    <div className="bg-black/60 border border-white/10 rounded-xl p-6 hover:border-white/30 transition-all duration-300">
-      <Icon size={36} className="text-cyan-400" />
-      <h3 className="text-xl font-bold text-white mt-4">{layer.title}</h3>
-      <ul className="mt-4 space-y-2 text-gray-300">
-        {layer.items.map((item) => (
-          <li key={item} className="flex items-start gap-2">
-            <CheckCircle2 size={16} className="mt-0.5 text-cyan-300" />
-            <span>{item}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
-  )
-}
-
 // Pricing Table
 function PricingTable({ title, plans, icon, type = 'service' }) {
   return (
@@ -1083,29 +1262,6 @@ function PricingTable({ title, plans, icon, type = 'service' }) {
           </div>
         ))}
       </div>
-    </div>
-  )
-}
-
-// Roadmap Phase
-function RoadmapPhase({ phase }) {
-  return (
-    <div className="bg-black/60 border border-white/10 rounded-xl p-8 hover:border-purple-400/60 transition-all duration-300">
-      <div className="flex items-center justify-between">
-        <div>
-          <h3 className="text-xl font-bold text-white">{phase.phase}</h3>
-          <p className="text-sm text-gray-400">{phase.timeline}</p>
-        </div>
-        <span className="text-sm font-semibold text-purple-400">{phase.status}</span>
-      </div>
-      <ul className="mt-6 space-y-3 text-gray-300 text-sm">
-        {phase.items.map((item) => (
-          <li key={item} className="flex items-start gap-2">
-            <Sparkles size={14} className="mt-1 text-purple-300" />
-            <span>{item}</span>
-          </li>
-        ))}
-      </ul>
     </div>
   )
 }
