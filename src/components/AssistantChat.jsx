@@ -67,28 +67,33 @@ const COMPLEX_INTENTS = [
 const SIMPLE_RESPONSES = [
   {
     test: (text) => /hor[aá]rio|funcion[aá]|atendimento/.test(text),
-    answer:
+    answer: withLlamaSignature(
       'Estamos disponíveis 24/7 via plataforma e respondemos mensagens humanas em até 1 dia útil.'
+    )
   },
   {
     test: (text) => /pre[cç]o|planos|quanto custa|valor/.test(text),
-    answer:
+    answer: withLlamaSignature(
       'Nossos planos estão descritos logo abaixo do chat. Posso sugerir o ideal quando você me contar sua necessidade.'
+    )
   },
   {
     test: (text) => /supabase|guardar dados|salvar dados|retomar briefing/.test(text),
-    answer:
+    answer: withLlamaSignature(
       'As informações que você compartilhar ficam salvas com Supabase + armazenamento local. Você pode continuar de onde parou quando voltar.'
+    )
   },
   {
     test: (text) => /pagamento|stripe|paypal|cart[aã]o/.test(text),
-    answer:
+    answer: withLlamaSignature(
       'Aceitamos Stripe e PayPal com cobrança internacional segura. Emitimos recibos automaticamente após cada contratação.'
+    )
   },
   {
     test: (text) => /suporte|contato|falar com humano/.test(text),
-    answer:
+    answer: withLlamaSignature(
       'Se preferir, posso encaminhar seu briefing para nosso time comercial e eles entram em contato por e-mail ou WhatsApp.'
+    )
   }
 ]
 
@@ -97,7 +102,7 @@ const INITIAL_MESSAGES = [
     id: 'welcome',
     role: 'assistant',
     content:
-      'Olá! Eu sou o assistente do Titanio Studio. Posso responder dúvidas rápidas aqui mesmo. Se pedir algo como criar uma música, vídeo ou campanha, vou te direcionar para os planos certos.',
+      'Olá! Eu sou o assistente do Titanio Studio. Respostas rápidas aqui são geradas pelo nosso modelo Titanio LLaMA. Se pedir algo como criar uma música, vídeo ou campanha, abro a página de pagamento do plano ideal para continuar.',
     variant: 'intro'
   }
 ]
@@ -106,9 +111,14 @@ function normalise(text) {
   return text.normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase()
 }
 
+function withLlamaSignature(text) {
+  return `${text}\n\n(Resposta gerada pelo modelo Titanio LLaMA para dúvidas rápidas.)`
+}
+
 export default function AssistantChat({
   profile,
   plans,
+  aiRecommendations = [],
   onPlanRequested,
   requestGoogleStatus
 }) {
@@ -120,6 +130,15 @@ export default function AssistantChat({
     if (!profile?.name) return null
     return profile.name.trim().split(' ')[0]
   }, [profile?.name])
+
+  const recommendations = useMemo(
+    () =>
+      aiRecommendations.map((item) => ({
+        ...item,
+        plan: item.planId ? plans.find((plan) => plan.id === item.planId) : null
+      })),
+    [aiRecommendations, plans]
+  )
 
   const handleSend = async () => {
     const trimmed = input.trim()
@@ -158,61 +177,110 @@ export default function AssistantChat({
   }
 
   return (
-    <div className="flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.01]">
-      <header className="flex items-center gap-3 border-b border-white/10 px-6 py-4">
-        <div className="flex size-10 items-center justify-center rounded-full bg-purple-500/20">
-          <Bot className="size-5 text-purple-300" />
+    <div className="flex min-h-[520px] flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#0d0d0d]/95 shadow-2xl lg:flex-row">
+      <aside className="flex w-full flex-col border-b border-white/10 bg-black/70 px-5 py-5 lg:w-72 lg:border-b-0 lg:border-r">
+        <div className="mb-4 flex items-center gap-2 text-xs uppercase tracking-wide text-white/40">
+          <Sparkles className="size-4 text-purple-300" />
+          Catálogo de IAs Titanio
         </div>
-        <div className="flex flex-col">
-          <span className="text-sm font-semibold uppercase tracking-wide text-white/60">
-            Assistente Titanio
-          </span>
-          <span className="text-sm text-white/80">
-            {firstName ? `Como posso ajudar hoje, ${firstName}?` : 'Como posso ajudar hoje?'}
-          </span>
-        </div>
-      </header>
+        <nav className="flex-1 space-y-4 overflow-y-auto pr-1">
+          {recommendations.length === 0 && (
+            <p className="text-sm text-white/60">
+              Personalizamos modelos IA para cada cliente. Compartilhe seu objetivo no formulário ao lado.
+            </p>
+          )}
+          {recommendations.map((item) => (
+            <article
+              key={item.id}
+              className="rounded-xl border border-white/10 bg-white/[0.02] p-4 text-sm transition hover:border-purple-400/40"
+            >
+              <div className="flex items-start justify-between gap-3">
+                <div>
+                  <h3 className="text-base font-semibold text-white">{item.title}</h3>
+                  <p className="mt-1 text-xs text-white/60">{item.planLabel}</p>
+                </div>
+              </div>
+              <p className="mt-3 text-white/70">{item.description}</p>
+              <p className="mt-3 text-xs text-white/50">
+                Melhor para: <span className="text-white/80">{item.bestFor}</span>
+              </p>
+              {item.plan && (
+                <Button
+                  type="button"
+                  variant="ghost"
+                  className="mt-4 w-full justify-center border border-purple-400/40 bg-purple-500/10 text-xs font-semibold text-purple-100 hover:bg-purple-500/20"
+                  onClick={() => onPlanRequested?.(item.plan.id)}
+                >
+                  Escolher {item.plan.title}
+                </Button>
+              )}
+            </article>
+          ))}
+        </nav>
+      </aside>
 
-      <div className="flex-1 space-y-4 overflow-y-auto px-6 py-6">
-        {messages.map((message) => (
-          <ChatMessage key={message.id} message={message} plans={plans} />
-        ))}
-        {isSending && (
-          <div className="flex items-center gap-3 text-sm text-white/70">
-            <Loader2 className="size-4 animate-spin" />
-            Gerando resposta...
+      <div className="flex flex-1 flex-col">
+        <header className="flex flex-col gap-1 border-b border-white/10 px-6 py-4 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex items-center gap-3">
+            <div className="flex size-10 items-center justify-center rounded-full bg-purple-500/20">
+              <Bot className="size-5 text-purple-300" />
+            </div>
+            <div className="flex flex-col">
+              <span className="text-sm font-semibold uppercase tracking-wide text-white/60">
+                Assistente Titanio
+              </span>
+              <span className="text-xs text-white/50">Modelo ativo: Titanio LLaMA (perguntas rápidas)</span>
+              <span className="text-sm text-white/80">
+                {firstName ? `Como posso ajudar hoje, ${firstName}?` : 'Como posso ajudar hoje?'}
+              </span>
+            </div>
           </div>
-        )}
-      </div>
+          <p className="mt-3 text-xs text-white/40 sm:mt-0">
+            Pedidos complexos abrem automaticamente o checkout do plano recomendado.
+          </p>
+        </header>
 
-      <form
-        className="flex flex-col gap-3 border-t border-white/10 px-6 py-4"
-        onSubmit={(event) => {
-          event.preventDefault()
-          handleSend()
-        }}
-      >
-        <label className="text-xs font-medium uppercase tracking-wide text-white/40">
-          Pergunte algo
-        </label>
-        <div className="flex items-center gap-3">
-          <input
-            className="flex-1 rounded-lg border border-white/10 bg-black/60 px-4 py-3 text-sm text-white outline-none ring-0 transition focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-400/40"
-            placeholder="Ex.: Como funciona o pagamento?"
-            value={input}
-            onChange={(event) => setInput(event.target.value)}
-            disabled={isSending}
-          />
-          <Button
-            type="submit"
-            disabled={isSending || !input.trim()}
-            className="bg-purple-500/90 px-5 py-6 text-sm font-semibold text-white hover:bg-purple-500"
-          >
-            {isSending ? <Loader2 className="size-4 animate-spin" /> : <Send className="size-4" />}
-            <span className="hidden sm:inline">Enviar</span>
-          </Button>
+        <div className="flex-1 space-y-4 overflow-y-auto px-6 py-6">
+          {messages.map((message) => (
+            <ChatMessage key={message.id} message={message} plans={plans} />
+          ))}
+          {isSending && (
+            <div className="flex items-center gap-3 text-sm text-white/70">
+              <Loader2 className="size-4 animate-spin" />
+              Gerando resposta com Titanio LLaMA...
+            </div>
+          )}
         </div>
-      </form>
+
+        <form
+          className="flex flex-col gap-3 border-t border-white/10 px-6 py-4"
+          onSubmit={(event) => {
+            event.preventDefault()
+            handleSend()
+          }}
+        >
+          <label className="text-xs font-medium uppercase tracking-wide text-white/40">
+            Pergunte algo
+          </label>
+          <div className="flex items-center gap-3">
+            <input
+              className="flex-1 rounded-lg border border-white/10 bg-black/60 px-4 py-3 text-sm text-white outline-none ring-0 transition focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-400/40"
+              placeholder="Ex.: Como funciona o pagamento?"
+              value={input}
+              onChange={(event) => setInput(event.target.value)}
+              disabled={isSending}
+            />
+            <Button
+              type="submit"
+              disabled={isSending || !input.trim()}
+              className="bg-purple-500/90 px-5 py-6 text-sm font-semibold text-white hover:bg-purple-500"
+            >
+              {isSending ? <Loader2 className="size-4 animate-spin" /> : <Send className="size-4" />}
+              <span className="hidden sm:inline">Enviar</span>
+            </Button>
+          </div>
+        </form>
+      </div>
     </div>
   )
 }
@@ -225,18 +293,28 @@ function ChatMessage({ message, plans }) {
     <div className={`flex ${isAssistant ? 'justify-start' : 'justify-end'}`}>
       <div
         className={`max-w-[85%] rounded-2xl px-5 py-4 text-sm leading-relaxed shadow-lg transition ${
-          isAssistant
-            ? 'bg-white/[0.06] text-white'
-            : 'bg-purple-500/90 text-white'
+          isAssistant ? 'bg-white/[0.06] text-white' : 'bg-purple-500/90 text-white'
         }`}
       >
         <RichText>{message.content}</RichText>
         {message.variant === 'plan' && plan && (
-          <div className="mt-4 flex items-center gap-2 rounded-xl border border-purple-400/40 bg-purple-500/10 px-3 py-2 text-xs text-purple-100">
-            <Sparkles className="size-4" />
-            <span>
-              Confira os detalhes do plano <strong>{plan.title}</strong> logo abaixo.
-            </span>
+          <div className="mt-4 space-y-3 rounded-xl border border-purple-400/40 bg-purple-500/10 p-3 text-xs text-purple-100">
+            <div className="flex items-center gap-2">
+              <Sparkles className="size-4" />
+              <span>
+                Confira os detalhes do plano <strong>{plan.title}</strong> logo abaixo.
+              </span>
+            </div>
+            {plan.checkoutUrl && (
+              <a
+                href={plan.checkoutUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex w-full items-center justify-center rounded-lg border border-purple-400/50 bg-purple-500/20 px-3 py-2 font-semibold text-purple-100 transition hover:bg-purple-500/30"
+              >
+                Abrir página de pagamento
+              </a>
+            )}
           </div>
         )}
         {message.variant === 'status-ok' && (
@@ -248,9 +326,7 @@ function ChatMessage({ message, plans }) {
         {message.variant === 'status-error' && (
           <div className="mt-3 flex items-center gap-2 rounded-xl border border-amber-400/40 bg-amber-500/10 px-3 py-2 text-xs text-amber-100">
             <AlertTriangle className="size-4" />
-            <span>
-              Não consegui confirmar a integração agora. Nossa equipe pode ajudar pelo plano de campanhas.
-            </span>
+            <span>Não consegui confirmar a integração agora. Nossa equipe pode ajudar pelo plano de campanhas.</span>
           </div>
         )}
       </div>
@@ -310,13 +386,13 @@ async function resolveIntent(message, {
       ? `Esse pedido é melhor conduzido com o plano ${plan.title}.`
       : 'Esse pedido é melhor conduzido com um dos nossos planos especializados.'
 
-    const summary = plan?.summary
-      ? `\n\nResumo do plano: ${plan.summary}`
+    const summary = plan?.summary ? `\n\nResumo do plano: ${plan.summary}` : ''
+    const checkoutInfo = plan?.checkoutUrl
+      ? `\n\nAbrimos a página de pagamento (${plan.checkoutUrl}) em uma nova aba para você finalizar quando preferir.`
       : ''
 
     return {
-      message:
-        `${intro}\n\nPosso conectar você com o time comercial para abrir a produção. Basta confirmar seus dados no formulário ao lado.${summary}`,
+      message: `${intro}\n\nEstou abrindo a página de pagamento correspondente para acelerar sua contratação.${checkoutInfo}${summary}`,
       variant: 'plan',
       planId: complexIntent.id
     }
@@ -331,10 +407,11 @@ async function resolveIntent(message, {
   }
 
   return {
-    message:
+    message: withLlamaSignature(
       firstName
         ? `Obrigado, ${firstName}! Se quiser ajuda com algo mais elaborado (música, vídeo, anúncios ou consultoria legal), me avise que eu indico o plano certo.`
-        : 'Posso responder perguntas rápidas aqui mesmo. Se precisar que criemos algo por você, me diga e eu indico o plano certo.',
+        : 'Posso responder perguntas rápidas aqui mesmo. Se precisar que criemos algo por você, me diga e eu indico o plano certo.'
+    ),
     variant: 'simple'
   }
 }

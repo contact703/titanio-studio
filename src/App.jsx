@@ -32,7 +32,8 @@ const PLAN_OPTIONS = [
       'Produção musical dual-provider (Suno AI + MusicGPT)',
       'Videoclipes gerados com Kling / Runway e edição via InVideo AI',
       'Direitos comerciais com suporte do agente legal integrado'
-    ]
+    ],
+    checkoutUrl: 'https://titaniostudio.com/pagamento?plano=music-premium'
   },
   {
     id: 'video',
@@ -44,7 +45,8 @@ const PLAN_OPTIONS = [
       'Geração de cenas em 4K com Kling, Runway e Wan 2.5',
       'Revisões ilimitadas pelo chat InVideo AI',
       'Entrega pronta para YouTube, Instagram e Metricool'
-    ]
+    ],
+    checkoutUrl: 'https://titaniostudio.com/pagamento?plano=video-standard'
   },
   {
     id: 'ads',
@@ -56,7 +58,8 @@ const PLAN_OPTIONS = [
       'Criação de campanhas Search/Video com refresh automático de token',
       'Otimização diária de budget e públicos',
       'Relatórios semanais e integração com Supabase CRM'
-    ]
+    ],
+    checkoutUrl: 'https://titaniostudio.com/pagamento?plano=google-ads'
   },
   {
     id: 'legal',
@@ -68,7 +71,56 @@ const PLAN_OPTIONS = [
       'Respostas com citação de leis e Termos de Serviço',
       'Checklist de licenciamento e fair use por projeto',
       'Atualizações mensais de jurisprudência e ToS'
-    ]
+    ],
+    checkoutUrl: 'https://titaniostudio.com/pagamento?plano=legal'
+  }
+]
+
+const AI_RECOMMENDATIONS = [
+  {
+    id: 'llama-concierge',
+    title: 'Titanio LLaMA Concierge',
+    description:
+      'Modelo proprietário baseado em LLaMA para responder rapidamente dúvidas gerais, status de integrações e orientações iniciais.',
+    bestFor: 'Perguntas rápidas sobre processos, pagamentos e status.',
+    planLabel: 'Incluso em todos os planos',
+    planId: null
+  },
+  {
+    id: 'music-gpt',
+    title: 'MusicGPT Maestro',
+    description:
+      'Geração musical avançada com stems separados, voices AI e personalização completa.',
+    bestFor: 'Artistas que precisam de faixas exclusivas com múltiplas versões.',
+    planLabel: 'Recomendado: Plano Premium Música & Vídeo',
+    planId: 'music'
+  },
+  {
+    id: 'suno-express',
+    title: 'Suno Express',
+    description:
+      'Entrega em minutos de trilhas completas com prompts simples e ajustes rápidos.',
+    bestFor: 'Quem precisa lançar um single com velocidade e ótima relação custo-benefício.',
+    planLabel: 'Recomendado: Plano Standard Videoclipe IA',
+    planId: 'video'
+  },
+  {
+    id: 'legal-guardian',
+    title: 'Agente Legal RAG',
+    description:
+      'Especialista em direitos autorais que cruza legislações e termos de uso para cada projeto.',
+    bestFor: 'Produtores que desejam operar com segurança jurídica internacional.',
+    planLabel: 'Recomendado: Plano Consultoria Legal IA',
+    planId: 'legal'
+  },
+  {
+    id: 'ads-orchestrator',
+    title: 'Orquestrador Google Ads',
+    description:
+      'Automação completa da API v16 com criação e otimização diária de campanhas.',
+    bestFor: 'Campanhas de lançamento e sempre-on para artistas.',
+    planLabel: 'Recomendado: Plano Campanhas Google Ads',
+    planId: 'ads'
   }
 ]
 
@@ -172,6 +224,18 @@ export default function App() {
     setSyncState('pending')
   }
 
+  const handlePlanRedirect = useCallback(
+    (planId) => {
+      setHighlightedPlan(planId)
+      const plan = PLAN_OPTIONS.find((item) => item.id === planId)
+
+      if (plan?.checkoutUrl && typeof window !== 'undefined') {
+        window.open(plan.checkoutUrl, '_blank', 'noopener')
+      }
+    },
+    []
+  )
+
   return (
     <div className="app-container min-h-screen bg-black text-white">
       <header className="border-b border-white/10 bg-black/80 backdrop-blur">
@@ -197,11 +261,14 @@ export default function App() {
       </header>
 
       <main className="mx-auto flex max-w-6xl flex-col gap-10 px-6 py-10">
-        <section className="grid gap-6 lg:grid-cols-[1.5fr_1fr]">
+        <section className="grid gap-6 xl:grid-cols-[minmax(0,1.75fr)_minmax(0,1fr)]">
           <AssistantChat
             profile={profile}
             plans={PLAN_OPTIONS}
-            onPlanRequested={setHighlightedPlan}
+            aiRecommendations={AI_RECOMMENDATIONS}
+            onPlanRequested={(planId) => {
+              handlePlanRedirect(planId)
+            }}
             requestGoogleStatus={refreshGoogleStatus}
           />
 
@@ -280,6 +347,15 @@ export default function App() {
                     </li>
                   ))}
                 </ul>
+                {plan.checkoutUrl && (
+                  <Button
+                    type="button"
+                    className="mt-auto w-full justify-center bg-purple-500/90 text-sm font-semibold text-white hover:bg-purple-500"
+                    onClick={() => handlePlanRedirect(plan.id)}
+                  >
+                    Ir para pagamento
+                  </Button>
+                )}
               </article>
             ))}
           </div>
