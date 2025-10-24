@@ -1,1148 +1,321 @@
-import { useState, useEffect } from 'react'
-import { Button } from '@/components/ui/button.jsx'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import {
-  Menu,
-  X,
-  Sparkles,
-  Music,
-  Film,
-  ArrowRight,
-  Mail,
-  Instagram,
-  Youtube,
-  Linkedin,
+  AlertCircle,
   Bot,
-  Scale,
-  Send,
-  CreditCard,
-  Mic2,
-  AudioWaveform,
-  ShieldCheck,
-  FileText,
-  BookOpen,
-  Rocket,
-  ClipboardList,
   CheckCircle2,
-  Target,
-  TrendingUp,
-  Loader2
+  Database,
+  Loader2,
+  Mail,
+  MessageSquare,
+  ShieldCheck,
+  Sparkles,
+  Zap
 } from 'lucide-react'
 import './App.css'
-import InteractivePlayground from './sections/InteractivePlayground.jsx'
-import { loadContactData, persistContactData, saveContactDraft } from './lib/contactStorage.js'
-import { createGoogleAdsCampaign, getBackendHealth } from './lib/googleAds.js'
+import AssistantChat from './components/AssistantChat.jsx'
+import { Button } from './components/ui/button.jsx'
+import {
+  loadContactData,
+  persistContactData,
+  saveContactDraft
+} from './lib/contactStorage.js'
+import { getBackendHealth } from './lib/googleAds.js'
 
-const NAV_ITEMS = [
-  { id: 'services', label: 'Plataforma', color: 'border-purple-500' },
-  { id: 'music', label: 'Música IA', color: 'border-cyan-400' },
-  { id: 'playground', label: 'Demo Interativa', color: 'border-blue-500' },
-  { id: 'legal', label: 'Agente Legal', color: 'border-pink-500' },
-  { id: 'campaigns', label: 'Google Ads', color: 'border-green-400' },
-  { id: 'pricing', label: 'Pricing', color: 'border-orange-400' },
-  { id: 'about', label: 'Sobre', color: 'border-teal-400' },
-  { id: 'contact', label: 'Contato', color: 'border-blue-400' }
-]
-
-const PLATFORM_FEATURES = [
+const PLAN_OPTIONS = [
   {
-    icon: Film,
-    title: 'Geração de Vídeos com IA',
-    description:
-      'Kling, Runway e Wan 2.5 para videoclipes em 4K com opções de lip-sync, efeitos avançados e fluxos automatizados de revisão.',
-    color: 'purple'
+    id: 'music',
+    title: 'Plano Premium Música & Vídeo',
+    price: 'A partir de $3.000',
+    summary:
+      'Inclui composição com Suno AI e MusicGPT, stems completos, videoclipes em 4K e consultoria criativa dedicada.',
+    features: [
+      'Produção musical dual-provider (Suno AI + MusicGPT)',
+      'Videoclipes gerados com Kling / Runway e edição via InVideo AI',
+      'Direitos comerciais com suporte do agente legal integrado'
+    ]
   },
   {
-    icon: Bot,
-    title: 'Edição via Chat com InVideo AI',
-    description:
-      'Refine cortes, legendas e efeitos conversando com um assistente conectado ao InVideo AI, mantendo histórico de alterações.',
-    color: 'cyan'
+    id: 'video',
+    title: 'Plano Standard Videoclipe IA',
+    price: 'A partir de $2.000',
+    summary:
+      'Fluxo completo de roteiro a entrega com lip-sync, revisões ilimitadas e publicação automatizada.',
+    features: [
+      'Geração de cenas em 4K com Kling, Runway e Wan 2.5',
+      'Revisões ilimitadas pelo chat InVideo AI',
+      'Entrega pronta para YouTube, Instagram e Metricool'
+    ]
   },
   {
-    icon: Music,
-    title: 'Geração de Música Integrada',
-    description:
-      'Fluxo dual-provider com Suno AI (GoAPI.ai) e MusicGPT para stems, voice changing e mais de 1000 vozes personalizadas.',
-    color: 'green'
+    id: 'ads',
+    title: 'Plano Campanhas Google Ads',
+    price: 'Sob consulta',
+    summary:
+      'Configuramos, otimizamos e monitoramos campanhas com a API oficial Google Ads v16 conectada ao seu catálogo.',
+    features: [
+      'Criação de campanhas Search/Video com refresh automático de token',
+      'Otimização diária de budget e públicos',
+      'Relatórios semanais e integração com Supabase CRM'
+    ]
   },
   {
-    icon: Scale,
-    title: 'Agente Legal de IA',
-    description:
-      'Consultoria automatizada em direitos autorais, licenciamento e uso comercial com RAG e referências a ToS e legislações globais.',
-    color: 'purple'
-  },
-  {
-    icon: Send,
-    title: 'Publicação Automatizada',
-    description:
-      'Integração com Metricool para agendamento inteligente em Instagram, YouTube e outras plataformas após a aprovação do cliente.',
-    color: 'cyan'
-  },
-  {
-    icon: CreditCard,
-    title: 'Pagamentos Integrados',
-    description:
-      'Stripe e PayPal com planos premium, add-ons de música IA e billing automatizado para serviços e SaaS.',
-    color: 'green'
+    id: 'legal',
+    title: 'Plano Consultoria Legal IA',
+    price: 'Incluído nos planos pagos',
+    summary:
+      'Chat jurídico RAG com GPT-4/Claude, referências oficiais e acompanhamento das atualizações legislativas.',
+    features: [
+      'Respostas com citação de leis e Termos de Serviço',
+      'Checklist de licenciamento e fair use por projeto',
+      'Atualizações mensais de jurisprudência e ToS'
+    ]
   }
 ]
 
-const MUSIC_PROVIDERS = [
+const PROFILE_FIELDS = [
+  { key: 'name', label: 'Nome completo', placeholder: 'Ex.: Maria Silva' },
+  { key: 'email', label: 'E-mail', placeholder: 'exemplo@dominio.com' },
   {
-    name: 'Suno AI',
-    role: 'Primário',
-    highlight: 'Perfeito para projetos rápidos com excelente relação custo-benefício.',
-    promptExample: '"Upbeat pop song about chasing dreams"',
-    features: ['Entrega em ~2 minutos', 'Ajustes instantâneos e looping', 'Automação com geração de vídeo pós-aprovação'],
-    pricing: 'Premium: +$50-100 por faixa',
-    technology: 'API via GoAPI.ai (não oficial) • Custo: $0.02/música',
-    icon: Mic2
-  },
-  {
-    name: 'MusicGPT',
-    role: 'Secundário Avançado',
-    highlight: 'Ideal para clientes que precisam de stems, vozes customizadas e controle fino.',
-    promptExample: 'Prompt detalhado com referências de estilo, arranjo e instrumentação.',
-    features: ['2 versões por prompt', 'Download de stems separados', 'Voice changing com 1000+ vozes IA'],
-    pricing: 'Pro Plan: $0.03/música (créditos iniciais de $20)',
-    technology: 'API oficial MusicGPT • RAG de presets de voz',
-    icon: AudioWaveform
+    key: 'goal',
+    label: 'Objetivo principal',
+    placeholder: 'Ex.: Lançar um single com videoclipe e campanha'
   }
 ]
 
-const MUSIC_WORKFLOW = [
-  'Cliente escolhe upload ou geração com IA diretamente no fluxo do projeto.',
-  'Prompt é enviado ao provider selecionado com presets de gênero, mood, duração e vocal.',
-  'Preview em tempo real com controles de play/pause e histórico de versões.',
-  'Aprovação dispara automação de vídeo e sincronização com o roteiro visual.',
-  'Logs armazenam prompt, provider e direitos comerciais para auditoria.'
-]
-
-const GOOGLE_ADS_OBJECTIVES = [
-  {
-    value: 'BRAND_AWARENESS',
-    label: 'Reconhecimento de marca',
-    description: 'Ideal para lançamentos e clipes focados em alcance, priorizando visualizações qualificadas.'
-  },
-  {
-    value: 'LEADS',
-    label: 'Captação de leads',
-    description: 'Direciona fãs para landing pages, formulários de pré-save e comunidades exclusivas.'
-  },
-  {
-    value: 'SALES',
-    label: 'Vendas / pré-save',
-    description: 'Otimizado para conversões, merchandising e tickets de turnê com foco em CPA.'
-  }
-]
-
-const GOOGLE_ADS_TIPS = [
-  'Configuração validada com Google Ads API v16, utilizando refresh token oficial.',
-  'Orçamentos são convertidos automaticamente para micros e vinculados a budgets dedicados.',
-  'Campanhas são criadas em modo pausado para revisão criativa antes da veiculação.'
-]
-
-const LEGAL_CAPABILITIES = [
-  {
-    icon: ShieldCheck,
-    title: 'Orientação Comercial',
-    description:
-      'Garantia sobre usos permitidos em plataformas como YouTube, Spotify e campanhas pagas, com recomendações práticas.'
-  },
-  {
-    icon: FileText,
-    title: 'Referências Legislativas',
-    description:
-      'Links diretos para Suno ToS, EU AI Act, US Copyright Office, Lei 9.610/98 e jurisprudências relevantes.'
-  },
-  {
-    icon: BookOpen,
-    title: 'Base Atualizada Mensalmente',
-    description:
-      'Pipeline de RAG com Pinecone e embeddings GPT-4 para manter o conhecimento jurídico sempre atualizado.'
-  }
-]
-
-const SERVICE_PLANS = [
-  {
-    name: 'Basic',
-    price: '$1,250',
-    includes: ['1 videoclipe (3 min) em HD 1080p', '2 revisões guiadas', 'Upload de música própria', 'Agente Legal incluído'],
-    addons: ['+$75 Geração de Música IA']
-  },
-  {
-    name: 'Standard',
-    price: '$2,000',
-    includes: [
-      '1 videoclipe (4 min) em Full HD + 4K',
-      '3 revisões',
-      'Upload de música própria',
-      'Agente Legal incluído',
-      'Color grading profissional'
-    ],
-    addons: ['+$75 Música IA', '+$50 Lip-sync']
-  },
-  {
-    name: 'Premium',
-    price: '$3,000',
-    includes: [
-      '1 videoclipe (5 min) em 4K',
-      'Revisões ilimitadas',
-      'Música IA inclusa (Suno/MusicGPT)',
-      'Agente Legal incluído',
-      'Efeitos avançados e lip-sync'
-    ],
-    addons: []
-  }
-]
-
-const SAAS_PLANS = [
-  {
-    name: 'Free',
-    price: '$0/mês',
-    credits: '10 créditos',
-    music: 'Sem música IA',
-    legal: 'Agente Legal (limitado)'
-  },
-  {
-    name: 'Creator',
-    price: '$49/mês',
-    credits: '100 créditos',
-    music: '5 músicas IA/mês',
-    legal: 'Agente Legal completo'
-  },
-  {
-    name: 'Pro',
-    price: '$99/mês',
-    credits: '300 créditos',
-    music: '20 músicas IA/mês',
-    legal: 'Agente Legal completo'
-  },
-  {
-    name: 'Studio',
-    price: '$299/mês',
-    credits: '1000 créditos',
-    music: 'Música IA ilimitada',
-    legal: 'Agente Legal + consultoria'
-  }
-]
-
-function App() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [activeSection, setActiveSection] = useState('hero')
-  const [contactForm, setContactForm] = useState({ name: '', email: '', solution: '', details: '' })
-  const [contactErrors, setContactErrors] = useState({})
-  const [contactStatus, setContactStatus] = useState('idle')
-  const [contactFeedback, setContactFeedback] = useState('')
-  const [contactPrefillSource, setContactPrefillSource] = useState(null)
-  const [contactInitialized, setContactInitialized] = useState(false)
-  const [isSubmittingContact, setIsSubmittingContact] = useState(false)
-  const [campaignForm, setCampaignForm] = useState({
-    name: '',
-    objective: GOOGLE_ADS_OBJECTIVES[0].value,
-    dailyBudget: '150',
-    startDate: '',
-    endDate: '',
-    targetUrl: '',
-    cpaGoal: ''
-  })
-  const [campaignErrors, setCampaignErrors] = useState({})
-  const [campaignStatus, setCampaignStatus] = useState('idle')
-  const [campaignFeedback, setCampaignFeedback] = useState('')
-  const [isCreatingCampaign, setIsCreatingCampaign] = useState(false)
-  const [campaignResult, setCampaignResult] = useState(null)
-  const [backendHealth, setBackendHealth] = useState(null)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = ['hero', ...NAV_ITEMS.map((item) => item.id)]
-      const scrollPosition = window.scrollY + 100
-
-      for (const section of sections) {
-        const element = document.getElementById(section)
-        if (element) {
-          const { offsetTop, offsetHeight } = element
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(section)
-            break
-          }
-        }
-      }
-    }
-
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
-  useEffect(() => {
-    let isActive = true
-
-    const checkBackend = async () => {
-      try {
-        const result = await getBackendHealth()
-        if (isActive) {
-          setBackendHealth(result)
-        }
-      } catch {
-        if (isActive) {
-          setBackendHealth({ ok: false })
-        }
-      }
-    }
-
-    checkBackend()
-
-    return () => {
-      isActive = false
-    }
-  }, [])
+export default function App() {
+  const [profile, setProfile] = useState({ name: '', email: '', goal: '' })
+  const [profileSource, setProfileSource] = useState(null)
+  const [syncState, setSyncState] = useState('idle')
+  const [lastSyncedAt, setLastSyncedAt] = useState(null)
+  const [highlightedPlan, setHighlightedPlan] = useState(null)
+  const [googleStatus, setGoogleStatus] = useState({ state: 'idle', checkedAt: null })
 
   useEffect(() => {
     let isMounted = true
-
-    const hydrateContactForm = async () => {
-      const { data, source } = await loadContactData()
+    ;(async () => {
+      const result = await loadContactData()
       if (!isMounted) return
-
-      if (data) {
-        setContactForm({
-          name: data.name ?? '',
-          email: data.email ?? '',
-          solution: data.solution ?? '',
-          details: data.details ?? ''
+      if (result?.data) {
+        setProfile({
+          name: result.data.name ?? '',
+          email: result.data.email ?? '',
+          goal: result.data.details ?? result.data.goal ?? ''
         })
-        if (source === 'supabase') {
-          setContactPrefillSource('Carregamos automaticamente seu último briefing sincronizado pela Supabase.')
-        } else if (source === 'local') {
-          setContactPrefillSource('Continuamos do ponto onde você parou neste dispositivo.')
-        }
       }
-
-      setContactInitialized(true)
-    }
-
-    hydrateContactForm()
-
+      if (result?.source) {
+        setProfileSource(result.source)
+      }
+    })()
     return () => {
       isMounted = false
     }
   }, [])
 
-  useEffect(() => {
-    if (!contactInitialized) {
-      return
-    }
-    saveContactDraft(contactForm)
-  }, [contactForm, contactInitialized])
+  const profileIsEmpty = useMemo(
+    () => !profile.name && !profile.email && !profile.goal,
+    [profile]
+  )
 
   useEffect(() => {
-    if (contactStatus === 'idle') {
-      return undefined
-    }
+    if (syncState !== 'pending') return
 
-    const timeout = setTimeout(() => {
-      setContactStatus('idle')
-      setContactFeedback('')
-    }, 6000)
-
-    return () => clearTimeout(timeout)
-  }, [contactStatus])
-
-  useEffect(() => {
-    if (campaignStatus === 'idle') {
-      return undefined
-    }
-
-    const timeout = setTimeout(() => {
-      setCampaignStatus('idle')
-      setCampaignFeedback('')
-    }, 6000)
-
-    return () => clearTimeout(timeout)
-  }, [campaignStatus])
-
-  const handleContactChange = (field) => (event) => {
-    const value = event.target.value
-    setContactForm((prev) => ({ ...prev, [field]: value }))
-    if (contactStatus !== 'idle') {
-      setContactStatus('idle')
-      setContactFeedback('')
-    }
-  }
-
-  const handleCampaignChange = (field) => (event) => {
-    const value = event.target.value
-    setCampaignForm((prev) => ({ ...prev, [field]: value }))
-    if (campaignStatus !== 'idle') {
-      setCampaignStatus('idle')
-      setCampaignFeedback('')
-    }
-    if (campaignErrors[field]) {
-      setCampaignErrors((prev) => ({ ...prev, [field]: undefined }))
-    }
-  }
-
-  const validateContactForm = () => {
-    const errors = {}
-    if (!contactForm.name.trim()) {
-      errors.name = 'Informe seu nome completo.'
-    }
-    if (!contactForm.email.trim()) {
-      errors.email = 'Informe um e-mail válido.'
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contactForm.email.trim())) {
-      errors.email = 'Formato de e-mail inválido.'
-    }
-    if (!contactForm.solution) {
-      errors.solution = 'Selecione a solução que melhor representa sua necessidade.'
-    }
-    if (contactForm.details.trim().length < 20) {
-      errors.details = 'Descreva seu projeto com pelo menos 20 caracteres para entendermos o contexto.'
-    }
-    return errors
-  }
-
-  const validateCampaignForm = () => {
-    const errors = {}
-    if (!campaignForm.name.trim()) {
-      errors.name = 'Informe o nome da campanha.'
-    } else if (campaignForm.name.trim().length < 3) {
-      errors.name = 'O nome deve ter pelo menos 3 caracteres.'
-    }
-
-    const budgetValue = Number.parseFloat(campaignForm.dailyBudget)
-    if (Number.isNaN(budgetValue) || budgetValue <= 0) {
-      errors.dailyBudget = 'Informe um orçamento diário válido (ex.: 150).' 
-    }
-
-    if (!campaignForm.startDate) {
-      errors.startDate = 'Informe a data de início.'
-    } else if (Number.isNaN(new Date(campaignForm.startDate).getTime())) {
-      errors.startDate = 'Data de início inválida.'
-    }
-
-    if (campaignForm.endDate) {
-      const end = new Date(campaignForm.endDate)
-      if (Number.isNaN(end.getTime())) {
-        errors.endDate = 'Data de término inválida.'
-      } else if (campaignForm.startDate) {
-        const start = new Date(campaignForm.startDate)
-        if (!Number.isNaN(start.getTime()) && end < start) {
-          errors.endDate = 'A data de término deve ser igual ou posterior ao início.'
-        }
+    const timeout = setTimeout(async () => {
+      if (!profile.email) {
+        setSyncState(profileIsEmpty ? 'idle' : 'local')
+        return
       }
-    }
 
-    if (campaignForm.cpaGoal) {
-      const cpaValue = Number.parseFloat(campaignForm.cpaGoal)
-      if (Number.isNaN(cpaValue) || cpaValue <= 0) {
-        errors.cpaGoal = 'Informe um CPA válido ou deixe em branco.'
-      }
-    }
+      setSyncState('syncing')
+      const result = await persistContactData({
+        name: profile.name,
+        email: profile.email,
+        solution: profile.goal,
+        details: profile.goal
+      })
 
-    if (campaignForm.targetUrl && !/^https?:\/\//i.test(campaignForm.targetUrl.trim())) {
-      errors.targetUrl = 'Informe uma URL válida iniciando com http:// ou https://.'
-    }
-
-    return errors
-  }
-
-  const handleContactSubmit = async (event) => {
-    event.preventDefault()
-    const errors = validateContactForm()
-    setContactErrors(errors)
-    if (Object.keys(errors).length > 0) {
-      return
-    }
-
-    setIsSubmittingContact(true)
-    try {
-      const { error, storedInSupabase } = await persistContactData(contactForm)
-      if (error) {
-        setContactStatus('error')
-        setContactFeedback(
-          'Não foi possível sincronizar com a Supabase agora. Seus dados continuam salvos neste dispositivo.'
-        )
+      if (result?.storedInSupabase) {
+        setSyncState('synced')
+        setLastSyncedAt(new Date())
       } else {
-        setContactStatus('success')
-        setContactFeedback(
-          storedInSupabase
-            ? 'Briefing salvo e sincronizado com a Supabase. Você poderá continuar em qualquer dispositivo.'
-            : 'Briefing salvo localmente. Adicione as variáveis de ambiente da Supabase para sincronizar na nuvem.'
-        )
-        setContactPrefillSource(
-          storedInSupabase
-            ? 'Carregamos automaticamente seu último briefing sincronizado pela Supabase.'
-            : 'Continuamos do ponto onde você parou neste dispositivo.'
-        )
+        setSyncState('local')
       }
-    } catch (error) {
-      console.error('[contact-form] Falha ao salvar briefing:', error)
-      setContactStatus('error')
-      setContactFeedback('Não foi possível salvar seu briefing agora. Tente novamente em instantes.')
-    } finally {
-      setIsSubmittingContact(false)
-    }
-  }
+    }, 700)
 
-  const handleCampaignSubmit = async (event) => {
-    event.preventDefault()
-    const errors = validateCampaignForm()
-    setCampaignErrors(errors)
-    if (Object.keys(errors).length > 0) {
-      return
-    }
+    return () => clearTimeout(timeout)
+  }, [profile, profileIsEmpty, syncState])
 
-    if (!backendHealth?.ok) {
-      setCampaignStatus('error')
-      setCampaignFeedback('API do Titanio Studio indisponível. Inicie o servidor e configure as credenciais do Google Ads.')
-      return
-    }
+  const refreshGoogleStatus = useCallback(async () => {
+    setGoogleStatus({ state: 'loading', checkedAt: null })
+    const result = await getBackendHealth().catch(() => ({ ok: false }))
+    setGoogleStatus({
+      state: result?.ok ? 'ok' : 'error',
+      checkedAt: new Date()
+    })
+    return result
+  }, [])
 
-    setIsCreatingCampaign(true)
-    setCampaignResult(null)
-    try {
-      const payload = {
-        name: campaignForm.name.trim(),
-        objective: campaignForm.objective,
-        dailyBudget: campaignForm.dailyBudget,
-        startDate: campaignForm.startDate,
-        endDate: campaignForm.endDate || undefined,
-        targetUrl: campaignForm.targetUrl?.trim() || undefined,
-        cpaGoal: campaignForm.cpaGoal ? campaignForm.cpaGoal : undefined
-      }
+  useEffect(() => {
+    refreshGoogleStatus()
+  }, [refreshGoogleStatus])
 
-      const response = await createGoogleAdsCampaign(payload)
-      setCampaignStatus('success')
-      setCampaignFeedback(response.message || 'Campanha criada com sucesso no Google Ads.')
-      setCampaignResult(response.campaign)
-      setCampaignErrors({})
-      setCampaignForm((prev) => ({
-        ...prev,
-        name: '',
-        dailyBudget: prev.dailyBudget,
-        startDate: prev.startDate,
-        endDate: prev.endDate,
-        targetUrl: '',
-        cpaGoal: ''
-      }))
-    } catch (error) {
-      setCampaignStatus('error')
-      setCampaignFeedback(error.message || 'Não foi possível criar a campanha. Verifique as credenciais.')
-    } finally {
-      setIsCreatingCampaign(false)
-    }
-  }
-
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-      setIsMenuOpen(false)
-    }
+  const handleFieldChange = (key, value) => {
+    setProfile((previous) => {
+      const next = { ...previous, [key]: value }
+      saveContactDraft({
+        name: next.name,
+        email: next.email,
+        solution: next.goal,
+        details: next.goal
+      })
+      return next
+    })
+    setSyncState('pending')
   }
 
   return (
-    <div className="app-container">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <div className="text-2xl font-extrabold text-white cursor-pointer" onClick={() => scrollToSection('hero')}>
-              TITANIO<span className="text-purple-500">.</span>
+    <div className="app-container min-h-screen bg-black text-white">
+      <header className="border-b border-white/10 bg-black/80 backdrop-blur">
+        <div className="mx-auto flex max-w-6xl flex-col gap-3 px-6 py-6 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex items-center gap-3">
+            <div className="flex size-10 items-center justify-center rounded-full bg-purple-500/20">
+              <Sparkles className="size-5 text-purple-300" />
             </div>
-
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-6">
-              {NAV_ITEMS.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className={`text-sm font-medium transition-colors border-b-2 ${item.color} pb-1 ${
-                    activeSection === item.id ? 'text-white' : 'text-white/80 hover:text-white'
-                  }`}
-                >
-                  {item.label}
-                </button>
-              ))}
-            </div>
-
-            {/* Mobile Menu Button */}
-            <button
-              className="md:hidden text-white"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
-
-          {/* Mobile Navigation */}
-          {isMenuOpen && (
-            <div className="md:hidden mt-4 pb-4 space-y-3">
-              {NAV_ITEMS.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className={`block w-full text-left text-sm font-medium transition-colors border-l-2 ${item.color} pl-4 py-2 ${
-                    activeSection === item.id ? 'text-white' : 'text-white/80 hover:text-white'
-                  }`}
-                >
-                  {item.label}
-                </button>
-              ))}
-            </div>
-          )}
-        </div>
-      </nav>
-
-      {/* Hero Section */}
-      <section id="hero" className="hero-section">
-        <div className="hero-background"></div>
-        <div className="hero-overlay"></div>
-        <div className="hero-content">
-          <h1 className="hero-title">
-            Videoclipes completos,<br />
-            <span className="text-purple-500">com música original e segurança jurídica.</span>
-          </h1>
-          <p className="hero-subtitle">
-            Titanio Studio é a plataforma SaaS para criar músicas com Suno AI ou MusicGPT, gerar videoclipes em Kling/Runway, editar via chat, publicar automaticamente e receber orientação legal em um único fluxo.
-          </p>
-            <div className="hero-ctas">
-              <Button
-                size="lg"
-                className="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-8 py-6 text-lg"
-                onClick={() => scrollToSection('services')}
-              >
-                Ver Plataforma 3.0
-                <ArrowRight className="ml-2" size={20} />
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400/10 font-semibold px-8 py-6 text-lg"
-                onClick={() => scrollToSection('campaigns')}
-              >
-                Configurar Google Ads
-              </Button>
-            </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section id="services" className="section-container bg-zinc-950">
-        <div className="container mx-auto px-6 py-20">
-          <h2 className="section-title">Plataforma Titanio Studio 3.0</h2>
-          <p className="text-center text-gray-400 text-lg mt-4 max-w-3xl mx-auto">
-            Uma esteira completa para artistas, estúdios e criadores: geração de música, videoclipes, edição colaborativa, publicação automatizada e suporte jurídico. Tudo com margens de até 99% em add-ons de música.
-          </p>
-          <div className="grid md:grid-cols-3 gap-8 mt-12">
-            {PLATFORM_FEATURES.map((feature) => (
-              <ServiceCard
-                key={feature.title}
-                icon={<feature.icon size={40} />}
-                title={feature.title}
-                description={feature.description}
-                color={feature.color}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Music Section */}
-      <section id="music" className="section-container bg-black">
-        <div className="container mx-auto px-6 py-20">
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12">
-            <div className="flex-1">
-              <span className="inline-flex items-center gap-2 text-sm font-semibold text-purple-400 uppercase tracking-widest">
-                <Sparkles size={16} /> Geração de Música IA
-              </span>
-              <h2 className="section-title text-left mt-4">Suno AI + MusicGPT: escolha o melhor fluxo para cada projeto</h2>
-              <p className="text-gray-300 text-lg leading-relaxed mt-6">
-                Ofereça música original em minutos ou produções avançadas com stems, vozes customizadas e controle granular. Cada provider é tratado como um módulo plugável, com métricas de custo, qualidade e SLA monitoradas pelo backend.
+            <div>
+              <h1 className="text-lg font-semibold">Titanio Studio</h1>
+              <p className="text-sm text-white/60">
+                Plataforma completa para música, vídeo, campanhas e consultoria legal.
               </p>
-              <ul className="mt-8 space-y-3 text-gray-300">
-                {MUSIC_WORKFLOW.map((step) => (
-                  <li key={step} className="flex items-start gap-3">
-                    <CheckCircle2 className="mt-1 text-purple-400" size={18} />
-                    <span>{step}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="flex-1 grid gap-6">
-              {MUSIC_PROVIDERS.map((provider) => (
-                <MusicProviderCard key={provider.name} provider={provider} />
-              ))}
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Playground Section */}
-      <section id="playground" className="section-container bg-zinc-950">
-        <div className="container mx-auto px-6 py-20">
-          <h2 className="section-title">Experimente o Titanio Studio</h2>
-          <p className="text-center text-gray-400 text-lg mt-4 max-w-3xl mx-auto">
-            Simule um projeto com música IA, estime margens e faça perguntas ao agente jurídico para entender como a plataforma funciona na prática.
-          </p>
-          <div className="mt-12">
-            <InteractivePlayground />
+          <div className="flex flex-wrap items-center gap-3 text-xs text-white/50">
+            <StatusPill icon={Bot} label="Assistente IA" />
+            <StatusPill icon={ShieldCheck} label="Agente Legal" />
+            <StatusPill icon={Zap} label="Google Ads API v16" />
+            <StatusPill icon={Database} label="Supabase CRM" />
           </div>
         </div>
-      </section>
+      </header>
 
-      {/* Legal Agent Section */}
-      <section id="legal" className="section-container bg-zinc-950">
-        <div className="container mx-auto px-6 py-20">
-          <div className="max-w-5xl mx-auto text-center">
-            <span className="inline-flex items-center gap-2 text-sm font-semibold text-pink-400 uppercase tracking-widest">
-              <Scale size={16} /> Agente Legal de IA
-            </span>
-            <h2 className="section-title mt-4">Segurança jurídica integrada para cada decisão criativa</h2>
-            <p className="text-gray-400 text-lg mt-6">
-              Chatbot especializado em direitos autorais, licenciamento e uso de IA. Trabalha com RAG, cita termos de serviço e aponta obrigações por região em tempo real, reduzindo riscos e acelerando aprovações.
-            </p>
-          </div>
+      <main className="mx-auto flex max-w-6xl flex-col gap-10 px-6 py-10">
+        <section className="grid gap-6 lg:grid-cols-[1.5fr_1fr]">
+          <AssistantChat
+            profile={profile}
+            plans={PLAN_OPTIONS}
+            onPlanRequested={setHighlightedPlan}
+            requestGoogleStatus={refreshGoogleStatus}
+          />
 
-          <div className="grid md:grid-cols-3 gap-8 mt-12">
-            {LEGAL_CAPABILITIES.map((capability) => (
-              <LegalCapabilityCard key={capability.title} capability={capability} />
-            ))}
-          </div>
-
-          <div className="mt-16 bg-black/60 border border-pink-500/30 rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Exemplo real de atendimento</h3>
-            <div className="grid md:grid-cols-2 gap-6 text-left">
-              <div className="bg-black/60 border border-white/10 rounded-lg p-6">
-                <p className="text-sm font-semibold text-purple-400 mb-2">Cliente</p>
-                <p className="text-gray-300 leading-relaxed">“Posso usar uma música gerada pelo Suno comercialmente?”</p>
+          <aside className="flex flex-col gap-6 rounded-2xl border border-white/10 bg-white/[0.02] p-6">
+            <div className="flex items-center gap-3">
+              <div className="flex size-10 items-center justify-center rounded-full bg-emerald-500/10">
+                <MessageSquare className="size-5 text-emerald-300" />
               </div>
-              <div className="bg-black/60 border border-white/10 rounded-lg p-6">
-                <p className="text-sm font-semibold text-pink-400 mb-2">Agente Titanio</p>
-                <p className="text-gray-300 leading-relaxed">
-                  “Sim! Termos Suno (v2.1, seção 4.2) garantem direitos comerciais para planos Pro/Premier. Recomenda-se manter assinatura ativa, guardar prompt e recibos. Referências: Suno ToS, US Copyright Office (2023), EU AI Act art. 52.”
+              <div>
+                <h2 className="text-base font-semibold">Seus dados salvos</h2>
+                <p className="text-xs text-white/60">
+                  Informe como prefere ser contactado. Salvamos localmente e no Supabase.
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Google Ads Section */}
-      <section id="campaigns" className="section-container bg-black">
-        <div className="container mx-auto px-6 py-20">
-          <div className="max-w-4xl mx-auto text-center">
-            <span className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-400 uppercase tracking-widest">
-              <TrendingUp size={16} /> Google Ads API integrada
-            </span>
-            <h2 className="section-title mt-4">Campanhas ativas para lançamentos de artistas em minutos</h2>
-            <p className="text-gray-400 text-lg mt-6">
-              Conecte suas credenciais oficiais do Google Ads, defina objetivos, orçamento e datas e publique campanhas em modo
-              pausado direto do Titanio Studio. Ideal para dar suporte às estreias de videoclipes sem sair do fluxo de produção.
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-10 mt-12">
-            <form onSubmit={handleCampaignSubmit} className="bg-black/60 border border-emerald-500/30 rounded-xl p-8 space-y-6">
-              <div className="flex items-center justify-between bg-black/50 border border-white/10 rounded-lg p-4">
-                <div>
-                  <p className="text-sm font-semibold text-white">Status da API</p>
-                  <p className="text-xs text-gray-400 mt-1">
-                    {backendHealth?.ok
-                      ? backendHealth?.data?.googleAdsConfigured
-                        ? 'Conexão ativa. Pronto para criar campanhas.'
-                        : 'Servidor ativo, configure as variáveis de ambiente do Google Ads para finalizar.'
-                      : 'Servidor inativo ou não configurado. Inicie `pnpm server` e adicione as credenciais.'}
-                  </p>
-                </div>
-                <span
-                  className={`inline-flex items-center gap-2 text-xs font-semibold px-3 py-1 rounded-full ${
-                    backendHealth?.ok
-                      ? backendHealth?.data?.googleAdsConfigured
-                        ? 'bg-emerald-500/20 text-emerald-300'
-                        : 'bg-yellow-500/20 text-yellow-300'
-                      : 'bg-red-500/20 text-red-300'
-                  }`}
-                >
-                  <span className="w-2 h-2 rounded-full bg-current" />
-                  {backendHealth?.ok
-                    ? backendHealth?.data?.googleAdsConfigured
-                      ? 'Conectado'
-                      : 'Configuração pendente'
-                    : 'Offline'}
-                </span>
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-white mb-1">Nome da campanha</label>
-                <input
-                  type="text"
-                  value={campaignForm.name}
-                  onChange={handleCampaignChange('name')}
-                  className="w-full bg-black/60 border border-white/10 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-emerald-400"
-                  placeholder="Lançamento Clipe - Artista X"
-                />
-                {campaignErrors.name && <p className="text-red-400 text-xs mt-1">{campaignErrors.name}</p>}
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-white mb-1">Objetivo</label>
-                <select
-                  value={campaignForm.objective}
-                  onChange={handleCampaignChange('objective')}
-                  className="w-full bg-black/60 border border-white/10 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-emerald-400"
-                >
-                  {GOOGLE_ADS_OBJECTIVES.map((objective) => (
-                    <option key={objective.value} value={objective.value}>
-                      {objective.label}
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-semibold text-white mb-1">Orçamento diário (USD)</label>
+            <form className="space-y-4">
+              {PROFILE_FIELDS.map((field) => (
+                <div key={field.key} className="space-y-2">
+                  <label className="text-xs font-semibold uppercase tracking-wide text-white/40">
+                    {field.label}
+                  </label>
                   <input
-                    type="number"
-                    step="0.01"
-                    min="1"
-                    value={campaignForm.dailyBudget}
-                    onChange={handleCampaignChange('dailyBudget')}
-                    className="w-full bg-black/60 border border-white/10 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-emerald-400"
-                    placeholder="150"
+                    className="w-full rounded-lg border border-white/10 bg-black/60 px-4 py-3 text-sm text-white outline-none transition focus:border-purple-400 focus:ring-2 focus:ring-purple-400/40"
+                    placeholder={field.placeholder}
+                    value={profile[field.key] || ''}
+                    onChange={(event) => handleFieldChange(field.key, event.target.value)}
                   />
-                  {campaignErrors.dailyBudget && <p className="text-red-400 text-xs mt-1">{campaignErrors.dailyBudget}</p>}
                 </div>
-                <div>
-                  <label className="block text-sm font-semibold text-white mb-1">CPA desejado (opcional)</label>
-                  <input
-                    type="number"
-                    step="0.01"
-                    min="0"
-                    value={campaignForm.cpaGoal}
-                    onChange={handleCampaignChange('cpaGoal')}
-                    className="w-full bg-black/60 border border-white/10 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-emerald-400"
-                    placeholder="12.50"
-                  />
-                  {campaignErrors.cpaGoal && <p className="text-red-400 text-xs mt-1">{campaignErrors.cpaGoal}</p>}
-                </div>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-semibold text-white mb-1">Início</label>
-                  <input
-                    type="date"
-                    value={campaignForm.startDate}
-                    onChange={handleCampaignChange('startDate')}
-                    className="w-full bg-black/60 border border-white/10 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-emerald-400"
-                  />
-                  {campaignErrors.startDate && <p className="text-red-400 text-xs mt-1">{campaignErrors.startDate}</p>}
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-white mb-1">Término (opcional)</label>
-                  <input
-                    type="date"
-                    value={campaignForm.endDate}
-                    onChange={handleCampaignChange('endDate')}
-                    className="w-full bg-black/60 border border-white/10 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-emerald-400"
-                  />
-                  {campaignErrors.endDate && <p className="text-red-400 text-xs mt-1">{campaignErrors.endDate}</p>}
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-white mb-1">Landing page (opcional)</label>
-                <input
-                  type="url"
-                  value={campaignForm.targetUrl}
-                  onChange={handleCampaignChange('targetUrl')}
-                  className="w-full bg-black/60 border border-white/10 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-emerald-400"
-                  placeholder="https://meulink.bio/artista"
-                />
-                {campaignErrors.targetUrl && <p className="text-red-400 text-xs mt-1">{campaignErrors.targetUrl}</p>}
-              </div>
-
-              {campaignStatus !== 'idle' && (
-                <div
-                  className={`rounded-lg border px-4 py-3 text-sm ${
-                    campaignStatus === 'success'
-                      ? 'border-emerald-500/50 bg-emerald-500/10 text-emerald-200'
-                      : 'border-red-500/50 bg-red-500/10 text-red-200'
-                  }`}
-                >
-                  {campaignFeedback}
-                  {campaignResult?.campaignResourceName && (
-                    <div className="mt-3 text-xs text-white/80 space-y-1">
-                      <p>
-                        Campanha: <code className="font-mono">{campaignResult.campaignResourceName}</code>
-                      </p>
-                      <p>
-                        Orçamento: <code className="font-mono">{campaignResult.budgetResourceName}</code>
-                      </p>
-                    </div>
-                  )}
-                </div>
-              )}
-
-              <Button
-                type="submit"
-                disabled={isCreatingCampaign || !backendHealth?.ok}
-                className="w-full justify-center bg-emerald-500 hover:bg-emerald-600 text-black font-semibold"
-              >
-                {isCreatingCampaign ? (
-                  <span className="inline-flex items-center gap-2">
-                    <Loader2 className="animate-spin" size={16} /> Criando campanha...
-                  </span>
-                ) : (
-                  'Criar campanha no Google Ads'
-                )}
-              </Button>
+              ))}
             </form>
 
-            <div className="space-y-6">
-              <div className="bg-black/60 border border-white/10 rounded-xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-4">Objetivos recomendados</h3>
-                <div className="space-y-4">
-                  {GOOGLE_ADS_OBJECTIVES.map((objective) => (
-                    <div key={objective.value} className="border border-white/10 rounded-lg p-4 bg-black/40">
-                      <p className="text-sm font-semibold text-emerald-300">{objective.label}</p>
-                      <p className="text-gray-300 text-sm mt-2">{objective.description}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
+            <ProfileStatus
+              profileSource={profileSource}
+              syncState={syncState}
+              lastSyncedAt={lastSyncedAt}
+            />
+          </aside>
+        </section>
 
-              <div className="bg-black/60 border border-white/10 rounded-xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-4">Boas práticas Titanio</h3>
-                <ul className="space-y-3 text-gray-300 text-sm">
-                  {GOOGLE_ADS_TIPS.map((tip) => (
-                    <li key={tip} className="flex items-start gap-3">
-                      <CheckCircle2 size={18} className="mt-1 text-emerald-400" />
-                      <span>{tip}</span>
+        <section className="space-y-6">
+          <div className="flex items-center justify-between gap-4">
+            <h2 className="text-xl font-semibold">Planos recomendados</h2>
+            <Button
+              className="bg-purple-500/80 px-4 py-5 text-sm font-semibold text-white hover:bg-purple-500"
+              onClick={() => setHighlightedPlan(null)}
+              type="button"
+            >
+              Limpar destaque
+            </Button>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2">
+            {PLAN_OPTIONS.map((plan) => (
+              <article
+                key={plan.id}
+                className={`flex h-full flex-col gap-4 rounded-2xl border bg-white/[0.02] p-6 transition ${
+                  highlightedPlan === plan.id
+                    ? 'border-purple-400/60 ring-2 ring-purple-500/40'
+                    : 'border-white/10 hover:border-purple-400/30'
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <h3 className="text-lg font-semibold">{plan.title}</h3>
+                    <p className="text-sm text-white/60">{plan.summary}</p>
+                  </div>
+                  <span className="rounded-full border border-white/10 bg-white/[0.06] px-3 py-1 text-xs text-white/70">
+                    {plan.price}
+                  </span>
+                </div>
+                <ul className="space-y-2 text-sm text-white/70">
+                  {plan.features.map((feature) => (
+                    <li key={feature} className="flex items-start gap-2">
+                      <CheckCircle2 className="mt-0.5 size-4 text-purple-300" />
+                      <span>{feature}</span>
                     </li>
                   ))}
                 </ul>
-              </div>
-
-              <div className="bg-black/60 border border-white/10 rounded-xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-4">Variáveis necessárias</h3>
-                <ul className="space-y-2 text-xs font-mono text-gray-300">
-                  <li>GOOGLE_ADS_CLIENT_ID</li>
-                  <li>GOOGLE_ADS_CLIENT_SECRET</li>
-                  <li>GOOGLE_ADS_REFRESH_TOKEN</li>
-                  <li>GOOGLE_ADS_DEVELOPER_TOKEN</li>
-                  <li>GOOGLE_ADS_CUSTOMER_ID</li>
-                  <li>GOOGLE_ADS_LOGIN_CUSTOMER_ID (opcional para MCC)</li>
-                </ul>
-                <p className="text-gray-400 text-xs mt-4">
-                  Execute <code className="font-mono">pnpm server</code> para iniciar a API local na porta 4000 e defina
-                  <code className="font-mono"> VITE_BACKEND_URL</code> no frontend ao publicar.
-                </p>
-              </div>
-            </div>
+              </article>
+            ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Pricing Section */}
-      <section id="pricing" className="section-container bg-zinc-950">
-        <div className="container mx-auto px-6 py-20">
-          <h2 className="section-title">Pricing Atualizado</h2>
-          <p className="text-center text-gray-400 text-lg mt-4 max-w-3xl mx-auto">
-            Modelos híbridos de serviço e SaaS garantem receita recorrente e upsell com geração de música. Margem média de 91,6% considerando uso de Suno/MusicGPT como add-on.
-          </p>
-
-          <div className="mt-12 grid lg:grid-cols-2 gap-10">
-            <PricingTable title="Planos de Produção" plans={SERVICE_PLANS} icon={<ClipboardList size={24} className="text-purple-400" />} />
-            <PricingTable title="Planos SaaS (Futuro)" plans={SAAS_PLANS} icon={<Rocket size={24} className="text-cyan-400" />} type="saas" />
+        <section className="space-y-4">
+          <h2 className="text-xl font-semibold">Status das integrações</h2>
+          <div className="grid gap-4 lg:grid-cols-3">
+            <IntegrationCard
+              title="Google Ads Backend"
+              description="Servidor Node que renova tokens OAuth e cria campanhas pela API v16."
+              state={googleStatus.state}
+              checkedAt={googleStatus.checkedAt}
+              onRefresh={refreshGoogleStatus}
+            />
+            <IntegrationCard
+              title="Supabase Briefing Store"
+              description="Tabela REST sincronizada com seus dados de contato e objetivos."
+              state={profile.email ? (syncState === 'synced' ? 'ok' : 'pending') : 'local'}
+            />
+            <IntegrationCard
+              title="Pagamentos Stripe"
+              description="Cobrança internacional segura para todos os planos e add-ons."
+              state="ok"
+            />
           </div>
+        </section>
+      </main>
 
-          <div className="mt-12 bg-black/60 border border-white/10 rounded-xl p-8 text-gray-300">
-            <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-              <Target size={24} className="text-yellow-400" /> Objetivo Financeiro Ano 1
-            </h3>
-            <p>
-              Receita projetada de $85,000 em serviços + $1,950 em add-ons de música IA, totalizando $86,950 com lucro estimado de $79,849. Break-even atingido com apenas um cliente Basic por mês.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* About Section */}
-      <section id="about" className="section-container bg-black">
-        <div className="container mx-auto px-6 py-20">
-          <h2 className="section-title">Por que o Titanio Studio é único?</h2>
-          <div className="max-w-4xl mx-auto mt-12 space-y-6 text-gray-300 text-lg leading-relaxed">
-            <p>
-              Construímos a plataforma pensando na jornada completa do artista: da criação musical à publicação e compliance. A versão 3.0 combina fluxo dual de música, geração de vídeo, edição por chat, distribuição automatizada e consultoria legal especializada.
-            </p>
-            <p>
-              Nenhum concorrente oferece simultaneamente música IA integrada e um agente jurídico treinado em legislações EUA/EU/BR e termos de uso das principais plataformas. Nosso objetivo é que cada cliente produza com confiança comercial desde o primeiro briefing.
-            </p>
-            <p>
-              Estamos investindo entre $5k-$8k para lançar em 7-8 meses, com ROI estimado de $80k no primeiro ano. O roadmap é executado com ciclos quinzenais, validando cada integração com clientes beta e especialistas legais.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section id="contact" className="section-container bg-gradient-to-br from-purple-900/20 to-pink-900/20">
-        <div className="container mx-auto px-6 py-20">
-          <h2 className="section-title">Pronto para Amplificar Sua Criatividade?</h2>
-          <p className="text-center text-gray-300 text-lg mt-4 max-w-2xl mx-auto mb-12">
-            Entre em contato conosco e descubra como o Titanio Studio pode transformar suas ideias em realidade.
-          </p>
-          <form onSubmit={handleContactSubmit} className="max-w-md mx-auto space-y-4">
-            {contactPrefillSource && (
-              <p className="text-sm text-cyan-300 bg-cyan-500/10 border border-cyan-400/30 rounded-lg px-4 py-3" role="note">
-                {contactPrefillSource}
-              </p>
-            )}
-            <div className="space-y-2">
-              <input
-                type="text"
-                value={contactForm.name}
-                onChange={handleContactChange('name')}
-                placeholder="Seu Nome"
-                aria-invalid={Boolean(contactErrors.name)}
-                aria-describedby={contactErrors.name ? 'contact-name-error' : undefined}
-                className="w-full px-4 py-3 bg-black/50 border border-purple-500/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-purple-500"
-              />
-              {contactErrors.name && (
-                <p id="contact-name-error" className="text-xs text-rose-400">
-                  {contactErrors.name}
-                </p>
-              )}
-            </div>
-            <div className="space-y-2">
-              <input
-                type="email"
-                value={contactForm.email}
-                onChange={handleContactChange('email')}
-                placeholder="Seu Email"
-                aria-invalid={Boolean(contactErrors.email)}
-                aria-describedby={contactErrors.email ? 'contact-email-error' : undefined}
-                className="w-full px-4 py-3 bg-black/50 border border-purple-500/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-purple-500"
-              />
-              {contactErrors.email && (
-                <p id="contact-email-error" className="text-xs text-rose-400">
-                  {contactErrors.email}
-                </p>
-              )}
-            </div>
-            <div className="space-y-2">
-              <select
-                value={contactForm.solution}
-                onChange={handleContactChange('solution')}
-                aria-invalid={Boolean(contactErrors.solution)}
-                aria-describedby={contactErrors.solution ? 'contact-solution-error' : undefined}
-                className="w-full px-4 py-3 bg-black/50 border border-purple-500/30 rounded-lg text-white focus:outline-none focus:border-purple-500"
-              >
-                <option value="">Qual solução você precisa?</option>
-                <option value="full-video">Videoclipe completo (música + vídeo)</option>
-                <option value="music-ia">Somente geração de música IA</option>
-                <option value="legal">Consultoria com Agente Legal</option>
-                <option value="saas">Planos SaaS Titanio Studio</option>
-                <option value="other">Outro projeto personalizado</option>
-              </select>
-              {contactErrors.solution && (
-                <p id="contact-solution-error" className="text-xs text-rose-400">
-                  {contactErrors.solution}
-                </p>
-              )}
-            </div>
-            <div className="space-y-2">
-              <textarea
-                placeholder="Conte-nos sobre seu projeto"
-                rows="4"
-                value={contactForm.details}
-                onChange={handleContactChange('details')}
-                aria-invalid={Boolean(contactErrors.details)}
-                aria-describedby={contactErrors.details ? 'contact-details-error' : undefined}
-                className="w-full px-4 py-3 bg-black/50 border border-purple-500/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-purple-500"
-              ></textarea>
-              {contactErrors.details && (
-                <p id="contact-details-error" className="text-xs text-rose-400">
-                  {contactErrors.details}
-                </p>
-              )}
-            </div>
-            <Button
-              type="submit"
-              size="lg"
-              className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-6 text-lg"
-              disabled={isSubmittingContact}
-            >
-              {isSubmittingContact ? 'Enviando...' : 'Falar com o Titanio Studio'}
-              <Mail className="ml-2" size={20} />
-            </Button>
-            {contactStatus !== 'idle' && contactFeedback && (
-              <p
-                className={`text-sm text-center rounded-lg px-4 py-3 border ${
-                  contactStatus === 'success'
-                    ? 'text-emerald-300 bg-emerald-500/10 border-emerald-400/40'
-                    : 'text-rose-300 bg-rose-500/10 border-rose-400/40'
-                }`}
-                role="status"
-                aria-live="polite"
-              >
-                {contactFeedback}
-              </p>
-            )}
-          </form>
-          <p className="text-sm text-gray-400 text-center mt-6">
-            Precisa de uma resposta jurídica imediata? Use o Agente Legal diretamente no dashboard após criar sua conta.
-          </p>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-black border-t border-white/10">
-        <div className="container mx-auto px-6 py-12">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="text-2xl font-extrabold text-white mb-4">
-                TITANIO<span className="text-purple-500">.</span>
-              </div>
-              <p className="text-gray-400 text-sm">
-                Amplificando a criatividade através da inteligência artificial.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-white font-semibold mb-4">Links Rápidos</h3>
-              <ul className="space-y-2">
-                {NAV_ITEMS.map((item) => (
-                  <li key={item.id}>
-                    <button
-                      onClick={() => scrollToSection(item.id)}
-                      className="text-gray-400 hover:text-white text-sm transition-colors"
-                    >
-                      {item.label}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-white font-semibold mb-4">Contato</h3>
-              <p className="text-gray-400 text-sm mb-2">contato@titaniostudio.com</p>
-              <p className="text-gray-400 text-sm">+55 (11) 9999-9999</p>
-            </div>
-            <div>
-              <h3 className="text-white font-semibold mb-4">Redes Sociais</h3>
-              <div className="flex gap-4">
-                <Instagram className="text-gray-400 hover:text-purple-500 cursor-pointer transition-colors" size={24} />
-                <Youtube className="text-gray-400 hover:text-purple-500 cursor-pointer transition-colors" size={24} />
-                <Linkedin className="text-gray-400 hover:text-purple-500 cursor-pointer transition-colors" size={24} />
-              </div>
-            </div>
-          </div>
-          <div className="border-t border-white/10 mt-8 pt-8 text-center text-gray-500 text-sm">
-            © 2025 Titanio Studio. Todos os direitos reservados.
+      <footer className="border-t border-white/10 bg-black/80">
+        <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-6 text-sm text-white/50 sm:flex-row sm:items-center sm:justify-between">
+          <span>© {new Date().getFullYear()} Titanio Studio. Todos os direitos reservados.</span>
+          <div className="flex flex-wrap items-center gap-4">
+            <a className="flex items-center gap-2 hover:text-white" href="mailto:contato@titaniostudio.com">
+              <Mail className="size-4" /> contato@titaniostudio.com
+            </a>
           </div>
         </div>
       </footer>
@@ -1150,120 +323,94 @@ function App() {
   )
 }
 
-// Service Card Component
-function ServiceCard({ icon, title, description, color }) {
-  const colorClasses = {
-    purple: 'border-purple-500/30 hover:border-purple-500 bg-purple-900/10',
-    cyan: 'border-cyan-400/30 hover:border-cyan-400 bg-cyan-900/10',
-    green: 'border-green-400/30 hover:border-green-400 bg-green-900/10'
+function StatusPill({ icon, label }) {
+  const IconComponent = icon
+  return (
+    <span className="flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5">
+      <IconComponent className="size-4 text-white/60" />
+      <span>{label}</span>
+    </span>
+  )
+}
+
+function ProfileStatus({ profileSource, syncState, lastSyncedAt }) {
+  let message = 'Aguardando informações.'
+  let tone = 'text-white/50'
+
+  if (syncState === 'pending') {
+    message = 'Salvando alterações...'
+    tone = 'text-purple-200'
+  } else if (syncState === 'syncing') {
+    message = 'Enviando dados para o Supabase...'
+    tone = 'text-purple-200'
+  } else if (syncState === 'synced') {
+    message = `Sincronizado com Supabase${lastSyncedAt ? ` em ${formatTime(lastSyncedAt)}` : ''}.`
+    tone = 'text-emerald-200'
+  } else if (syncState === 'local') {
+    message = 'Guardado localmente. Informe um e-mail para sincronizar com Supabase.'
+    tone = 'text-amber-200'
   }
 
-  const iconColorClasses = {
-    purple: 'text-purple-500',
-    cyan: 'text-cyan-400',
-    green: 'text-green-400'
-  }
+  const origin = profileSource === 'supabase' ? 'Dados carregados do Supabase.' : profileSource === 'local' ? 'Dados carregados deste dispositivo.' : ''
 
   return (
-    <div className={`p-8 rounded-lg border-2 ${colorClasses[color]} transition-all duration-300 hover:scale-105`}>
-      <div className={`${iconColorClasses[color]} mb-4`}>
-        {icon}
-      </div>
-      <h3 className="text-xl font-bold text-white mb-4">{title}</h3>
-      <p className="text-gray-400 leading-relaxed">{description}</p>
+    <div className="rounded-xl border border-white/5 bg-black/40 p-4 text-sm">
+      <div className={`font-medium ${tone}`}>{message}</div>
+      {origin && <p className="mt-1 text-xs text-white/40">{origin}</p>}
     </div>
   )
 }
 
-// Music Provider Card
-function MusicProviderCard({ provider }) {
-  const Icon = provider.icon
+function IntegrationCard({ title, description, state, checkedAt, onRefresh }) {
+  const isLoading = state === 'loading'
+  const isOk = state === 'ok'
+  const isError = state === 'error'
+  const isLocal = state === 'local'
+  const isPending = state === 'pending'
 
   return (
-    <div className="bg-black/60 border border-purple-500/30 rounded-xl p-6 hover:border-purple-400 transition-all duration-300">
-      <div className="flex items-center justify-between">
-        <div>
-          <span className="text-xs uppercase tracking-widest text-purple-400 font-semibold">{provider.role}</span>
-          <h3 className="text-2xl font-bold text-white mt-1">{provider.name}</h3>
-        </div>
-        <Icon size={36} className="text-purple-400" />
+    <div className="flex h-full flex-col justify-between rounded-2xl border border-white/10 bg-white/[0.02] p-6">
+      <div className="space-y-3">
+        <h3 className="text-base font-semibold">{title}</h3>
+        <p className="text-sm text-white/60">{description}</p>
       </div>
-      <p className="text-gray-300 mt-4">{provider.highlight}</p>
-      <p className="text-sm text-gray-400 italic mt-4">Exemplo de prompt: {provider.promptExample}</p>
-      <ul className="mt-4 space-y-2 text-sm text-gray-300">
-        {provider.features.map((feature) => (
-          <li key={feature} className="flex items-start gap-2">
-            <Sparkles size={14} className="mt-1 text-purple-300" />
-            <span>{feature}</span>
-          </li>
-        ))}
-      </ul>
-      <div className="mt-4 text-sm text-gray-300">
-        <p className="font-semibold text-white">Pricing</p>
-        <p>{provider.pricing}</p>
+      <div className="mt-4 flex items-center justify-between text-sm">
+        <span className="flex items-center gap-2">
+          {(isLoading || isPending) && (
+            <Loader2 className="size-4 animate-spin text-purple-200" />
+          )}
+          {isOk && <CheckCircle2 className="size-4 text-emerald-300" />}
+          {isError && <AlertCircle className="size-4 text-amber-300" />}
+          {isLocal && <Database className="size-4 text-white/50" />}
+          <span className="text-white/70">
+            {(isLoading || isPending) && 'Verificando...'}
+            {isOk && 'Operacional'}
+            {isError && 'Atenção necessária'}
+            {isLocal && 'Dados locais'}
+          </span>
+        </span>
+        {typeof onRefresh === 'function' && (
+          <Button
+            variant="ghost"
+            size="sm"
+            className="text-xs text-white/70 hover:bg-white/10 hover:text-white"
+            onClick={onRefresh}
+            type="button"
+          >
+            Atualizar
+          </Button>
+        )}
       </div>
-      <div className="mt-2 text-sm text-gray-400">
-        <p className="font-semibold text-white/80">Tecnologia</p>
-        <p>{provider.technology}</p>
-      </div>
+      {checkedAt && (
+        <p className="mt-2 text-xs text-white/40">Última verificação: {formatTime(checkedAt)}</p>
+      )}
     </div>
   )
 }
 
-// Legal Capability Card
-function LegalCapabilityCard({ capability }) {
-  const Icon = capability.icon
-
-  return (
-    <div className="bg-black/60 border border-pink-500/30 rounded-xl p-6 hover:border-pink-400 transition-all duration-300">
-      <Icon size={36} className="text-pink-400" />
-      <h3 className="text-xl font-bold text-white mt-4">{capability.title}</h3>
-      <p className="text-gray-300 mt-3 leading-relaxed">{capability.description}</p>
-    </div>
-  )
+function formatTime(date) {
+  return new Intl.DateTimeFormat('pt-BR', {
+    hour: '2-digit',
+    minute: '2-digit'
+  }).format(date)
 }
-
-// Pricing Table
-function PricingTable({ title, plans, icon, type = 'service' }) {
-  return (
-    <div className="bg-black/60 border border-white/10 rounded-xl p-8">
-      <div className="flex items-center gap-3">
-        {icon}
-        <h3 className="text-2xl font-bold text-white">{title}</h3>
-      </div>
-      <div className="mt-6 space-y-6">
-        {plans.map((plan) => (
-          <div key={plan.name} className="border border-white/10 rounded-lg p-6">
-            <div className="flex items-baseline justify-between">
-              <h4 className="text-xl font-semibold text-white">{plan.name}</h4>
-              <span className="text-lg font-bold text-purple-400">{plan.price}</span>
-            </div>
-            <ul className="mt-4 space-y-2 text-sm text-gray-300">
-              {(type === 'service' ? plan.includes : [plan.credits, plan.music, plan.legal]).map((item) => (
-                <li key={item} className="flex items-start gap-2">
-                  <CheckCircle2 size={14} className="mt-1 text-purple-300" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-            {type === 'service' && plan.addons.length > 0 && (
-              <div className="mt-4 text-sm text-gray-400">
-                <p className="font-semibold text-white/80">Add-ons</p>
-                <ul className="mt-1 space-y-1">
-                  {plan.addons.map((addon) => (
-                    <li key={addon} className="flex items-start gap-2">
-                      <Sparkles size={12} className="mt-1 text-yellow-400" />
-                      <span>{addon}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </div>
-        ))}
-      </div>
-    </div>
-  )
-}
-
-export default App
