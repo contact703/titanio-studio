@@ -1,17 +1,63 @@
-import { useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import {
   AlertTriangle,
   Bot,
-  CheckCircle2,
   Loader2,
+  Mic,
+  MicOff,
   Send,
   Sparkles
 } from 'lucide-react'
 import { Button } from '@/components/ui/button.jsx'
+import {
+  loadContactData,
+  persistContactData
+} from '@/lib/contactStorage.js'
+
+const AI_MODELS = [
+  {
+    id: 'llama',
+    label: 'Titanio LLaMA',
+    emoji: '🦙',
+    description: 'Responde dúvidas rápidas sobre o estúdio e integrações.'
+  },
+  {
+    id: 'gpt4',
+    label: 'GPT-4 Legal',
+    emoji: '⚖️',
+    description: 'Especialista em direitos autorais e uso comercial de IA.'
+  },
+  {
+    id: 'suno',
+    label: 'Suno Música IA',
+    emoji: '🎵',
+    description: 'Criação de trilhas originais em minutos dentro da plataforma.'
+  },
+  {
+    id: 'kling',
+    label: 'Kling Vídeo IA',
+    emoji: '🎬',
+    description: 'Renderiza videoclipes e assets visuais de alta qualidade.'
+  },
+  {
+    id: 'ads',
+    label: 'Orquestrador Google Ads',
+    emoji: '📣',
+    description: 'Automação completa de campanhas para lançamentos de artistas.'
+  }
+]
+
+const PLAN_URLS = {
+  music: 'https://titaniostudio.com/pagamento?plano=music-premium',
+  video: 'https://titaniostudio.com/pagamento?plano=video-standard',
+  ads: 'https://titaniostudio.com/pagamento?plano=google-ads',
+  legal: 'https://titaniostudio.com/pagamento?plano=legal'
+}
 
 const COMPLEX_INTENTS = [
   {
     id: 'music',
+    planName: 'Premium Música & Vídeo',
     keywords: [
       'crie uma música',
       'criar uma música',
@@ -19,15 +65,16 @@ const COMPLEX_INTENTS = [
       'criar musica',
       'gerar música',
       'gerar musica',
-      'compose',
       'compor',
-      'song',
       'faixa',
-      'trilha'
-    ]
+      'trilha sonora',
+      'song'
+    ],
+    model: 'suno'
   },
   {
     id: 'video',
+    planName: 'Standard Videoclipe IA',
     keywords: [
       'crie um vídeo',
       'criar um vídeo',
@@ -36,113 +83,276 @@ const COMPLEX_INTENTS = [
       'videoclipe',
       'clip',
       'produção de vídeo',
-      'video clipe'
-    ]
+      'roteiro de vídeo'
+    ],
+    model: 'kling'
   },
   {
     id: 'ads',
-    keywords: [
-      'campanha',
-      'google ads',
-      'anúncio',
-      'anuncio',
-      'media paga',
-      'ads'
-    ]
+    planName: 'Campanhas Google Ads',
+    keywords: ['campanha', 'google ads', 'anúncio', 'anuncio', 'ads', 'media paga'],
+    model: 'ads'
   },
   {
     id: 'legal',
-    keywords: [
-      'advogado',
-      'legal',
-      'direitos autorais',
-      'copyright',
-      'jurídico',
-      'juridico',
-      'licenciamento'
-    ]
+    planName: 'Consultoria Legal IA',
+    keywords: ['advogado', 'legal', 'direitos autorais', 'copyright', 'jurídico', 'juridico'],
+    model: 'gpt4'
   }
 ]
 
 const SIMPLE_RESPONSES = [
   {
-    test: (text) => /hor[aá]rio|funcion[aá]|atendimento/.test(text),
-    answer: withLlamaSignature(
-      'Estamos disponíveis 24/7 via plataforma e respondemos mensagens humanas em até 1 dia útil.'
-    )
+    test: (text) => /direito[s]? autoral|copyright|licen(c|ç)a/.test(text),
+    answer:
+      'Simples dúvidas sobre direitos autorais são respondidas diretamente aqui. Conte o contexto e explico com base no nosso modelo Titanio LLaMA.'
   },
   {
-    test: (text) => /pre[cç]o|planos|quanto custa|valor/.test(text),
-    answer: withLlamaSignature(
-      'Nossos planos estão descritos logo abaixo do chat. Posso sugerir o ideal quando você me contar sua necessidade.'
-    )
+    test: (text) => /pagamento|stripe|paypal|cart(ã|a)o/.test(text),
+    answer:
+      'Você pode pagar pelos planos com Stripe ou PayPal, com cobrança internacional segura e recibo automático.'
   },
   {
-    test: (text) => /supabase|guardar dados|salvar dados|retomar briefing/.test(text),
-    answer: withLlamaSignature(
-      'As informações que você compartilhar ficam salvas com Supabase + armazenamento local. Você pode continuar de onde parou quando voltar.'
-    )
+    test: (text) => /supabase|dados|guardar informa[cç][aã]o/.test(text),
+    answer:
+      'Guardamos os seus dados com Supabase e armazenamento local criptografado. Assim você não precisa reenviar briefing.'
   },
   {
-    test: (text) => /pagamento|stripe|paypal|cart[aã]o/.test(text),
-    answer: withLlamaSignature(
-      'Aceitamos Stripe e PayPal com cobrança internacional segura. Emitimos recibos automaticamente após cada contratação.'
-    )
-  },
-  {
-    test: (text) => /suporte|contato|falar com humano/.test(text),
-    answer: withLlamaSignature(
-      'Se preferir, posso encaminhar seu briefing para nosso time comercial e eles entram em contato por e-mail ou WhatsApp.'
-    )
+    test: (text) => /hor[aá]rio|atendimento|suporte/.test(text),
+    answer:
+      'Nosso suporte humano responde em até um dia útil e o chat LLaMA fica disponível 24/7.'
   }
 ]
 
 const INITIAL_MESSAGES = [
   {
-    id: 'welcome',
+    id: 'assistant-welcome',
     role: 'assistant',
     content:
-      'Olá! Eu sou o assistente do Titanio Studio. Respostas rápidas aqui são geradas pelo nosso modelo Titanio LLaMA. Se pedir algo como criar uma música, vídeo ou campanha, abro a página de pagamento do plano ideal para continuar.',
-    variant: 'intro'
+      'Olá! Eu sou o Assistente Titanio impulsionado pelo modelo Titanio LLaMA. O que você quer fazer hoje?'
   }
 ]
 
 function normalise(text) {
-  return text.normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase()
+  return text
+    .normalize('NFD')
+    .replace(/\p{Diacritic}/gu, '')
+    .toLowerCase()
 }
 
 function withLlamaSignature(text) {
-  return `${text}\n\n(Resposta gerada pelo modelo Titanio LLaMA para dúvidas rápidas.)`
+  return `${text}\n\n(Resposta fornecida pelo modelo Titanio LLaMA.)`
 }
 
-export default function AssistantChat({
-  profile,
-  plans,
-  aiRecommendations = [],
-  onPlanRequested,
-  requestGoogleStatus
-}) {
+async function generateLlamaReply(question) {
+  await new Promise((resolve) => setTimeout(resolve, 300))
+  return `Estou aqui para ajudar com respostas rápidas sobre o Titanio Studio. Você mencionou: “${question}”. Conte mais detalhes ou pergunte sobre direitos autorais, pagamentos ou integrações.`
+}
+
+function extractName(text) {
+  const match = text.match(/meu nome e\s+([a-zà-ú\s]{2,})/i)
+  if (match) {
+    return match[1].trim().replace(/\s+/g, ' ')
+  }
+  return null
+}
+
+function detectEmail(text) {
+  const match = text.match(/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}/i)
+  return match ? match[0] : null
+}
+
+function selectModelFor(text) {
+  const normalised = normalise(text)
+  if (!normalised) return 'llama'
+
+  const complex = COMPLEX_INTENTS.find((intent) =>
+    intent.keywords.some((keyword) => normalised.includes(normalise(keyword)))
+  )
+
+  if (complex?.model) {
+    return complex.model
+  }
+
+  if (/direito|copyright|contrato/.test(normalised)) {
+    return 'gpt4'
+  }
+
+  return 'llama'
+}
+
+export default function AssistantChat() {
   const [messages, setMessages] = useState(INITIAL_MESSAGES)
   const [input, setInput] = useState('')
   const [isSending, setIsSending] = useState(false)
+  const [isListening, setIsListening] = useState(false)
+  const [audioDescriptionEnabled, setAudioDescriptionEnabled] = useState(false)
+  const [activeModel, setActiveModel] = useState('llama')
+  const [modelInfoOpen, setModelInfoOpen] = useState(false)
+  const [profile, setProfile] = useState({ name: '', email: '' })
 
-  const firstName = useMemo(() => {
-    if (!profile?.name) return null
-    return profile.name.trim().split(' ')[0]
-  }, [profile?.name])
+  const recognitionRef = useRef(null)
 
-  const recommendations = useMemo(
-    () =>
-      aiRecommendations.map((item) => ({
-        ...item,
-        plan: item.planId ? plans.find((plan) => plan.id === item.planId) : null
-      })),
-    [aiRecommendations, plans]
+  useEffect(() => {
+    let mounted = true
+    ;(async () => {
+      const result = await loadContactData()
+      if (!mounted) return
+      if (result?.data) {
+        setProfile({
+          name: result.data.name ?? '',
+          email: result.data.email ?? ''
+        })
+        if (result.data.name) {
+          const firstName = result.data.name.split(' ')[0]
+          setMessages((prev) => [
+            ...prev,
+            {
+              id: 'assistant-return',
+              role: 'assistant',
+              content: `Bem-vindo de volta, ${firstName}! Pode continuar de onde parou.`
+            }
+          ])
+        }
+      }
+    })()
+    return () => {
+      mounted = false
+    }
+  }, [])
+
+  const recommendedModel = useMemo(() => {
+    const lastUserMessage = [...messages].reverse().find((item) => item.role === 'user')
+    if (!lastUserMessage) {
+      return activeModel
+    }
+    return selectModelFor(lastUserMessage.content)
+  }, [messages, activeModel])
+
+  const selectedModel = useMemo(
+    () => AI_MODELS.find((model) => model.id === recommendedModel) ?? AI_MODELS[0],
+    [recommendedModel]
   )
+
+  const speak = useCallback((text) => {
+    if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
+      return
+    }
+    window.speechSynthesis.cancel()
+    const utterance = new SpeechSynthesisUtterance(text)
+    utterance.lang = 'pt-BR'
+    window.speechSynthesis.speak(utterance)
+  }, [])
+
+  const describeIfEnabled = useCallback(
+    (description) => {
+      if (audioDescriptionEnabled) {
+        speak(description)
+      }
+    },
+    [audioDescriptionEnabled, speak]
+  )
+
+  const handleAudioToggle = () => {
+    const nextState = !audioDescriptionEnabled
+    setAudioDescriptionEnabled(nextState)
+    speak(`Modo audiodescrição ${nextState ? 'ativado' : 'desativado'}`)
+    setMessages((prev) => [
+      ...prev,
+      {
+        id: `assistant-audio-${Date.now()}`,
+        role: 'assistant',
+        content: nextState
+          ? 'Ativei a audiodescrição. Passe o mouse sobre os botões e elementos para ouvir descrições.'
+          : 'Desativei a audiodescrição. Você pode reativar quando preferir.'
+      }
+    ])
+  }
+
+  const handleAudioHover = () => {
+    speak(
+      `Modo audiodescrição ${audioDescriptionEnabled ? 'ativado' : 'desativado'}`
+    )
+  }
+
+  const handleVoiceCommand = () => {
+    if (typeof window === 'undefined') return
+
+    const SpeechRecognition =
+      window.SpeechRecognition || window.webkitSpeechRecognition
+
+    if (!SpeechRecognition) {
+      setMessages((prev) => [
+        ...prev,
+        {
+          id: `assistant-voice-${Date.now()}`,
+          role: 'assistant',
+          content:
+            'Não identifiquei suporte a comandos de voz neste navegador. Tente usar Chrome ou Edge para habilitar a captura.'
+        }
+      ])
+      return
+    }
+
+    if (isListening) {
+      recognitionRef.current?.stop()
+      return
+    }
+
+    const recognition = recognitionRef.current ?? new SpeechRecognition()
+    recognition.lang = 'pt-BR'
+    recognition.interimResults = false
+    recognition.maxAlternatives = 1
+
+    recognition.onresult = (event) => {
+      const transcript = event.results[0][0]?.transcript ?? ''
+      if (transcript) {
+        setInput((prev) => (prev ? `${prev} ${transcript}` : transcript))
+        describeIfEnabled(`Transcrição capturada: ${transcript}`)
+      }
+    }
+
+    recognition.onerror = (event) => {
+      console.error('speech recognition error', event)
+      setIsListening(false)
+      setMessages((prev) => [
+        ...prev,
+        {
+          id: `assistant-voice-error-${Date.now()}`,
+          role: 'assistant',
+          content:
+            'Não consegui concluir a captura de voz. Você pode tentar novamente ou digitar sua mensagem.'
+        }
+      ])
+    }
+
+    recognition.onend = () => {
+      setIsListening(false)
+    }
+
+    recognition.start()
+    recognitionRef.current = recognition
+    setIsListening(true)
+    describeIfEnabled('Captura de voz iniciada. Fale sua solicitação e aguarde a transcrição.')
+  }
 
   const handleSend = async () => {
     const trimmed = input.trim()
     if (!trimmed || isSending) return
+
+    const email = detectEmail(trimmed)
+    if (email && email !== profile.email) {
+      const name = extractName(trimmed) ?? profile.name
+      setProfile({ name: name ?? '', email })
+      persistContactData({
+        name: name ?? '',
+        email,
+        solution: 'assistente',
+        details: trimmed
+      }).catch((error) => {
+        console.warn('[assistant] Falha ao persistir dados no Supabase', error)
+      })
+    }
 
     const userMessage = {
       id: `user-${Date.now()}`,
@@ -153,127 +363,172 @@ export default function AssistantChat({
     setMessages((prev) => [...prev, userMessage])
     setInput('')
     setIsSending(true)
+    describeIfEnabled('Mensagem enviada. Gerando resposta do assistente Titanio.')
 
     try {
-      const intent = await resolveIntent(trimmed, {
-        plans,
-        onPlanRequested,
-        requestGoogleStatus,
-        firstName
-      })
-
+      const response = await routeMessage(trimmed)
       const assistantMessage = {
         id: `assistant-${Date.now()}`,
         role: 'assistant',
-        content: intent.message,
-        variant: intent.variant,
-        planId: intent.planId
+        content: response.message,
+        variant: response.variant
       }
-
       setMessages((prev) => [...prev, assistantMessage])
+      setActiveModel(response.recommendedModel ?? 'llama')
+
+      if (response.planId) {
+        const planUrl = PLAN_URLS[response.planId]
+        if (planUrl && typeof window !== 'undefined') {
+          window.open(planUrl, '_blank', 'noopener,noreferrer')
+        }
+      }
     } finally {
       setIsSending(false)
     }
   }
 
-  return (
-    <div className="flex min-h-[520px] flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#0d0d0d]/95 shadow-2xl lg:flex-row">
-      <aside className="flex w-full flex-col border-b border-white/10 bg-black/70 px-5 py-5 lg:w-72 lg:border-b-0 lg:border-r">
-        <div className="mb-4 flex items-center gap-2 text-xs uppercase tracking-wide text-white/40">
-          <Sparkles className="size-4 text-purple-300" />
-          Catálogo de IAs Titanio
-        </div>
-        <nav className="flex-1 space-y-4 overflow-y-auto pr-1">
-          {recommendations.length === 0 && (
-            <p className="text-sm text-white/60">
-              Personalizamos modelos IA para cada cliente. Compartilhe seu objetivo no formulário ao lado.
-            </p>
-          )}
-          {recommendations.map((item) => (
-            <article
-              key={item.id}
-              className="rounded-xl border border-white/10 bg-white/[0.02] p-4 text-sm transition hover:border-purple-400/40"
-            >
-              <div className="flex items-start justify-between gap-3">
-                <div>
-                  <h3 className="text-base font-semibold text-white">{item.title}</h3>
-                  <p className="mt-1 text-xs text-white/60">{item.planLabel}</p>
-                </div>
-              </div>
-              <p className="mt-3 text-white/70">{item.description}</p>
-              <p className="mt-3 text-xs text-white/50">
-                Melhor para: <span className="text-white/80">{item.bestFor}</span>
-              </p>
-              {item.plan && (
-                <Button
-                  type="button"
-                  variant="ghost"
-                  className="mt-4 w-full justify-center border border-purple-400/40 bg-purple-500/10 text-xs font-semibold text-purple-100 hover:bg-purple-500/20"
-                  onClick={() => onPlanRequested?.(item.plan.id)}
-                >
-                  Escolher {item.plan.title}
-                </Button>
-              )}
-            </article>
-          ))}
-        </nav>
-      </aside>
+  const modelLogos = useMemo(
+    () =>
+      AI_MODELS.map((model) => (
+        <span
+          key={model.id}
+          aria-hidden="true"
+          className="text-lg"
+        >
+          {model.emoji}
+        </span>
+      )),
+    []
+  )
 
-      <div className="flex flex-1 flex-col">
-        <header className="flex flex-col gap-1 border-b border-white/10 px-6 py-4 sm:flex-row sm:items-center sm:justify-between">
+  return (
+    <div className="w-full max-w-3xl space-y-6">
+      <div className="text-center">
+        <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1 text-xs text-white/70">
+          <Sparkles className="size-3" />
+          Assistente Titanio em produção
+        </div>
+        <h1 className="mt-4 text-3xl font-semibold text-white">Assistente Titanio</h1>
+        <p className="mt-2 text-base text-white/70">O que você quer fazer hoje?</p>
+      </div>
+
+      <div className="flex flex-col items-stretch justify-between gap-3 sm:flex-row">
+        <Button
+          type="button"
+          variant="outline"
+          className="flex-1 justify-between border-white/20 bg-white/5 text-left text-white hover:bg-white/10"
+          onClick={() => {
+            setModelInfoOpen((prev) => !prev)
+            describeIfEnabled(
+              `IA recomendada: ${selectedModel.label}. Clique novamente para ocultar.`
+            )
+          }}
+          onMouseEnter={() =>
+            describeIfEnabled(
+              `Botão de seleção automática de IA. Atualmente recomendado: ${selectedModel.label}.`
+            )
+          }
+        >
           <div className="flex items-center gap-3">
-            <div className="flex size-10 items-center justify-center rounded-full bg-purple-500/20">
-              <Bot className="size-5 text-purple-300" />
-            </div>
-            <div className="flex flex-col">
-              <span className="text-sm font-semibold uppercase tracking-wide text-white/60">
-                Assistente Titanio
-              </span>
-              <span className="text-xs text-white/50">Modelo ativo: Titanio LLaMA (perguntas rápidas)</span>
-              <span className="text-sm text-white/80">
-                {firstName ? `Como posso ajudar hoje, ${firstName}?` : 'Como posso ajudar hoje?'}
-              </span>
+            <Bot className="size-4 text-purple-200" />
+            <div>
+              <p className="text-sm font-semibold text-white">IA recomendada</p>
+              <p className="text-xs text-white/70">{selectedModel.label}</p>
             </div>
           </div>
-          <p className="mt-3 text-xs text-white/40 sm:mt-0">
-            Pedidos complexos abrem automaticamente o checkout do plano recomendado.
-          </p>
-        </header>
+          <div className="flex items-center gap-2">{modelLogos}</div>
+        </Button>
 
+        <Button
+          type="button"
+          variant={audioDescriptionEnabled ? 'secondary' : 'outline'}
+          className="flex-1 justify-center border-white/20 bg-white/5 text-white hover:bg-white/10"
+          onClick={handleAudioToggle}
+          onMouseEnter={handleAudioHover}
+        >
+          <span>{audioDescriptionEnabled ? 'Audiodescrição ativa' : 'Ativar audiodescrição'}</span>
+        </Button>
+      </div>
+
+      {modelInfoOpen && (
+        <div
+          className="space-y-2 rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-white/80"
+          onMouseEnter={() =>
+            describeIfEnabled(
+              `Detalhes da IA recomendada: ${selectedModel.label}. ${selectedModel.description}`
+            )
+          }
+        >
+          <p className="font-semibold">
+            {selectedModel.emoji} {selectedModel.label}
+          </p>
+          <p>{selectedModel.description}</p>
+        </div>
+      )}
+
+      <div
+        className="relative flex min-h-[520px] flex-col overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-b from-white/10 to-black/60 shadow-2xl"
+        onMouseEnter={() => describeIfEnabled('Janela de mensagens do chat Titanio.')}
+      >
         <div className="flex-1 space-y-4 overflow-y-auto px-6 py-6">
           {messages.map((message) => (
-            <ChatMessage key={message.id} message={message} plans={plans} />
+            <ChatMessage
+              key={message.id}
+              message={message}
+              audioDescriptionEnabled={audioDescriptionEnabled}
+              describe={describeIfEnabled}
+            />
           ))}
           {isSending && (
             <div className="flex items-center gap-3 text-sm text-white/70">
               <Loader2 className="size-4 animate-spin" />
-              Gerando resposta com Titanio LLaMA...
+              Gerando resposta com o modelo Titanio LLaMA...
             </div>
           )}
         </div>
 
         <form
-          className="flex flex-col gap-3 border-t border-white/10 px-6 py-4"
+          className="border-t border-white/10 bg-black/60 px-6 py-4"
           onSubmit={(event) => {
             event.preventDefault()
             handleSend()
           }}
         >
-          <label className="text-xs font-medium uppercase tracking-wide text-white/40">
-            Pergunte algo
+          <label className="sr-only" htmlFor="assistant-input">
+            Mensagem para o Assistente Titanio
           </label>
-          <div className="flex items-center gap-3">
-            <input
-              className="flex-1 rounded-lg border border-white/10 bg-black/60 px-4 py-3 text-sm text-white outline-none ring-0 transition focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-400/40"
-              placeholder="Ex.: Como funciona o pagamento?"
-              value={input}
-              onChange={(event) => setInput(event.target.value)}
-              disabled={isSending}
-            />
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+            <div className="relative flex-1">
+              <input
+                id="assistant-input"
+                className="w-full rounded-2xl border border-white/20 bg-black/60 px-4 py-3 text-sm text-white outline-none transition focus:border-purple-400 focus:ring-2 focus:ring-purple-400/40"
+                placeholder="Digite aqui ou use o microfone para falar"
+                value={input}
+                onChange={(event) => setInput(event.target.value)}
+                onFocus={() => describeIfEnabled('Campo para digitar sua mensagem.')}
+                disabled={isSending}
+              />
+              <button
+                type="button"
+                onClick={handleVoiceCommand}
+                className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full border border-white/20 bg-white/10 p-2 text-white transition hover:bg-white/20"
+                onMouseEnter={() =>
+                  describeIfEnabled(
+                    isListening
+                      ? 'Captura de voz em andamento. Clique para finalizar.'
+                      : 'Clique para falar com o assistente usando sua voz.'
+                  )
+                }
+              >
+                {isListening ? <MicOff className="size-4" /> : <Mic className="size-4" />}
+                <span className="sr-only">{isListening ? 'Parar voz' : 'Falar'}</span>
+              </button>
+            </div>
             <Button
               type="submit"
               disabled={isSending || !input.trim()}
-              className="bg-purple-500/90 px-5 py-6 text-sm font-semibold text-white hover:bg-purple-500"
+              className="w-full justify-center bg-purple-500/90 text-white hover:bg-purple-500 sm:w-auto"
+              onMouseEnter={() => describeIfEnabled('Enviar mensagem para o assistente.')}
             >
               {isSending ? <Loader2 className="size-4 animate-spin" /> : <Send className="size-4" />}
               <span className="hidden sm:inline">Enviar</span>
@@ -285,48 +540,31 @@ export default function AssistantChat({
   )
 }
 
-function ChatMessage({ message, plans }) {
+function ChatMessage({ message, audioDescriptionEnabled, describe }) {
   const isAssistant = message.role === 'assistant'
-  const plan = message.planId ? plans.find((item) => item.id === message.planId) : null
+  const bubbleClasses = isAssistant
+    ? 'bg-white/10 text-white'
+    : 'bg-purple-500/80 text-white'
+
+  const handleHover = () => {
+    if (!audioDescriptionEnabled) return
+    const prefix = isAssistant ? 'Mensagem do assistente: ' : 'Sua mensagem: '
+    describe(`${prefix}${message.content}`)
+  }
 
   return (
     <div className={`flex ${isAssistant ? 'justify-start' : 'justify-end'}`}>
       <div
-        className={`max-w-[85%] rounded-2xl px-5 py-4 text-sm leading-relaxed shadow-lg transition ${
-          isAssistant ? 'bg-white/[0.06] text-white' : 'bg-purple-500/90 text-white'
-        }`}
+        className={`max-w-[85%] rounded-2xl px-5 py-4 text-sm leading-relaxed shadow-lg ${bubbleClasses}`}
+        onMouseEnter={handleHover}
+        onFocus={handleHover}
+        tabIndex={audioDescriptionEnabled ? 0 : -1}
       >
         <RichText>{message.content}</RichText>
-        {message.variant === 'plan' && plan && (
-          <div className="mt-4 space-y-3 rounded-xl border border-purple-400/40 bg-purple-500/10 p-3 text-xs text-purple-100">
-            <div className="flex items-center gap-2">
-              <Sparkles className="size-4" />
-              <span>
-                Confira os detalhes do plano <strong>{plan.title}</strong> logo abaixo.
-              </span>
-            </div>
-            {plan.checkoutUrl && (
-              <a
-                href={plan.checkoutUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex w-full items-center justify-center rounded-lg border border-purple-400/50 bg-purple-500/20 px-3 py-2 font-semibold text-purple-100 transition hover:bg-purple-500/30"
-              >
-                Abrir página de pagamento
-              </a>
-            )}
-          </div>
-        )}
-        {message.variant === 'status-ok' && (
-          <div className="mt-3 flex items-center gap-2 rounded-xl border border-emerald-400/40 bg-emerald-500/10 px-3 py-2 text-xs text-emerald-100">
-            <CheckCircle2 className="size-4" />
-            <span>Integração monitorada e pronta para uso.</span>
-          </div>
-        )}
-        {message.variant === 'status-error' && (
-          <div className="mt-3 flex items-center gap-2 rounded-xl border border-amber-400/40 bg-amber-500/10 px-3 py-2 text-xs text-amber-100">
-            <AlertTriangle className="size-4" />
-            <span>Não consegui confirmar a integração agora. Nossa equipe pode ajudar pelo plano de campanhas.</span>
+        {message.variant === 'plan' && (
+          <div className="mt-3 flex items-center gap-2 text-xs text-white/80">
+            <AlertTriangle className="size-3" />
+            <span>Direcionamos você para a página de pagamento correspondente.</span>
           </div>
         )}
       </div>
@@ -346,72 +584,35 @@ function RichText({ children }) {
   ))
 }
 
-async function resolveIntent(message, {
-  plans,
-  onPlanRequested,
-  requestGoogleStatus,
-  firstName
-}) {
+async function routeMessage(message) {
   const normalised = normalise(message)
-
-  if (/status .*google ads|status do google ads|google ads status|status .*api do google/.test(normalised)) {
-    if (typeof requestGoogleStatus === 'function') {
-      const status = await requestGoogleStatus()
-      if (status?.ok) {
-        return {
-          message:
-            'O backend do Google Ads respondeu com sucesso. Já conseguimos criar campanhas e atualizar budgets diretamente pela API v16.',
-          variant: 'status-ok'
-        }
-      }
-      return {
-        message:
-          'Não obtive resposta da API agora. Podemos revisar as credenciais no Plano Campanhas Google Ads ou retentar em instantes.',
-        variant: 'status-error'
-      }
-    }
-  }
 
   const complexIntent = COMPLEX_INTENTS.find((intent) =>
     intent.keywords.some((keyword) => normalised.includes(normalise(keyword)))
   )
 
   if (complexIntent) {
-    const plan = plans.find((item) => item.id === complexIntent.id)
-    if (typeof onPlanRequested === 'function') {
-      onPlanRequested(complexIntent.id)
-    }
-
-    const intro = plan
-      ? `Esse pedido é melhor conduzido com o plano ${plan.title}.`
-      : 'Esse pedido é melhor conduzido com um dos nossos planos especializados.'
-
-    const summary = plan?.summary ? `\n\nResumo do plano: ${plan.summary}` : ''
-    const checkoutInfo = plan?.checkoutUrl
-      ? `\n\nAbrimos a página de pagamento (${plan.checkoutUrl}) em uma nova aba para você finalizar quando preferir.`
-      : ''
-
     return {
-      message: `${intro}\n\nEstou abrindo a página de pagamento correspondente para acelerar sua contratação.${checkoutInfo}${summary}`,
+      message: `Esse pedido é considerado complexo. Estou direcionando para o plano ${complexIntent.planName} para continuar com nossa equipe especializada.`,
       variant: 'plan',
-      planId: complexIntent.id
+      planId: complexIntent.id,
+      recommendedModel: complexIntent.model ?? 'llama'
     }
   }
 
   const simpleRule = SIMPLE_RESPONSES.find((rule) => rule.test(normalised))
   if (simpleRule) {
     return {
-      message: simpleRule.answer,
-      variant: 'simple'
+      message: withLlamaSignature(simpleRule.answer),
+      variant: 'simple',
+      recommendedModel: 'llama'
     }
   }
 
+  const llamaAnswer = await generateLlamaReply(message)
   return {
-    message: withLlamaSignature(
-      firstName
-        ? `Obrigado, ${firstName}! Se quiser ajuda com algo mais elaborado (música, vídeo, anúncios ou consultoria legal), me avise que eu indico o plano certo.`
-        : 'Posso responder perguntas rápidas aqui mesmo. Se precisar que criemos algo por você, me diga e eu indico o plano certo.'
-    ),
-    variant: 'simple'
+    message: withLlamaSignature(llamaAnswer),
+    variant: 'simple',
+    recommendedModel: 'llama'
   }
 }
