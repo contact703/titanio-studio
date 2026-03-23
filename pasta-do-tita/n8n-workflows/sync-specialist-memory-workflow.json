@@ -1,0 +1,56 @@
+{
+  "name": "🔄 Sync Memória Especialistas — Git Compartilhado",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [{ "field": "minutes", "minutesInterval": 30 }]
+        }
+      },
+      "name": "Schedule — 30min",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "position": [200, 300]
+    },
+    {
+      "parameters": {
+        "command": "cd /Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace && git add pasta-do-tita/memoria-especialistas/ && CHANGED=$(git diff --cached --name-only | wc -l | tr -d ' ') && if [ \"$CHANGED\" -gt \"0\" ]; then git commit -m \"🧠 auto-sync: $CHANGED arquivos — $(date '+%Y-%m-%d %H:%M')\" && git push tita-memory memoria-v2:main && echo \"pushed $CHANGED files\"; else echo \"nothing to push\"; fi"
+      },
+      "name": "Git Push Memória",
+      "type": "n8n-nodes-base.executeCommand",
+      "position": [450, 200]
+    },
+    {
+      "parameters": {
+        "command": "cd /Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace && git fetch tita-memory && git checkout tita-memory/main -- pasta-do-tita/memoria-especialistas/ 2>/dev/null || true && echo 'pulled latest memory'"
+      },
+      "name": "Git Pull Memória",
+      "type": "n8n-nodes-base.executeCommand",
+      "position": [450, 400]
+    },
+    {
+      "parameters": {
+        "url": "http://localhost:4444/api/health",
+        "options": {}
+      },
+      "name": "Notificar Dashboard",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [700, 300]
+    }
+  ],
+  "connections": {
+    "Schedule — 30min": {
+      "main": [[
+        { "node": "Git Push Memória", "type": "main", "index": 0 },
+        { "node": "Git Pull Memória", "type": "main", "index": 0 }
+      ]]
+    },
+    "Git Push Memória": {
+      "main": [[{ "node": "Notificar Dashboard", "type": "main", "index": 0 }]]
+    },
+    "Git Pull Memória": {
+      "main": [[{ "node": "Notificar Dashboard", "type": "main", "index": 0 }]]
+    }
+  },
+  "active": true,
+  "settings": {}
+}

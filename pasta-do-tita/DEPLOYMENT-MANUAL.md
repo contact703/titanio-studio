@@ -1,7 +1,7 @@
 # 🚀 DEPLOYMENT MANUAL — Dashboard Titanio para Helber & Tiago
 
-**Versão:** 2.0  
-**Data:** 2026-03-22  
+**Versão:** 3.0  
+**Data:** 2026-03-23  
 **Status:** ✅ Pronto para produção  
 
 ---
@@ -16,176 +16,164 @@
 - [ ] 4GB RAM mínimo
 - [ ] 10GB espaço em disco
 
-### 1. Clonar repositório
+---
+
+## PASSO 1: Clonar repositório da Dashboard
+
 ```bash
-git clone https://github.com/contact703/titanio-dashboard.git ~/titanio-dashboard
+# Clonar do Mac Mini principal (via rede local)
+cp -r /Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/pasta-do-tita/projetos/titanio-dashboard/code ~/titanio-dashboard
+
 cd ~/titanio-dashboard
+npm install
 ```
 
-### 2. Instalar dependências
+---
+
+## PASSO 2: 🧠 SINCRONIZAR MEMÓRIA DOS ESPECIALISTAS (OBRIGATÓRIO)
+
+Este passo garante que todos os especialistas tenham a mesma memória e aprendizado.
+
 ```bash
-cd code/backend && npm install
-cd ../frontend && npm install
-cd ../..
+# Clonar repo de memória compartilhada
+cd ~/titanio-dashboard
+git clone https://github.com/contact703/tita-memory.git .tita-memory
+
+# Copiar memória para o lugar correto
+cp -r .tita-memory/pasta-do-tita/memoria-especialistas ./memoria-especialistas
+
+echo "✅ Memória dos especialistas sincronizada"
 ```
 
-### 3. Configurar variáveis de ambiente
+---
 
-**Backend (.env):**
+## PASSO 3: Configurar variáveis de ambiente
+
 ```bash
-cp code/backend/.env.example code/backend/.env
-# Editar e preencher:
-# - ANTHROPIC_API_KEY (obrigatório)
-# - KIMI_API_KEY (opcional)
-# - Outras integrações conforme necessário
+cat > .env << 'EOF'
+# API Keys
+ANTHROPIC_API_KEY=sua_key_aqui
+OPENAI_API_KEY=sua_key_aqui
+
+# Paths
+SPECIALIST_MEMORY_PATH=./memoria-especialistas
+TITA_MEMORY_REPO=https://github.com/contact703/tita-memory.git
+
+# Dashboard
+PORT=4444
+FRONTEND_PORT=3000
+EOF
 ```
 
-**Frontend (.env.local):**
-```bash
-cp code/frontend/.env.example code/frontend/.env.local
-# Configurar:
-# - NEXT_PUBLIC_API_URL=http://localhost:4444
-```
+---
 
-### 4. Iniciar N8n
-```bash
-docker run -it --rm \
-  -p 5678:5678 \
-  -e NODE_ENV=production \
-  n8nio/n8n
-# Importar workflows de: ./n8n-workflows/
-```
+## PASSO 4: Iniciar serviços
 
-### 5. Iniciar Backend
 ```bash
-cd code/backend
+# Backend
+cd ~/titanio-dashboard/backend
 npm run build
-npm start
-# Deve responder em http://localhost:4444/api/health
-```
+npm start &
 
-### 6. Iniciar Frontend
-```bash
-cd code/frontend
-npm run dev
-# Deve abrir em http://localhost:3000
-```
+# Frontend
+cd ~/titanio-dashboard/frontend  
+npm run build
+npm start &
 
-### 7. Validar instalação
-```bash
-curl http://localhost:4444/api/health
-curl http://localhost:3000
-curl http://localhost:5678
+echo "✅ Dashboard rodando em http://localhost:4444"
 ```
 
 ---
 
-## 🔐 CREDENCIAIS COMPARTILHADAS
+## PASSO 5: 🔄 Configurar sincronização automática de memória
 
-**Arquivo:** `/cofre/shared-credentials.json`
-
-As credenciais **compartilhadas** entre todos:
-- ✅ Especialistas (32) — mesmos em todos os Macs
-- ✅ N8n workflows (8) — importar nos 3 Macs
-- ✅ GitHub repos (30) — sincronizar via git
-
-As credenciais **pessoais** — cada um gera seu:
-- ⚠️ GitHub Token — `gh auth token`
-- ⚠️ Railway Token — em https://railway.app/account/tokens
-- ⚠️ Anthropic API Key — https://console.anthropic.com
-- ⚠️ Kimi API Key — https://platform.moonshot.cn
-
-**Instruções:**
-1. Abrir `/cofre/SHARED-CREDENTIALS.md`
-2. Copiar template
-3. Preencher apenas com SUAS credenciais
-4. Salvar em `~/.titanio/credentials-SEUNAME.json`
-
----
-
-## 📊 PORTS USADAS
-
-| Serviço | Port | URL |
-|---------|------|-----|
-| Backend | 4444 | http://localhost:4444 |
-| Frontend | 3000 | http://localhost:3000 |
-| N8n | 5678 | http://localhost:5678 |
-
-**Se uma porta tiver ocupada:**
 ```bash
-# Achar processo
-lsof -i :4444
+# Copiar script de sync do Mac Mini principal
+cp /Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/bin/sync-specialist-memory.sh ~/bin/
 
-# Matar
-kill -9 <PID>
+# Testar sync
+bash ~/bin/sync-specialist-memory.sh pull
+bash ~/bin/sync-specialist-memory.sh push
+
+# Agendar sync a cada 30 minutos (LaunchAgent macOS)
+cat > ~/Library/LaunchAgents/com.titanio.memory.sync.plist << 'PLIST'
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.titanio.memory.sync</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>bash</string>
+        <string>/Users/SEU_USUARIO/bin/sync-specialist-memory.sh</string>
+        <string>auto</string>
+    </array>
+    <key>StartInterval</key>
+    <integer>1800</integer>
+    <key>RunAtLoad</key>
+    <true/>
+</dict>
+</plist>
+PLIST
+
+launchctl load ~/Library/LaunchAgents/com.titanio.memory.sync.plist
+echo "✅ Sync automático configurado (a cada 30 min)"
 ```
 
 ---
 
-## 🆘 TROUBLESHOOTING
+## PASSO 6: Verificar instalação
 
-### Backend não sobe
 ```bash
-# Limpar cache
-rm -rf code/backend/dist code/backend/node_modules
-npm install && npm run build
-```
-
-### Frontend fica em branco
-```bash
-# Verificar se backend tá online
+# Verificar backend
 curl http://localhost:4444/api/health
 
-# Se não, iniciar backend primeiro
+# Verificar especialistas com memória
+curl http://localhost:4444/api/specialists/automation-bot/memory | jq '.memory.stats'
+
+# Verificar sync funciona
+bash ~/bin/sync-specialist-memory.sh auto
 ```
 
-### N8n não abre
-```bash
-# Verificar se Docker tá rodando
-docker ps
+---
 
-# Se não, iniciar Docker Desktop
+## 🔄 COMO A MEMÓRIA COMPARTILHADA FUNCIONA
+
+```
+Mac Mini (TITA_039) — Fonte principal
+       ↕ (Git push/pull a cada 30 min)
+GitHub (contact703/tita-memory)
+       ↕ (Git push/pull a cada 30 min)
+Mac do Helber — mesmos especialistas
+Mac do Tiago  — mesmos especialistas
+
+Resultado:
+- Helber ensina algo ao Code Ninja → vai pro Git
+- Tiago faz git pull → Code Ninja do Tiago já sabe
+- Tita aprende algo novo → todos recebem
 ```
 
-### Especialistas não aparecem
-```bash
-# Verificar se pasta existe
-ls -la ~/titanio-dashboard/memoria-especialistas/
+---
 
-# Se não, clonar novamente
-```
+## 🔑 CREDENCIAIS E ACESSOS
+
+- **GitHub repo memória:** https://github.com/contact703/tita-memory
+- **Token GitHub:** pedir para Eduardo (contact@titaniofilms.com)
+- **Mac Mini compartilhado:** /Volumes/TITA_039/MAC_MINI_03/ (rede local)
+- **N8n workflows:** copiar de /Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/pasta-do-tita/n8n-workflows/
 
 ---
 
 ## 📞 SUPORTE
 
-- **Tita** (AI): Automação, especialistas, workflows
-- **Contact**: Dashboard, backend, integrações
-
-**Ping no Telegram/WhatsApp se travar em qualquer passo.**
-
----
-
-## ✅ VALIDAÇÃO FINAL
-
-Quando tudo estiver funcionando:
-```bash
-# 1. Backend OK?
-curl http://localhost:4444/api/health | jq .squad
-
-# 2. Frontend OK?
-curl http://localhost:3000 -I | grep 200
-
-# 3. N8n OK?
-curl http://localhost:5678 | grep n8n
-
-# 4. Especialistas OK?
-curl http://localhost:4444/api/squad | jq length
-
-# Se tudo retornar ✅, pode usar!
-```
+Se algo falhar:
+1. Verificar que Mac Mini está ligado e acessível
+2. Verificar conexão de rede local
+3. Verificar que GitHub token tem permissão de push
+4. Reportar erro para Eduardo/Tita
 
 ---
 
-**Pronto. Qualquer dúvida, é só chamar.**
-
+**Atualizado:** 2026-03-23  
+**Responsável:** Tita 🐾
