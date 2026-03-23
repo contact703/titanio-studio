@@ -2,12 +2,12 @@
   "specialistId": "code-ninja",
   "specialistName": "Code Ninja",
   "version": 2,
-  "lastActive": "2026-03-23T14:09:07.250Z",
+  "lastActive": "2026-03-23T14:11:41.626Z",
   "stats": {
     "tasksCompleted": 6,
     "tasksFailed": 0,
     "sessionsTotal": 0,
-    "lessonsLearned": 714,
+    "lessonsLearned": 828,
     "tokensUsed": 0,
     "avgTaskDurationMs": 3649
   },

@@ -2,12 +2,12 @@
   "specialistId": "automation-bot",
   "specialistName": "Automation Bot",
   "version": 2,
-  "lastActive": "2026-03-23T14:09:09.524Z",
+  "lastActive": "2026-03-23T14:11:41.632Z",
   "stats": {
     "tasksCompleted": 3,
     "tasksFailed": 0,
     "sessionsTotal": 0,
-    "lessonsLearned": 1176,
+    "lessonsLearned": 1365,
     "tokensUsed": 0,
     "avgTaskDurationMs": 5720
   },
