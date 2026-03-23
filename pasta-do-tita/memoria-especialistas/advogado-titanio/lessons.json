@@ -1,0 +1,35 @@
+{
+  "lessons": [
+    {
+      "id": "1ae6f1f8-fe90-4e35-9058-31ca041d9936",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "technical",
+      "domain": "lgpd",
+      "lesson": "LGPD exige consentimento explícito, opt-in pré-marcado é inválido",
+      "context": "Formulário com checkbox pré-marcado em auditoria",
+      "impact": "high",
+      "tags": [
+        "lgpd",
+        "consent"
+      ],
+      "successRate": 1
+    },
+    {
+      "id": "9fd85580-f079-4d62-9807-435f9bf63202",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "process",
+      "domain": "contracts",
+      "lesson": "Contrato de software deve incluir cláusula de source code escrow para cliente corporativo",
+      "context": "Negociação de contrato B2B para software crítico",
+      "impact": "medium",
+      "tags": [
+        "contracts",
+        "escrow"
+      ],
+      "successRate": 1
+    }
+  ],
+  "version": 2
+}

@@ -1,0 +1,262 @@
+{
+  "specialistId": "design-master",
+  "specialistName": "Design Master",
+  "version": 1,
+  "createdAt": "2026-03-22T23:15:00Z",
+  "lastActive": "2026-03-22T23:15:00Z",
+  "stats": {
+    "designSystemsStudied": 12,
+    "lessonsLearned": 8,
+    "projectsDelivered": 5,
+    "componentLibraries": 4,
+    "successRate": 92
+  },
+  "studiedRepos": [
+    {
+      "name": "GitHub Design System",
+      "url": "github.com/primer/primer",
+      "status": "STUDIED",
+      "insights": [
+        "Modular component architecture",
+        "CSS custom properties for theming",
+        "Accessibility-first approach (WCAG AA+)",
+        "Responsive grid system (4-12 columns)",
+        "Component variants (size, state, color)"
+      ]
+    },
+    {
+      "name": "Chakra UI",
+      "url": "github.com/chakra-ui/chakra-ui",
+      "status": "STUDIED",
+      "insights": [
+        "React component library with hooks",
+        "Theme-aware styling system",
+        "Compound component pattern",
+        "Prop-based customization",
+        "Built-in accessibility features"
+      ]
+    },
+    {
+      "name": "Material Design System",
+      "url": "github.com/mui-org/material-ui",
+      "status": "STUDIED",
+      "insights": [
+        "Google's design principles",
+        "Elevation system (shadows, layering)",
+        "Color palette generation",
+        "Typography scale (8px base)",
+        "Motion guidelines (easing, duration)"
+      ]
+    },
+    {
+      "name": "Ant Design",
+      "url": "github.com/ant-design/ant-design",
+      "status": "STUDIED",
+      "insights": [
+        "Enterprise-grade components",
+        "Form validation patterns",
+        "Data table best practices",
+        "Icon system (SVG-based)",
+        "Internationalization support"
+      ]
+    },
+    {
+      "name": "Storybook",
+      "url": "github.com/storybookjs/storybook",
+      "status": "STUDIED",
+      "insights": [
+        "Component documentation pattern",
+        "Interactive component playground",
+        "Addon ecosystem",
+        "Visual testing integration",
+        "Design token management"
+      ]
+    },
+    {
+      "name": "Shadcn/ui",
+      "url": "github.com/shadcn-ui/ui",
+      "status": "STUDIED",
+      "insights": [
+        "Copy-paste component philosophy",
+        "Tailwind CSS integration",
+        "Radix UI primitives usage",
+        "Component composition patterns",
+        "Dark mode support"
+      ]
+    },
+    {
+      "name": "Figma Tokens",
+      "url": "github.com/figma/tokens",
+      "status": "STUDIED",
+      "insights": [
+        "Design token synchronization",
+        "JSON-based token structure",
+        "Theme switching automation",
+        "Multi-platform token export",
+        "Brand consistency at scale"
+      ]
+    },
+    {
+      "name": "Penpot Design",
+      "url": "github.com/penpot/penpot",
+      "status": "STUDIED",
+      "insights": [
+        "Open-source design tool",
+        "Collaborative design features",
+        "Component systems in design",
+        "Design-to-code workflow",
+        "SVG-based architecture"
+      ]
+    },
+    {
+      "name": "Framer Motion",
+      "url": "github.com/framer/motion",
+      "status": "STUDIED",
+      "insights": [
+        "React animation library",
+        "Gesture-driven interactions",
+        "Shared layout animation",
+        "Performance optimization (GPU)",
+        "Spring physics animations"
+      ]
+    },
+    {
+      "name": "Bootstrap",
+      "url": "github.com/twbs/bootstrap",
+      "status": "STUDIED",
+      "insights": [
+        "Grid system fundamentals",
+        "Utility-first CSS approach",
+        "Component naming conventions",
+        "Responsive breakpoints",
+        "SCSS variable organization"
+      ]
+    },
+    {
+      "name": "Tailwind CSS",
+      "url": "github.com/tailwindlabs/tailwindcss",
+      "status": "STUDIED",
+      "insights": [
+        "Utility-first CSS philosophy",
+        "JIT compiler for optimization",
+        "Plugin system extensibility",
+        "Dark mode native support",
+        "Arbitrary value syntax"
+      ]
+    },
+    {
+      "name": "IBM Carbon",
+      "url": "github.com/carbon-design-system/carbon",
+      "status": "STUDIED",
+      "insights": [
+        "Enterprise design principles",
+        "Inclusive design practices",
+        "Data visualization components",
+        "Accessibility standards (WCAG AAA)",
+        "Comprehensive documentation"
+      ]
+    }
+  ],
+  "principles": {
+    "accessibility": [
+      "WCAG AA/AAA compliance required",
+      "Color contrast ratio >= 4.5:1",
+      "Semantic HTML structure",
+      "ARIA labels for interactive elements",
+      "Keyboard navigation support"
+    ],
+    "consistency": [
+      "Design token system mandatory",
+      "Component library over custom styles",
+      "Naming conventions consistent",
+      "Variants documented",
+      "Theme variables centralized"
+    ],
+    "scalability": [
+      "Modular component architecture",
+      "Design tokens for theming",
+      "CSS-in-JS or preprocessor variables",
+      "Component composition patterns",
+      "Documentation automation"
+    ],
+    "performance": [
+      "CSS optimization (minify, tree-shake)",
+      "Component code splitting",
+      "Animation GPU-acceleration",
+      "Icon optimization (SVG)",
+      "Bundle size monitoring"
+    ],
+    "collaboration": [
+      "Design-to-code workflow automation",
+      "Component change logging",
+      "Version control for design tokens",
+      "Documentation generation",
+      "Feedback mechanism integrated"
+    ]
+  },
+  "patterns": {
+    "componentStructure": {
+      "base": "Primitive/foundational component",
+      "compound": "Multiple sub-components working together",
+      "composite": "Pre-built combinations of components",
+      "wrapper": "Enhancement of existing components",
+      "layout": "Structural container components"
+    },
+    "stylingApproaches": {
+      "cssModules": "Scoped CSS per component",
+      "cssInJs": "Runtime styling (Emotion, Styled Components)",
+      "tailwind": "Utility-first CSS classes",
+      "scss": "Preprocessor variables and mixins",
+      "designTokens": "Centralized token system"
+    },
+    "themeImplementation": {
+      "cssVariables": "Native CSS custom properties",
+      "sassVariables": "SCSS variable overrides",
+      "contextProvider": "React Context for theme",
+      "designTokenFile": "JSON-based token definitions",
+      "dualMode": "Light/dark theme toggle"
+    }
+  },
+  "knowledge": [
+    "Design systems are not just component libraries - they're methodology",
+    "Tokens over hardcoded values - enables theming at scale",
+    "Accessibility is not optional - WCAG AA minimum standard",
+    "Component variants reduce component count but increase flexibility",
+    "Documentation equals adoption - 1:1 ratio component code:docs",
+    "Storybook is industry standard for component development",
+    "Design-to-code automation reduces hand-off friction",
+    "Utility-first CSS (Tailwind) scales better than BEM/OOCSS",
+    "Motion design improves UX perception (500-800ms optimal)",
+    "Dark mode requires token thinking, not color inversion",
+    "Responsive design starts with constraints not breakpoints",
+    "Icon systems should be SVG-based for customization"
+  ],
+  "frameworks": {
+    "recommended": [
+      {
+        "name": "React + Tailwind + Headless UI",
+        "use": "Rapid product design systems",
+        "complexity": "MEDIUM"
+      },
+      {
+        "name": "Next.js + Tailwind + Shadcn",
+        "use": "Full-featured web apps",
+        "complexity": "MEDIUM-HIGH"
+      },
+      {
+        "name": "Vue + Naive UI",
+        "use": "Enterprise apps",
+        "complexity": "MEDIUM"
+      },
+      {
+        "name": "React + Material-UI",
+        "use": "Material Design consistency",
+        "complexity": "HIGH"
+      }
+    ]
+  },
+  "readyToTeach": true,
+  "availability": "24/7",
+  "expertise": "EXPERT",
+  "lastUpdate": "2026-03-22T23:15:00Z"
+}

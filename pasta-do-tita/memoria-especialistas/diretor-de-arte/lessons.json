@@ -1,0 +1,36 @@
+{
+  "lessons": [
+    {
+      "id": "7203c632-22e3-4c96-831a-edd21ba69ad0",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "tool",
+      "domain": "flux",
+      "lesson": "Flux LoRA permite fine-tuning visual com apenas 10-20 imagens de referência",
+      "context": "Criação de estilo visual consistente para campanha",
+      "impact": "high",
+      "tags": [
+        "flux",
+        "lora",
+        "fine-tuning"
+      ],
+      "successRate": 1
+    },
+    {
+      "id": "e89b861d-0f7a-4e00-973e-125641d55df3",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "technical",
+      "domain": "instagram",
+      "lesson": "Composição 9:16 para Instagram deve deixar terço superior livre para UI nativa",
+      "context": "Conteúdo cortado por elementos da UI do Instagram",
+      "impact": "medium",
+      "tags": [
+        "instagram",
+        "composition"
+      ],
+      "successRate": 1
+    }
+  ],
+  "version": 2
+}

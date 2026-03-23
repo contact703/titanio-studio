@@ -1,0 +1,240 @@
+{
+  "lessons": [
+    {
+      "id": "daa93423-db0c-404a-8890-f12555329216",
+      "date": "2026-03-22",
+      "time": "12:40",
+      "successRate": 1,
+      "lesson": "Tarefa executada: Você é Tita, uma IA assistente. Analise sua atividade recente e extraia insights para sua memória de",
+      "context": "Resultado: ## [Geração de Memória de Longo Prazo] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nAnalisando a atividade recente e extraindo insights para a memória de longo prazo:\n\n### Fatos importa",
+      "category": "process",
+      "domain": "memory-bot",
+      "impact": "medium",
+      "tags": [
+        "auto-task"
+      ]
+    },
+    {
+      "id": "f98861b2-8c99-4e64-a4ca-52056dff0c87",
+      "date": "2026-03-22",
+      "time": "04:25",
+      "successRate": 1,
+      "lesson": "Tarefa executada: Você é Tita, uma IA assistente. Analise sua atividade recente e extraia insights para sua memória de",
+      "context": "Resultado: ## [Geração de Memória de Longo Prazo] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nAnalisando a atividade recente e extraindo insights para a memória de longo prazo:\n\n### Fatos importa",
+      "category": "process",
+      "domain": "memory-bot",
+      "impact": "medium",
+      "tags": [
+        "auto-task"
+      ]
+    },
+    {
+      "id": "d2ec02aa-3f36-441d-8a42-24a1720adb78",
+      "date": "2026-03-22",
+      "time": "00:24",
+      "successRate": 1,
+      "lesson": "Tarefa executada: Você é Tita, uma IA assistente. Analise sua atividade recente e extraia insights para sua memória de",
+      "context": "Resultado: ## [Geração de Memória de Longo Prazo] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nAnalisando a atividade recente e extraindo insights para a memória de longo prazo:\n\n### Fatos importa",
+      "category": "process",
+      "domain": "memory-bot",
+      "impact": "medium",
+      "tags": [
+        "auto-task"
+      ]
+    },
+    {
+      "id": "6d05d5e9-5f2a-46a9-8431-d10435000d30",
+      "date": "2026-03-21",
+      "time": "18:11",
+      "successRate": 1,
+      "lesson": "Tarefa executada: Você é Tita, uma IA assistente. Analise sua atividade recente e extraia insights para sua memória de",
+      "context": "Resultado: ## [Geração de Memória de Longo Prazo] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nAnalisando a atividade recente e extraindo insights para a memória de longo prazo:\n\n### Fatos importa",
+      "category": "process",
+      "domain": "memory-bot",
+      "impact": "medium",
+      "tags": [
+        "auto-task"
+      ]
+    },
+    {
+      "id": "memory-bot-instagram-0",
+      "date": "2026-03-19",
+      "time": "17:08",
+      "category": "tool",
+      "domain": "instagram",
+      "lesson": "Ver vídeos do Instagram: usar instaloader (pip3 install instaloader). Requer login salvo. Comando: python3 -m instaloader --login USUARIO <shortcode>. Após login, sessão salva em ~/.config/instaloader/. Posts públicos AINDA precisam de autenticação na API do Instagram em 2025/2026.",
+      "context": "Instagram video download",
+      "impact": "high",
+      "tags": [
+        "instagram",
+        "video",
+        "instaloader",
+        "yt-dlp"
+      ],
+      "successRate": 1,
+      "source": "system-knowledge"
+    },
+    {
+      "id": "memory-bot-instagram-1",
+      "date": "2026-03-19",
+      "time": "17:08",
+      "category": "tool",
+      "domain": "instagram",
+      "lesson": "yt-dlp suporta Instagram MAS exige cookies autenticados. Usar: yt-dlp --cookies-from-browser chrome URL (se Chrome tiver sessão do Instagram). Sem login = erro 401. Melhor alternativa: instaloader com sessão salva.",
+      "context": "Instagram yt-dlp",
+      "impact": "high",
+      "tags": [
+        "yt-dlp",
+        "instagram",
+        "cookies",
+        "chrome"
+      ],
+      "successRate": 1,
+      "source": "system-knowledge"
+    },
+    {
+      "id": "memory-bot-instagram-2",
+      "date": "2026-03-19",
+      "time": "17:08",
+      "category": "process",
+      "domain": "instagram",
+      "lesson": "Fluxo completo para baixar vídeo Instagram: 1) instaloader instalado ✅, 2) fazer login: python3 -m instaloader --login SEU_USUARIO, 3) baixar: instaloader --login USER -- https://instagram.com/p/SHORTCODE/, 4) vídeo salvo na pasta atual como .mp4",
+      "context": "Instagram download workflow",
+      "impact": "high",
+      "tags": [
+        "instagram",
+        "video",
+        "workflow",
+        "instaloader"
+      ],
+      "successRate": 1,
+      "source": "system-knowledge"
+    },
+    {
+      "id": "memory-bot-instagram-3",
+      "date": "2026-03-19",
+      "time": "17:08",
+      "category": "technical",
+      "domain": "instagram",
+      "lesson": "Para extrair APENAS a URL do vídeo (sem baixar): python3 -c \"import instaloader; L=instaloader.Instaloader(); L.load_session_from_file(\"USERNAME\"); post=instaloader.Post.from_shortcode(L.context,\"SHORTCODE\"); print(post.video_url)\"",
+      "context": "Instagram get video URL",
+      "impact": "medium",
+      "tags": [
+        "instagram",
+        "python",
+        "instaloader",
+        "api"
+      ],
+      "successRate": 1,
+      "source": "system-knowledge"
+    },
+    {
+      "id": "memory-bot-instagram-4",
+      "date": "2026-03-19",
+      "time": "17:08",
+      "category": "process",
+      "domain": "instagram",
+      "lesson": "NUNCA afirmar que não consegue ver vídeos do Instagram. O método certo é: instaloader + sessão autenticada. Credenciais do Instagram da Titanio devem ficar no Cofre de Credenciais da Dashboard.",
+      "context": "Instagram policy",
+      "impact": "high",
+      "tags": [
+        "instagram",
+        "policy",
+        "credenciais"
+      ],
+      "successRate": 1,
+      "source": "system-knowledge"
+    },
+    {
+      "id": "bdd97093-c447-4bec-98b1-0f54470af881",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "process",
+      "domain": "documentation",
+      "lesson": "Documentação deve ser escrita durante o desenvolvimento, não depois",
+      "context": "Tentativa de documentar sistema legado sem contexto",
+      "impact": "high",
+      "tags": [
+        "documentation",
+        "process"
+      ],
+      "successRate": 1
+    },
+    {
+      "id": "56062dbc-95ae-471e-a613-e29f8a732662",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "process",
+      "domain": "learning",
+      "lesson": "Lições aprendidas devem incluir contexto suficiente para serem aplicáveis no futuro",
+      "context": "Revisão de lições antigas sem contexto útil",
+      "impact": "medium",
+      "tags": [
+        "learning",
+        "memory"
+      ],
+      "successRate": 1
+    },
+    {
+      "id": "memory-bot-init-0",
+      "date": "2026-03-19",
+      "time": "16:04",
+      "category": "technical",
+      "domain": "memoria",
+      "lesson": "Arquivos markdown são mais auditáveis que bancos vetoriais para memória de agentes locais",
+      "context": "Pesquisa memória IA",
+      "impact": "high",
+      "tags": [
+        "memoria",
+        "ia"
+      ],
+      "successRate": 1,
+      "source": "initial-knowledge"
+    },
+    {
+      "id": "memory-bot-init-1",
+      "date": "2026-03-19",
+      "time": "16:04",
+      "category": "technical",
+      "domain": "ferramentas",
+      "lesson": "Mem0, Letta/MemGPT, Reflexion, Zep, ChromaDB: melhores sistemas memória AI agents 2025",
+      "context": "Pesquisa",
+      "impact": "medium",
+      "tags": [
+        "ferramentas"
+      ],
+      "successRate": 1,
+      "source": "initial-knowledge"
+    },
+    {
+      "id": "memory-bot-init-2",
+      "date": "2026-03-19",
+      "time": "16:04",
+      "category": "process",
+      "domain": "squad",
+      "lesson": "Squad lessons compartilhadas: todos os especialistas aprendem de todos via arquivo JSON compartilhado",
+      "context": "tita-learning-system",
+      "impact": "high",
+      "tags": [
+        "squad"
+      ],
+      "successRate": 1,
+      "source": "initial-knowledge"
+    },
+    {
+      "id": "memory-bot-init-3",
+      "date": "2026-03-19",
+      "time": "16:04",
+      "category": "error",
+      "domain": "script",
+      "lesson": "capture-lesson.sh: campo timestamp ausente — bug corrigido usando date+time separados",
+      "context": "bug fix",
+      "impact": "medium",
+      "tags": [
+        "script"
+      ],
+      "successRate": 1,
+      "source": "initial-knowledge"
+    }
+  ]
+}

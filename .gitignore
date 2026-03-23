@@ -1,0 +1,28 @@
+# Node modules
+node_modules/
+*/node_modules/
+**/node_modules/
+
+# Arquivos compilados grandes
+*.node
+*.so
+*.dylib
+*.dll
+
+# Build outputs
+.next/
+dist/
+build/
+.cache/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Env files
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db

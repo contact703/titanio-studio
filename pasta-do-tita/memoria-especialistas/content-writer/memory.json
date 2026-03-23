@@ -1,0 +1,62 @@
+{
+  "specialistId": "content-writer",
+  "specialistName": "Content Writer",
+  "version": 2,
+  "lastActive": "2026-03-23T14:09:08.356Z",
+  "stats": {
+    "tasksCompleted": 4,
+    "tasksFailed": 0,
+    "sessionsTotal": 0,
+    "lessonsLearned": 705,
+    "tokensUsed": 0,
+    "avgTaskDurationMs": 40026
+  },
+  "knowledge": [],
+  "recentTasks": [
+    {
+      "id": "afd14b05-78f0-4ca6-b0fb-9c31a0a1c52d",
+      "title": "Roteiro completo de vídeo YouTube 8min sobre \"dicas de finanças pessoais\" para canal FACELESS. Inclui: título CTR alto, thumbnail (descrição), script por cena com direção de b-roll, CTA para afiliado.",
+      "description": "",
+      "status": "completed",
+      "startedAt": "2026-03-23T12:40:58.288Z",
+      "completedAt": "2026-03-23T12:41:51.793Z",
+      "result": "## [Roteiro de Vídeo YouTube 8min] — \"Dicas de Finanças Pessoais\" | FACELESS — Relatório de Execução\n\n---\n\n## 📌 1. TÍTULO + THUMBNAIL\n\n### Título (CTR Alto - 8 palavras)\n**\"5 Erros de Dinheiro que te DEIXAM Pobre | Finanças\"**\n\n**Alternativas de título (teste A/B):**\n- \"Parei de Ser Pobre com ESTAS 5 Técnicas | Finanças Pessoais\"\n- \"5 Regras de Ouro que Milionários Seguem | Finanças\"\n\n### Descrição da Thumbnail\n- **Fundo**: Degradê vermelho → laranja (urgência + atenção)\n- **Elemento central**:",
+      "durationMs": 53505
+    },
+    {
+      "id": "a9e64826-c0cf-48ea-835d-78f86abecd0f",
+      "title": "Roteiro completo de vídeo YouTube 8min sobre \"como ganhar dinheiro online\" para canal FACELESS. Inclui: título CTR alto, thumbnail (descrição), script por cena com direção de b-roll, CTA para afiliado.",
+      "description": "",
+      "status": "completed",
+      "startedAt": "2026-03-23T10:38:41.631Z",
+      "completedAt": "2026-03-23T10:39:10.182Z",
+      "result": "## [Roteiro de Vídeo YouTube] — Relatório de Execução\n\n[Execução e resultados concretos]\n\n### Título e Thumbnail\n- **Título**: \"8 Estratégias Infalíveis para Ganhar Dinheiro Online em 2026 | FACELESS\"\n- **Thumbnail**: Descrição com uma imagem atrativa que mostra dinheiro ou pessoas trabalhando online, com o título em destaque e legível.\n\n### Script por Cena com Direção de B-roll\n\n**Introdução**\n- Cena 1: Abertura com um vídeo de b-roll mostrando pessoas trabalhando em diferentes ambientes (casa,",
+      "durationMs": 28551
+    },
+    {
+      "id": "d9e79b74-752b-4af2-ace3-cea63645ece3",
+      "title": "Roteiro completo de vídeo YouTube 8min sobre \"curiosidades sobre IA\" para canal FACELESS. Inclui: título CTR alto, thumbnail (descrição), script por cena com direção de b-roll, CTA para afiliado.",
+      "description": "",
+      "status": "completed",
+      "startedAt": "2026-03-23T08:36:21.603Z",
+      "completedAt": "2026-03-23T08:37:11.892Z",
+      "result": "# 🎬 Roteiro de Vídeo YouTube 8min — \"Curiosidades sobre IA\" | FACELESS\n\n## ✅ EXECUÇÃO COMPLETA\n\n---\n\n## 📌 1. TÍTULO + THUMBNAIL\n\n### Título (CTR Alto)\n**\"5 Segredos de IA que NINGUÉM te conta | ChatGPT, Claude e o Futuro\"**\n- ✅ 11 palavras (range ideal 6-12)\n- ✅ Números + promessa de revelação (gatilho psicológico)\n- ✅ Menção de ferramentas conhecidas (relevância)\n- ✅ Pattern interrupt: \"segredos que NINGUÉM te conta\"\n\n### Thumbnail (Descrição)\n**Dimensões**: 1280x720px | Safe zone: sem elemen",
+      "durationMs": 50289
+    },
+    {
+      "id": "43e926f7-f03f-42b0-a75e-65e7f5795a33",
+      "title": "Roteiro completo de vídeo YouTube 8min sobre \"dicas de finanças pessoais\" para canal FACELESS. Inclui: título CTR alto, thumbnail (descrição), script por cena com direção de b-roll, CTA para afiliado.",
+      "description": "",
+      "status": "completed",
+      "startedAt": "2026-03-22T10:55:24.159Z",
+      "completedAt": "2026-03-22T10:55:51.917Z",
+      "result": "## [Roteiro de Vídeo YouTube] — Relatório de Execução\n\n[Execução e resultados concretos]\n\n### Título e Thumbnail\n- **Título**: \"8 dicas de finanças pessoais que mudaram minha vida | Renda Extra e Investimentos\"\n- **Descrição da Thumbnail**: \"Descubra como gerenciar sua renda e investir inteligentemente para alcançar sua liberdade financeira. Assista até o final para um bônus exclusivo!\"\n\n### Script por Cena\n**Cena 1: Introdução**\n- B-roll: Vídeo do apresentador sentado em um ambiente casual, sor",
+      "durationMs": 27758
+    }
+  ],
+  "activeContext": {
+    "currentTask": null,
+    "currentProject": null,
+    "startedAt": null
+  }
+}

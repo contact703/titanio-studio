@@ -1,0 +1,52 @@
+{
+  "specialistId": "automation-bot",
+  "specialistName": "Automation Bot",
+  "version": 2,
+  "lastActive": "2026-03-23T14:09:09.524Z",
+  "stats": {
+    "tasksCompleted": 3,
+    "tasksFailed": 0,
+    "sessionsTotal": 0,
+    "lessonsLearned": 1176,
+    "tokensUsed": 0,
+    "avgTaskDurationMs": 5720
+  },
+  "knowledge": [],
+  "recentTasks": [
+    {
+      "id": "f0ada1f2-487e-4438-8b8d-da647dec354b",
+      "title": "N8n workflows modelos gratuitos",
+      "description": "Subagente ativo",
+      "status": "completed",
+      "startedAt": "2026-03-20T19:46:38.524Z",
+      "completedAt": "2026-03-20T19:46:45.130Z",
+      "result": "Para ajudá-lo a encontrar modelos gratuitos de workflows no N8n, posso te fornecer uma lista de recursos onde você pode encontrar esses modelos prontos para uso. Aqui estão algumas opções:\n\n1. **N8n Community Forum**: A comunidade do N8n tem um fórum onde os usuários compartilham seus workflows e templates. É possível encontrar muitos modelos gratuitos lá. Acesse: [N8n Community Forum](https://community.n8n.io/)\n\n2. **N8n GitHub**: A equipe do N8n e a comunidade contribuem com modelos no reposit",
+      "durationMs": 6606
+    },
+    {
+      "id": "608c7a2d-b38e-4699-bb33-f70762b34072",
+      "title": "Integração modelos gratuitos OpenRouter — nemotron + stepflash",
+      "description": "Subagente OpenClaw ativo",
+      "status": "completed",
+      "startedAt": "2026-03-20T19:46:09.599Z",
+      "completedAt": "2026-03-20T19:46:19.648Z",
+      "result": "Para realizar a integração de modelos gratuitos do OpenRouter com o nemotron e o stepflash, você pode seguir os passos abaixo. Esta integração envolve a conexão de diferentes sistemas e a automação de processos, o que pode ser feito utilizando ferramentas como o n8n, que é uma plataforma de automação de workflows.\n\n### Etapas para Integração:\n\n1. **Identificar os Requisitos e Fontes de Dados:**\n   - Primeiramente, é necessário entender os modelos gratuitos do OpenRouter e como eles podem ser int",
+      "durationMs": 10049
+    },
+    {
+      "id": "897a2348-3509-48c8-97ab-ea0544b76274",
+      "title": "Criar workflow N8n de aprendizado automático",
+      "description": "Sistema de captura de lições",
+      "status": "completed",
+      "startedAt": "2026-03-20T19:15:00.453Z",
+      "completedAt": "2026-03-20T19:15:00.958Z",
+      "result": "Automation Bot processou a tarefa: Criar workflow N8n de aprendizado automático",
+      "durationMs": 505
+    }
+  ],
+  "activeContext": {
+    "currentTask": null,
+    "currentProject": null,
+    "startedAt": null
+  }
+}

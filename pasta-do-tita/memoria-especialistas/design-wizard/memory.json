@@ -1,0 +1,32 @@
+{
+  "specialistId": "design-wizard",
+  "specialistName": "Design Wizard",
+  "version": 2,
+  "lastActive": "2026-03-20T19:21:09.159Z",
+  "stats": {
+    "tasksCompleted": 1,
+    "tasksFailed": 0,
+    "sessionsTotal": 0,
+    "lessonsLearned": 5,
+    "tokensUsed": 0,
+    "avgTaskDurationMs": 1285
+  },
+  "knowledge": [],
+  "recentTasks": [
+    {
+      "id": "ac9d3231-f52c-4e61-83d9-db53b65f582c",
+      "title": "Em 1 linha: qual sua especialidade?",
+      "description": "",
+      "status": "completed",
+      "startedAt": "2026-03-20T19:21:07.807Z",
+      "completedAt": "2026-03-20T19:21:09.092Z",
+      "result": "Minha especialidade é o design de interfaces de usuário (UI) e experiência do usuário (UX), com habilidades em Figma, Tailwind CSS, prototipação, sistemas de design e animações.",
+      "durationMs": 1285
+    }
+  ],
+  "activeContext": {
+    "currentTask": null,
+    "currentProject": null,
+    "startedAt": null
+  }
+}

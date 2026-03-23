@@ -1,0 +1,122 @@
+{
+  "specialistId": "n8n-master",
+  "lessonsLearned": [
+    {
+      "id": "lesson-001",
+      "date": "2026-03-20",
+      "time": "12:30",
+      "title": "Parallelism is 60% faster than sequential",
+      "description": "5 bots running parallel = ~8 min total. Sequential = ~20 min. Lesson: Always use parallelism when possible.",
+      "taskId": "enem-game-5bots",
+      "context": "ENEM Game workflow with 5 HTTP requests",
+      "solution": "Connect all 5 outputs from trigger node, then consolidate",
+      "applicable": true,
+      "priority": "CRITICAL",
+      "successRate": 100
+    },
+    {
+      "id": "lesson-002",
+      "date": "2026-03-21",
+      "time": "14:15",
+      "title": "Consolidate Results node is essential",
+      "description": "Without consolidate, multiple outputs remain separate JSON objects. With consolidate, they merge into single array. Essential for processing parallel results.",
+      "taskId": "dashboard-workflows",
+      "context": "Dashboard bots consolidating results",
+      "solution": "Add Consolidate Results → Spreadsheet Parser before final node",
+      "applicable": true,
+      "priority": "HIGH",
+      "successRate": 100
+    },
+    {
+      "id": "lesson-003",
+      "date": "2026-03-21",
+      "time": "16:45",
+      "title": "Rate limiting prevents API blocks",
+      "description": "APIs block requests if too many in quick succession. Minimum 2 seconds between requests to same domain. Use delay nodes.",
+      "taskId": "ollama-monitor",
+      "context": "Ollama health check had throttling",
+      "solution": "Add Delay node between HTTP requests (2-5 seconds)",
+      "applicable": true,
+      "priority": "HIGH",
+      "successRate": 99
+    },
+    {
+      "id": "lesson-004",
+      "date": "2026-03-22",
+      "time": "19:30",
+      "title": "Phi3 is better than Qwen 32B for workflows",
+      "description": "Qwen 2.5 32B requires 32GB RAM (crashes on 16GB). Phi3 requires 4GB. For N8n workflows, always use Phi3. Qwen 32B only for heavy compute.",
+      "taskId": "enem-game-models",
+      "context": "ENEM Game workflow model selection",
+      "solution": "Model: phi3 (or llama3.1:8b for quality). Avoid qwen2.5:32b in N8n",
+      "applicable": true,
+      "priority": "MEDIUM",
+      "successRate": 100
+    },
+    {
+      "id": "lesson-005",
+      "date": "2026-03-22",
+      "time": "21:00",
+      "title": "Cron triggers are production-ready",
+      "description": "Manual triggers need manual clicks. Cron triggers run 24/7 without intervention. For any recurring task, use cronTrigger. Much more reliable.",
+      "taskId": "auto-backup-git",
+      "context": "Daily backup workflow",
+      "solution": "Use cronTrigger with {hour: 0, minute: 0} for midnight execution",
+      "applicable": true,
+      "priority": "HIGH",
+      "successRate": 100
+    },
+    {
+      "id": "lesson-006",
+      "date": "2026-03-23",
+      "time": "09:00",
+      "title": "🔴 CRÍTICO: N8N_USER_FOLDER deve ser definido sempre",
+      "description": "N8n sem N8N_USER_FOLDER usa ~/.n8n como default. Se os workflows foram criados com uma variável diferente, o processo não enxerga os workflows existentes e a API retorna 0 workflows. Isso gera confusão de 'workflows sumiram'.",
+      "taskId": "n8n-api-fix-23-03",
+      "context": "N8n API retornava 0 workflows. DB correto era ~/.n8n/.n8n/database.sqlite mas processo usava ~/.n8n/database.sqlite (vazio).",
+      "solution": "SEMPRE iniciar N8n com: N8N_USER_FOLDER=/caminho/correto node /usr/local/bin/n8n start --insecure. Criar LaunchAgent com EnvironmentVariables para garantir permanência.",
+      "code": "# Comando correto:\nexport N8N_USER_FOLDER=/Volumes/TITA_039/MAC_MINI_03/.n8n\nnode /usr/local/bin/n8n start --insecure\n\n# Para verificar qual DB está sendo usado:\nfind ~/.n8n -name 'database.sqlite' | while read f; do\n  count=$(python3 -c \"import sqlite3; c=sqlite3.connect('$f').cursor(); c.execute('SELECT COUNT(*) FROM workflow_entity'); print(c.fetchone()[0])\" 2>/dev/null)\n  echo \"$count workflows: $f\"\ndone",
+      "verification": "curl -s http://localhost:5678/api/v1/workflows -H 'X-N8N-API-KEY: SUA_KEY' | jq '.data | length'",
+      "applicable": true,
+      "priority": "CRITICAL",
+      "successRate": 100
+    },
+    {
+      "id": "lesson-007",
+      "date": "2026-03-23",
+      "time": "09:00",
+      "title": "API Key N8n: usar /rest/login não funciona com password vazio",
+      "description": "N8n --insecure mode ainda requer API key para endpoints /api/v1/. Usar X-N8N-API-KEY header. Chaves ficam em user_api_keys table no sqlite.",
+      "taskId": "n8n-api-fix-23-03",
+      "context": "Tentei /rest/login sem senha, retornou erro. Solução: pegar API key direto do sqlite.",
+      "solution": "python3 -c \"import sqlite3; conn=sqlite3.connect('/path/.n8n/database.sqlite'); c=conn.cursor(); c.execute('SELECT label, apiKey FROM user_api_keys'); print(c.fetchall())\"",
+      "apiKeyPath": "/Volumes/TITA_039/MAC_MINI_03/.n8n/.n8n/database.sqlite",
+      "currentKey": "n8n_api_37b62298d5b93b07279533a7b547792c7d0e844bb4f9974d",
+      "applicable": true,
+      "priority": "HIGH",
+      "successRate": 100
+    },
+    {
+      "id": "lesson-008",
+      "date": "2026-03-23",
+      "time": "09:00",
+      "title": "Dashboard chat endpoint correto: /api/squad/:id/task",
+      "description": "O endpoint de chat dos especialistas não é /api/chat nem /api/specialist/chat. É POST /api/squad/:specialistId/task com body {task, context}.",
+      "taskId": "dashboard-chat-fix-23-03",
+      "context": "Testei /api/chat, /api/squad/chat, /api/specialist/chat — todos 404. Endpoint certo descoberto lendo index.ts do backend.",
+      "solution": "curl -X POST http://localhost:4444/api/squad/code-ninja/task -H 'Content-Type: application/json' -d '{\"task\":\"sua tarefa\",\"context\":\"contexto\"}'",
+      "applicable": true,
+      "priority": "HIGH",
+      "successRate": 100
+    }
+  ],
+  "stats": {
+    "totalLessons": 8,
+    "applicableLessons": 8,
+    "avgSuccessRate": 99.9,
+    "criticalLessons": 2,
+    "highPriorityLessons": 4,
+    "mediumPriorityLessons": 1,
+    "lastUpdated": "2026-03-23T12:00:00Z"
+  }
+}

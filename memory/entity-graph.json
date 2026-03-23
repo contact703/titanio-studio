@@ -1,0 +1,63 @@
+{
+  "_meta": {
+    "updated": "2026-03-14",
+    "description": "Grafo de entidades da Tita — pessoas, projetos, decisões, relações"
+  },
+  "people": {
+    "Eduardo": {
+      "role": "founder",
+      "contact": "+553183838181",
+      "channel": "whatsapp",
+      "style": "direto, prático, sem enrolação",
+      "timezone": "America/Sao_Paulo"
+    },
+    "Tiago": { "role": "equipe Titanio", "contact": "whatsapp" },
+    "Elber": { "role": "equipe Titanio", "contact": "whatsapp" },
+    "Caio": { "role": "dev externo", "contact": "caioricardolp@gmail.com", "context": "trabalho anterior site Maricá" },
+    "Zica": { "role": "parceiro Gospia", "context": "aguardando posição sobre mudanças no app" }
+  },
+  "projects": {
+    "KidsHQ": {
+      "status": "blocked",
+      "blocker": "Google Client ID — criar no Google Cloud Console",
+      "railway_service": "673fcb12-2ddb-49b5-bd48-855506a47af6",
+      "pending": ["Google Client ID", "APK no tablet Amazon Fire"]
+    },
+    "KiteMe": {
+      "status": "deployed",
+      "railway_project": "865ff29d-231c-459d-bb02-3e0233de1dc2",
+      "pending": ["token Railway rw_xxx", "GitHub PAT scope workflow"]
+    },
+    "Gospia": {
+      "status": "stable",
+      "version": "2.1.0",
+      "play_store": "contact@titaniofilms.com",
+      "pending": ["aguardar Zica sobre mudanças"]
+    },
+    "MaricaFilmCommission": {
+      "status": "operational",
+      "url": "maricafilmcommission.com",
+      "stack": "WordPress/Elementor"
+    },
+    "TitanioDashboard": {
+      "status": "in_progress",
+      "stack": "Node.js/Next.js",
+      "port": 4444,
+      "n8n_port": 5678,
+      "openclaw_port": 18789
+    }
+  },
+  "credentials": {
+    "Railway_KidsHQ": "disponível",
+    "Railway_KiteMe": "project/service ID conhecido, token pendente",
+    "Firebase_Gospia": "project: gospia-e8cce",
+    "GitHub": "PAT sem scope workflow",
+    "PlayConsole": "contact@titaniofilms.com",
+    "WhatsApp_Gospia_Group": "120363405462114071@g.us"
+  },
+  "decisions": [
+    { "date": "2026-03-10", "decision": "Railway escolhido como backend KidsHQ" },
+    { "date": "2026-03-14", "decision": "N8n Docker para automações Titanio Dashboard" },
+    { "date": "2026-02-26", "decision": "KiteMe deployado no Railway" }
+  ]
+}

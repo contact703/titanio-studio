@@ -1,0 +1,21 @@
+{
+  "specialistId": "ceo-titanio",
+  "specialistName": "Victor Solis",
+  "version": 2,
+  "lastActive": "2026-03-19T19:04:57.855Z",
+  "stats": {
+    "tasksCompleted": 0,
+    "tasksFailed": 0,
+    "sessionsTotal": 0,
+    "lessonsLearned": 3,
+    "tokensUsed": 0,
+    "avgTaskDurationMs": 0
+  },
+  "knowledge": [],
+  "recentTasks": [],
+  "activeContext": {
+    "currentTask": null,
+    "currentProject": null,
+    "startedAt": null
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "lessons": [
+    {
+      "id": "b77cad9c-10e0-4dc8-a7d1-93fc12f1dd8d",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "process",
+      "domain": "pricing",
+      "lesson": "Precificação baseada em valor percebido converte melhor que custo+margem",
+      "context": "Produto com preço baixo mas alta qualidade com conversão ruim",
+      "impact": "high",
+      "tags": [
+        "pricing",
+        "value"
+      ],
+      "successRate": 1
+    },
+    {
+      "id": "561ba684-d927-4ab2-a6af-15c8ebfa5159",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "technical",
+      "domain": "pricing-model",
+      "lesson": "Freemium precisa de pelo menos 1 feature premium clara para converter",
+      "context": "Modelo freemium com baixa conversão para pago",
+      "impact": "high",
+      "tags": [
+        "freemium",
+        "conversion"
+      ],
+      "successRate": 1
+    }
+  ],
+  "version": 2
+}

@@ -1,0 +1,21 @@
+{
+  "specialistId": "fund-hunter",
+  "specialistName": "Victor Capital",
+  "version": 2,
+  "lastActive": "2026-03-19T19:04:57.831Z",
+  "stats": {
+    "tasksCompleted": 0,
+    "tasksFailed": 0,
+    "sessionsTotal": 0,
+    "lessonsLearned": 4,
+    "tokensUsed": 0,
+    "avgTaskDurationMs": 0
+  },
+  "knowledge": [],
+  "recentTasks": [],
+  "activeContext": {
+    "currentTask": null,
+    "currentProject": null,
+    "startedAt": null
+  }
+}

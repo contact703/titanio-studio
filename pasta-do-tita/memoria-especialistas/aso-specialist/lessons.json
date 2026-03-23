@@ -1,0 +1,35 @@
+{
+  "lessons": [
+    {
+      "id": "02eac0b9-c3ab-4fa1-83ef-32b1d412af03",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "process",
+      "domain": "keywords",
+      "lesson": "Keywords com baixa concorrência e médio volume convertem melhor que termos genéricos",
+      "context": "Otimização de keywords para app novo",
+      "impact": "high",
+      "tags": [
+        "keywords",
+        "optimization"
+      ],
+      "successRate": 1
+    },
+    {
+      "id": "f427726f-4815-48a8-b46c-d608dd3b0337",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "communication",
+      "domain": "app-store",
+      "lesson": "Screenshots devem focar em benefícios, não features técnicas",
+      "context": "Review de página de produto com baixa conversão",
+      "impact": "medium",
+      "tags": [
+        "app-store",
+        "conversion"
+      ],
+      "successRate": 1
+    }
+  ],
+  "version": 2
+}

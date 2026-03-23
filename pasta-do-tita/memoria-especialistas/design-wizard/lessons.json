@@ -1,0 +1,77 @@
+{
+  "lessons": [
+    {
+      "id": "8f52cc29-95ae-4eca-b108-51c35e7b091f",
+      "date": "2026-03-20",
+      "time": "16:21",
+      "successRate": 1,
+      "lesson": "Tarefa (N8n): Em 1 linha: qual sua especialidade?",
+      "context": "Resultado: Minha especialidade é o design de interfaces de usuário (UI) e experiência do usuário (UX), com habilidades em Figma, Tailwind CSS, prototipação, sistemas de design e animações.",
+      "category": "process",
+      "domain": "design-wizard",
+      "impact": "medium",
+      "tags": [
+        "n8n-captured"
+      ]
+    },
+    {
+      "id": "e91a187f-b5eb-45c4-b775-c41f897d88ae",
+      "date": "2026-03-20",
+      "time": "16:21",
+      "successRate": 0,
+      "lesson": "Tarefa (N8n): ",
+      "context": "Resultado: Minha especialidade é o design de interfaces de usuário (UI) e experiência do usuário (UX), com habilidades em Figma, Tailwind CSS, prototipação, sistemas de design e animações.",
+      "category": "process",
+      "domain": "design-wizard",
+      "impact": "medium",
+      "tags": [
+        "n8n-captured"
+      ]
+    },
+    {
+      "id": "5b71ef10-bbfe-479a-83f2-e8016d9687c8",
+      "date": "2026-03-20",
+      "time": "16:21",
+      "successRate": 1,
+      "lesson": "Tarefa executada: Em 1 linha: qual sua especialidade?",
+      "context": "Resultado: Minha especialidade é o design de interfaces de usuário (UI) e experiência do usuário (UX), com habilidades em Figma, Tailwind CSS, prototipação, sistemas de design e animações.",
+      "category": "process",
+      "domain": "design-wizard",
+      "impact": "medium",
+      "tags": [
+        "auto-task"
+      ]
+    },
+    {
+      "id": "324dd6b5-2d45-4baa-9086-abbe5051f260",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "process",
+      "domain": "accessibility",
+      "lesson": "Sempre validar contraste WCAG AAA antes de finalizar paleta de cores",
+      "context": "Design de sistema com baixa acessibilidade",
+      "impact": "high",
+      "tags": [
+        "a11y",
+        "colors"
+      ],
+      "successRate": 1
+    },
+    {
+      "id": "e301ab16-936a-41b1-863c-0f6d6c02b7a5",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "tool",
+      "domain": "design-system",
+      "lesson": "Componentes reutilizáveis devem ter variantes documentadas no Figma",
+      "context": "Implementação inconsistente de componentes",
+      "impact": "medium",
+      "tags": [
+        "figma",
+        "consistency"
+      ],
+      "successRate": 1
+    }
+  ],
+  "version": 2
+}

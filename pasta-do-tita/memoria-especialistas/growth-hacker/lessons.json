@@ -1,0 +1,35 @@
+{
+  "lessons": [
+    {
+      "id": "f39c35b9-acd7-4997-8e02-305105f6eda0",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "process",
+      "domain": "funnel",
+      "lesson": "Funil com mais de 5 etapas geralmente tem queda de conversão por fricção",
+      "context": "Otimização de funnel com 7 etapas",
+      "impact": "high",
+      "tags": [
+        "conversion",
+        "funnel"
+      ],
+      "successRate": 1
+    },
+    {
+      "id": "8f8ee96b-0f63-467e-becc-99c2b6805335",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "technical",
+      "domain": "ab-testing",
+      "lesson": "A/B tests precisam de pelo menos 1000 conversões por variante para significância",
+      "context": "Teste A/B interrompido prematuramente",
+      "impact": "medium",
+      "tags": [
+        "ab-testing",
+        "statistics"
+      ],
+      "successRate": 1
+    }
+  ],
+  "version": 2
+}

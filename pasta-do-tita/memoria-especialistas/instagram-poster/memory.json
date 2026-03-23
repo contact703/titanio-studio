@@ -1,0 +1,48 @@
+{
+  "specialistId": "instagram-poster",
+  "specialistName": "Instagram Poster",
+  "version": 1,
+  "createdAt": "2026-03-22T15:16:00.000Z",
+  "lastActive": "2026-03-22T15:16:00.000Z",
+  "stats": {
+    "tasksCompleted": 1,
+    "tasksFailed": 0,
+    "sessionsTotal": 0,
+    "lessonsLearned": 3,
+    "tokensUsed": 0,
+    "avgTaskDurationMs": 0,
+    "postsCreated": 1,
+    "postsPublished": 1
+  },
+  "knowledge": [
+    "Instagram titaniodashboard login com instagrapi",
+    "Criar imagens 1080x1350 com Pillow para Instagram",
+    "Postar fotos com captions e hashtags",
+    "Salvar credenciais no cofre age-encrypted"
+  ],
+  "recentTasks": [
+    {
+      "id": "task-001",
+      "title": "Postar sobre OpenClaw",
+      "description": "Criar imagem + post sobre OpenClaw no Instagram Titanio",
+      "status": "completed",
+      "startedAt": "2026-03-22T15:13:45.000Z",
+      "completedAt": "2026-03-22T15:16:30.000Z",
+      "result": "Post publicado: https://www.instagram.com/p/DWMwwMTkepy/",
+      "durationMs": 165000
+    }
+  ],
+  "credentials": {
+    "instagram_user": "titaniodashboard",
+    "instagram_password": "stored_in_cofre",
+    "cofre_path": "/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/pasta-do-tita/cofre/insta-credentials.json",
+    "session_path": "/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/pasta-do-tita/cofre/insta-titaniodashboard.session"
+  },
+  "activeContext": {
+    "currentTask": null,
+    "currentProject": null,
+    "lastPostedAt": "2026-03-22T15:16:30.000Z",
+    "postsThisWeek": 1,
+    "rate_limit_safe": true
+  }
+}

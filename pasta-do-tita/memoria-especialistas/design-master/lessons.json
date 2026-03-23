@@ -1,0 +1,93 @@
+{
+  "specialistId": "design-master",
+  "lessonsLearned": [
+    {
+      "id": "lesson-design-001",
+      "date": "2026-03-22",
+      "title": "Design Systems > Individual Components",
+      "description": "Studied GitHub Primer, Chakra, Material. All follow systematic approach: tokens → primitives → compounds → complete systems.",
+      "repos": ["primer", "chakra-ui", "material-ui"],
+      "key_insight": "Design consistency comes from constraints (design tokens), not creativity",
+      "applicable": true,
+      "priority": "CRITICAL"
+    },
+    {
+      "id": "lesson-design-002",
+      "date": "2026-03-22",
+      "title": "Accessibility Must Be Built In",
+      "description": "GitHub, IBM Carbon, Material all prioritize WCAG AAA. Accessibility isn't an add-on - it's foundation.",
+      "repos": ["primer", "carbon", "material-ui"],
+      "key_insight": "WCAG AA minimum. Color contrast 4.5:1. ARIA required. Keyboard nav mandatory.",
+      "applicable": true,
+      "priority": "CRITICAL"
+    },
+    {
+      "id": "lesson-design-003",
+      "date": "2026-03-22",
+      "title": "Utility-First CSS Scales Better",
+      "description": "Bootstrap vs Tailwind. Bootstrap = component classes. Tailwind = utility classes. Tailwind wins for customization and theming.",
+      "repos": ["tailwindcss", "bootstrap"],
+      "key_insight": "Utility-first allows dynamic styling. Design tokens + utilities = perfect combo.",
+      "applicable": true,
+      "priority": "HIGH"
+    },
+    {
+      "id": "lesson-design-004",
+      "date": "2026-03-22",
+      "title": "Storybook is Documentation Requirement",
+      "description": "Every major system (Chakra, Ant, Shadcn) uses Storybook. It's not optional - it's how components get adopted.",
+      "repos": ["storybook", "chakra-ui", "ant-design"],
+      "key_insight": "Component code + Storybook docs + visual testing = production-ready",
+      "applicable": true,
+      "priority": "HIGH"
+    },
+    {
+      "id": "lesson-design-005",
+      "date": "2026-03-22",
+      "title": "Dark Mode Requires Token Thinking",
+      "description": "Shadcn, Tailwind show how to do dark mode right. Not color inversion - it's token switching.",
+      "repos": ["shadcn-ui", "tailwindcss", "chakra-ui"],
+      "key_insight": "Each token has light/dark variant. CSS variables make switching trivial.",
+      "applicable": true,
+      "priority": "MEDIUM"
+    },
+    {
+      "id": "lesson-design-006",
+      "date": "2026-03-22",
+      "title": "Design-to-Code Automation Matters",
+      "description": "Figma tokens, Penpot show automation reduces friction. Design changes auto-sync to code.",
+      "repos": ["figma-tokens", "penpot"],
+      "key_insight": "JSON tokens can sync Figma → code. Reduces hand-off errors by 90%.",
+      "applicable": true,
+      "priority": "MEDIUM"
+    },
+    {
+      "id": "lesson-design-007",
+      "date": "2026-03-22",
+      "title": "Motion Improves UX Perception",
+      "description": "Framer Motion shows animation best practices. 500-800ms optimal for perception.",
+      "repos": ["framer-motion"],
+      "key_insight": "GPU-accelerated animations. Spring physics > linear easing. Gesture-driven for mobile.",
+      "applicable": true,
+      "priority": "MEDIUM"
+    },
+    {
+      "id": "lesson-design-008",
+      "date": "2026-03-22",
+      "title": "Icons Must Be SVG-Based",
+      "description": "Ant Design, Bootstrap show SVG icon systems. Allows customization (color, size, animation).",
+      "repos": ["ant-design", "bootstrap"],
+      "key_insight": "SVG > PNG/Font icons. Customizable, scalable, animatable.",
+      "applicable": true,
+      "priority": "MEDIUM"
+    }
+  ],
+  "stats": {
+    "reposStudied": 12,
+    "totalLessons": 8,
+    "criticalLessons": 2,
+    "highPriorityLessons": 2,
+    "implementedLessons": 8,
+    "lastUpdated": "2026-03-22T23:15:00Z"
+  }
+}

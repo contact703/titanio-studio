@@ -1,0 +1,80 @@
+{
+  "lessons": [
+    {
+      "id": "f1791a14-a381-4a41-aa3a-7660d8820268",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "tool",
+      "domain": "llm",
+      "lesson": "LiteLLM permite fallback automático entre provedores de LLM",
+      "context": "Dependência única de API paga gerando custos altos",
+      "impact": "high",
+      "tags": [
+        "litellm",
+        "cost-optimization"
+      ],
+      "successRate": 1
+    },
+    {
+      "id": "e5d7cc67-7834-4aa4-8fbb-6e19ffb7755f",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "technical",
+      "domain": "groq",
+      "lesson": "Groq oferece API gratuita com rate limits generosos para desenvolvimento",
+      "context": "Busca por alternativas gratuitas ao OpenAI",
+      "impact": "medium",
+      "tags": [
+        "groq",
+        "free-tier"
+      ],
+      "successRate": 1
+    },
+    {
+      "id": "agent-doctor-init-0",
+      "date": "2026-03-19",
+      "time": "16:04",
+      "category": "technical",
+      "domain": "groq",
+      "lesson": "Groq: 14.4k req/dia grátis, llama-3.3-70b é o melhor modelo free para fallback",
+      "context": "Pesquisa APIs",
+      "impact": "high",
+      "tags": [
+        "groq",
+        "api"
+      ],
+      "successRate": 1,
+      "source": "initial-knowledge"
+    },
+    {
+      "id": "agent-doctor-init-1",
+      "date": "2026-03-19",
+      "time": "16:04",
+      "category": "technical",
+      "domain": "gemini",
+      "lesson": "Gemini Flash: 1M tokens contexto grátis por request — ideal para tarefas com muito contexto",
+      "context": "Pesquisa",
+      "impact": "high",
+      "tags": [
+        "gemini"
+      ],
+      "successRate": 1,
+      "source": "initial-knowledge"
+    },
+    {
+      "id": "agent-doctor-init-2",
+      "date": "2026-03-19",
+      "time": "16:04",
+      "category": "technical",
+      "domain": "litellm",
+      "lesson": "LiteLLM fallback chain: Anthropic → Groq → Gemini → Ollama local",
+      "context": "Fallback strategy",
+      "impact": "high",
+      "tags": [
+        "litellm"
+      ],
+      "successRate": 1,
+      "source": "initial-knowledge"
+    }
+  ]
+}

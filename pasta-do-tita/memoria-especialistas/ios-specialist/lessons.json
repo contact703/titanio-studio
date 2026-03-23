@@ -1,0 +1,108 @@
+{
+  "lessons": [
+    {
+      "id": "f2c0bb46-8e8f-4f18-8690-6e45b9eedc1e",
+      "date": "2026-03-19",
+      "time": "16:22",
+      "successRate": 1,
+      "context": "",
+      "category": "technical",
+      "domain": "general",
+      "impact": "medium",
+      "tags": []
+    },
+    {
+      "id": "c42fe2d8-2e6c-4e92-ae77-06b29910ebed",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "tool",
+      "domain": "testflight",
+      "lesson": "TestFlight permite até 10k testadores externos e builds expiram em 90 dias",
+      "context": "Gerenciamento de beta testing para app novo",
+      "impact": "medium",
+      "tags": [
+        "testflight",
+        "beta"
+      ],
+      "successRate": 1
+    },
+    {
+      "id": "727bf069-8be7-43ed-ad01-eaa6afe24248",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "technical",
+      "domain": "app-store",
+      "lesson": "App Store Connect API permite automação completa de submissões",
+      "context": "Submissões manuais repetitivas sendo automatizadas",
+      "impact": "high",
+      "tags": [
+        "app-store",
+        "automation"
+      ],
+      "successRate": 1
+    },
+    {
+      "id": "ios-specialist-init-0",
+      "date": "2026-03-19",
+      "time": "16:04",
+      "category": "technical",
+      "domain": "ios",
+      "lesson": "FamilyControls: solicitar em developer.apple.com/contact/request/family-controls-distribution",
+      "context": "KidsHQ",
+      "impact": "high",
+      "tags": [
+        "ios",
+        "familycontrols"
+      ],
+      "successRate": 1,
+      "source": "initial-knowledge"
+    },
+    {
+      "id": "ios-specialist-init-1",
+      "date": "2026-03-19",
+      "time": "16:04",
+      "category": "technical",
+      "domain": "ios",
+      "lesson": "Apple Sign In obrigatório se app tem Google Sign In ou qualquer outro login social",
+      "context": "GospIA iOS",
+      "impact": "high",
+      "tags": [
+        "ios",
+        "auth"
+      ],
+      "successRate": 1,
+      "source": "initial-knowledge"
+    },
+    {
+      "id": "ios-specialist-init-2",
+      "date": "2026-03-19",
+      "time": "16:04",
+      "category": "process",
+      "domain": "testflight",
+      "lesson": "TestFlight requer no ASC: nome/sobrenome contato, telefone, usuário de teste, screenshots iPhone 6.5",
+      "context": "GospIA ASC",
+      "impact": "high",
+      "tags": [
+        "testflight"
+      ],
+      "successRate": 1,
+      "source": "initial-knowledge"
+    },
+    {
+      "id": "ios-specialist-init-3",
+      "date": "2026-03-19",
+      "time": "16:04",
+      "category": "technical",
+      "domain": "xcode",
+      "lesson": "xcodebuild archive falha se prebuild não gerou ReactCodegen .mm files — verificar ios/build/generated/ios/ReactCodegen/",
+      "context": "GospIA",
+      "impact": "high",
+      "tags": [
+        "xcode",
+        "expo"
+      ],
+      "successRate": 1,
+      "source": "initial-knowledge"
+    }
+  ]
+}

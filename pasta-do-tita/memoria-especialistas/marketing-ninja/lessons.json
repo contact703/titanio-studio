@@ -1,0 +1,153 @@
+{
+  "lessons": [
+    {
+      "id": "marketing-ninja-instagram-0",
+      "date": "2026-03-19",
+      "time": "17:08",
+      "category": "tool",
+      "domain": "instagram",
+      "lesson": "Ver vídeos do Instagram: usar instaloader (pip3 install instaloader). Requer login salvo. Comando: python3 -m instaloader --login USUARIO <shortcode>. Após login, sessão salva em ~/.config/instaloader/. Posts públicos AINDA precisam de autenticação na API do Instagram em 2025/2026.",
+      "context": "Instagram video download",
+      "impact": "high",
+      "tags": [
+        "instagram",
+        "video",
+        "instaloader",
+        "yt-dlp"
+      ],
+      "successRate": 1,
+      "source": "system-knowledge"
+    },
+    {
+      "id": "marketing-ninja-instagram-1",
+      "date": "2026-03-19",
+      "time": "17:08",
+      "category": "tool",
+      "domain": "instagram",
+      "lesson": "yt-dlp suporta Instagram MAS exige cookies autenticados. Usar: yt-dlp --cookies-from-browser chrome URL (se Chrome tiver sessão do Instagram). Sem login = erro 401. Melhor alternativa: instaloader com sessão salva.",
+      "context": "Instagram yt-dlp",
+      "impact": "high",
+      "tags": [
+        "yt-dlp",
+        "instagram",
+        "cookies",
+        "chrome"
+      ],
+      "successRate": 1,
+      "source": "system-knowledge"
+    },
+    {
+      "id": "marketing-ninja-instagram-2",
+      "date": "2026-03-19",
+      "time": "17:08",
+      "category": "process",
+      "domain": "instagram",
+      "lesson": "Fluxo completo para baixar vídeo Instagram: 1) instaloader instalado ✅, 2) fazer login: python3 -m instaloader --login SEU_USUARIO, 3) baixar: instaloader --login USER -- https://instagram.com/p/SHORTCODE/, 4) vídeo salvo na pasta atual como .mp4",
+      "context": "Instagram download workflow",
+      "impact": "high",
+      "tags": [
+        "instagram",
+        "video",
+        "workflow",
+        "instaloader"
+      ],
+      "successRate": 1,
+      "source": "system-knowledge"
+    },
+    {
+      "id": "marketing-ninja-instagram-3",
+      "date": "2026-03-19",
+      "time": "17:08",
+      "category": "technical",
+      "domain": "instagram",
+      "lesson": "Para extrair APENAS a URL do vídeo (sem baixar): python3 -c \"import instaloader; L=instaloader.Instaloader(); L.load_session_from_file(\"USERNAME\"); post=instaloader.Post.from_shortcode(L.context,\"SHORTCODE\"); print(post.video_url)\"",
+      "context": "Instagram get video URL",
+      "impact": "medium",
+      "tags": [
+        "instagram",
+        "python",
+        "instaloader",
+        "api"
+      ],
+      "successRate": 1,
+      "source": "system-knowledge"
+    },
+    {
+      "id": "marketing-ninja-instagram-4",
+      "date": "2026-03-19",
+      "time": "17:08",
+      "category": "process",
+      "domain": "instagram",
+      "lesson": "NUNCA afirmar que não consegue ver vídeos do Instagram. O método certo é: instaloader + sessão autenticada. Credenciais do Instagram da Titanio devem ficar no Cofre de Credenciais da Dashboard.",
+      "context": "Instagram policy",
+      "impact": "high",
+      "tags": [
+        "instagram",
+        "policy",
+        "credenciais"
+      ],
+      "successRate": 1,
+      "source": "system-knowledge"
+    },
+    {
+      "id": "abafee1f-c67f-4daf-a581-897053717f10",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "communication",
+      "domain": "copywriting",
+      "lesson": "Copy de anúncio deve endereçar dor específica, não benefício genérico",
+      "context": "Campanha Meta Ads com CTR baixo",
+      "impact": "high",
+      "tags": [
+        "copywriting",
+        "ads"
+      ],
+      "successRate": 1
+    },
+    {
+      "id": "74b2e57d-7a5d-4927-b126-a39da2f91f5a",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "process",
+      "domain": "tracking",
+      "lesson": "Pixel de conversão deve ser instalado antes de iniciar qualquer campanha paga",
+      "context": "Campanha sem dados de conversão",
+      "impact": "medium",
+      "tags": [
+        "tracking",
+        "analytics"
+      ],
+      "successRate": 1
+    },
+    {
+      "id": "marketing-ninja-init-0",
+      "date": "2026-03-19",
+      "time": "16:04",
+      "category": "technical",
+      "domain": "instagram",
+      "lesson": "Instagram DM: limite ~50/dia para não ser banido, usar intervalos aleatórios",
+      "context": "Gold Digger",
+      "impact": "high",
+      "tags": [
+        "instagram"
+      ],
+      "successRate": 1,
+      "source": "initial-knowledge"
+    },
+    {
+      "id": "marketing-ninja-init-1",
+      "date": "2026-03-19",
+      "time": "16:04",
+      "category": "process",
+      "domain": "drop-servicing",
+      "lesson": "Drop servicing: vender R97 → subcontratar R50 → margem R47, escalar com funil automático",
+      "context": "Monetização",
+      "impact": "high",
+      "tags": [
+        "drop-servicing"
+      ],
+      "successRate": 1,
+      "source": "initial-knowledge"
+    }
+  ]
+}

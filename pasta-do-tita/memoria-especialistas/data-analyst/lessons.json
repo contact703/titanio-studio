@@ -1,0 +1,35 @@
+{
+  "lessons": [
+    {
+      "id": "a11fc31a-47d0-4c6f-beaa-109f790ad031",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "process",
+      "domain": "visualization",
+      "lesson": "Dashboards devem mostrar tendências, não apenas números absolutos",
+      "context": "Dashboard com métricas sem contexto temporal",
+      "impact": "medium",
+      "tags": [
+        "dashboards",
+        "metrics"
+      ],
+      "successRate": 1
+    },
+    {
+      "id": "9dee9cad-f46f-4cb3-ab12-abe2a4715f9e",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "technical",
+      "domain": "sql",
+      "lesson": "SQL queries com JOINs múltiplos devem usar EXPLAIN para otimização",
+      "context": "Query lenta em produção sem índices adequados",
+      "impact": "high",
+      "tags": [
+        "sql",
+        "performance"
+      ],
+      "successRate": 1
+    }
+  ],
+  "version": 2
+}

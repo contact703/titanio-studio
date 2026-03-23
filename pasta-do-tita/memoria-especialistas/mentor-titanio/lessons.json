@@ -1,0 +1,35 @@
+{
+  "lessons": [
+    {
+      "id": "333c5ba4-148a-4a5f-8ab7-67e059dccab0",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "communication",
+      "domain": "offer-design",
+      "lesson": "Mentorias high-ticket precisam de promessa de transformação clara",
+      "context": "Mentoria com preço alto mas proposta vaga",
+      "impact": "high",
+      "tags": [
+        "high-ticket",
+        "positioning"
+      ],
+      "successRate": 1
+    },
+    {
+      "id": "2d12eecb-1d81-4844-9ad1-5a4639ee1f58",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "process",
+      "domain": "sales-funnel",
+      "lesson": "Funil de vendas para mentoria deve incluir call de diagnóstico gratuito",
+      "context": "Conversão baixa com vendas diretas",
+      "impact": "medium",
+      "tags": [
+        "sales-funnel",
+        "discovery-call"
+      ],
+      "successRate": 1
+    }
+  ],
+  "version": 2
+}

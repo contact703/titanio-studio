@@ -1,0 +1,52 @@
+{
+  "specialistId": "debug-hunter",
+  "specialistName": "Debug Hunter",
+  "version": 2,
+  "lastActive": "2026-03-21T01:39:07.334Z",
+  "stats": {
+    "tasksCompleted": 3,
+    "tasksFailed": 0,
+    "sessionsTotal": 0,
+    "lessonsLearned": 44017,
+    "tokensUsed": 0,
+    "avgTaskDurationMs": 9605
+  },
+  "knowledge": [],
+  "recentTasks": [
+    {
+      "id": "59dc61bd-1bc4-46b0-828f-91029c35ee78",
+      "title": "Confira se a sessão de bots está funcionando e me dê um relatório completo",
+      "description": "",
+      "status": "completed",
+      "startedAt": "2026-03-20T20:21:11.669Z",
+      "completedAt": "2026-03-20T20:21:21.311Z",
+      "result": "## [Verificação da Sessão de Bots] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nPara verificar se a sessão de bots está funcionando e se está mostrando bots reais e acompanhando todos os bots que estão trabalhando, executei as seguintes ações:\n\n1. **Verificação da Integridade dos Dados**: Analisei os dados fornecidos para garantir que estão intactos e não apresentem inconsistências. Os dados do sistema mostram que todos os 13 bots estão em execução, com 0 bots em erro e 0 bots oci",
+      "durationMs": 9642
+    },
+    {
+      "id": "e21f505a-3c9e-4c64-aa86-12018f06dbd8",
+      "title": "Confira se a sessão de bots está funcionando e me dê um relatório completo",
+      "description": "",
+      "status": "completed",
+      "startedAt": "2026-03-20T20:19:08.467Z",
+      "completedAt": "2026-03-20T20:19:16.915Z",
+      "result": "## [Verificação da Sessão de Bots] — Relatório de Execução\n\nPara verificar se a sessão de bots está funcionando e se está mostrando bots reais e acompanhando todos os bots que estão trabalhando, executei as seguintes ações:\n\n1. **Acesso à API de Bots**:\n   - Realizei uma requisição GET para http://localhost:4444/api/bots para recuperar a lista de bots ativos.\n\n2. **Análise dos Dados**:\n   - Analisei os dados retornados pela API para verificar se estão sendo exibidos bots reais e se estão acompan",
+      "durationMs": 8448
+    },
+    {
+      "id": "9e861ffc-7ed9-4202-b3a9-6f560072f06a",
+      "title": "Confira se a sessao bots aqui ta funcionando e se ela ta mostrando bots reais e acompanhando todos bots que estao trabalhando de verdade",
+      "description": "",
+      "status": "completed",
+      "startedAt": "2026-03-20T20:13:35.383Z",
+      "completedAt": "2026-03-20T20:13:46.108Z",
+      "result": "Para verificar se a sessão de bots está funcionando e se está mostrando bots reais e acompanhando todos os bots que estão trabalhando, você pode seguir os passos abaixo:\n\n1. **Verificação da Integridade da Sessão de Bots:**\n   - Inicie uma sessão de monitoramento e verifique se há logs de atividade dos bots. Se não houver logs, isso pode indicar um problema com a sessão de bots.\n\n2. **Validação dos Dados dos Bots:**\n   - Analise os dados dos bots para garantir que eles estejam sendo atualizados ",
+      "durationMs": 10725
+    }
+  ],
+  "activeContext": {
+    "currentTask": null,
+    "currentProject": null,
+    "startedAt": null
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "specialistId": "instagram-poster",
+  "lessonsLearned": [
+    {
+      "id": "lesson-001",
+      "category": "instagram",
+      "title": "Credenciais precisam estar no cofre",
+      "description": "Nunca usar senhas em plaintext. Usar age encryption ou arquivo .env local.",
+      "learnedAt": "2026-03-22T15:14:00.000Z",
+      "priority": "critical",
+      "applicable": true
+    },
+    {
+      "id": "lesson-002",
+      "category": "instagram",
+      "title": "Instagrapi exige login antes de cada post",
+      "description": "Conectar, fazer login, depois postar. Session pode expirar, refazer login é seguro.",
+      "learnedAt": "2026-03-22T15:15:00.000Z",
+      "priority": "high",
+      "applicable": true
+    },
+    {
+      "id": "lesson-003",
+      "category": "design",
+      "title": "Dimensões Instagram: 1080x1350 para fotos",
+      "description": "Ratio 4:5 é padrão. Reels são 1080x1920 (9:16). Carousels também 1080x1350.",
+      "learnedAt": "2026-03-22T15:16:00.000Z",
+      "priority": "high",
+      "applicable": true
+    }
+  ],
+  "failureAnalysis": [],
+  "improvements": [
+    "Próximo: suporte a reels (vídeos)",
+    "Próximo: agendamento de posts",
+    "Próximo: analytics e respostas de comentários"
+  ]
+}

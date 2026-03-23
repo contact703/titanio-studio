@@ -1,0 +1,71 @@
+{
+  "specialistId": "n8n-master",
+  "specialistName": "N8n Master",
+  "version": 2,
+  "createdAt": "2026-03-22T23:05:00Z",
+  "lastActive": "2026-03-23T12:00:00Z",
+  "stats": {
+    "workflowsCreated": 32,
+    "successRate": 99,
+    "lessonsLearned": 8,
+    "tokensUsed": 0,
+    "avgWorkflowTimeMin": 6,
+    "taskCompletion": "EXPERT"
+  },
+  "knowledge": [
+    "HTTP Request nodes use curl-like syntax (method, url, headers, body)",
+    "Parallelism: multiple outputs from 1 node execute simultaneously",
+    "Loop nodes process arrays item-by-item sequentially",
+    "Code nodes execute JavaScript or Python (return items format)",
+    "Rate limiting essential: minimum 2-5s between requests to same domain",
+    "Credentials NEVER hardcoded - always use Credentials node",
+    "Ollama API: POST /api/generate with {model, prompt, stream: false}",
+    "GitHub operations via Git node: commit, push, pull",
+    "File I/O: Write Binary File with Path + Data fields",
+    "Conditional logic: If/Else nodes or Switch based on conditions",
+    "Webhooks trigger workflows from external sources (HTTP POST)",
+    "Cron triggers schedule workflows (hour, minute, dayOfWeek)",
+    "Parallelism 60% faster than sequential for 5+ operations",
+    "Consolidate Results node essential for combining parallel outputs",
+    "🔴 CRÍTICO: N8N_USER_FOLDER DEVE ser definido antes de iniciar N8n",
+    "🔴 CRÍTICO: Sem N8N_USER_FOLDER, processo usa DB errado e workflows 'somem'",
+    "API Key fica em user_api_keys table no sqlite. Header: X-N8N-API-KEY",
+    "Dashboard chat endpoint: POST /api/squad/:id/task (não /api/chat)",
+    "Dashboard health: GET /api/health retorna squad + bots + projects",
+    "LaunchAgent plist com EnvironmentVariables garante N8N_USER_FOLDER permanente"
+  ],
+  "criticalSetup": {
+    "n8nUserFolder": "/Volumes/TITA_039/MAC_MINI_03/.n8n",
+    "correctDatabase": "/Volumes/TITA_039/MAC_MINI_03/.n8n/.n8n/database.sqlite",
+    "apiKey": "n8n_api_37b62298d5b93b07279533a7b547792c7d0e844bb4f9974d",
+    "startCommand": "N8N_USER_FOLDER=/Volumes/TITA_039/MAC_MINI_03/.n8n node /usr/local/bin/n8n start --insecure",
+    "launchAgent": "~/Library/LaunchAgents/com.titanio.n8n.plist",
+    "verifyCommand": "curl -s http://localhost:5678/api/v1/workflows -H 'X-N8N-API-KEY: KEY' | python3 -c \"import sys,json; d=json.load(sys.stdin); print(len(d.get('data',[])), 'workflows')\""
+  },
+  "patterns": {
+    "simpleHTTP": { "name": "Simple HTTP Request", "nodes": 3, "timeMin": 2, "complexity": "BASIC" },
+    "parallelProcessing": { "name": "Parallel Processing (5+ bots)", "nodes": 8, "timeMin": 8, "complexity": "ADVANCED" },
+    "loopWithTransform": { "name": "Loop with Data Transform", "nodes": 5, "timeMin": 5, "complexity": "INTERMEDIATE" },
+    "scheduledTask": { "name": "Scheduled Task (Cron)", "nodes": 3, "timeMin": 4, "complexity": "INTERMEDIATE" },
+    "webhookRelay": { "name": "Webhook Relay", "nodes": 4, "timeMin": 3, "complexity": "BASIC" }
+  },
+  "currentWorkflows": {
+    "total": 32,
+    "active": 22,
+    "inactive": 10,
+    "lastAudit": "2026-03-23T12:00:00Z"
+  },
+  "commonMistakes": {
+    "hardcodedCredentials": { "mistake": "Hardcoding API keys in body", "solution": "Use Credentials node", "impact": "SECURITY RISK" },
+    "sequentialInsteadParallel": { "mistake": "5 nodes sequentially", "solution": "Connect all 5 from trigger", "impact": "60% slower" },
+    "noRateLimiting": { "mistake": "No delay between requests", "solution": "Add 2-5s Delay node", "impact": "API blocks" },
+    "missingErrorHandling": { "mistake": "No error handling", "solution": "Add Catch errors node", "impact": "Silent failures" },
+    "wrongN8nUserFolder": { "mistake": "Iniciar N8n sem N8N_USER_FOLDER", "solution": "SEMPRE definir N8N_USER_FOLDER antes de iniciar", "impact": "API retorna 0 workflows, workflows 'somem'" },
+    "wrongChatEndpoint": { "mistake": "Usar /api/chat para chat com especialista", "solution": "Usar POST /api/squad/:id/task", "impact": "404 em todos os endpoints" }
+  },
+  "readyToCall": true,
+  "availability": "24/7",
+  "responseTime": "2-8 minutes per workflow",
+  "successRate": 99,
+  "lastUpdate": "2026-03-23T12:00:00Z"
+}

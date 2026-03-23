@@ -1,0 +1,35 @@
+{
+  "lessons": [
+    {
+      "id": "2bedcc54-49a5-496b-9efb-f950726820d4",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "process",
+      "domain": "audiodescription",
+      "lesson": "Audiodescrição deve descrever ações, não narrar diálogos já audíveis",
+      "context": "Audiodescrição redundante com áudio original",
+      "impact": "high",
+      "tags": [
+        "audiodescription",
+        "best-practices"
+      ],
+      "successRate": 1
+    },
+    {
+      "id": "1ff6a3c1-d131-4ce9-8187-1f47151c1bdf",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "technical",
+      "domain": "vad",
+      "lesson": "VAD (Voice Activity Detection) evita inserção de audiodescrição sobre fala",
+      "context": "Audiodescrição sobrepondo diálogos importantes",
+      "impact": "high",
+      "tags": [
+        "vad",
+        "timing"
+      ],
+      "successRate": 1
+    }
+  ],
+  "version": 2
+}

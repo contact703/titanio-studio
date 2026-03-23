@@ -1,0 +1,35 @@
+{
+  "lessons": [
+    {
+      "id": "e8d7a104-a258-4d2e-8deb-fe0155acaf51",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "process",
+      "domain": "market-sizing",
+      "lesson": "TAM/SAM/SOM análise deve incluir dados primários, não apenas secundários",
+      "context": "Pitch deck com TAM baseado apenas em relatórios genéricos",
+      "impact": "high",
+      "tags": [
+        "market-sizing",
+        "gtm"
+      ],
+      "successRate": 1
+    },
+    {
+      "id": "f0f2b6ac-478f-4ec6-8ae6-31f31b4b59f8",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "technical",
+      "domain": "gtm",
+      "lesson": "Go-to-market strategy deve definir canal primário antes de escalar outros",
+      "context": "Startup tentando múltiplos canais simultaneamente sem sucesso",
+      "impact": "high",
+      "tags": [
+        "gtm",
+        "focus"
+      ],
+      "successRate": 1
+    }
+  ],
+  "version": 2
+}

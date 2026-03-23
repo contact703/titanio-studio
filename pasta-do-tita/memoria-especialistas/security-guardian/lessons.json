@@ -1,0 +1,136 @@
+{
+  "lessons": [
+    {
+      "id": "f6e117f0-dd83-49e7-bdfc-45f045e7d308",
+      "date": "2026-03-23",
+      "time": "04:05",
+      "successRate": 1,
+      "lesson": "Tarefa executada: Quais são as principais novas ameaças de segurança para agentes de IA em March 2026? Liste as TOP 3 ",
+      "context": "Resultado: ## [Análise de Ameaças de Segurança para Agentes IA] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nAnalisando as principais ameaças de segurança para agentes IA em março de 2026, as TOP ",
+      "category": "process",
+      "domain": "security-guardian",
+      "impact": "medium",
+      "tags": [
+        "auto-task"
+      ]
+    },
+    {
+      "id": "e9a82ba0-77e6-419c-a92c-9eaf00d4a8b4",
+      "date": "2026-03-23",
+      "time": "00:33",
+      "successRate": 1,
+      "lesson": "Tarefa executada: Quais são as principais novas ameaças de segurança para agentes de IA em March 2026? Liste as TOP 3 ",
+      "context": "Resultado: ## [Análise de Ameaças de Segurança para Agentes IA] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nAnalisando as principais ameaças de segurança para agentes IA em março de 2026, as TOP ",
+      "category": "process",
+      "domain": "security-guardian",
+      "impact": "medium",
+      "tags": [
+        "auto-task"
+      ]
+    },
+    {
+      "id": "0d535a41-e06d-4c9a-b2a7-66cc91f73528",
+      "date": "2026-03-23",
+      "time": "00:02",
+      "successRate": 1,
+      "lesson": "Tarefa executada: Quais são as principais novas ameaças de segurança para agentes de IA em March 2026? Liste as TOP 3 ",
+      "context": "Resultado: ## [Análise de Ameaças de Segurança para Agentes IA] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nAnalisando as principais ameaças de segurança para agentes IA em março de 2026, as TOP ",
+      "category": "process",
+      "domain": "security-guardian",
+      "impact": "medium",
+      "tags": [
+        "auto-task"
+      ]
+    },
+    {
+      "id": "1587b912-0195-4fba-a479-f9f44bdf71a1",
+      "date": "2026-03-21",
+      "time": "18:23",
+      "successRate": 1,
+      "lesson": "Tarefa executada: Quais são as principais novas ameaças de segurança para agentes de IA em March 2026? Liste as TOP 3 ",
+      "context": "Resultado: ## [Análise de Ameaças de Segurança para Agentes IA] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nAnalisando as principais ameaças de segurança para agentes IA em março de 2026, as TOP ",
+      "category": "process",
+      "domain": "security-guardian",
+      "impact": "medium",
+      "tags": [
+        "auto-task"
+      ]
+    },
+    {
+      "id": "b184e4bb-339f-46c1-b61b-7f5ec06ee550",
+      "date": "2026-03-21",
+      "time": "18:12",
+      "successRate": 1,
+      "lesson": "Tarefa executada: Quais são as principais novas ameaças de segurança para agentes de IA em March 2026? Liste as TOP 3 ",
+      "context": "Resultado: ## [Análise de Ameaças de Segurança para Agentes IA] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nAnalisando as principais ameaças de segurança para agentes IA em março de 2026, as TOP ",
+      "category": "process",
+      "domain": "security-guardian",
+      "impact": "medium",
+      "tags": [
+        "auto-task"
+      ]
+    },
+    {
+      "id": "ef6c6771-9f93-4be8-8c29-da08d0c2b414",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "technical",
+      "domain": "auth",
+      "lesson": "JWT tokens devem ter expiry curto (15min) e usar refresh tokens para sessões longas",
+      "context": "Sistema com tokens de longa duração comprometidos",
+      "impact": "high",
+      "tags": [
+        "jwt",
+        "auth",
+        "security"
+      ],
+      "successRate": 1
+    },
+    {
+      "id": "ff5fba7e-7b92-44c3-bf7c-9c5d12dc7871",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "error",
+      "domain": "data-protection",
+      "lesson": "Nunca logar dados sensíveis (senhas, tokens) mesmo em modo debug",
+      "context": "Logs com tokens expostos em servidor comprometido",
+      "impact": "high",
+      "tags": [
+        "logging",
+        "sensitive-data"
+      ],
+      "successRate": 1
+    },
+    {
+      "id": "security-guardian-init-0",
+      "date": "2026-03-19",
+      "time": "16:04",
+      "category": "technical",
+      "domain": "criptografia",
+      "lesson": "Criptografia age: age-keygen -o ~/.config/age/key.txt + age -r PUBKEY -o arquivo.age",
+      "context": "Segurança",
+      "impact": "high",
+      "tags": [
+        "criptografia",
+        "age"
+      ],
+      "successRate": 1,
+      "source": "initial-knowledge"
+    },
+    {
+      "id": "security-guardian-init-1",
+      "date": "2026-03-19",
+      "time": "16:04",
+      "category": "process",
+      "domain": "auditoria",
+      "lesson": "Auditoria semanal: processos suspeitos, portas abertas, credenciais expostas, API keys plaintext",
+      "context": "Audit",
+      "impact": "high",
+      "tags": [
+        "auditoria"
+      ],
+      "successRate": 1,
+      "source": "initial-knowledge"
+    }
+  ]
+}

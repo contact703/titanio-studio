@@ -1,0 +1,50 @@
+{
+  "lessons": [
+    {
+      "id": "06fb76e6-1e86-4208-802b-36f68e7ea53d",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "process",
+      "domain": "blue-ocean",
+      "lesson": "Blue Ocean Strategy funciona quando há job-to-be-done não atendido, não apenas diferenciação",
+      "context": "Produto diferenciado mas sem market fit",
+      "impact": "high",
+      "tags": [
+        "blue-ocean",
+        "jtbd"
+      ],
+      "successRate": 1
+    },
+    {
+      "id": "a75915d7-536f-49ec-9a61-f1c5f529b29f",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "technical",
+      "domain": "unit-economics",
+      "lesson": "Unit economics devem ser positivos antes de escalar aquisição",
+      "context": "Startup queimando caixa com LTV < CAC",
+      "impact": "high",
+      "tags": [
+        "unit-economics",
+        "ltv",
+        "cac"
+      ],
+      "successRate": 1
+    },
+    {
+      "id": "ceo-titanio-init-0",
+      "date": "2026-03-19",
+      "time": "16:04",
+      "category": "process",
+      "domain": "titanio",
+      "lesson": "Titanio Films: produtora audiovisual em transformação para empresa de IA. Diferencial: criatividade + ferramentas próprias",
+      "context": "Estratégia",
+      "impact": "high",
+      "tags": [
+        "titanio"
+      ],
+      "successRate": 1,
+      "source": "initial-knowledge"
+    }
+  ]
+}

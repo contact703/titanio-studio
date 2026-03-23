@@ -1,0 +1,36 @@
+{
+  "lessons": [
+    {
+      "id": "4dfb4947-79b6-4011-b293-bba0ee4d3898",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "technical",
+      "domain": "auth",
+      "lesson": "JWT tokens devem ter expiry curto (15min) e usar refresh tokens para sessões longas",
+      "context": "Sistema com tokens de longa duração comprometidos",
+      "impact": "high",
+      "tags": [
+        "jwt",
+        "auth",
+        "security"
+      ],
+      "successRate": 1
+    },
+    {
+      "id": "a6a6c5d8-a1a5-4c76-928b-4569f9c2fd10",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "error",
+      "domain": "data-protection",
+      "lesson": "Nunca logar dados sensíveis (senhas, tokens) mesmo em modo debug",
+      "context": "Logs com tokens expostos em servidor comprometido",
+      "impact": "high",
+      "tags": [
+        "logging",
+        "sensitive-data"
+      ],
+      "successRate": 1
+    }
+  ],
+  "version": 2
+}

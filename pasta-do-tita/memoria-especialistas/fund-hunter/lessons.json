@@ -1,0 +1,65 @@
+{
+  "lessons": [
+    {
+      "id": "ac74bec7-98f8-4785-be1e-8a7659ad25a2",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "technical",
+      "domain": "finep",
+      "lesson": "FINEP Startup exige faturamento mínimo de R$360k/ano para elegibilidade",
+      "context": "Aplicação a edital sem verificar pré-requisitos",
+      "impact": "high",
+      "tags": [
+        "finep",
+        "eligibility"
+      ],
+      "successRate": 1
+    },
+    {
+      "id": "160d9675-d999-4013-bac1-f7f15b9cbb38",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "communication",
+      "domain": "pitch",
+      "lesson": "Pitch deck para investidor deve ter no máximo 12 slides",
+      "context": "Apresentação longa demais perdendo atenção",
+      "impact": "medium",
+      "tags": [
+        "pitch-deck",
+        "investor-relations"
+      ],
+      "successRate": 1
+    },
+    {
+      "id": "fund-hunter-init-0",
+      "date": "2026-03-19",
+      "time": "16:04",
+      "category": "technical",
+      "domain": "finep",
+      "lesson": "FINEP, BNDES, FAPs estaduais, SEBRAE: principais fundos BR para startups tech — chamadas tipicamente Q1 e Q3",
+      "context": "Editais",
+      "impact": "high",
+      "tags": [
+        "finep",
+        "bndes"
+      ],
+      "successRate": 1,
+      "source": "initial-knowledge"
+    },
+    {
+      "id": "fund-hunter-init-1",
+      "date": "2026-03-19",
+      "time": "16:04",
+      "category": "technical",
+      "domain": "yc",
+      "lesson": "Y Combinator: 2x ao ano (jan/jul), requer MVP+métricas, cheque 00k por 7%",
+      "context": "Fundos internacionais",
+      "impact": "high",
+      "tags": [
+        "yc"
+      ],
+      "successRate": 1,
+      "source": "initial-knowledge"
+    }
+  ]
+}

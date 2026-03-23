@@ -1,0 +1,93 @@
+{
+  "lessons": [
+    {
+      "id": "ad58d45f-cae3-49d0-8f79-2b5ab984ffc5",
+      "date": "2026-03-20",
+      "time": "16:14",
+      "successRate": 1,
+      "lesson": "Tarefa (N8n): Deploy Docker container com health check",
+      "context": "Resultado: Deploy realizado com sucesso",
+      "category": "process",
+      "domain": "devops-ninja",
+      "impact": "medium",
+      "tags": [
+        "n8n-captured"
+      ]
+    },
+    {
+      "id": "435fd780-4046-45f8-92af-e2439cda1471",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "technical",
+      "domain": "k8s",
+      "lesson": "Sempre definir health checks em containers para evitar tráfego em pods não-ready",
+      "context": "Pod recebendo tráfego antes de estar pronto",
+      "impact": "high",
+      "tags": [
+        "kubernetes",
+        "health-checks"
+      ],
+      "successRate": 1
+    },
+    {
+      "id": "2dbb0e95-1286-44b4-b563-295989554018",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "tool",
+      "domain": "railway",
+      "lesson": "Railway precisa de variáveis de ambiente definidas antes do primeiro deploy",
+      "context": "Deploy falhando por falta de env vars",
+      "impact": "medium",
+      "tags": [
+        "railway",
+        "ci-cd"
+      ],
+      "successRate": 1
+    },
+    {
+      "id": "devops-ninja-init-0",
+      "date": "2026-03-19",
+      "time": "16:04",
+      "category": "technical",
+      "domain": "railway",
+      "lesson": "Railway KiteMe: projeto 865ff29d, serviço 1708a89e, token precisa formato rw_xxx em railway.app/account/tokens",
+      "context": "KiteMe",
+      "impact": "medium",
+      "tags": [
+        "railway"
+      ],
+      "successRate": 1,
+      "source": "initial-knowledge"
+    },
+    {
+      "id": "devops-ninja-init-1",
+      "date": "2026-03-19",
+      "time": "16:04",
+      "category": "process",
+      "domain": "watchdog",
+      "lesson": "Watchdog em memória ignora edições em disco — matar e reiniciar após editar script",
+      "context": "watchdog.sh",
+      "impact": "medium",
+      "tags": [
+        "watchdog"
+      ],
+      "successRate": 1,
+      "source": "initial-knowledge"
+    },
+    {
+      "id": "devops-ninja-init-2",
+      "date": "2026-03-19",
+      "time": "16:04",
+      "category": "technical",
+      "domain": "macos",
+      "lesson": "caffeinate -dims mantém Mac acordado — reiniciar: nohup caffeinate -dims &>/dev/null &",
+      "context": "Mac Mini",
+      "impact": "medium",
+      "tags": [
+        "macos"
+      ],
+      "successRate": 1,
+      "source": "initial-knowledge"
+    }
+  ]
+}

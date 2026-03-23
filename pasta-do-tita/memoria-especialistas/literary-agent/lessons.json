@@ -1,0 +1,35 @@
+{
+  "lessons": [
+    {
+      "id": "cbb9f996-66a2-4d5d-aeb1-ff6856db0c70",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "technical",
+      "domain": "kdp",
+      "lesson": "Amazon KDP permite até 7 keywords mas apenas as 3 primeiras têm peso real no ranking",
+      "context": "Otimização de livro com baixa visibilidade",
+      "impact": "high",
+      "tags": [
+        "kdp",
+        "keywords"
+      ],
+      "successRate": 1
+    },
+    {
+      "id": "87744a22-3f2c-4916-9926-439a713d543b",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "process",
+      "domain": "book-launch",
+      "lesson": "Campanhas de pré-lançamento devem durar no mínimo 30 dias para construir buzz",
+      "context": "Lançamento apressado com vendas abaixo do esperado",
+      "impact": "medium",
+      "tags": [
+        "book-launch",
+        "marketing"
+      ],
+      "successRate": 1
+    }
+  ],
+  "version": 2
+}

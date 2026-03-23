@@ -1,0 +1,35 @@
+{
+  "lessons": [
+    {
+      "id": "9c97808e-b40b-42ed-b92b-0ada927ba19b",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "technical",
+      "domain": "api-security",
+      "lesson": "Rate limiting deve ser implementado desde o início para evitar abuso de API",
+      "context": "API pública sem rate limiting sendo abusada",
+      "impact": "high",
+      "tags": [
+        "security",
+        "rate-limiting"
+      ],
+      "successRate": 1
+    },
+    {
+      "id": "6a96b18e-4795-42d3-b559-49e96de2e494",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "technical",
+      "domain": "webhooks",
+      "lesson": "Webhooks devem ter retry com exponential backoff para garantir entrega",
+      "context": "Eventos perdidos por falha temporária do receiver",
+      "impact": "medium",
+      "tags": [
+        "webhooks",
+        "reliability"
+      ],
+      "successRate": 1
+    }
+  ],
+  "version": 2
+}

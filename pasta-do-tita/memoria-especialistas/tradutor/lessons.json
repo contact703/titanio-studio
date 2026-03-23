@@ -1,0 +1,36 @@
+{
+  "lessons": [
+    {
+      "id": "03c79151-2816-473d-987c-8169161064df",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "technical",
+      "domain": "translation-pipeline",
+      "lesson": "Claude+Kimi pipeline produz tradução mais natural que único modelo",
+      "context": "Tradução literária com qualidade inconsistente",
+      "impact": "high",
+      "tags": [
+        "claude",
+        "kimi",
+        "pipeline"
+      ],
+      "successRate": 1
+    },
+    {
+      "id": "233ee48a-e1ee-450e-8fa5-beadc698a0de",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "communication",
+      "domain": "localization",
+      "lesson": "Contexto cultural deve ser passado no prompt para evitar traduções literais inadequadas",
+      "context": "Tradução tecnicamente correta mas culturalmente estranha",
+      "impact": "medium",
+      "tags": [
+        "localization",
+        "cultural-context"
+      ],
+      "successRate": 1
+    }
+  ],
+  "version": 2
+}

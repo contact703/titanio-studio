@@ -1,0 +1,21 @@
+{
+  "specialistId": "devops-ninja",
+  "specialistName": "DevOps Ninja",
+  "version": 2,
+  "lastActive": "2026-03-20T19:14:38.029Z",
+  "stats": {
+    "tasksCompleted": 0,
+    "tasksFailed": 0,
+    "sessionsTotal": 0,
+    "lessonsLearned": 6,
+    "tokensUsed": 0,
+    "avgTaskDurationMs": 0
+  },
+  "knowledge": [],
+  "recentTasks": [],
+  "activeContext": {
+    "currentTask": null,
+    "currentProject": null,
+    "startedAt": null
+  }
+}

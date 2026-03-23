@@ -1,0 +1,35 @@
+{
+  "lessons": [
+    {
+      "id": "e1e974b8-5c63-4320-b879-1380e924cb7c",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "tool",
+      "domain": "wacli",
+      "lesson": "wacli permite envio via CLI mas precisa de sessão autenticada prévia",
+      "context": "Tentativa de envio sem autenticação falhando",
+      "impact": "high",
+      "tags": [
+        "wacli",
+        "auth"
+      ],
+      "successRate": 1
+    },
+    {
+      "id": "cb49242b-a066-4c00-af68-17b039f14a37",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "process",
+      "domain": "messaging",
+      "lesson": "Mensagens com mídia devem ser enviadas após confirmação de texto para evitar perda",
+      "context": "Mídia enviada antes de texto causando confusão",
+      "impact": "medium",
+      "tags": [
+        "whatsapp",
+        "media"
+      ],
+      "successRate": 1
+    }
+  ],
+  "version": 2
+}

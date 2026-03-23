@@ -1,0 +1,72 @@
+{
+  "specialistId": "security-guardian",
+  "specialistName": "Security Guardian",
+  "version": 2,
+  "lastActive": "2026-03-23T07:05:02.926Z",
+  "stats": {
+    "tasksCompleted": 5,
+    "tasksFailed": 0,
+    "sessionsTotal": 0,
+    "lessonsLearned": 9,
+    "tokensUsed": 0,
+    "avgTaskDurationMs": 13545
+  },
+  "knowledge": [],
+  "recentTasks": [
+    {
+      "id": "b2d0854a-1015-4d82-b161-c751e281ba7d",
+      "title": "Quais são as principais novas ameaças de segurança para agentes de IA em March 2026? Liste as TOP 3 mais críticas e como mitigar. Seja breve (máximo 200 palavras).",
+      "description": "",
+      "status": "completed",
+      "startedAt": "2026-03-23T07:04:48.167Z",
+      "completedAt": "2026-03-23T07:05:02.926Z",
+      "result": "## [Análise de Ameaças de Segurança para Agentes IA] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nAnalisando as principais ameaças de segurança para agentes IA em março de 2026, as TOP 3 ameaças mais críticas são:\n\n1. **Ataque de Injeção de Prompt**: Adversários podem explorar agentes IA através de prompts maliciosos para roubar informações ou executar ações indesejadas. Mitigação: Implementar filtros de entrada robustos e validar ou sanitizar todos os prompts de entrada.\n\n2. **Vu",
+      "durationMs": 14759
+    },
+    {
+      "id": "855fe262-e410-4a11-9261-a286d387b241",
+      "title": "Quais são as principais novas ameaças de segurança para agentes de IA em March 2026? Liste as TOP 3 mais críticas e como mitigar. Seja breve (máximo 200 palavras).",
+      "description": "",
+      "status": "completed",
+      "startedAt": "2026-03-23T03:33:13.989Z",
+      "completedAt": "2026-03-23T03:33:36.844Z",
+      "result": "## [Análise de Ameaças de Segurança para Agentes IA] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nAnalisando as principais ameaças de segurança para agentes IA em março de 2026, as TOP 3 ameaças mais críticas são:\n\n1. **Ataque de Injeção de Prompt**: Adversários podem explorar agentes IA através de prompts maliciosos para roubar informações ou executar ações indesejadas. Mitigação: Implementar filtros de entrada robustos e treinar modelos IA para reconhecer e rejeitar prompts susp",
+      "durationMs": 22855
+    },
+    {
+      "id": "427ef63e-afa7-4ed7-959e-220ba0c346c4",
+      "title": "Quais são as principais novas ameaças de segurança para agentes de IA em March 2026? Liste as TOP 3 mais críticas e como mitigar. Seja breve (máximo 200 palavras).",
+      "description": "",
+      "status": "completed",
+      "startedAt": "2026-03-23T03:02:43.290Z",
+      "completedAt": "2026-03-23T03:02:59.213Z",
+      "result": "## [Análise de Ameaças de Segurança para Agentes IA] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nAnalisando as principais ameaças de segurança para agentes IA em março de 2026, as TOP 3 ameaças mais críticas são:\n\n1. **Ataque de Injeção de Prompt**: Adversários podem explorar vulnerabilidades em agentes IA para inserir comandos maliciosos, comprometendo a segurança do sistema. Mitigação: Implementar filtros de entrada robustos e validar todas as entradas.\n\n2. **Falhas em APIs**: ",
+      "durationMs": 15923
+    },
+    {
+      "id": "80ad593c-5e46-4667-b2a1-af4c52dea702",
+      "title": "Quais são as principais novas ameaças de segurança para agentes de IA em March 2026? Liste as TOP 3 mais críticas e como mitigar. Seja breve (máximo 200 palavras).",
+      "description": "",
+      "status": "completed",
+      "startedAt": "2026-03-21T21:23:36.262Z",
+      "completedAt": "2026-03-21T21:23:43.030Z",
+      "result": "## [Análise de Ameaças de Segurança para Agentes IA] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nAnalisando as principais ameaças de segurança para agentes IA em março de 2026, as TOP 3 ameaças mais críticas são:\n\n1. **Ataque de Injeção de Prompt**: Adversários podem explorar agentes IA através de prompts maliciosos para roubar informações ou executar ações indesejadas. Mitigação: Implementar filtros de entrada robustos e validar ou sanitizar todos os prompts de entrada.\n\n2. **Vu",
+      "durationMs": 6768
+    },
+    {
+      "id": "38b3ef73-b7d4-4315-9c97-4a60c4cbee24",
+      "title": "Quais são as principais novas ameaças de segurança para agentes de IA em March 2026? Liste as TOP 3 mais críticas e como mitigar. Seja breve (máximo 200 palavras).",
+      "description": "",
+      "status": "completed",
+      "startedAt": "2026-03-21T21:12:45.391Z",
+      "completedAt": "2026-03-21T21:12:52.812Z",
+      "result": "## [Análise de Ameaças de Segurança para Agentes IA] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nAnalisando as principais ameaças de segurança para agentes IA em março de 2026, as TOP 3 mais críticas são:\n\n1. **Ataque de Injeção de Prompt**: Adversários podem explorar vulnerabilidades em agentes IA para inserir prompts maliciosos, levando a ações indesejadas ou extração de informações confidenciais. Mitigação: Implementar filtros de entrada robustos e validar ou sanitizar todos o",
+      "durationMs": 7421
+    }
+  ],
+  "activeContext": {
+    "currentTask": null,
+    "currentProject": null,
+    "startedAt": null
+  }
+}

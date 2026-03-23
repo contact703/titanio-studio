@@ -1,0 +1,35 @@
+{
+  "lessons": [
+    {
+      "id": "23cc9806-7ea8-4342-896a-6a6c1aca579b",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "tool",
+      "domain": "power-management",
+      "lesson": "pmset previne sleep com comando \"caffeinate -dimsu\" mantendo display ligado",
+      "context": "Mac entrando em sleep durante processing longo",
+      "impact": "medium",
+      "tags": [
+        "pmset",
+        "caffeinate"
+      ],
+      "successRate": 1
+    },
+    {
+      "id": "fa12a658-fdd7-4e65-853f-056b668e13d3",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "technical",
+      "domain": "performance",
+      "lesson": "Activity Monitor mostra \"Swap Used\" indicando quando RAM está no limite",
+      "context": "Mac lento por uso excessivo de swap",
+      "impact": "high",
+      "tags": [
+        "activity-monitor",
+        "ram"
+      ],
+      "successRate": 1
+    }
+  ],
+  "version": 2
+}

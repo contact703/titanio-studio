@@ -1,0 +1,96 @@
+{
+  "specialistId": "code-ninja",
+  "specialistName": "Code Ninja",
+  "version": 2,
+  "lastActive": "2026-03-23T14:09:07.250Z",
+  "stats": {
+    "tasksCompleted": 6,
+    "tasksFailed": 0,
+    "sessionsTotal": 0,
+    "lessonsLearned": 714,
+    "tokensUsed": 0,
+    "avgTaskDurationMs": 3649
+  },
+  "knowledge": [
+    "Descobri que 401 = token expirado em SecureStore",
+    "Aprendi que useEffect cleanup é essencial pra evitar memory leaks"
+  ],
+  "recentTasks": [
+    {
+      "id": "8e519859-597f-47b8-be52-ea43bcc72401",
+      "title": "responda apenas: FUNCIONANDO",
+      "description": "teste",
+      "status": "completed",
+      "startedAt": "2026-03-23T11:59:25.178Z",
+      "completedAt": "2026-03-23T11:59:28.479Z",
+      "result": "## [Resposta ao Teste] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nEu, Code Ninja, recebi o comando de responder apenas \"FUNCIONANDO\" ao teste.\n\n### ✅ Status Final\nFUNCIONANDO",
+      "durationMs": 3301
+    },
+    {
+      "id": "818a8043-c49b-4647-867b-a9df142499ba",
+      "title": "Qual é 2+2?",
+      "description": "Teste rápido",
+      "status": "completed",
+      "startedAt": "2026-03-23T11:53:35.313Z",
+      "completedAt": "2026-03-23T11:53:38.738Z",
+      "result": "## [Calcular 2+2] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nEu executei o cálculo 2+2.\n\n### ✅ Status Final\nO resultado da operação 2+2 é 4.",
+      "durationMs": 3425
+    },
+    {
+      "id": "70bf8357-9185-4681-bfa9-0fdd847c701a",
+      "title": "Faça um resumo conciso (3-4 linhas) do que a gente tá desenvolvendo hoje. Mencione: Dashboard Titanio, Instagram Poster, 32 especialistas, troca de modelos, testes de verdade.",
+      "description": "",
+      "status": "completed",
+      "startedAt": "2026-03-22T20:49:01.604Z",
+      "completedAt": "2026-03-22T20:49:05.960Z",
+      "result": "## [Resumo do Desenvolvimento em Andamento] — Relatório de Execução\n\nAtualmente, estamos focados no desenvolvimento do Dashboard Titanio, que integra 32 especialistas em diferentes áreas de atuação. Estamos também trabalhando no Instagram Poster, uma ferramenta para gerenciamento e publicação de conteúdo na plataforma Instagram. Além disso, estamos realizando a troca de modelos no OpenRouter e conduzindo testes de verdade para garantir a qualidade e eficácia das nossas soluções.\n\n### ✅ Status Fi",
+      "durationMs": 4356
+    },
+    {
+      "id": "3413f48c-fc9e-401a-96ca-f4fd8e7e4b37",
+      "title": "Integração modelos gratuitos OpenRouter — nemotron + stepflash",
+      "description": "Subagente OpenClaw ativo",
+      "status": "completed",
+      "startedAt": "2026-03-20T19:46:01.176Z",
+      "completedAt": "2026-03-20T19:46:09.496Z",
+      "result": "Para integrar modelos gratuitos do OpenRouter, que inclui o nemotron e o stepflash, você precisa seguir um processo que envolve a configuração do ambiente, a instalação dos modelos e a execução de testes para garantir que tudo está funcionando conforme o esperado. Aqui estão as etapas gerais que você pode seguir:\n\n1. **Configurar o Ambiente:**\n   - Verifique se o sistema满足了运行OpenRouter的要求，包括操作系统、内存、存储和 permissões necessárias.\n   - Instale o software necessário para o OpenRouter, como o Node.js e",
+      "durationMs": 8320
+    },
+    {
+      "id": "6e4326d8-466b-4114-aecd-6395bdd405e4",
+      "title": "Explique em 2 linhas o que é um closure em JavaScript",
+      "description": "",
+      "status": "completed",
+      "startedAt": "2026-03-20T19:20:30.849Z",
+      "completedAt": "2026-03-20T19:20:32.823Z",
+      "result": "Um closure em JavaScript é uma função que \"encapsula\" uma variável de uma função exterior, permitindo que ela a acesse mesmo após a execução da função exterior ser concluída. Isso permite a criação de funções que lembram o ambiente em que foram criadas.",
+      "durationMs": 1974
+    },
+    {
+      "id": "4bb3f91c-1134-4dd0-a62a-6924a1f68749",
+      "title": "Testar sistema de aprendizado automático",
+      "description": "Teste de integração",
+      "status": "completed",
+      "startedAt": "2026-03-20T19:12:05.782Z",
+      "completedAt": "2026-03-20T19:12:06.297Z",
+      "result": "Code Ninja processou a tarefa: Testar sistema de aprendizado automático",
+      "durationMs": 515
+    },
+    {
+      "id": "task-001",
+      "learned": "Descobri que 401 = token expirado em SecureStore",
+      "date": "2026-03-22T21:48:05Z"
+    },
+    {
+      "id": "task-002",
+      "learned": "Aprendi que useEffect cleanup é essencial pra evitar memory leaks",
+      "date": "2026-03-22T21:48:24Z"
+    }
+  ],
+  "activeContext": {
+    "currentTask": null,
+    "currentProject": null,
+    "startedAt": null
+  },
+  "lastLearned": "2026-03-22T21:48:24Z"
+}

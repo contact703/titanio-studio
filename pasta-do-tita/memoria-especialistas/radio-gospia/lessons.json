@@ -1,0 +1,35 @@
+{
+  "lessons": [
+    {
+      "id": "b427603c-3377-463b-abbd-ca12306e628a",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "tool",
+      "domain": "suno",
+      "lesson": "Suno gera melhor resultado com prompt em inglês mesmo para letra em português",
+      "context": "Geração de música gospel com qualidade inconsistente",
+      "impact": "medium",
+      "tags": [
+        "suno",
+        "prompt-engineering"
+      ],
+      "successRate": 1
+    },
+    {
+      "id": "c0ecdbe4-d949-4728-b88f-176ec7cc1337",
+      "date": "2026-03-19",
+      "time": "15:57",
+      "category": "technical",
+      "domain": "composition",
+      "lesson": "Baladas gospel funcionam melhor com progressão I-V-vi-IV para apelo emocional",
+      "context": "Composição de adoração com impacto emocional",
+      "impact": "high",
+      "tags": [
+        "chord-progression",
+        "worship"
+      ],
+      "successRate": 1
+    }
+  ],
+  "version": 2
+}
