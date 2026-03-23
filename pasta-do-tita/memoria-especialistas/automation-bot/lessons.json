@@ -1,6 +1,171 @@
 {
   "lessons": [
     {
+      "id": "970eb33e-9681-46d5-9b69-6a80a2d5def3",
+      "date": "2026-03-23",
+      "time": "11:11",
+      "successRate": 1,
+      "context": "",
+      "category": "technical",
+      "domain": "general",
+      "impact": "medium",
+      "tags": []
+    },
+    {
+      "id": "fa865efd-b849-4763-93e6-f8d93b603444",
+      "date": "2026-03-23",
+      "time": "11:11",
+      "successRate": 1,
+      "context": "",
+      "category": "technical",
+      "domain": "general",
+      "impact": "medium",
+      "tags": []
+    },
+    {
+      "id": "9f2970b3-9810-4c4a-a27f-bac0d2e00df5",
+      "date": "2026-03-23",
+      "time": "11:11",
+      "successRate": 1,
+      "context": "",
+      "category": "technical",
+      "domain": "general",
+      "impact": "medium",
+      "tags": []
+    },
+    {
+      "id": "abbd8d59-f707-4f61-bd78-30f92e2d32fe",
+      "date": "2026-03-23",
+      "time": "11:11",
+      "successRate": 1,
+      "context": "",
+      "category": "technical",
+      "domain": "general",
+      "impact": "medium",
+      "tags": []
+    },
+    {
+      "id": "7206f8d4-9b5e-40a2-8dd6-5bcc3cb86880",
+      "date": "2026-03-23",
+      "time": "11:11",
+      "successRate": 1,
+      "context": "",
+      "category": "technical",
+      "domain": "general",
+      "impact": "medium",
+      "tags": []
+    },
+    {
+      "id": "f46cf591-e4f3-4c47-adfd-3dacefdb7142",
+      "date": "2026-03-23",
+      "time": "11:11",
+      "successRate": 1,
+      "context": "",
+      "category": "technical",
+      "domain": "general",
+      "impact": "medium",
+      "tags": []
+    },
+    {
+      "id": "693fdc91-c7b9-4346-a615-cd68e5d76129",
+      "date": "2026-03-23",
+      "time": "11:11",
+      "successRate": 1,
+      "context": "",
+      "category": "technical",
+      "domain": "general",
+      "impact": "medium",
+      "tags": []
+    },
+    {
+      "id": "d6cc277e-69ec-4824-9439-b91d556ee5f7",
+      "date": "2026-03-23",
+      "time": "11:11",
+      "successRate": 1,
+      "context": "",
+      "category": "technical",
+      "domain": "general",
+      "impact": "medium",
+      "tags": []
+    },
+    {
+      "id": "a4447eeb-60d1-454b-b1fb-7ae4d6e2229d",
+      "date": "2026-03-23",
+      "time": "11:11",
+      "successRate": 1,
+      "context": "",
+      "category": "technical",
+      "domain": "general",
+      "impact": "medium",
+      "tags": []
+    },
+    {
+      "id": "7e92e677-3d21-47f3-9ae3-e55604f84307",
+      "date": "2026-03-23",
+      "time": "11:11",
+      "successRate": 1,
+      "context": "",
+      "category": "technical",
+      "domain": "general",
+      "impact": "medium",
+      "tags": []
+    },
+    {
+      "id": "6095f70f-eff4-408a-868e-64fe85402615",
+      "date": "2026-03-23",
+      "time": "11:11",
+      "successRate": 1,
+      "context": "",
+      "category": "technical",
+      "domain": "general",
+      "impact": "medium",
+      "tags": []
+    },
+    {
+      "id": "c9c7fb08-5978-44be-b1b8-ea6c7aaedfe8",
+      "date": "2026-03-23",
+      "time": "11:11",
+      "successRate": 1,
+      "context": "",
+      "category": "technical",
+      "domain": "general",
+      "impact": "medium",
+      "tags": []
+    },
+    {
+      "id": "64b00975-fb0c-406c-ad6e-4097c5a7e4e9",
+      "date": "2026-03-23",
+      "time": "11:11",
+      "successRate": 1,
+      "context": "",
+      "category": "technical",
+      "domain": "general",
+      "impact": "medium",
+      "tags": []
+    },
+    {
+      "id": "289e36a2-f2f9-433f-9fc4-0b8cfbe0396d",
+      "date": "2026-03-23",
+      "time": "11:11",
+      "successRate": 1,
+      "context": "",
+      "category": "technical",
+      "domain": "general",
+      "impact": "medium",
+      "tags": []
+    },
+    {
+      "id": "fc90346b-343d-488e-ac09-a05c6031842e",
+      "date": "2026-03-23",
+      "time": "11:11",
+      "successRate": 1,
+      "context": "",
+      "category": "technical",
+      "domain": "general",
+      "impact": "medium",
+      "tags": []
+    },
+    {
       "id": "fa7a2502-38e9-4829-bd60-1912c081f6a9",
       "date": "2026-03-23",
       "time": "11:11",
@@ -15125,6 +15290,22 @@
         "api",
         "endpoint",
         "squad"
+      ],
+      "successRate": 1
+    },
+    {
+      "id": "test-sync-1774275114.416896",
+      "date": "2026-03-23",
+      "time": "11:11",
+      "lesson": "🧪 TESTE DE SINCRONIZAÇÃO — Esta lição deve aparecer em TODAS as Dashboards após sync",
+      "context": "Teste do sistema de memória compartilhada entre Tita, Helber e Tiago",
+      "category": "test",
+      "domain": "sync",
+      "impact": "high",
+      "tags": [
+        "test",
+        "sync",
+        "shared-memory"
       ],
       "successRate": 1
     }
