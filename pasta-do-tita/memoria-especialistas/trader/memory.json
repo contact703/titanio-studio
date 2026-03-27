@@ -1,0 +1,72 @@
+{
+  "sessions": [],
+  "stats": {
+    "tasksCompleted": 4,
+    "lessonsLearned": 8
+  },
+  "lastActive": "2026-03-27T20:05:00.000Z",
+  "knowledge": {
+    "polymarket_o_que_e": "Mercado de previsões YES/NO. Preço flutua como ação. Pode vender ANTES do resultado. NÃO é aposta — é trading de probabilidades.",
+    "login_correto": "Google OAuth — tiago@titaniofilms.com / Rita160679. NUNCA usar Magic email (precisa OTP inacessível).",
+    "wallet_tiago": "0xf84796bEa736AE03D4E96f78dc7a2894241f5FB0",
+    "saldo_inicial": "$44.86 USDC",
+    "metodo_trade_playwright": "headless=False obrigatório (site detecta headless). Clicar YES/NO > preencher valor > Buy > aceitar Termos (1ª vez) > confirmar > toast de confirmação.",
+    "api_clob_get": "GET funciona: headers POLY_API_KEY (underscore, não hífen) + base64.urlsafe_b64decode. Retorna 200.",
+    "api_clob_post": "POST de ordem: 401 porque signer da bot wallet (0x2f07) ≠ signer das API keys (0x5a9A do Tiago via Google/Magic). Usar Playwright é o caminho certo.",
+    "script_referencia": "projetos/polymarket-agent/COMO-FAZER-TRADES.md",
+    "scanner_api": "https://gamma-api.polymarket.com/markets — retorna 100 mercados ativos",
+    "monitor_24_7": "projetos/polymarket-agent/src/monitor.py — roda a cada 10min, salva em data/latest_scan.json",
+    "criterio_trade": "Confiança IA >= 65-70%. Máx $15 por trade. Diversificar entre YES e NO."
+  },
+  "recentTasks": [
+    {
+      "task": "Trade 1 — Italy YES Copa 2026",
+      "result": "SUCESSO — $5 → 6.58 shares @ 76¢. Toast confirmado.",
+      "date": "2026-03-27T16:20:00.000Z",
+      "lessons": [
+        "Google OAuth funciona perfeitamente para login automatizado",
+        "Playwright headless=False evita detecção anti-bot do Polymarket",
+        "Modal de Termos de Uso aparece no PRIMEIRO trade — aceitar e confirmar novamente",
+        "Toast de confirmação verde = trade executado com sucesso"
+      ]
+    },
+    {
+      "task": "Trade 2 — Jesus Christ NO (before GTA VI)",
+      "result": "SUCESSO — $15 apostado no NO @ ~52¢",
+      "date": "2026-03-27T16:59:00.000Z",
+      "lessons": [
+        "GTA VI confirmado 2025 → Jesus retornar antes é improvável → NO é o trade correto",
+        "Volume alto ($50k) = boa liquidez para entrar e sair"
+      ]
+    },
+    {
+      "task": "Trade 3 — OKC Thunder YES (NBA Finals 2026)",
+      "result": "SUCESSO — $12 apostado no YES @ ~36¢",
+      "date": "2026-03-27T17:00:00.000Z",
+      "lessons": [
+        "Time jovem sub-avaliado = value bet. Shai Gilgeous-Alexander é MVP caliber.",
+        "36¢ por share = potencial de 2.8x se vencer"
+      ]
+    },
+    {
+      "task": "Trade 4 — Colorado Avalanche NO (Stanley Cup 2026)",
+      "result": "SUCESSO — $8 apostado no NO @ ~80¢",
+      "date": "2026-03-27T17:00:00.000Z",
+      "lessons": [
+        "Avalanche a 20% YES = já reflete expectativas baixas. NO a 80¢ é conservador mas seguro."
+      ]
+    }
+  ],
+  "activeContext": {
+    "portfolio_aberto": [
+      {"mercado": "Italy Copa 2026 FIFA", "posicao": "YES", "valor_investido": "$5", "shares": "6.58 @ 76¢", "potencial": "$6.58 se Italy qualificar"},
+      {"mercado": "Jesus Christ before GTA VI", "posicao": "NO", "valor_investido": "$15", "nota": "GTA VI sai antes"},
+      {"mercado": "OKC Thunder NBA Finals 2026", "posicao": "YES", "valor_investido": "$12", "nota": "Time jovem em ascensão"},
+      {"mercado": "Colorado Avalanche Stanley Cup 2026", "posicao": "NO", "valor_investido": "$8", "nota": "Time não é favorito"}
+    ],
+    "total_investido": "$40",
+    "saldo_restante": "$4.86",
+    "data_ultimo_trade": "2026-03-27",
+    "proximo_passo": "Monitorar posições, realizar trades adicionais quando scanner indicar novas oportunidades >= 70%"
+  }
+}
