@@ -1,21 +1,35 @@
 {
-  "timestamp": "2026-03-30 12:18",
+  "timestamp": "2026-03-30 12:50",
   "markets_total": 30,
-  "opportunities": 3,
+  "opportunities": 4,
   "analyses": [
     {
       "question": "Will Luiz Inácio Lula da Silva qualify for Brazil's presidential runoff?",
       "yes": 0.745,
       "no": 0.255,
-      "volume": 99903.36671400005,
+      "volume": 99907.21286600005,
       "analysis": {
-        "confianca": 15,
-        "direcao": "NO",
-        "razao": "Pergunta ambígua - próximas eleições presidenciais no Brasil são apenas em 2026",
-        "risco": "alto"
+        "confianca": 85,
+        "direcao": "YES",
+        "razao": "Lula mantém alta popularidade e liderança consistente nas pesquisas eleitorais, com base eleitoral sólida que historicamente o coloca entre os dois primeiros colocados",
+        "risco": "baixo"
       },
-      "timestamp": "2026-03-30 12:18",
+      "timestamp": "2026-03-30 12:50",
       "condition_id": "0x7b22caeed454d3c7dbd07b83d8255c74e1482c4f958b4ba4dd0c27b864cd47a2"
+    },
+    {
+      "question": "OpenAI receives federal backstop for infrastructure before July?",
+      "yes": 0.2595,
+      "no": 0.7405,
+      "volume": 99794.27453899977,
+      "analysis": {
+        "confianca": 75,
+        "direcao": "NO",
+        "razao": "Apoio federal para infraestrutura de IA requer processo legislativo longo e complexo, improvável em 6 meses",
+        "risco": "medio"
+      },
+      "timestamp": "2026-03-30 12:50",
+      "condition_id": "0x388459f1cfd0d310154e13f16f49d31fd301e5e3502072c8b09d3a0697b2823f"
     },
     {
       "question": "Will USD reach 1.8M Iranian rials by April 30?",
@@ -25,47 +39,33 @@
       "analysis": {
         "confianca": 75,
         "direcao": "YES",
-        "razao": "Rial iraniano enfrenta pressão inflacionária contínua, sanções persistentes e instabilidade econômica estrutural que historicamente aceleram desvalorização",
+        "razao": "Rial iraniano em queda acelerada devido a sanções intensificadas, instabilidade regional crescente e pressão econômica contínua",
         "risco": "medio"
       },
-      "timestamp": "2026-03-30 12:18",
+      "timestamp": "2026-03-30 12:50",
       "condition_id": "0x699093850ff73cf30baa4c571272900c3162932f9745400256a6455d6b2d0789"
-    },
-    {
-      "question": "Will Mikael Ishak score the most goals in the 2025-26 UEFA Europa Conference League?",
-      "yes": 0.695,
-      "no": 0.305,
-      "volume": 9958.918306,
-      "analysis": {
-        "confianca": 25,
-        "direcao": "NO",
-        "razao": "Odds superestimadas para jogador específico em competição com muitas variáveis",
-        "risco": "alto"
-      },
-      "timestamp": "2026-03-30 12:18",
-      "condition_id": "0x71116149166610ae90c5bbda1b3fed3c202e31f3d31599e39866466c7b985114"
     }
   ],
   "top_events": [
     {
       "title": "Democratic Presidential Nominee 2028",
-      "volume": 940799316.4976158
+      "volume": 941228555.3705859
     },
     {
       "title": "Republican Presidential Nominee 2028",
-      "volume": 494858475.4658916
+      "volume": 495206473.6227896
     },
     {
       "title": "Presidential Election Winner 2028",
-      "volume": 473998516.0303972
+      "volume": 474236843.6940153
     },
     {
       "title": "2026 FIFA World Cup Winner ",
-      "volume": 429011162.47431815
+      "volume": 429132125.45528615
     },
     {
       "title": "English Premier League Winner ",
-      "volume": 312583929.7625548
+      "volume": 312588585.2781198
     }
   ]
 }
