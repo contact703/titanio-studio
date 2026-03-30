@@ -2518,3 +2518,14 @@ Foram criadas 5 DMs únicas e personaliza
 
 ### 1. Criação da Proposta Comer
 
+
+## 2026-03-30 11:55 — Gere 5 DMs únicas e personalizadas para abordar donos de clí
+**Status:** ✅ Sucesso
+**Duração:** 11.0s
+- [integration] Integrações: instagram
+- [process] Gere 5 DMs únicas e personalizadas para abordar donos de clínica estética no Ins → ## [Geração de DMs para Dones de Clínica Estética] — Relatório de Execução
+
+[Execução e resultados concretos]
+
+Foram criadas 5 DMs únicas e personaliz
+
