@@ -1,0 +1,48 @@
+{
+  "timestamp": "2026-03-29T22:08:00.468506",
+  "day_trade": [
+    {
+      "q": "BitBoy convicted?",
+      "yes": 0.1005,
+      "no": 0.8995,
+      "liq": 8521.24391,
+      "vol24": 18508.63364000001,
+      "days": 1.5,
+      "slug": "bitboy-convicted",
+      "end": "2026-03-31T12:00:00Z"
+    }
+  ],
+  "short_term": [],
+  "swing": [
+    {
+      "q": "Will Italy qualify for the 2026 FIFA World Cup?",
+      "yes": 0.765,
+      "no": 0.235,
+      "liq": 27791.4811,
+      "vol24": 1706.8533539999999,
+      "days": 13.0,
+      "slug": "will-italy-qualify-for-the-2026-fifa-world-cup",
+      "end": "2026-04-12T00:00:00Z"
+    },
+    {
+      "q": "Will Sweden qualify for the 2026 FIFA World Cup?",
+      "yes": 0.65,
+      "no": 0.35,
+      "liq": 12402.1664,
+      "vol24": 3002.743618,
+      "days": 13.0,
+      "slug": "will-sweden-qualify-for-the-2026-fifa-world-cup",
+      "end": "2026-04-12T00:00:00Z"
+    },
+    {
+      "q": "Will Poland qualify for the 2026 FIFA World Cup?",
+      "yes": 0.365,
+      "no": 0.635,
+      "liq": 8672.8329,
+      "vol24": 2553.3100449999993,
+      "days": 13.0,
+      "slug": "will-poland-qualify-for-the-2026-fifa-world-cup",
+      "end": "2026-04-12T00:00:00Z"
+    }
+  ]
+}

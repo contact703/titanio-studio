@@ -1,0 +1,48 @@
+{
+  "client": {
+    "name": "H2O Films",
+    "instagram": "@h2o.films",
+    "followers": 83778,
+    "films_count": 80,
+    "linktree": "linktr.ee/h2ofilms",
+    "category": "Distribuidora de filmes brasileiros",
+    "tone": "apaixonado por cinema brasileiro, acessível, cultural, emocional"
+  },
+  "posting": {
+    "schedule": {
+      "feed": ["09:00", "14:00", "19:00"],
+      "reels": ["20:00"],
+      "stories": ["10:00", "15:00", "21:00"]
+    },
+    "hashtags_base": ["#CinemaBrasileiro", "#H2OFilms", "#FilmeBrasileiro", "#Cinema", "#FilmeNacional"],
+    "content_mix": {
+      "filme_promocao": 40,
+      "behind_scenes": 15,
+      "datas_comemorativas": 10,
+      "interacao_publico": 15,
+      "repost_ugc": 10,
+      "curadoria_cinema": 10
+    }
+  },
+  "ads": {
+    "platforms": ["meta", "google", "tiktok", "youtube"],
+    "budget_per_launch": {"min": 5000, "max": 20000},
+    "target_roas": 5,
+    "ab_test_variants": 5
+  },
+  "agents": [
+    "h2o-film-promoter",
+    "h2o-cinema-social",
+    "h2o-film-catalog",
+    "h2o-press-agent",
+    "h2o-ad-creator",
+    "h2o-revenue-tracker"
+  ],
+  "integrations": {
+    "manda_a_nota": true,
+    "whatsapp_bot": true,
+    "instagram_api": true,
+    "n8n_workflows": true,
+    "dashboard": true
+  }
+}

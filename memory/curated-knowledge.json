@@ -1,16 +1,18 @@
 {
   "topics": {
-    "polymarket": 3,
+    "polymarket": 4,
     "zica": 5,
     "comfyui": 1,
     "eduardo": 1,
-    "titanio-media": 1,
-    "dashboard": 2,
-    "memory-system": 2,
+    "titanio-media": 2,
+    "dashboard": 3,
+    "memory-system": 4,
     "helber": 1,
-    "tiago": 1,
+    "tiago": 2,
     "mandaanota": 1,
-    "hiclaw": 1
+    "hiclaw": 1,
+    "ollama": 1,
+    "general": 5
   },
   "entries": [
     {
@@ -145,7 +147,91 @@
       "subtopic": "hiclaw",
       "date": "2026-03-29 21:22",
       "id": 18
+    },
+    {
+      "text": "DeerFlow (ByteDance) analisado. Copiamos: Memory Middleware, memória estruturada, per-agent memory, debounce. NÃO copiamos: Docker sandbox (RAM 97%), LangChain (pesado).",
+      "category": "projects",
+      "subtopic": "memory-system",
+      "date": "2026-03-29 21:39",
+      "id": 19
+    },
+    {
+      "text": "LIÇÃO: DeerFlow memory middleware = interceptar ANTES de responder e injetar contexto. É o que SESSION-CONTEXT.md + REGRA #0 fazem pra nós.",
+      "category": "projects",
+      "subtopic": "memory-system",
+      "date": "2026-03-29 21:39",
+      "id": 20
+    },
+    {
+      "text": "Smart Trader v2: news-analyzer.py criado. Scraping Google News + Reddit + análise com Ollama local (qwen2.5:7b). Calcula edge real vs preço mercado.",
+      "category": "tools",
+      "subtopic": "ollama",
+      "date": "2026-03-29 21:55",
+      "id": 21
+    },
+    {
+      "text": "Titanio Media Machine: titanio-auto-post.sh criado. 3 posts/dia (09h, 14h, 19h) + 1 Reels/dia (20h). 15 temas rotativos. LaunchAgents ativos.",
+      "category": "projects",
+      "subtopic": "titanio-media",
+      "date": "2026-03-29 21:55",
+      "id": 22
+    },
+    {
+      "text": "LaunchAgents Tita: session-boot (30min), auto-post (9/14/19h), auto-reels (20h), group-sentinel, tita-watchdog. 5 agentes automáticos.",
+      "category": "general",
+      "subtopic": null,
+      "date": "2026-03-29 21:55",
+      "id": 23
+    },
+    {
+      "text": "Polymarket CLOB API funciona! Wallet bot 0x2f07 com API keys derivadas. Orderbook acessível. Mas saldo $0 no bot - dinheiro tá na wallet Tiago 0xf847 ($44.86). Pra operar: transferir USDC Tiago→Bot.",
+      "category": "people",
+      "subtopic": "tiago",
+      "date": "2026-03-29 22:26",
+      "id": 24
+    },
+    {
+      "text": "LIÇÃO: Polymarket: py-clob-client funciona com private key + derive_api_key(). Não precisa de browser login. Mas precisa de USDC na wallet.",
+      "category": "projects",
+      "subtopic": "polymarket",
+      "date": "2026-03-29 22:26",
+      "id": 25
+    },
+    {
+      "text": "H2O Films: distribuidora cinema brasileiro, @h2o.films, 83.778 seguidores, 80+ filmes, 1.607 posts. Cliente potencial Micro SaaS. Proposta: R$1.500-7.000/mês.",
+      "category": "general",
+      "subtopic": null,
+      "date": "2026-03-29 22:39",
+      "id": 26
+    },
+    {
+      "text": "Projeto H2O criado em projetos/h2o-films/. PDF proposta gerado (450KB). 3 planos: Starter R$1.500, Pro R$3.500, Enterprise R$7.000/mês.",
+      "category": "general",
+      "subtopic": null,
+      "date": "2026-03-29 22:39",
+      "id": 27
+    },
+    {
+      "text": "Traffic Master criado como 37o especialista. Skills: Google Ads, Meta Ads, TikTok Ads, YouTube Ads, ROAS, Funil, A/B Testing.",
+      "category": "general",
+      "subtopic": null,
+      "date": "2026-03-29 22:45",
+      "id": 28
+    },
+    {
+      "text": "H2O Films: distribuidora (não produtora). Receita: bilheteria, streaming, TV, home video, internacional. CNAE 59.11-1/00. NFS-e serviço 13.03.",
+      "category": "general",
+      "subtopic": null,
+      "date": "2026-03-29 22:45",
+      "id": 29
+    },
+    {
+      "text": "H2O Films: sistema completo pronto. 6 agentes cinema, 3 templates, 6 workflows N8n, WhatsApp bot, Dashboard skin, setup-h2o.sh (1 botão). Equipe H2O só conversa no WhatsApp e tudo se resolve.",
+      "category": "projects",
+      "subtopic": "dashboard",
+      "date": "2026-03-29 23:11",
+      "id": 30
     }
   ],
-  "last_updated": "2026-03-29T21:22:49.042273"
+  "last_updated": "2026-03-29T23:11:43.508991"
 }

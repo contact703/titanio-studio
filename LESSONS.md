@@ -53,3 +53,7 @@
 - **29/03/2026:** Nunca apostar no Polymarket sem análise real de notícias e dados. Ser ousado mas com base.
 
 - **29/03/2026:** SEMPRE usar especialistas via HiClaw em vez de spawnar agents genéricos. Especialistas aprendem e acumulam lições.
+
+- **29/03/2026:** DeerFlow memory middleware = interceptar ANTES de responder e injetar contexto. É o que SESSION-CONTEXT.md + REGRA #0 fazem pra nós.
+
+- **29/03/2026:** Polymarket: py-clob-client funciona com private key + derive_api_key(). Não precisa de browser login. Mas precisa de USDC na wallet.

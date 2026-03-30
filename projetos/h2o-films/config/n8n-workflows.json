@@ -1,0 +1,40 @@
+{
+  "workflows": [
+    {
+      "name": "H2O Auto-Post",
+      "trigger": "cron 09:00,14:00,19:00",
+      "action": "Gera post com Film Promoter → Design com titanio-media → Posta via instagrapi",
+      "status": "ready"
+    },
+    {
+      "name": "H2O Auto-Reels",
+      "trigger": "cron 20:00",
+      "action": "Pipeline: roteiro → narração → vídeo → post Reels",
+      "status": "ready"
+    },
+    {
+      "name": "H2O Clipping Monitor",
+      "trigger": "cron cada 6h",
+      "action": "Scraper busca menções dos filmes H2O em portais de cinema → salva relatório",
+      "status": "ready"
+    },
+    {
+      "name": "H2O Weekly Report",
+      "trigger": "cron segunda 09:00",
+      "action": "Gera relatório semanal: métricas social, receita, clipping → envia WhatsApp",
+      "status": "ready"
+    },
+    {
+      "name": "H2O Film Launch",
+      "trigger": "manual (novo filme)",
+      "action": "Press release + 10 posts agendados + campanha ads + countdown stories",
+      "status": "ready"
+    },
+    {
+      "name": "H2O NFS-e",
+      "trigger": "webhook (novo contrato)",
+      "action": "Manda a Nota emite NFS-e automática pro serviço",
+      "status": "ready"
+    }
+  ]
+}
