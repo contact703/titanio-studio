@@ -124,7 +124,26 @@ launchctl load ~/Library/LaunchAgents/com.tita.backup.plist
 
 ---
 
-## PASSO 4 — Configurar Backup
+## PASSO 4 — Configurar Backup (Estratégia 3-2-1)
+
+O backup usa a estratégia profissional 3-2-1:
+- **3 cópias:** Original + Disco local + GitHub
+- **2 mídias:** SSD Mac + Volume externo
+- **1 offsite:** GitHub (cloud, nunca apaga)
+
+**4 camadas de retenção:**
+- **Diário:** últimos 7 dias
+- **Semanal:** todo domingo, últimos 30 dias
+- **Mensal:** dia 1, último ano
+- **GitHub:** FOREVER (nunca apaga)
+
+**O que faz backup:**
+- ✅ Memória (51 diárias + 159 flush + tmem + graph + engine DB)
+- ✅ Especialistas (42 pastas com lições + knowledge)
+- ✅ Configs (AGENTS, SOUL, MEMORY, LESSONS, SESSION-CONTEXT, etc)
+- ✅ N8n workflows (exporta via API automaticamente)
+- ✅ Cofre (compactado separado — NÃO vai pro Git)
+- ✅ Checksums SHA256 (integridade de todos os arquivos)
 
 No `titanio-backup.sh`, ajustar:
 ```bash
@@ -135,6 +154,13 @@ E configurar git remote se ainda não tiver:
 ```bash
 cd $LOCAL_WS
 git remote add tita-memory https://github.com/contact703/tita-memory.git
+```
+
+**Verificar integridade de um backup:**
+```bash
+cd /caminho/backup/daily-YYYY-MM-DD/
+shasum -a 256 -c CHECKSUMS.sha256
+# Deve mostrar: OK pra todos os arquivos
 ```
 
 ---

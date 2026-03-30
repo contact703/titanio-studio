@@ -6,14 +6,14 @@
     "eduardo": 1,
     "titanio-media": 2,
     "dashboard": 3,
-    "memory-system": 5,
+    "memory-system": 6,
     "helber": 1,
     "tiago": 2,
     "mandaanota": 1,
     "hiclaw": 1,
     "ollama": 1,
     "general": 6,
-    "n8n": 2,
+    "n8n": 3,
     "lessons": 3,
     "decisions": 1
   },
@@ -297,7 +297,21 @@
       "subtopic": null,
       "date": "2026-03-30 02:04",
       "id": 39
+    },
+    {
+      "text": "Backup 3-2-1 implementado: 3 cópias (original+disco+GitHub), diário/semanal/mensal, cofre encriptado separado, checksums SHA256, N8n export automático. 336 arquivos, 23MB. Testado e funcionando.",
+      "category": "projects",
+      "subtopic": "n8n",
+      "date": "2026-03-30 02:12",
+      "id": 40
+    },
+    {
+      "text": "DECISÃO: NUNCA apagar backups no TITA_039. 6.3TB livres, 23MB/dia = 0.16% em 10 anos. Memória é ouro, disco aguenta décadas. Só alertar se <500GB.",
+      "category": "projects",
+      "subtopic": "memory-system",
+      "date": "2026-03-30 02:17",
+      "id": 41
     }
   ],
-  "last_updated": "2026-03-30T02:04:48.557472"
+  "last_updated": "2026-03-30T02:17:02.920012"
 }

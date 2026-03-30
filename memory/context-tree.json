@@ -118,6 +118,10 @@
       {
         "text": "LIÇÃO: Todo trabalho de cliente DEVE alimentar a memória dos especialistas. tmem curate após cada tarefa. Lições do cliente X melhoram atendimento do cliente Y.",
         "date": "2026-03-29 23:55"
+      },
+      {
+        "text": "DECISÃO: NUNCA apagar backups no TITA_039. 6.3TB livres, 23MB/dia = 0.16% em 10 anos. Memória é ouro, disco aguenta décadas. Só alertar se <500GB.",
+        "date": "2026-03-30 02:17"
       }
     ],
     "mandaanota": [
@@ -140,6 +144,10 @@
       {
         "text": "Auditoria de força 30/03: 10 coisas funcionam, 14 faltam. Prioridades: health check com alerta, backup automático, self-healing de N8n/Ollama, RAM monitor, CI/CD básico.",
         "date": "2026-03-30 01:56"
+      },
+      {
+        "text": "Backup 3-2-1 implementado: 3 cópias (original+disco+GitHub), diário/semanal/mensal, cofre encriptado separado, checksums SHA256, N8n export automático. 336 arquivos, 23MB. Testado e funcionando.",
+        "date": "2026-03-30 02:12"
       }
     ]
   },
@@ -173,5 +181,5 @@
   ],
   "credentials": {},
   "workflows": {},
-  "last_updated": "2026-03-30T02:04:48.557700"
+  "last_updated": "2026-03-30T02:17:02.941196"
 }

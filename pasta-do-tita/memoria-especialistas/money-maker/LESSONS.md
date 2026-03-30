@@ -2142,3 +2142,25 @@ Foram criadas 5 DMs únicas e personaliz
 ### 1. Criação do Título Magnético
 **Título Ma
 
+
+## 2026-03-30 02:17 — Gere 5 DMs únicas e personalizadas para abordar donos de loj
+**Status:** ✅ Sucesso
+**Duração:** 11.7s
+- [integration] Integrações: instagram
+- [process] Gere 5 DMs únicas e personalizadas para abordar donos de loja de roupas no Insta → ## [Geração de DMs para Dones de Loja de Roupas] — Relatório de Execução
+
+[Execução e resultados concretos]
+
+Foram criadas 5 DMs únicas e personalizad
+
+
+## 2026-03-30 02:17 — Drop servicing: vendo "kit de conteúdo mensal" para clínica 
+**Status:** ✅ Sucesso
+**Duração:** 20.3s
+- [integration] Integrações: instagram
+- [process] Drop servicing: vendo "kit de conteúdo mensal" para clínica por R$397. Crie: (1) → ## [Drop Servicing - Kit de Conteúdo Mensal para Clínica] — Relatório de Execução
+
+[Execução e resultados concretos]
+
+### 1. Criação da Proposta Comer
+

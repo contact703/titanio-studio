@@ -120,13 +120,15 @@ if [ "$DOM" = "01" ]; then
     log "📦 Backup MENSAL: $MONTHLY_DIR"
 fi
 
-# LIMPEZA com proteção
-# Diários: manter 7 dias
-find "$BACKUP_BASE" -maxdepth 1 -name "daily-*" -mtime +7 -exec rm -rf {} \; 2>/dev/null
-# Semanais: manter 30 dias
-find "$BACKUP_BASE" -maxdepth 1 -name "weekly-*" -mtime +30 -exec rm -rf {} \; 2>/dev/null
-# Mensais: manter 365 dias
-find "$BACKUP_BASE" -maxdepth 1 -name "monthly-*" -mtime +365 -exec rm -rf {} \; 2>/dev/null
+# LIMPEZA — NUNCA APAGAR no TITA_039 (6.3TB livres, 23MB/dia = 0.16% em 10 anos)
+# Só alertar se disco ficar abaixo de 500GB
+AVAIL_GB=$(df -g /Volumes/TITA_039 2>/dev/null | awk 'NR==2 {print $4}')
+if [ -n "$AVAIL_GB" ] && [ "$AVAIL_GB" -lt 500 ]; then
+    log "⚠️ ALERTA: TITA_039 com menos de 500GB livres ($AVAIL_GB GB). Considerar limpeza."
+else
+    log "💾 TITA_039: ${AVAIL_GB}GB livres — sem necessidade de limpeza"
+fi
+# NADA É APAGADO. Memória é nosso ouro. 6.3TB aguenta décadas de backup.
 
 # ============================================================
 # RELATÓRIO
