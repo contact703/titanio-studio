@@ -1,0 +1,4400 @@
+{
+  "nodes": {
+    "Kratos": {
+      "type": "people",
+      "mentions": 4,
+      "sources": [
+        "MEMORY.md"
+      ],
+      "first_seen": "MEMORY.md",
+      "last_seen": "MEMORY.md"
+    },
+    "memória": {
+      "type": "concept",
+      "mentions": 180,
+      "sources": [
+        "MEMORY.md",
+        "LESSONS.md",
+        "2026-02-09.md",
+        "2026-02-12.md",
+        "2026-02-19.md",
+        "2026-02-24.md",
+        "2026-02-27.md",
+        "2026-02-28.md",
+        "2026-03-01.md",
+        "2026-03-02.md",
+        "2026-03-09.md",
+        "2026-03-10.md",
+        "2026-03-14.md",
+        "2026-03-15.md",
+        "2026-03-18.md",
+        "2026-03-19.md",
+        "2026-03-20.md",
+        "2026-03-22.md",
+        "2026-03-23.md",
+        "2026-03-27.md",
+        "debug-full-test-2026-03-28.md",
+        "debug-report-memory-engine-2026-03-28.md",
+        "HELBER-TIAGO-SETUP.md",
+        "LICAO-CRITICA-MD-ENVIO.md",
+        "pesquisa-problema-memoria-recall-2026-03-28.md",
+        "RECUPERACAO-DIRETO-EDUARDO.md",
+        "RECUPERACAO-ESPECIALISTAS-DIRETO.md",
+        "RECUPERACAO-ESPECIALISTAS-GOSPIA.md",
+        "RECUPERACAO-GOSPIA.md",
+        "relatorio-memoria-evermind-vs-tita.md",
+        "research-2026-03-14.md",
+        "research-agents-free-2026-03-15.md",
+        "research-memory-2026-03-15.md",
+        "research-security-2026-03-15.md"
+      ],
+      "first_seen": "MEMORY.md",
+      "last_seen": "research-security-2026-03-15.md"
+    },
+    "Helber": {
+      "type": "people",
+      "mentions": 69,
+      "sources": [
+        "MEMORY.md",
+        "2025-02-20.md",
+        "2026-03-12.md",
+        "2026-03-14.md",
+        "2026-03-15.md",
+        "2026-03-16.md",
+        "2026-03-18.md",
+        "2026-03-22.md",
+        "2026-03-23.md",
+        "debug-full-test-2026-03-28.md",
+        "debug-report-memory-engine-2026-03-28.md",
+        "HELBER-TIAGO-SETUP.md",
+        "network-map.md",
+        "RECUPERACAO-DIRETO-EDUARDO.md",
+        "RECUPERACAO-ESPECIALISTAS-DIRETO.md",
+        "RECUPERACAO-ESPECIALISTAS-GOSPIA.md",
+        "RECUPERACAO-GOSPIA.md",
+        "research-2026-03-14.md",
+        "research-agents-free-2026-03-15.md"
+      ],
+      "first_seen": "MEMORY.md",
+      "last_seen": "research-agents-free-2026-03-15.md"
+    },
+    "Elber": {
+      "type": "people",
+      "mentions": 71,
+      "sources": [
+        "MEMORY.md",
+        "2025-02-20.md",
+        "2026-02-03.md",
+        "2026-03-12.md",
+        "2026-03-14.md",
+        "2026-03-15.md",
+        "2026-03-16.md",
+        "2026-03-18.md",
+        "2026-03-22.md",
+        "2026-03-23.md",
+        "USER.md",
+        "debug-full-test-2026-03-28.md",
+        "debug-report-memory-engine-2026-03-28.md",
+        "HELBER-TIAGO-SETUP.md",
+        "network-map.md",
+        "RECUPERACAO-DIRETO-EDUARDO.md",
+        "RECUPERACAO-ESPECIALISTAS-DIRETO.md",
+        "RECUPERACAO-ESPECIALISTAS-GOSPIA.md",
+        "RECUPERACAO-GOSPIA.md",
+        "research-2026-03-14.md",
+        "research-agents-free-2026-03-15.md"
+      ],
+      "first_seen": "MEMORY.md",
+      "last_seen": "research-agents-free-2026-03-15.md"
+    },
+    "iOS": {
+      "type": "concept",
+      "mentions": 258,
+      "sources": [
+        "MEMORY.md",
+        "2025-02-23.md",
+        "2026-02-03.md",
+        "2026-02-05.md",
+        "2026-02-06.md",
+        "2026-02-09.md",
+        "2026-02-10.md",
+        "2026-02-11.md",
+        "2026-02-13.md",
+        "2026-02-19.md",
+        "2026-02-26.md",
+        "2026-02-27.md",
+        "2026-03-05.md",
+        "2026-03-11.md",
+        "2026-03-12.md",
+        "2026-03-14.md",
+        "2026-03-15.md",
+        "2026-03-16.md",
+        "2026-03-17.md",
+        "2026-03-18.md",
+        "2026-03-19.md",
+        "2026-03-20.md",
+        "2026-03-21.md",
+        "2026-03-22.md",
+        "2026-03-23.md",
+        "2026-03-27.md",
+        "2026-03-28.md",
+        "debug-full-test-2026-03-28.md",
+        "debug-hunter-full-test-2026-03-28.md",
+        "debug-report-memory-engine-2026-03-28.md",
+        "gospia-guia-master.md",
+        "gospia-study.md",
+        "ios-research-2026-03-14.md",
+        "memory-index.md",
+        "network-study-2026-03-14.md",
+        "pesquisa-problema-memoria-recall-2026-03-28.md",
+        "RECUPERACAO-DIRETO-EDUARDO.md",
+        "RECUPERACAO-ESPECIALISTAS-DIRETO.md",
+        "RECUPERACAO-ESPECIALISTAS-GOSPIA.md",
+        "RECUPERACAO-GOSPIA.md",
+        "relatorio-memoria-evermind-vs-tita.md",
+        "research-2026-03-14.md",
+        "research-memory-2026-03-15.md",
+        "research-money-2026-03-15.md",
+        "research-security-2026-03-15.md"
+      ],
+      "first_seen": "MEMORY.md",
+      "last_seen": "research-security-2026-03-15.md"
+    },
+    "WhatsApp": {
+      "type": "concept",
+      "mentions": 125,
+      "sources": [
+        "MEMORY.md",
+        "LESSONS.md",
+        "2025-02-12.md",
+        "2026-02-03.md",
+        "2026-02-05.md",
+        "2026-02-09.md",
+        "2026-02-11.md",
+        "2026-02-13.md",
+        "2026-02-14.md",
+        "2026-02-17.md",
+        "2026-02-19.md",
+        "2026-02-21.md",
+        "2026-02-24.md",
+        "2026-03-02.md",
+        "2026-03-09.md",
+        "2026-03-10.md",
+        "2026-03-11.md",
+        "2026-03-14.md",
+        "2026-03-16.md",
+        "2026-03-17.md",
+        "2026-03-18.md",
+        "2026-03-23.md",
+        "2026-03-26.md",
+        "2026-03-27.md",
+        "USER.md",
+        "ios-research-2026-03-14.md",
+        "LICAO-CRITICA-MD-ENVIO.md",
+        "memory-index.md",
+        "pesquisa-problema-memoria-recall-2026-03-28.md",
+        "RECUPERACAO-DIRETO-EDUARDO.md",
+        "RECUPERACAO-ESPECIALISTAS-DIRETO.md",
+        "RECUPERACAO-ESPECIALISTAS-GOSPIA.md",
+        "RECUPERACAO-GOSPIA.md",
+        "REGRA-ENVIO-MD-WHATSAPP.md",
+        "research-2026-03-14.md",
+        "research-agents-free-2026-03-15.md",
+        "research-money-2026-03-15.md",
+        "research-security-2026-03-15.md"
+      ],
+      "first_seen": "MEMORY.md",
+      "last_seen": "research-security-2026-03-15.md"
+    },
+    "Tita": {
+      "type": "people",
+      "mentions": 357,
+      "sources": [
+        "MEMORY.md",
+        "LESSONS.md",
+        "2025-02-12.md",
+        "2025-02-20.md",
+        "2025-02-23.md",
+        "2026-02-03.md",
+        "2026-02-05.md",
+        "2026-02-06.md",
+        "2026-02-09.md",
+        "2026-02-11.md",
+        "2026-02-13.md",
+        "2026-02-20.md",
+        "2026-02-21.md",
+        "2026-02-23.md",
+        "2026-02-24.md",
+        "2026-02-25.md",
+        "2026-02-26.md",
+        "2026-02-27.md",
+        "2026-02-28.md",
+        "2026-03-01.md",
+        "2026-03-02.md",
+        "2026-03-03.md",
+        "2026-03-04.md",
+        "2026-03-05.md",
+        "2026-03-09.md",
+        "2026-03-10.md",
+        "2026-03-11.md",
+        "2026-03-12.md",
+        "2026-03-14.md",
+        "2026-03-15.md",
+        "2026-03-16.md",
+        "2026-03-17.md",
+        "2026-03-18.md",
+        "2026-03-19.md",
+        "2026-03-20.md",
+        "2026-03-22.md",
+        "2026-03-23.md",
+        "2026-03-26.md",
+        "2026-03-27.md",
+        "USER.md",
+        "debug-full-test-2026-03-28.md",
+        "debug-report-memory-engine-2026-03-28.md",
+        "gospia-study.md",
+        "HELBER-TIAGO-SETUP.md",
+        "ios-research-2026-03-14.md",
+        "LICAO-CRITICA-MD-ENVIO.md",
+        "LIÇÃO-CRÍTICA-2026-03-22.md",
+        "memory-index.md",
+        "network-map.md",
+        "network-study-2026-03-14.md",
+        "pesquisa-problema-memoria-recall-2026-03-28.md",
+        "RECUPERACAO-DIRETO-EDUARDO.md",
+        "RECUPERACAO-ESPECIALISTAS-DIRETO.md",
+        "RECUPERACAO-ESPECIALISTAS-GOSPIA.md",
+        "RECUPERACAO-GOSPIA.md",
+        "relatorio-memoria-evermind-vs-tita.md",
+        "research-2026-03-14.md",
+        "research-agents-free-2026-03-15.md",
+        "research-memory-2026-03-15.md",
+        "research-security-2026-03-15.md"
+      ],
+      "first_seen": "MEMORY.md",
+      "last_seen": "research-security-2026-03-15.md"
+    },
+    "Manda a Nota": {
+      "type": "project",
+      "mentions": 8,
+      "sources": [
+        "MEMORY.md",
+        "debug-full-test-2026-03-28.md",
+        "debug-report-memory-engine-2026-03-28.md",
+        "RECUPERACAO-GOSPIA.md"
+      ],
+      "first_seen": "MEMORY.md",
+      "last_seen": "RECUPERACAO-GOSPIA.md"
+    },
+    "Titanio": {
+      "type": "project",
+      "mentions": 156,
+      "sources": [
+        "MEMORY.md",
+        "2025-02-12.md",
+        "2025-02-20.md",
+        "2026-02-03.md",
+        "2026-02-05.md",
+        "2026-02-06.md",
+        "2026-02-09.md",
+        "2026-02-11.md",
+        "2026-02-20.md",
+        "2026-02-21.md",
+        "2026-02-26.md",
+        "2026-02-27.md",
+        "2026-03-11.md",
+        "2026-03-12.md",
+        "2026-03-14.md",
+        "2026-03-16.md",
+        "2026-03-17.md",
+        "2026-03-18.md",
+        "2026-03-19.md",
+        "2026-03-20.md",
+        "2026-03-22.md",
+        "2026-03-23.md",
+        "2026-03-26.md",
+        "2026-03-27.md",
+        "USER.md",
+        "debug-full-test-2026-03-28.md",
+        "debug-report-memory-engine-2026-03-28.md",
+        "gospia-study.md",
+        "HELBER-TIAGO-SETUP.md",
+        "ios-research-2026-03-14.md",
+        "memory-index.md",
+        "network-map.md",
+        "network-study-2026-03-14.md",
+        "RECUPERACAO-DIRETO-EDUARDO.md",
+        "RECUPERACAO-ESPECIALISTAS-DIRETO.md",
+        "RECUPERACAO-ESPECIALISTAS-GOSPIA.md",
+        "RECUPERACAO-GOSPIA.md",
+        "research-2026-03-14.md",
+        "research-memory-2026-03-15.md"
+      ],
+      "first_seen": "MEMORY.md",
+      "last_seen": "research-memory-2026-03-15.md"
+    },
+    "Tikanawá": {
+      "type": "project",
+      "mentions": 4,
+      "sources": [
+        "MEMORY.md",
+        "RECUPERACAO-DIRETO-EDUARDO.md"
+      ],
+      "first_seen": "MEMORY.md",
+      "last_seen": "RECUPERACAO-DIRETO-EDUARDO.md"
+    },
+    "Micro SaaS": {
+      "type": "project",
+      "mentions": 4,
+      "sources": [
+        "MEMORY.md"
+      ],
+      "first_seen": "MEMORY.md",
+      "last_seen": "MEMORY.md"
+    },
+    "Titanio Claw": {
+      "type": "project",
+      "mentions": 1,
+      "sources": [
+        "MEMORY.md"
+      ],
+      "first_seen": "MEMORY.md",
+      "last_seen": "MEMORY.md"
+    },
+    "Memory Engine": {
+      "type": "project",
+      "mentions": 6,
+      "sources": [
+        "MEMORY.md",
+        "debug-report-memory-engine-2026-03-28.md"
+      ],
+      "first_seen": "MEMORY.md",
+      "last_seen": "debug-report-memory-engine-2026-03-28.md"
+    },
+    "Android": {
+      "type": "concept",
+      "mentions": 70,
+      "sources": [
+        "MEMORY.md",
+        "2025-02-23.md",
+        "2026-02-04.md",
+        "2026-02-05.md",
+        "2026-02-06.md",
+        "2026-02-09.md",
+        "2026-02-12.md",
+        "2026-02-13.md",
+        "2026-02-19.md",
+        "2026-02-20.md",
+        "2026-02-22.md",
+        "2026-02-23.md",
+        "2026-02-26.md",
+        "2026-02-27.md",
+        "2026-03-02.md",
+        "2026-03-05.md",
+        "2026-03-14.md",
+        "USER.md",
+        "TOOLS.md",
+        "gospia-guia-master.md",
+        "gospia-study.md",
+        "ios-research-2026-03-14.md",
+        "RECUPERACAO-DIRETO-EDUARDO.md"
+      ],
+      "first_seen": "MEMORY.md",
+      "last_seen": "RECUPERACAO-DIRETO-EDUARDO.md"
+    },
+    "Apple": {
+      "type": "concept",
+      "mentions": 59,
+      "sources": [
+        "MEMORY.md",
+        "2026-03-14.md",
+        "2026-03-15.md",
+        "2026-03-16.md",
+        "2026-03-17.md",
+        "2026-03-18.md",
+        "2026-03-20.md",
+        "debug-report-memory-engine-2026-03-28.md",
+        "ios-research-2026-03-14.md",
+        "network-map.md",
+        "network-study-2026-03-14.md",
+        "pesquisa-problema-memoria-recall-2026-03-28.md",
+        "RECUPERACAO-GOSPIA.md",
+        "research-agents-free-2026-03-15.md",
+        "research-security-2026-03-15.md"
+      ],
+      "first_seen": "MEMORY.md",
+      "last_seen": "research-security-2026-03-15.md"
+    },
+    "OpenClaw": {
+      "type": "project",
+      "mentions": 136,
+      "sources": [
+        "MEMORY.md",
+        "LESSONS.md",
+        "2025-02-12.md",
+        "2026-02-03.md",
+        "2026-02-05.md",
+        "2026-02-06.md",
+        "2026-02-09.md",
+        "2026-02-11.md",
+        "2026-02-19.md",
+        "2026-02-24.md",
+        "2026-02-25.md",
+        "2026-03-02.md",
+        "2026-03-04.md",
+        "2026-03-12.md",
+        "2026-03-14.md",
+        "2026-03-16.md",
+        "2026-03-17.md",
+        "2026-03-18.md",
+        "2026-03-20.md",
+        "2026-03-23.md",
+        "HELBER-TIAGO-SETUP.md",
+        "LICAO-CRITICA-MD-ENVIO.md",
+        "memory-index.md",
+        "network-map.md",
+        "network-study-2026-03-14.md",
+        "pesquisa-problema-memoria-recall-2026-03-28.md",
+        "RECUPERACAO-DIRETO-EDUARDO.md",
+        "RECUPERACAO-ESPECIALISTAS-DIRETO.md",
+        "RECUPERACAO-ESPECIALISTAS-GOSPIA.md",
+        "RECUPERACAO-GOSPIA.md",
+        "relatorio-memoria-evermind-vs-tita.md",
+        "research-2026-03-14.md",
+        "research-agents-free-2026-03-15.md",
+        "research-money-2026-03-15.md",
+        "research-security-2026-03-15.md"
+      ],
+      "first_seen": "MEMORY.md",
+      "last_seen": "research-security-2026-03-15.md"
+    },
+    "Play Store": {
+      "type": "project",
+      "mentions": 48,
+      "sources": [
+        "MEMORY.md",
+        "2026-02-20.md",
+        "2026-02-21.md",
+        "2026-02-26.md",
+        "2026-02-27.md",
+        "2026-02-28.md",
+        "2026-03-01.md",
+        "2026-03-02.md",
+        "gospia-guia-master.md",
+        "gospia-study.md"
+      ],
+      "first_seen": "MEMORY.md",
+      "last_seen": "gospia-study.md"
+    },
+    "Google": {
+      "type": "concept",
+      "mentions": 94,
+      "sources": [
+        "MEMORY.md",
+        "2026-02-03.md",
+        "2026-02-04.md",
+        "2026-02-05.md",
+        "2026-02-06.md",
+        "2026-02-12.md",
+        "2026-02-20.md",
+        "2026-02-24.md",
+        "2026-02-26.md",
+        "2026-02-27.md",
+        "2026-03-02.md",
+        "2026-03-04.md",
+        "2026-03-11.md",
+        "2026-03-14.md",
+        "2026-03-20.md",
+        "2026-03-27.md",
+        "gospia-guia-master.md",
+        "gospia-study.md",
+        "HELBER-TIAGO-SETUP.md",
+        "ios-research-2026-03-14.md",
+        "RECUPERACAO-DIRETO-EDUARDO.md",
+        "RECUPERACAO-GOSPIA.md",
+        "research-2026-03-14.md",
+        "research-agents-free-2026-03-15.md",
+        "research-memory-2026-03-15.md",
+        "research-money-2026-03-15.md",
+        "research-security-2026-03-15.md"
+      ],
+      "first_seen": "MEMORY.md",
+      "last_seen": "research-security-2026-03-15.md"
+    },
+    "backup": {
+      "type": "concept",
+      "mentions": 55,
+      "sources": [
+        "MEMORY.md",
+        "2025-02-12.md",
+        "2026-02-10.md",
+        "2026-02-23.md",
+        "2026-02-24.md",
+        "2026-02-26.md",
+        "2026-02-27.md",
+        "2026-03-02.md",
+        "2026-03-09.md",
+        "2026-03-14.md",
+        "2026-03-15.md",
+        "2026-03-16.md",
+        "2026-03-17.md",
+        "2026-03-18.md",
+        "2026-03-19.md",
+        "2026-03-20.md",
+        "2026-03-26.md",
+        "debug-full-test-2026-03-28.md",
+        "debug-report-memory-engine-2026-03-28.md",
+        "gospia-guia-master.md",
+        "gospia-study.md",
+        "ios-research-2026-03-14.md",
+        "network-study-2026-03-14.md",
+        "RECUPERACAO-ESPECIALISTAS-GOSPIA.md",
+        "research-2026-03-14.md",
+        "research-agents-free-2026-03-15.md",
+        "research-security-2026-03-15.md"
+      ],
+      "first_seen": "MEMORY.md",
+      "last_seen": "research-security-2026-03-15.md"
+    },
+    "MEI": {
+      "type": "concept",
+      "mentions": 62,
+      "sources": [
+        "MEMORY.md",
+        "LESSONS.md",
+        "2026-02-03.md",
+        "2026-02-06.md",
+        "2026-02-20.md",
+        "2026-03-01.md",
+        "2026-03-02.md",
+        "2026-03-11.md",
+        "2026-03-18.md",
+        "2026-03-22.md",
+        "2026-03-23.md",
+        "2026-03-26.md",
+        "debug-report-memory-engine-2026-03-28.md",
+        "gospia-guia-master.md",
+        "ios-research-2026-03-14.md",
+        "LICAO-CRITICA-MD-ENVIO.md",
+        "network-map.md",
+        "network-study-2026-03-14.md",
+        "RECUPERACAO-ESPECIALISTAS-GOSPIA.md",
+        "research-2026-03-14.md",
+        "research-agents-free-2026-03-15.md",
+        "research-money-2026-03-15.md"
+      ],
+      "first_seen": "MEMORY.md",
+      "last_seen": "research-money-2026-03-15.md"
+    },
+    "App Store": {
+      "type": "project",
+      "mentions": 35,
+      "sources": [
+        "MEMORY.md",
+        "2026-03-16.md",
+        "2026-03-17.md",
+        "2026-03-18.md",
+        "ios-research-2026-03-14.md",
+        "RECUPERACAO-ESPECIALISTAS-DIRETO.md"
+      ],
+      "first_seen": "MEMORY.md",
+      "last_seen": "RECUPERACAO-ESPECIALISTAS-DIRETO.md"
+    },
+    "NFS-e": {
+      "type": "project",
+      "mentions": 20,
+      "sources": [
+        "MEMORY.md",
+        "debug-full-test-2026-03-28.md",
+        "debug-report-memory-engine-2026-03-28.md"
+      ],
+      "first_seen": "MEMORY.md",
+      "last_seen": "debug-report-memory-engine-2026-03-28.md"
+    },
+    "API": {
+      "type": "concept",
+      "mentions": 277,
+      "sources": [
+        "MEMORY.md",
+        "LESSONS.md",
+        "2025-02-12.md",
+        "2026-02-03.md",
+        "2026-02-04.md",
+        "2026-02-11.md",
+        "2026-02-12.md",
+        "2026-02-13.md",
+        "2026-02-20.md",
+        "2026-02-24.md",
+        "2026-02-25.md",
+        "2026-02-26.md",
+        "2026-02-27.md",
+        "2026-03-02.md",
+        "2026-03-04.md",
+        "2026-03-12.md",
+        "2026-03-14.md",
+        "2026-03-15.md",
+        "2026-03-16.md",
+        "2026-03-19.md",
+        "2026-03-20.md",
+        "2026-03-22.md",
+        "2026-03-23.md",
+        "2026-03-26.md",
+        "2026-03-27.md",
+        "gospia-guia-master.md",
+        "gospia-study.md",
+        "HELBER-TIAGO-SETUP.md",
+        "ios-research-2026-03-14.md",
+        "LIÇÃO-CRÍTICA-2026-03-22.md",
+        "memory-index.md",
+        "network-study-2026-03-14.md",
+        "RECUPERACAO-DIRETO-EDUARDO.md",
+        "RECUPERACAO-ESPECIALISTAS-DIRETO.md",
+        "RECUPERACAO-ESPECIALISTAS-GOSPIA.md",
+        "RECUPERACAO-GOSPIA.md",
+        "research-2026-03-14.md",
+        "research-agents-free-2026-03-15.md",
+        "research-memory-2026-03-15.md",
+        "research-money-2026-03-15.md",
+        "research-security-2026-03-15.md"
+      ],
+      "first_seen": "MEMORY.md",
+      "last_seen": "research-security-2026-03-15.md"
+    },
+    "certificado": {
+      "type": "concept",
+      "mentions": 7,
+      "sources": [
+        "MEMORY.md",
+        "2026-03-16.md",
+        "gospia-study.md",
+        "ios-research-2026-03-14.md"
+      ],
+      "first_seen": "MEMORY.md",
+      "last_seen": "ios-research-2026-03-14.md"
+    },
+    "mandaanota": {
+      "type": "project",
+      "mentions": 4,
+      "sources": [
+        "MEMORY.md",
+        "2026-03-12.md"
+      ],
+      "first_seen": "MEMORY.md",
+      "last_seen": "2026-03-12.md"
+    },
+    "Eduardo": {
+      "type": "people",
+      "mentions": 210,
+      "sources": [
+        "LESSONS.md",
+        "2025-02-23.md",
+        "2026-02-03.md",
+        "2026-02-04.md",
+        "2026-02-06.md",
+        "2026-02-09.md",
+        "2026-02-10.md",
+        "2026-02-11.md",
+        "2026-02-13.md",
+        "2026-02-14.md",
+        "2026-02-16.md",
+        "2026-02-19.md",
+        "2026-02-20.md",
+        "2026-02-21.md",
+        "2026-02-24.md",
+        "2026-02-26.md",
+        "2026-02-27.md",
+        "2026-02-28.md",
+        "2026-03-01.md",
+        "2026-03-02.md",
+        "2026-03-04.md",
+        "2026-03-06.md",
+        "2026-03-09.md",
+        "2026-03-16.md",
+        "2026-03-18.md",
+        "2026-03-19.md",
+        "2026-03-20.md",
+        "2026-03-22-ram-warning.md",
+        "2026-03-27.md",
+        "USER.md",
+        "debug-full-test-2026-03-28.md",
+        "debug-report-memory-engine-2026-03-28.md",
+        "gospia-guia-master.md",
+        "HELBER-TIAGO-SETUP.md",
+        "memory-index.md",
+        "network-map.md",
+        "network-study-2026-03-14.md",
+        "RECUPERACAO-DIRETO-EDUARDO.md",
+        "RECUPERACAO-ESPECIALISTAS-DIRETO.md",
+        "RECUPERACAO-ESPECIALISTAS-GOSPIA.md",
+        "RECUPERACAO-GOSPIA.md",
+        "relatorio-memoria-evermind-vs-tita.md",
+        "research-2026-03-14.md",
+        "research-memory-2026-03-15.md"
+      ],
+      "first_seen": "LESSONS.md",
+      "last_seen": "research-memory-2026-03-15.md"
+    },
+    "deploy": {
+      "type": "concept",
+      "mentions": 68,
+      "sources": [
+        "LESSONS.md",
+        "2025-02-12.md",
+        "2025-02-20.md",
+        "2026-02-05.md",
+        "2026-02-06.md",
+        "2026-02-11.md",
+        "2026-02-13.md",
+        "2026-02-19.md",
+        "2026-02-26.md",
+        "2026-03-02.md",
+        "2026-03-04.md",
+        "2026-03-05.md",
+        "2026-03-11.md",
+        "2026-03-15.md",
+        "2026-03-21.md",
+        "2026-03-22.md",
+        "2026-03-23.md",
+        "debug-full-test-2026-03-28.md",
+        "debug-report-memory-engine-2026-03-28.md",
+        "gospia-guia-master.md",
+        "gospia-study.md",
+        "HELBER-TIAGO-SETUP.md",
+        "ios-research-2026-03-14.md",
+        "memory-index.md",
+        "network-map.md",
+        "network-study-2026-03-14.md",
+        "RECUPERACAO-DIRETO-EDUARDO.md",
+        "research-2026-03-14.md",
+        "research-agents-free-2026-03-15.md",
+        "research-memory-2026-03-15.md"
+      ],
+      "first_seen": "LESSONS.md",
+      "last_seen": "research-memory-2026-03-15.md"
+    },
+    "Gospia": {
+      "type": "project",
+      "mentions": 142,
+      "sources": [
+        "LESSONS.md",
+        "2025-02-12.md",
+        "2026-02-06.md",
+        "2026-02-11.md",
+        "2026-02-13.md",
+        "2026-02-24.md",
+        "2026-02-26.md",
+        "2026-02-27.md",
+        "2026-02-28.md",
+        "2026-03-01.md",
+        "2026-03-02.md",
+        "2026-03-11.md",
+        "2026-03-12.md",
+        "2026-03-14.md",
+        "2026-03-15.md",
+        "2026-03-16.md",
+        "2026-03-17.md",
+        "2026-03-18.md",
+        "2026-03-20.md",
+        "2026-03-21.md",
+        "2026-03-23.md",
+        "2026-03-26.md",
+        "2026-03-27.md",
+        "debug-report-memory-engine-2026-03-28.md",
+        "gospia-guia-master.md",
+        "gospia-study.md",
+        "memory-index.md",
+        "RECUPERACAO-DIRETO-EDUARDO.md",
+        "RECUPERACAO-ESPECIALISTAS-DIRETO.md",
+        "RECUPERACAO-ESPECIALISTAS-GOSPIA.md",
+        "RECUPERACAO-GOSPIA.md",
+        "REGRA-ENVIO-MD-WHATSAPP.md",
+        "research-2026-03-14.md",
+        "research-agents-free-2026-03-15.md"
+      ],
+      "first_seen": "LESSONS.md",
+      "last_seen": "research-agents-free-2026-03-15.md"
+    },
+    "Zica": {
+      "type": "people",
+      "mentions": 87,
+      "sources": [
+        "2025-02-12.md",
+        "2026-02-13.md",
+        "2026-02-22.md",
+        "2026-02-24.md",
+        "2026-02-25.md",
+        "2026-02-26.md",
+        "2026-02-27.md",
+        "2026-03-02.md",
+        "2026-03-04.md",
+        "2026-03-11.md",
+        "2026-03-15.md",
+        "2026-03-16.md",
+        "2026-03-17.md",
+        "2026-03-20.md",
+        "2026-03-21.md",
+        "2026-03-22.md",
+        "2026-03-23.md",
+        "2026-03-26.md",
+        "2026-03-27.md",
+        "debug-full-test-2026-03-28.md",
+        "debug-report-memory-engine-2026-03-28.md",
+        "LICAO-CRITICA-MD-ENVIO.md",
+        "LIÇÃO-CRÍTICA-2026-03-22.md",
+        "RECUPERACAO-ESPECIALISTAS-DIRETO.md",
+        "RECUPERACAO-ESPECIALISTAS-GOSPIA.md",
+        "RECUPERACAO-GOSPIA.md",
+        "REGRA-ENVIO-MD-WHATSAPP.md",
+        "relatorio-memoria-evermind-vs-tita.md",
+        "research-2026-03-14.md"
+      ],
+      "first_seen": "2025-02-12.md",
+      "last_seen": "research-2026-03-14.md"
+    },
+    "KidsHQ": {
+      "type": "project",
+      "mentions": 59,
+      "sources": [
+        "2025-02-20.md",
+        "2026-02-24.md",
+        "2026-02-26.md",
+        "2026-02-27.md",
+        "2026-02-28.md",
+        "2026-03-01.md",
+        "2026-03-02.md",
+        "2026-03-05.md",
+        "2026-03-11.md",
+        "2026-03-12.md",
+        "2026-03-14.md",
+        "2026-03-15.md",
+        "2026-03-20.md",
+        "memory-index.md",
+        "RECUPERACAO-DIRETO-EDUARDO.md",
+        "RECUPERACAO-ESPECIALISTAS-DIRETO.md",
+        "research-2026-03-14.md"
+      ],
+      "first_seen": "2025-02-20.md",
+      "last_seen": "research-2026-03-14.md"
+    },
+    "Tiago": {
+      "type": "people",
+      "mentions": 85,
+      "sources": [
+        "2026-02-03.md",
+        "2026-02-26.md",
+        "2026-03-12.md",
+        "2026-03-14.md",
+        "2026-03-15.md",
+        "2026-03-16.md",
+        "2026-03-18.md",
+        "2026-03-22.md",
+        "2026-03-23.md",
+        "2026-03-26.md",
+        "2026-03-27.md",
+        "USER.md",
+        "debug-report-memory-engine-2026-03-28.md",
+        "HELBER-TIAGO-SETUP.md",
+        "memory-index.md",
+        "network-map.md",
+        "RECUPERACAO-DIRETO-EDUARDO.md",
+        "RECUPERACAO-ESPECIALISTAS-DIRETO.md",
+        "RECUPERACAO-ESPECIALISTAS-GOSPIA.md",
+        "RECUPERACAO-GOSPIA.md",
+        "research-2026-03-14.md",
+        "research-agents-free-2026-03-15.md"
+      ],
+      "first_seen": "2026-02-03.md",
+      "last_seen": "research-agents-free-2026-03-15.md"
+    },
+    "Caio": {
+      "type": "people",
+      "mentions": 2,
+      "sources": [
+        "2026-02-03.md",
+        "USER.md"
+      ],
+      "first_seen": "2026-02-03.md",
+      "last_seen": "USER.md"
+    },
+    "Maricá Film Commission": {
+      "type": "project",
+      "mentions": 18,
+      "sources": [
+        "2026-02-03.md",
+        "2026-02-04.md",
+        "2026-02-05.md",
+        "2026-02-06.md",
+        "2026-02-09.md",
+        "2026-02-10.md",
+        "2026-02-13.md",
+        "2026-02-25.md",
+        "2026-02-26.md",
+        "2026-03-02.md",
+        "2026-03-06.md",
+        "2026-03-09.md",
+        "USER.md",
+        "marica-locations-fix.md",
+        "marica-verification.md"
+      ],
+      "first_seen": "2026-02-03.md",
+      "last_seen": "marica-verification.md"
+    },
+    "cron": {
+      "type": "concept",
+      "mentions": 88,
+      "sources": [
+        "2026-02-03.md",
+        "2026-02-11.md",
+        "2026-02-26.md",
+        "2026-02-27.md",
+        "2026-02-28.md",
+        "2026-03-01.md",
+        "2026-03-02.md",
+        "2026-03-09.md",
+        "2026-03-10.md",
+        "2026-03-18.md",
+        "2026-03-20.md",
+        "2026-03-22.md",
+        "2026-03-23.md",
+        "HELBER-TIAGO-SETUP.md",
+        "RECUPERACAO-DIRETO-EDUARDO.md",
+        "RECUPERACAO-ESPECIALISTAS-DIRETO.md",
+        "RECUPERACAO-ESPECIALISTAS-GOSPIA.md",
+        "RECUPERACAO-GOSPIA.md",
+        "research-2026-03-14.md",
+        "research-agents-free-2026-03-15.md",
+        "research-memory-2026-03-15.md",
+        "research-security-2026-03-15.md"
+      ],
+      "first_seen": "2026-02-03.md",
+      "last_seen": "research-security-2026-03-15.md"
+    },
+    "watchdog": {
+      "type": "concept",
+      "mentions": 94,
+      "sources": [
+        "2026-02-04.md",
+        "2026-02-05.md",
+        "2026-02-06.md",
+        "2026-02-10.md",
+        "2026-02-12.md",
+        "2026-02-13.md",
+        "2026-02-14.md",
+        "2026-02-19.md",
+        "2026-02-21.md",
+        "2026-02-24.md",
+        "2026-02-28.md",
+        "2026-03-01.md",
+        "2026-03-02.md",
+        "2026-03-03.md",
+        "2026-03-04.md",
+        "2026-03-05.md",
+        "2026-03-06.md",
+        "2026-03-09.md",
+        "2026-03-10.md",
+        "2026-03-11.md",
+        "2026-03-14.md",
+        "2026-03-18.md",
+        "2026-03-19.md",
+        "2026-03-20.md",
+        "2026-03-21.md",
+        "2026-03-22-ram-warning.md",
+        "2026-03-22.md",
+        "HELBER-TIAGO-SETUP.md",
+        "RECUPERACAO-DIRETO-EDUARDO.md",
+        "RECUPERACAO-GOSPIA.md",
+        "relatorio-memoria-evermind-vs-tita.md",
+        "research-agents-free-2026-03-15.md",
+        "research-security-2026-03-15.md"
+      ],
+      "first_seen": "2026-02-04.md",
+      "last_seen": "research-security-2026-03-15.md"
+    },
+    "RAG": {
+      "type": "concept",
+      "mentions": 49,
+      "sources": [
+        "2026-02-05.md",
+        "2026-02-09.md",
+        "2026-02-10.md",
+        "2026-02-20.md",
+        "2026-02-28.md",
+        "2026-03-14.md",
+        "2026-03-26.md",
+        "gospia-guia-master.md",
+        "gospia-study.md",
+        "HELBER-TIAGO-SETUP.md",
+        "ios-research-2026-03-14.md",
+        "RECUPERACAO-DIRETO-EDUARDO.md",
+        "RECUPERACAO-ESPECIALISTAS-DIRETO.md",
+        "RECUPERACAO-GOSPIA.md",
+        "relatorio-memoria-evermind-vs-tita.md",
+        "research-2026-03-14.md",
+        "research-memory-2026-03-15.md"
+      ],
+      "first_seen": "2026-02-05.md",
+      "last_seen": "research-memory-2026-03-15.md"
+    },
+    "Tita Nio": {
+      "type": "project",
+      "mentions": 2,
+      "sources": [
+        "2026-02-05.md",
+        "USER.md"
+      ],
+      "first_seen": "2026-02-05.md",
+      "last_seen": "USER.md"
+    },
+    "Dashboard": {
+      "type": "project",
+      "mentions": 146,
+      "sources": [
+        "2026-02-13.md",
+        "2026-02-26.md",
+        "2026-03-11.md",
+        "2026-03-12.md",
+        "2026-03-14.md",
+        "2026-03-15.md",
+        "2026-03-16.md",
+        "2026-03-19.md",
+        "2026-03-20.md",
+        "2026-03-22.md",
+        "2026-03-23.md",
+        "2026-03-26.md",
+        "2026-03-27.md",
+        "debug-full-test-2026-03-28.md",
+        "debug-report-memory-engine-2026-03-28.md",
+        "HELBER-TIAGO-SETUP.md",
+        "ios-research-2026-03-14.md",
+        "memory-index.md",
+        "network-map.md",
+        "RECUPERACAO-DIRETO-EDUARDO.md",
+        "RECUPERACAO-ESPECIALISTAS-DIRETO.md",
+        "RECUPERACAO-ESPECIALISTAS-GOSPIA.md",
+        "RECUPERACAO-GOSPIA.md",
+        "research-2026-03-14.md",
+        "research-agents-free-2026-03-15.md",
+        "research-memory-2026-03-15.md",
+        "research-money-2026-03-15.md",
+        "research-security-2026-03-15.md"
+      ],
+      "first_seen": "2026-02-13.md",
+      "last_seen": "research-security-2026-03-15.md"
+    },
+    "Telegram": {
+      "type": "concept",
+      "mentions": 5,
+      "sources": [
+        "2026-03-09.md",
+        "research-money-2026-03-15.md"
+      ],
+      "first_seen": "2026-03-09.md",
+      "last_seen": "research-money-2026-03-15.md"
+    },
+    "Victor Capital": {
+      "type": "project",
+      "mentions": 5,
+      "sources": [
+        "2026-03-20.md",
+        "RECUPERACAO-ESPECIALISTAS-DIRETO.md",
+        "RECUPERACAO-ESPECIALISTAS-GOSPIA.md"
+      ],
+      "first_seen": "2026-03-20.md",
+      "last_seen": "RECUPERACAO-ESPECIALISTAS-GOSPIA.md"
+    },
+    "embeddings": {
+      "type": "concept",
+      "mentions": 13,
+      "sources": [
+        "debug-full-test-2026-03-28.md",
+        "debug-hunter-full-test-2026-03-28.md",
+        "debug-report-memory-engine-2026-03-28.md",
+        "relatorio-memoria-evermind-vs-tita.md",
+        "research-agents-free-2026-03-15.md",
+        "research-memory-2026-03-15.md"
+      ],
+      "first_seen": "debug-full-test-2026-03-28.md",
+      "last_seen": "research-memory-2026-03-15.md"
+    },
+    "Discord": {
+      "type": "concept",
+      "mentions": 1,
+      "sources": [
+        "ios-research-2026-03-14.md"
+      ],
+      "first_seen": "ios-research-2026-03-14.md",
+      "last_seen": "ios-research-2026-03-14.md"
+    }
+  },
+  "edges": [
+    {
+      "source": "Tita",
+      "target": "Titanio",
+      "weight": 156,
+      "contexts": [
+        "Projetos — status (atualizado 28/03/2026)",
+        "🏆 Manda a Nota — Produto Principal (10/03/2026)",
+        "Rosário 47 - Campanha Política (Deploy Completo!)"
+      ]
+    },
+    {
+      "source": "Dashboard",
+      "target": "Tita",
+      "weight": 84,
+      "contexts": [
+        "2026-03-11 19:48 - Titanio Dashboard Development Guide",
+        "2026-03-12 — Titanio Dashboard v2.1 Finalizada",
+        "Sessão 12:27 — N8n + Squad + GitHub Memory"
+      ]
+    },
+    {
+      "source": "Eduardo",
+      "target": "Tita",
+      "weight": 74,
+      "contexts": [
+        "LESSONS.md — O que a Tita Aprendeu",
+        "Quem sou",
+        "Problema do Site Maricá Film Commission - RESOLVIDO ✅"
+      ]
+    },
+    {
+      "source": "Elber",
+      "target": "Helber",
+      "weight": 69,
+      "contexts": [
+        "Quem sou eu",
+        "Helber — meu comandante",
+        "Lições aprendidas"
+      ]
+    },
+    {
+      "source": "API",
+      "target": "Tita",
+      "weight": 67,
+      "contexts": [
+        "🏆 Manda a Nota — Produto Principal (10/03/2026)",
+        "Technical Notes",
+        "~13:00 — Grupo Gospia"
+      ]
+    },
+    {
+      "source": "OpenClaw",
+      "target": "Tita",
+      "weight": 65,
+      "contexts": [
+        "Rosário 47 - Campanha Política (Deploy Completo!)",
+        "Quem sou",
+        "Maricá Film Commission - Static Site Mirror Created"
+      ]
+    },
+    {
+      "source": "Tita",
+      "target": "memória",
+      "weight": 61,
+      "contexts": [
+        "~18:00 — Flush de Memória Persistente",
+        "~21:00 — Flush de Memória #2",
+        "03:00 — Flush de memória persistente (cron)"
+      ]
+    },
+    {
+      "source": "Dashboard",
+      "target": "Titanio",
+      "weight": 61,
+      "contexts": [
+        "2026-03-11 19:48 - Titanio Dashboard Development Guide",
+        "2026-03-12 — Titanio Dashboard v2.1 Finalizada",
+        "Sessão 12:27 — N8n + Squad + GitHub Memory"
+      ]
+    },
+    {
+      "source": "Elber",
+      "target": "Tiago",
+      "weight": 56,
+      "contexts": [
+        "Equipe",
+        "2026-03-12 — Titanio Dashboard v2.1 Finalizada",
+        "2026-03-12 — Final do Dia"
+      ]
+    },
+    {
+      "source": "Helber",
+      "target": "Tiago",
+      "weight": 54,
+      "contexts": [
+        "2026-03-12 — Titanio Dashboard v2.1 Finalizada",
+        "2026-03-12 — Final do Dia",
+        "Sessão 12:27 — N8n + Squad + GitHub Memory"
+      ]
+    },
+    {
+      "source": "Gospia",
+      "target": "iOS",
+      "weight": 53,
+      "contexts": [
+        "14:00–15:00 — Gospia Mobile App: Rádio Gospia 📻",
+        "20:30 — Gospia Mobile App: Rádio + Voice Mode 🎤📻",
+        "2026-03-11 19:48 - Titanio Dashboard Development Guide"
+      ]
+    },
+    {
+      "source": "Tiago",
+      "target": "Tita",
+      "weight": 51,
+      "contexts": [
+        "15:45 — Operação KiteMe v3.5 Iniciada",
+        "2026-03-12 — Titanio Dashboard v2.1 Finalizada",
+        "Sessão 12:27 — N8n + Squad + GitHub Memory"
+      ]
+    },
+    {
+      "source": "Tita",
+      "target": "iOS",
+      "weight": 46,
+      "contexts": [
+        "Projetos — status (atualizado 28/03/2026)",
+        "O que fizemos hoje",
+        "13:45-14:10 - Projeto Guardião Digital CRIADO! 🛡️"
+      ]
+    },
+    {
+      "source": "Gospia",
+      "target": "Tita",
+      "weight": 46,
+      "contexts": [
+        "Rosário 47 - Campanha Política (Deploy Completo!)",
+        "App Titanio 47 - Build Android (17:00-18:45)",
+        "~13:00 — Grupo Gospia"
+      ]
+    },
+    {
+      "source": "Elber",
+      "target": "Tita",
+      "weight": 42,
+      "contexts": [
+        "Configuração de Domínio Pendente",
+        "2026-03-12 — Titanio Dashboard v2.1 Finalizada",
+        "Sessão 12:27 — N8n + Squad + GitHub Memory"
+      ]
+    },
+    {
+      "source": "Helber",
+      "target": "Tita",
+      "weight": 41,
+      "contexts": [
+        "Configuração de Domínio Pendente",
+        "2026-03-12 — Titanio Dashboard v2.1 Finalizada",
+        "Sessão 12:27 — N8n + Squad + GitHub Memory"
+      ]
+    },
+    {
+      "source": "API",
+      "target": "iOS",
+      "weight": 40,
+      "contexts": [
+        "Conhecimento: NFS-e e Tributação (06/03/2026)",
+        "🏆 Manda a Nota — Produto Principal (10/03/2026)",
+        "13:45-14:10 - Projeto Guardião Digital CRIADO! 🛡️"
+      ]
+    },
+    {
+      "source": "Eduardo",
+      "target": "memória",
+      "weight": 40,
+      "contexts": [
+        "06:00 — Flush de memória persistente (cron)",
+        "21:03 — Flush de memória persistente #7 (cron)",
+        "09:03 — Flush de memória persistente #4 (cron)"
+      ]
+    },
+    {
+      "source": "API",
+      "target": "Titanio",
+      "weight": 39,
+      "contexts": [
+        "🏆 Manda a Nota — Produto Principal (10/03/2026)",
+        "Technical Notes",
+        "16:00 — KiteMe v3.5 Finalizado"
+      ]
+    },
+    {
+      "source": "API",
+      "target": "Dashboard",
+      "weight": 39,
+      "contexts": [
+        "16:15-16:45 — KiteMe Backend Fixes & Deploy Attempts",
+        "2026-03-12 — Titanio Dashboard v2.1 Finalizada",
+        "2026-03-12 — Atualizações da Tarde"
+      ]
+    },
+    {
+      "source": "Eduardo",
+      "target": "Gospia",
+      "weight": 33,
+      "contexts": [
+        "App Titanio 47 - Build Android (17:00-18:45)",
+        "Grupo WhatsApp \"Gospia\" ✅",
+        "14:00–15:00 — Gospia Mobile App: Rádio Gospia 📻"
+      ]
+    },
+    {
+      "source": "Dashboard",
+      "target": "Eduardo",
+      "weight": 33,
+      "contexts": [
+        "16:00 — KiteMe v3.5 Finalizado",
+        "16:15-16:45 — KiteMe Backend Fixes & Deploy Attempts",
+        "2026-03-16 — Sessão da manhã com Zica/Eduardo"
+      ]
+    },
+    {
+      "source": "Titanio",
+      "target": "iOS",
+      "weight": 32,
+      "contexts": [
+        "Projetos — status (atualizado 28/03/2026)",
+        "O que fizemos hoje",
+        "16:00 — KiteMe v3.5 Finalizado"
+      ]
+    },
+    {
+      "source": "cron",
+      "target": "memória",
+      "weight": 32,
+      "contexts": [
+        "03:00 — Flush de memória persistente (cron)",
+        "06:00 — Flush de memória persistente (cron)",
+        "09:00 — Flush de memória persistente (cron)"
+      ]
+    },
+    {
+      "source": "Tita",
+      "target": "Zica",
+      "weight": 31,
+      "contexts": [
+        "Rosário 47 - Campanha Política (Deploy Completo!)",
+        "~13:00 — Grupo Gospia",
+        "03:00 — Flush de memória persistente (cron)"
+      ]
+    },
+    {
+      "source": "API",
+      "target": "Google",
+      "weight": 31,
+      "contexts": [
+        "Rosário 47 - Grandes Avanços Hoje",
+        "~13:00 — Grupo Gospia",
+        "Maricá Film Commission - Correções de fotos e vídeos"
+      ]
+    },
+    {
+      "source": "Tita",
+      "target": "cron",
+      "weight": 31,
+      "contexts": [
+        "03:00 — Flush de memória persistente (cron)",
+        "09:00 — Flush de memória persistente (cron)",
+        "15:00 — Flush de memória persistente (cron)"
+      ]
+    },
+    {
+      "source": "API",
+      "target": "OpenClaw",
+      "weight": 30,
+      "contexts": [
+        "🔴 Regras Críticas (aprendidas na marra)",
+        "~13:00 — Grupo Gospia",
+        "Moonshot/Kimi Setup"
+      ]
+    },
+    {
+      "source": "Eduardo",
+      "target": "cron",
+      "weight": 30,
+      "contexts": [
+        "16:15-16:45 — KiteMe Backend Fixes & Deploy Attempts",
+        "06:00 — Flush de memória persistente (cron)",
+        "21:03 — Flush de memória persistente #7 (cron)"
+      ]
+    },
+    {
+      "source": "Eduardo",
+      "target": "OpenClaw",
+      "weight": 29,
+      "contexts": [
+        "Quem sou",
+        "App Chat Político - Desenvolvimento (16:48)",
+        "Blender - Modelagem 3D"
+      ]
+    },
+    {
+      "source": "Eduardo",
+      "target": "iOS",
+      "weight": 28,
+      "contexts": [
+        "Equipe",
+        "Problema do Site Maricá Film Commission - RESOLVIDO ✅",
+        "📚 PESQUISA REAL - Hyper Casual Games (16:10-16:30)"
+      ]
+    },
+    {
+      "source": "Eduardo",
+      "target": "Titanio",
+      "weight": 28,
+      "contexts": [
+        "Problema do Site Maricá Film Commission - RESOLVIDO ✅",
+        "App Titanio 47 - Build Android (17:00-18:45)",
+        "Unity - INSTALADO E CONFIGURADO"
+      ]
+    },
+    {
+      "source": "Tita",
+      "target": "WhatsApp",
+      "weight": 27,
+      "contexts": [
+        "Rosário 47 - Campanha Política (Deploy Completo!)",
+        "Quem sou",
+        "Maricá Film Commission - Static Site Mirror Created"
+      ]
+    },
+    {
+      "source": "API",
+      "target": "Gospia",
+      "weight": 27,
+      "contexts": [
+        "~13:00 — Grupo Gospia",
+        "08:50 — KidsHQ URL Fix (via Gospia)",
+        "Sessão Gospia - Build e Deploy Play Store (tarde)"
+      ]
+    },
+    {
+      "source": "Dashboard",
+      "target": "OpenClaw",
+      "weight": 27,
+      "contexts": [
+        "2026-03-12 — Titanio Dashboard v2.1 Finalizada",
+        "Sessão 12:27 — N8n + Squad + GitHub Memory",
+        "2026-03-16 — Sessão da manhã com Zica/Eduardo"
+      ]
+    },
+    {
+      "source": "Dashboard",
+      "target": "Tiago",
+      "weight": 27,
+      "contexts": [
+        "2026-03-12 — Titanio Dashboard v2.1 Finalizada",
+        "2026-03-16 — Sessão da manhã com Zica/Eduardo",
+        "🎯 PROMESSAS CUMPRIDAS HOJE"
+      ]
+    },
+    {
+      "source": "Gospia",
+      "target": "Zica",
+      "weight": 26,
+      "contexts": [
+        "Rosário 47 - Campanha Política (Deploy Completo!)",
+        "Context:",
+        "~13:00 — Grupo Gospia"
+      ]
+    },
+    {
+      "source": "Eduardo",
+      "target": "Tiago",
+      "weight": 26,
+      "contexts": [
+        "Equipe",
+        "15:45 — Operação KiteMe v3.5 Iniciada",
+        "2026-03-16 — Sessão da manhã com Zica/Eduardo"
+      ]
+    },
+    {
+      "source": "Eduardo",
+      "target": "Zica",
+      "weight": 26,
+      "contexts": [
+        "06:00 — Flush de memória persistente (cron)",
+        "21:03 — Flush de memória persistente #7 (cron)",
+        "2026-03-16 — Sessão da manhã com Zica/Eduardo"
+      ]
+    },
+    {
+      "source": "Gospia",
+      "target": "KidsHQ",
+      "weight": 26,
+      "contexts": [
+        "08:50 — KidsHQ URL Fix (via Gospia)",
+        "21:03 — Flush de memória persistente #7 (cron)",
+        "09:03 — Flush de memória persistente #4 (cron)"
+      ]
+    },
+    {
+      "source": "Dashboard",
+      "target": "memória",
+      "weight": 26,
+      "contexts": [
+        "Dashboard 2.0 — Sessão Completa",
+        "Atualização 16:41 — Sessão tarde",
+        "🔄 SISTEMA DE MEMÓRIA COMPARTILHADA — 12:05 BRT"
+      ]
+    },
+    {
+      "source": "Gospia",
+      "target": "Titanio",
+      "weight": 24,
+      "contexts": [
+        "Rosário 47 - Campanha Política (Deploy Completo!)",
+        "App Titanio 47 - Build Android (17:00-18:45)",
+        "20:30 — Gospia Mobile App: Rádio + Voice Mode 🎤📻"
+      ]
+    },
+    {
+      "source": "KidsHQ",
+      "target": "Tita",
+      "weight": 24,
+      "contexts": [
+        "Web Pages Deployadas no Railway",
+        "Configuração de Domínio Pendente",
+        "~18:30 — KidsHQ Kids Build"
+      ]
+    },
+    {
+      "source": "Dashboard",
+      "target": "iOS",
+      "weight": 24,
+      "contexts": [
+        "13:45-14:10 - Projeto Guardião Digital CRIADO! 🛡️",
+        "Sessão Tarde (17:30–19:18 São Paulo) — Correções N8n + Dashb",
+        "Detalhes por Módulo"
+      ]
+    },
+    {
+      "source": "Tita",
+      "target": "backup",
+      "weight": 24,
+      "contexts": [
+        "Operação 2.0 - Major Progress",
+        "~18:30 — KidsHQ Kids Build",
+        "15:45 — Operação KiteMe v3.5 Iniciada"
+      ]
+    },
+    {
+      "source": "Tiago",
+      "target": "Titanio",
+      "weight": 24,
+      "contexts": [
+        "2026-03-12 — Titanio Dashboard v2.1 Finalizada",
+        "2026-03-16 — Sessão da manhã com Zica/Eduardo",
+        "🎰 Polymarket Trading Bot — Setup Completo"
+      ]
+    },
+    {
+      "source": "OpenClaw",
+      "target": "Titanio",
+      "weight": 23,
+      "contexts": [
+        "App Titanio 47 - Build Android (17:00-18:45)",
+        "Unity - INSTALADO E CONFIGURADO",
+        "2026-03-12 — Titanio Dashboard v2.1 Finalizada"
+      ]
+    },
+    {
+      "source": "cron",
+      "target": "watchdog",
+      "weight": 23,
+      "contexts": [
+        "21:03 — Flush de memória persistente #8 (cron)",
+        "18:03 — Flush de memória persistente #7 (cron)",
+        "15:03 — Flush de memória persistente #6 (cron)"
+      ]
+    },
+    {
+      "source": "Tita",
+      "target": "deploy",
+      "weight": 22,
+      "contexts": [
+        "LESSONS.md — O que a Tita Aprendeu",
+        "Rosário 47 - Campanha Política (Deploy Completo!)",
+        "Web Pages Deployadas no Railway"
+      ]
+    },
+    {
+      "source": "Eduardo",
+      "target": "WhatsApp",
+      "weight": 22,
+      "contexts": [
+        "🟡 Preferências do Eduardo",
+        "Quem sou",
+        "Resumo do Dia"
+      ]
+    },
+    {
+      "source": "Dashboard",
+      "target": "Helber",
+      "weight": 22,
+      "contexts": [
+        "2026-03-12 — Titanio Dashboard v2.1 Finalizada",
+        "2026-03-16 — Sessão da manhã com Zica/Eduardo",
+        "🎯 PROMESSAS CUMPRIDAS HOJE"
+      ]
+    },
+    {
+      "source": "Dashboard",
+      "target": "Elber",
+      "weight": 22,
+      "contexts": [
+        "2026-03-12 — Titanio Dashboard v2.1 Finalizada",
+        "2026-03-16 — Sessão da manhã com Zica/Eduardo",
+        "🎯 PROMESSAS CUMPRIDAS HOJE"
+      ]
+    },
+    {
+      "source": "Apple",
+      "target": "iOS",
+      "weight": 21,
+      "contexts": [
+        "Projetos — status (atualizado 28/03/2026)",
+        "Próximos passos (última atualização: 23/03/2026)",
+        "Sessão 13:30 — Tita Learning System Implementado"
+      ]
+    },
+    {
+      "source": "Gospia",
+      "target": "WhatsApp",
+      "weight": 21,
+      "contexts": [
+        "📚 Lições por Data",
+        "Rosário 47 - Campanha Política (Deploy Completo!)",
+        "Grupo WhatsApp \"Gospia\" ✅"
+      ]
+    },
+    {
+      "source": "Eduardo",
+      "target": "Elber",
+      "weight": 21,
+      "contexts": [
+        "Equipe",
+        "2026-03-16 — Sessão da manhã com Zica/Eduardo",
+        "Sessão da tarde (15h–16h30)"
+      ]
+    },
+    {
+      "source": "Eduardo",
+      "target": "watchdog",
+      "weight": 21,
+      "contexts": [
+        "~07:00 — Relatório Matinal Maricá",
+        "21:03 — Flush de memória persistente #8 (cron)",
+        "18:03 — Flush de memória persistente #7 (cron)"
+      ]
+    },
+    {
+      "source": "API",
+      "target": "memória",
+      "weight": 21,
+      "contexts": [
+        "Sessão 12:27 — N8n + Squad + GitHub Memory",
+        "Dashboard 2.0 — Sessão Completa",
+        "Atualização 16:41 — Sessão tarde"
+      ]
+    },
+    {
+      "source": "OpenClaw",
+      "target": "WhatsApp",
+      "weight": 20,
+      "contexts": [
+        "📅 28/03/2026 — Memory Engine v2",
+        "🔴 Regras Críticas (aprendidas na marra)",
+        "Quem sou"
+      ]
+    },
+    {
+      "source": "API",
+      "target": "Eduardo",
+      "weight": 20,
+      "contexts": [
+        "O que fizemos hoje",
+        "13:45-14:10 - Projeto Guardião Digital CRIADO! 🛡️",
+        "15:45 — Operação KiteMe v3.5 Iniciada"
+      ]
+    },
+    {
+      "source": "Tita",
+      "target": "watchdog",
+      "weight": 20,
+      "contexts": [
+        "~00:15 — Heartbeat Check",
+        "03:03 — Flush de memória persistente #2 (cron)",
+        "19:31 — Heartbeat Alert"
+      ]
+    },
+    {
+      "source": "Eduardo",
+      "target": "Helber",
+      "weight": 20,
+      "contexts": [
+        "2026-03-16 — Sessão da manhã com Zica/Eduardo",
+        "Sessão da tarde (15h–16h30)",
+        "🖥️ Infraestrutura de Rede (Cluster Titanio)"
+      ]
+    },
+    {
+      "source": "Eduardo",
+      "target": "deploy",
+      "weight": 19,
+      "contexts": [
+        "LESSONS.md — O que a Tita Aprendeu",
+        "App Chat Político - Desenvolvimento (16:48)",
+        "KiteSurf Brasil App - COMPLETO! 🏄‍♂️"
+      ]
+    },
+    {
+      "source": "API",
+      "target": "WhatsApp",
+      "weight": 19,
+      "contexts": [
+        "🔴 Regras Críticas (aprendidas na marra)",
+        "13:45-14:10 - Projeto Guardião Digital CRIADO! 🛡️",
+        "Sessão 12:27 — N8n + Squad + GitHub Memory"
+      ]
+    },
+    {
+      "source": "Google",
+      "target": "Tita",
+      "weight": 19,
+      "contexts": [
+        "O que fizemos hoje",
+        "Cloudflare Setup para maricafilmcommission.com (15:45)",
+        "Problema do Site Maricá Film Commission - RESOLVIDO ✅"
+      ]
+    },
+    {
+      "source": "Eduardo",
+      "target": "Play Store",
+      "weight": 19,
+      "contexts": [
+        "Next Steps",
+        "21:03 — Flush de memória persistente #7 (cron)",
+        "09:03 — Flush de memória persistente #4 (cron)"
+      ]
+    },
+    {
+      "source": "Eduardo",
+      "target": "KidsHQ",
+      "weight": 19,
+      "contexts": [
+        "~18:30 — KidsHQ Kids Build",
+        "16:15-16:45 — KiteMe Backend Fixes & Deploy Attempts",
+        "21:03 — Flush de memória persistente #7 (cron)"
+      ]
+    },
+    {
+      "source": "Gospia",
+      "target": "Play Store",
+      "weight": 19,
+      "contexts": [
+        "00:02 — Gospia Session Fix (27/02)",
+        "03:00 — Flush de memória persistente (cron)",
+        "15:00 — Flush de memória persistente (cron)"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "target": "memória",
+      "weight": 19,
+      "contexts": [
+        "03:00 — Flush de memória persistente (cron)",
+        "09:00 — Flush de memória persistente (cron)",
+        "15:00 — Flush de memória persistente (cron)"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "target": "cron",
+      "weight": 19,
+      "contexts": [
+        "03:00 — Flush de memória persistente (cron)",
+        "09:00 — Flush de memória persistente (cron)",
+        "15:00 — Flush de memória persistente (cron)"
+      ]
+    },
+    {
+      "source": "memória",
+      "target": "watchdog",
+      "weight": 19,
+      "contexts": [
+        "21:03 — Flush de memória persistente #8 (cron)",
+        "18:03 — Flush de memória persistente #7 (cron)",
+        "15:03 — Flush de memória persistente #6 (cron)"
+      ]
+    },
+    {
+      "source": "WhatsApp",
+      "target": "iOS",
+      "weight": 18,
+      "contexts": [
+        "Helber — meu comandante",
+        "13:45-14:10 - Projeto Guardião Digital CRIADO! 🛡️",
+        "KiteSurf Brasil App - COMPLETO! 🏄‍♂️"
+      ]
+    },
+    {
+      "source": "OpenClaw",
+      "target": "memória",
+      "weight": 18,
+      "contexts": [
+        "📅 28/03/2026 — Memory Engine v2",
+        "Sessão 12:27 — N8n + Squad + GitHub Memory",
+        "Sessão 13:30 — Tita Learning System Implementado"
+      ]
+    },
+    {
+      "source": "Gospia",
+      "target": "OpenClaw",
+      "weight": 18,
+      "contexts": [
+        "Grupo WhatsApp \"Gospia\" ✅",
+        "~13:00 — Grupo Gospia",
+        "12:00–17:00 — Tarde de segunda-feira"
+      ]
+    },
+    {
+      "source": "KidsHQ",
+      "target": "iOS",
+      "weight": 18,
+      "contexts": [
+        "16:15-16:45 — KiteMe Backend Fixes & Deploy Attempts",
+        "2026-03-12 — Final do Dia",
+        "Sessão 13:30 — Tita Learning System Implementado"
+      ]
+    },
+    {
+      "source": "OpenClaw",
+      "target": "iOS",
+      "weight": 18,
+      "contexts": [
+        "Sessão da tarde (15h–16h30)",
+        "Atividades do Dia",
+        "Atualização 16:41 — Sessão tarde"
+      ]
+    },
+    {
+      "source": "Apple",
+      "target": "Tita",
+      "weight": 17,
+      "contexts": [
+        "Projetos — status (atualizado 28/03/2026)",
+        "Sessão tarde 16/03/2026 — Gospia iOS App Store",
+        "Gospia — App Store Submit"
+      ]
+    },
+    {
+      "source": "Google",
+      "target": "iOS",
+      "weight": 17,
+      "contexts": [
+        "O que fizemos hoje",
+        "Sessão 13:30 — Tita Learning System Implementado",
+        "Atualização 16:41 — Sessão tarde"
+      ]
+    },
+    {
+      "source": "OpenClaw",
+      "target": "Tiago",
+      "weight": 17,
+      "contexts": [
+        "Sessão 12:27 — N8n + Squad + GitHub Memory",
+        "2026-03-16 — Sessão da manhã com Zica/Eduardo",
+        "Sessão da tarde (15h–16h30)"
+      ]
+    },
+    {
+      "source": "iOS",
+      "target": "memória",
+      "weight": 17,
+      "contexts": [
+        "Sessão 13:30 — Tita Learning System Implementado",
+        "Dashboard 2.0 — Sessão Completa",
+        "Detalhes por Módulo"
+      ]
+    },
+    {
+      "source": "Android",
+      "target": "iOS",
+      "weight": 16,
+      "contexts": [
+        "Projetos — status (atualizado 28/03/2026)",
+        "13:45-14:10 - Projeto Guardião Digital CRIADO! 🛡️",
+        "KiteSurf Brasil App - COMPLETO! 🏄‍♂️"
+      ]
+    },
+    {
+      "source": "App Store",
+      "target": "iOS",
+      "weight": 16,
+      "contexts": [
+        "Próximos passos (última atualização: 23/03/2026)",
+        "Sessão tarde 16/03/2026 — Gospia iOS App Store",
+        "Gospia — App Store Submit"
+      ]
+    },
+    {
+      "source": "Elber",
+      "target": "Titanio",
+      "weight": 16,
+      "contexts": [
+        "Configuração de Domínio Pendente",
+        "2026-03-12 — Titanio Dashboard v2.1 Finalizada",
+        "2026-03-16 — Sessão da manhã com Zica/Eduardo"
+      ]
+    },
+    {
+      "source": "API",
+      "target": "Tiago",
+      "weight": 16,
+      "contexts": [
+        "15:45 — Operação KiteMe v3.5 Iniciada",
+        "2026-03-12 — Final do Dia",
+        "2026-03-15 10:28 — Sessão com Zica (Gospia group)"
+      ]
+    },
+    {
+      "source": "Dashboard",
+      "target": "Gospia",
+      "weight": 16,
+      "contexts": [
+        "Atualização 16:41 — Sessão tarde",
+        "Testes Executados",
+        "📋 PROJETOS DISCUTIDOS (cronológico)"
+      ]
+    },
+    {
+      "source": "Titanio",
+      "target": "WhatsApp",
+      "weight": 15,
+      "contexts": [
+        "Rosário 47 - Campanha Política (Deploy Completo!)",
+        "Sessão 12:27 — N8n + Squad + GitHub Memory",
+        "🎰 Polymarket Trading Bot — Setup Completo"
+      ]
+    },
+    {
+      "source": "Helber",
+      "target": "Titanio",
+      "weight": 15,
+      "contexts": [
+        "Configuração de Domínio Pendente",
+        "2026-03-12 — Titanio Dashboard v2.1 Finalizada",
+        "2026-03-16 — Sessão da manhã com Zica/Eduardo"
+      ]
+    },
+    {
+      "source": "Dashboard",
+      "target": "WhatsApp",
+      "weight": 15,
+      "contexts": [
+        "13:45-14:10 - Projeto Guardião Digital CRIADO! 🛡️",
+        "Configura capturas automáticas em todos os tamanhos",
+        "Eventos Importantes"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "target": "watchdog",
+      "weight": 15,
+      "contexts": [
+        "~00:15 — Heartbeat Check",
+        "21:03 — Flush de memória persistente #8 (cron)",
+        "18:03 — Flush de memória persistente #7 (cron)"
+      ]
+    },
+    {
+      "source": "Google",
+      "target": "Gospia",
+      "weight": 15,
+      "contexts": [
+        "~13:00 — Grupo Gospia",
+        "03:00 — Flush de memória persistente (cron)",
+        "Sessão Gospia - Build e Deploy Play Store (tarde)"
+      ]
+    },
+    {
+      "source": "Zica",
+      "target": "memória",
+      "weight": 15,
+      "contexts": [
+        "03:00 — Flush de memória persistente (cron)",
+        "06:00 — Flush de memória persistente (cron)",
+        "09:00 — Flush de memória persistente (cron)"
+      ]
+    },
+    {
+      "source": "OpenClaw",
+      "target": "cron",
+      "weight": 15,
+      "contexts": [
+        "Atividades do Dia",
+        "Atualização 16:41 — Sessão tarde",
+        "🖥️ Infraestrutura de Rede (Cluster Titanio)"
+      ]
+    },
+    {
+      "source": "API",
+      "target": "cron",
+      "weight": 15,
+      "contexts": [
+        "Atualização 16:41 — Sessão tarde",
+        "🔐 CREDENCIAIS GUARDADAS",
+        "🔄 SISTEMA DE MEMÓRIA COMPARTILHADA — 12:05 BRT"
+      ]
+    },
+    {
+      "source": "Dashboard",
+      "target": "cron",
+      "weight": 15,
+      "contexts": [
+        "Atualização 16:41 — Sessão tarde",
+        "🔐 CREDENCIAIS GUARDADAS",
+        "🤖 Bots/Agentes Configurados"
+      ]
+    },
+    {
+      "source": "API",
+      "target": "deploy",
+      "weight": 14,
+      "contexts": [
+        "🔴 Regras Críticas (aprendidas na marra)",
+        "16:15-16:45 — KiteMe Backend Fixes & Deploy Attempts",
+        "16:50 — Railway Deploy SUCCESS! 🎉"
+      ]
+    },
+    {
+      "source": "Google",
+      "target": "Titanio",
+      "weight": 14,
+      "contexts": [
+        "O que fizemos hoje",
+        "Cloudflare Setup para maricafilmcommission.com (15:45)",
+        "Problema do Site Maricá Film Commission - RESOLVIDO ✅"
+      ]
+    },
+    {
+      "source": "Dashboard",
+      "target": "deploy",
+      "weight": 14,
+      "contexts": [
+        "16:00 — KiteMe v3.5 Finalizado",
+        "16:15-16:45 — KiteMe Backend Fixes & Deploy Attempts",
+        "🎯 PROMESSAS CUMPRIDAS HOJE"
+      ]
+    },
+    {
+      "source": "Android",
+      "target": "Gospia",
+      "weight": 14,
+      "contexts": [
+        "08:50 — KidsHQ URL Fix (via Gospia)",
+        "14:00–15:00 — Gospia Mobile App: Rádio Gospia 📻",
+        "20:30 — Gospia Mobile App: Rádio + Voice Mode 🎤📻"
+      ]
+    },
+    {
+      "source": "Helber",
+      "target": "OpenClaw",
+      "weight": 14,
+      "contexts": [
+        "Sessão 12:27 — N8n + Squad + GitHub Memory",
+        "2026-03-16 — Sessão da manhã com Zica/Eduardo",
+        "Sessão da tarde (15h–16h30)"
+      ]
+    },
+    {
+      "source": "Elber",
+      "target": "OpenClaw",
+      "weight": 14,
+      "contexts": [
+        "Sessão 12:27 — N8n + Squad + GitHub Memory",
+        "2026-03-16 — Sessão da manhã com Zica/Eduardo",
+        "Sessão da tarde (15h–16h30)"
+      ]
+    },
+    {
+      "source": "Apple",
+      "target": "Titanio",
+      "weight": 13,
+      "contexts": [
+        "Projetos — status (atualizado 28/03/2026)",
+        "Sessão tarde 16/03/2026 — Gospia iOS App Store",
+        "Gospia — App Store Submit"
+      ]
+    },
+    {
+      "source": "App Store",
+      "target": "Apple",
+      "weight": 13,
+      "contexts": [
+        "Próximos passos (última atualização: 23/03/2026)",
+        "Sessão tarde 16/03/2026 — Gospia iOS App Store",
+        "Gospia — App Store Submit"
+      ]
+    },
+    {
+      "source": "API",
+      "target": "backup",
+      "weight": 13,
+      "contexts": [
+        "Rosário 47 - Campanha Política (Deploy Completo!)",
+        "15:45 — Operação KiteMe v3.5 Iniciada",
+        "Atualização 16:41 — Sessão tarde"
+      ]
+    },
+    {
+      "source": "Eduardo",
+      "target": "Google",
+      "weight": 13,
+      "contexts": [
+        "Pendências restantes",
+        "Fotos das Locações — CONCLUÍDO ✅",
+        "Problema do Site Maricá Film Commission - RESOLVIDO ✅"
+      ]
+    },
+    {
+      "source": "Gospia",
+      "target": "memória",
+      "weight": 13,
+      "contexts": [
+        "03:00 — Flush de memória persistente (cron)",
+        "15:00 — Flush de memória persistente (cron)",
+        "21:03 — Flush de memória persistente #7 (cron)"
+      ]
+    },
+    {
+      "source": "RAG",
+      "target": "memória",
+      "weight": 13,
+      "contexts": [
+        "Sessão 13:30 — Tita Learning System Implementado",
+        "📁 Documentos de Referência (pasta-do-tita/)",
+        "1. O Que o Vídeo Apresenta"
+      ]
+    },
+    {
+      "source": "Tiago",
+      "target": "cron",
+      "weight": 13,
+      "contexts": [
+        "🧠 MEMÓRIA + APRENDIZADO — SISTEMA COMPLETO",
+        "✅ PROVA DE OPERAÇÃO",
+        "🚀 PRÓXIMOS PASSOS"
+      ]
+    },
+    {
+      "source": "Gospia",
+      "target": "deploy",
+      "weight": 12,
+      "contexts": [
+        "Rosário 47 - Campanha Política (Deploy Completo!)",
+        "Pendências",
+        "Sessão Gospia - Build e Deploy Play Store (tarde)"
+      ]
+    },
+    {
+      "source": "cron",
+      "target": "iOS",
+      "weight": 12,
+      "contexts": [
+        "O que fizemos hoje",
+        "Sistema de Bots Implementado ✅",
+        "16:15-16:45 — KiteMe Backend Fixes & Deploy Attempts"
+      ]
+    },
+    {
+      "source": "Gospia",
+      "target": "backup",
+      "weight": 12,
+      "contexts": [
+        "00:02 — Gospia Session Fix (27/02)",
+        "20:30 — Gospia Mobile App: Rádio + Voice Mode 🎤📻",
+        "Sessão tarde/noite - KidsHQ + Gospia Play Store (21:xx)"
+      ]
+    },
+    {
+      "source": "backup",
+      "target": "iOS",
+      "weight": 12,
+      "contexts": [
+        "20:30 — Gospia Mobile App: Rádio + Voice Mode 🎤📻",
+        "Sessão 13:30 — Tita Learning System Implementado",
+        "2026-03-15 10:28 — Sessão com Zica (Gospia group)"
+      ]
+    },
+    {
+      "source": "RAG",
+      "target": "Tita",
+      "weight": 12,
+      "contexts": [
+        "09:03 — Flush de memória persistente #4 (cron)",
+        "📁 Documentos de Referência (pasta-do-tita/)",
+        "🔑 Resumo Executivo (TL;DR)"
+      ]
+    },
+    {
+      "source": "App Store",
+      "target": "Tita",
+      "weight": 12,
+      "contexts": [
+        "Sessão tarde 16/03/2026 — Gospia iOS App Store",
+        "Gospia — App Store Submit",
+        "Sessão da tarde (15h–16h30)"
+      ]
+    },
+    {
+      "source": "App Store",
+      "target": "Titanio",
+      "weight": 12,
+      "contexts": [
+        "Sessão tarde 16/03/2026 — Gospia iOS App Store",
+        "Gospia — App Store Submit",
+        "Sessão da tarde (15h–16h30)"
+      ]
+    },
+    {
+      "source": "Dashboard",
+      "target": "Google",
+      "weight": 12,
+      "contexts": [
+        "Atualização 16:41 — Sessão tarde",
+        "Sessão Tarde (12h–16h) — Dashboard, Integrações, Design",
+        "Alerta para o futuro — KidsHQ Google OAuth"
+      ]
+    },
+    {
+      "source": "Elber",
+      "target": "iOS",
+      "weight": 11,
+      "contexts": [
+        "Helber — meu comandante",
+        "Conhecimento: NFS-e e Tributação (06/03/2026)",
+        "🏆 Manda a Nota — Produto Principal (10/03/2026)"
+      ]
+    },
+    {
+      "source": "Android",
+      "target": "Tita",
+      "weight": 11,
+      "contexts": [
+        "Projetos — status (atualizado 28/03/2026)",
+        "Arquivos Chave",
+        "Tita Nio Campaign - Projeto Criado (14:20)"
+      ]
+    },
+    {
+      "source": "OpenClaw",
+      "target": "deploy",
+      "weight": 11,
+      "contexts": [
+        "🔴 Regras Críticas (aprendidas na marra)",
+        "Maricá Film Commission - Static Site Mirror Created",
+        "Netlify Deploy In Progress (13:43)"
+      ]
+    },
+    {
+      "source": "WhatsApp",
+      "target": "Zica",
+      "weight": 11,
+      "contexts": [
+        "Rosário 47 - Campanha Política (Deploy Completo!)",
+        "~18:00-21:00 — Estabilidade",
+        "Sessão Gospia - Build e Deploy Play Store (tarde)"
+      ]
+    },
+    {
+      "source": "KidsHQ",
+      "target": "Titanio",
+      "weight": 11,
+      "contexts": [
+        "Web Pages Deployadas no Railway",
+        "Configuração de Domínio Pendente",
+        "2026-03-11 18:47 - Heartbeat Alert"
+      ]
+    },
+    {
+      "source": "Eduardo",
+      "target": "backup",
+      "weight": 11,
+      "contexts": [
+        "Maricá Film Commission - LiteSpeed Fix",
+        "~18:30 — KidsHQ Kids Build",
+        "15:45 — Operação KiteMe v3.5 Iniciada"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "target": "Tita",
+      "weight": 11,
+      "contexts": [
+        "~00:15 — Heartbeat Check",
+        "03:00 — Flush de memória persistente (cron)",
+        "07:30 — KiteMe v4.0 Enviado pra Play Store! 🚀"
+      ]
+    },
+    {
+      "source": "API",
+      "target": "KidsHQ",
+      "weight": 11,
+      "contexts": [
+        "08:50 — KidsHQ URL Fix (via Gospia)",
+        "12:00–17:00 — Tarde de segunda-feira",
+        "Sessão 13:30 — Tita Learning System Implementado"
+      ]
+    },
+    {
+      "source": "Titanio",
+      "target": "memória",
+      "weight": 11,
+      "contexts": [
+        "Sessão 12:27 — N8n + Squad + GitHub Memory",
+        "Dashboard 2.0 — Sessão Completa",
+        "🔑 Credenciais — Compartilhadas vs Pessoais"
+      ]
+    },
+    {
+      "source": "Helber",
+      "target": "cron",
+      "weight": 11,
+      "contexts": [
+        "🧠 MEMÓRIA + APRENDIZADO — SISTEMA COMPLETO",
+        "✅ PROVA DE OPERAÇÃO",
+        "🚀 PRÓXIMOS PASSOS"
+      ]
+    },
+    {
+      "source": "Elber",
+      "target": "cron",
+      "weight": 11,
+      "contexts": [
+        "🧠 MEMÓRIA + APRENDIZADO — SISTEMA COMPLETO",
+        "✅ PROVA DE OPERAÇÃO",
+        "🚀 PRÓXIMOS PASSOS"
+      ]
+    },
+    {
+      "source": "Helber",
+      "target": "iOS",
+      "weight": 10,
+      "contexts": [
+        "Helber — meu comandante",
+        "Conhecimento: NFS-e e Tributação (06/03/2026)",
+        "🏆 Manda a Nota — Produto Principal (10/03/2026)"
+      ]
+    },
+    {
+      "source": "NFS-e",
+      "target": "iOS",
+      "weight": 10,
+      "contexts": [
+        "Conhecimento: NFS-e e Tributação (06/03/2026)",
+        "Detalhes por Módulo",
+        "Testes Executados"
+      ]
+    },
+    {
+      "source": "NFS-e",
+      "target": "NFS-e",
+      "weight": 10,
+      "contexts": [
+        "Conhecimento: NFS-e e Tributação (06/03/2026)",
+        "🏆 Manda a Nota — Produto Principal (10/03/2026)",
+        "Detalhes por Módulo"
+      ]
+    },
+    {
+      "source": "MEI",
+      "target": "iOS",
+      "weight": 10,
+      "contexts": [
+        "Conhecimento: NFS-e e Tributação (06/03/2026)",
+        "🏆 Manda a Nota — Produto Principal (10/03/2026)",
+        "Equipe"
+      ]
+    },
+    {
+      "source": "MEI",
+      "target": "Tita",
+      "weight": 10,
+      "contexts": [
+        "🏆 Manda a Nota — Produto Principal (10/03/2026)",
+        "2026-03-11 19:48 - Titanio Dashboard Development Guide",
+        "Sessão da tarde (15h–16h30)"
+      ]
+    },
+    {
+      "source": "Titanio",
+      "target": "Zica",
+      "weight": 10,
+      "contexts": [
+        "Rosário 47 - Campanha Política (Deploy Completo!)",
+        "2026-03-11 19:48 - Titanio Dashboard Development Guide",
+        "2026-03-16 — Sessão da manhã com Zica/Eduardo"
+      ]
+    },
+    {
+      "source": "OpenClaw",
+      "target": "Zica",
+      "weight": 10,
+      "contexts": [
+        "~13:00 — Grupo Gospia",
+        "2026-03-16 — Sessão da manhã com Zica/Eduardo",
+        "Notas técnicas"
+      ]
+    },
+    {
+      "source": "Google",
+      "target": "OpenClaw",
+      "weight": 9,
+      "contexts": [
+        "Dossiês produzidos (referência)",
+        "Netlify Deploy In Progress (13:43)",
+        "~13:00 — Grupo Gospia"
+      ]
+    },
+    {
+      "source": "WhatsApp",
+      "target": "deploy",
+      "weight": 9,
+      "contexts": [
+        "🔴 Regras Críticas (aprendidas na marra)",
+        "Rosário 47 - Campanha Política (Deploy Completo!)",
+        "Maricá Film Commission - Static Site Mirror Created"
+      ]
+    },
+    {
+      "source": "KidsHQ",
+      "target": "deploy",
+      "weight": 9,
+      "contexts": [
+        "Web Pages Deployadas no Railway",
+        "16:15-16:45 — KiteMe Backend Fixes & Deploy Attempts",
+        "KidsHQ Deploy (Em andamento)"
+      ]
+    },
+    {
+      "source": "Eduardo",
+      "target": "MEI",
+      "weight": 9,
+      "contexts": [
+        "Equipe",
+        "Problema do Site Maricá Film Commission - RESOLVIDO ✅",
+        "12:03 — Flush de memória persistente #5 (cron)"
+      ]
+    },
+    {
+      "source": "Android",
+      "target": "Eduardo",
+      "weight": 9,
+      "contexts": [
+        "Android Studio",
+        "App Chat Político - Desenvolvimento (16:48)",
+        "Major Work: Kite-me App Rebranding ✅"
+      ]
+    },
+    {
+      "source": "deploy",
+      "target": "iOS",
+      "weight": 9,
+      "contexts": [
+        "13:45-14:10 - Projeto Guardião Digital CRIADO! 🛡️",
+        "KiteSurf Brasil App - COMPLETO! 🏄‍♂️",
+        "16:15-16:45 — KiteMe Backend Fixes & Deploy Attempts"
+      ]
+    },
+    {
+      "source": "Gospia",
+      "target": "cron",
+      "weight": 9,
+      "contexts": [
+        "03:00 — Flush de memória persistente (cron)",
+        "15:00 — Flush de memória persistente (cron)",
+        "21:03 — Flush de memória persistente #7 (cron)"
+      ]
+    },
+    {
+      "source": "Google",
+      "target": "KidsHQ",
+      "weight": 9,
+      "contexts": [
+        "09:00 — Flush de memória persistente (cron)",
+        "12:00–17:00 — Tarde de segunda-feira",
+        "2026-03-11 18:47 - Heartbeat Alert"
+      ]
+    },
+    {
+      "source": "Zica",
+      "target": "iOS",
+      "weight": 9,
+      "contexts": [
+        "20:30 — Gospia Mobile App: Rádio + Voice Mode 🎤📻",
+        "Gospia — App Store Submit",
+        "🔴 Bloqueadores Pendentes"
+      ]
+    },
+    {
+      "source": "Apple",
+      "target": "Gospia",
+      "weight": 9,
+      "contexts": [
+        "Sessão 13:30 — Tita Learning System Implementado",
+        "Sessão tarde 16/03/2026 — Gospia iOS App Store",
+        "Gospia — App Store Submit"
+      ]
+    },
+    {
+      "source": "Tiago",
+      "target": "Zica",
+      "weight": 9,
+      "contexts": [
+        "2026-03-16 — Sessão da manhã com Zica/Eduardo",
+        "🚀 PRÓXIMOS PASSOS",
+        "23:36 — Sessão Polymarket (continuação final)"
+      ]
+    },
+    {
+      "source": "OpenClaw",
+      "target": "backup",
+      "weight": 9,
+      "contexts": [
+        "Notas técnicas",
+        "Sessão da tarde (15h–16h30)",
+        "Atualização 16:41 — Sessão tarde"
+      ]
+    },
+    {
+      "source": "Titanio",
+      "target": "cron",
+      "weight": 9,
+      "contexts": [
+        "🔐 CREDENCIAIS GUARDADAS",
+        "🔄 SISTEMA DE MEMÓRIA COMPARTILHADA — 12:05 BRT",
+        "🤖 Bots/Agentes Configurados"
+      ]
+    },
+    {
+      "source": "Apple",
+      "target": "Dashboard",
+      "weight": 9,
+      "contexts": [
+        "Testes Executados",
+        "→ Apple leva 1-3 dias para aprovar (primeira vez pode ser ma",
+        "App Store Connect — Guia Completo 2025"
+      ]
+    },
+    {
+      "source": "Helber",
+      "target": "memória",
+      "weight": 8,
+      "contexts": [
+        "Lições aprendidas",
+        "📋 ENTREGAS CRIADAS",
+        "🔄 SISTEMA DE MEMÓRIA COMPARTILHADA — 12:05 BRT"
+      ]
+    },
+    {
+      "source": "Elber",
+      "target": "memória",
+      "weight": 8,
+      "contexts": [
+        "Lições aprendidas",
+        "📋 ENTREGAS CRIADAS",
+        "🔄 SISTEMA DE MEMÓRIA COMPARTILHADA — 12:05 BRT"
+      ]
+    },
+    {
+      "source": "MEI",
+      "target": "NFS-e",
+      "weight": 8,
+      "contexts": [
+        "Conhecimento: NFS-e e Tributação (06/03/2026)",
+        "🏆 Manda a Nota — Produto Principal (10/03/2026)",
+        "Testes Executados"
+      ]
+    },
+    {
+      "source": "Helber",
+      "target": "NFS-e",
+      "weight": 8,
+      "contexts": [
+        "Conhecimento: NFS-e e Tributação (06/03/2026)",
+        "Detalhes por Módulo",
+        "Testes Executados"
+      ]
+    },
+    {
+      "source": "Elber",
+      "target": "NFS-e",
+      "weight": 8,
+      "contexts": [
+        "Conhecimento: NFS-e e Tributação (06/03/2026)",
+        "Detalhes por Módulo",
+        "Testes Executados"
+      ]
+    },
+    {
+      "source": "MEI",
+      "target": "Titanio",
+      "weight": 8,
+      "contexts": [
+        "🏆 Manda a Nota — Produto Principal (10/03/2026)",
+        "2026-03-11 19:48 - Titanio Dashboard Development Guide",
+        "Sessão da tarde (15h–16h30)"
+      ]
+    },
+    {
+      "source": "Android",
+      "target": "deploy",
+      "weight": 8,
+      "contexts": [
+        "Tita Nio Campaign - Projeto Criado (14:20)",
+        "App Chat Político - Desenvolvimento (16:48)",
+        "KiteSurf Brasil App - COMPLETO! 🏄‍♂️"
+      ]
+    },
+    {
+      "source": "Android",
+      "target": "Google",
+      "weight": 8,
+      "contexts": [
+        "Rosário 47 - Grandes Avanços Hoje",
+        "19:45 - 🚀 KITE-ME ENVIADO PARA PLAY STORE REVIEW!",
+        "Sessão Gospia - Build e Deploy Play Store (tarde)"
+      ]
+    },
+    {
+      "source": "Google",
+      "target": "Zica",
+      "weight": 8,
+      "contexts": [
+        "~13:00 — Grupo Gospia",
+        "Maricá Film Commission - Correções de fotos e vídeos",
+        "03:00 — Flush de memória persistente (cron)"
+      ]
+    },
+    {
+      "source": "KidsHQ",
+      "target": "memória",
+      "weight": 8,
+      "contexts": [
+        "~21:00 — Flush de Memória #2",
+        "09:00 — Flush de memória persistente (cron)",
+        "21:03 — Flush de memória persistente #7 (cron)"
+      ]
+    },
+    {
+      "source": "KidsHQ",
+      "target": "Play Store",
+      "weight": 8,
+      "contexts": [
+        "09:00 — Flush de memória persistente (cron)",
+        "21:03 — Flush de memória persistente #7 (cron)",
+        "09:03 — Flush de memória persistente #4 (cron)"
+      ]
+    },
+    {
+      "source": "Titanio",
+      "target": "backup",
+      "weight": 8,
+      "contexts": [
+        "20:30 — Gospia Mobile App: Rádio + Voice Mode 🎤📻",
+        "Sessão tarde 16/03/2026 — Gospia iOS App Store",
+        "Sessão da tarde (15h–16h30)"
+      ]
+    },
+    {
+      "source": "Dashboard",
+      "target": "KidsHQ",
+      "weight": 8,
+      "contexts": [
+        "Alerta para o futuro — KidsHQ Google OAuth",
+        "🔴 GAPS IDENTIFICADOS (coisas no histórico que NÃO estão na m",
+        "✅ AÇÕES NECESSÁRIAS"
+      ]
+    },
+    {
+      "source": "embeddings",
+      "target": "memória",
+      "weight": 8,
+      "contexts": [
+        "Detalhes por Módulo",
+        "5. Proposta de Melhorias",
+        "6. Conclusão"
+      ]
+    },
+    {
+      "source": "Dashboard",
+      "target": "RAG",
+      "weight": 8,
+      "contexts": [
+        "📁 Documentos de Referência (pasta-do-tita/)",
+        "🔑 Resumo Executivo (TL;DR)",
+        "🏗️ INFRAESTRUTURA MENCIONADA"
+      ]
+    },
+    {
+      "source": "App Store",
+      "target": "Dashboard",
+      "weight": 8,
+      "contexts": [
+        "Build iOS com Expo EAS — Fluxo Completo 2025",
+        "App Store Connect — Guia Completo 2025",
+        "Configura capturas automáticas em todos os tamanhos"
+      ]
+    },
+    {
+      "source": "Google",
+      "target": "Play Store",
+      "weight": 7,
+      "contexts": [
+        "Dossiês produzidos (referência)",
+        "19:45 - 🚀 KITE-ME ENVIADO PARA PLAY STORE REVIEW!",
+        "03:00 — Flush de memória persistente (cron)"
+      ]
+    },
+    {
+      "source": "API",
+      "target": "Helber",
+      "weight": 7,
+      "contexts": [
+        "Conhecimento: NFS-e e Tributação (06/03/2026)",
+        "🏆 Manda a Nota — Produto Principal (10/03/2026)",
+        "2026-03-12 — Final do Dia"
+      ]
+    },
+    {
+      "source": "API",
+      "target": "Elber",
+      "weight": 7,
+      "contexts": [
+        "Conhecimento: NFS-e e Tributação (06/03/2026)",
+        "🏆 Manda a Nota — Produto Principal (10/03/2026)",
+        "2026-03-12 — Final do Dia"
+      ]
+    },
+    {
+      "source": "WhatsApp",
+      "target": "memória",
+      "weight": 7,
+      "contexts": [
+        "📅 28/03/2026 — Memory Engine v2",
+        "Sessão 12:27 — N8n + Squad + GitHub Memory",
+        "Sessão 13:30 — Tita Learning System Implementado"
+      ]
+    },
+    {
+      "source": "MEI",
+      "target": "OpenClaw",
+      "weight": 7,
+      "contexts": [
+        "🔴 Regras Críticas (aprendidas na marra)",
+        "12:00–17:00 — Tarde de segunda-feira",
+        "Sessão da tarde (15h–16h30)"
+      ]
+    },
+    {
+      "source": "MEI",
+      "target": "WhatsApp",
+      "weight": 7,
+      "contexts": [
+        "🔴 Regras Críticas (aprendidas na marra)",
+        "📚 Lições por Data",
+        "12:00–17:00 — Tarde de segunda-feira"
+      ]
+    },
+    {
+      "source": "Gospia",
+      "target": "MEI",
+      "weight": 7,
+      "contexts": [
+        "📚 Lições por Data",
+        "12:00–17:00 — Tarde de segunda-feira",
+        "Sessão da tarde (15h–16h30)"
+      ]
+    },
+    {
+      "source": "Titanio",
+      "target": "deploy",
+      "weight": 7,
+      "contexts": [
+        "Rosário 47 - Campanha Política (Deploy Completo!)",
+        "Web Pages Deployadas no Railway",
+        "2026-03-11 18:47 - Heartbeat Alert"
+      ]
+    },
+    {
+      "source": "Google",
+      "target": "cron",
+      "weight": 7,
+      "contexts": [
+        "Dados técnicos importantes",
+        "03:00 — Flush de memória persistente (cron)",
+        "06:00 — Flush de memória persistente (cron)"
+      ]
+    },
+    {
+      "source": "Google",
+      "target": "deploy",
+      "weight": 7,
+      "contexts": [
+        "Netlify Deploy In Progress (13:43)",
+        "Sessão Gospia - Build e Deploy Play Store (tarde)",
+        "Chatbot Antunes do Rosário - Deploy 13:17"
+      ]
+    },
+    {
+      "source": "Eduardo",
+      "target": "RAG",
+      "weight": 7,
+      "contexts": [
+        "Maricá Film Commission - LiteSpeed Fix",
+        "09:03 — Flush de memória persistente #4 (cron)",
+        "🏗️ INFRAESTRUTURA MENCIONADA"
+      ]
+    },
+    {
+      "source": "API",
+      "target": "Android",
+      "weight": 7,
+      "contexts": [
+        "Rosário 47 - Grandes Avanços Hoje",
+        "08:50 — KidsHQ URL Fix (via Gospia)",
+        "Sessão Gospia - Build e Deploy Play Store (tarde)"
+      ]
+    },
+    {
+      "source": "Titanio",
+      "target": "watchdog",
+      "weight": 7,
+      "contexts": [
+        "~00:15 — Heartbeat Check",
+        "2026-03-11 18:47 - Heartbeat Alert",
+        "Sessão 13:30 — Tita Learning System Implementado"
+      ]
+    },
+    {
+      "source": "WhatsApp",
+      "target": "watchdog",
+      "weight": 7,
+      "contexts": [
+        "~07:00 — Relatório Matinal Maricá",
+        "21:21 — Heartbeat",
+        "🔴 Heartbeat - 20:16 BRT"
+      ]
+    },
+    {
+      "source": "API",
+      "target": "Zica",
+      "weight": 7,
+      "contexts": [
+        "~13:00 — Grupo Gospia",
+        "2026-03-16 — Sessão da manhã com Zica/Eduardo",
+        "📋 RESUMO FINAL DA SESSÃO"
+      ]
+    },
+    {
+      "source": "Zica",
+      "target": "cron",
+      "weight": 7,
+      "contexts": [
+        "03:00 — Flush de memória persistente (cron)",
+        "06:00 — Flush de memória persistente (cron)",
+        "09:00 — Flush de memória persistente (cron)"
+      ]
+    },
+    {
+      "source": "Android",
+      "target": "KidsHQ",
+      "weight": 7,
+      "contexts": [
+        "08:50 — KidsHQ URL Fix (via Gospia)",
+        "KidsHQ Deploy (Em andamento)",
+        "Sessão 13:30 — Tita Learning System Implementado"
+      ]
+    },
+    {
+      "source": "Dashboard",
+      "target": "Zica",
+      "weight": 7,
+      "contexts": [
+        "2026-03-11 19:48 - Titanio Dashboard Development Guide",
+        "2026-03-16 — Sessão da manhã com Zica/Eduardo",
+        "Atualização 16:41 — Sessão tarde"
+      ]
+    },
+    {
+      "source": "Dashboard",
+      "target": "MEI",
+      "weight": 7,
+      "contexts": [
+        "2026-03-11 19:48 - Titanio Dashboard Development Guide",
+        "23:36 — Sessão Polymarket (continuação final)",
+        "Testes Executados"
+      ]
+    },
+    {
+      "source": "App Store",
+      "target": "Gospia",
+      "weight": 7,
+      "contexts": [
+        "Sessão tarde 16/03/2026 — Gospia iOS App Store",
+        "Gospia — App Store Submit",
+        "Sessão da tarde (15h–16h30)"
+      ]
+    },
+    {
+      "source": "Tiago",
+      "target": "memória",
+      "weight": 7,
+      "contexts": [
+        "📋 ENTREGAS CRIADAS",
+        "🔄 SISTEMA DE MEMÓRIA COMPARTILHADA — 12:05 BRT",
+        "16:40 — Flush de Memória — Polymarket e Projetos do Dia"
+      ]
+    },
+    {
+      "source": "deploy",
+      "target": "memória",
+      "weight": 7,
+      "contexts": [
+        "🔄 SISTEMA DE MEMÓRIA COMPARTILHADA — 12:05 BRT",
+        "Testes Executados",
+        "📁 Documentos de Referência (pasta-do-tita/)"
+      ]
+    },
+    {
+      "source": "OpenClaw",
+      "target": "RAG",
+      "weight": 7,
+      "contexts": [
+        "📁 Documentos de Referência (pasta-do-tita/)",
+        "🔑 Resumo Executivo (TL;DR)",
+        "🏗️ INFRAESTRUTURA MENCIONADA"
+      ]
+    },
+    {
+      "source": "KidsHQ",
+      "target": "OpenClaw",
+      "weight": 7,
+      "contexts": [
+        "Skills e Conhecimento Adquirido",
+        "📋 PROJETOS DISCUTIDOS (cronológico)",
+        "📊 RESUMO DA VARREDURA"
+      ]
+    },
+    {
+      "source": "Android",
+      "target": "Titanio",
+      "weight": 6,
+      "contexts": [
+        "Projetos — status (atualizado 28/03/2026)",
+        "App Titanio 47 - Build Android (17:00-18:45)",
+        "Unity - INSTALADO E CONFIGURADO"
+      ]
+    },
+    {
+      "source": "MEI",
+      "target": "memória",
+      "weight": 6,
+      "contexts": [
+        "Lições aprendidas",
+        "12:03 — Flush de memória persistente #5 (cron)",
+        "00:03 — Flush de memória persistente #1 (cron)"
+      ]
+    },
+    {
+      "source": "API",
+      "target": "NFS-e",
+      "weight": 6,
+      "contexts": [
+        "Conhecimento: NFS-e e Tributação (06/03/2026)",
+        "🏆 Manda a Nota — Produto Principal (10/03/2026)"
+      ]
+    },
+    {
+      "source": "NFS-e",
+      "target": "Tita",
+      "weight": 6,
+      "contexts": [
+        "🏆 Manda a Nota — Produto Principal (10/03/2026)",
+        "Testes Executados"
+      ]
+    },
+    {
+      "source": "Manda a Nota",
+      "target": "NFS-e",
+      "weight": 6,
+      "contexts": [
+        "🏆 Manda a Nota — Produto Principal (10/03/2026)",
+        "Detalhes por Módulo",
+        "Testes Executados"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "target": "Zica",
+      "weight": 6,
+      "contexts": [
+        "00:02 — Gospia Session Fix (27/02)",
+        "03:00 — Flush de memória persistente (cron)",
+        "09:00 — Flush de memória persistente (cron)"
+      ]
+    },
+    {
+      "source": "Google",
+      "target": "memória",
+      "weight": 6,
+      "contexts": [
+        "03:00 — Flush de memória persistente (cron)",
+        "06:00 — Flush de memória persistente (cron)",
+        "09:00 — Flush de memória persistente (cron)"
+      ]
+    },
+    {
+      "source": "MEI",
+      "target": "Zica",
+      "weight": 6,
+      "contexts": [
+        "2026-03-11 19:48 - Titanio Dashboard Development Guide",
+        "🚀 PRÓXIMOS PASSOS",
+        "23:36 — Sessão Polymarket (continuação final)"
+      ]
+    },
+    {
+      "source": "Helber",
+      "target": "Zica",
+      "weight": 6,
+      "contexts": [
+        "2026-03-16 — Sessão da manhã com Zica/Eduardo",
+        "🚀 PRÓXIMOS PASSOS",
+        "Detalhes por Módulo"
+      ]
+    },
+    {
+      "source": "Elber",
+      "target": "Zica",
+      "weight": 6,
+      "contexts": [
+        "2026-03-16 — Sessão da manhã com Zica/Eduardo",
+        "🚀 PRÓXIMOS PASSOS",
+        "Detalhes por Módulo"
+      ]
+    },
+    {
+      "source": "Gospia",
+      "target": "Helber",
+      "weight": 6,
+      "contexts": [
+        "Sessão da tarde (15h–16h30)",
+        "5. MULTI-AGENTE GRATUITO",
+        "coordinator.py — orquestra os agentes"
+      ]
+    },
+    {
+      "source": "Gospia",
+      "target": "Tiago",
+      "weight": 6,
+      "contexts": [
+        "Sessão da tarde (15h–16h30)",
+        "5. MULTI-AGENTE GRATUITO",
+        "coordinator.py — orquestra os agentes"
+      ]
+    },
+    {
+      "source": "Elber",
+      "target": "Gospia",
+      "weight": 6,
+      "contexts": [
+        "Sessão da tarde (15h–16h30)",
+        "5. MULTI-AGENTE GRATUITO",
+        "coordinator.py — orquestra os agentes"
+      ]
+    },
+    {
+      "source": "Apple",
+      "target": "MEI",
+      "weight": 6,
+      "contexts": [
+        "Testes Executados",
+        "→ Apple leva 1-3 dias para aprovar (primeira vez pode ser ma",
+        "Configura capturas automáticas em todos os tamanhos"
+      ]
+    },
+    {
+      "source": "Manda a Nota",
+      "target": "iOS",
+      "weight": 5,
+      "contexts": [
+        "Projetos — status (atualizado 28/03/2026)",
+        "Próximos passos (última atualização: 23/03/2026)",
+        "Detalhes por Módulo"
+      ]
+    },
+    {
+      "source": "Apple",
+      "target": "Manda a Nota",
+      "weight": 5,
+      "contexts": [
+        "Projetos — status (atualizado 28/03/2026)",
+        "Próximos passos (última atualização: 23/03/2026)",
+        "Semana 23/03/2026 — Consolidação"
+      ]
+    },
+    {
+      "source": "API",
+      "target": "MEI",
+      "weight": 5,
+      "contexts": [
+        "🏆 Manda a Nota — Produto Principal (10/03/2026)",
+        "🔴 Regras Críticas (aprendidas na marra)",
+        "📸 Instagramer"
+      ]
+    },
+    {
+      "source": "Elber",
+      "target": "MEI",
+      "weight": 5,
+      "contexts": [
+        "🏆 Manda a Nota — Produto Principal (10/03/2026)",
+        "Equipe",
+        "📊 DASHBOARD — O QUE FUNCIONA DE VERDADE"
+      ]
+    },
+    {
+      "source": "API",
+      "target": "Play Store",
+      "weight": 5,
+      "contexts": [
+        "🏆 Manda a Nota — Produto Principal (10/03/2026)",
+        "Sessão Gospia - Build e Deploy Play Store (tarde)",
+        "11. Credenciais e Senhas"
+      ]
+    },
+    {
+      "source": "MEI",
+      "target": "Play Store",
+      "weight": 5,
+      "contexts": [
+        "🏆 Manda a Nota — Produto Principal (10/03/2026)",
+        "19:45 - 🚀 KITE-ME ENVIADO PARA PLAY STORE REVIEW!",
+        "12:03 — Flush de memória persistente #5 (cron)"
+      ]
+    },
+    {
+      "source": "MEI",
+      "target": "deploy",
+      "weight": 5,
+      "contexts": [
+        "🔴 Regras Críticas (aprendidas na marra)",
+        "📊 DASHBOARD — O QUE FUNCIONA DE VERDADE",
+        "Testes Executados"
+      ]
+    },
+    {
+      "source": "Zica",
+      "target": "deploy",
+      "weight": 5,
+      "contexts": [
+        "Rosário 47 - Campanha Política (Deploy Completo!)",
+        "🔍 O que Zica Pediu vs Entregue",
+        "📋 RESUMO FINAL DA SESSÃO"
+      ]
+    },
+    {
+      "source": "Tiago",
+      "target": "iOS",
+      "weight": 5,
+      "contexts": [
+        "Equipe",
+        "Sessão da tarde (15h–16h30)",
+        "📝 INFORMAÇÕES QUE DEVERIAM ESTAR NA MEMÓRIA MAS NÃO ESTAVAM"
+      ]
+    },
+    {
+      "source": "RAG",
+      "target": "deploy",
+      "weight": 5,
+      "contexts": [
+        "Maricá Film Commission - Static Site Mirror Created",
+        "📁 Documentos de Referência (pasta-do-tita/)",
+        "3. RAG — Retrieval Augmented Generation"
+      ]
+    },
+    {
+      "source": "Android",
+      "target": "WhatsApp",
+      "weight": 5,
+      "contexts": [
+        "13:45-14:10 - Projeto Guardião Digital CRIADO! 🛡️",
+        "KiteSurf Brasil App - COMPLETO! 🏄‍♂️",
+        "Sessão Gospia - Build e Deploy Play Store (tarde)"
+      ]
+    },
+    {
+      "source": "KidsHQ",
+      "target": "cron",
+      "weight": 5,
+      "contexts": [
+        "16:15-16:45 — KiteMe Backend Fixes & Deploy Attempts",
+        "09:00 — Flush de memória persistente (cron)",
+        "21:03 — Flush de memória persistente #7 (cron)"
+      ]
+    },
+    {
+      "source": "Gospia",
+      "target": "watchdog",
+      "weight": 5,
+      "contexts": [
+        "21:03 — Flush de memória persistente #8 (cron)",
+        "2026-03-11 18:47 - Heartbeat Alert",
+        "Sessão 13:30 — Tita Learning System Implementado"
+      ]
+    },
+    {
+      "source": "Android",
+      "target": "Play Store",
+      "weight": 5,
+      "contexts": [
+        "Sessão Gospia - Build e Deploy Play Store (tarde)",
+        "10. Solução do Erro 16KB",
+        "11. Credenciais e Senhas"
+      ]
+    },
+    {
+      "source": "Google",
+      "target": "WhatsApp",
+      "weight": 5,
+      "contexts": [
+        "Sessão Gospia - Build e Deploy Play Store (tarde)",
+        "2. Modelos de Negócio com Barreira Zero",
+        "4. Prospecção Automática — LinkedIn e WhatsApp"
+      ]
+    },
+    {
+      "source": "iOS",
+      "target": "watchdog",
+      "weight": 5,
+      "contexts": [
+        "Sessão 13:30 — Tita Learning System Implementado",
+        "Sessão da tarde (15h–16h30)",
+        "Dashboard 2.0 — Sessão Completa"
+      ]
+    },
+    {
+      "source": "Tiago",
+      "target": "WhatsApp",
+      "weight": 5,
+      "contexts": [
+        "Sessão da tarde (15h–16h30)",
+        "🎰 Polymarket Trading Bot — Setup Completo",
+        "23:36 — Sessão Polymarket (continuação final)"
+      ]
+    },
+    {
+      "source": "backup",
+      "target": "watchdog",
+      "weight": 5,
+      "contexts": [
+        "Sessão da tarde (15h–16h30)",
+        "Dashboard 2.0 — Sessão Completa",
+        "Workflows N8n Ativos (total: 10)"
+      ]
+    },
+    {
+      "source": "Dashboard",
+      "target": "watchdog",
+      "weight": 5,
+      "contexts": [
+        "Dashboard 2.0 — Sessão Completa",
+        "Workflows N8n Ativos (total: 10)",
+        "Atualização 16:41 — Sessão tarde"
+      ]
+    },
+    {
+      "source": "Dashboard",
+      "target": "backup",
+      "weight": 5,
+      "contexts": [
+        "Dashboard 2.0 — Sessão Completa",
+        "Workflows N8n Ativos (total: 10)",
+        "Atualização 16:41 — Sessão tarde"
+      ]
+    },
+    {
+      "source": "API",
+      "target": "watchdog",
+      "weight": 5,
+      "contexts": [
+        "Dashboard 2.0 — Sessão Completa",
+        "Sessão Tarde (17:30–19:18 São Paulo) — Correções N8n + Dashb",
+        "💡 Lições Críticas Aprendidas"
+      ]
+    },
+    {
+      "source": "API",
+      "target": "Victor Capital",
+      "weight": 5,
+      "contexts": [
+        "Pendente",
+        "Atualização 16:41 — Sessão tarde",
+        "💎 VICTOR CAPITAL / FUND HUNTER — Detalhes Recuperados"
+      ]
+    },
+    {
+      "source": "API",
+      "target": "RAG",
+      "weight": 5,
+      "contexts": [
+        "23:36 — Sessão Polymarket (continuação final)",
+        "2. Stack Tecnológico",
+        "🏗️ Stack Tecnológico"
+      ]
+    },
+    {
+      "source": "RAG",
+      "target": "Tiago",
+      "weight": 5,
+      "contexts": [
+        "📁 Documentos de Referência (pasta-do-tita/)",
+        "🔑 Resumo Executivo (TL;DR)",
+        "🏗️ INFRAESTRUTURA MENCIONADA"
+      ]
+    },
+    {
+      "source": "Elber",
+      "target": "WhatsApp",
+      "weight": 4,
+      "contexts": [
+        "Helber — meu comandante",
+        "Sessão da tarde (15h–16h30)",
+        "Context"
+      ]
+    },
+    {
+      "source": "Manda a Nota",
+      "target": "Tita",
+      "weight": 4,
+      "contexts": [
+        "Projetos — status (atualizado 28/03/2026)",
+        "🏆 Manda a Nota — Produto Principal (10/03/2026)",
+        "Testes Executados"
+      ]
+    },
+    {
+      "source": "Memory Engine",
+      "target": "Tita",
+      "weight": 4,
+      "contexts": [
+        "Projetos — status (atualizado 28/03/2026)",
+        "🔍 Debug Report — Memory Engine v1.0",
+        "Estrutura Implementada"
+      ]
+    },
+    {
+      "source": "backup",
+      "target": "memória",
+      "weight": 4,
+      "contexts": [
+        "Lições aprendidas",
+        "Sessão 13:30 — Tita Learning System Implementado",
+        "Atualização 16:41 — Sessão tarde"
+      ]
+    },
+    {
+      "source": "API",
+      "target": "certificado",
+      "weight": 4,
+      "contexts": [
+        "Conhecimento: NFS-e e Tributação (06/03/2026)",
+        "Sessão tarde 16/03/2026 — Gospia iOS App Store",
+        "📄 NFSe Worker (Serviço Separado)"
+      ]
+    },
+    {
+      "source": "NFS-e",
+      "target": "mandaanota",
+      "weight": 4,
+      "contexts": [
+        "Conhecimento: NFS-e e Tributação (06/03/2026)",
+        "🏆 Manda a Nota — Produto Principal (10/03/2026)"
+      ]
+    },
+    {
+      "source": "Kratos",
+      "target": "NFS-e",
+      "weight": 4,
+      "contexts": [
+        "Conhecimento: NFS-e e Tributação (06/03/2026)"
+      ]
+    },
+    {
+      "source": "NFS-e",
+      "target": "Titanio",
+      "weight": 4,
+      "contexts": [
+        "🏆 Manda a Nota — Produto Principal (10/03/2026)",
+        "Testes Executados"
+      ]
+    },
+    {
+      "source": "Helber",
+      "target": "MEI",
+      "weight": 4,
+      "contexts": [
+        "🏆 Manda a Nota — Produto Principal (10/03/2026)",
+        "📊 DASHBOARD — O QUE FUNCIONA DE VERDADE",
+        "🚀 PRÓXIMOS PASSOS"
+      ]
+    },
+    {
+      "source": "MEI",
+      "target": "Tiago",
+      "weight": 4,
+      "contexts": [
+        "Equipe",
+        "📊 DASHBOARD — O QUE FUNCIONA DE VERDADE",
+        "🚀 PRÓXIMOS PASSOS"
+      ]
+    },
+    {
+      "source": "Android",
+      "target": "OpenClaw",
+      "weight": 4,
+      "contexts": [
+        "Tita Nio Campaign - Projeto Criado (14:20)",
+        "App Chat Político - Desenvolvimento (16:48)",
+        "App Titanio 47 - Build Android (17:00-18:45)"
+      ]
+    },
+    {
+      "source": "Android",
+      "target": "Dashboard",
+      "weight": 4,
+      "contexts": [
+        "13:45-14:10 - Projeto Guardião Digital CRIADO! 🛡️",
+        "16:00 — KiteMe v3.5 Finalizado",
+        "Build iOS com Expo EAS — Fluxo Completo 2025"
+      ]
+    },
+    {
+      "source": "KidsHQ",
+      "target": "backup",
+      "weight": 4,
+      "contexts": [
+        "~18:30 — KidsHQ Kids Build",
+        "Sessão tarde/noite - KidsHQ + Gospia Play Store (21:xx)",
+        "2026-03-15 10:28 — Sessão com Zica (Gospia group)"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "target": "deploy",
+      "weight": 4,
+      "contexts": [
+        "Sessão Gospia - Build e Deploy Play Store (tarde)",
+        "📋 ÍNDICE",
+        "🔀 DIFERENÇAS: WEB vs APP MOBILE"
+      ]
+    },
+    {
+      "source": "Telegram",
+      "target": "WhatsApp",
+      "weight": 4,
+      "contexts": [
+        "🌅 Cron Job: Relatório Maricá Film Commission",
+        "1. Serviços Vendáveis pelo WhatsApp/Telegram",
+        "2. Afiliação Automatizada com IA"
+      ]
+    },
+    {
+      "source": "WhatsApp",
+      "target": "backup",
+      "weight": 4,
+      "contexts": [
+        "🌅 Cron Job: Relatório Maricá Film Commission",
+        "Notas técnicas",
+        "Sessão da tarde (15h–16h30)"
+      ]
+    },
+    {
+      "source": "Apple",
+      "target": "backup",
+      "weight": 4,
+      "contexts": [
+        "2026-03-15 10:28 — Sessão com Zica (Gospia group)",
+        "Sessão tarde 16/03/2026 — Gospia iOS App Store",
+        "Atualização 16:41 — Sessão tarde"
+      ]
+    },
+    {
+      "source": "Apple",
+      "target": "Eduardo",
+      "weight": 4,
+      "contexts": [
+        "Sessão tarde 16/03/2026 — Gospia iOS App Store",
+        "Sessão da tarde (15h–16h30)",
+        "Testes Executados"
+      ]
+    },
+    {
+      "source": "backup",
+      "target": "cron",
+      "weight": 4,
+      "contexts": [
+        "Sessão da tarde (15h–16h30)",
+        "Atualização 16:41 — Sessão tarde",
+        "🖥️ Mac Guardian (Mac Specialist)"
+      ]
+    },
+    {
+      "source": "OpenClaw",
+      "target": "watchdog",
+      "weight": 4,
+      "contexts": [
+        "Sessão Tarde (17:30–19:18 São Paulo) — Correções N8n + Dashb",
+        "📋 PROJETOS DISCUTIDOS (cronológico)",
+        "4. Nosso Sistema de Memória (Tita/OpenClaw) — Diagnóstico"
+      ]
+    },
+    {
+      "source": "Helber",
+      "target": "deploy",
+      "weight": 4,
+      "contexts": [
+        "📊 DASHBOARD — O QUE FUNCIONA DE VERDADE",
+        "🎯 PROMESSAS CUMPRIDAS HOJE",
+        "Detalhes por Módulo"
+      ]
+    },
+    {
+      "source": "Elber",
+      "target": "deploy",
+      "weight": 4,
+      "contexts": [
+        "📊 DASHBOARD — O QUE FUNCIONA DE VERDADE",
+        "🎯 PROMESSAS CUMPRIDAS HOJE",
+        "Detalhes por Módulo"
+      ]
+    },
+    {
+      "source": "NFS-e",
+      "target": "Zica",
+      "weight": 4,
+      "contexts": [
+        "Detalhes por Módulo",
+        "Testes Executados"
+      ]
+    },
+    {
+      "source": "NFS-e",
+      "target": "embeddings",
+      "weight": 4,
+      "contexts": [
+        "Detalhes por Módulo",
+        "Testes Executados"
+      ]
+    },
+    {
+      "source": "NFS-e",
+      "target": "memória",
+      "weight": 4,
+      "contexts": [
+        "Detalhes por Módulo",
+        "Testes Executados"
+      ]
+    },
+    {
+      "source": "Dashboard",
+      "target": "NFS-e",
+      "weight": 4,
+      "contexts": [
+        "Testes Executados"
+      ]
+    },
+    {
+      "source": "Helber",
+      "target": "RAG",
+      "weight": 4,
+      "contexts": [
+        "📁 Documentos de Referência (pasta-do-tita/)",
+        "🏗️ INFRAESTRUTURA MENCIONADA",
+        "🔑 CREDENCIAIS E CAMINHOS MENCIONADOS"
+      ]
+    },
+    {
+      "source": "Elber",
+      "target": "RAG",
+      "weight": 4,
+      "contexts": [
+        "📁 Documentos de Referência (pasta-do-tita/)",
+        "🏗️ INFRAESTRUTURA MENCIONADA",
+        "🔑 CREDENCIAIS E CAMINHOS MENCIONADOS"
+      ]
+    },
+    {
+      "source": "Helber",
+      "target": "Kratos",
+      "weight": 3,
+      "contexts": [
+        "Quem sou eu",
+        "Conhecimento: NFS-e e Tributação (06/03/2026)"
+      ]
+    },
+    {
+      "source": "Elber",
+      "target": "Kratos",
+      "weight": 3,
+      "contexts": [
+        "Quem sou eu",
+        "Conhecimento: NFS-e e Tributação (06/03/2026)"
+      ]
+    },
+    {
+      "source": "Helber",
+      "target": "WhatsApp",
+      "weight": 3,
+      "contexts": [
+        "Helber — meu comandante",
+        "Sessão da tarde (15h–16h30)",
+        "Regras de Média Confiança (3-9 confirmações)"
+      ]
+    },
+    {
+      "source": "Manda a Nota",
+      "target": "Titanio",
+      "weight": 3,
+      "contexts": [
+        "Projetos — status (atualizado 28/03/2026)",
+        "🏆 Manda a Nota — Produto Principal (10/03/2026)",
+        "📊 PROJETOS DISCUTIDOS E STATUS"
+      ]
+    },
+    {
+      "source": "Android",
+      "target": "Apple",
+      "weight": 3,
+      "contexts": [
+        "Projetos — status (atualizado 28/03/2026)",
+        "Ou dentro do Xcode: Xcode → Open Developer Tool → Simulator",
+        "Configura capturas automáticas em todos os tamanhos"
+      ]
+    },
+    {
+      "source": "MEI",
+      "target": "mandaanota",
+      "weight": 3,
+      "contexts": [
+        "Conhecimento: NFS-e e Tributação (06/03/2026)",
+        "🏆 Manda a Nota — Produto Principal (10/03/2026)"
+      ]
+    },
+    {
+      "source": "MEI",
+      "target": "Manda a Nota",
+      "weight": 3,
+      "contexts": [
+        "🏆 Manda a Nota — Produto Principal (10/03/2026)",
+        "Testes Executados"
+      ]
+    },
+    {
+      "source": "Eduardo",
+      "target": "Maricá Film Commission",
+      "weight": 3,
+      "contexts": [
+        "Problema do Site Maricá Film Commission - RESOLVIDO ✅",
+        "12:00–17:00 — Tarde de segunda-feira",
+        "Check Matinal (07:00)"
+      ]
+    },
+    {
+      "source": "Google",
+      "target": "Maricá Film Commission",
+      "weight": 3,
+      "contexts": [
+        "Problema do Site Maricá Film Commission - RESOLVIDO ✅",
+        "Maricá Film Commission - Correções de fotos e vídeos",
+        "12:00–17:00 — Tarde de segunda-feira"
+      ]
+    },
+    {
+      "source": "Google",
+      "target": "MEI",
+      "weight": 3,
+      "contexts": [
+        "Problema do Site Maricá Film Commission - RESOLVIDO ✅",
+        "19:45 - 🚀 KITE-ME ENVIADO PARA PLAY STORE REVIEW!",
+        "2. Modelos de Negócio com Barreira Zero"
+      ]
+    },
+    {
+      "source": "Google",
+      "target": "watchdog",
+      "weight": 3,
+      "contexts": [
+        "Site Maricá Film Commission - Otimização de Performance (19:",
+        "Estado do Sistema",
+        "2026-03-11 18:47 - Heartbeat Alert"
+      ]
+    },
+    {
+      "source": "Maricá Film Commission",
+      "target": "WhatsApp",
+      "weight": 3,
+      "contexts": [
+        "Maricá Film Commission - Site Down",
+        "🌅 Cron Job: Relatório Maricá Film Commission",
+        "Context"
+      ]
+    },
+    {
+      "source": "Android",
+      "target": "backup",
+      "weight": 3,
+      "contexts": [
+        "Operação 2.0 - Major Progress",
+        "20:30 — Gospia Mobile App: Rádio + Voice Mode 🎤📻"
+      ]
+    },
+    {
+      "source": "KidsHQ",
+      "target": "RAG",
+      "weight": 3,
+      "contexts": [
+        "09:03 — Flush de memória persistente #4 (cron)",
+        "🔍 DEBUG HUNTER — Detalhes Recuperados",
+        "memory-index.md"
+      ]
+    },
+    {
+      "source": "KidsHQ",
+      "target": "watchdog",
+      "weight": 3,
+      "contexts": [
+        "21:03 — Flush de memória persistente #8 (cron)",
+        "17:02 — Heartbeat (post-compaction)",
+        "2026-03-11 18:47 - Heartbeat Alert"
+      ]
+    },
+    {
+      "source": "MEI",
+      "target": "cron",
+      "weight": 3,
+      "contexts": [
+        "12:03 — Flush de memória persistente #5 (cron)",
+        "00:03 — Flush de memória persistente #1 (cron)"
+      ]
+    },
+    {
+      "source": "MEI",
+      "target": "watchdog",
+      "weight": 3,
+      "contexts": [
+        "12:03 — Flush de memória persistente #5 (cron)",
+        "00:03 — Flush de memória persistente #1 (cron)"
+      ]
+    },
+    {
+      "source": "WhatsApp",
+      "target": "cron",
+      "weight": 3,
+      "contexts": [
+        "🌅 Cron Job: Relatório Maricá Film Commission",
+        "Sessão da tarde (15h–16h30)",
+        "💰 MONEY MAKER — Detalhes Recuperados (MAIS ATIVO)"
+      ]
+    },
+    {
+      "source": "API",
+      "target": "Apple",
+      "weight": 3,
+      "contexts": [
+        "Sessão tarde 16/03/2026 — Gospia iOS App Store",
+        "Atualização 16:41 — Sessão tarde",
+        "Configura capturas automáticas em todos os tamanhos"
+      ]
+    },
+    {
+      "source": "Apple",
+      "target": "certificado",
+      "weight": 3,
+      "contexts": [
+        "Sessão tarde 16/03/2026 — Gospia iOS App Store",
+        "App Store Connect — Guia Completo 2025"
+      ]
+    },
+    {
+      "source": "Tiago",
+      "target": "deploy",
+      "weight": 3,
+      "contexts": [
+        "📊 DASHBOARD — O QUE FUNCIONA DE VERDADE",
+        "🎯 PROMESSAS CUMPRIDAS HOJE",
+        "📁 Documentos de Referência (pasta-do-tita/)"
+      ]
+    },
+    {
+      "source": "Tita",
+      "target": "embeddings",
+      "weight": 3,
+      "contexts": [
+        "Testes Executados",
+        "6. Conclusão",
+        "2. Tipos de Memória — Episódica vs Semântica vs Procedural"
+      ]
+    },
+    {
+      "source": "RAG",
+      "target": "iOS",
+      "weight": 3,
+      "contexts": [
+        "🔍 DEBUG HUNTER — Detalhes Recuperados",
+        "4. Nosso Sistema de Memória (Tita/OpenClaw) — Diagnóstico",
+        "6. Aplicações Diretas para a Tita"
+      ]
+    },
+    {
+      "source": "Manda a Nota",
+      "target": "Tikanawá",
+      "weight": 2,
+      "contexts": [
+        "Projetos — status (atualizado 28/03/2026)",
+        "Próximos passos (última atualização: 23/03/2026)"
+      ]
+    },
+    {
+      "source": "Manda a Nota",
+      "target": "Micro SaaS",
+      "weight": 2,
+      "contexts": [
+        "Projetos — status (atualizado 28/03/2026)",
+        "Próximos passos (última atualização: 23/03/2026)"
+      ]
+    },
+    {
+      "source": "Micro SaaS",
+      "target": "Tikanawá",
+      "weight": 2,
+      "contexts": [
+        "Projetos — status (atualizado 28/03/2026)",
+        "Próximos passos (última atualização: 23/03/2026)"
+      ]
+    },
+    {
+      "source": "Tikanawá",
+      "target": "iOS",
+      "weight": 2,
+      "contexts": [
+        "Projetos — status (atualizado 28/03/2026)",
+        "Próximos passos (última atualização: 23/03/2026)"
+      ]
+    },
+    {
+      "source": "Apple",
+      "target": "Tikanawá",
+      "weight": 2,
+      "contexts": [
+        "Projetos — status (atualizado 28/03/2026)",
+        "Próximos passos (última atualização: 23/03/2026)"
+      ]
+    },
+    {
+      "source": "Memory Engine",
+      "target": "Micro SaaS",
+      "weight": 2,
+      "contexts": [
+        "Projetos — status (atualizado 28/03/2026)"
+      ]
+    },
+    {
+      "source": "Micro SaaS",
+      "target": "iOS",
+      "weight": 2,
+      "contexts": [
+        "Projetos — status (atualizado 28/03/2026)",
+        "Próximos passos (última atualização: 23/03/2026)"
+      ]
+    },
+    {
+      "source": "Apple",
+      "target": "Micro SaaS",
+      "weight": 2,
+      "contexts": [
+        "Projetos — status (atualizado 28/03/2026)",
+        "Próximos passos (última atualização: 23/03/2026)"
+      ]
+    },
+    {
+      "source": "NFS-e",
+      "target": "certificado",
+      "weight": 2,
+      "contexts": [
+        "Conhecimento: NFS-e e Tributação (06/03/2026)"
+      ]
+    },
+    {
+      "source": "certificado",
+      "target": "iOS",
+      "weight": 2,
+      "contexts": [
+        "Conhecimento: NFS-e e Tributação (06/03/2026)",
+        "Certificado de distribuição expirou (válido por 1 ano)"
+      ]
+    },
+    {
+      "source": "Tita",
+      "target": "mandaanota",
+      "weight": 2,
+      "contexts": [
+        "🏆 Manda a Nota — Produto Principal (10/03/2026)",
+        "2026-03-12 — Final do Dia"
+      ]
+    },
+    {
+      "source": "Titanio",
+      "target": "mandaanota",
+      "weight": 2,
+      "contexts": [
+        "🏆 Manda a Nota — Produto Principal (10/03/2026)",
+        "2026-03-12 — Final do Dia"
+      ]
+    },
+    {
+      "source": "API",
+      "target": "mandaanota",
+      "weight": 2,
+      "contexts": [
+        "🏆 Manda a Nota — Produto Principal (10/03/2026)"
+      ]
+    },
+    {
+      "source": "iOS",
+      "target": "mandaanota",
+      "weight": 2,
+      "contexts": [
+        "🏆 Manda a Nota — Produto Principal (10/03/2026)",
+        "2026-03-12 — Final do Dia"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "target": "iOS",
+      "weight": 2,
+      "contexts": [
+        "🏆 Manda a Nota — Produto Principal (10/03/2026)",
+        "9. Requisitos Play Store 2025/2026"
+      ]
+    },
+    {
+      "source": "Memory Engine",
+      "target": "memória",
+      "weight": 2,
+      "contexts": [
+        "📅 28/03/2026 — Memory Engine v2",
+        "🔍 Debug Report — Memory Engine v1.0"
+      ]
+    },
+    {
+      "source": "Caio",
+      "target": "Tiago",
+      "weight": 2,
+      "contexts": [
+        "Equipe",
+        "Context"
+      ]
+    },
+    {
+      "source": "Caio",
+      "target": "Elber",
+      "weight": 2,
+      "contexts": [
+        "Equipe",
+        "Context"
+      ]
+    },
+    {
+      "source": "Tita",
+      "target": "Tita Nio",
+      "weight": 2,
+      "contexts": [
+        "Tita Nio Campaign - Projeto Criado (14:20)",
+        "Context"
+      ]
+    },
+    {
+      "source": "Android",
+      "target": "Tita Nio",
+      "weight": 2,
+      "contexts": [
+        "Tita Nio Campaign - Projeto Criado (14:20)",
+        "Context"
+      ]
+    },
+    {
+      "source": "Android",
+      "target": "Maricá Film Commission",
+      "weight": 2,
+      "contexts": [
+        "Tita Nio Campaign - Projeto Criado (14:20)",
+        "Context"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "target": "Titanio",
+      "weight": 2,
+      "contexts": [
+        "~00:15 — Heartbeat Check",
+        "07:30 — KiteMe v4.0 Enviado pra Play Store! 🚀"
+      ]
+    },
+    {
+      "source": "Tiago",
+      "target": "backup",
+      "weight": 2,
+      "contexts": [
+        "15:45 — Operação KiteMe v3.5 Iniciada",
+        "🎰 Polymarket Trading Bot — Setup Completo"
+      ]
+    },
+    {
+      "source": "cron",
+      "target": "deploy",
+      "weight": 2,
+      "contexts": [
+        "16:15-16:45 — KiteMe Backend Fixes & Deploy Attempts",
+        "3. INFRAESTRUTURA GRATUITA PARA AGENTES"
+      ]
+    },
+    {
+      "source": "Zica",
+      "target": "backup",
+      "weight": 2,
+      "contexts": [
+        "00:02 — Gospia Session Fix (27/02)",
+        "Notas técnicas"
+      ]
+    },
+    {
+      "source": "KidsHQ",
+      "target": "Zica",
+      "weight": 2,
+      "contexts": [
+        "09:00 — Flush de memória persistente (cron)",
+        "21:03 — Flush de memória persistente #7 (cron)"
+      ]
+    },
+    {
+      "source": "Android",
+      "target": "Zica",
+      "weight": 2,
+      "contexts": [
+        "Sessão Gospia - Build e Deploy Play Store (tarde)"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "target": "WhatsApp",
+      "weight": 2,
+      "contexts": [
+        "Sessão Gospia - Build e Deploy Play Store (tarde)"
+      ]
+    },
+    {
+      "source": "App Store",
+      "target": "Eduardo",
+      "weight": 2,
+      "contexts": [
+        "Sessão tarde 16/03/2026 — Gospia iOS App Store",
+        "Sessão da tarde (15h–16h30)"
+      ]
+    },
+    {
+      "source": "Gospia",
+      "target": "certificado",
+      "weight": 2,
+      "contexts": [
+        "Sessão tarde 16/03/2026 — Gospia iOS App Store",
+        "⚠️ Observações para Modificações"
+      ]
+    },
+    {
+      "source": "App Store",
+      "target": "Zica",
+      "weight": 2,
+      "contexts": [
+        "Gospia — App Store Submit"
+      ]
+    },
+    {
+      "source": "Apple",
+      "target": "Zica",
+      "weight": 2,
+      "contexts": [
+        "Gospia — App Store Submit",
+        "Testes Executados"
+      ]
+    },
+    {
+      "source": "App Store",
+      "target": "MEI",
+      "weight": 2,
+      "contexts": [
+        "Sessão da tarde (15h–16h30)",
+        "Configura capturas automáticas em todos os tamanhos"
+      ]
+    },
+    {
+      "source": "MEI",
+      "target": "backup",
+      "weight": 2,
+      "contexts": [
+        "Sessão da tarde (15h–16h30)",
+        "Testes Executados"
+      ]
+    },
+    {
+      "source": "Apple",
+      "target": "OpenClaw",
+      "weight": 2,
+      "contexts": [
+        "Atualização 16:41 — Sessão tarde",
+        "Dispositivos Ativos"
+      ]
+    },
+    {
+      "source": "Apple",
+      "target": "Google",
+      "weight": 2,
+      "contexts": [
+        "Atualização 16:41 — Sessão tarde",
+        "Configura capturas automáticas em todos os tamanhos"
+      ]
+    },
+    {
+      "source": "Dashboard",
+      "target": "Victor Capital",
+      "weight": 2,
+      "contexts": [
+        "Atualização 16:41 — Sessão tarde",
+        "💰 Victor Capital (Fund Hunter)"
+      ]
+    },
+    {
+      "source": "RAG",
+      "target": "Zica",
+      "weight": 2,
+      "contexts": [
+        "🎰 Polymarket Trading Bot — Setup Completo",
+        "23:36 — Sessão Polymarket (continuação final)"
+      ]
+    },
+    {
+      "source": "Helber",
+      "target": "embeddings",
+      "weight": 2,
+      "contexts": [
+        "Detalhes por Módulo",
+        "Testes Executados"
+      ]
+    },
+    {
+      "source": "Manda a Nota",
+      "target": "Zica",
+      "weight": 2,
+      "contexts": [
+        "Detalhes por Módulo",
+        "Testes Executados"
+      ]
+    },
+    {
+      "source": "Elber",
+      "target": "embeddings",
+      "weight": 2,
+      "contexts": [
+        "Detalhes por Módulo",
+        "Testes Executados"
+      ]
+    },
+    {
+      "source": "Manda a Nota",
+      "target": "memória",
+      "weight": 2,
+      "contexts": [
+        "Detalhes por Módulo",
+        "Testes Executados"
+      ]
+    },
+    {
+      "source": "embeddings",
+      "target": "iOS",
+      "weight": 2,
+      "contexts": [
+        "Detalhes por Módulo",
+        "O que foi testado"
+      ]
+    },
+    {
+      "source": "Helber",
+      "target": "Memory Engine",
+      "weight": 2,
+      "contexts": [
+        "Estrutura Implementada",
+        "Veredicto"
+      ]
+    },
+    {
+      "source": "Elber",
+      "target": "Memory Engine",
+      "weight": 2,
+      "contexts": [
+        "Estrutura Implementada",
+        "Veredicto"
+      ]
+    },
+    {
+      "source": "Titanio",
+      "target": "embeddings",
+      "weight": 2,
+      "contexts": [
+        "Testes Executados",
+        "2. Tipos de Memória — Episódica vs Semântica vs Procedural"
+      ]
+    },
+    {
+      "source": "Eduardo",
+      "target": "NFS-e",
+      "weight": 2,
+      "contexts": [
+        "Testes Executados"
+      ]
+    },
+    {
+      "source": "Gospia",
+      "target": "Manda a Nota",
+      "weight": 2,
+      "contexts": [
+        "Testes Executados"
+      ]
+    },
+    {
+      "source": "Dashboard",
+      "target": "Manda a Nota",
+      "weight": 2,
+      "contexts": [
+        "Testes Executados",
+        "📊 PROJETOS DISCUTIDOS E STATUS"
+      ]
+    },
+    {
+      "source": "Gospia",
+      "target": "NFS-e",
+      "weight": 2,
+      "contexts": [
+        "Testes Executados"
+      ]
+    },
+    {
+      "source": "Apple",
+      "target": "NFS-e",
+      "weight": 2,
+      "contexts": [
+        "Testes Executados"
+      ]
+    },
+    {
+      "source": "NFS-e",
+      "target": "deploy",
+      "weight": 2,
+      "contexts": [
+        "Testes Executados"
+      ]
+    },
+    {
+      "source": "Apple",
+      "target": "memória",
+      "weight": 2,
+      "contexts": [
+        "Testes Executados",
+        "3. Soluções Encontradas"
+      ]
+    },
+    {
+      "source": "Tiago",
+      "target": "watchdog",
+      "weight": 2,
+      "contexts": [
+        "📊 Status Atual (Março 2026)",
+        "📋 PROJETOS DISCUTIDOS (cronológico)"
+      ]
+    },
+    {
+      "source": "Apple",
+      "target": "WhatsApp",
+      "weight": 2,
+      "contexts": [
+        "Configura capturas automáticas em todos os tamanhos"
+      ]
+    },
+    {
+      "source": "App Store",
+      "target": "WhatsApp",
+      "weight": 2,
+      "contexts": [
+        "Configura capturas automáticas em todos os tamanhos"
+      ]
+    },
+    {
+      "source": "KidsHQ",
+      "target": "WhatsApp",
+      "weight": 2,
+      "contexts": [
+        "Skills e Conhecimento Adquirido",
+        "5. Integrações N8n com WhatsApp, GitHub e Sistemas Internos"
+      ]
+    },
+    {
+      "source": "RAG",
+      "target": "Titanio",
+      "weight": 2,
+      "contexts": [
+        "🔑 CREDENCIAIS E CAMINHOS MENCIONADOS",
+        "memory-index.md"
+      ]
+    },
+    {
+      "source": "RAG",
+      "target": "cron",
+      "weight": 2,
+      "contexts": [
+        "6. Aplicações Diretas para a Tita",
+        "Entregáveis Concretos — Por Onde Começar"
+      ]
+    },
+    {
+      "source": "Eduardo",
+      "target": "embeddings",
+      "weight": 2,
+      "contexts": [
+        "2. Tipos de Memória — Episódica vs Semântica vs Procedural"
+      ]
+    },
+    {
+      "source": "API",
+      "target": "Telegram",
+      "weight": 2,
+      "contexts": [
+        "2. Afiliação Automatizada com IA"
+      ]
+    }
+  ],
+  "meta": {
+    "built_at": "2026-03-28T12:08:19.334199",
+    "total_chunks": 1971
+  }
+}

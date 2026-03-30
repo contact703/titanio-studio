@@ -1,0 +1,24 @@
+{
+  "previousModel": "claude-sonnet-4-5",
+  "newModel": "anthropic/claude-haiku-3-5",
+  "timestamp": "2026-03-20T20:03:18.799Z",
+  "messageCount": 3,
+  "recentMessages": [
+    {
+      "sender": "user",
+      "message": "Olá, estou testando a troca de modelo",
+      "timestamp": "2025-01-01T10:00:00Z"
+    },
+    {
+      "sender": "tita",
+      "message": "Olá! Posso ajudar você.",
+      "timestamp": "2025-01-01T10:00:05Z"
+    },
+    {
+      "sender": "user",
+      "message": "Qual é o status do projeto titanio?",
+      "timestamp": "2025-01-01T10:01:00Z"
+    }
+  ],
+  "summary": "Contexto transferido de claude-sonnet-4-5 → anthropic/claude-haiku-3-5"
+}

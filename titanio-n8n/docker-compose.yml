@@ -1,0 +1,82 @@
+version: '3.8'
+
+services:
+  n8n:
+    image: n8nio/n8n:latest
+    container_name: titanio-n8n
+    restart: unless-stopped
+    ports:
+      - "5678:5678"
+    environment:
+      # --- Core ---
+      N8N_HOST: "192.168.18.174"
+      N8N_PORT: "5678"
+      N8N_PROTOCOL: "http"
+      WEBHOOK_URL: "http://192.168.18.174:5678"
+
+      # --- Auth (trocar antes de usar em produção) ---
+      N8N_BASIC_AUTH_ACTIVE: "true"
+      N8N_BASIC_AUTH_USER: "${N8N_USER:-titanio}"
+      N8N_BASIC_AUTH_PASSWORD: "${N8N_PASSWORD:-titanio2026}"
+
+      # --- Timezone ---
+      GENERIC_TIMEZONE: "America/Sao_Paulo"
+      TZ: "America/Sao_Paulo"
+
+      # --- Execuções ---
+      EXECUTIONS_DATA_SAVE_ON_ERROR: "all"
+      EXECUTIONS_DATA_SAVE_ON_SUCCESS: "last"
+      EXECUTIONS_DATA_SAVE_MANUAL_EXECUTIONS: "true"
+      EXECUTIONS_DATA_PRUNE: "true"
+      EXECUTIONS_DATA_MAX_AGE: "72"  # horas
+
+      # --- Editor ---
+      N8N_EDITOR_BASE_URL: "http://192.168.18.174:5678"
+      N8N_DISABLE_PRODUCTION_MAIN_PROCESS: "false"
+
+      # --- Segurança ---
+      N8N_ENCRYPTION_KEY: "${N8N_ENCRYPTION_KEY:-titanio-enc-key-2026-change-me}"
+
+      # --- Integrações Titanio ---
+      TITANIO_DASHBOARD_URL: "http://host.docker.internal:4444"
+      OPENCLAW_URL: "http://host.docker.internal:18789"
+      TITANIO_WEBHOOK_SECRET: "${TITANIO_WEBHOOK_SECRET:-titanio-secret-2026}"
+      EDUARDO_WHATSAPP: "${EDUARDO_WHATSAPP:-+553183838181}"
+      GOSPIA_GROUP_ID: "${GOSPIA_GROUP_ID:-}"
+
+      # --- GitHub sync ---
+      GITHUB_TOKEN: "${GITHUB_TOKEN:-}"
+      GITHUB_REPO_OWNER: "contact703"
+      GITHUB_REPO_NAME: "tita-memory"
+
+      # --- Logs ---
+      N8N_LOG_LEVEL: "info"
+      N8N_LOG_OUTPUT: "console"
+
+    volumes:
+      - n8n_data:/home/node/.n8n
+      - ./workflows:/home/node/.n8n/workflows-backup  # backup local dos workflows exportados
+
+    extra_hosts:
+      - "host.docker.internal:host-gateway"  # acessa serviços do Mac host
+
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:5678/healthz || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+volumes:
+  n8n_data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: "${N8N_DATA_PATH:-./data}"

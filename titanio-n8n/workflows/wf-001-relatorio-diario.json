@@ -1,0 +1,164 @@
+{
+  "name": "WF-001 · Relatório Diário Titanio",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 9 * * *"
+            }
+          ]
+        }
+      },
+      "id": "cron-trigger",
+      "name": "Cron 9h diário",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "http://host.docker.internal:4444/api/bots",
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "id": "fetch-bots",
+      "name": "GET /api/bots",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [460, 200]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "http://host.docker.internal:4444/api/reports",
+        "qs": {
+          "parameters": [
+            {
+              "name": "date",
+              "value": "={{ $today }}"
+            },
+            {
+              "name": "period",
+              "value": "today"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "id": "fetch-reports",
+      "name": "GET /api/reports",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [460, 400]
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combinationMode": "mergeByPosition",
+        "options": {}
+      },
+      "id": "merge-data",
+      "name": "Merge Bots + Reports",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [680, 300]
+    },
+    {
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "const botsData = $('GET /api/bots').first().json;\nconst reportsData = $('GET /api/reports').first().json;\n\nconst bots = Array.isArray(botsData) ? botsData : (botsData.bots || botsData.data || []);\nconst report = reportsData || {};\n\nconst totalTasks = report.total_tasks ?? bots.reduce((acc, b) => acc + (b.tasks_today || 0), 0);\nconst totalErrors = report.errors ?? bots.filter(b => b.status === 'error').length;\nconst totalTokens = report.total_tokens ?? bots.reduce((acc, b) => acc + (b.tokens_today || 0), 0);\nconst activeBots = bots.filter(b => b.status === 'active' || b.status === 'running').length;\n\nconst now = new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });\nconst dateStr = new Date().toLocaleDateString('pt-BR', { timeZone: 'America/Sao_Paulo', weekday: 'long', day: '2-digit', month: '2-digit' });\n\nconst emoji = totalErrors > 0 ? '⚠️' : totalTasks > 20 ? '🔥' : '📊';\n\nlet botLines = '';\nif (bots.length > 0) {\n  botLines = bots.slice(0, 5).map(b => {\n    const statusEmoji = b.status === 'active' || b.status === 'running' ? '🟢' : b.status === 'error' ? '🔴' : '🟡';\n    return `  ${statusEmoji} *${b.name}*: ${b.tasks_today || 0} tarefas`;\n  }).join('\\n');\n} else {\n  botLines = '  • Nenhum bot registrado ainda';\n}\n\nconst message = [\n  `${emoji} *Relatório Titanio Dashboard*`,\n  `📅 ${dateStr}`,\n  '',\n  `📋 *Tarefas hoje:* ${totalTasks}`,\n  `✅ *Concluídas:* ${totalTasks - totalErrors}`,\n  `❌ *Erros:* ${totalErrors}`,\n  `🤖 *Bots ativos:* ${activeBots}/${bots.length}`,\n  `🧠 *Tokens usados:* ${totalTokens.toLocaleString('pt-BR')}`,\n  '',\n  '*Bots:*',\n  botLines,\n  '',\n  `_Gerado às ${now}_`,\n  `_Titanio Dashboard · localhost:4444_`\n].join('\\n');\n\nreturn [{ json: { message, totalTasks, totalErrors, activeBots, bots: bots.length } }];"
+      },
+      "id": "build-message",
+      "name": "Formatar Relatório",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [900, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:18789/api/message/send",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"channel\": \"whatsapp\",\n  \"to\": \"{{ $env.GOSPIA_GROUP_ID }}\",\n  \"message\": {{ JSON.stringify($json.message) }}\n}",
+        "options": {
+          "timeout": 15000
+        }
+      },
+      "id": "send-whatsapp",
+      "name": "Enviar WhatsApp Gospia",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [1120, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:4444/api/events/log",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"type\": \"daily_report_sent\",\n  \"workflow\": \"WF-001\",\n  \"timestamp\": \"{{ $now.toISO() }}\",\n  \"stats\": {\n    \"total_tasks\": {{ $('Formatar Relatório').item.json.totalTasks }},\n    \"errors\": {{ $('Formatar Relatório').item.json.totalErrors }},\n    \"bots\": {{ $('Formatar Relatório').item.json.bots }}\n  }\n}",
+        "options": {}
+      },
+      "id": "log-event",
+      "name": "Log no Dashboard",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [1340, 300],
+      "continueOnFail": true
+    }
+  ],
+  "connections": {
+    "Cron 9h diário": {
+      "main": [
+        [
+          { "node": "GET /api/bots", "type": "main", "index": 0 },
+          { "node": "GET /api/reports", "type": "main", "index": 0 }
+        ]
+      ]
+    },
+    "GET /api/bots": {
+      "main": [[{ "node": "Merge Bots + Reports", "type": "main", "index": 0 }]]
+    },
+    "GET /api/reports": {
+      "main": [[{ "node": "Merge Bots + Reports", "type": "main", "index": 1 }]]
+    },
+    "Merge Bots + Reports": {
+      "main": [[{ "node": "Formatar Relatório", "type": "main", "index": 0 }]]
+    },
+    "Formatar Relatório": {
+      "main": [[{ "node": "Enviar WhatsApp Gospia", "type": "main", "index": 0 }]]
+    },
+    "Enviar WhatsApp Gospia": {
+      "main": [[{ "node": "Log no Dashboard", "type": "main", "index": 0 }]]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": ""
+  },
+  "tags": ["titanio", "relatorio", "whatsapp"],
+  "meta": {
+    "description": "Envia relatório diário com status de todos os bots do Titanio para o grupo Gospia via WhatsApp, todo dia às 9h.",
+    "version": "1.0.0"
+  }
+}

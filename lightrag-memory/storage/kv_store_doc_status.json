@@ -1,0 +1,261 @@
+{
+  "doc-491f8d58fed341ac732bad3e2118f8f8": {
+    "status": "processed",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-491f8d58fed341ac732bad3e2118f8f8"
+    ],
+    "content_summary": "O iOS Specialist é responsável por builds locais no Xcode sem EAS. Ele trabalha com React Native e Expo. O bundle ID do GospIA é com.titanio.gospia. O backend-specialist cuida de Next.js e Supabase. O security-guardian faz auditorias semanais de segu...",
+    "content_length": 256,
+    "created_at": "2026-03-23T16:54:55.578931+00:00",
+    "updated_at": "2026-03-23T16:56:12.421304+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260323_135455_99d4fa6b",
+    "metadata": {
+      "processing_start_time": 1774284895,
+      "processing_end_time": 1774284972
+    }
+  },
+  "doc-21f1fe7386a140b9e8eb69b0ce93d04c": {
+    "status": "failed",
+    "error_msg": "do embedding request: Post \"http://127.0.0.1:55393/embedding\": EOF (status code: 500)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-21f1fe7386a140b9e8eb69b0ce93d04c"
+    ],
+    "content_summary": "=== ESPECIALISTA: backend-specialist ===\n# backend-specialist — Lições Aprendidas\n\n## 🔴 Regras Críticas\n- Ao terminar qualquer tarefa: atualizar este arquivo\n- Formato: data, categoria, lição, resultado\n# iOS Specialist — Contexto (injetar no início ...",
+    "content_length": 2931,
+    "created_at": "2026-03-23T16:57:20.159874+00:00",
+    "updated_at": "2026-03-23T17:18:38.085154+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260323_135719_4a0c2332",
+    "metadata": {
+      "processing_start_time": 1774286314,
+      "processing_end_time": 1774286318
+    }
+  },
+  "doc-dd05f28a71961c08cabdb8963260dc46": {
+    "status": "processed",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-dd05f28a71961c08cabdb8963260dc46"
+    ],
+    "content_summary": "er not found\n- **Causa:** versão incompatível\n- **Fix:** atualizar expo-av no package.json\n\n**Problema 2:** ReactCodegen .mm not found (BUILD FAILED)\n- **Causa:** prebuild não terminou antes do `xcodebuild archive`\n- **Fix:** sempre aguardar \"✔ Expo ...",
+    "content_length": 2961,
+    "created_at": "2026-03-23T16:57:35.339111+00:00",
+    "updated_at": "2026-03-23T17:02:23.451535+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260323_135735_912d4185",
+    "metadata": {
+      "processing_start_time": 1774285227,
+      "processing_end_time": 1774285343
+    }
+  },
+  "doc-4ae5d19350b9789a3605676107592fe8": {
+    "status": "processed",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-4ae5d19350b9789a3605676107592fe8"
+    ],
+    "content_summary": "com.titanio.gospia`\n- Apple Team: `TY646U2BYX`\n- Provisioning Profile: `c5d25b99-a7ed-4424-94fb-7cccb3677fcb`\n- Certs: `/tmp/gospia-certs/`\n- App Store ID: `6760674894`\n\n## Regras que nunca esqueço\n1. NUNCA EAS — sempre xcodebuild local\n2. Prebuild D...",
+    "content_length": 2929,
+    "created_at": "2026-03-23T16:57:50.811517+00:00",
+    "updated_at": "2026-03-23T17:15:45.216003+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260323_135750_a0ef4e0e",
+    "metadata": {
+      "processing_start_time": 1774285993,
+      "processing_end_time": 1774286145
+    }
+  },
+  "doc-1f96bfb541afd67c14f9e42163fb4d0a": {
+    "status": "processed",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-1f96bfb541afd67c14f9e42163fb4d0a"
+    ],
+    "content_summary": "ício de cada sessão)\n\n## Quem sou\nEspecialista OpenClaw da squad Titanio. Conheço a plataforma por dentro, sei configurar agentes, criar skills, integrar canais e otimizar o sistema.\n\n## Nossa instalação\n- Mac Mini arm64, Darwin 24.6.0, Node v22.22.0...",
+    "content_length": 2927,
+    "created_at": "2026-03-23T16:58:24.512295+00:00",
+    "updated_at": "2026-03-23T17:11:05.542077+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260323_135824_186ae35a",
+    "metadata": {
+      "processing_start_time": 1774285678,
+      "processing_end_time": 1774285865
+    }
+  },
+  "doc-8ee78aa11af474f805bf70860814ecce": {
+    "status": "processed",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-8ee78aa11af474f805bf70860814ecce"
+    ],
+    "content_summary": "travado\n- **Automação de formulários:** captcha é a barreira final — ter sessão ativa no browser ajuda\n\n## 2026-03-19\n\n### Y Combinator (YC W2027)\n- Status: **magic link enviado** para contact@titaniofilms.com\n- Bloqueio: acesso ao email — senha do s...",
+    "content_length": 2915,
+    "created_at": "2026-03-23T16:58:39.850634+00:00",
+    "updated_at": "2026-03-23T17:00:25.073651+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260323_135839_01321782",
+    "metadata": {
+      "processing_start_time": 1774285123,
+      "processing_end_time": 1774285225
+    }
+  },
+  "doc-fc474458c065038296b12622d391d1e5": {
+    "status": "processed",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-fc474458c065038296b12622d391d1e5"
+    ],
+    "content_summary": "TA), sumário 7 capítulos: OK\n✅ [squad] Gere 5 DMs únicas e personalizadas para abordar donos de loja de roupas no Instagram oferecendo pack de legendas por R7. Cada DM diferente, máx 3 linhas, casual, com [NOME] como placeholder. Email: : OK\n✅ [squad...",
+    "content_length": 2920,
+    "created_at": "2026-03-23T17:00:26.876744+00:00",
+    "updated_at": "2026-03-23T17:02:26.989718+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260323_140026_386aa82e",
+    "metadata": {
+      "processing_start_time": 1774285228,
+      "processing_end_time": 1774285346
+    }
+  },
+  "doc-28efe485a38973826ef1f69dbeb726a4": {
+    "status": "processed",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-28efe485a38973826ef1f69dbeb726a4"
+    ],
+    "content_summary": "servação Crucial:** O link fornecido é\n✅ [squad] CONTEXTO ESTRATÉGICO PARA GUARDAR: A Titanio vai realizar testes com 100% de controle por IA em algumas contas de redes sociais. Registre isso como diretriz estratégica e responda com um plano básico :...",
+    "content_length": 2909,
+    "created_at": "2026-03-23T17:02:51.281879+00:00",
+    "updated_at": "2026-03-23T17:04:01.505591+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260323_140251_f3431012",
+    "metadata": {
+      "processing_start_time": 1774285371,
+      "processing_end_time": 1774285441
+    }
+  },
+  "doc-f98aa76804ca7f6ecd7bfffab8d67ada": {
+    "status": "failed",
+    "error_msg": "connection refused (status code: 500)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-f98aa76804ca7f6ecd7bfffab8d67ada"
+    ],
+    "content_summary": "le Play (outubro/2025) e extraia as melhores oportunidades para os apps da Titanio (principalmente Manda a Nota! e Gospia):\n\n---\n\n## Google Play: Novas Ferramen: OK\n✅ [squad] Leia este resumo do blog oficial do Google Play (outubro/2025) e extraia as...",
+    "content_length": 2945,
+    "created_at": "2026-03-23T17:04:07.396122+00:00",
+    "updated_at": "2026-03-23T17:18:38.085420+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260323_140407_5ea1f9e9",
+    "metadata": {
+      "processing_start_time": 1774286314,
+      "processing_end_time": 1774286318
+    }
+  },
+  "doc-2249d6178377ebf1c8b9af2d5d17c841": {
+    "status": "processed",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-2249d6178377ebf1c8b9af2d5d17c841"
+    ],
+    "content_summary": "- StoreKit obrigatório para pagamentos in-app no iOS (não PIX direto)\n- Apple Sign In obrigatório se tiver Google Sign In\n\n### Próximo passo (segunda 16/03/2026):\n- Zica e Eduardo criam Apple Developer Account ($99/ano)\n- Rodar `eas build` para GospI...",
+    "content_length": 2922,
+    "created_at": "2026-03-23T17:07:15.502752+00:00",
+    "updated_at": "2026-03-23T17:13:08.865228+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260323_140715_cab44dc6",
+    "metadata": {
+      "processing_start_time": 1774285866,
+      "processing_end_time": 1774285988
+    }
+  },
+  "doc-ca7497057356c8b4a1e40cfabe483df4": {
+    "status": "processed",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-ca7497057356c8b4a1e40cfabe483df4"
+    ],
+    "content_summary": "nclaw message send \\\n  --channel whatsapp \\\n  --target \"120363405462114071@g.us\" \\\n  --message \"📄 SISTEMA-MEMORIA-APRENDIZADO.md\" \\\n  --media /Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/SISTEMA-MEMORIA-APRENDIZADO.md\n```\n\n### Regras:\n1. Arquivo...",
+    "content_length": 2906,
+    "created_at": "2026-03-23T17:07:58.202343+00:00",
+    "updated_at": "2026-03-23T17:16:00.796011+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260323_140757_a5dda201",
+    "metadata": {
+      "processing_start_time": 1774285995,
+      "processing_end_time": 1774286160
+    }
+  },
+  "doc-e18b22044bc210c241adf9a194d9ca5c": {
+    "status": "failed",
+    "error_msg": "do embedding request: Post \"http://127.0.0.1:55412/embedding\": EOF (status code: 500)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-e18b22044bc210c241adf9a194d9ca5c"
+    ],
+    "content_summary": "browser = p.chromium.launch(headless=True)\n    page = browser.new_page()\n    page.goto(\"https://www.instagram.com/reel/DWND0avCJf_/\", wait_until=\"networkidle\")\n    \n    # Carrega conteúdo real do reel\n    text = page.content()  # HTML com tudo\n    \n ...",
+    "content_length": 2920,
+    "created_at": "2026-03-23T17:11:06.446760+00:00",
+    "updated_at": "2026-03-23T17:18:39.007774+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260323_141106_3a56f0d3",
+    "metadata": {
+      "processing_start_time": 1774286318,
+      "processing_end_time": 1774286319
+    }
+  },
+  "doc-32ec395bb414afdd733a72eb255993d6": {
+    "status": "processed",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-32ec395bb414afdd733a72eb255993d6"
+    ],
+    "content_summary": "yt-dlp sempre\n\n**Dashboard Testing:**\n- ✅ **Playwright** — Automação de browser\n  ```python\n  from playwright.sync_api import sync_playwright\n  page.goto(\"http://localhost:3000\")\n  page.screenshot(path=\"/tmp/screenshot.png\")\n  ```\n\n- ✅ **API endpoint...",
+    "content_length": 2922,
+    "created_at": "2026-03-23T17:13:13.634613+00:00",
+    "updated_at": "2026-03-23T17:17:44.199491+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260323_141313_ee1ae48b",
+    "metadata": {
+      "processing_start_time": 1774286147,
+      "processing_end_time": 1774286264
+    }
+  },
+  "doc-50ae5e0863d4113f32d3796383eecc3d": {
+    "status": "failed",
+    "error_msg": "connection refused (status code: 500)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-50ae5e0863d4113f32d3796383eecc3d"
+    ],
+    "content_summary": "law post (https://www.instagram.com/p/DWMwwMTkepy/)\n- 22/03 15:25: Tita proof post (https://www.instagram.com/p/DWM1AbBEcFC/)\n\n---\n\n### ✅ yt-dlp — FUNCIONA (para videos)\n\n**Data:** 2026-03-22  \n**Status:** ✅ Funciona (com limitações)\n\n**Como usar:**\n...",
+    "content_length": 2903,
+    "created_at": "2026-03-23T17:18:18.896224+00:00",
+    "updated_at": "2026-03-23T17:18:39.007896+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260323_141818_102add57",
+    "metadata": {
+      "processing_start_time": 1774286318,
+      "processing_end_time": 1774286319
+    }
+  },
+  "doc-1f4585f785d3d217c236a90ddc81c26a": {
+    "status": "processed",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-1f4585f785d3d217c236a90ddc81c26a"
+    ],
+    "content_summary": "ção)\n\n### Conclusão\nSistema está 100% operacional e real. Não é simulação. Tudo testado hoje.\n\n=======\n>>>>>>> 64fff9ce788b6cdb7437639dccb62a43588d4436",
+    "content_length": 151,
+    "created_at": "2026-03-23T17:18:34.328953+00:00",
+    "updated_at": "2026-03-23T17:19:10.171010+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260323_141834_fbbb6378",
+    "metadata": {
+      "processing_start_time": 1774286319,
+      "processing_end_time": 1774286350
+    }
+  }
+}

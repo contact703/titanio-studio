@@ -1,0 +1,21 @@
+{
+  "version": "1.0",
+  "workflows": 8,
+  "files": [
+    "code-generator-workflow-LOCAL.json",
+    "code-generator-workflow.json",
+    "content-creator-workflow-LOCAL.json",
+    "content-creator-workflow.json",
+    "game-designer-workflow-LOCAL.json",
+    "game-designer-workflow.json",
+    "qa-tester-workflow-LOCAL.json",
+    "qa-tester-workflow.json"
+  ],
+  "location": "/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/pasta-do-tita/n8n-backup",
+  "importInstructions": [
+    "1. Abrir N8n em http://localhost:5678",
+    "2. Clicar em Menu > Import from file",
+    "3. Selecionar cada .json",
+    "4. Ativar workflow"
+  ]
+}

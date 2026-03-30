@@ -1,0 +1,35 @@
+{
+  "infra": {
+    "score": 5.44,
+    "tasks": 3,
+    "wins": 3,
+    "history": [
+      1,
+      1,
+      1
+    ],
+    "trend": "↑",
+    "win_rate": 100.0
+  },
+  "debug": {
+    "score": 5.3,
+    "tasks": 2,
+    "wins": 2,
+    "history": [
+      1,
+      1
+    ],
+    "trend": "↑",
+    "win_rate": 100.0
+  },
+  "audit": {
+    "score": 5.15,
+    "tasks": 1,
+    "wins": 1,
+    "history": [
+      1
+    ],
+    "trend": "↑",
+    "win_rate": 100.0
+  }
+}

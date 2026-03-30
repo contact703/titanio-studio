@@ -1,0 +1,68 @@
+{
+  "name": "WF-001 · ALERT-BOT",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "bot-done",
+        "options": { "responseMode": "onReceived" }
+      },
+      "id": "webhook",
+      "name": "Webhook POST /n8n/bot-done",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [240, 300],
+      "webhookId": "titanio-bot-done"
+    },
+    {
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "const d = $input.item.json;\nconst statusEmoji = d.status === 'success' ? '✅' : d.status === 'error' ? '🔴' : '🟡';\nconst durationStr = d.duration_ms ? `${Math.round(d.duration_ms/1000)}s` : '';\nconst tokensStr = d.tokens_used ? ` · ${d.tokens_used} tokens` : '';\n\nconst message = [\n  `${statusEmoji} *${d.bot_name}* concluiu!`,\n  '',\n  `📋 ${d.task_title || d.task_id || 'tarefa'}`,\n  durationStr || tokensStr ? `⏱️ ${durationStr}${tokensStr}` : '',\n  d.result ? `\\n📝 ${d.result}` : ''\n].filter(Boolean).join('\\n');\n\nreturn [{ json: { message } }];"
+      },
+      "id": "format-msg",
+      "name": "Formatar Mensagem",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:18789/api/message",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [{ "name": "Content-Type", "value": "application/json" }]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"to\": \"120363405462114071@g.us\",\n  \"message\": {{ JSON.stringify($json.message) }}\n}",
+        "options": { "timeout": 15000 }
+      },
+      "id": "send-whatsapp",
+      "name": "POST OpenClaw WhatsApp",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [680, 300]
+    }
+  ],
+  "connections": {
+    "Webhook POST /n8n/bot-done": { "main": [[{ "node": "Formatar Mensagem", "type": "main", "index": 0 }]] },
+    "Formatar Mensagem": { "main": [[{ "node": "POST OpenClaw WhatsApp", "type": "main", "index": 0 }]] }
+  },
+  "active": true,
+  "settings": { "executionOrder": "v1" },
+  "tags": ["titanio", "alert", "webhook"],
+  "meta": {
+    "webhook_url": "http://localhost:5678/webhook/bot-done",
+    "example_payload": {
+      "bot_name": "Code Ninja",
+      "task_id": "task-123",
+      "task_title": "Deploy dashboard v2",
+      "status": "success",
+      "duration_ms": 32000,
+      "tokens_used": 850,
+      "result": "Deploy concluído sem erros."
+    },
+    "version": "2.0.0"
+  }
+}

@@ -1,0 +1,276 @@
+<style>
+.locations-carousel-wrapper {
+  padding: 60px 20px;
+  background-color: #f8f9fa;
+}
+
+.locations-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.locations-header h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #003d7a;
+  margin-bottom: 20px;
+}
+
+.locations-header p {
+  font-size: 16px;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.carousel-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.location-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+
+.location-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.location-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  color: white;
+}
+
+.location-card-category {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 8px;
+}
+
+.location-card-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+}
+
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+
+.carousel-arrow {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #003d7a;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.carousel-arrow:hover {
+  background-color: #002a5a;
+  transform: scale(1.05);
+}
+
+.carousel-arrow:active {
+  transform: scale(0.95);
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.carousel-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ddd;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-dot.active {
+  background-color: #003d7a;
+}
+
+.submit-location-btn {
+  display: block;
+  margin: 40px auto 0;
+  padding: 15px 40px;
+  background-color: #d4a574;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.submit-location-btn:hover {
+  background-color: #c49464;
+}
+
+@media (max-width: 1024px) {
+  .carousel-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .locations-header h2 {
+    font-size: 24px;
+  }
+
+  .location-card {
+    height: 200px;
+  }
+}
+</style>
+
+<div class="locations-carousel-wrapper">
+  <div class="locations-header">
+    <h2>Explore as Locações Únicas de Maricá</h2>
+    <p>Com uma incrível variedade de paisagens — desde praias costeiras até fazendas rurais, cenários urbanos e sítios históricos — Maricá oferece aos cineastas um mundo de possibilidades dentro de uma única região.</p>
+  </div>
+
+  <div class="carousel-container">
+    <div class="carousel-grid" id="carouselGrid"></div>
+
+    <div class="carousel-nav">
+      <button class="carousel-arrow prev" onclick="previousSlide()">‹</button>
+      <div class="carousel-dots" id="carouselDots"></div>
+      <button class="carousel-arrow next" onclick="nextSlide()">›</button>
+    </div>
+  </div>
+
+  <a href="/cadastre-sua-locacao/" class="submit-location-btn">Cadastre Sua Locação</a>
+</div>
+
+<script>
+const locations = [
+  { name: "Praias de Itaipuaçu", category: "Praias", image: "https://maricafilmcommission.com/wp-content/uploads/2025/04/new_events-scaled.jpg", url: "/praias-de-itaipuacu/" },
+  { name: "Praia de Ponta Negra", category: "Praias", image: "https://maricafilmcommission.com/wp-content/uploads/2025/04/new_events-scaled.jpg", url: "/praia-de-ponta-negra/" },
+  { name: "Praia do Recanto", category: "Praias", image: "https://maricafilmcommission.com/wp-content/uploads/2025/04/new_events-scaled.jpg", url: "/farol-de-ponta-negra/" },
+  { name: "Extensão da Restinga", category: "Natureza", image: "https://maricafilmcommission.com/wp-content/uploads/2025/04/new_events-scaled.jpg", url: "/extensao-da-restinga/" },
+  { name: "Lagoa de Araçatiba", category: "Lagos", image: "https://maricafilmcommission.com/wp-content/uploads/2025/04/new_events-scaled.jpg", url: "/lagoa-de-aracatiba-2/" },
+  { name: "Gruta da Sacristia", category: "Natureza", image: "https://maricafilmcommission.com/wp-content/uploads/2025/04/new_events-scaled.jpg", url: "/gruta-da-sacristia/" },
+  { name: "Pedra do Macaco", category: "Natureza", image: "https://maricafilmcommission.com/wp-content/uploads/2025/04/new_events-scaled.jpg", url: "/pedra-do-macaco/" },
+  { name: "Farol de Ponta Negra", category: "Monumentos", image: "https://maricafilmcommission.com/wp-content/uploads/2025/04/new_events-scaled.jpg", url: "/ponta-negra-lighthouse/" },
+  { name: "Igreja Matriz N. Sra. do Amparo", category: "Monumentos", image: "https://maricafilmcommission.com/wp-content/uploads/2025/04/new_events-scaled.jpg", url: "/igreja-matriz-de-nossa-senhora-do-amparo-2/" },
+  { name: "Cinema Henfil", category: "Cultura", image: "https://maricafilmcommission.com/wp-content/uploads/2025/04/new_events-scaled.jpg", url: "/cinema-henfil/" },
+  { name: "Parque Linear Flamengo", category: "Parques", image: "https://maricafilmcommission.com/wp-content/uploads/2025/04/new_events-scaled.jpg", url: "/parque-linear-do-bairro-flamengo/" },
+  { name: "Estádio João Saldanha", category: "Esportes", image: "https://maricafilmcommission.com/wp-content/uploads/2025/04/new_events-scaled.jpg", url: "/estadio-de-futebol-joao-saldanha/" },
+  { name: "Deck do Pôr do Sol", category: "Lazer", image: "https://maricafilmcommission.com/wp-content/uploads/2025/04/new_events-scaled.jpg", url: "/deck-do-por-do-sol/" },
+  { name: "Pedra do Elefante", category: "Natureza", image: "https://maricafilmcommission.com/wp-content/uploads/2025/04/new_events-scaled.jpg", url: "/pedra-do-elefante-2/" },
+  { name: "Orla de Itapeba", category: "Parques", image: "https://maricafilmcommission.com/wp-content/uploads/2025/04/new_events-scaled.jpg", url: "/orla-de-itapeba/" },
+  { name: "Casa de Cultura", category: "Cultura", image: "https://maricafilmcommission.com/wp-content/uploads/2025/04/new_events-scaled.jpg", url: "/casa-de-cultura-pt/" },
+  { name: "Praça Orlando de Barros Pimentel", category: "Urbano", image: "https://maricafilmcommission.com/wp-content/uploads/2025/04/new_events-scaled.jpg", url: "/praca-orlando-de-barros-pimentel/" },
+  { name: "Fazenda Itaocaia", category: "Histórico", image: "https://maricafilmcommission.com/wp-content/uploads/2025/04/new_events-scaled.jpg", url: "/fazenda-itaocaia-pt/" },
+  { name: "Fazenda Joaquim Piñero", category: "Histórico", image: "https://maricafilmcommission.com/wp-content/uploads/2025/04/new_events-scaled.jpg", url: "/fazenda-joaquim-pinero-pt/" },
+  { name: "Aldeia Mata Verde Bonita", category: "Cultural", image: "https://maricafilmcommission.com/wp-content/uploads/2025/04/new_events-scaled.jpg", url: "/aldeia-mata-verde-bonita-pt/" },
+  { name: "Hospital Dr. Che Guevara", category: "Urbano", image: "https://maricafilmcommission.com/wp-content/uploads/2025/04/new_events-scaled.jpg", url: "/hospital-municipal-che-guevara-pt/" }
+];
+
+let currentSlide = 0;
+const cardsPerPage = 3;
+
+function renderCarousel() {
+  const grid = document.getElementById('carouselGrid');
+  const dotsContainer = document.getElementById('carouselDots');
+  if (!grid) return;
+
+  grid.innerHTML = '';
+  dotsContainer.innerHTML = '';
+
+  const totalPages = Math.ceil(locations.length / cardsPerPage);
+  const startIndex = currentSlide * cardsPerPage;
+  const endIndex = Math.min(startIndex + cardsPerPage, locations.length);
+
+  for (let i = startIndex; i < endIndex; i++) {
+    const loc = locations[i];
+    const card = document.createElement('a');
+    card.href = loc.url;
+    card.className = 'location-card';
+    card.style.backgroundImage = "url('" + loc.image + "')";
+    card.innerHTML = '<div class="location-card-overlay"><div class="location-card-category">' + loc.category + '</div><div class="location-card-name">' + loc.name + '</div></div>';
+    grid.appendChild(card);
+  }
+
+  for (let i = 0; i < totalPages; i++) {
+    const dot = document.createElement('button');
+    dot.className = 'carousel-dot' + (i === currentSlide ? ' active' : '');
+    dot.onclick = () => { currentSlide = i; renderCarousel(); };
+    dotsContainer.appendChild(dot);
+  }
+}
+
+function nextSlide() {
+  const totalPages = Math.ceil(locations.length / cardsPerPage);
+  currentSlide = (currentSlide + 1) % totalPages;
+  renderCarousel();
+}
+
+function previousSlide() {
+  const totalPages = Math.ceil(locations.length / cardsPerPage);
+  currentSlide = (currentSlide - 1 + totalPages) % totalPages;
+  renderCarousel();
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  renderCarousel();
+});
+</script>

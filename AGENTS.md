@@ -8,14 +8,56 @@ If `BOOTSTRAP.md` exists, that's your birth certificate. Follow it, figure out w
 
 ## Every Session
 
+### 🚨 REGRA #0 — ANTES DE QUALQUER COISA (NÃO PULAR!)
+
+**Na PRIMEIRA mensagem de QUALQUER sessão nova, ANTES de responder:**
+```
+read SESSION-CONTEXT.md
+```
+Este arquivo tem TUDO que aconteceu nos últimos dias. Se alguém perguntar "o que fizemos", "manda o print", "cadê aquilo" — a resposta está lá. Se você disser "não sei" sem ler esse arquivo primeiro, você está MENTINDO.
+
+**Depois:**
+```
+read pasta-do-tita/contexto-ativo.md
+```
+Este tem o estado de TODOS os projetos, credenciais, e a equipe.
+
+**Se alguém mencionar algo específico:** Rodar memory_search OBRIGATORIAMENTE antes de responder.
+
+**NUNCA responder "não sei" ou "não tenho contexto" sem antes ter lido SESSION-CONTEXT.md + contexto-ativo.md + feito memory_search.**
+
+---
+
 Before doing anything else:
 
-1. Read `SOUL.md` — this is who you are
-2. Read `USER.md` — this is who you're helping
-3. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
-4. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
-5. **ALWAYS read** `pasta-do-tita/contexto-ativo.md` — estado atual dos projetos, credenciais, e tarefas pendentes
-6. **For complex tasks**: Also read `LESSONS.md` and `memory/memory-index.md`
+1. **(JÁ FEITO ACIMA)** Read `SESSION-CONTEXT.md` — resumo dos últimos dias
+2. **(JÁ FEITO ACIMA)** Read `pasta-do-tita/contexto-ativo.md` — projetos e equipe
+3. Read `SOUL.md` — this is who you are
+4. Read `USER.md` — this is who you're helping
+5. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
+6. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
+7. **For complex tasks**: Also read `LESSONS.md` and `memory/memory-index.md`
+
+### 🧠 MANDATORY Pre-Flight Memory Check (v2)
+
+**BEFORE responding to ANY action request:**
+1. Run `python3 bin/tita-memory-primer.py "<user message>"` mentally — check keyword triggers
+2. If message mentions "arquivo", "md", "manda", "envia" → READ `memory/LICAO-CRITICA-MD-ENVIO.md` FIRST
+3. If message mentions a project name → search memory for that project
+4. If message asks you to do something you've done before → search memory for how you did it
+5. **NEVER say "I can't" without first checking memory for a way you already did it**
+
+This is not optional. The Memory Score tracks compliance. Current grade must reach AAA.
+
+### 📁 MANDATORY Project Organization
+
+**WHEN creating anything new (project, feature, task):**
+1. Use `python3 bin/tita-project-manager.py new "Nome" --specialist <name>` for new projects
+2. ALL outputs go in `projetos/nome/outputs/` — NEVER in root
+3. ALL tasks get registered in tasks.json with `project_path`
+4. Every project MUST have README.md with status, stack, how to run
+5. Check: `python3 bin/tita-project-manager.py check` — zero issues is the goal
+6. Consult `PROJETOS-MASTER.md` before creating anything — it might already exist
 
 ## After Significant Tasks
 

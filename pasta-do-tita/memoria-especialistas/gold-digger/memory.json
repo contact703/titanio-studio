@@ -1,21 +1,70 @@
 {
   "specialistId": "gold-digger",
-  "specialistName": "Gold Digger",
+  "specialistName": "💰 Gold Digger",
   "version": 2,
-  "lastActive": "2026-03-19T18:57:13.948Z",
+  "lastActive": "2026-03-16T11:48:00.000Z",
   "stats": {
-    "tasksCompleted": 0,
+    "tasksCompleted": 5,
     "tasksFailed": 0,
-    "sessionsTotal": 0,
-    "lessonsLearned": 2,
+    "sessionsTotal": 2,
+    "lessonsLearned": 37,
     "tokensUsed": 0,
     "avgTaskDurationMs": 0
   },
-  "knowledge": [],
-  "recentTasks": [],
+  "knowledge": [
+    "Pack Legenda Pro: R$7/mês — pack de legendas Instagram para negócios locais",
+    "Agente Atendente Pro: R$97 setup + R$97/mês — chatbot WhatsApp para atendimento",
+    "Landing page dark theme roxo/dourado criada com ambos produtos",
+    "OpenClaw wrappers são tendência (ref: @marcinteodoru no Instagram)",
+    "Workana perfil criado: 24 propostas, 6 itens de portfólio",
+    "Email: siriguejo@proton.me",
+    "Autopilot Gold Digger rodou 15-17/mar a cada 30min — PROBLEMA: loop infinito sem variação",
+    "Nichos prospectados: restaurantes, pet shops, salões, clínicas, lojas de roupas, e-commerce",
+    "99Freelas: propostas para bot PJE, Flutter app, ERP Bling, editor vídeos, etc.",
+    {
+      "topic": "Status 27/03",
+      "content": "Estagnado em 175+ ciclos. Resultado final NÃO documentado. Não se sabe se converteu alguma venda. PRECISA investigação.",
+      "date": "2026-03-27",
+      "source": "gospia-session"
+    },
+    {
+      "topic": "Credenciais",
+      "content": "Email: siriguejo@proton.me. 24 propostas enviadas no Workana. Múltiplos emails recebidos.",
+      "date": "2026-03-12",
+      "source": "gospia-session"
+    },
+    {
+      "topic": "Segurança",
+      "content": "Credenciais detectadas em plaintext — risco de segurança. Precisa mover para cofre.",
+      "date": "2026-03-27",
+      "source": "gospia-session"
+    }
+  ],
+  "recentTasks": [
+    {
+      "date": "2026-03-16",
+      "task": "Landing page HTML dark theme roxo/dourado com Pack Legenda Pro + Agente Atendente Pro",
+      "result": "HTML responsivo completo",
+      "project": "Gold Digger"
+    },
+    {
+      "date": "2026-03-16",
+      "task": "Pesquisa OpenClaw wrappers como produto vendável",
+      "result": "Análise de viabilidade baseada em reel viral",
+      "project": "Gold Digger"
+    },
+    {
+      "date": "2026-03-15",
+      "task": "Setup perfil Workana + 24 propostas + 6 portfólio items",
+      "result": "Perfil em moderação (24-48h)",
+      "project": "Gold Digger"
+    }
+  ],
   "activeContext": {
     "currentTask": null,
-    "currentProject": null,
-    "startedAt": null
+    "currentProject": "Gold Digger - Monetização",
+    "startedAt": null,
+    "status": "stagnant-175-cycles",
+    "needsInvestigation": true
   }
 }

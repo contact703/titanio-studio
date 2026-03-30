@@ -1,0 +1,141 @@
+{
+  "data_busca": "2026-03-18T19:35:10.858606",
+  "total_encontrados": 7,
+  "empresa": "Titanio Studio",
+  "cnpj": "Titanio Produções Artísticas Ltda",
+  "editais": [
+    {
+      "fonte": "Microsoft for Startups",
+      "titulo": "Microsoft for Startups",
+      "descricao": "Microsoft for Startups Founders Hub — até USD 150.000 em créditos Azure + OpenAI API + GitHub Copilot. Programa perene, sem prazo. Inscrição gratuita.",
+      "url": "https://foundershub.startups.microsoft.com/signup",
+      "prazo": "perene",
+      "valor": "USD 150.000 em créditos",
+      "relevancia": "critica",
+      "score_relevancia": 10,
+      "keywords_match": [
+        "startup",
+        "inovação",
+        "tecnologia"
+      ],
+      "status": "aberto",
+      "prioridade": "urgente",
+      "tipo": "programa_perene",
+      "data_captura": "2026-03-18T19:35:10.858525"
+    },
+    {
+      "fonte": "NVIDIA Inception",
+      "titulo": "NVIDIA Inception",
+      "descricao": "NVIDIA Inception Program — créditos de computação, acesso a hardware e rede de investidores para startups de IA. Gratuito, sem equity, sem prazo.",
+      "url": "https://www.nvidia.com/en-us/startups/",
+      "prazo": "perene",
+      "valor": "Créditos GPU + ferramentas NVIDIA",
+      "relevancia": "critica",
+      "score_relevancia": 10,
+      "keywords_match": [
+        "startup",
+        "inovação",
+        "tecnologia"
+      ],
+      "status": "aberto",
+      "prioridade": "urgente",
+      "tipo": "programa_perene",
+      "data_captura": "2026-03-18T19:35:10.858550"
+    },
+    {
+      "fonte": "BNDES Garagem",
+      "titulo": "BNDES Garagem",
+      "descricao": "Programa de aceleração de negócios de impacto. Ciclo 3 previsto 2º semestre 2026. Prêmios R$20k–R$30k + aceleração sem equity.",
+      "url": "https://garagem.bndes.gov.br/",
+      "prazo": "2026-07-01",
+      "valor": "R$20k–R$30k + aceleração",
+      "relevancia": "alta",
+      "score_relevancia": 7,
+      "keywords_match": [
+        "startup",
+        "inovação",
+        "tecnologia"
+      ],
+      "status": "monitorar",
+      "prioridade": "media",
+      "tipo": "programa_perene",
+      "data_captura": "2026-03-18T19:35:10.630649"
+    },
+    {
+      "fonte": "AWS Activate",
+      "titulo": "AWS Activate",
+      "descricao": "AWS Activate Founders — USD 1.000 a USD 100.000 em créditos AWS (SageMaker, Bedrock, ML). Programa perene. Tier Founders grátis, sem aceleradora.",
+      "url": "https://aws.amazon.com/pt/startups/",
+      "prazo": "perene",
+      "valor": "USD 1k–100k em créditos AWS",
+      "relevancia": "alta",
+      "score_relevancia": 7,
+      "keywords_match": [
+        "startup",
+        "inovação",
+        "tecnologia"
+      ],
+      "status": "aberto",
+      "prioridade": "urgente",
+      "tipo": "programa_perene",
+      "data_captura": "2026-03-18T19:35:10.858557"
+    },
+    {
+      "fonte": "Y Combinator",
+      "titulo": "Y Combinator",
+      "descricao": "Y Combinator S26 — USD 500k (USD 125k por 7% equity + USD 375k SAFE). Aceleração 3 meses em San Francisco. Encaixe alto para VoxDescriber em inglês.",
+      "url": "https://www.ycombinator.com/apply",
+      "prazo": "2026-05-04",
+      "valor": "USD 500.000",
+      "relevancia": "alta",
+      "score_relevancia": 7,
+      "keywords_match": [
+        "startup",
+        "inovação",
+        "tecnologia"
+      ],
+      "status": "aberto",
+      "prioridade": "alta",
+      "tipo": "programa_perene",
+      "data_captura": "2026-03-18T19:35:10.858563"
+    },
+    {
+      "fonte": "Google for Startups LATAM",
+      "titulo": "Google for Startups LATAM",
+      "descricao": "Google for Startups Accelerator LATAM — sem equity + mentoria + até USD 200k em créditos Google Cloud + acesso a Gemini/VertexAI.",
+      "url": "https://startup.google.com/programs/accelerator/",
+      "prazo": "variavel",
+      "valor": "USD 200k em créditos Google Cloud",
+      "relevancia": "alta",
+      "score_relevancia": 7,
+      "keywords_match": [
+        "startup",
+        "inovação",
+        "tecnologia"
+      ],
+      "status": "monitorar",
+      "prioridade": "media",
+      "tipo": "programa_perene",
+      "data_captura": "2026-03-18T19:35:10.858569"
+    },
+    {
+      "fonte": "IDB Lab (BID)",
+      "titulo": "IDB Lab (BID)",
+      "descricao": "IDB Lab — grants USD 200k–3M para inovação e impacto social na América Latina. Chamadas periódicas. VoxDescriber tem encaixe forte (acessibilidade + ODS).",
+      "url": "https://bidlab.org/en",
+      "prazo": "variavel",
+      "valor": "USD 200k–3M",
+      "relevancia": "alta",
+      "score_relevancia": 7,
+      "keywords_match": [
+        "startup",
+        "inovação",
+        "tecnologia"
+      ],
+      "status": "monitorar",
+      "prioridade": "media",
+      "tipo": "programa_perene",
+      "data_captura": "2026-03-18T19:35:10.858574"
+    }
+  ]
+}

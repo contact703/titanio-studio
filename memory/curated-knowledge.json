@@ -1,0 +1,151 @@
+{
+  "topics": {
+    "polymarket": 3,
+    "zica": 5,
+    "comfyui": 1,
+    "eduardo": 1,
+    "titanio-media": 1,
+    "dashboard": 2,
+    "memory-system": 2,
+    "helber": 1,
+    "tiago": 1,
+    "mandaanota": 1,
+    "hiclaw": 1
+  },
+  "entries": [
+    {
+      "text": "Polymarket: temos 4 posições abertas, -$1.69 P&L, $4.86 em caixa. Precisamos de análise real antes de apostar.",
+      "category": "projects",
+      "subtopic": "polymarket",
+      "date": "2026-03-29 17:31",
+      "id": 0
+    },
+    {
+      "text": "Zica quer ser atacante com base, não conservador. Apostar ousado mas com dados reais.",
+      "category": "people",
+      "subtopic": "zica",
+      "date": "2026-03-29 17:31",
+      "id": 1
+    },
+    {
+      "text": "ComfyUI + FLUX instalado, compartilhável pela rede 192.168.18.174:8188",
+      "category": "projects",
+      "subtopic": "comfyui",
+      "date": "2026-03-29 17:31",
+      "id": 2
+    },
+    {
+      "text": "LIÇÃO: Nunca apostar no Polymarket sem análise real de notícias e dados. Ser ousado mas com base.",
+      "category": "projects",
+      "subtopic": "polymarket",
+      "date": "2026-03-29 17:31",
+      "id": 3
+    },
+    {
+      "text": "Dashboard Titanio 2.0: 3 instâncias (Eduardo:4444, Helber:4445, Tiago:4446). Sync via shared-specialists.json (155MB). 36 especialistas.",
+      "category": "people",
+      "subtopic": "eduardo",
+      "date": "2026-03-29 17:32",
+      "id": 4
+    },
+    {
+      "text": "Titanio Media v1.0: titanio-media.py com 6 estilos banner, narração PT-BR, vídeo Reels. 24 outputs gerados 28/03.",
+      "category": "projects",
+      "subtopic": "titanio-media",
+      "date": "2026-03-29 17:32",
+      "id": 5
+    },
+    {
+      "text": "Instagram @titaniodashboard: 3 posts publicados 28/03 (2 fotos IA + 1 Reels) via instagrapi.",
+      "category": "projects",
+      "subtopic": "dashboard",
+      "date": "2026-03-29 17:32",
+      "id": 6
+    },
+    {
+      "text": "Memory Engine: 2095 chunks, 88 arquivos, busca semântica via nomic-embed-text local.",
+      "category": "projects",
+      "subtopic": "memory-system",
+      "date": "2026-03-29 17:32",
+      "id": 7
+    },
+    {
+      "text": "Helber: IP 192.168.18.170, backend :4445, frontend :3001. Node precisa reconectar.",
+      "category": "people",
+      "subtopic": "helber",
+      "date": "2026-03-29 17:32",
+      "id": 8
+    },
+    {
+      "text": "Tiago: IP 192.168.18.188, backend :4446, frontend :3002. Setup pendente.",
+      "category": "people",
+      "subtopic": "tiago",
+      "date": "2026-03-29 17:32",
+      "id": 9
+    },
+    {
+      "text": "Eduardo é o Zica. Fundador Titanio Films. WhatsApp +553183838181. Prefere comunicação direta.",
+      "category": "people",
+      "subtopic": "zica",
+      "date": "2026-03-29 17:32",
+      "id": 10
+    },
+    {
+      "text": "Manda a Nota: NFS-e automática pra MEI. Android Play Store OK. iOS Build 20 pendente Apple.",
+      "category": "projects",
+      "subtopic": "mandaanota",
+      "date": "2026-03-29 17:32",
+      "id": 11
+    },
+    {
+      "text": "GospIA: App Gospel. iOS travado por campos ASC (Zica não respondeu 10+ dias).",
+      "category": "people",
+      "subtopic": "zica",
+      "date": "2026-03-29 17:32",
+      "id": 12
+    },
+    {
+      "text": "DECISÃO: Opus SEMPRE como modelo padrão. NUNCA trocar pra Sonnet sem Zica pedir.",
+      "category": "people",
+      "subtopic": "zica",
+      "date": "2026-03-29 17:32",
+      "id": 13
+    },
+    {
+      "text": "29/03 - Zica pediu resolver TUDO que falta na Dashboard: aba Mídia, Mail, Railway, Billing, bots idle",
+      "category": "people",
+      "subtopic": "zica",
+      "date": "2026-03-29 21:17",
+      "id": 14
+    },
+    {
+      "text": "Smart Trader v2 criado em projetos/polymarket-agent/smart-trader-v2.py. Scan de mercados + portfolio check via Playwright.",
+      "category": "projects",
+      "subtopic": "polymarket",
+      "date": "2026-03-29 21:17",
+      "id": 15
+    },
+    {
+      "text": "tmem (Titanio Memory CLI) criado e funcionando. 14 entries curadas, context tree com 4 pessoas e 6 projetos.",
+      "category": "projects",
+      "subtopic": "memory-system",
+      "date": "2026-03-29 21:17",
+      "id": 16
+    },
+    {
+      "text": "Aba Mídia criada na Dashboard: MediaPanel.tsx + Sidebar + page.tsx + 5 endpoints backend. Galeria, gerar banner, imagem IA, pipeline completa.",
+      "category": "projects",
+      "subtopic": "dashboard",
+      "date": "2026-03-29 21:22",
+      "id": 17
+    },
+    {
+      "text": "LIÇÃO: SEMPRE usar especialistas via HiClaw em vez de spawnar agents genéricos. Especialistas aprendem e acumulam lições.",
+      "category": "projects",
+      "subtopic": "hiclaw",
+      "date": "2026-03-29 21:22",
+      "id": 18
+    }
+  ],
+  "last_updated": "2026-03-29T21:22:49.042273"
+}

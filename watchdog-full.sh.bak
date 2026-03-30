@@ -1,0 +1,85 @@
+#!/bin/bash
+# Watchdog completo — Tita + Backend + Frontend + Gold Digger
+WORKSPACE="/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace"
+BACKEND_DIR="/Volumes/TITA_039/backup-projetos/titanio-dashboard-backup-20260312-0801/code/backend"
+GOLD_DIR="/Volumes/TITA_039/backup-projetos/gold-digger"
+LOG="$WORKSPACE/memory/watchdog-full.log"
+ZICA="+553198777889"
+EDUARDO="+553183838181"
+
+notify() {
+  openclaw agent --to "$EDUARDO" --message "⚠️ Watchdog: $1" --json > /dev/null 2>&1 &
+}
+
+log() { echo "[$(date '+%Y-%m-%d %H:%M')] $1" >> "$LOG"; }
+
+log "🚀 Watchdog Full iniciado"
+
+while true; do
+
+  # 1. Caffeinate (Mac não dorme)
+  if ! pgrep -x caffeinate > /dev/null; then
+    nohup caffeinate -dims > /dev/null 2>&1 &
+    log "☕ Caffeinate reiniciado"
+    notify "Caffeinate reiniciado — Mac estava dormindo"
+  fi
+
+  # 2. Backend Titanio (porta 4444)
+  if ! curl -sf http://localhost:4444/api/me > /dev/null 2>&1; then
+    log "🔧 Backend morto — reiniciando..."
+    cd "$BACKEND_DIR" && nohup node dist/index.js > /tmp/backend.log 2>&1 &
+    sleep 5
+    if curl -sf http://localhost:4444/api/me > /dev/null 2>&1; then
+      log "✅ Backend reiniciado com sucesso"
+      notify "Backend Titanio reiniciado (estava morto)"
+    else
+      log "❌ Backend falhou ao reiniciar"
+      notify "Backend Titanio FALHOU ao reiniciar — verificar manualmente"
+    fi
+  fi
+
+  # 3. Frontend Titanio (porta 3000)
+  if ! curl -sf http://localhost:3000 > /dev/null 2>&1; then
+    log "🔧 Frontend morto — reiniciando..."
+    FRONT_DIR="$BACKEND_DIR/../frontend"
+    cd "$FRONT_DIR" 2>/dev/null && nohup npx next start -p 3000 > /tmp/frontend.log 2>&1 &
+    log "Frontend reiniciado"
+    notify "Frontend Titanio reiniciado"
+  fi
+
+  # 4. Gold Digger Autopilot (PAUSADO — loop de tarefas duplicadas, aguardando fix)
+  # if ! pgrep -f "start-autopilot" > /dev/null; then
+  #   nohup bash "$GOLD_DIR/scripts/start-autopilot.sh" > /dev/null 2>&1 &
+  #   log "💰 Gold Digger autopilot reiniciado"
+  #   notify "Gold Digger reiniciado automaticamente"
+  # fi
+
+  # 5. Email watcher
+  if ! pgrep -f "email-watcher" > /dev/null; then
+    nohup bash "$GOLD_DIR/scripts/email-watcher.sh" > /tmp/email-watcher.log 2>&1 &
+    log "📧 Email watcher reiniciado"
+  fi
+
+  # 6. N8n
+  if ! curl -sf http://localhost:5678/healthz > /dev/null 2>&1; then
+    log "🔧 N8n morto — reiniciando..."
+    N8N_SECURE_COOKIE=false nohup n8n start > /tmp/n8n.log 2>&1 &
+    log "N8n reiniciado"
+  fi
+
+  # Relatório a cada 6h (4 ciclos de 90min)
+  HOUR=$(date +%H)
+  if [[ "$HOUR" == "08" || "$HOUR" == "14" || "$HOUR" == "20" ]]; then
+    MINS=$(date +%M)
+    if [[ "$MINS" < "06" ]]; then
+      STATUS="💓 Watchdog report $(date '+%H:%M'):
+Backend: $(curl -sf http://localhost:4444/api/me > /dev/null 2>&1 && echo '✅' || echo '❌')
+Frontend: $(curl -sf http://localhost:3000 > /dev/null 2>&1 && echo '✅' || echo '❌')
+Gold Digger: $(pgrep -f start-autopilot > /dev/null && echo '✅' || echo '❌')
+N8n: $(curl -sf http://localhost:5678/healthz > /dev/null 2>&1 && echo '✅' || echo '❌')"
+      openclaw agent --to "$EDUARDO" --message "$STATUS" --json > /dev/null 2>&1 &
+    fi
+  fi
+
+  sleep 90  # checar a cada 90 segundos
+done

@@ -2,26 +2,72 @@
   "specialistId": "design-wizard",
   "specialistName": "Design Wizard",
   "version": 2,
-  "lastActive": "2026-03-20T19:21:09.159Z",
+  "lastActive": "2026-03-27T18:49:00.000Z",
   "stats": {
-    "tasksCompleted": 1,
+    "tasksCompleted": 6,
     "tasksFailed": 0,
-    "sessionsTotal": 0,
-    "lessonsLearned": 5,
+    "sessionsTotal": 4,
+    "lessonsLearned": 30,
     "tokensUsed": 0,
-    "avgTaskDurationMs": 1285
+    "avgTaskDurationMs": 0
   },
-  "knowledge": [],
+  "knowledge": [
+    "Dark theme cyberpunk: bg #0a0a0f, cyan #22d3ee, purple #a855f7",
+    "Design Brief para Stitch: Cyberpunk Orgânico + Gaming + Produtividade",
+    "Tipografia padrão: Inter para títulos e corpo",
+    "LinearGradient em React Native para message bubbles",
+    "GospIA purple gradient: #4c1d95 → #1e1b4b (Pastor Elder), #7c3aed (user)",
+    "KidsHQ Kids cores: azul #4A90D9, verde #2ECC71, fundo #F5F7FA",
+    "Paleta Titanio Dashboard: dark mode padrão com cyan e purple accents",
+    {
+      "topic": "Grid CSS Bug",
+      "content": "style={{display:'grid'}} conflita com className='grid-cols-4'. Não usar inline style com Tailwind grid classes.",
+      "date": "2026-03-27",
+      "source": "gospia-session"
+    },
+    {
+      "topic": "LIÇÃO CRÍTICA",
+      "content": "ERRO 22/03: Zica pediu treinar especialista existente com repos do vídeo, Tita criou novo especialista. REGRA: Fazer O QUE FOI PEDIDO ou dizer 'não consegui'. Nunca inventar variação.",
+      "date": "2026-03-22",
+      "source": "gospia-session"
+    },
+    {
+      "topic": "Video Factory Stack",
+      "content": "Whisper (transcrição) + Claude/Ollama (roteiro) + Stable Diffusion (ilustrações) + Edge TTS (narração PT-BR) + MoviePy+FFmpeg (renderização). 49s por vídeo de 30s.",
+      "date": "2026-03-23",
+      "source": "gospia-session"
+    }
+  ],
   "recentTasks": [
     {
-      "id": "ac9d3231-f52c-4e61-83d9-db53b65f582c",
-      "title": "Em 1 linha: qual sua especialidade?",
-      "description": "",
-      "status": "completed",
-      "startedAt": "2026-03-20T19:21:07.807Z",
-      "completedAt": "2026-03-20T19:21:09.092Z",
-      "result": "Minha especialidade é o design de interfaces de usuário (UI) e experiência do usuário (UX), com habilidades em Figma, Tailwind CSS, prototipação, sistemas de design e animações.",
-      "durationMs": 1285
+      "date": "2026-03-15",
+      "task": "TaskProgress component React/TypeScript para Dashboard Titanio",
+      "result": "Componente dark theme com animações",
+      "project": "Titanio Dashboard"
+    },
+    {
+      "date": "2026-03-14",
+      "task": "MessageBubble component para GospIA iOS",
+      "result": "React Native com LinearGradient roxo para Pastor Elder",
+      "project": "GospIA iOS"
+    },
+    {
+      "date": "2026-03-14",
+      "task": "2 componentes React Native para KidsHQ Kids iOS",
+      "result": "UI infantil com azul/verde/branco",
+      "project": "KidsHQ Kids iOS"
+    },
+    {
+      "date": "2026-03-10",
+      "task": "Design Brief completo para Stitch (PDF)",
+      "result": "Conceito Cyberpunk Orgânico, paleta hex, tipografia, modo dark/light",
+      "project": "Titanio Dashboard"
+    },
+    {
+      "description": "SquadPanel 14 bug fixes",
+      "date": "2026-03-27",
+      "result": "success",
+      "details": "Grid, imagens borradas, skeleton, botão, status badge"
     }
   ],
   "activeContext": {

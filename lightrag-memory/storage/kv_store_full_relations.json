@@ -1,0 +1,390 @@
+{
+  "doc-491f8d58fed341ac732bad3e2118f8f8": {
+    "relation_pairs": [
+      [
+        "Backend-Specialist",
+        "Supabase"
+      ],
+      [
+        "Backend-Specialist",
+        "Security-Guardian"
+      ],
+      [
+        "GospIA",
+        "Security-Guardian"
+      ],
+      [
+        "Bundle ID",
+        "GospIA"
+      ],
+      [
+        "Backend-Specialist",
+        "Next.js"
+      ],
+      [
+        "Xcode",
+        "iOS Specialist"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1774284972,
+    "update_time": 1774284972,
+    "_id": "doc-491f8d58fed341ac732bad3e2118f8f8"
+  },
+  "doc-8ee78aa11af474f805bf70860814ecce": {
+    "relation_pairs": [
+      [
+        "NVIDIA Inception",
+        "contact@titaniofilms.com"
+      ],
+      [
+        "contact@titaniofilms.com",
+        "siriguejo"
+      ],
+      [
+        "Eduardo/Tiago",
+        "contact@titaniofilms.com"
+      ],
+      [
+        "Y Combinator",
+        "travado"
+      ],
+      [
+        "AWS Activate",
+        "contact@titaniofilms.com"
+      ],
+      [
+        "99Freelas",
+        "siriguejo"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1774285225,
+    "update_time": 1774285225,
+    "_id": "doc-8ee78aa11af474f805bf70860814ecce"
+  },
+  "doc-dd05f28a71961c08cabdb8963260dc46": {
+    "relation_pairs": [
+      [
+        "GospIA iOS",
+        "Titanio Squad"
+      ],
+      [
+        "pod install",
+        "xcodebuild archive"
+      ],
+      [
+        "ReactCodegen",
+        "expo"
+      ],
+      [
+        "Metro bundler",
+        "expo"
+      ]
+    ],
+    "count": 4,
+    "create_time": 1774285343,
+    "update_time": 1774285343,
+    "_id": "doc-dd05f28a71961c08cabdb8963260dc46"
+  },
+  "doc-fc474458c065038296b12622d391d1e5": {
+    "relation_pairs": [
+      [
+        "Growth Hacking",
+        "Titanio Studio"
+      ],
+      [
+        "Titanio Studio",
+        "[squad]"
+      ],
+      [
+        "Instagram",
+        "Reels"
+      ],
+      [
+        "Titanio Studio",
+        "[NOME]"
+      ],
+      [
+        "Growth Hacking",
+        "Reels"
+      ],
+      [
+        "Instagram",
+        "[squad]"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1774285346,
+    "update_time": 1774285346,
+    "_id": "doc-fc474458c065038296b12622d391d1e5"
+  },
+  "doc-28efe485a38973826ef1f69dbeb726a4": {
+    "relation_pairs": [
+      [
+        "Marketing Ninja",
+        "Titanio"
+      ],
+      [
+        "Instagram",
+        "Titanio"
+      ],
+      [
+        "API Master",
+        "API Meta"
+      ],
+      [
+        "Google",
+        "Tiago"
+      ],
+      [
+        "Copywriter",
+        "Tiago"
+      ],
+      [
+        "Blog Content",
+        "Tiago"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1774285441,
+    "update_time": 1774285441,
+    "_id": "doc-28efe485a38973826ef1f69dbeb726a4"
+  },
+  "doc-1f96bfb541afd67c14f9e42163fb4d0a": {
+    "relation_pairs": [
+      [
+        "Agente: Tita (claude-sonnet-4-6)",
+        "Especialista OpenClaw da squad Titanio"
+      ],
+      [
+        "Bundle ID: com.titanio.gospia",
+        "Especialista iOS da squad Titanio"
+      ],
+      [
+        "Especialista OpenClaw da squad Titanio",
+        "Mac Mini arm64"
+      ],
+      [
+        "Especialista OpenClaw da squad Titanio",
+        "Node v22.22.0"
+      ],
+      [
+        "Victor Capital - Perfil",
+        "Y Combinator (YC)"
+      ],
+      [
+        "Especialista: victor-capital",
+        "Victor Capital - Perfil"
+      ],
+      [
+        "Programas Monitorados",
+        "Victor Capital - Perfil"
+      ],
+      [
+        "NVIDIA Inception",
+        "Victor Capital - Perfil"
+      ],
+      [
+        "Especialista OpenClaw da squad Titanio",
+        "Titanio"
+      ],
+      [
+        "Especialista OpenClaw da squad Titanio",
+        "Workspace: /Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace"
+      ],
+      [
+        "Responsabilidades",
+        "Victor Capital - Perfil"
+      ],
+      [
+        "Carbon-Fiber Spikes",
+        "Noah Carter"
+      ],
+      [
+        "/Volumes/TITA_039/backup-projetos/gospia-v2",
+        "Especialista iOS da squad Titanio"
+      ]
+    ],
+    "count": 13,
+    "create_time": 1774285865,
+    "update_time": 1774285865,
+    "_id": "doc-1f96bfb541afd67c14f9e42163fb4d0a"
+  },
+  "doc-2249d6178377ebf1c8b9af2d5d17c841": {
+    "relation_pairs": [
+      [
+        "Eduardo",
+        "Zica"
+      ],
+      [
+        "GospIA",
+        "ios-specialist"
+      ],
+      [
+        "Carbon-Fiber Spikes' Manufacturer",
+        "Noah Carter"
+      ],
+      [
+        "Sistema de Memória v2",
+        "memory-bot"
+      ],
+      [
+        "Sistema de Memória v2",
+        "agent-doctor"
+      ],
+      [
+        "Apple Sign In",
+        "StoreKit"
+      ],
+      [
+        "Gold Digger Studio",
+        "money-maker"
+      ],
+      [
+        "GitHub repos",
+        "contact703"
+      ],
+      [
+        "Sistema de Memória v2",
+        "tita-learning-system"
+      ],
+      [
+        "GospIA",
+        "KidsHQ-HQ"
+      ],
+      [
+        "World Athletics Championship",
+        "World Athletics Federation"
+      ],
+      [
+        "Gold Digger Studio",
+        "Workana"
+      ]
+    ],
+    "count": 12,
+    "create_time": 1774285988,
+    "update_time": 1774285988,
+    "_id": "doc-2249d6178377ebf1c8b9af2d5d17c841"
+  },
+  "doc-4ae5d19350b9789a3605676107592fe8": {
+    "relation_pairs": [
+      [
+        ".openclaw/workspace/squad/specialists/ios-specialist/",
+        "OpenClaw"
+      ],
+      [
+        "Julian Goldie",
+        "OpenClaw"
+      ],
+      [
+        "GitHub",
+        "OpenClaw"
+      ],
+      [
+        "Discord",
+        "OpenClaw"
+      ],
+      [
+        "ClaWHub",
+        "OpenClaw"
+      ],
+      [
+        "OpenClaw",
+        "Tita"
+      ],
+      [
+        "6760674894",
+        "Apple Team"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1774286145,
+    "update_time": 1774286145,
+    "_id": "doc-4ae5d19350b9789a3605676107592fe8"
+  },
+  "doc-ca7497057356c8b4a1e40cfabe483df4": {
+    "relation_pairs": [
+      [
+        "SISTEMA-MEMORIA-APRENDIZADO.md",
+        "nclaw message send"
+      ],
+      [
+        "Playwright",
+        "nclaw message send"
+      ],
+      [
+        "Instaloader",
+        "instagram.com/p/SHORTCODE/"
+      ],
+      [
+        "nclaw message send",
+        "whatsapp"
+      ],
+      [
+        "/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace",
+        "SISTEMA-MEMORIA-APRENDIZADO.md"
+      ],
+      [
+        "Tita",
+        "Zica"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1774286160,
+    "update_time": 1774286160,
+    "_id": "doc-ca7497057356c8b4a1e40cfabe483df4"
+  },
+  "doc-32ec395bb414afdd733a72eb255993d6": {
+    "relation_pairs": [
+      [
+        "Context Transfer",
+        "Openclaw Models"
+      ],
+      [
+        "Dashboard Testing",
+        "Instagram Poster Specialist"
+      ],
+      [
+        "API Endpoints",
+        "Openclaw Models"
+      ],
+      [
+        "Openclaw Models",
+        "Squad"
+      ],
+      [
+        "Anthropic Claude Haiku 4-5-20251001",
+        "Moonshot Kimi K2 Turbo Preview"
+      ],
+      [
+        "API Endpoints",
+        "Health Status"
+      ],
+      [
+        "Dashboard Testing",
+        "Playwright"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1774286264,
+    "update_time": 1774286264,
+    "_id": "doc-32ec395bb414afdd733a72eb255993d6"
+  },
+  "doc-1f4585f785d3d217c236a90ddc81c26a": {
+    "relation_pairs": [
+      [
+        "Conclusão",
+        "Sistema"
+      ],
+      [
+        "100% Operacional e Real",
+        "Sistema"
+      ]
+    ],
+    "count": 2,
+    "create_time": 1774286350,
+    "update_time": 1774286350,
+    "_id": "doc-1f4585f785d3d217c236a90ddc81c26a"
+  }
+}

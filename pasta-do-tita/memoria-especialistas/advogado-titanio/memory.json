@@ -1,13 +1,9 @@
 {
-  "specialistId": "advogado-titanio",
-  "specialistName": "Advogado Titânio",
-  "version": 2,
-  "lastActive": "2026-03-19T18:57:13.952Z",
+  "sessions": [],
   "stats": {
+    "sessionsCount": 0,
     "tasksCompleted": 0,
-    "tasksFailed": 0,
-    "sessionsTotal": 0,
-    "lessonsLearned": 2,
+    "lessonsLearned": 28,
     "tokensUsed": 0,
     "avgTaskDurationMs": 0
   },

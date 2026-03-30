@@ -1,0 +1,299 @@
+{
+    "updatedAt": "2026-03-28T01:20:04.270Z",
+    "createdAt": "2026-03-28T01:20:04.270Z",
+    "id": "uorwR3ikpaJh5BHB",
+    "name": "Cover Generator - Brazilian Classics",
+    "description": null,
+    "active": true,
+    "isArchived": false,
+    "nodes": [
+        {
+            "parameters": {
+                "httpMethod": "POST",
+                "path": "cover-generator",
+                "responseMode": "responseNode",
+                "options": {}
+            },
+            "id": "cg-webhook",
+            "name": "Webhook - Cover Request",
+            "type": "n8n-nodes-base.webhook",
+            "typeVersion": 2,
+            "position": [
+                240,
+                300
+            ],
+            "webhookId": "cover-generator"
+        },
+        {
+            "parameters": {
+                "jsCode": "// Validar configura\u00e7\u00e3o da capa\nconst input = $input.first().json;\nconst body = input.body || input;\n\nconst titleEn = body.title_en;\nconst titlePt = body.title_pt;\nconst author = body.author;\n\nif (!titleEn || !author) {\n  throw new Error('Campos obrigat\u00f3rios: title_en, author');\n}\n\nconst config = {\n  title_en: titleEn.toUpperCase(),\n  title_pt: titlePt || '',\n  author: author.toUpperCase(),\n  background_image: body.background_image || '',\n  collection_label: body.collection_label || 'GREAT BRAZILIAN CLASSICS COLLECTION',\n  overlay_opacity: body.overlay_opacity || 120,\n  cover_width: 1600,\n  cover_height: 2560,\n  dpi: 300,\n  quality: 95,\n  timestamp: new Date().toISOString(),\n  output_filename: titleEn.toLowerCase().replace(/[^a-z0-9]/g, '-') + '-' + Date.now() + '.jpg',\n  fonts_dir: '/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/projetos/brazilian-classics/fonts',\n  output_dir: '/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/projetos/brazilian-classics/output'\n};\n\nreturn [{ json: config }];"
+            },
+            "id": "cg-validate",
+            "name": "Validar Config",
+            "type": "n8n-nodes-base.code",
+            "typeVersion": 2,
+            "position": [
+                460,
+                300
+            ]
+        },
+        {
+            "parameters": {
+                "jsCode": "// Python-like cover generation using Canvas approach\n// In production, this would call a Python script\nconst config = $input.first().json;\n\n// For now, generate a structured output that describes the cover\n// The actual image generation would be done by a Python script\nconst outputPath = config.output_dir + '/' + config.output_filename;\n\nconst coverSpec = {\n  success: true,\n  output_path: outputPath,\n  spec: {\n    dimensions: `${config.cover_width}x${config.cover_height}`,\n    dpi: config.dpi,\n    layout: {\n      collection_label: {\n        text: config.collection_label,\n        font: 'Raleway',\n        color: 'gold (#D4AF37)',\n        position: 'top center',\n        size: 28\n      },\n      title_en: {\n        text: config.title_en,\n        font: 'Playfair Display',\n        color: 'white',\n        position: 'center',\n        size: 72\n      },\n      title_pt: {\n        text: config.title_pt,\n        font: 'Playfair Display Italic',\n        color: 'cream (#FFF8DC)',\n        position: 'below title',\n        size: 36\n      },\n      author: {\n        text: config.author,\n        font: 'Raleway',\n        color: 'white',\n        position: 'bottom center',\n        size: 32\n      },\n      background: {\n        image: config.background_image || 'solid dark gradient',\n        overlay_opacity: config.overlay_opacity\n      }\n    }\n  },\n  file_size_kb: 0,\n  title_en: config.title_en,\n  title_pt: config.title_pt,\n  author: config.author,\n  generated_at: config.timestamp,\n  note: 'Instale Pillow (pip install Pillow) e rode scripts/generate_cover.py para gerar imagem real'\n};\n\nreturn [{ json: coverSpec }];"
+            },
+            "id": "cg-generate",
+            "name": "Gerar Capa (Code)",
+            "type": "n8n-nodes-base.code",
+            "typeVersion": 2,
+            "position": [
+                680,
+                300
+            ]
+        },
+        {
+            "parameters": {
+                "jsCode": "// Parse resultado e montar resposta\nconst result = $input.first().json;\n\nreturn [{\n  json: {\n    success: result.success,\n    output_path: result.output_path,\n    file_size_kb: result.file_size_kb,\n    title_en: result.title_en,\n    title_pt: result.title_pt,\n    author: result.author,\n    generated_at: result.generated_at,\n    spec: result.spec,\n    note: result.note\n  }\n}];"
+            },
+            "id": "cg-parse",
+            "name": "Parsear Resultado",
+            "type": "n8n-nodes-base.code",
+            "typeVersion": 2,
+            "position": [
+                900,
+                300
+            ]
+        },
+        {
+            "parameters": {
+                "respondWith": "json",
+                "responseBody": "={{ JSON.stringify($json) }}",
+                "options": {}
+            },
+            "id": "cg-respond",
+            "name": "Response JSON",
+            "type": "n8n-nodes-base.respondToWebhook",
+            "typeVersion": 1.1,
+            "position": [
+                1120,
+                300
+            ]
+        }
+    ],
+    "connections": {
+        "Webhook - Cover Request": {
+            "main": [
+                [
+                    {
+                        "node": "Validar Config",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "Validar Config": {
+            "main": [
+                [
+                    {
+                        "node": "Gerar Capa (Code)",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "Gerar Capa (Code)": {
+            "main": [
+                [
+                    {
+                        "node": "Parsear Resultado",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "Parsear Resultado": {
+            "main": [
+                [
+                    {
+                        "node": "Response JSON",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        }
+    },
+    "settings": {
+        "executionOrder": "v1",
+        "callerPolicy": "workflowsFromSameOwner",
+        "availableInMCP": false
+    },
+    "staticData": null,
+    "meta": null,
+    "pinData": null,
+    "versionId": "1490fdf5-d889-4bf3-a8e5-d24cbe7ba34e",
+    "activeVersionId": "1490fdf5-d889-4bf3-a8e5-d24cbe7ba34e",
+    "versionCounter": 3,
+    "triggerCount": 1,
+    "shared": [
+        {
+            "updatedAt": "2026-03-28T01:20:04.273Z",
+            "createdAt": "2026-03-28T01:20:04.273Z",
+            "role": "workflow:owner",
+            "workflowId": "uorwR3ikpaJh5BHB",
+            "projectId": "nqkxORW7nMTLlPPf",
+            "project": {
+                "updatedAt": "2026-03-28T01:17:31.676Z",
+                "createdAt": "2026-03-21T20:38:03.163Z",
+                "id": "nqkxORW7nMTLlPPf",
+                "name": "Tita Bot <contact@titaniofilms.com>",
+                "type": "personal",
+                "icon": null,
+                "description": null,
+                "creatorId": "4889f139-a39f-44c4-ab18-9260217281f2"
+            }
+        }
+    ],
+    "tags": [],
+    "activeVersion": {
+        "updatedAt": "2026-03-28T01:20:04.364Z",
+        "createdAt": "2026-03-28T01:20:04.364Z",
+        "versionId": "1490fdf5-d889-4bf3-a8e5-d24cbe7ba34e",
+        "workflowId": "uorwR3ikpaJh5BHB",
+        "nodes": [
+            {
+                "parameters": {
+                    "httpMethod": "POST",
+                    "path": "cover-generator",
+                    "responseMode": "responseNode",
+                    "options": {}
+                },
+                "id": "cg-webhook",
+                "name": "Webhook - Cover Request",
+                "type": "n8n-nodes-base.webhook",
+                "typeVersion": 2,
+                "position": [
+                    240,
+                    300
+                ],
+                "webhookId": "cover-generator"
+            },
+            {
+                "parameters": {
+                    "jsCode": "// Validar configura\u00e7\u00e3o da capa\nconst input = $input.first().json;\nconst body = input.body || input;\n\nconst titleEn = body.title_en;\nconst titlePt = body.title_pt;\nconst author = body.author;\n\nif (!titleEn || !author) {\n  throw new Error('Campos obrigat\u00f3rios: title_en, author');\n}\n\nconst config = {\n  title_en: titleEn.toUpperCase(),\n  title_pt: titlePt || '',\n  author: author.toUpperCase(),\n  background_image: body.background_image || '',\n  collection_label: body.collection_label || 'GREAT BRAZILIAN CLASSICS COLLECTION',\n  overlay_opacity: body.overlay_opacity || 120,\n  cover_width: 1600,\n  cover_height: 2560,\n  dpi: 300,\n  quality: 95,\n  timestamp: new Date().toISOString(),\n  output_filename: titleEn.toLowerCase().replace(/[^a-z0-9]/g, '-') + '-' + Date.now() + '.jpg',\n  fonts_dir: '/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/projetos/brazilian-classics/fonts',\n  output_dir: '/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/projetos/brazilian-classics/output'\n};\n\nreturn [{ json: config }];"
+                },
+                "id": "cg-validate",
+                "name": "Validar Config",
+                "type": "n8n-nodes-base.code",
+                "typeVersion": 2,
+                "position": [
+                    460,
+                    300
+                ]
+            },
+            {
+                "parameters": {
+                    "jsCode": "// Python-like cover generation using Canvas approach\n// In production, this would call a Python script\nconst config = $input.first().json;\n\n// For now, generate a structured output that describes the cover\n// The actual image generation would be done by a Python script\nconst outputPath = config.output_dir + '/' + config.output_filename;\n\nconst coverSpec = {\n  success: true,\n  output_path: outputPath,\n  spec: {\n    dimensions: `${config.cover_width}x${config.cover_height}`,\n    dpi: config.dpi,\n    layout: {\n      collection_label: {\n        text: config.collection_label,\n        font: 'Raleway',\n        color: 'gold (#D4AF37)',\n        position: 'top center',\n        size: 28\n      },\n      title_en: {\n        text: config.title_en,\n        font: 'Playfair Display',\n        color: 'white',\n        position: 'center',\n        size: 72\n      },\n      title_pt: {\n        text: config.title_pt,\n        font: 'Playfair Display Italic',\n        color: 'cream (#FFF8DC)',\n        position: 'below title',\n        size: 36\n      },\n      author: {\n        text: config.author,\n        font: 'Raleway',\n        color: 'white',\n        position: 'bottom center',\n        size: 32\n      },\n      background: {\n        image: config.background_image || 'solid dark gradient',\n        overlay_opacity: config.overlay_opacity\n      }\n    }\n  },\n  file_size_kb: 0,\n  title_en: config.title_en,\n  title_pt: config.title_pt,\n  author: config.author,\n  generated_at: config.timestamp,\n  note: 'Instale Pillow (pip install Pillow) e rode scripts/generate_cover.py para gerar imagem real'\n};\n\nreturn [{ json: coverSpec }];"
+                },
+                "id": "cg-generate",
+                "name": "Gerar Capa (Code)",
+                "type": "n8n-nodes-base.code",
+                "typeVersion": 2,
+                "position": [
+                    680,
+                    300
+                ]
+            },
+            {
+                "parameters": {
+                    "jsCode": "// Parse resultado e montar resposta\nconst result = $input.first().json;\n\nreturn [{\n  json: {\n    success: result.success,\n    output_path: result.output_path,\n    file_size_kb: result.file_size_kb,\n    title_en: result.title_en,\n    title_pt: result.title_pt,\n    author: result.author,\n    generated_at: result.generated_at,\n    spec: result.spec,\n    note: result.note\n  }\n}];"
+                },
+                "id": "cg-parse",
+                "name": "Parsear Resultado",
+                "type": "n8n-nodes-base.code",
+                "typeVersion": 2,
+                "position": [
+                    900,
+                    300
+                ]
+            },
+            {
+                "parameters": {
+                    "respondWith": "json",
+                    "responseBody": "={{ JSON.stringify($json) }}",
+                    "options": {}
+                },
+                "id": "cg-respond",
+                "name": "Response JSON",
+                "type": "n8n-nodes-base.respondToWebhook",
+                "typeVersion": 1.1,
+                "position": [
+                    1120,
+                    300
+                ]
+            }
+        ],
+        "connections": {
+            "Webhook - Cover Request": {
+                "main": [
+                    [
+                        {
+                            "node": "Validar Config",
+                            "type": "main",
+                            "index": 0
+                        }
+                    ]
+                ]
+            },
+            "Validar Config": {
+                "main": [
+                    [
+                        {
+                            "node": "Gerar Capa (Code)",
+                            "type": "main",
+                            "index": 0
+                        }
+                    ]
+                ]
+            },
+            "Gerar Capa (Code)": {
+                "main": [
+                    [
+                        {
+                            "node": "Parsear Resultado",
+                            "type": "main",
+                            "index": 0
+                        }
+                    ]
+                ]
+            },
+            "Parsear Resultado": {
+                "main": [
+                    [
+                        {
+                            "node": "Response JSON",
+                            "type": "main",
+                            "index": 0
+                        }
+                    ]
+                ]
+            }
+        },
+        "authors": "Tita Bot",
+        "name": null,
+        "description": null,
+        "autosaved": false,
+        "workflowPublishHistory": [
+            {
+                "createdAt": "2026-03-28T01:20:09.855Z",
+                "id": 2,
+                "workflowId": "uorwR3ikpaJh5BHB",
+                "versionId": "1490fdf5-d889-4bf3-a8e5-d24cbe7ba34e",
+                "event": "activated",
+                "userId": "4889f139-a39f-44c4-ab18-9260217281f2"
+            }
+        ]
+    }
+}

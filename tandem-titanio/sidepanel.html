@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tita — Tandem Titanio</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    html, body {
+      height: 100%;
+      overflow: hidden;
+    }
+    .sidepanel-layout {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .chat-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+    }
+    .bottom-sections {
+      flex-shrink: 0;
+      overflow-y: auto;
+      max-height: 45vh;
+    }
+    .collapsible-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      user-select: none;
+    }
+    .collapsible-header:hover {
+      color: var(--accent-cyan);
+    }
+    .collapse-icon {
+      font-size: 10px;
+      color: var(--text-muted);
+      transition: transform 0.2s;
+    }
+    .collapse-icon.open {
+      transform: rotate(180deg);
+    }
+    .collapsible-body {
+      display: none;
+      margin-top: 8px;
+    }
+    .collapsible-body.open {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+<div class="sidepanel-layout">
+
+  <!-- ── HEADER ── -->
+  <div class="header">
+    <div class="header-logo">⚡</div>
+    <div class="header-title">
+      <h1>TANDEM TITANIO</h1>
+      <div class="subtitle">AI Browser · OpenClaw</div>
+    </div>
+    <div id="statusBadge" class="status-badge checking">
+      <span id="statusEmoji">⏳</span>
+      <span id="statusLabel">Verificando</span>
+    </div>
+  </div>
+
+  <!-- ── ACTION BUTTONS ── -->
+  <div class="action-buttons">
+    <button id="captureBtn" class="btn btn-secondary">
+      📸 Capturar contexto
+    </button>
+    <button id="taskBtn" class="btn btn-purple">
+      🤖 Deixa a Tita fazer
+    </button>
+  </div>
+
+  <!-- ── TASK FIELD (oculto por padrão) ── -->
+  <div id="taskField" class="task-field">
+    <div class="section-title">DESCREVA A TAREFA</div>
+    <textarea id="taskInput" placeholder="Ex: Resumir este artigo, pesquisar sobre o tema, preencher o formulário..."></textarea>
+    <div style="display: flex; gap: 8px;">
+      <button id="taskSendBtn" class="btn btn-purple" style="flex: 1; justify-content: center;">
+        🚀 Enviar tarefa
+      </button>
+      <button id="taskCancelBtn" class="btn btn-secondary">✕</button>
+    </div>
+  </div>
+
+  <!-- ── CHAT ── -->
+  <div class="chat-section">
+    <div id="chatMessages" class="chat-messages">
+      <!-- Mensagem de boas-vindas -->
+      <div class="message tita">
+        <div class="message-header">🐾 Tita</div>
+        Olá! Estou integrada ao seu browser. Pode me pedir qualquer coisa — capturar contexto da página, fazer pesquisas, executar tarefas... 🚀
+      </div>
+    </div>
+
+    <!-- Input de chat -->
+    <div class="chat-input-area">
+      <textarea
+        id="chatInput"
+        class="chat-input"
+        placeholder="Pergunte algo para a Tita..."
+        rows="1"
+      ></textarea>
+      <button id="sendBtn" class="btn-send">➤</button>
+    </div>
+  </div>
+
+  <!-- ── BOTTOM SECTIONS (recolhíveis) ── -->
+  <div class="bottom-sections">
+
+    <!-- Histórico -->
+    <div class="section">
+      <div class="collapsible-header" data-target="historyBody">
+        <div class="section-title" style="margin: 0;">⏱ ÚLTIMAS AÇÕES</div>
+        <span class="collapse-icon open" id="historyIcon">▼</span>
+      </div>
+      <div class="collapsible-body open" id="historyBody">
+        <ul id="historyList" class="history-list">
+          <li class="history-item">
+            <span class="history-icon">💬</span>
+            <span class="history-text">Nenhuma ação ainda</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Integrações -->
+    <div class="section">
+      <div class="collapsible-header" data-target="integrationsBody">
+        <div class="section-title" style="margin: 0;">🔌 INTEGRAÇÕES ATIVAS</div>
+        <span class="collapse-icon open" id="integrationsIcon">▼</span>
+      </div>
+      <div class="collapsible-body open" id="integrationsBody">
+        <div class="integrations-grid">
+          <div class="integration-item">
+            <div id="dot-openclaw" class="integration-dot checking"></div>
+            <span class="integration-name">OpenClaw</span>
+          </div>
+          <div class="integration-item">
+            <div id="dot-google" class="integration-dot off"></div>
+            <span class="integration-name">Google</span>
+          </div>
+          <div class="integration-item">
+            <div id="dot-instagram" class="integration-dot off"></div>
+            <span class="integration-name">Instagram</span>
+          </div>
+          <div class="integration-item">
+            <div id="dot-n8n" class="integration-dot off"></div>
+            <span class="integration-name">n8n</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="sidepanel.js"></script>
+</body>
+</html>

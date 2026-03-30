@@ -1,0 +1,22 @@
+{
+  "lessons": [
+    {
+      "id": "6fb74c72-c68d-4537-b486-2bef78288239",
+      "date": "2026-03-27",
+      "time": "22:15",
+      "category": "technical",
+      "domain": "capas-kdp",
+      "lesson": "Specs de capa KDP Brazilian Classics: 1600×2560px, 300 DPI, JPEG 95%, RGB. Layout: collection label (Raleway, gold #D4AF37, topo) → título EN (Playfair Display, 72pt, branco, centro) → título PT (Playfair Italic, 36pt, cream #FFF8DC) → autor (Raleway, 32pt, branco, base). Borda decorativa gold com opacidade.",
+      "context": "Script: projetos/brazilian-classics/scripts/generate_cover.py. Fontes necessárias: PlayfairDisplay-Variable.ttf, PlayfairDisplay-Italic.ttf, Raleway-Variable.ttf em fonts/. Workflow N8n: POST /webhook/cover-generator.",
+      "impact": "high",
+      "tags": [
+        "brazilian-classics",
+        "kdp",
+        "capas",
+        "design-specs"
+      ],
+      "successRate": 100,
+      "source": "setup-automation"
+    }
+  ]
+}

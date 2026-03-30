@@ -1,59 +1,14 @@
 {
-  "specialistId": "memory-bot",
-  "specialistName": "Memory Bot",
-  "version": 2,
-  "lastActive": "2026-03-22T15:40:22.124Z",
+  "sessions": [],
   "stats": {
-    "tasksCompleted": 4,
-    "tasksFailed": 0,
-    "sessionsTotal": 0,
-    "lessonsLearned": 15,
+    "sessionsCount": 0,
+    "tasksCompleted": 0,
+    "lessonsLearned": 93,
     "tokensUsed": 0,
-    "avgTaskDurationMs": 12263
+    "avgTaskDurationMs": 0
   },
   "knowledge": [],
-  "recentTasks": [
-    {
-      "id": "9f6b1c39-aeb7-4f94-b749-1364e641b479",
-      "title": "Você é Tita, uma IA assistente. Analise sua atividade recente e extraia insights para sua memória de longo prazo.\n\nATIVIDADE RECENTE:\nÚLTIMOS 7 DIAS:\n- 481 tarefas | 481 sucessos | 0 falhas\n- Categorias: learning, squad\n\nFALHAS RECENTES:\n\n\nLIÇÕES APRENDIDAS:\n\n\n\nMEMORY.md ATUAL (primeiras linhas):\n\n## Railway Deploy — KiteMe (2026-02-26)\n- Railway project: `865ff29d-231c-459d-bb02-3e0233de1dc2`\n- Railway service: `1708a89e-4738-45b0-94f6-d5364451965c`\n- API URL: `https://kitesurf-brasil-api-production.up.railway.app`\n- GitHub: `https://github.com/contact703/kitesurf-brasil.git`\n- Token Railway: Eduardo precisa gerar formato `rw_xxx` em https://railway.app/account/tokens\n- GitHub PAT não tem scope `workflow` — não posso criar GitHub Actions\n- Admin seed endpoint: `POST /api/admin/seed` com header `Authorization: Bearer kite2026-admin`\n\n## Sessão 14/03/2026 — Dia de trabalho com Zica (Gospia)\n\n### Apps construídos hoje:\n- **GospIA iOS** (`gospia-ios/`) — React Native/Expo, Chat Pastor Elder, Rádio, Fórum, Apple Sign In, ElevenLabs TTS (Antonio)\n- **KidsHQ Kids iOS Swift** (`KidsHQ/kid\n\nGere um bloco de memória de longo prazo no formato:\n## Semana de 2026-03-22 — Consolidação\n- [fatos importantes aprendidos]\n- [padrões identificados]\n- [erros a evitar]\n- [melhorias aplicadas]\n\nSeja conciso (máximo 10 bullets). Sem repetir o que já está no MEMORY.md.",
-      "description": "",
-      "status": "completed",
-      "startedAt": "2026-03-22T15:40:04.694Z",
-      "completedAt": "2026-03-22T15:40:22.124Z",
-      "result": "## [Geração de Memória de Longo Prazo] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nAnalisando a atividade recente e extraindo insights para a memória de longo prazo:\n\n### Fatos importantes aprendidos\n- A importância de documentação durante o desenvolvimento para preservar contexto útil.\n- O impacto da autenticação na API do Instagram na capacidade de extrair conteúdo.\n- O uso eficaz do instaloader para gerenciar sessões autenticadas e baixar conteúdo do Instagram.\n\n### Padrões id",
-      "durationMs": 17430
-    },
-    {
-      "id": "0d963967-0869-403c-a9dd-74e30df23d66",
-      "title": "Você é Tita, uma IA assistente. Analise sua atividade recente e extraia insights para sua memória de longo prazo.\n\nATIVIDADE RECENTE:\nÚLTIMOS 7 DIAS:\n- 481 tarefas | 481 sucessos | 0 falhas\n- Categorias: squad, learning\n\nFALHAS RECENTES:\n\n\nLIÇÕES APRENDIDAS:\n\n\n\nMEMORY.md ATUAL (primeiras linhas):\n\n## Railway Deploy — KiteMe (2026-02-26)\n- Railway project: `865ff29d-231c-459d-bb02-3e0233de1dc2`\n- Railway service: `1708a89e-4738-45b0-94f6-d5364451965c`\n- API URL: `https://kitesurf-brasil-api-production.up.railway.app`\n- GitHub: `https://github.com/contact703/kitesurf-brasil.git`\n- Token Railway: Eduardo precisa gerar formato `rw_xxx` em https://railway.app/account/tokens\n- GitHub PAT não tem scope `workflow` — não posso criar GitHub Actions\n- Admin seed endpoint: `POST /api/admin/seed` com header `Authorization: Bearer kite2026-admin`\n\n## Sessão 14/03/2026 — Dia de trabalho com Zica (Gospia)\n\n### Apps construídos hoje:\n- **GospIA iOS** (`gospia-ios/`) — React Native/Expo, Chat Pastor Elder, Rádio, Fórum, Apple Sign In, ElevenLabs TTS (Antonio)\n- **KidsHQ Kids iOS Swift** (`KidsHQ/kid\n\nGere um bloco de memória de longo prazo no formato:\n## Semana de 2026-03-22 — Consolidação\n- [fatos importantes aprendidos]\n- [padrões identificados]\n- [erros a evitar]\n- [melhorias aplicadas]\n\nSeja conciso (máximo 10 bullets). Sem repetir o que já está no MEMORY.md.",
-      "description": "",
-      "status": "completed",
-      "startedAt": "2026-03-22T07:24:55.367Z",
-      "completedAt": "2026-03-22T07:25:04.577Z",
-      "result": "## [Geração de Memória de Longo Prazo] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nAnalisando a atividade recente e extraindo insights para a memória de longo prazo:\n\n### Fatos importantes aprendidos\n- A importância de documentação durante o desenvolvimento para preservar contexto útil.\n- A eficácia do instaloader para baixar conteúdo do Instagram com autenticação.\n- A necessidade de credenciais seguras armazenadas para acesso a APIs, como as do Instagram.\n\n### Padrões identifica",
-      "durationMs": 9210
-    },
-    {
-      "id": "23a47f2f-68b8-45a3-8881-6108ee2fdb5b",
-      "title": "Você é Tita, uma IA assistente. Analise sua atividade recente e extraia insights para sua memória de longo prazo.\n\nATIVIDADE RECENTE:\nÚLTIMOS 7 DIAS:\n- 481 tarefas | 481 sucessos | 0 falhas\n- Categorias: squad, learning\n\nFALHAS RECENTES:\n\n\nLIÇÕES APRENDIDAS:\n\n\n\nMEMORY.md ATUAL (primeiras linhas):\n\n## Railway Deploy — KiteMe (2026-02-26)\n- Railway project: `865ff29d-231c-459d-bb02-3e0233de1dc2`\n- Railway service: `1708a89e-4738-45b0-94f6-d5364451965c`\n- API URL: `https://kitesurf-brasil-api-production.up.railway.app`\n- GitHub: `https://github.com/contact703/kitesurf-brasil.git`\n- Token Railway: Eduardo precisa gerar formato `rw_xxx` em https://railway.app/account/tokens\n- GitHub PAT não tem scope `workflow` — não posso criar GitHub Actions\n- Admin seed endpoint: `POST /api/admin/seed` com header `Authorization: Bearer kite2026-admin`\n\n## Sessão 14/03/2026 — Dia de trabalho com Zica (Gospia)\n\n### Apps construídos hoje:\n- **GospIA iOS** (`gospia-ios/`) — React Native/Expo, Chat Pastor Elder, Rádio, Fórum, Apple Sign In, ElevenLabs TTS (Antonio)\n- **KidsHQ Kids iOS Swift** (`KidsHQ/kid\n\nGere um bloco de memória de longo prazo no formato:\n## Semana de 2026-03-22 — Consolidação\n- [fatos importantes aprendidos]\n- [padrões identificados]\n- [erros a evitar]\n- [melhorias aplicadas]\n\nSeja conciso (máximo 10 bullets). Sem repetir o que já está no MEMORY.md.",
-      "description": "",
-      "status": "completed",
-      "startedAt": "2026-03-22T03:24:22.902Z",
-      "completedAt": "2026-03-22T03:24:38.784Z",
-      "result": "## [Geração de Memória de Longo Prazo] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nAnalisando a atividade recente e extraindo insights para a memória de longo prazo:\n\n### Fatos importantes aprendidos\n- Eficiência na execução de tarefas: 481 tarefas em 7 dias com 100% de sucesso.\n- Importância da documentação em tempo real durante o desenvolvimento.\n- Utilidade de instaloader para baixar conteúdo do Instagram com autenticação.\n\n### Padrões identificados\n- Baixa falha em tarefas ex",
-      "durationMs": 15882
-    },
-    {
-      "id": "e388925d-b359-4962-b34d-c0c41479daa1",
-      "title": "Você é Tita, uma IA assistente. Analise sua atividade recente e extraia insights para sua memória de longo prazo.\n\nATIVIDADE RECENTE:\nÚLTIMOS 7 DIAS:\n- 502 tarefas | 500 sucessos | 2 falhas\n- Categorias: ios, debug, learning, n8n, openclaw, devops, squad, auth\n\nFALHAS RECENTES:\n- [auth] Senha N8n precisa uppercase: Erro: titanio2026 rejeitada, correto: Titanio2026!\n- [openclaw] openclaw agent prompt longo: ETIMEDOUT em prompts >5000 chars\n\nLIÇÕES APRENDIDAS:\n\n\n\nMEMORY.md ATUAL (primeiras linhas):\n\n## Railway Deploy — KiteMe (2026-02-26)\n- Railway project: `865ff29d-231c-459d-bb02-3e0233de1dc2`\n- Railway service: `1708a89e-4738-45b0-94f6-d5364451965c`\n- API URL: `https://kitesurf-brasil-api-production.up.railway.app`\n- GitHub: `https://github.com/contact703/kitesurf-brasil.git`\n- Token Railway: Eduardo precisa gerar formato `rw_xxx` em https://railway.app/account/tokens\n- GitHub PAT não tem scope `workflow` — não posso criar GitHub Actions\n- Admin seed endpoint: `POST /api/admin/seed` com header `Authorization: Bearer kite2026-admin`\n\n## Sessão 14/03/2026 — Dia de trabalho com Zica (Gospia)\n\n### Apps construídos hoje:\n- **GospIA iOS** (`gospia-ios/`) — React Native/Expo, Chat Pastor Elder, Rádio, Fórum, Apple Sign In, ElevenLabs TTS (Antonio)\n- **KidsHQ Kids iOS Swift** (`KidsHQ/kid\n\nGere um bloco de memória de longo prazo no formato:\n## Semana de 2026-03-21 — Consolidação\n- [fatos importantes aprendidos]\n- [padrões identificados]\n- [erros a evitar]\n- [melhorias aplicadas]\n\nSeja conciso (máximo 10 bullets). Sem repetir o que já está no MEMORY.md.",
-      "description": "",
-      "status": "completed",
-      "startedAt": "2026-03-21T21:11:04.501Z",
-      "completedAt": "2026-03-21T21:11:11.030Z",
-      "result": "## [Geração de Memória de Longo Prazo] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nAnalisando a atividade recente e extraindo insights para a memória de longo prazo:\n\n### Fatos importantes aprendidos:\n- A importância de diferenciar maiúsculas e minúsculas em senhas de aplicativos como o N8n.\n- A limitação de prompts longos no openclaw, que resulta em timeouts.\n\n### Padrões identificados:\n- A necessidade de documentação durante o desenvolvimento para preservar contexto valioso.\n- ",
-      "durationMs": 6529
-    }
-  ],
+  "recentTasks": [],
   "activeContext": {
     "currentTask": null,
     "currentProject": null,

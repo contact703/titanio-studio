@@ -1,0 +1,143 @@
+{
+  "projeto": "Brazilian Beats 2 — Trailer",
+  "versao": "v2-profissional",
+  "data": "2026-03-18",
+  "responsavel": "Ada Vox / VoxDescriber",
+  "voz_tts": "Luciana (macOS) -r 150",
+  "total_slots_detectados": 15,
+  "slots_filtrados_curtos": 4,
+  "slots_usados": 11,
+  "saidas": {
+    "hd": "/Volumes/TITA_039/FILMS_AUDIODESCRICAO/BB2_TRAILER_AD.mp4",
+    "whatsapp": "/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/projetos/BB2_TRAILER_AD_WA.mp4"
+  },
+  "slots_filtrados": [
+    {"idx": 4, "start": 52.06, "end": 53.28, "duracao": 1.22, "motivo": "< 1.5s"},
+    {"idx": 6, "start": 64.04, "end": 65.49, "duracao": 1.45, "motivo": "< 1.5s"},
+    {"idx": 7, "start": 69.26, "end": 70.24, "duracao": 0.98, "motivo": "< 1.5s"},
+    {"idx": 12, "start": 106.09, "end": 106.93, "duracao": 0.83, "motivo": "< 1.5s"}
+  ],
+  "ads": [
+    {
+      "slot_idx": 0,
+      "timestamp_inicio": 5.07,
+      "timestamp_fim": 9.46,
+      "slot_duracao": 4.39,
+      "ad_texto": "Jovem de bigode fala para a câmera.",
+      "audio_duracao": 2.92,
+      "percent_slot": 67,
+      "frame_ref": "slot_000_7.3s.jpg",
+      "descricao_frame": "Close-up de jovem com bigode espesso, argola dourada no septo, fala em depoimento em ambiente interno escuro."
+    },
+    {
+      "slot_idx": 1,
+      "timestamp_inicio": 14.7,
+      "timestamp_fim": 24.18,
+      "slot_duracao": 9.48,
+      "ad_texto": "Homem de chapéu de palha azul observa bandeiras coloridas numa festa ao ar livre.",
+      "audio_duracao": 6.05,
+      "percent_slot": 64,
+      "frame_ref": "slot_001_19.4s.jpg",
+      "descricao_frame": "Homem de costas, chapéu de palha azul com fita tricolor, camiseta com 'APOIO CULTURAL', observa festa popular nordestina com bandeiras coloridas."
+    },
+    {
+      "slot_idx": 2,
+      "timestamp_inicio": 27.8,
+      "timestamp_fim": 33.94,
+      "slot_duracao": 6.14,
+      "ad_texto": "Mulher de blusa preta fala em depoimento.",
+      "audio_duracao": 3.24,
+      "percent_slot": 53,
+      "frame_ref": "slot_002_30.9s.jpg",
+      "descricao_frame": "Mulher de meia-idade, blusa preta de gola alta, cabelos lisos pretos, fala em depoimento. Ao fundo: estúdio com mesa de mixagem e monitores acústicos."
+    },
+    {
+      "slot_idx": 3,
+      "timestamp_inicio": 46.4,
+      "timestamp_fim": 47.9,
+      "slot_duracao": 1.5,
+      "ad_texto": "Jovem caminha.",
+      "audio_duracao": 1.19,
+      "percent_slot": 79,
+      "frame_ref": "slot_003_47.1s.jpg",
+      "descricao_frame": "Jovem de boné roxo, colar prateado, caminha pela calçada observando os edifícios ao redor."
+    },
+    {
+      "slot_idx": 5,
+      "timestamp_inicio": 54.2,
+      "timestamp_fim": 62.45,
+      "slot_duracao": 8.26,
+      "ad_texto": "No palco, cinco músicos. O mais velho, de túnica branca, para diante do microfone.",
+      "audio_duracao": 6.94,
+      "percent_slot": 84,
+      "frame_ref": "slot_005_58.3s.jpg",
+      "descricao_frame": "Palco de teatro com 5 músicos: guitarristas sentados, cantora ao fundo, homem de cabelos grisalhos em túnica branca se concentra diante do microfone."
+    },
+    {
+      "slot_idx": 8,
+      "timestamp_inicio": 70.59,
+      "timestamp_fim": 74.27,
+      "slot_duracao": 3.68,
+      "ad_texto": "Jovem de óculos canta emocionado.",
+      "audio_duracao": 2.75,
+      "percent_slot": 75,
+      "frame_ref": "slot_008_72.4s.jpg",
+      "descricao_frame": "Jovem de óculos escuros, camiseta azul com estampas geométricas, canta de olhos fechados ao ar livre com terreno seco e edifícios ao fundo."
+    },
+    {
+      "slot_idx": 9,
+      "timestamp_inicio": 79.82,
+      "timestamp_fim": 91.3,
+      "slot_duracao": 11.48,
+      "ad_texto": "Vista panorâmica de rio ao entardecer. Barcos ancorados refletem na água dourada. Pessoas socializam na margem.",
+      "audio_duracao": 9.01,
+      "percent_slot": 78,
+      "frame_ref": "slot_009_85.6s.jpg",
+      "descricao_frame": "Rio largo ao entardecer com reflexo dourado do sol. Barcos de pesca, lanchas e canoas ancorados. Praia fluvial com pessoas. Cena ribeirinha do norte do Brasil."
+    },
+    {
+      "slot_idx": 10,
+      "timestamp_inicio": 94.11,
+      "timestamp_fim": 100.88,
+      "slot_duracao": 6.78,
+      "ad_texto": "Homem de boné bordô fala ao ar livre.",
+      "audio_duracao": 2.78,
+      "percent_slot": 41,
+      "frame_ref": "slot_010_97.5s.jpg",
+      "descricao_frame": "Homem negro de barba cheia, boné bordô, óculos escuros espelhados, fala ao ar livre. Casas coloridas em encosta ao fundo."
+    },
+    {
+      "slot_idx": 11,
+      "timestamp_inicio": 103.79,
+      "timestamp_fim": 105.5,
+      "slot_duracao": 1.71,
+      "ad_texto": "Jovem caminha.",
+      "audio_duracao": 1.19,
+      "percent_slot": 70,
+      "frame_ref": "slot_011_104.6s.jpg",
+      "descricao_frame": "Jovem magro com tatuagens, camiseta caramelo e óculos escuros, caminha sobre viaduto acima de avenida movimentada."
+    },
+    {
+      "slot_idx": 13,
+      "timestamp_inicio": 109.56,
+      "timestamp_fim": 111.84,
+      "slot_duracao": 2.28,
+      "ad_texto": "Homem sentado ao piano.",
+      "audio_duracao": 1.79,
+      "percent_slot": 78,
+      "frame_ref": "slot_013_110.7s.jpg",
+      "descricao_frame": "Homem com camisa floral preta e branca, barba com fios grisalhos, sentado ao lado de piano de cauda em teatro vazio com poltronas amarelas."
+    },
+    {
+      "slot_idx": 14,
+      "timestamp_inicio": 120.22,
+      "timestamp_fim": 127.13,
+      "slot_duracao": 6.91,
+      "ad_texto": "Tela preta. Título: Brazilian Beats dois. Produção Titanio Films.",
+      "audio_duracao": 6.06,
+      "percent_slot": 88,
+      "frame_ref": "slot_014_123.7s.jpg",
+      "descricao_frame": "Créditos finais em fundo preto: título 'BRAZILIAN BEATS 2' com o 2 em vermelho. Créditos completos de produção, incluindo Titanio Films, Embaixada do Brasil em Pequim, patrocinadores."
+    }
+  ]
+}

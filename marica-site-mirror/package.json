@@ -1,0 +1,21 @@
+{
+  "name": "marica-site-mirror",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "netlify-cli": "^23.15.1",
+    "puppeteer": "^24.37.1",
+    "website-scraper": "^6.0.0",
+    "website-scraper-puppeteer": "^2.0.0"
+  },
+  "devDependencies": {
+    "surge": "^0.24.6"
+  }
+}

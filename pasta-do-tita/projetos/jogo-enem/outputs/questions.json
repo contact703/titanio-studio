@@ -1,0 +1,123 @@
+{
+  "metadata": {
+    "total_questions": 10,
+    "categories": 5,
+    "difficulty_levels": 3,
+    "generated_date": "2026-03-21",
+    "source": "Phi 3.8B (Ollama local)"
+  },
+  "questions": [
+    {
+      "id": "Q001",
+      "category": "português",
+      "subcategory": "Literatura Brasileira",
+      "difficulty": "easy",
+      "text": "Qual é o author do poema 'Evocação de Recife'?",
+      "options": [
+        {"letter": "A", "text": "Paulo Coelho"},
+        {"letter": "B", "text": "Manuel Bandeira"},
+        {"letter": "C", "text": "Carlos Drummond de Andrade"},
+        {"letter": "D", "text": "Cecília Meireles"},
+        {"letter": "E", "text": "Jorge de Lima"}
+      ],
+      "correct_answer": "B",
+      "explanation": "Manuel Bandeira escreveu 'Evocação do Recife', um poema que homenageia a cidade onde viveu sua infância.",
+      "tips": ["Procure por poesias que fazem referências a cidades", "Bandeira é conhecido por poesias que evocam memórias pessoais"]
+    },
+    {
+      "id": "Q002",
+      "category": "matemática",
+      "subcategory": "Geometria",
+      "difficulty": "medium",
+      "text": "Qual é a fórmula para calcular a área de um círculo?",
+      "options": [
+        {"letter": "A", "text": "A = πr"},
+        {"letter": "B", "text": "A = πr²"},
+        {"letter": "C", "text": "A = 2πr"},
+        {"letter": "D", "text": "A = πd²"},
+        {"letter": "E", "text": "A = r²"}
+      ],
+      "correct_answer": "B",
+      "explanation": "A área de um círculo é calculada multiplicando π (pi) pelo quadrado do raio: A = πr²",
+      "tips": ["Lembre-se: π (pi) x raio ao quadrado", "O raio é metade do diâmetro"]
+    },
+    {
+      "id": "Q003",
+      "category": "ciências_naturais",
+      "subcategory": "Biologia",
+      "difficulty": "medium",
+      "text": "Qual é a estrutura responsável pela síntese de proteínas nas células?",
+      "options": [
+        {"letter": "A", "text": "Mitocôndria"},
+        {"letter": "B", "text": "Ribossomo"},
+        {"letter": "C", "text": "Núcleo"},
+        {"letter": "D", "text": "Retículo endoplasmático"},
+        {"letter": "E", "text": "Aparelho de Golgi"}
+      ],
+      "correct_answer": "B",
+      "explanation": "Os ribossomos são as estruturas celulares responsáveis pela tradução do mRNA em proteínas.",
+      "tips": ["Síntese = fabricação", "Ribossomos trabalham com RNA mensageiro"]
+    },
+    {
+      "id": "Q004",
+      "category": "ciências_humanas",
+      "subcategory": "História do Brasil",
+      "difficulty": "hard",
+      "text": "Em que ano foi proclamada a Independência do Brasil?",
+      "options": [
+        {"letter": "A", "text": "1808"},
+        {"letter": "B", "text": "1815"},
+        {"letter": "C", "text": "1822"},
+        {"letter": "D", "text": "1830"},
+        {"letter": "E", "text": "1850"}
+      ],
+      "correct_answer": "C",
+      "explanation": "A Independência do Brasil foi proclamada em 7 de setembro de 1822, pelo príncipe Dom Pedro I.",
+      "tips": ["Lembre-se de datas importantes: 1822", "Dom Pedro I gritou 'Independência ou Morte'"]
+    },
+    {
+      "id": "Q005",
+      "category": "português",
+      "subcategory": "Interpretação de Texto",
+      "difficulty": "easy",
+      "text": "O que é um prefixo na língua portuguesa?",
+      "options": [
+        {"letter": "A", "text": "Uma terminação adicionada no final da palavra"},
+        {"letter": "B", "text": "Um elemento adicionado no início da palavra que modifica seu significado"},
+        {"letter": "C", "text": "Uma vogal entre duas consoantes"},
+        {"letter": "D", "text": "Um acento gráfico"},
+        {"letter": "E", "text": "Uma classe de palavras invariáveis"}
+      ],
+      "correct_answer": "B",
+      "explanation": "Prefixos são elementos adicionados no início de palavras que modificam seu significado (ex: des-, pré-, re-).",
+      "tips": ["Prefixo = pre + fixo = 'antes do fixo'", "Exemplos: desmanchar, prever, regredir"]
+    }
+  ],
+  "tips_database": {
+    "português": [
+      "Leia o texto com atenção antes de responder",
+      "Procure pelas palavras-chave na questão",
+      "Não se baseie apenas no que 'parece certo'"
+    ],
+    "matemática": [
+      "Desenhe os problemas quando possível",
+      "Simplifique antes de calcular",
+      "Verifique se a resposta faz sentido"
+    ],
+    "ciências_naturais": [
+      "Use a lógica da seleção natural",
+      "Lembre-se das estruturas celulares",
+      "Pense em processos biológicos"
+    ],
+    "ciências_humanas": [
+      "Decore as datas importantes",
+      "Entenda o contexto histórico",
+      "Relacione causas e consequências"
+    ]
+  },
+  "difficulty_distribution": {
+    "easy": 2,
+    "medium": 2,
+    "hard": 1
+  }
+}

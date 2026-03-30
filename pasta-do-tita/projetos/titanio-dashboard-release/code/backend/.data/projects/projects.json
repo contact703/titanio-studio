@@ -1,0 +1,200 @@
+{
+  "projects": [
+    {
+      "id": "project-1773317507116",
+      "name": "frontend",
+      "description": "Projeto JavaScript/TypeScript",
+      "ownerId": "contacttitanio",
+      "members": [
+        "contacttitanio"
+      ],
+      "tags": [],
+      "status": "active",
+      "createdAt": "2026-03-12T12:11:47.116Z",
+      "updatedAt": "2026-03-12T12:11:47.116Z",
+      "tasksCompleted": 0,
+      "tasksTotal": 0
+    },
+    {
+      "id": "project-1773317507117",
+      "name": "marica-site-mirror",
+      "description": "Projeto JavaScript/TypeScript",
+      "ownerId": "contacttitanio",
+      "members": [
+        "contacttitanio"
+      ],
+      "tags": [],
+      "status": "active",
+      "createdAt": "2026-03-12T12:11:47.117Z",
+      "updatedAt": "2026-03-12T12:11:47.117Z",
+      "tasksCompleted": 0,
+      "tasksTotal": 0
+    },
+    {
+      "id": "project-1773317507118",
+      "name": "backend",
+      "description": "Backend do Titanio Command Center",
+      "ownerId": "contacttitanio",
+      "members": [
+        "contacttitanio"
+      ],
+      "tags": [],
+      "status": "active",
+      "createdAt": "2026-03-12T12:11:47.118Z",
+      "updatedAt": "2026-03-12T12:11:47.118Z",
+      "tasksCompleted": 0,
+      "tasksTotal": 0
+    },
+    {
+      "id": "project-1773317507119",
+      "name": "kitesurf-brasil",
+      "description": "![Version](https://img.shields.io/badge/version-3.0-blue)",
+      "ownerId": "contacttitanio",
+      "members": [
+        "contacttitanio"
+      ],
+      "tags": [],
+      "status": "active",
+      "createdAt": "2026-03-12T12:11:47.119Z",
+      "updatedAt": "2026-03-12T12:11:47.119Z",
+      "tasksCompleted": 0,
+      "tasksTotal": 0
+    },
+    {
+      "id": "project-1773317507120",
+      "name": "curl-site",
+      "description": "Projeto Unknown",
+      "ownerId": "contacttitanio",
+      "members": [
+        "contacttitanio"
+      ],
+      "tags": [],
+      "status": "active",
+      "createdAt": "2026-03-12T12:11:47.120Z",
+      "updatedAt": "2026-03-12T12:11:47.120Z",
+      "tasksCompleted": 0,
+      "tasksTotal": 0
+    },
+    {
+      "id": "project-1773317507121",
+      "name": "tita-nio-campaign",
+      "description": "![License](https://img.shields.io/badge/license-MIT-green)",
+      "ownerId": "contacttitanio",
+      "members": [
+        "contacttitanio"
+      ],
+      "tags": [],
+      "status": "active",
+      "createdAt": "2026-03-12T12:11:47.121Z",
+      "updatedAt": "2026-03-12T12:11:47.121Z",
+      "tasksCompleted": 0,
+      "tasksTotal": 0
+    },
+    {
+      "id": "project-1773317543274",
+      "name": "code",
+      "description": "Titanio Command Center - Dashboard Desktop para gerenciamento de bots e frota",
+      "ownerId": "contacttitanio",
+      "members": [
+        "contacttitanio"
+      ],
+      "tags": [],
+      "status": "active",
+      "createdAt": "2026-03-12T12:12:23.274Z",
+      "updatedAt": "2026-03-12T12:12:23.274Z",
+      "tasksCompleted": 0,
+      "tasksTotal": 0
+    },
+    {
+      "id": "project-1773317543275",
+      "name": "marica-standalone",
+      "description": "Projeto Unknown",
+      "ownerId": "contacttitanio",
+      "members": [
+        "contacttitanio"
+      ],
+      "tags": [],
+      "status": "active",
+      "createdAt": "2026-03-12T12:12:23.275Z",
+      "updatedAt": "2026-03-12T12:12:23.275Z",
+      "tasksCompleted": 0,
+      "tasksTotal": 0
+    },
+    {
+      "id": "project-1773317543276",
+      "name": "rosario-temp",
+      "description": "Projeto Unknown",
+      "ownerId": "contacttitanio",
+      "members": [
+        "contacttitanio"
+      ],
+      "tags": [],
+      "status": "active",
+      "createdAt": "2026-03-12T12:12:23.276Z",
+      "updatedAt": "2026-03-12T12:12:23.276Z",
+      "tasksCompleted": 0,
+      "tasksTotal": 0
+    },
+    {
+      "id": "project-1773317565725",
+      "name": "politico-chat-app",
+      "description": "App de campanha com chat do candidato e rede social de militantes.",
+      "ownerId": "contacttitanio",
+      "members": [
+        "contacttitanio"
+      ],
+      "tags": [],
+      "status": "active",
+      "createdAt": "2026-03-12T12:12:45.725Z",
+      "updatedAt": "2026-03-12T12:12:45.725Z",
+      "tasksCompleted": 0,
+      "tasksTotal": 0
+    },
+    {
+      "id": "project-1773317565726",
+      "name": "titanio-dashboard",
+      "description": "Dashboard desktop para gerenciamento de bots, projetos e frota de Mac Minis.",
+      "ownerId": "contacttitanio",
+      "members": [
+        "contacttitanio"
+      ],
+      "tags": [],
+      "status": "active",
+      "createdAt": "2026-03-12T12:12:45.726Z",
+      "updatedAt": "2026-03-12T12:12:45.726Z",
+      "tasksCompleted": 0,
+      "tasksTotal": 0
+    },
+    {
+      "id": "project-1773317580549",
+      "name": "workspace",
+      "description": "Projeto Unknown",
+      "ownerId": "contacttitanio",
+      "members": [
+        "contacttitanio"
+      ],
+      "tags": [],
+      "status": "active",
+      "createdAt": "2026-03-12T12:13:00.549Z",
+      "updatedAt": "2026-03-12T12:13:00.549Z",
+      "tasksCompleted": 0,
+      "tasksTotal": 0
+    },
+    {
+      "id": "project-1773317954727",
+      "name": "espelho",
+      "description": "Projeto JavaScript/TypeScript",
+      "ownerId": "contacttitanio",
+      "members": [
+        "contacttitanio"
+      ],
+      "tags": [],
+      "status": "active",
+      "createdAt": "2026-03-12T12:19:14.727Z",
+      "updatedAt": "2026-03-12T12:19:14.727Z",
+      "tasksCompleted": 0,
+      "tasksTotal": 0
+    }
+  ],
+  "updatedAt": "2026-03-12T12:19:14.727Z"
+}

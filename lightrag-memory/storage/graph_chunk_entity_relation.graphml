@@ -1,0 +1,1888 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d13" for="edge" attr.name="truncate" attr.type="string"/>
+<key id="d12" for="edge" attr.name="created_at" attr.type="long"/>
+<key id="d11" for="edge" attr.name="file_path" attr.type="string"/>
+<key id="d10" for="edge" attr.name="source_id" attr.type="string"/>
+<key id="d9" for="edge" attr.name="keywords" attr.type="string"/>
+<key id="d8" for="edge" attr.name="description" attr.type="string"/>
+<key id="d7" for="edge" attr.name="weight" attr.type="double"/>
+<key id="d6" for="node" attr.name="truncate" attr.type="string"/>
+<key id="d5" for="node" attr.name="created_at" attr.type="long"/>
+<key id="d4" for="node" attr.name="file_path" attr.type="string"/>
+<key id="d3" for="node" attr.name="source_id" attr.type="string"/>
+<key id="d2" for="node" attr.name="description" attr.type="string"/>
+<key id="d1" for="node" attr.name="entity_type" attr.type="string"/>
+<key id="d0" for="node" attr.name="entity_id" attr.type="string"/>
+<graph edgedefault="undirected"><node id="iOS Specialist">
+  <data key="d0">iOS Specialist</data>
+  <data key="d1">person</data>
+  <data key="d2">iOS Specialist is responsible for building local projects in Xcode without EAS.</data>
+  <data key="d3">chunk-491f8d58fed341ac732bad3e2118f8f8</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774284970</data>
+  <data key="d6"></data>
+</node>
+<node id="Xcode">
+  <data key="d0">Xcode</data>
+  <data key="d1">software</data>
+  <data key="d2">Xcode is a development environment used by the iOS Specialist for building projects.</data>
+  <data key="d3">chunk-491f8d58fed341ac732bad3e2118f8f8</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774284970</data>
+  <data key="d6"></data>
+</node>
+<node id="EAS">
+  <data key="d0">EAS</data>
+  <data key="d1">category</data>
+  <data key="d2">EAS refers to the Electronic App Store, which the iOS Specialist avoids when building local projects.</data>
+  <data key="d3">chunk-491f8d58fed341ac732bad3e2118f8f8</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774284971</data>
+  <data key="d6"></data>
+</node>
+<node id="React Native">
+  <data key="d0">React Native</data>
+  <data key="d1">method</data>
+  <data key="d2">React Native is a framework used in conjunction with Expo by the iOS Specialist for developing applications.</data>
+  <data key="d3">chunk-491f8d58fed341ac732bad3e2118f8f8</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774284971</data>
+  <data key="d6"></data>
+</node>
+<node id="Expo">
+  <data key="d0">Expo</data>
+  <data key="d1">software</data>
+  <data key="d2">Expo is a platform for building, deploying, and managing mobile apps using React Native.</data>
+  <data key="d3">chunk-491f8d58fed341ac732bad3e2118f8f8</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774284971</data>
+  <data key="d6"></data>
+</node>
+<node id="GospIA">
+  <data key="d0">GospIA</data>
+  <data key="d1">application</data>
+  <data key="d2">GospIA is an organization with a bundle ID of com.titanio.gospia.&lt;SEP&gt;GospIA is an application developed by contact703.</data>
+  <data key="d3">chunk-491f8d58fed341ac732bad3e2118f8f8&lt;SEP&gt;chunk-2249d6178377ebf1c8b9af2d5d17c841</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285988</data>
+  <data key="d6"></data>
+</node>
+<node id="Bundle ID">
+  <data key="d0">Bundle ID</data>
+  <data key="d1">category</data>
+  <data key="d2">The Bundle ID is a unique identifier for the GospIA application.</data>
+  <data key="d3">chunk-491f8d58fed341ac732bad3e2118f8f8</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774284972</data>
+  <data key="d6"></data>
+</node>
+<node id="Backend-Specialist">
+  <data key="d0">Backend-Specialist</data>
+  <data key="d1">person</data>
+  <data key="d2">The Backend-Specialist is responsible for Next.js and Supabase.</data>
+  <data key="d3">chunk-491f8d58fed341ac732bad3e2118f8f8</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774284972</data>
+  <data key="d6"></data>
+</node>
+<node id="Next.js">
+  <data key="d0">Next.js</data>
+  <data key="d1">software</data>
+  <data key="d2">Next.js is a React-based framework for building server-rendered applications.</data>
+  <data key="d3">chunk-491f8d58fed341ac732bad3e2118f8f8</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774284972</data>
+  <data key="d6"></data>
+</node>
+<node id="Supabase">
+  <data key="d0">Supabase</data>
+  <data key="d1">database</data>
+  <data key="d2">Supabase is a PostgreSQL database with GraphQL API support used by the Backend-Specialist.</data>
+  <data key="d3">chunk-491f8d58fed341ac732bad3e2118f8f8</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774284972</data>
+  <data key="d6"></data>
+</node>
+<node id="Security-Guardian">
+  <data key="d0">Security-Guardian</data>
+  <data key="d1">person</data>
+  <data key="d2">The Security-Guardian performs weekly security audits.</data>
+  <data key="d3">chunk-491f8d58fed341ac732bad3e2118f8f8</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774284972</data>
+  <data key="d6"></data>
+</node>
+<node id="Titanio iOS">
+  <data key="d0">Titanio iOS</data>
+  <data key="d1">organization</data>
+  <data key="d2">Titanio iOS is a company with a team of iOS Specialists.</data>
+  <data key="d3">chunk-491f8d58fed341ac732bad3e2118f8f8</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774284972</data>
+  <data key="d6"></data>
+</node>
+<node id="travado">
+  <data key="d0">travado</data>
+  <data key="d1">person</data>
+  <data key="d2">travado is a character in the input text who mentions various programs and platforms for startups.</data>
+  <data key="d3">chunk-8ee78aa11af474f805bf70860814ecce</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285220</data>
+  <data key="d6"></data>
+</node>
+<node id="Y Combinator">
+  <data key="d0">Y Combinator</data>
+  <data key="d1">organization</data>
+  <data key="d2">Y Combinator (YC W2027) is a startup accelerator that has sent a "magic link" to contact@titaniofilms.com.</data>
+  <data key="d3">chunk-8ee78aa11af474f805bf70860814ecce</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285220</data>
+  <data key="d6"></data>
+</node>
+<node id="NVIDIA Inception">
+  <data key="d0">NVIDIA Inception</data>
+  <data key="d1">program</data>
+  <data key="d2">NVIDIA Inception is a program for startups that has rejected contact@titaniofilms.com due to a generic email address.&lt;SEP&gt;NVIDIA Inception is a program that provides resources and support for startups.</data>
+  <data key="d3">chunk-8ee78aa11af474f805bf70860814ecce&lt;SEP&gt;chunk-1f96bfb541afd67c14f9e42163fb4d0a</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285864</data>
+  <data key="d6"></data>
+</node>
+<node id="AWS Activate">
+  <data key="d0">AWS Activate</data>
+  <data key="d1">program</data>
+  <data key="d2">AWS Activate is a program for startups that has accepted contact@titaniofilms.com.&lt;SEP&gt;AWS Activate is a program that provides resources and support for startups.</data>
+  <data key="d3">chunk-8ee78aa11af474f805bf70860814ecce&lt;SEP&gt;chunk-1f96bfb541afd67c14f9e42163fb4d0a</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285864</data>
+  <data key="d6"></data>
+</node>
+<node id="Google for Startups">
+  <data key="d0">Google for Startups</data>
+  <data key="d1">program</data>
+  <data key="d2">Google for Startups is a program for startups that requires login.&lt;SEP&gt;Google for Startups is a program that provides resources and support for startups.</data>
+  <data key="d3">chunk-8ee78aa11af474f805bf70860814ecce&lt;SEP&gt;chunk-1f96bfb541afd67c14f9e42163fb4d0a</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285864</data>
+  <data key="d6"></data>
+</node>
+<node id="Microsoft for Startups">
+  <data key="d0">Microsoft for Startups</data>
+  <data key="d1">program</data>
+  <data key="d2">Microsoft for Startups is a program for startups that has sent a verification code to contact@titaniofilms.com.&lt;SEP&gt;Microsoft for Startups is a program that provides resources and support for startups.</data>
+  <data key="d3">chunk-8ee78aa11af474f805bf70860814ecce&lt;SEP&gt;chunk-1f96bfb541afd67c14f9e42163fb4d0a</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285864</data>
+  <data key="d6"></data>
+</node>
+<node id="Eduardo/Tiago">
+  <data key="d0">Eduardo/Tiago</data>
+  <data key="d1">person</data>
+  <data key="d2">Eduardo/Tiago are individuals mentioned in the input text who need to access the email contact@titaniofilms.com.</data>
+  <data key="d3">chunk-8ee78aa11af474f805bf70860814ecce</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285224</data>
+  <data key="d6"></data>
+</node>
+<node id="99Freelas">
+  <data key="d0">99Freelas</data>
+  <data key="d1">platform</data>
+  <data key="d2">99Freelas is a platform where proposals have been submitted by travado.</data>
+  <data key="d3">chunk-8ee78aa11af474f805bf70860814ecce</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285224</data>
+  <data key="d6"></data>
+</node>
+<node id="siriguejo">
+  <data key="d0">siriguejo</data>
+  <data key="d1">person</data>
+  <data key="d2">siriguejo is an individual mentioned in the input text who has sent proposals to 99Freelas.</data>
+  <data key="d3">chunk-8ee78aa11af474f805bf70860814ecce</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285224</data>
+  <data key="d6"></data>
+</node>
+<node id="titaniofilms">
+  <data key="d0">titaniofilms</data>
+  <data key="d1">organization</data>
+  <data key="d2">titaniofilms is a company that owns the email contact@titaniofilms.com.</data>
+  <data key="d3">chunk-8ee78aa11af474f805bf70860814ecce</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285224</data>
+  <data key="d6"></data>
+</node>
+<node id="99Freelas Platform">
+  <data key="d0">99Freelas Platform</data>
+  <data key="d1">platform</data>
+  <data key="d2">99Freelas is a platform where proposals have been submitted by travado.</data>
+  <data key="d3">chunk-8ee78aa11af474f805bf70860814ecce</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285224</data>
+  <data key="d6"></data>
+</node>
+<node id="contact@titaniofilms.com">
+  <data key="d0">contact@titaniofilms.com</data>
+  <data key="d3">chunk-8ee78aa11af474f805bf70860814ecce</data>
+  <data key="d2">NVIDIA Inception rejected contact@titaniofilms.com due to a generic email address.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285224</data>
+  <data key="d6"></data>
+</node>
+<node id="expo">
+  <data key="d0">expo</data>
+  <data key="d1">tool</data>
+  <data key="d2">Expo is a development framework for building cross-platform mobile applications.</data>
+  <data key="d3">chunk-dd05f28a71961c08cabdb8963260dc46</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285336</data>
+  <data key="d6"></data>
+</node>
+<node id="ReactCodegen">
+  <data key="d0">ReactCodegen</data>
+  <data key="d1">tool</data>
+  <data key="d2">ReactCodegen is an open-source tool that generates React Native code from C++ and Objective-C headers.</data>
+  <data key="d3">chunk-dd05f28a71961c08cabdb8963260dc46</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285336</data>
+  <data key="d6"></data>
+</node>
+<node id="Metro bundler">
+  <data key="d0">Metro bundler</data>
+  <data key="d1">tool</data>
+  <data key="d2">Metro bundler is a part of the Expo development framework that bundles and transpiles JavaScript code for mobile applications.</data>
+  <data key="d3">chunk-dd05f28a71961c08cabdb8963260dc46</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285338</data>
+  <data key="d6"></data>
+</node>
+<node id="pod install">
+  <data key="d0">pod install</data>
+  <data key="d1">process</data>
+  <data key="d2">Pod install is a process used in iOS development to manage dependencies using CocoaPods.</data>
+  <data key="d3">chunk-dd05f28a71961c08cabdb8963260dc46</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285338</data>
+  <data key="d6"></data>
+</node>
+<node id="xcodebuild archive">
+  <data key="d0">xcodebuild archive</data>
+  <data key="d1">tool</data>
+  <data key="d2">xcodebuild archive is a command-line tool that creates an archived version of the application for distribution on the App Store.</data>
+  <data key="d3">chunk-dd05f28a71961c08cabdb8963260dc46</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285339</data>
+  <data key="d6"></data>
+</node>
+<node id="Apple Distribution">
+  <data key="d0">Apple Distribution</data>
+  <data key="d1">cert</data>
+  <data key="d2">Apple Distribution is a digital certificate issued by Apple Inc. for signing iOS applications.</data>
+  <data key="d3">chunk-dd05f28a71961c08cabdb8963260dc46</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285339</data>
+  <data key="d6"></data>
+</node>
+<node id="Titanio Squad">
+  <data key="d0">Titanio Squad</data>
+  <data key="d1">organization</data>
+  <data key="d2">Titanio Squad is an organization that develops and maintains various software projects, including the GospIA iOS application.</data>
+  <data key="d3">chunk-dd05f28a71961c08cabdb8963260dc46</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285339</data>
+  <data key="d6"></data>
+</node>
+<node id="iOS">
+  <data key="d0">iOS</data>
+  <data key="d1">category</data>
+  <data key="d2">iOS refers to a mobile operating system developed by Apple Inc.</data>
+  <data key="d3">chunk-dd05f28a71961c08cabdb8963260dc46</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285340</data>
+  <data key="d6"></data>
+</node>
+<node id="GospIA iOS">
+  <data key="d0">GospIA iOS</data>
+  <data key="d3">chunk-dd05f28a71961c08cabdb8963260dc46</data>
+  <data key="d2">Titanio Squad is responsible for developing and maintaining the GospIA iOS application.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285342</data>
+  <data key="d6"></data>
+</node>
+<node id="Titanio Studio">
+  <data key="d0">Titanio Studio</data>
+  <data key="d1">organization</data>
+  <data key="d2">Titanio Studio is a marketing agency focused on growth and marketing strategies.</data>
+  <data key="d3">chunk-fc474458c065038296b12622d391d1e5</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285346</data>
+  <data key="d6"></data>
+</node>
+<node id="Instagram">
+  <data key="d0">Instagram</data>
+  <data key="d1">socialmediaplatform</data>
+  <data key="d2">Instagram is a social media platform where users share photos, videos, and live streams.&lt;SEP&gt;Instagram is a popular social media platform used for personal and professional purposes.</data>
+  <data key="d3">chunk-fc474458c065038296b12622d391d1e5&lt;SEP&gt;chunk-28efe485a38973826ef1f69dbeb726a4</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285438</data>
+  <data key="d6"></data>
+</node>
+<node id="Reels">
+  <data key="d0">Reels</data>
+  <data key="d1">feature</data>
+  <data key="d2">Reels are short-form video clips shared on Instagram that can be up to 60 seconds long.</data>
+  <data key="d3">chunk-fc474458c065038296b12622d391d1e5</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285346</data>
+  <data key="d6"></data>
+</node>
+<node id="Growth Hacking">
+  <data key="d0">Growth Hacking</data>
+  <data key="d1">concept</data>
+  <data key="d2">Growth Hacking refers to the practice of using creative and innovative strategies to promote a product or service, typically in a digital environment.</data>
+  <data key="d3">chunk-fc474458c065038296b12622d391d1e5</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285346</data>
+  <data key="d6"></data>
+</node>
+<node id="[NOME]">
+  <data key="d0">[NOME]</data>
+  <data key="d1">placeholder</data>
+  <data key="d2">[NOME] is a placeholder for a specific name used in direct messages (DMs).</data>
+  <data key="d3">chunk-fc474458c065038296b12622d391d1e5</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285346</data>
+  <data key="d6"></data>
+</node>
+<node id="Direct Message">
+  <data key="d0">Direct Message</data>
+  <data key="d1">category</data>
+  <data key="d2">A direct message refers to a private conversation between users on the platform.</data>
+  <data key="d3">chunk-fc474458c065038296b12622d391d1e5</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285346</data>
+  <data key="d6"></data>
+</node>
+<node id="[squad]">
+  <data key="d0">[squad]</data>
+  <data key="d3">chunk-fc474458c065038296b12622d391d1e5</data>
+  <data key="d2">[squad] is a team working at Titanio Studio, a marketing agency.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285346</data>
+  <data key="d6"></data>
+</node>
+<node id="Titanio">
+  <data key="d0">Titanio</data>
+  <data key="d1">organization</data>
+  <data key="d2">Titanio is an organization that is testing the use of AI to manage social media accounts.&lt;SEP&gt;Titanio is an organization that employs the Especialista OpenClaw.</data>
+  <data key="d3">chunk-28efe485a38973826ef1f69dbeb726a4&lt;SEP&gt;chunk-1f96bfb541afd67c14f9e42163fb4d0a</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285861</data>
+  <data key="d6"></data>
+</node>
+<node id="Tiago">
+  <data key="d0">Tiago</data>
+  <data key="d1">person</data>
+  <data key="d2">Tiago is an individual who has approved copywriting efforts for the Titanio Studio.</data>
+  <data key="d3">chunk-28efe485a38973826ef1f69dbeb726a4</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285441</data>
+  <data key="d6"></data>
+</node>
+<node id="Marketing Ninja">
+  <data key="d0">Marketing Ninja</data>
+  <data key="d1">role</data>
+  <data key="d2">A Marketing Ninja is a role within an organization that focuses on marketing and advertising strategies.</data>
+  <data key="d3">chunk-28efe485a38973826ef1f69dbeb726a4</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285441</data>
+  <data key="d6"></data>
+</node>
+<node id="Copywriter">
+  <data key="d0">Copywriter</data>
+  <data key="d1">profession</data>
+  <data key="d2">A Copywriter is a professional responsible for writing engaging copy for advertisements, marketing materials, etc.</data>
+  <data key="d3">chunk-28efe485a38973826ef1f69dbeb726a4</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285441</data>
+  <data key="d6"></data>
+</node>
+<node id="API Meta">
+  <data key="d0">API Meta</data>
+  <data key="d1">softwaretool</data>
+  <data key="d2">API Meta is a software tool used to access and manage social media platforms such as Instagram.</data>
+  <data key="d3">chunk-28efe485a38973826ef1f69dbeb726a4</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285441</data>
+  <data key="d6"></data>
+</node>
+<node id="Google">
+  <data key="d0">Google</data>
+  <data key="d1">organization</data>
+  <data key="d2">Google is an organization that provides various digital services including search engines, email services, etc.</data>
+  <data key="d3">chunk-28efe485a38973826ef1f69dbeb726a4</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285441</data>
+  <data key="d6"></data>
+</node>
+<node id="Blog Content">
+  <data key="d0">Blog Content</data>
+  <data key="d1">content</data>
+  <data key="d2">The blog content by Google is referenced as familiar information to Tiago.</data>
+  <data key="d3">chunk-28efe485a38973826ef1f69dbeb726a4</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285441</data>
+  <data key="d6"></data>
+</node>
+<node id="API Master">
+  <data key="d0">API Master</data>
+  <data key="d1">role</data>
+  <data key="d2">An API Master role is responsible for managing and validating APIs, which is related to the API Meta software tool.</data>
+  <data key="d3">chunk-28efe485a38973826ef1f69dbeb726a4</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285441</data>
+  <data key="d6"></data>
+</node>
+<node id="Especialista OpenClaw da squad Titanio">
+  <data key="d0">Especialista OpenClaw da squad Titanio</data>
+  <data key="d1">person</data>
+  <data key="d2">The Especialista OpenClaw is a member of the Titanio squad.</data>
+  <data key="d3">chunk-1f96bfb541afd67c14f9e42163fb4d0a</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285861</data>
+  <data key="d6"></data>
+</node>
+<node id="Mac Mini arm64">
+  <data key="d0">Mac Mini arm64</data>
+  <data key="d1">device</data>
+  <data key="d2">The Mac Mini arm64 is a device used by the Especialista OpenClaw for work.</data>
+  <data key="d3">chunk-1f96bfb541afd67c14f9e42163fb4d0a</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285864</data>
+  <data key="d6"></data>
+</node>
+<node id="Darwin 24.6.0">
+  <data key="d0">Darwin 24.6.0</data>
+  <data key="d1">software</data>
+  <data key="d2">Darwin 24.6.0 is software used by the Especialista OpenClaw on their Mac Mini.</data>
+  <data key="d3">chunk-1f96bfb541afd67c14f9e42163fb4d0a</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285864</data>
+  <data key="d6"></data>
+</node>
+<node id="Node v22.22.0">
+  <data key="d0">Node v22.22.0</data>
+  <data key="d1">software</data>
+  <data key="d2">Node v22.22.0 is software used by the Especialista OpenClaw for development.</data>
+  <data key="d3">chunk-1f96bfb541afd67c14f9e42163fb4d0a</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285864</data>
+  <data key="d6"></data>
+</node>
+<node id="Workspace: /Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace">
+  <data key="d0">Workspace: /Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace</data>
+  <data key="d1">location</data>
+  <data key="d2">The Workspace is a location where the Especialista OpenClaw stores their work files.</data>
+  <data key="d3">chunk-1f96bfb541afd67c14f9e42163fb4d0a</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285864</data>
+  <data key="d6"></data>
+</node>
+<node id="Agente: Tita (claude-sonnet-4-6)">
+  <data key="d0">Agente: Tita (claude-sonnet-4-6)</data>
+  <data key="d1">agent</data>
+  <data key="d2">Tita is an agent used by the Especialista OpenClaw for automation tasks.</data>
+  <data key="d3">chunk-1f96bfb541afd67c14f9e42163fb4d0a</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285864</data>
+  <data key="d6"></data>
+</node>
+<node id="Canais: WhatsApp (grupo Gospia: 120363405462114071@g.us)">
+  <data key="d0">Canais: WhatsApp (grupo Gospia: 120363405462114071@g.us)</data>
+  <data key="d1">communicationchannel</data>
+  <data key="d2">The WhatsApp group "Gospia" is a communication channel used by the Especialista OpenClaw and others.</data>
+  <data key="d3">chunk-1f96bfb541afd67c14f9e42163fb4d0a</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285864</data>
+  <data key="d6"></data>
+</node>
+<node id="Skills ativas: coding-agent, gh-issues, github, n8n-api, academic-research, agent-council, agent-dashboard">
+  <data key="d0">Skills ativas: coding-agent, gh-issues, github, n8n-api, academic-research, agent-council, agent-dashboard</data>
+  <data key="d1">skill</data>
+  <data key="d2">The skills listed are active for use by the Especialista OpenClaw in their work.</data>
+  <data key="d3">chunk-1f96bfb541afd67c14f9e42163fb4d0a</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285864</data>
+  <data key="d6"></data>
+</node>
+<node id="Especialista iOS da squad Titanio">
+  <data key="d0">Especialista iOS da squad Titanio</data>
+  <data key="d1">person</data>
+  <data key="d2">The Especialista iOS is a member of the Titanio squad.</data>
+  <data key="d3">chunk-1f96bfb541afd67c14f9e42163fb4d0a</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285864</data>
+  <data key="d6"></data>
+</node>
+<node id="iOS Specialist - Contexto (injetar no início de cada sessão)">
+  <data key="d0">iOS Specialist - Contexto (injetar no início de cada sessão)</data>
+  <data key="d1">jobtitle</data>
+  <data key="d2">The Especialista iOS has the job title "iOS Specialist".</data>
+  <data key="d3">chunk-1f96bfb541afd67c14f9e42163fb4d0a</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285864</data>
+  <data key="d6"></data>
+</node>
+<node id="/Volumes/TITA_039/backup-projetos/gospia-v2">
+  <data key="d0">/Volumes/TITA_039/backup-projetos/gospia-v2</data>
+  <data key="d1">location</data>
+  <data key="d2">/Volumes/TITA_039/backup-projetos/gospia-v2 is a location used by the Especialista iOS for work.</data>
+  <data key="d3">chunk-1f96bfb541afd67c14f9e42163fb4d0a</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285864</data>
+  <data key="d6"></data>
+</node>
+<node id="Bundle ID: com.titanio.gospia">
+  <data key="d0">Bundle ID: com.titanio.gospia</data>
+  <data key="d1">identifier</data>
+  <data key="d2">The Bundle ID "com.titanio.gospia" is an identifier used by the Especialista iOS for their project.</data>
+  <data key="d3">chunk-1f96bfb541afd67c14f9e42163fb4d0a</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285864</data>
+  <data key="d6"></data>
+</node>
+<node id="Victor Capital - Perfil">
+  <data key="d0">Victor Capital - Perfil</data>
+  <data key="d1">organization</data>
+  <data key="d2">Victor Capital is an organization that provides services related to resource capture and other business initiatives.</data>
+  <data key="d3">chunk-1f96bfb541afd67c14f9e42163fb4d0a</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285864</data>
+  <data key="d6"></data>
+</node>
+<node id="Especialidade: Captação de recursos, editais, aceleradoras, programas de fomento">
+  <data key="d0">Especialidade: Captação de recursos, editais, aceleradoras, programas de fomento</data>
+  <data key="d1">areaofexpertise</data>
+  <data key="d2">Victor Capital specializes in capturing resources, managing grants, and participating in accelerator programs.</data>
+  <data key="d3">chunk-1f96bfb541afd67c14f9e42163fb4d0a</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285864</data>
+  <data key="d6"></data>
+</node>
+<node id="Y Combinator (YC)">
+  <data key="d0">Y Combinator (YC)</data>
+  <data key="d1">organization</data>
+  <data key="d2">Y Combinator is an organization that provides funding and support for startups.</data>
+  <data key="d3">chunk-1f96bfb541afd67c14f9e42163fb4d0a</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285864</data>
+  <data key="d6"></data>
+</node>
+<node id="Sebrae, BNDES, FINEP">
+  <data key="d0">Sebrae, BNDES, FINEP</data>
+  <data key="d1">organization</data>
+  <data key="d2">Sebrae, BNDES, and FINEP are organizations that provide resources and support for startups.</data>
+  <data key="d3">chunk-1f96bfb541afd67c14f9e42163fb4d0a</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285864</data>
+  <data key="d6"></data>
+</node>
+<node id="NVIDIA Inception: rejeita email genérico (contact@) - usar email pessoal do fundador">
+  <data key="d0">NVIDIA Inception: rejeita email genérico (contact@) - usar email pessoal do fundador</data>
+  <data key="d1">rule</data>
+  <data key="d2">The rule states that NVIDIA Inception requires a personal email address of the founder to be used for communications.</data>
+  <data key="d3">chunk-1f96bfb541afd67c14f9e42163fb4d0a</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285864</data>
+  <data key="d6"></data>
+</node>
+<node id="YC: magic link enviado para contact@titaniofilms.com - verificar email ANTES de iniciar">
+  <data key="d0">YC: magic link enviado para contact@titaniofilms.com - verificar email ANTES de iniciar</data>
+  <data key="d1">rule</data>
+  <data key="d2">The rule states that Y Combinator requires a verification of the email address before starting.</data>
+  <data key="d3">chunk-1f96bfb541afd67c14f9e42163fb4d0a</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285864</data>
+  <data key="d6"></data>
+</node>
+<node id="Toda as regras listadas são importantes para Victor Capital.">
+  <data key="d0">Toda as regras listadas são importantes para Victor Capital.</data>
+  <data key="d1">rule</data>
+  <data key="d2">The rule states that all listed rules are important for Victor Capital.</data>
+  <data key="d3">chunk-1f96bfb541afd67c14f9e42163fb4d0a</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285864</data>
+  <data key="d6"></data>
+</node>
+<node id="World Athletics Federation">
+  <data key="d0">World Athletics Federation</data>
+  <data key="d1">organization</data>
+  <data key="d2">The World Athletics Federation is the governing body overseeing the World Athletics Championship and record validations.</data>
+  <data key="d3">chunk-1f96bfb541afd67c14f9e42163fb4d0a&lt;SEP&gt;chunk-2249d6178377ebf1c8b9af2d5d17c841</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285864</data>
+  <data key="d6"></data>
+</node>
+<node id="Especialista: victor-capital">
+  <data key="d0">Especialista: victor-capital</data>
+  <data key="d3">chunk-1f96bfb541afd67c14f9e42163fb4d0a</data>
+  <data key="d2">Victor Capital is the organization profiled as a service provider for the Especialista: victor-capital.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285864</data>
+  <data key="d6"></data>
+</node>
+<node id="Responsabilidades">
+  <data key="d0">Responsabilidades</data>
+  <data key="d3">chunk-1f96bfb541afd67c14f9e42163fb4d0a</data>
+  <data key="d2">The job duties listed are associated with the position of Victor Capital.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285864</data>
+  <data key="d6"></data>
+</node>
+<node id="Programas Monitorados">
+  <data key="d0">Programas Monitorados</data>
+  <data key="d3">chunk-1f96bfb541afd67c14f9e42163fb4d0a</data>
+  <data key="d2">Victor Capital monitors the programs provided by Sebrae, BNDES, and FINEP.&lt;SEP&gt;Victor Capital monitors the programs provided by Microsoft for Startups.&lt;SEP&gt;Victor Capital monitors the programs provided by Google for Startups.&lt;SEP&gt;Victor Capital monitors the programs provided by NVIDIA Inception.&lt;SEP&gt;Victor Capital monitors the programs provided by Y Combinator.&lt;SEP&gt;Victor Capital monitors the programs provided by AWS Activate.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285865</data>
+  <data key="d6"></data>
+</node>
+<node id="Carbon-Fiber Spikes">
+  <data key="d0">Carbon-Fiber Spikes</data>
+  <data key="d3">chunk-1f96bfb541afd67c14f9e42163fb4d0a</data>
+  <data key="d2">Noah Carter used carbon-fiber spikes to enhance performance during the race.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285865</data>
+  <data key="d6"></data>
+</node>
+<node id="Noah Carter">
+  <data key="d0">Noah Carter</data>
+  <data key="d3">chunk-1f96bfb541afd67c14f9e42163fb4d0a&lt;SEP&gt;chunk-2249d6178377ebf1c8b9af2d5d17c841</data>
+  <data key="d2">Noah Carter used carbon-fiber spikes to enhance performance during the race.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285865</data>
+  <data key="d6"></data>
+</node>
+<node id="StoreKit">
+  <data key="d0">StoreKit</data>
+  <data key="d1">organization</data>
+  <data key="d2">StoreKit is a payment system for in-app purchases on iOS, not using direct PIX payments.</data>
+  <data key="d3">chunk-2249d6178377ebf1c8b9af2d5d17c841</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285985</data>
+  <data key="d6"></data>
+</node>
+<node id="Apple Sign In">
+  <data key="d0">Apple Sign In</data>
+  <data key="d1">method</data>
+  <data key="d2">Apple Sign In is required if Google Sign In is used.</data>
+  <data key="d3">chunk-2249d6178377ebf1c8b9af2d5d17c841</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285985</data>
+  <data key="d6"></data>
+</node>
+<node id="Zica">
+  <data key="d0">Zica</data>
+  <data key="d1">person</data>
+  <data key="d2">Zica is an individual who creates an Apple Developer Account with Eduardo.</data>
+  <data key="d3">chunk-2249d6178377ebf1c8b9af2d5d17c841&lt;SEP&gt;chunk-ca7497057356c8b4a1e40cfabe483df4</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285988</data>
+  <data key="d6"></data>
+</node>
+<node id="Eduardo">
+  <data key="d0">Eduardo</data>
+  <data key="d1">person</data>
+  <data key="d2">Eduardo is the other person who creates an Apple Developer Account with Zica.</data>
+  <data key="d3">chunk-2249d6178377ebf1c8b9af2d5d17c841</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285988</data>
+  <data key="d6"></data>
+</node>
+<node id="Apple Developer Account">
+  <data key="d0">Apple Developer Account</data>
+  <data key="d1">organization</data>
+  <data key="d2">The Apple Developer Account costs $99 per year and is required for app development.</data>
+  <data key="d3">chunk-2249d6178377ebf1c8b9af2d5d17c841</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285988</data>
+  <data key="d6"></data>
+</node>
+<node id="KidsHQ-HQ">
+  <data key="d0">KidsHQ-HQ</data>
+  <data key="d1">application</data>
+  <data key="d2">KidsHQ-HQ is another application developed by contact703.</data>
+  <data key="d3">chunk-2249d6178377ebf1c8b9af2d5d17c841</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285988</data>
+  <data key="d6"></data>
+</node>
+<node id="KidsHQ Kids Swift">
+  <data key="d0">KidsHQ Kids Swift</data>
+  <data key="d1">application</data>
+  <data key="d2">KidsHQ Kids Swift is a version of the KidsHQ app built in Swift.</data>
+  <data key="d3">chunk-2249d6178377ebf1c8b9af2d5d17c841</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285988</data>
+  <data key="d6"></data>
+</node>
+<node id="FamilyControls entitlement">
+  <data key="d0">FamilyControls entitlement</data>
+  <data key="d1">concept</data>
+  <data key="d2">The FamilyControls entitlement is required for certain apps and can be requested through Apple's Developer Account.</data>
+  <data key="d3">chunk-2249d6178377ebf1c8b9af2d5d17c841</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285988</data>
+  <data key="d6"></data>
+</node>
+<node id="contact703">
+  <data key="d0">contact703</data>
+  <data key="d1">organization</data>
+  <data key="d2">contact703 is a development company that has created several applications, including GospIA, KidsHQ-HQ, and KidsHQ Kids Swift.</data>
+  <data key="d3">chunk-2249d6178377ebf1c8b9af2d5d17c841</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285988</data>
+  <data key="d6"></data>
+</node>
+<node id="GitHub repos">
+  <data key="d0">GitHub repos</data>
+  <data key="d1">data</data>
+  <data key="d2">The GitHub repositories for contact703 include gospia-ios, kidshq-kids-ios, and kidshq-kids-swift.</data>
+  <data key="d3">chunk-2249d6178377ebf1c8b9af2d5d17c841</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285988</data>
+  <data key="d6"></data>
+</node>
+<node id="tita-learning-system">
+  <data key="d0">tita-learning-system</data>
+  <data key="d1">system</data>
+  <data key="d2">The tita-learning-system is a system of learning that includes 21 lessons with a 90.5% success rate.</data>
+  <data key="d3">chunk-2249d6178377ebf1c8b9af2d5d17c841</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285988</data>
+  <data key="d6"></data>
+</node>
+<node id="Gold Digger Studio">
+  <data key="d0">Gold Digger Studio</data>
+  <data key="d1">organization</data>
+  <data key="d2">Gold Digger Studio is a Workana profile created by the user, siriguejo@proton.me.</data>
+  <data key="d3">chunk-2249d6178377ebf1c8b9af2d5d17c841</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285988</data>
+  <data key="d6"></data>
+</node>
+<node id="Workana">
+  <data key="d0">Workana</data>
+  <data key="d1">platform</data>
+  <data key="d2">Workana is a platform for freelancers and clients to connect and work together.</data>
+  <data key="d3">chunk-2249d6178377ebf1c8b9af2d5d17c841</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285988</data>
+  <data key="d6"></data>
+</node>
+<node id="Drop Servicing">
+  <data key="d0">Drop Servicing</data>
+  <data key="d1">concept</data>
+  <data key="d2">Drop servicing is a concept where the seller handles the customer service, while the buyer focuses on marketing and sales.</data>
+  <data key="d3">chunk-2249d6178377ebf1c8b9af2d5d17c841</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285988</data>
+  <data key="d6"></data>
+</node>
+<node id="YouTube Faceless">
+  <data key="d0">YouTube Faceless</data>
+  <data key="d1">channel</data>
+  <data key="d2">The user has created a YouTube channel called "Gold Digger Studio" which uses faceless videos to promote their services.</data>
+  <data key="d3">chunk-2249d6178377ebf1c8b9af2d5d17c841</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285988</data>
+  <data key="d6"></data>
+</node>
+<node id="memory-bot">
+  <data key="d0">memory-bot</data>
+  <data key="d1">system</data>
+  <data key="d2">The memory-bot is an AI system that helps with learning and retention of information.</data>
+  <data key="d3">chunk-2249d6178377ebf1c8b9af2d5d17c841</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285988</data>
+  <data key="d6"></data>
+</node>
+<node id="ios-specialist">
+  <data key="d0">ios-specialist</data>
+  <data key="d1">expertise</data>
+  <data key="d2">The ios-specialist is an expert in iOS, React Native, Expo, and App Store development.</data>
+  <data key="d3">chunk-2249d6178377ebf1c8b9af2d5d17c841</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285988</data>
+  <data key="d6"></data>
+</node>
+<node id="money-maker">
+  <data key="d0">money-maker</data>
+  <data key="d1">concept</data>
+  <data key="d2">The money-maker is a concept that uses AI to generate revenue through various means.</data>
+  <data key="d3">chunk-2249d6178377ebf1c8b9af2d5d17c841</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285988</data>
+  <data key="d6"></data>
+</node>
+<node id="agent-doctor">
+  <data key="d0">agent-doctor</data>
+  <data key="d1">expertise</data>
+  <data key="d2">The agent-doctor is an expert in APIs, free and paid, as well as hardening macOS and criptografia age.</data>
+  <data key="d3">chunk-2249d6178377ebf1c8b9af2d5d17c841</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285988</data>
+  <data key="d6"></data>
+</node>
+<node id="Sistema de Memória v2">
+  <data key="d0">Sistema de Memória v2</data>
+  <data key="d1">system</data>
+  <data key="d2">The Sistema de Memória v2 is a system of learning that includes 59 lessons with a 96.6% success rate.</data>
+  <data key="d3">chunk-2249d6178377ebf1c8b9af2d5d17c841</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285988</data>
+  <data key="d6"></data>
+</node>
+<node id="Noah Carter's Record">
+  <data key="d0">Noah Carter's Record</data>
+  <data key="d1">category</data>
+  <data key="d2">Noah Carter set a new 100m sprint record at the World Athletics Championship.</data>
+  <data key="d3">chunk-2249d6178377ebf1c8b9af2d5d17c841</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285988</data>
+  <data key="d6"></data>
+</node>
+<node id="World Athletics Championship">
+  <data key="d0">World Athletics Championship</data>
+  <data key="d3">chunk-2249d6178377ebf1c8b9af2d5d17c841</data>
+  <data key="d2">The World Athletics Federation is overseeing the World Athletics Championship and validating records.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285988</data>
+  <data key="d6"></data>
+</node>
+<node id="Carbon-Fiber Spikes' Manufacturer">
+  <data key="d0">Carbon-Fiber Spikes' Manufacturer</data>
+  <data key="d3">chunk-2249d6178377ebf1c8b9af2d5d17c841</data>
+  <data key="d2">The manufacturer of Noah's carbon-fiber spikes contributed to his record-breaking performance.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774285988</data>
+  <data key="d6"></data>
+</node>
+<node id="OpenClaw">
+  <data key="d0">OpenClaw</data>
+  <data key="d1">concept</data>
+  <data key="d2">OpenClaw is an open-source platform for configuration, automation, and integration.</data>
+  <data key="d3">chunk-4ae5d19350b9789a3605676107592fe8</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774286137</data>
+  <data key="d6"></data>
+</node>
+<node id="Tita">
+  <data key="d0">Tita</data>
+  <data key="d1">person</data>
+  <data key="d2">Tita is the agent principal running on a Mac Mini with OpenClaw.</data>
+  <data key="d3">chunk-4ae5d19350b9789a3605676107592fe8&lt;SEP&gt;chunk-ca7497057356c8b4a1e40cfabe483df4</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774286137</data>
+  <data key="d6"></data>
+</node>
+<node id="Apple Team">
+  <data key="d0">Apple Team</data>
+  <data key="d1">organization</data>
+  <data key="d2">The Apple Team has a provisioning profile with ID TY646U2BYX.</data>
+  <data key="d3">chunk-4ae5d19350b9789a3605676107592fe8</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774286144</data>
+  <data key="d6"></data>
+</node>
+<node id="/tmp/gospia-certs/">
+  <data key="d0">/tmp/gospia-certs/</data>
+  <data key="d1">location</data>
+  <data key="d2">/tmp/gospia-certs/ is the directory for storing certificates.</data>
+  <data key="d3">chunk-4ae5d19350b9789a3605676107592fe8</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774286144</data>
+  <data key="d6"></data>
+</node>
+<node id="6760674894">
+  <data key="d0">6760674894</data>
+  <data key="d1">identifier</data>
+  <data key="d2">6760674894 is the App Store ID.</data>
+  <data key="d3">chunk-4ae5d19350b9789a3605676107592fe8</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774286144</data>
+  <data key="d6"></data>
+</node>
+<node id=".openclaw/workspace/squad/specialists/ios-specialist/">
+  <data key="d0">.openclaw/workspace/squad/specialists/ios-specialist/</data>
+  <data key="d1">location</data>
+  <data key="d2">.openclaw/workspace/squad/specialists/ios-specialist/ is the directory for storing LESSONS.md.</data>
+  <data key="d3">chunk-4ae5d19350b9789a3605676107592fe8</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774286144</data>
+  <data key="d6"></data>
+</node>
+<node id="Mac Mini">
+  <data key="d0">Mac Mini</data>
+  <data key="d1">equipment</data>
+  <data key="d2">Mac Mini is a computer model used by Tita for running OpenClaw.</data>
+  <data key="d3">chunk-4ae5d19350b9789a3605676107592fe8</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774286144</data>
+  <data key="d6"></data>
+</node>
+<node id=".openclaw/workspace/squad/">
+  <data key="d0">.openclaw/workspace/squad/</data>
+  <data key="d1">location</data>
+  <data key="d2">.openclaw/workspace/squad/ is the directory where squad workspaces are stored.</data>
+  <data key="d3">chunk-4ae5d19350b9789a3605676107592fe8</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774286144</data>
+  <data key="d6"></data>
+</node>
+<node id="Julian Goldie">
+  <data key="d0">Julian Goldie</data>
+  <data key="d3">chunk-4ae5d19350b9789a3605676107592fe8</data>
+  <data key="d2">Julian Goldie uses and advises on OpenClaw.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774286144</data>
+  <data key="d6"></data>
+</node>
+<node id="ClaWHub">
+  <data key="d0">ClaWHub</data>
+  <data key="d3">chunk-4ae5d19350b9789a3605676107592fe8</data>
+  <data key="d2">ClaWHub is a platform for creating and sharing skills with OpenClaw.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774286144</data>
+  <data key="d6"></data>
+</node>
+<node id="GitHub">
+  <data key="d0">GitHub</data>
+  <data key="d3">chunk-4ae5d19350b9789a3605676107592fe8</data>
+  <data key="d2">GitHub has repositories for the OpenClaw project.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774286144</data>
+  <data key="d6"></data>
+</node>
+<node id="Discord">
+  <data key="d0">Discord</data>
+  <data key="d3">chunk-4ae5d19350b9789a3605676107592fe8</data>
+  <data key="d2">Discord is a community for discussing OpenClaw.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774286145</data>
+  <data key="d6"></data>
+</node>
+<node id="nclaw message send">
+  <data key="d0">nclaw message send</data>
+  <data key="d1">method</data>
+  <data key="d2">The nclaw message send command is a method for sending messages and media files using OpenClaw.</data>
+  <data key="d3">chunk-ca7497057356c8b4a1e40cfabe483df4</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774286157</data>
+  <data key="d6"></data>
+</node>
+<node id="whatsapp">
+  <data key="d0">whatsapp</data>
+  <data key="d1">channel</data>
+  <data key="d2">WhatsApp is the target channel for the nclaw message send command.</data>
+  <data key="d3">chunk-ca7497057356c8b4a1e40cfabe483df4</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774286157</data>
+  <data key="d6"></data>
+</node>
+<node id="120363405462114071@g.us">
+  <data key="d0">120363405462114071@g.us</data>
+  <data key="d1">target</data>
+  <data key="d2">This is the target number for the WhatsApp message.</data>
+  <data key="d3">chunk-ca7497057356c8b4a1e40cfabe483df4</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774286158</data>
+  <data key="d6"></data>
+</node>
+<node id="SISTEMA-MEMORIA-APRENDIZADO.md">
+  <data key="d0">SISTEMA-MEMORIA-APRENDIZADO.md</data>
+  <data key="d1">mediafile</data>
+  <data key="d2">The media file being sent is a markdown document named SISTEMA-MEMORIA-APRENDIZADO.md.</data>
+  <data key="d3">chunk-ca7497057356c8b4a1e40cfabe483df4</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774286158</data>
+  <data key="d6"></data>
+</node>
+<node id="/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/SISTEMA-MEMORIA-APRENDIZADO.md">
+  <data key="d0">/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/SISTEMA-MEMORIA-APRENDIZADO.md</data>
+  <data key="d1">medialocation</data>
+  <data key="d2">The media file is located in the specified directory on a Mac Mini computer.</data>
+  <data key="d3">chunk-ca7497057356c8b4a1e40cfabe483df4</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774286158</data>
+  <data key="d6"></data>
+</node>
+<node id="Instaloader">
+  <data key="d0">Instaloader</data>
+  <data key="d1">tool</data>
+  <data key="d2">Instaloader is a tool for downloading Instagram videos and other content.</data>
+  <data key="d3">chunk-ca7497057356c8b4a1e40cfabe483df4</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774286159</data>
+  <data key="d6"></data>
+</node>
+<node id="yt-dlp">
+  <data key="d0">yt-dlp</data>
+  <data key="d1">software</data>
+  <data key="d2">Yt-dlp is another tool used for downloading YouTube and other video content.&lt;SEP&gt;yt-dlp is a command-line YouTube video downloader.</data>
+  <data key="d3">chunk-ca7497057356c8b4a1e40cfabe483df4&lt;SEP&gt;chunk-32ec395bb414afdd733a72eb255993d6</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774286260</data>
+  <data key="d6"></data>
+</node>
+<node id="instagram.com/p/SHORTCODE/">
+  <data key="d0">instagram.com/p/SHORTCODE/</data>
+  <data key="d1">videourl</data>
+  <data key="d2">This is the URL of a specific Instagram video being downloaded using Instaloader or yt-dlp.</data>
+  <data key="d3">chunk-ca7497057356c8b4a1e40cfabe483df4</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774286159</data>
+  <data key="d6"></data>
+</node>
+<node id="USER">
+  <data key="d0">USER</data>
+  <data key="d1">instagramaccount</data>
+  <data key="d2">The username for an Instagram account used with Instaloader to download content.</data>
+  <data key="d3">chunk-ca7497057356c8b4a1e40cfabe483df4</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774286159</data>
+  <data key="d6"></data>
+</node>
+<node id="/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace">
+  <data key="d0">/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace</data>
+  <data key="d1">location</data>
+  <data key="d2">/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace is a directory path on a Mac Mini computer.</data>
+  <data key="d3">chunk-ca7497057356c8b4a1e40cfabe483df4</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774286159</data>
+  <data key="d6"></data>
+</node>
+<node id="Playwright">
+  <data key="d0">Playwright</data>
+  <data key="d3">chunk-ca7497057356c8b4a1e40cfabe483df4&lt;SEP&gt;chunk-32ec395bb414afdd733a72eb255993d6</data>
+  <data key="d2">The nclaw message send method and Playwright are compared as tools for sending messages and media.&lt;SEP&gt;Playwright is a browser automation framework used for automating web browsers.</data>
+  <data key="d1">software</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774286263</data>
+  <data key="d6"></data>
+</node>
+<node id="Dashboard Testing">
+  <data key="d0">Dashboard Testing</data>
+  <data key="d1">event</data>
+  <data key="d2">Dashboard testing refers to the evaluation and verification of various aspects of the dashboard, including its functionality, user interface, and performance.</data>
+  <data key="d3">chunk-32ec395bb414afdd733a72eb255993d6</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774286260</data>
+  <data key="d6"></data>
+</node>
+<node id="API Endpoints">
+  <data key="d0">API Endpoints</data>
+  <data key="d1">category</data>
+  <data key="d2">API endpoints are the entry points to interact with the API, allowing clients to send requests and receive responses.</data>
+  <data key="d3">chunk-32ec395bb414afdd733a72eb255993d6</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774286263</data>
+  <data key="d6"></data>
+</node>
+<node id="Health Status">
+  <data key="d0">Health Status</data>
+  <data key="d1">status</data>
+  <data key="d2">Health status refers to the state of the system or application, indicating whether it is functioning correctly or experiencing issues.</data>
+  <data key="d3">chunk-32ec395bb414afdd733a72eb255993d6</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774286263</data>
+  <data key="d6"></data>
+</node>
+<node id="Squad">
+  <data key="d0">Squad</data>
+  <data key="d1">category</data>
+  <data key="d2">Squad refers to a group of specialists or experts working together on a project or task.</data>
+  <data key="d3">chunk-32ec395bb414afdd733a72eb255993d6</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774286263</data>
+  <data key="d6"></data>
+</node>
+<node id="Openclaw Models">
+  <data key="d0">Openclaw Models</data>
+  <data key="d1">category</data>
+  <data key="d2">Openclaw models are a set of pre-trained AI models used for various tasks, including image classification and object detection.</data>
+  <data key="d3">chunk-32ec395bb414afdd733a72eb255993d6</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774286263</data>
+  <data key="d6"></data>
+</node>
+<node id="Anthropic Claude Haiku 4-5-20251001">
+  <data key="d0">Anthropic Claude Haiku 4-5-20251001</data>
+  <data key="d1">software</data>
+  <data key="d2">Anthropic Claude Haiku 4-5-20251001 is a specific openclaw model used for text generation and poetry composition.</data>
+  <data key="d3">chunk-32ec395bb414afdd733a72eb255993d6</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774286263</data>
+  <data key="d6"></data>
+</node>
+<node id="Moonshot Kimi K2 Turbo Preview">
+  <data key="d0">Moonshot Kimi K2 Turbo Preview</data>
+  <data key="d1">software</data>
+  <data key="d2">Moonshot Kimi K2 Turbo Preview is another openclaw model used for various tasks, including image classification and object detection.</data>
+  <data key="d3">chunk-32ec395bb414afdd733a72eb255993d6</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774286263</data>
+  <data key="d6"></data>
+</node>
+<node id="Nemotron 3 Super 120b A12b:free">
+  <data key="d0">Nemotron 3 Super 120b A12b:free</data>
+  <data key="d1">software</data>
+  <data key="d2">Nemotron 3 Super 120b A12b:free is an openclaw model that has been tested successfully.</data>
+  <data key="d3">chunk-32ec395bb414afdd733a72eb255993d6</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774286263</data>
+  <data key="d6"></data>
+</node>
+<node id="Nemotron">
+  <data key="d0">Nemotron</data>
+  <data key="d1">software</data>
+  <data key="d2">Nemotron is an openclaw model used for various tasks.</data>
+  <data key="d3">chunk-32ec395bb414afdd733a72eb255993d6</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774286263</data>
+  <data key="d6"></data>
+</node>
+<node id="Instagram Poster Specialist">
+  <data key="d0">Instagram Poster Specialist</data>
+  <data key="d1">category</data>
+  <data key="d2">An Instagram poster specialist is a professional who creates posters for Instagram.</data>
+  <data key="d3">chunk-32ec395bb414afdd733a72eb255993d6</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774286263</data>
+  <data key="d6"></data>
+</node>
+<node id="Context Transfer">
+  <data key="d0">Context Transfer</data>
+  <data key="d3">chunk-32ec395bb414afdd733a72eb255993d6</data>
+  <data key="d2">The context transfer functionality was evaluated using various openclaw models, demonstrating their ability to exchange data and perform tasks.&lt;SEP&gt;The context transfer functionality was evaluated using various openclaw models.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774286264</data>
+  <data key="d6"></data>
+</node>
+<node id="Sistema">
+  <data key="d0">Sistema</data>
+  <data key="d1">organization</data>
+  <data key="d2">The Sistema is a system that is fully operational and real, not a simulation.</data>
+  <data key="d3">chunk-1f4585f785d3d217c236a90ddc81c26a</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774286350</data>
+  <data key="d6"></data>
+</node>
+<node id="Conclusão">
+  <data key="d0">Conclusão</data>
+  <data key="d1">event</data>
+  <data key="d2">The Conclusão refers to a conclusion or final outcome, which was reached after testing the Sistema.</data>
+  <data key="d3">chunk-1f4585f785d3d217c236a90ddc81c26a</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774286350</data>
+  <data key="d6"></data>
+</node>
+<node id="100% Operacional e Real">
+  <data key="d0">100% Operacional e Real</data>
+  <data key="d3">chunk-1f4585f785d3d217c236a90ddc81c26a</data>
+  <data key="d2">The Sistema is confirmed to be 100% operacional and real.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1774286350</data>
+  <data key="d6"></data>
+</node>
+<edge source="iOS Specialist" target="Xcode">
+  <data key="d7">1.0</data>
+  <data key="d8">The iOS Specialist uses Xcode for building local projects.</data>
+  <data key="d9">development environment,project building</data>
+  <data key="d10">chunk-491f8d58fed341ac732bad3e2118f8f8</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774284972</data>
+  <data key="d13"></data>
+</edge>
+<edge source="GospIA" target="Bundle ID">
+  <data key="d7">1.0</data>
+  <data key="d8">The GospIA organization has a unique Bundle ID of com.titanio.gospia.</data>
+  <data key="d9">application uniqueness,organization identifier</data>
+  <data key="d10">chunk-491f8d58fed341ac732bad3e2118f8f8</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774284972</data>
+  <data key="d13"></data>
+</edge>
+<edge source="GospIA" target="Security-Guardian">
+  <data key="d7">1.0</data>
+  <data key="d8">The Security-Guardian is responsible for performing weekly security audits on the GospIA organization.</data>
+  <data key="d9">organization protection,security responsibility</data>
+  <data key="d10">chunk-491f8d58fed341ac732bad3e2118f8f8</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774284972</data>
+  <data key="d13"></data>
+</edge>
+<edge source="GospIA" target="KidsHQ-HQ">
+  <data key="d7">1.0</data>
+  <data key="d8">Both GospIA and KidsHQ-HQ are developed by contact703.</data>
+  <data key="d9">application similarity,shared development</data>
+  <data key="d10">chunk-2249d6178377ebf1c8b9af2d5d17c841</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285988</data>
+  <data key="d13"></data>
+</edge>
+<edge source="GospIA" target="ios-specialist">
+  <data key="d7">1.0</data>
+  <data key="d8">The ios-specialist has expertise in developing applications like GospIA.</data>
+  <data key="d9">development,expertise application</data>
+  <data key="d10">chunk-2249d6178377ebf1c8b9af2d5d17c841</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285988</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Backend-Specialist" target="Next.js">
+  <data key="d7">1.0</data>
+  <data key="d8">The Backend-Specialist works with Next.js for building server-rendered applications.</data>
+  <data key="d9">application development,software usage</data>
+  <data key="d10">chunk-491f8d58fed341ac732bad3e2118f8f8</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774284972</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Backend-Specialist" target="Supabase">
+  <data key="d7">1.0</data>
+  <data key="d8">The Backend-Specialist uses Supabase as a database and for managing data.</data>
+  <data key="d9">data management,database usage</data>
+  <data key="d10">chunk-491f8d58fed341ac732bad3e2118f8f8</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774284972</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Backend-Specialist" target="Security-Guardian">
+  <data key="d7">1.0</data>
+  <data key="d8">The Security-Guardian and Backend-Specialist work together, sharing responsibilities related to application development and security.</data>
+  <data key="d9">collaboration,shared goals</data>
+  <data key="d10">chunk-491f8d58fed341ac732bad3e2118f8f8</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774284972</data>
+  <data key="d13"></data>
+</edge>
+<edge source="travado" target="Y Combinator">
+  <data key="d7">1.0</data>
+  <data key="d8">travado has applied to Y Combinator (YC W2027).</data>
+  <data key="d9">application,program participation</data>
+  <data key="d10">chunk-8ee78aa11af474f805bf70860814ecce</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285224</data>
+  <data key="d13"></data>
+</edge>
+<edge source="NVIDIA Inception" target="contact@titaniofilms.com">
+  <data key="d7">1.0</data>
+  <data key="d8">NVIDIA Inception rejected contact@titaniofilms.com due to a generic email address.</data>
+  <data key="d9">email address,program rejection</data>
+  <data key="d10">chunk-8ee78aa11af474f805bf70860814ecce</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285224</data>
+  <data key="d13"></data>
+</edge>
+<edge source="NVIDIA Inception" target="Victor Capital - Perfil">
+  <data key="d7">1.0</data>
+  <data key="d8">Victor Capital monitors the programs provided by NVIDIA Inception and follows its rules.</data>
+  <data key="d9">organization,service recipient</data>
+  <data key="d10">chunk-1f96bfb541afd67c14f9e42163fb4d0a</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285865</data>
+  <data key="d13"></data>
+</edge>
+<edge source="AWS Activate" target="contact@titaniofilms.com">
+  <data key="d7">1.0</data>
+  <data key="d8">AWS Activate has accepted contact@titaniofilms.com.</data>
+  <data key="d9">email address,program acceptance</data>
+  <data key="d10">chunk-8ee78aa11af474f805bf70860814ecce</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285224</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Eduardo/Tiago" target="contact@titaniofilms.com">
+  <data key="d7">1.0</data>
+  <data key="d8">Eduardo/Tiago need to manually log in to the email contact@titaniofilms.com.</data>
+  <data key="d9">email access,manual login</data>
+  <data key="d10">chunk-8ee78aa11af474f805bf70860814ecce</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285224</data>
+  <data key="d13"></data>
+</edge>
+<edge source="99Freelas" target="siriguejo">
+  <data key="d7">1.0</data>
+  <data key="d8">siriguejo has submitted proposals to 99Freelas.</data>
+  <data key="d9">platform,proposal submission</data>
+  <data key="d10">chunk-8ee78aa11af474f805bf70860814ecce</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285224</data>
+  <data key="d13"></data>
+</edge>
+<edge source="siriguejo" target="contact@titaniofilms.com">
+  <data key="d7">1.0</data>
+  <data key="d8">siriguejo has submitted proposals to 99Freelas.</data>
+  <data key="d9">email access,proposal submission</data>
+  <data key="d10">chunk-8ee78aa11af474f805bf70860814ecce</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285225</data>
+  <data key="d13"></data>
+</edge>
+<edge source="expo" target="ReactCodegen">
+  <data key="d7">1.0</data>
+  <data key="d8">Expo integrates with ReactCodegen to generate React Native code from C++ and Objective-C headers.</data>
+  <data key="d9">code generation,tool integration</data>
+  <data key="d10">chunk-dd05f28a71961c08cabdb8963260dc46</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285341</data>
+  <data key="d13"></data>
+</edge>
+<edge source="expo" target="Metro bundler">
+  <data key="d7">1.0</data>
+  <data key="d8">Metro bundler is used in Expo to bundle and transpile JavaScript code for mobile applications.</data>
+  <data key="d9">app development,bundling process</data>
+  <data key="d10">chunk-dd05f28a71961c08cabdb8963260dc46</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285341</data>
+  <data key="d13"></data>
+</edge>
+<edge source="pod install" target="xcodebuild archive">
+  <data key="d7">1.0</data>
+  <data key="d8">Pod install integrates with xcodebuild archive to manage dependencies and create an archived version of the application.</data>
+  <data key="d9">process integration,project build</data>
+  <data key="d10">chunk-dd05f28a71961c08cabdb8963260dc46</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285341</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Titanio Squad" target="GospIA iOS">
+  <data key="d7">1.0</data>
+  <data key="d8">Titanio Squad is responsible for developing and maintaining the GospIA iOS application.</data>
+  <data key="d9">organization-project relationship,software development</data>
+  <data key="d10">chunk-dd05f28a71961c08cabdb8963260dc46</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285343</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Titanio Studio" target="Growth Hacking">
+  <data key="d7">1.0</data>
+  <data key="d8">Titanio Studio specializes in growth hacking strategies.</data>
+  <data key="d9">company concept</data>
+  <data key="d10">chunk-fc474458c065038296b12622d391d1e5</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285346</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Titanio Studio" target="[squad]">
+  <data key="d7">1.0</data>
+  <data key="d8">[squad] is a team working at Titanio Studio, a marketing agency.</data>
+  <data key="d9">team company</data>
+  <data key="d10">chunk-fc474458c065038296b12622d391d1e5</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285346</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Titanio Studio" target="[NOME]">
+  <data key="d7">1.0</data>
+  <data key="d8">[NOME] is part of Titanio Studio's team, handling various tasks and projects.</data>
+  <data key="d9">team company</data>
+  <data key="d10">chunk-fc474458c065038296b12622d391d1e5</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285346</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Instagram" target="Reels">
+  <data key="d7">1.0</data>
+  <data key="d8">Reels are a feature on the Instagram platform that allows users to share short-form videos.</data>
+  <data key="d9">platform feature</data>
+  <data key="d10">chunk-fc474458c065038296b12622d391d1e5</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285346</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Instagram" target="[squad]">
+  <data key="d7">1.0</data>
+  <data key="d8">[squad] is associated with Instagram, where they work on various projects and campaigns.</data>
+  <data key="d9">team platform</data>
+  <data key="d10">chunk-fc474458c065038296b12622d391d1e5</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285346</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Instagram" target="Titanio">
+  <data key="d7">1.0</data>
+  <data key="d8">The Titanio organization is using the Instagram social media platform for their marketing efforts.</data>
+  <data key="d9">organization platform usage</data>
+  <data key="d10">chunk-28efe485a38973826ef1f69dbeb726a4</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285441</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Reels" target="Growth Hacking">
+  <data key="d7">1.0</data>
+  <data key="d8">Growth hacking strategies can be applied to Reels on Instagram to enhance their reach and engagement.</data>
+  <data key="d9">concept feature</data>
+  <data key="d10">chunk-fc474458c065038296b12622d391d1e5</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285346</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Titanio" target="Marketing Ninja">
+  <data key="d7">1.0</data>
+  <data key="d8">The Marketing Ninja role within the Titanio organization focuses on developing marketing strategies and campaigns.</data>
+  <data key="d9">role organization</data>
+  <data key="d10">chunk-28efe485a38973826ef1f69dbeb726a4</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285441</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Titanio" target="Especialista OpenClaw da squad Titanio">
+  <data key="d7">1.0</data>
+  <data key="d8">The Especialista OpenClaw is employed by Titanio.</data>
+  <data key="d9">affiliation,employment relationship</data>
+  <data key="d10">chunk-1f96bfb541afd67c14f9e42163fb4d0a</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285864</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Tiago" target="Copywriter">
+  <data key="d7">1.0</data>
+  <data key="d8">Tiago, as a copywriter, has approved various copywriting efforts for the Titanio Studio.</data>
+  <data key="d9">approval profession</data>
+  <data key="d10">chunk-28efe485a38973826ef1f69dbeb726a4</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285441</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Tiago" target="Google">
+  <data key="d7">1.0</data>
+  <data key="d8">Tiago has a connection or affiliation with Google due to being familiar with their blog content.</data>
+  <data key="d9">organization profession</data>
+  <data key="d10">chunk-28efe485a38973826ef1f69dbeb726a4</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285441</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Tiago" target="Blog Content">
+  <data key="d7">1.0</data>
+  <data key="d8">Tiago has familiarity with Google's blog content.</data>
+  <data key="d9">familiarity reference</data>
+  <data key="d10">chunk-28efe485a38973826ef1f69dbeb726a4</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285441</data>
+  <data key="d13"></data>
+</edge>
+<edge source="API Meta" target="API Master">
+  <data key="d7">1.0</data>
+  <data key="d8">A person with API Master expertise is responsible for organizing and validating information related to API usage, such as credentials.</data>
+  <data key="d9">software tool expertise</data>
+  <data key="d10">chunk-28efe485a38973826ef1f69dbeb726a4</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285441</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Especialista OpenClaw da squad Titanio" target="Mac Mini arm64">
+  <data key="d7">1.0</data>
+  <data key="d8">The Mac Mini arm64 is used by the Especialista OpenClaw for their work.</data>
+  <data key="d9">device user,work tool</data>
+  <data key="d10">chunk-1f96bfb541afd67c14f9e42163fb4d0a</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285864</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Especialista OpenClaw da squad Titanio" target="Node v22.22.0">
+  <data key="d7">1.0</data>
+  <data key="d8">Node v22.22.0 is used by the Especialista OpenClaw for development tasks.</data>
+  <data key="d9">development tool,software user</data>
+  <data key="d10">chunk-1f96bfb541afd67c14f9e42163fb4d0a</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285864</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Especialista OpenClaw da squad Titanio" target="Workspace: /Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace">
+  <data key="d7">1.0</data>
+  <data key="d8">The Workspace is used by the Especialista OpenClaw for storing and managing their work files.</data>
+  <data key="d9">location,work space</data>
+  <data key="d10">chunk-1f96bfb541afd67c14f9e42163fb4d0a</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285864</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Especialista OpenClaw da squad Titanio" target="Agente: Tita (claude-sonnet-4-6)">
+  <data key="d7">1.0</data>
+  <data key="d8">Tita is used by the Especialista OpenClaw for automation tasks.</data>
+  <data key="d9">agent,automation tool</data>
+  <data key="d10">chunk-1f96bfb541afd67c14f9e42163fb4d0a</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285864</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Especialista iOS da squad Titanio" target="/Volumes/TITA_039/backup-projetos/gospia-v2">
+  <data key="d7">1.0</data>
+  <data key="d8">/Volumes/TITA_039/backup-projetos/gospia-v2 is used by the Especialista iOS for storing and managing their project files.</data>
+  <data key="d9">location,work space</data>
+  <data key="d10">chunk-1f96bfb541afd67c14f9e42163fb4d0a</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285864</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Especialista iOS da squad Titanio" target="Bundle ID: com.titanio.gospia">
+  <data key="d7">1.0</data>
+  <data key="d8">The Bundle ID "com.titanio.gospia" is associated with the project of the Especialista iOS.</data>
+  <data key="d9">identifier,project</data>
+  <data key="d10">chunk-1f96bfb541afd67c14f9e42163fb4d0a</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285864</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Victor Capital - Perfil" target="Especialista: victor-capital">
+  <data key="d7">1.0</data>
+  <data key="d8">Victor Capital is the organization profiled as a service provider for the Especialista: victor-capital.</data>
+  <data key="d9">organization,service provider</data>
+  <data key="d10">chunk-1f96bfb541afd67c14f9e42163fb4d0a</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285864</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Victor Capital - Perfil" target="Responsabilidades">
+  <data key="d7">1.0</data>
+  <data key="d8">The job duties listed are associated with the position of Victor Capital.</data>
+  <data key="d9">job duties</data>
+  <data key="d10">chunk-1f96bfb541afd67c14f9e42163fb4d0a</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285864</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Victor Capital - Perfil" target="Programas Monitorados">
+  <data key="d7">6.0</data>
+  <data key="d8">Victor Capital monitors the programs provided by Sebrae, BNDES, and FINEP.&lt;SEP&gt;Victor Capital monitors the programs provided by Microsoft for Startups.&lt;SEP&gt;Victor Capital monitors the programs provided by Google for Startups.&lt;SEP&gt;Victor Capital monitors the programs provided by NVIDIA Inception.&lt;SEP&gt;Victor Capital monitors the programs provided by Y Combinator.&lt;SEP&gt;Victor Capital monitors the programs provided by AWS Activate.</data>
+  <data key="d9">organization,service recipient</data>
+  <data key="d10">chunk-1f96bfb541afd67c14f9e42163fb4d0a</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285865</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Victor Capital - Perfil" target="Y Combinator (YC)">
+  <data key="d7">1.0</data>
+  <data key="d8">Victor Capital monitors the programs provided by Y Combinator and follows its rules.</data>
+  <data key="d9">organization,service recipient</data>
+  <data key="d10">chunk-1f96bfb541afd67c14f9e42163fb4d0a</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285865</data>
+  <data key="d13"></data>
+</edge>
+<edge source="World Athletics Federation" target="World Athletics Championship">
+  <data key="d7">1.0</data>
+  <data key="d8">The World Athletics Federation is overseeing the World Athletics Championship and validating records.</data>
+  <data key="d9">event management,governing body</data>
+  <data key="d10">chunk-2249d6178377ebf1c8b9af2d5d17c841</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285988</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Carbon-Fiber Spikes" target="Noah Carter">
+  <data key="d7">1.0</data>
+  <data key="d8">Noah Carter used carbon-fiber spikes to enhance performance during the race.</data>
+  <data key="d9">athletic equipment,performance boost</data>
+  <data key="d10">chunk-1f96bfb541afd67c14f9e42163fb4d0a</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285865</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Noah Carter" target="Carbon-Fiber Spikes' Manufacturer">
+  <data key="d7">1.0</data>
+  <data key="d8">The manufacturer of Noah's carbon-fiber spikes contributed to his record-breaking performance.</data>
+  <data key="d9">athlete equipment,equipment origin</data>
+  <data key="d10">chunk-2249d6178377ebf1c8b9af2d5d17c841</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285988</data>
+  <data key="d13"></data>
+</edge>
+<edge source="StoreKit" target="Apple Sign In">
+  <data key="d7">1.0</data>
+  <data key="d8">StoreKit requires Apple Sign In for in-app purchases on iOS.</data>
+  <data key="d9">authentication,payment method</data>
+  <data key="d10">chunk-2249d6178377ebf1c8b9af2d5d17c841</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285988</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Zica" target="Eduardo">
+  <data key="d7">1.0</data>
+  <data key="d8">Zica and Eduardo collaborate to create an Apple Developer Account.</data>
+  <data key="d9">collaboration,person association</data>
+  <data key="d10">chunk-2249d6178377ebf1c8b9af2d5d17c841</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285988</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Zica" target="Tita">
+  <data key="d7">2.0</data>
+  <data key="d8">Tita attempted to complete the task but made an error by inventing generic knowledge instead of using the specified repos.&lt;SEP&gt;Zica assigned a task to Tita, which was about creating a specialist in design with specific knowledge.</data>
+  <data key="d9">instruction,knowledge sharing,task assignment,task completion</data>
+  <data key="d10">chunk-ca7497057356c8b4a1e40cfabe483df4</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774286160</data>
+  <data key="d13"></data>
+</edge>
+<edge source="contact703" target="GitHub repos">
+  <data key="d7">2.0</data>
+  <data key="d8">Contact703 has created several GitHub repositories for their applications.&lt;SEP&gt;Contact703 manages several GitHub repositories for their applications.</data>
+  <data key="d9">development company,repository creation,repository management</data>
+  <data key="d10">chunk-2249d6178377ebf1c8b9af2d5d17c841</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285988</data>
+  <data key="d13"></data>
+</edge>
+<edge source="tita-learning-system" target="Sistema de Memória v2">
+  <data key="d7">1.0</data>
+  <data key="d8">The tita-learning-system and the Sistema de Memória v2 are both systems of learning with high success rates.</data>
+  <data key="d9">learning platform,system similarity</data>
+  <data key="d10">chunk-2249d6178377ebf1c8b9af2d5d17c841</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285988</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Gold Digger Studio" target="Workana">
+  <data key="d7">1.0</data>
+  <data key="d8">Gold Digger Studio is a Workana profile created by siriguejo@proton.me for their services.</data>
+  <data key="d9">freelancing platform,organization profile</data>
+  <data key="d10">chunk-2249d6178377ebf1c8b9af2d5d17c841</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285988</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Gold Digger Studio" target="money-maker">
+  <data key="d7">1.0</data>
+  <data key="d8">The money-maker concept is applied by Gold Digger Studio to generate revenue.</data>
+  <data key="d9">concept application,revenue generation</data>
+  <data key="d10">chunk-2249d6178377ebf1c8b9af2d5d17c841</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285988</data>
+  <data key="d13"></data>
+</edge>
+<edge source="memory-bot" target="Sistema de Memória v2">
+  <data key="d7">1.0</data>
+  <data key="d8">The memory-bot and the Sistema de Memória v2 are both systems that assist with learning and retention of information.</data>
+  <data key="d9">learning assistance,system similarity</data>
+  <data key="d10">chunk-2249d6178377ebf1c8b9af2d5d17c841</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285988</data>
+  <data key="d13"></data>
+</edge>
+<edge source="agent-doctor" target="Sistema de Memória v2">
+  <data key="d7">1.0</data>
+  <data key="d8">The agent-doctor has expertise in the Sistema de Memória v2, which includes hardening macOS and criptografia age for security purposes.</data>
+  <data key="d9">expertise system,hardening and security</data>
+  <data key="d10">chunk-2249d6178377ebf1c8b9af2d5d17c841</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774285988</data>
+  <data key="d13"></data>
+</edge>
+<edge source="OpenClaw" target="Tita">
+  <data key="d7">1.0</data>
+  <data key="d8">Tita runs on OpenClaw.</data>
+  <data key="d9">agent principal,platform usage</data>
+  <data key="d10">chunk-4ae5d19350b9789a3605676107592fe8</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774286144</data>
+  <data key="d13"></data>
+</edge>
+<edge source="OpenClaw" target=".openclaw/workspace/squad/specialists/ios-specialist/">
+  <data key="d7">1.0</data>
+  <data key="d8">.openclaw/workspace/squad/specialists/ios-specialist/ is a workspace for OpenClaw.</data>
+  <data key="d9">workspace and platform</data>
+  <data key="d10">chunk-4ae5d19350b9789a3605676107592fe8</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774286144</data>
+  <data key="d13"></data>
+</edge>
+<edge source="OpenClaw" target="Julian Goldie">
+  <data key="d7">1.0</data>
+  <data key="d8">Julian Goldie uses and advises on OpenClaw.</data>
+  <data key="d9">community usage,expert advice</data>
+  <data key="d10">chunk-4ae5d19350b9789a3605676107592fe8</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774286144</data>
+  <data key="d13"></data>
+</edge>
+<edge source="OpenClaw" target="ClaWHub">
+  <data key="d7">1.0</data>
+  <data key="d8">ClaWHub is a platform for creating and sharing skills with OpenClaw.</data>
+  <data key="d9">platform and skills</data>
+  <data key="d10">chunk-4ae5d19350b9789a3605676107592fe8</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774286144</data>
+  <data key="d13"></data>
+</edge>
+<edge source="OpenClaw" target="GitHub">
+  <data key="d7">1.0</data>
+  <data key="d8">GitHub has repositories for the OpenClaw project.</data>
+  <data key="d9">repository and platform</data>
+  <data key="d10">chunk-4ae5d19350b9789a3605676107592fe8</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774286145</data>
+  <data key="d13"></data>
+</edge>
+<edge source="OpenClaw" target="Discord">
+  <data key="d7">1.0</data>
+  <data key="d8">Discord is a community for discussing OpenClaw.</data>
+  <data key="d9">community and platform</data>
+  <data key="d10">chunk-4ae5d19350b9789a3605676107592fe8</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774286145</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Apple Team" target="6760674894">
+  <data key="d7">1.0</data>
+  <data key="d8">The Apple Team has an App Store ID of 6760674894.</data>
+  <data key="d9">organization and app store ID</data>
+  <data key="d10">chunk-4ae5d19350b9789a3605676107592fe8</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774286144</data>
+  <data key="d13"></data>
+</edge>
+<edge source="nclaw message send" target="whatsapp">
+  <data key="d7">1.0</data>
+  <data key="d8">The nclaw message send command is used to send messages through the WhatsApp channel.</data>
+  <data key="d9">channel usage,message sending</data>
+  <data key="d10">chunk-ca7497057356c8b4a1e40cfabe483df4</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774286159</data>
+  <data key="d13"></data>
+</edge>
+<edge source="nclaw message send" target="SISTEMA-MEMORIA-APRENDIZADO.md">
+  <data key="d7">1.0</data>
+  <data key="d8">The nclaw message send command sends a markdown document as media through the WhatsApp channel.</data>
+  <data key="d9">media file transfer,messaging</data>
+  <data key="d10">chunk-ca7497057356c8b4a1e40cfabe483df4</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774286160</data>
+  <data key="d13"></data>
+</edge>
+<edge source="nclaw message send" target="Playwright">
+  <data key="d7">1.0</data>
+  <data key="d8">The nclaw message send method and Playwright are compared as tools for sending messages and media.</data>
+  <data key="d9">method comparison,tool usage</data>
+  <data key="d10">chunk-ca7497057356c8b4a1e40cfabe483df4</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774286160</data>
+  <data key="d13"></data>
+</edge>
+<edge source="SISTEMA-MEMORIA-APRENDIZADO.md" target="/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace">
+  <data key="d7">1.0</data>
+  <data key="d8">/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace is the directory containing the SISTEMA-MEMORIA-APRENDIZADO.md media file.</data>
+  <data key="d9">media file,media location</data>
+  <data key="d10">chunk-ca7497057356c8b4a1e40cfabe483df4</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774286160</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Instaloader" target="instagram.com/p/SHORTCODE/">
+  <data key="d7">1.0</data>
+  <data key="d8">Instaloader is a tool for downloading Instagram videos from their URLs.</data>
+  <data key="d9">tool usage,video download</data>
+  <data key="d10">chunk-ca7497057356c8b4a1e40cfabe483df4</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774286160</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Playwright" target="Dashboard Testing">
+  <data key="d7">1.0</data>
+  <data key="d8">Dashboard testing used Playwright for browser automation and evaluation.</data>
+  <data key="d9">automation,evaluation tool</data>
+  <data key="d10">chunk-32ec395bb414afdd733a72eb255993d6</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774286263</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Dashboard Testing" target="Instagram Poster Specialist">
+  <data key="d7">1.0</data>
+  <data key="d8">The dashboard testing was used to evaluate the Instagram poster specialist's performance and create a user-friendly interface.</data>
+  <data key="d9">evaluation tool,user interface creation</data>
+  <data key="d10">chunk-32ec395bb414afdd733a72eb255993d6</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774286264</data>
+  <data key="d13"></data>
+</edge>
+<edge source="API Endpoints" target="Health Status">
+  <data key="d7">1.0</data>
+  <data key="d8">API endpoints were used to interact with the system and check its health status.</data>
+  <data key="d9">status check,system interaction</data>
+  <data key="d10">chunk-32ec395bb414afdd733a72eb255993d6</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774286263</data>
+  <data key="d13"></data>
+</edge>
+<edge source="API Endpoints" target="Openclaw Models">
+  <data key="d7">1.0</data>
+  <data key="d8">The openclaw models interacted with the API endpoints to exchange data and perform various tasks.</data>
+  <data key="d9">data exchange,system interaction</data>
+  <data key="d10">chunk-32ec395bb414afdd733a72eb255993d6</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774286264</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Squad" target="Openclaw Models">
+  <data key="d7">1.0</data>
+  <data key="d8">The squad worked together to select and use various openclaw models for their tasks.</data>
+  <data key="d9">model selection,team collaboration</data>
+  <data key="d10">chunk-32ec395bb414afdd733a72eb255993d6</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774286264</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Openclaw Models" target="Context Transfer">
+  <data key="d7">2.0</data>
+  <data key="d8">The context transfer functionality was evaluated using various openclaw models, demonstrating their ability to exchange data and perform tasks.&lt;SEP&gt;The context transfer functionality was evaluated using various openclaw models.</data>
+  <data key="d9">data exchange,model comparison,model evaluation</data>
+  <data key="d10">chunk-32ec395bb414afdd733a72eb255993d6</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774286264</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Anthropic Claude Haiku 4-5-20251001" target="Moonshot Kimi K2 Turbo Preview">
+  <data key="d7">1.0</data>
+  <data key="d8">The two openclaw models were compared and used for different tasks, demonstrating their capabilities.</data>
+  <data key="d9">model comparison,task execution</data>
+  <data key="d10">chunk-32ec395bb414afdd733a72eb255993d6</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774286264</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Sistema" target="100% Operacional e Real">
+  <data key="d7">1.0</data>
+  <data key="d8">The Sistema is confirmed to be 100% operacional and real.</data>
+  <data key="d9">confirmation,system status</data>
+  <data key="d10">chunk-1f4585f785d3d217c236a90ddc81c26a</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774286350</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Sistema" target="Conclusão">
+  <data key="d7">1.0</data>
+  <data key="d8">The Sistema's operational status and realism were confirmed through the Conclusão.</data>
+  <data key="d9">confirmation,system outcome</data>
+  <data key="d10">chunk-1f4585f785d3d217c236a90ddc81c26a</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1774286350</data>
+  <data key="d13"></data>
+</edge>
+</graph></graphml>

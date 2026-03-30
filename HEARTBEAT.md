@@ -1,8 +1,12 @@
 # HEARTBEAT.md
 
 ## Primeiro (SEMPRE)
+- [ ] Verificar SESSION-CONTEXT.md tem < 1h: `find /Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/SESSION-CONTEXT.md -mmin -60 | grep .` Se vazio → rodar `bash bin/tita-session-boot.sh`
 - [ ] Verificar se Tita Memory Watchdog está rodando: `pgrep -f memory-watchdog.sh`
 - [ ] Se não estiver: `bash /tmp/start-tita-memory-watchdog.sh`
+- [ ] Verificar se session-boot LaunchAgent está ativo: `launchctl list | grep session-boot`
+- [ ] Rodar teste de memória 2x/dia: `bash bin/tita-memory-test.sh` (09h e 18h)
+- [ ] Se teste < 90%: rodar `python3 bin/tita-memory-engine.py index` pra reindexar
 
 ## AUTO-MEMORY SYSTEM (Rodando 24/7)
 
@@ -34,12 +38,6 @@ O sistema funciona continuamente. Não precisa de ação manual.
 - [x] Automática via memory-watchdog (não precisa manual)
 - [x] MEMORY.md sincronizado todo dia 23:59
 
-## Gold Digger — Monetização Ativa
-- Email: siriguejo@proton.me (ProtonMail)
-- Scripts em: /Volumes/TITA_039/backup-projetos/gold-digger/scripts/
-- [ ] Diário: bash gold-digger.sh [nicho] [servico] — gera kit de prospecção
-- [ ] Semanal: bash gerar-portfolio.sh — atualiza portfólio com amostras
-
 ## Security Guardian — Auditoria Semanal
 - [ ] Segunda-feira: bash /Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/security-weekly.sh
 - [ ] Checar: credenciais em plaintext, API keys expostas, watchdogs ativos
@@ -49,9 +47,6 @@ O sistema funciona continuamente. Não precisa de ação manual.
 - [ ] Gerar relatório semanal em `/projetos/fundos/relatorio-semanal-YYYY-MM-DD.md`
 - [ ] Enviar resumo das melhores oportunidades no WhatsApp
 
-## Smooth Switch
-- [ ] Se resposta lenta ou rate limit: ler `squad/SMOOTH-SWITCH-CONTEXT.md`
-- [ ] N8n rodando? Se não: subir e importar `squad/n8n/smooth-switch-workflow.json`
 
 ## 🆕 Real-Learning + Scraper (22/03)
 - [x] TITA-SCRAPER criado (`/bin/tita-scraper`)

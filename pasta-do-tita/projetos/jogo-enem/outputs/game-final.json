@@ -1,0 +1,14 @@
+```json
+{
+    "game_title": "ENEM Quest",
+    "engine": "Godot 4.x",
+    "scene_tree": {
+        "root": "Main",
+        "scenes": [
+            {"name": "Overworld", "type": "Node2D"},
+            {"nameiname": "BattleSystem", "type": "Node2D"}
+        ]
+    },
+    "categories": ["Português", "Matemática", "Ciências", "História", "Redação"]
+}
+```

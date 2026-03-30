@@ -7,7 +7,7 @@
   "stats": {
     "workflowsCreated": 32,
     "successRate": 99,
-    "lessonsLearned": 8,
+    "lessonsLearned": 0,
     "tokensUsed": 0,
     "avgWorkflowTimeMin": 6,
     "taskCompletion": "EXPERT"
@@ -43,11 +43,36 @@
     "verifyCommand": "curl -s http://localhost:5678/api/v1/workflows -H 'X-N8N-API-KEY: KEY' | python3 -c \"import sys,json; d=json.load(sys.stdin); print(len(d.get('data',[])), 'workflows')\""
   },
   "patterns": {
-    "simpleHTTP": { "name": "Simple HTTP Request", "nodes": 3, "timeMin": 2, "complexity": "BASIC" },
-    "parallelProcessing": { "name": "Parallel Processing (5+ bots)", "nodes": 8, "timeMin": 8, "complexity": "ADVANCED" },
-    "loopWithTransform": { "name": "Loop with Data Transform", "nodes": 5, "timeMin": 5, "complexity": "INTERMEDIATE" },
-    "scheduledTask": { "name": "Scheduled Task (Cron)", "nodes": 3, "timeMin": 4, "complexity": "INTERMEDIATE" },
-    "webhookRelay": { "name": "Webhook Relay", "nodes": 4, "timeMin": 3, "complexity": "BASIC" }
+    "simpleHTTP": {
+      "name": "Simple HTTP Request",
+      "nodes": 3,
+      "timeMin": 2,
+      "complexity": "BASIC"
+    },
+    "parallelProcessing": {
+      "name": "Parallel Processing (5+ bots)",
+      "nodes": 8,
+      "timeMin": 8,
+      "complexity": "ADVANCED"
+    },
+    "loopWithTransform": {
+      "name": "Loop with Data Transform",
+      "nodes": 5,
+      "timeMin": 5,
+      "complexity": "INTERMEDIATE"
+    },
+    "scheduledTask": {
+      "name": "Scheduled Task (Cron)",
+      "nodes": 3,
+      "timeMin": 4,
+      "complexity": "INTERMEDIATE"
+    },
+    "webhookRelay": {
+      "name": "Webhook Relay",
+      "nodes": 4,
+      "timeMin": 3,
+      "complexity": "BASIC"
+    }
   },
   "currentWorkflows": {
     "total": 32,
@@ -56,12 +81,36 @@
     "lastAudit": "2026-03-23T12:00:00Z"
   },
   "commonMistakes": {
-    "hardcodedCredentials": { "mistake": "Hardcoding API keys in body", "solution": "Use Credentials node", "impact": "SECURITY RISK" },
-    "sequentialInsteadParallel": { "mistake": "5 nodes sequentially", "solution": "Connect all 5 from trigger", "impact": "60% slower" },
-    "noRateLimiting": { "mistake": "No delay between requests", "solution": "Add 2-5s Delay node", "impact": "API blocks" },
-    "missingErrorHandling": { "mistake": "No error handling", "solution": "Add Catch errors node", "impact": "Silent failures" },
-    "wrongN8nUserFolder": { "mistake": "Iniciar N8n sem N8N_USER_FOLDER", "solution": "SEMPRE definir N8N_USER_FOLDER antes de iniciar", "impact": "API retorna 0 workflows, workflows 'somem'" },
-    "wrongChatEndpoint": { "mistake": "Usar /api/chat para chat com especialista", "solution": "Usar POST /api/squad/:id/task", "impact": "404 em todos os endpoints" }
+    "hardcodedCredentials": {
+      "mistake": "Hardcoding API keys in body",
+      "solution": "Use Credentials node",
+      "impact": "SECURITY RISK"
+    },
+    "sequentialInsteadParallel": {
+      "mistake": "5 nodes sequentially",
+      "solution": "Connect all 5 from trigger",
+      "impact": "60% slower"
+    },
+    "noRateLimiting": {
+      "mistake": "No delay between requests",
+      "solution": "Add 2-5s Delay node",
+      "impact": "API blocks"
+    },
+    "missingErrorHandling": {
+      "mistake": "No error handling",
+      "solution": "Add Catch errors node",
+      "impact": "Silent failures"
+    },
+    "wrongN8nUserFolder": {
+      "mistake": "Iniciar N8n sem N8N_USER_FOLDER",
+      "solution": "SEMPRE definir N8N_USER_FOLDER antes de iniciar",
+      "impact": "API retorna 0 workflows, workflows 'somem'"
+    },
+    "wrongChatEndpoint": {
+      "mistake": "Usar /api/chat para chat com especialista",
+      "solution": "Usar POST /api/squad/:id/task",
+      "impact": "404 em todos os endpoints"
+    }
   },
   "readyToCall": true,
   "availability": "24/7",

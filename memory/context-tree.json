@@ -1,0 +1,110 @@
+{
+  "people": {
+    "zica": [
+      {
+        "text": "Zica quer ser atacante com base, não conservador. Apostar ousado mas com dados reais.",
+        "date": "2026-03-29 17:31"
+      },
+      {
+        "text": "Eduardo é o Zica. Fundador Titanio Films. WhatsApp +553183838181. Prefere comunicação direta.",
+        "date": "2026-03-29 17:32"
+      },
+      {
+        "text": "GospIA: App Gospel. iOS travado por campos ASC (Zica não respondeu 10+ dias).",
+        "date": "2026-03-29 17:32"
+      },
+      {
+        "text": "DECISÃO: Opus SEMPRE como modelo padrão. NUNCA trocar pra Sonnet sem Zica pedir.",
+        "date": "2026-03-29 17:32"
+      },
+      {
+        "text": "29/03 - Zica pediu resolver TUDO que falta na Dashboard: aba Mídia, Mail, Railway, Billing, bots idle",
+        "date": "2026-03-29 21:17"
+      }
+    ],
+    "eduardo": [
+      {
+        "text": "Dashboard Titanio 2.0: 3 instâncias (Eduardo:4444, Helber:4445, Tiago:4446). Sync via shared-specialists.json (155MB). 36 especialistas.",
+        "date": "2026-03-29 17:32"
+      }
+    ],
+    "helber": [
+      {
+        "text": "Helber: IP 192.168.18.170, backend :4445, frontend :3001. Node precisa reconectar.",
+        "date": "2026-03-29 17:32"
+      }
+    ],
+    "tiago": [
+      {
+        "text": "Tiago: IP 192.168.18.188, backend :4446, frontend :3002. Setup pendente.",
+        "date": "2026-03-29 17:32"
+      }
+    ]
+  },
+  "projects": {
+    "polymarket": [
+      {
+        "text": "Polymarket: temos 4 posições abertas, -$1.69 P&L, $4.86 em caixa. Precisamos de análise real antes de apostar.",
+        "date": "2026-03-29 17:31"
+      },
+      {
+        "text": "LIÇÃO: Nunca apostar no Polymarket sem análise real de notícias e dados. Ser ousado mas com base.",
+        "date": "2026-03-29 17:31"
+      },
+      {
+        "text": "Smart Trader v2 criado em projetos/polymarket-agent/smart-trader-v2.py. Scan de mercados + portfolio check via Playwright.",
+        "date": "2026-03-29 21:17"
+      }
+    ],
+    "comfyui": [
+      {
+        "text": "ComfyUI + FLUX instalado, compartilhável pela rede 192.168.18.174:8188",
+        "date": "2026-03-29 17:31"
+      }
+    ],
+    "titanio-media": [
+      {
+        "text": "Titanio Media v1.0: titanio-media.py com 6 estilos banner, narração PT-BR, vídeo Reels. 24 outputs gerados 28/03.",
+        "date": "2026-03-29 17:32"
+      }
+    ],
+    "dashboard": [
+      {
+        "text": "Instagram @titaniodashboard: 3 posts publicados 28/03 (2 fotos IA + 1 Reels) via instagrapi.",
+        "date": "2026-03-29 17:32"
+      },
+      {
+        "text": "Aba Mídia criada na Dashboard: MediaPanel.tsx + Sidebar + page.tsx + 5 endpoints backend. Galeria, gerar banner, imagem IA, pipeline completa.",
+        "date": "2026-03-29 21:22"
+      }
+    ],
+    "memory-system": [
+      {
+        "text": "Memory Engine: 2095 chunks, 88 arquivos, busca semântica via nomic-embed-text local.",
+        "date": "2026-03-29 17:32"
+      },
+      {
+        "text": "tmem (Titanio Memory CLI) criado e funcionando. 14 entries curadas, context tree com 4 pessoas e 6 projetos.",
+        "date": "2026-03-29 21:17"
+      }
+    ],
+    "mandaanota": [
+      {
+        "text": "Manda a Nota: NFS-e automática pra MEI. Android Play Store OK. iOS Build 20 pendente Apple.",
+        "date": "2026-03-29 17:32"
+      }
+    ],
+    "hiclaw": [
+      {
+        "text": "LIÇÃO: SEMPRE usar especialistas via HiClaw em vez de spawnar agents genéricos. Especialistas aprendem e acumulam lições.",
+        "date": "2026-03-29 21:22"
+      }
+    ]
+  },
+  "tools": {},
+  "decisions": [],
+  "lessons": [],
+  "credentials": {},
+  "workflows": {},
+  "last_updated": "2026-03-29T21:22:49.045533"
+}

@@ -1,0 +1,156 @@
+#!/bin/bash
+# ============================================================
+# TITA GROUP SENTINEL — Sentinela de Memória para Grupos
+# Roda via OpenRouter, garante que Tita nunca esquece
+# Autor: Tita 🐾 | Criado: 2026-03-26 por pedido da Zica
+# ============================================================
+
+WORKSPACE="/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace"
+CONTEXTO="$WORKSPACE/pasta-do-tita/contexto-ativo.md"
+MEMORIA_DIR="$WORKSPACE/pasta-do-tita/memoria-persistente"
+SENTINEL_LOG="/tmp/tita-group-sentinel.log"
+SENTINEL_STATE="$WORKSPACE/pasta-do-tita/sentinel-state.json"
+OPENROUTER_KEY="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"
+MODEL="openrouter/auto" # OpenRouter escolhe o melhor modelo disponível
+
+log() {
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1" | tee -a "$SENTINEL_LOG"
+}
+
+log "🛡️ TITA GROUP SENTINEL iniciado"
+
+# Função: verificar integridade da memória
+check_memory_integrity() {
+    local contexto_lines=$(wc -l < "$CONTEXTO" 2>/dev/null || echo 0)
+    local mem_files=$(ls "$MEMORIA_DIR"/*.md 2>/dev/null | wc -l)
+    local latest_mem=$(ls -t "$MEMORIA_DIR"/*.md 2>/dev/null | head -1)
+    local latest_age_hours=999
+    
+    if [ -n "$latest_mem" ]; then
+        local latest_ts=$(stat -f "%m" "$latest_mem" 2>/dev/null || stat -c "%Y" "$latest_mem" 2>/dev/null)
+        local now_ts=$(date +%s)
+        latest_age_hours=$(( (now_ts - latest_ts) / 3600 ))
+    fi
+    
+    log "📊 contexto-ativo.md: $contexto_lines linhas"
+    log "📊 Arquivos de memória persistente: $mem_files"
+    log "📊 Última memória: $latest_age_hours horas atrás"
+    
+    # ALERTA: contexto muito pequeno = possível reset
+    if [ "$contexto_lines" -lt 50 ]; then
+        log "🚨 ALERTA: contexto-ativo.md tem apenas $contexto_lines linhas — possível reset!"
+        return 1
+    fi
+    
+    # ALERTA: sem memória nova em 8+ horas
+    if [ "$latest_age_hours" -gt 8 ]; then
+        log "⚠️ AVISO: Nenhuma memória nova em $latest_age_hours horas"
+    fi
+    
+    return 0
+}
+
+# Função: gerar resumo de contexto via OpenRouter (para injetar em grupos)
+generate_context_summary() {
+    local contexto_snippet=$(head -100 "$CONTEXTO" 2>/dev/null)
+    local latest_mem=$(ls -t "$MEMORIA_DIR"/*.md 2>/dev/null | head -1)
+    local latest_mem_content=""
+    if [ -n "$latest_mem" ]; then
+        latest_mem_content=$(tail -50 "$latest_mem" 2>/dev/null)
+    fi
+    
+    local prompt="Você é Tita, IA da Titanio. Baseado no contexto abaixo, gere um resumo ULTRA-COMPACTO (max 10 linhas) do que está acontecendo agora, para você mesma lembrar quando acordar numa nova sessão de grupo.
+
+CONTEXTO ATIVO (primeiras 100 linhas):
+$contexto_snippet
+
+ÚLTIMA MEMÓRIA:
+$latest_mem_content
+
+Responda APENAS o resumo, sem explicações. Formato: bullet points curtos."
+
+    local response=$(curl -s -X POST "https://openrouter.ai/api/v1/chat/completions" \
+        -H "Authorization: Bearer $OPENROUTER_KEY" \
+        -H "Content-Type: application/json" \
+        -d "{
+            \"model\": \"$MODEL\",
+            \"messages\": [{\"role\": \"user\", \"content\": $(echo "$prompt" | python3 -c 'import json,sys; print(json.dumps(sys.stdin.read()))')}],
+            \"max_tokens\": 500
+        }" 2>/dev/null)
+    
+    echo "$response" | python3 -c "
+import json, sys
+try:
+    d = json.load(sys.stdin)
+    print(d['choices'][0]['message']['content'])
+except:
+    print('ERROR: não conseguiu gerar resumo')
+" 2>/dev/null
+}
+
+# Função: salvar estado do sentinel
+save_state() {
+    local timestamp=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+    cat > "$SENTINEL_STATE" << EOF
+{
+  "lastCheck": "$timestamp",
+  "status": "ok",
+  "contextLines": $(wc -l < "$CONTEXTO" 2>/dev/null || echo 0),
+  "memoryFiles": $(ls "$MEMORIA_DIR"/*.md 2>/dev/null | wc -l),
+  "note": "Sentinel rodando via OpenRouter"
+}
+EOF
+    log "✅ Estado salvo em sentinel-state.json"
+}
+
+# Função: criar snapshot de contexto para grupos
+create_group_snapshot() {
+    local snapshot_file="$WORKSPACE/pasta-do-tita/group-context-snapshot.md"
+    local timestamp=$(date '+%Y-%m-%d %H:%M BRT')
+    
+    cat > "$snapshot_file" << EOF
+# 🧠 Snapshot de Contexto — Tita nos Grupos
+> Gerado automaticamente em: $timestamp
+> Para injetar em sessões de grupo quando necessário
+
+## Status dos Projetos Críticos
+$(grep -A2 "GospIA iOS\|OpenMOSS\|Dashboard" "$CONTEXTO" 2>/dev/null | head -30)
+
+## Promessas Pendentes para Zica
+$(grep -A2 "Zica\|ASC\|OpenMOSS" "$CONTEXTO" | grep -v "^--$" | head -20)
+
+## Técnicas que Funcionaram (Instagram/Video)
+- yt-dlp + ffmpeg + Claude vision = análise de reels ✅
+- Script: ~/.openclaw/workspace/bin/video-analyze.sh "URL"
+- Tempo: ~15 segundos por vídeo
+
+## Última Atualização de Memória
+$(ls -t "$MEMORIA_DIR"/*.md 2>/dev/null | head -1 | xargs basename 2>/dev/null)
+EOF
+    
+    log "📸 Snapshot de grupo atualizado: $snapshot_file"
+}
+
+# === MAIN LOOP ===
+while true; do
+    HOUR=$(date +%H)
+    MINUTE=$(date +%M)
+    
+    # Check a cada hora
+    if [ "$MINUTE" = "00" ] || [ "$MINUTE" = "30" ]; then
+        log "🔍 Verificando integridade da memória..."
+        check_memory_integrity
+        save_state
+        create_group_snapshot
+        
+        # Às 6h, 12h, 18h — gerar resumo via OpenRouter
+        if [ "$MINUTE" = "00" ] && { [ "$HOUR" = "06" ] || [ "$HOUR" = "12" ] || [ "$HOUR" = "18" ]; }; then
+            log "🤖 Gerando resumo de contexto via OpenRouter..."
+            SUMMARY=$(generate_context_summary)
+            echo "## $(date '+%Y-%m-%d %H:%M') — Resumo OpenRouter" >> "$SENTINEL_LOG"
+            echo "$SUMMARY" >> "$SENTINEL_LOG"
+        fi
+    fi
+    
+    sleep 60
+done

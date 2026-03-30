@@ -1,0 +1,36 @@
+```json
+{
+  "questions": [
+    {
+      "id": "Q002",
+      "category": "português",
+      "text": "Qual é a palavra que completa corretamente esta frase: 'Ela ___ para casa.'? (ACEPTAR / IMPRESSO)",
+      "options": [
+        {"letter": "A", "text": "aceitar"},
+        {"letter": "B", "text": "imprimir"}
+      ],
+      "correct": "A"
+    },
+    {
+      "id": "Q003",
+      "category": "português",
+      "text": "Quando você escreve algo e o computador o registra no papel, isso é chamado de ___.", 
+      "options": [
+        {"letter": "A", "text": "carimbo"},
+        {"letter": "B", "text": "código"}
+      ],
+      "correct": "A"
+    },
+    {
+      "id": "Q004",
+      "category": "português",
+      "text": "O termo 'informática' está mais próximo de quais palavras? (Tecnologia / Matemática)", 
+      "options": [
+        {"letter": "A", "text": "tecnologia"},
+        {"letter": "B", "text": "matemática"}
+      ],
+      "correct": "A"
+    }
+  ]
+}
+```

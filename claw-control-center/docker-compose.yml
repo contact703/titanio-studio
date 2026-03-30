@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  claw-control-center:
+    build: .
+    container_name: ccc-${NODE_NAME:-local}
+    ports:
+      - "${CCC_PORT:-3000}:3000"
+    environment:
+      - CCC_PORT=3000
+      - CCC_NODE_NAME=${NODE_NAME:-local}
+      - OPENCLAW_GATEWAY=${OPENCLAW_GATEWAY:-ws://host.docker.internal:18789}
+      - OPENCLAW_API=${OPENCLAW_API:-http://host.docker.internal:18789}
+      - FEDERATION_NODES=${FEDERATION_NODES:-[]}
+    volumes:
+      - ccc-data:/app/data
+      - ~/.openclaw/workspace:/workspace:ro
+    restart: unless-stopped
+    networks:
+      - claw-network
+
+volumes:
+  ccc-data:
+
+networks:
+  claw-network:
+    driver: bridge

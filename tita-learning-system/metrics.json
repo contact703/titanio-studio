@@ -1,0 +1,11 @@
+{
+  "sessions": [],
+  "daily": {
+    "2026-03-23": {
+      "tasks": 6,
+      "successes": 6,
+      "failures": 0,
+      "success_rate": 100.0
+    }
+  }
+}

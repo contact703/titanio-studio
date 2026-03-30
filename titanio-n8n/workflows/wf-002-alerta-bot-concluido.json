@@ -1,0 +1,210 @@
+{
+  "name": "WF-002 · Alerta Bot Concluído",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "bot-task-done",
+        "authentication": "headerAuth",
+        "options": {
+          "responseMode": "onReceived",
+          "responseData": "allEntries"
+        }
+      },
+      "id": "webhook-receiver",
+      "name": "Webhook bot-task-done",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [240, 300],
+      "webhookId": "titanio-bot-task-done"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": false
+          },
+          "conditions": [
+            {
+              "id": "has-required-fields",
+              "leftValue": "={{ $json.bot_name }}",
+              "rightValue": "",
+              "operator": { "type": "string", "operation": "notEmpty" }
+            }
+          ]
+        }
+      },
+      "id": "validate-payload",
+      "name": "Validar Payload",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "dataType": "string",
+        "value1": "={{ $json.status }}",
+        "rules": {
+          "rules": [
+            {
+              "value2": "success",
+              "output": 0
+            },
+            {
+              "value2": "error",
+              "output": 1
+            },
+            {
+              "value2": "partial",
+              "output": 2
+            }
+          ]
+        },
+        "fallbackOutput": 0
+      },
+      "id": "route-by-status",
+      "name": "Router por Status",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3,
+      "position": [680, 300]
+    },
+    {
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "const d = $input.item.json;\nconst durationSec = d.duration_ms ? Math.round(d.duration_ms / 1000) : null;\nconst durationStr = durationSec ? `${durationSec}s` : 'n/d';\nconst tokens = d.tokens_used ? d.tokens_used.toLocaleString('pt-BR') : 'n/d';\n\nconst message = [\n  `✅ *${d.bot_name}* concluiu!`,\n  '',\n  `📋 *Tarefa:* ${d.task_title || d.task_id || 'sem título'}`,\n  `⏱️ *Tempo:* ${durationStr}`,\n  `🧠 *Tokens:* ${tokens}`,\n  d.output_summary ? `\\n📝 ${d.output_summary}` : ''\n].filter(Boolean).join('\\n');\n\nreturn [{ json: { ...d, formatted_message: message, emoji: '✅' } }];"
+      },
+      "id": "format-success",
+      "name": "Format Success",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [900, 180]
+    },
+    {
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "const d = $input.item.json;\nconst durationSec = d.duration_ms ? Math.round(d.duration_ms / 1000) : null;\nconst durationStr = durationSec ? `${durationSec}s` : 'n/d';\n\nconst message = [\n  `🔴 *${d.bot_name}* falhou!`,\n  '',\n  `📋 *Tarefa:* ${d.task_title || d.task_id || 'sem título'}`,\n  `⏱️ *Tempo:* ${durationStr}`,\n  d.error ? `❌ *Erro:* ${d.error}` : '',\n  d.output_summary ? `\\n📝 ${d.output_summary}` : '',\n  '',\n  '_Verifique o dashboard em localhost:4444_'\n].filter(Boolean).join('\\n');\n\nreturn [{ json: { ...d, formatted_message: message, emoji: '🔴' } }];"
+      },
+      "id": "format-error",
+      "name": "Format Error",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [900, 320]
+    },
+    {
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "const d = $input.item.json;\nconst durationSec = d.duration_ms ? Math.round(d.duration_ms / 1000) : null;\nconst durationStr = durationSec ? `${durationSec}s` : 'n/d';\n\nconst message = [\n  `🟡 *${d.bot_name}* concluiu parcialmente`,\n  '',\n  `📋 *Tarefa:* ${d.task_title || d.task_id || 'sem título'}`,\n  `⏱️ *Tempo:* ${durationStr}`,\n  d.output_summary ? `\\n📝 ${d.output_summary}` : ''\n].filter(Boolean).join('\\n');\n\nreturn [{ json: { ...d, formatted_message: message, emoji: '🟡' } }];"
+      },
+      "id": "format-partial",
+      "name": "Format Partial",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [900, 460]
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combinationMode": "mergeByPosition",
+        "options": {}
+      },
+      "id": "merge-formatted",
+      "name": "Merge Formatados",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [1120, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:18789/api/message/send",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "Content-Type", "value": "application/json" }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"channel\": \"whatsapp\",\n  \"to\": \"{{ $env.EDUARDO_WHATSAPP }}\",\n  \"message\": {{ JSON.stringify($json.formatted_message) }}\n}",
+        "options": { "timeout": 15000 }
+      },
+      "id": "send-whatsapp",
+      "name": "Enviar WhatsApp Eduardo",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [1340, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:4444/api/events/log",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"type\": \"bot_task_notification_sent\",\n  \"workflow\": \"WF-002\",\n  \"bot_name\": \"{{ $('Webhook bot-task-done').item.json.bot_name }}\",\n  \"task_id\": \"{{ $('Webhook bot-task-done').item.json.task_id }}\",\n  \"status\": \"{{ $('Webhook bot-task-done').item.json.status }}\",\n  \"timestamp\": \"{{ $now.toISO() }}\"\n}",
+        "options": {}
+      },
+      "id": "log-event",
+      "name": "Log no Dashboard",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [1560, 300],
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={ \"status\": \"ignored\", \"reason\": \"payload inválido\" }"
+      },
+      "id": "respond-invalid",
+      "name": "Respond Invalid",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [680, 500]
+    }
+  ],
+  "connections": {
+    "Webhook bot-task-done": {
+      "main": [[{ "node": "Validar Payload", "type": "main", "index": 0 }]]
+    },
+    "Validar Payload": {
+      "main": [
+        [{ "node": "Router por Status", "type": "main", "index": 0 }],
+        [{ "node": "Respond Invalid", "type": "main", "index": 0 }]
+      ]
+    },
+    "Router por Status": {
+      "main": [
+        [{ "node": "Format Success", "type": "main", "index": 0 }],
+        [{ "node": "Format Error", "type": "main", "index": 0 }],
+        [{ "node": "Format Partial", "type": "main", "index": 0 }]
+      ]
+    },
+    "Format Success": {
+      "main": [[{ "node": "Merge Formatados", "type": "main", "index": 0 }]]
+    },
+    "Format Error": {
+      "main": [[{ "node": "Merge Formatados", "type": "main", "index": 1 }]]
+    },
+    "Format Partial": {
+      "main": [[{ "node": "Merge Formatados", "type": "main", "index": 2 }]]
+    },
+    "Merge Formatados": {
+      "main": [[{ "node": "Enviar WhatsApp Eduardo", "type": "main", "index": 0 }]]
+    },
+    "Enviar WhatsApp Eduardo": {
+      "main": [[{ "node": "Log no Dashboard", "type": "main", "index": 0 }]]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true
+  },
+  "tags": ["titanio", "webhook", "alerta", "whatsapp"],
+  "meta": {
+    "description": "Webhook acionado pela Titanio Dashboard quando um bot finaliza tarefa. Envia notificação WhatsApp formatada com status, tempo e tokens.",
+    "webhook_url": "http://localhost:5678/webhook/bot-task-done",
+    "call_from_dashboard": "POST http://localhost:5678/webhook/bot-task-done com payload: { bot_name, task_id, task_title, status, duration_ms, output_summary, tokens_used }",
+    "version": "1.0.0"
+  }
+}

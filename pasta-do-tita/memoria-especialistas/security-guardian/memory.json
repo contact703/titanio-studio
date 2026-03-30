@@ -1,72 +1,79 @@
 {
   "specialistId": "security-guardian",
-  "specialistName": "Security Guardian",
+  "specialistName": "🔒 Security Guardian",
   "version": 2,
-  "lastActive": "2026-03-23T07:05:02.926Z",
+  "lastActive": "2026-03-28T01:50:00.000Z",
   "stats": {
     "tasksCompleted": 5,
     "tasksFailed": 0,
-    "sessionsTotal": 0,
-    "lessonsLearned": 9,
+    "sessionsTotal": 3,
+    "lessonsLearned": 5,
     "tokensUsed": 0,
-    "avgTaskDurationMs": 13545
+    "avgTaskDurationMs": 0
   },
-  "knowledge": [],
+  "knowledge": [
+    "SecuritySentinel.ts implementado para Titanio Dashboard backend (4392 bytes)",
+    "Serviço de segurança testado e ATIVO no backend",
+    "Contas teste criadas em Amazon MTurk, Clickworker para projeto Ninja",
+    "TOP 3 ameaças IA em 2026: prompt injection, data exfiltration, unauthorized tool use",
+    "Mac Mini com WhatsApp+email+Git = superfície de ataque ampla, precisa sandboxing",
+    {
+      "topic": "Sentinel de Memória",
+      "content": "tita-group-sentinel ATIVO (PID 74426). LaunchAgent com.tita.group-sentinel. Snapshots a cada 30min. OpenRouter claude-3-haiku.",
+      "date": "2026-03-26",
+      "source": "gospia-session"
+    },
+    {
+      "topic": "Auditoria Semanal",
+      "content": "Segunda-feira: bash security-weekly.sh. Checar credenciais plaintext, API keys expostas.",
+      "date": "2026-03-27",
+      "source": "gospia-session"
+    },
+    {
+      "topic": "Regras Segurança Eduardo",
+      "content": "NUNCA gastar dinheiro. NUNCA usar cartão. Cuidar da máquina e dados. Só ferramentas open source/free para uso comercial.",
+      "date": "2026-03-12",
+      "source": "gospia-session"
+    },
+    {
+      "topic": "shared-specialists.json Corrupted",
+      "content": "Arquivo estava truncado a 162MB, JSON inválido. 10 especialistas tinham sumido. Reparado pelo Memory Guardian.",
+      "date": "2026-03-27",
+      "source": "gospia-session"
+    }
+  ],
   "recentTasks": [
     {
-      "id": "b2d0854a-1015-4d82-b161-c751e281ba7d",
-      "title": "Quais são as principais novas ameaças de segurança para agentes de IA em March 2026? Liste as TOP 3 mais críticas e como mitigar. Seja breve (máximo 200 palavras).",
-      "description": "",
-      "status": "completed",
-      "startedAt": "2026-03-23T07:04:48.167Z",
-      "completedAt": "2026-03-23T07:05:02.926Z",
-      "result": "## [Análise de Ameaças de Segurança para Agentes IA] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nAnalisando as principais ameaças de segurança para agentes IA em março de 2026, as TOP 3 ameaças mais críticas são:\n\n1. **Ataque de Injeção de Prompt**: Adversários podem explorar agentes IA através de prompts maliciosos para roubar informações ou executar ações indesejadas. Mitigação: Implementar filtros de entrada robustos e validar ou sanitizar todos os prompts de entrada.\n\n2. **Vu",
-      "durationMs": 14759
+      "date": "2026-03-15",
+      "task": "TOP 3 ameaças de segurança para agentes IA March 2026",
+      "result": "Relatório conciso de ameaças e mitigações",
+      "project": "Security"
     },
     {
-      "id": "855fe262-e410-4a11-9261-a286d387b241",
-      "title": "Quais são as principais novas ameaças de segurança para agentes de IA em March 2026? Liste as TOP 3 mais críticas e como mitigar. Seja breve (máximo 200 palavras).",
-      "description": "",
-      "status": "completed",
-      "startedAt": "2026-03-23T03:33:13.989Z",
-      "completedAt": "2026-03-23T03:33:36.844Z",
-      "result": "## [Análise de Ameaças de Segurança para Agentes IA] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nAnalisando as principais ameaças de segurança para agentes IA em março de 2026, as TOP 3 ameaças mais críticas são:\n\n1. **Ataque de Injeção de Prompt**: Adversários podem explorar agentes IA através de prompts maliciosos para roubar informações ou executar ações indesejadas. Mitigação: Implementar filtros de entrada robustos e treinar modelos IA para reconhecer e rejeitar prompts susp",
-      "durationMs": 22855
+      "date": "2026-03-15",
+      "task": "Pesquisa ameaças para sistema IA local Mac Mini",
+      "result": "Análise de vulnerabilidades WhatsApp/email/Git",
+      "project": "Security"
     },
     {
-      "id": "427ef63e-afa7-4ed7-959e-220ba0c346c4",
-      "title": "Quais são as principais novas ameaças de segurança para agentes de IA em March 2026? Liste as TOP 3 mais críticas e como mitigar. Seja breve (máximo 200 palavras).",
-      "description": "",
-      "status": "completed",
-      "startedAt": "2026-03-23T03:02:43.290Z",
-      "completedAt": "2026-03-23T03:02:59.213Z",
-      "result": "## [Análise de Ameaças de Segurança para Agentes IA] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nAnalisando as principais ameaças de segurança para agentes IA em março de 2026, as TOP 3 ameaças mais críticas são:\n\n1. **Ataque de Injeção de Prompt**: Adversários podem explorar vulnerabilidades em agentes IA para inserir comandos maliciosos, comprometendo a segurança do sistema. Mitigação: Implementar filtros de entrada robustos e validar todas as entradas.\n\n2. **Falhas em APIs**: ",
-      "durationMs": 15923
+      "date": "2026-03-12",
+      "task": "Implementação SecuritySentinel.ts para Dashboard",
+      "result": "Serviço de segurança ativo — backend/src/services/SecuritySentinel.ts",
+      "project": "Titanio Dashboard"
     },
     {
-      "id": "80ad593c-5e46-4667-b2a1-af4c52dea702",
-      "title": "Quais são as principais novas ameaças de segurança para agentes de IA em March 2026? Liste as TOP 3 mais críticas e como mitigar. Seja breve (máximo 200 palavras).",
-      "description": "",
-      "status": "completed",
-      "startedAt": "2026-03-21T21:23:36.262Z",
-      "completedAt": "2026-03-21T21:23:43.030Z",
-      "result": "## [Análise de Ameaças de Segurança para Agentes IA] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nAnalisando as principais ameaças de segurança para agentes IA em março de 2026, as TOP 3 ameaças mais críticas são:\n\n1. **Ataque de Injeção de Prompt**: Adversários podem explorar agentes IA através de prompts maliciosos para roubar informações ou executar ações indesejadas. Mitigação: Implementar filtros de entrada robustos e validar ou sanitizar todos os prompts de entrada.\n\n2. **Vu",
-      "durationMs": 6768
-    },
-    {
-      "id": "38b3ef73-b7d4-4315-9c97-4a60c4cbee24",
-      "title": "Quais são as principais novas ameaças de segurança para agentes de IA em March 2026? Liste as TOP 3 mais críticas e como mitigar. Seja breve (máximo 200 palavras).",
-      "description": "",
-      "status": "completed",
-      "startedAt": "2026-03-21T21:12:45.391Z",
-      "completedAt": "2026-03-21T21:12:52.812Z",
-      "result": "## [Análise de Ameaças de Segurança para Agentes IA] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nAnalisando as principais ameaças de segurança para agentes IA em março de 2026, as TOP 3 mais críticas são:\n\n1. **Ataque de Injeção de Prompt**: Adversários podem explorar vulnerabilidades em agentes IA para inserir prompts maliciosos, levando a ações indesejadas ou extração de informações confidenciais. Mitigação: Implementar filtros de entrada robustos e validar ou sanitizar todos o",
-      "durationMs": 7421
+      "date": "2026-03-12",
+      "task": "Criação contas teste em plataformas de ganho (Projeto Ninja)",
+      "result": "Amazon MTurk, Clickworker registrados",
+      "project": "Projeto Ninja"
     }
   ],
   "activeContext": {
     "currentTask": null,
     "currentProject": null,
     "startedAt": null
+  },
+  "paths": {
+    "sentinel_service": "/projetos/titanio-dashboard/code/backend/src/services/SecuritySentinel.ts"
   }
 }

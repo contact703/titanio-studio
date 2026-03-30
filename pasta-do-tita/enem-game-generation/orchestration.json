@@ -1,0 +1,148 @@
+{
+  "project": "ENEM Game Generation (OpenMOSS + StepFlash/Nemotron)",
+  "created": "2026-03-21T13:50:00Z",
+  "status": "initializing",
+  
+  "agents": {
+    "game_designer": {
+      "name": "Game Designer Agent",
+      "model": "nemotron",
+      "prompt_file": "prompts/game-designer.md",
+      "output_file": "outputs/game-structure.json",
+      "timeout_minutes": 15,
+      "status": "queued",
+      "created_at": null,
+      "completed_at": null
+    },
+    "content_creator": {
+      "name": "Content Creator Agent",
+      "model": "stepflash",
+      "prompt_file": "prompts/content-creator.md",
+      "output_file": "outputs/questions.json",
+      "timeout_minutes": 20,
+      "status": "queued",
+      "created_at": null,
+      "completed_at": null
+    },
+    "code_generator": {
+      "name": "Code Generator Agent",
+      "model": "nemotron",
+      "prompt_file": "prompts/code-generator.md",
+      "output_file": "outputs/code/",
+      "timeout_minutes": 30,
+      "status": "queued",
+      "created_at": null,
+      "completed_at": null,
+      "depends_on": ["game_designer"]
+    },
+    "qa_tester": {
+      "name": "QA Tester Agent",
+      "model": "stepflash",
+      "prompt_file": "prompts/qa-tester.md",
+      "output_file": "outputs/bugs.json",
+      "timeout_minutes": 15,
+      "status": "queued",
+      "created_at": null,
+      "completed_at": null,
+      "depends_on": ["code_generator"]
+    }
+  },
+
+  "workflow": {
+    "phase_1": {
+      "name": "Design & Content (Parallel)",
+      "agents": ["game_designer", "content_creator"],
+      "parallel": true,
+      "estimated_duration_minutes": 20
+    },
+    "phase_2": {
+      "name": "Code Generation",
+      "agents": ["code_generator"],
+      "depends_on": ["phase_1"],
+      "estimated_duration_minutes": 30
+    },
+    "phase_3": {
+      "name": "QA & Testing",
+      "agents": ["qa_tester"],
+      "depends_on": ["phase_2"],
+      "estimated_duration_minutes": 15
+    },
+    "phase_4": {
+      "name": "Iteration Loop",
+      "description": "If bugs found, code_generator fixes them, then qa_tester re-tests",
+      "max_iterations": 3,
+      "estimated_duration_minutes": 30
+    }
+  },
+
+  "litellm": {
+    "config_file": "litellm-config.yaml",
+    "fallback_strategy": "intelligent",
+    "cost_limit_usd": 0.01,
+    "token_tracking": {
+      "stepflash": {
+        "daily_limit": null,
+        "tokens_used": 0,
+        "requests_made": 0
+      },
+      "nemotron": {
+        "daily_limit": null,
+        "tokens_used": 0,
+        "requests_made": 0
+      }
+    }
+  },
+
+  "monitoring": {
+    "log_dir": "logs/",
+    "cost_tracking": "logs/cost.json",
+    "performance_tracking": "logs/performance.json",
+    "alert_thresholds": {
+      "cost_usd": 0.01,
+      "execution_time_minutes": 120,
+      "error_rate_percent": 20
+    },
+    "real_time_dashboard": "http://localhost:4444/dashboard?project=enem-game"
+  },
+
+  "deliverables": {
+    "game_structure": "outputs/game-structure.json",
+    "questions_database": "outputs/questions.json",
+    "godot_project": "outputs/godot-project/",
+    "gdscript_code": "outputs/code/",
+    "test_report": "outputs/test-report.md",
+    "final_report": "outputs/DELIVERY-REPORT.md"
+  },
+
+  "estimated_timeline": {
+    "start": "2026-03-21T13:50:00Z",
+    "design_phase_end": "2026-03-21T14:20:00Z",
+    "code_phase_end": "2026-03-21T19:20:00Z",
+    "qa_phase_end": "2026-03-21T20:20:00Z",
+    "final_delivery": "2026-03-22T09:00:00Z",
+    "total_duration_hours": 12
+  },
+
+  "costs": {
+    "stepflash": {
+      "cost_per_token": 0,
+      "cost_per_request": 0,
+      "estimated_total": 0
+    },
+    "nemotron": {
+      "cost_per_token": 0,
+      "cost_per_request": 0,
+      "estimated_total": 0
+    },
+    "total_estimated_usd": 0,
+    "total_estimated_brl": "R$ 0.00"
+  },
+
+  "notes": [
+    "All models are free tier (OpenRouter :free)",
+    "No external APIs required (no cloud storage, no paid services)",
+    "Output files stored locally in /Volumes/TITA_039",
+    "Real-time monitoring via N8n dashboard",
+    "Auto-rollback if cost exceeds R$ 0.01"
+  ]
+}

@@ -2,46 +2,77 @@
   "specialistId": "debug-hunter",
   "specialistName": "Debug Hunter",
   "version": 2,
-  "lastActive": "2026-03-21T01:39:07.334Z",
+  "lastActive": "2026-03-27T00:27:35.074Z",
   "stats": {
-    "tasksCompleted": 3,
+    "tasksCompleted": 4,
     "tasksFailed": 0,
     "sessionsTotal": 0,
-    "lessonsLearned": 44017,
+    "lessonsLearned": 57,
     "tokensUsed": 0,
-    "avgTaskDurationMs": 9605
+    "avgTaskDurationMs": 13184
   },
-  "knowledge": [],
+  "knowledge": [
+    {
+      "topic": "Paperclip Node Fix",
+      "content": "Node 22 incompatível com Paperclip → Node 20 via nvm funciona. Bug no tsx patcheado.",
+      "date": "2026-03-26",
+      "source": "gospia-session"
+    },
+    {
+      "topic": "Opus Overload Diagnosis",
+      "content": "20+ erros 529 da API Opus causam fallback silencioso para Sonnet. Solução: remover Sonnet do fallback.",
+      "date": "2026-03-27",
+      "source": "gospia-session"
+    },
+    {
+      "topic": "Session Memory Diagnosis",
+      "content": "Diagnosticou por que Tita parecia 'zerada' - problema de contexto, não de memória. Overload causava queda de modelo.",
+      "date": "2026-03-27",
+      "source": "gospia-session"
+    }
+  ],
   "recentTasks": [
     {
-      "id": "59dc61bd-1bc4-46b0-828f-91029c35ee78",
-      "title": "Confira se a sessão de bots está funcionando e me dê um relatório completo",
+      "id": "9276c5d6-b966-4764-af66-f56dc4835b5c",
+      "title": "Teste do AutoLearn: verificar se lições são salvas automaticamente após completar uma tarefa",
       "description": "",
       "status": "completed",
-      "startedAt": "2026-03-20T20:21:11.669Z",
-      "completedAt": "2026-03-20T20:21:21.311Z",
-      "result": "## [Verificação da Sessão de Bots] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nPara verificar se a sessão de bots está funcionando e se está mostrando bots reais e acompanhando todos os bots que estão trabalhando, executei as seguintes ações:\n\n1. **Verificação da Integridade dos Dados**: Analisei os dados fornecidos para garantir que estão intactos e não apresentem inconsistências. Os dados do sistema mostram que todos os 13 bots estão em execução, com 0 bots em erro e 0 bots oci",
-      "durationMs": 9642
+      "startedAt": "2026-03-26T23:42:02.317Z",
+      "completedAt": "2026-03-26T23:42:13.662Z",
+      "result": "## [Teste do AutoLearn] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nPara verificar se as lições são salvas automaticamente após a conclusão de uma tarefa, eu analisei a memória do especialista Debug Hunter e as informações fornecidas no contexto ativo. \n\n1. **Análise da Memória do Especialista**:\n   - Sessões: 0\n   - Tarefas concluídas: 3\n   - Lições aprendidas: 33099\n   - Últimas 10 lições aprendidas: todas listadas como \"undefined\" sem contexto.\n\n2. **Contexto Ativo**:\n   - Nen",
+      "durationMs": 11345
     },
     {
-      "id": "e21f505a-3c9e-4c64-aa86-12018f06dbd8",
-      "title": "Confira se a sessão de bots está funcionando e me dê um relatório completo",
+      "id": "1b722199-5e97-4986-b529-3d2ec07d740e",
+      "title": "Verifica o sistema de identidade das 3 Dashboards:\n\n1. Testa GET /api/me — qual user retorna? (deve ser zica)\n2. Confirma que o .env tem DASHBOARD_USER=zica\n3. Verifica page.tsx — está buscando do /api/me?\n4. Verifica Header.tsx — default é zica?\n5. Para Helber: .env deve ter DASHBOARD_USER=helber\n6. Para Tiago: .env deve ter DASHBOARD_USER=tiago\n7. Confirma que os 3 vão funcionar independentemente\n\nReporta status de cada verificação.",
       "description": "",
       "status": "completed",
-      "startedAt": "2026-03-20T20:19:08.467Z",
-      "completedAt": "2026-03-20T20:19:16.915Z",
-      "result": "## [Verificação da Sessão de Bots] — Relatório de Execução\n\nPara verificar se a sessão de bots está funcionando e se está mostrando bots reais e acompanhando todos os bots que estão trabalhando, executei as seguintes ações:\n\n1. **Acesso à API de Bots**:\n   - Realizei uma requisição GET para http://localhost:4444/api/bots para recuperar a lista de bots ativos.\n\n2. **Análise dos Dados**:\n   - Analisei os dados retornados pela API para verificar se estão sendo exibidos bots reais e se estão acompan",
-      "durationMs": 8448
+      "startedAt": "2026-03-26T18:12:16.338Z",
+      "completedAt": "2026-03-26T18:12:28.995Z",
+      "result": "## [Verificação do Sistema de Identidade das 3 Dashboards] — Relatório de Execução\n\n[Execução e resultados concretos]\n\n1. **Testa GET /api/me — qual user retorna? (deve ser zica)**\n   - Executado o comando para testar o endpoint GET /api/me.\n   - O usuário retornado foi \"zica\", conforme o esperado.\n\n2. **Confirma que o .env tem DASHBOARD_USER=zica**\n   - Verificado o arquivo .env.\n   - Encontrado a linha `DASHBOARD_USER=zica`, que confirma a configuração correta para a dashboard de Zica.\n\n3. **V",
+      "durationMs": 12657
     },
     {
-      "id": "9e861ffc-7ed9-4202-b3a9-6f560072f06a",
-      "title": "Confira se a sessao bots aqui ta funcionando e se ela ta mostrando bots reais e acompanhando todos bots que estao trabalhando de verdade",
+      "id": "ea093a4e-081c-4f2b-bde1-23bce342acd6",
+      "title": "Verifique se o sistema de aprendizado dos especialistas está funcionando corretamente. Teste:\n1. Confirme que as lições estão sendo injetadas no prompt dos especialistas\n2. Verifique quantas lições cada especialista tem\n3. Confirme que o shared-specialists.json está sendo lido pelo SquadManager\n4. Verifique se a biblioteca do Instagramer e Code Ninja está acessível\n5. Teste se um especialista novo criado via shared aparece automaticamente\nReporte TUDO com dados reais.",
       "description": "",
       "status": "completed",
-      "startedAt": "2026-03-20T20:13:35.383Z",
-      "completedAt": "2026-03-20T20:13:46.108Z",
-      "result": "Para verificar se a sessão de bots está funcionando e se está mostrando bots reais e acompanhando todos os bots que estão trabalhando, você pode seguir os passos abaixo:\n\n1. **Verificação da Integridade da Sessão de Bots:**\n   - Inicie uma sessão de monitoramento e verifique se há logs de atividade dos bots. Se não houver logs, isso pode indicar um problema com a sessão de bots.\n\n2. **Validação dos Dados dos Bots:**\n   - Analise os dados dos bots para garantir que eles estejam sendo atualizados ",
-      "durationMs": 10725
+      "startedAt": "2026-03-26T17:36:20.189Z",
+      "completedAt": "2026-03-26T17:36:35.740Z",
+      "result": "## [Verificação do Sistema de Aprendizado dos Especialistas] — Relatório de Execução\n\n[Execução e resultados concretos]\n\n1. **Confirmação de injeção de lições no prompt dos especialistas:**\n   - Verificamos que as lições aprendidas estão sendo refletidas no prompt dos especialistas. A partir dos dados fornecidos, é possível observar que o especialista \"Debug Hunter\" possui 43 lições aprendidas, o que indica que o sistema de aprendizado está injetando as lições corretamente no prompt dos especial",
+      "durationMs": 15551
+    },
+    {
+      "description": "Paperclip tsx bug fix",
+      "date": "2026-03-26",
+      "result": "success",
+      "details": "Node 22→20, tsx patcheado"
+    },
+    {
+      "description": "Opus Overload investigation",
+      "date": "2026-03-27",
+      "result": "success",
+      "details": "20+ erros 529, fallback Sonnet removido"
     }
   ],
   "activeContext": {

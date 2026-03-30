@@ -1,13 +1,9 @@
 {
-  "specialistId": "api-master",
-  "specialistName": "API Master",
-  "version": 2,
-  "lastActive": "2026-03-19T18:57:13.936Z",
+  "sessions": [],
   "stats": {
-    "tasksCompleted": 0,
-    "tasksFailed": 0,
-    "sessionsTotal": 0,
-    "lessonsLearned": 2,
+    "sessionsCount": 0,
+    "tasksCompleted": 1,
+    "lessonsLearned": 43,
     "tokensUsed": 0,
     "avgTaskDurationMs": 0
   },

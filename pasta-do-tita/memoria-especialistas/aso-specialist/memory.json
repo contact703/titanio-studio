@@ -2,12 +2,12 @@
   "specialistId": "aso-specialist",
   "specialistName": "ASO Specialist",
   "version": 2,
-  "lastActive": "2026-03-19T18:57:13.935Z",
+  "lastActive": "2026-03-23T18:38:15.814Z",
   "stats": {
     "tasksCompleted": 0,
     "tasksFailed": 0,
     "sessionsTotal": 0,
-    "lessonsLearned": 2,
+    "lessonsLearned": 31,
     "tokensUsed": 0,
     "avgTaskDurationMs": 0
   },

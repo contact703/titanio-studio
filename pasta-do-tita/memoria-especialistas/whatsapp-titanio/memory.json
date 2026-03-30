@@ -1,13 +1,9 @@
 {
-  "specialistId": "whatsapp-titanio",
-  "specialistName": "WhatsApp Titanio",
-  "version": 2,
-  "lastActive": "2026-03-19T18:57:13.949Z",
+  "sessions": [],
   "stats": {
+    "sessionsCount": 0,
     "tasksCompleted": 0,
-    "tasksFailed": 0,
-    "sessionsTotal": 0,
-    "lessonsLearned": 2,
+    "lessonsLearned": 30,
     "tokensUsed": 0,
     "avgTaskDurationMs": 0
   },

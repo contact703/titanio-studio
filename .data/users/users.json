@@ -1,0 +1,26 @@
+{
+  "users": [
+    {
+      "id": "user-1773947311007-n0s6g3wvw",
+      "name": "Administrador",
+      "email": "admin@titanio.local",
+      "username": "admin",
+      "passwordHash": "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9",
+      "role": "admin",
+      "createdAt": "2026-03-19T19:08:31.009Z",
+      "settings": {
+        "theme": "dark",
+        "notifications": true,
+        "language": "pt-BR",
+        "timezone": "America/Sao_Paulo"
+      },
+      "stats": {
+        "projectsCreated": 0,
+        "tasksCompleted": 0,
+        "botsCreated": 0,
+        "loginCount": 0
+      }
+    }
+  ],
+  "updatedAt": "2026-03-19T19:08:31.010Z"
+}

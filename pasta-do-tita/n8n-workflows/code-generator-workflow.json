@@ -1,0 +1,187 @@
+{
+  "name": "ENEM Code Generator - Real Execution",
+  "description": "Generates GDScript code using Nemotron (free) - REAL API calls",
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Workflow Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [250, 300],
+      "id": "node-trigger"
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/pasta-do-tita/enem-game-generation/outputs/game-structure.json",
+        "authentication": "none"
+      },
+      "name": "Read Game Structure",
+      "type": "n8n-nodes-base.readFile",
+      "typeVersion": 1,
+      "position": [450, 250],
+      "id": "node-read-design"
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/pasta-do-tita/enem-game-generation/outputs/questions.json",
+        "authentication": "none"
+      },
+      "name": "Read Questions",
+      "type": "n8n-nodes-base.readFile",
+      "typeVersion": 1,
+      "position": [450, 350],
+      "id": "node-read-questions"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.openrouter.ai/api/v1/chat/completions",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer {{ $env.OPENROUTER_API_KEY }}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "bodyParametersUi": "json",
+        "body": {
+          "model": "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
+          "max_tokens": 4000,
+          "temperature": 0.3,
+          "messages": [
+            {
+              "role": "system",
+              "content": "You are a Godot/GDScript expert. Generate production-ready code ONLY. NO markdown, NO explanation."
+            },
+            {
+              "role": "user",
+              "content": "Generate main.gd for Godot ENEM game. Game structure: {{ JSON.stringify($node[\"Read Game Structure\"].json) }}. Output ONLY GDScript code, nothing else."
+            }
+          ]
+        }
+      },
+      "name": "Generate main.gd",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [650, 300],
+      "id": "node-generate-main"
+    },
+    {
+      "parameters": {
+        "functionCode": "const content = $input.first().json.choices[0].message.content;\nreturn {\n  code: content,\n  tokens_used: $input.first().json.usage?.total_tokens || 0,\n  filename: 'main.gd'\n};"
+      },
+      "name": "Parse Generated Code",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [850, 300],
+      "id": "node-parse"
+    },
+    {
+      "parameters": {
+        "fileName": "main.gd",
+        "fileContent": "{{ $node[\"Parse Generated Code\"].json.code }}",
+        "directory": "/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/pasta-do-tita/enem-game-generation/outputs/code"
+      },
+      "name": "Save main.gd",
+      "type": "n8n-nodes-base.writeFile",
+      "typeVersion": 1,
+      "position": [1050, 300],
+      "id": "node-save"
+    },
+    {
+      "parameters": {
+        "webhookUrl": "http://localhost:4444/webhook/enem-code-generator",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParametersUi": "json",
+        "body": {
+          "status": "success",
+          "component": "code_generator",
+          "files_generated": 1,
+          "filename": "main.gd",
+          "tokens_used": "{{ $node[\"Parse Generated Code\"].json.tokens_used }}"
+        }
+      },
+      "name": "Webhook Callback",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [1250, 300],
+      "id": "node-webhook"
+    }
+  ],
+  "connections": {
+    "Workflow Trigger": {
+      "main": [
+        [
+          {
+            "node": "Read Game Structure",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Read Questions",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read Game Structure": {
+      "main": [
+        [
+          {
+            "node": "Generate main.gd",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read Questions": {
+      "main": [
+        []
+      ]
+    },
+    "Generate main.gd": {
+      "main": [
+        [
+          {
+            "node": "Parse Generated Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Generated Code": {
+      "main": [
+        [
+          {
+            "node": "Save main.gd",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Save main.gd": {
+      "main": [
+        [
+          {
+            "node": "Webhook Callback",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

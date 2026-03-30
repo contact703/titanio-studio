@@ -1,0 +1,152 @@
+{
+  "titulo_edital": "FINEP Mulheres Inovadoras — Chamada Pública 2024",
+  "campos_preenchidos": [
+    {
+      "campo": "Nome da empresa",
+      "resposta": "Titanio Studio",
+      "caracteres": 14,
+      "notas": ""
+    },
+    {
+      "campo": "Descrição da empresa",
+      "resposta": "Titanio Studio é uma empresa de produção audiovisual e tecnologia fundada em 2006 por Tiago Arakilian. Com sede em Savassi, Belo Horizonte, MG, Brasil e escritório em New York, NY, EUA, a empresa acumula 20 anos de experiência, 40+ produções distribuídas em 40+ países, alcançando 470 milhões de espectadores.",
+      "caracteres": 500,
+      "notas": "Adaptar ao limite de caracteres do campo"
+    }
+  ],
+  "descricao_projeto": "O presente projeto propõe o desenvolvimento e expansão de VoxDescriber, Aplicativo de audiodescrição automática com IA para pessoas com deficiência visual. Transforma qualquer conteúdo audiovisual em experiência acessível de forma instantânea. A Titanio Studio, com 20 anos de experiência e presença em 40 países, possui a infraestrutura e expertise necessárias para executar com excelência este projeto de alto impacto.",
+  "justificativa": "A Titanio Studio é uma das poucas empresas brasileiras com capacidade de unir tradição audiovisual (40+ produções, 470 milhões espectadores) com inovação tecnológica de ponta. O projeto se alinha diretamente aos objetivos do edital e representa uma oportunidade única de impacto nacional e internacional.",
+  "objetivos": {
+    "geral": "Desenvolver e escalar VoxDescriber para maximizar impacto e alcance.",
+    "especificos": [
+      "Expandir a base de usuários de VoxDescriber",
+      "Estabelecer parcerias estratégicas nacionais e internacionais",
+      "Gerar impacto mensurável para os beneficiários do projeto"
+    ]
+  },
+  "metodologia": "A execução seguirá metodologia ágil em sprints quinzenais, com acompanhamento de KPIs mensuráveis e entregas parciais verificáveis. A equipe multidisciplinar da Titanio Studio, com expertise em audiovisual e tecnologia, garante capacidade de execução dentro do prazo e orçamento estabelecidos.",
+  "cronograma": [
+    {
+      "mes": 1,
+      "atividade": "Planejamento e Setup",
+      "descricao": "Definição de equipe, infraestrutura e marcos do projeto"
+    },
+    {
+      "mes": 2,
+      "atividade": "Desenvolvimento",
+      "descricao": "Execução das atividades principais"
+    },
+    {
+      "mes": 3,
+      "atividade": "Testes e Validação",
+      "descricao": "Validação com usuários e ajustes"
+    },
+    {
+      "mes": 4,
+      "atividade": "Lançamento",
+      "descricao": "Lançamento e estratégia de distribuição"
+    },
+    {
+      "mes": 5,
+      "atividade": "Acompanhamento",
+      "descricao": "Monitoramento de métricas e ajustes"
+    },
+    {
+      "mes": 6,
+      "atividade": "Relatório Final",
+      "descricao": "Prestação de contas e relatório de impacto"
+    }
+  ],
+  "orcamento": {
+    "total": 425000.0,
+    "itens": [
+      {
+        "categoria": "Recursos Humanos",
+        "valor": 250000.0,
+        "justificativa": "Equipe técnica e criativa"
+      },
+      {
+        "categoria": "Tecnologia e Infraestrutura",
+        "valor": 100000.0,
+        "justificativa": "Servidores, APIs, ferramentas"
+      },
+      {
+        "categoria": "Pesquisa e Desenvolvimento",
+        "valor": 50000.0,
+        "justificativa": "P&D e validação"
+      },
+      {
+        "categoria": "Marketing e Distribuição",
+        "valor": 25000.0,
+        "justificativa": "Divulgação e alcance"
+      }
+    ]
+  },
+  "resultados_esperados": [
+    "Expansão do alcance de VoxDescriber em 300%",
+    "Impacto direto em comunidades beneficiárias",
+    "Retorno econômico e social mensurável"
+  ],
+  "impacto_social": "Aplicativo de audiodescrição automática com IA para pessoas com deficiência visual. Transforma qualquer conteúdo audiovisual em experiência acessível de forma instantânea.",
+  "equipe": [
+    {
+      "nome": "Tiago Arakilian",
+      "cargo": "Diretor Geral / Fundador",
+      "qualificacao": "Fundador da Titanio Studio, formado pela Sorbonne (Paris), 20 anos de experiência"
+    }
+  ],
+  "documentos_checklist": [
+    {
+      "documento": "CNPJ ativo e regular",
+      "status": "preparar",
+      "observacao": "Verificar requisitos específicos no edital"
+    },
+    {
+      "documento": "Balanço patrimonial dos últimos 2 anos",
+      "status": "preparar",
+      "observacao": "Verificar requisitos específicos no edital"
+    },
+    {
+      "documento": "Declaração de empresa de inovação",
+      "status": "preparar",
+      "observacao": "Verificar requisitos específicos no edital"
+    },
+    {
+      "documento": "Currículo do responsável técnico (Lattes ou similar)",
+      "status": "preparar",
+      "observacao": "Verificar requisitos específicos no edital"
+    },
+    {
+      "documento": "Plano de negócios resumido",
+      "status": "preparar",
+      "observacao": "Verificar requisitos específicos no edital"
+    },
+    {
+      "documento": "Certidões negativas de débito (federal, estadual, municipal)",
+      "status": "preparar",
+      "observacao": "Verificar requisitos específicos no edital"
+    },
+    {
+      "documento": "Declaração de composição societária",
+      "status": "preparar",
+      "observacao": "Verificar requisitos específicos no edital"
+    }
+  ],
+  "resumo_executivo": "A Titanio Studio solicita apoio para o projeto FINEP Mulheres Inovadoras — Chamada Pública 2024.\n\nCom 20 anos de experiência, 40+ produções em 40 países e 470 milhões de espectadores, a empresa possui histórico comprovado para executar projetos de alto impacto.\n\nO projeto proposto (VoxDescriber) tem potencial de transformação real para os beneficiários e alinhamento direto com os objetivos do edital.",
+  "alertas": [
+    "⚠️  Revisar todos os valores de orçamento com a equipe financeira",
+    "⚠️  Confirmar CNPJ e dados cadastrais antes de submeter",
+    "⚠️  Verificar se todos os documentos obrigatórios estão prontos",
+    "⚠️  Adaptar textos ao limite de caracteres de cada campo do sistema",
+    "⚠️  Revisão final obrigatória antes do envio"
+  ],
+  "_meta": {
+    "data_preenchimento": "2026-03-18T19:47:02.887272",
+    "edital_titulo": "FINEP Mulheres Inovadoras — Chamada Pública 2024",
+    "score_fit": 72.0,
+    "produto_usado": "VoxDescriber",
+    "tom_usado": "técnico-científico",
+    "versao": "1.0",
+    "status": "RASCUNHO — REVISÃO HUMANA OBRIGATÓRIA ANTES DE SUBMETER"
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "name": "Victor Capital — Análise e Preenchimento de Editais",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "victor-edital",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "webhook-entrada",
+      "name": "Webhook — Recebe URL do Edital",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [240, 300],
+      "notes": "Recebe JSON: { url: 'https://...', titulo: '...' }"
+    },
+    {
+      "parameters": {
+        "command": "cd /Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/projetos/fundos/scripts && ANTHROPIC_API_KEY=$ANTHROPIC_API_KEY python3 analisar-edital.py --url \"{{ $json.body.url }}\" --saida /tmp/analise_victor_{{ $json.body.timestamp || Date.now() }}.json --silencioso 2>&1 && cat /tmp/analise_victor_*.json | tail -c 50000"
+      },
+      "id": "exec-analise",
+      "name": "Executa Análise do Edital",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [460, 300],
+      "notes": "Roda analisar-edital.py e captura JSON de saída"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Parse o JSON retornado pelo script\nconst stdout = $input.item.json.stdout || '';\n\n// Extrai o JSON do output (pode ter texto antes)\nconst jsonMatch = stdout.match(/\\{[\\s\\S]*\\}/);\nif (!jsonMatch) {\n  throw new Error('Script não retornou JSON válido: ' + stdout.substring(0, 200));\n}\n\nconst analise = JSON.parse(jsonMatch[0]);\nconst score = analise.fit_titanio_score || 0;\n\nreturn {\n  analise: analise,\n  score: score,\n  titulo: analise.titulo || 'Edital sem título',\n  recomendacao: analise.recomendacao || 'não inscrever',\n  valor: analise.valor_max || 0,\n  prazo: analise.prazo_inscricao || 'a confirmar',\n  produto: analise.produto_recomendado || 'N/A',\n  resumo: analise.resumo_executivo || '',\n  deve_preencher: score >= 60,\n  emoji_score: score >= 70 ? '🟢' : score >= 50 ? '🟡' : '🔴',\n};"
+      },
+      "id": "parse-analise",
+      "name": "Parse Resultado da Análise",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [680, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $json.deve_preencher }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "if-score-60",
+      "name": "Score >= 60?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [900, 300],
+      "notes": "Se score >= 60, gera preenchimento. Senão, só notifica."
+    },
+    {
+      "parameters": {
+        "command": "cd /Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/projetos/fundos/scripts && ANTHROPIC_API_KEY=$ANTHROPIC_API_KEY python3 preencher-edital.py --analise {{ $('parse-analise').item.json.analise._meta.caminho_analise || '/tmp/analise_victor.json' }} --formato json 2>&1"
+      },
+      "id": "exec-preenchimento",
+      "name": "Executa Preenchimento",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [1120, 200],
+      "notes": "Só roda se score >= 60"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Monta mensagem de notificação para score ALTO (>=60)\nconst d = $('parse-analise').item.json;\nconst analise = d.analise;\n\nconst pontos_fortes = (analise.pontos_fortes || []).slice(0, 3).map(p => `• ${p}`).join('\\n');\nconst docs = (analise.documentos_obrigatorios || []).slice(0, 5).map(d => `• ${d}`).join('\\n');\n\nreturn {\n  mensagem: `🎯 *Victor Capital — Novo Edital Aprovado para Inscrição*\\n\\n` +\n    `📋 *${d.titulo}*\\n` +\n    `${d.emoji_score} Score: ${d.score}/100\\n` +\n    `💰 Valor: R$ ${d.valor.toLocaleString('pt-BR')}\\n` +\n    `📅 Prazo: ${d.prazo}\\n` +\n    `🎯 Produto: ${d.produto}\\n\\n` +\n    `📝 *Resumo:*\\n${d.resumo}\\n\\n` +\n    `✅ *Pontos fortes:*\\n${pontos_fortes}\\n\\n` +\n    `📎 *Documentos a preparar:*\\n${docs}\\n\\n` +\n    `⚠️ *AGUARDANDO APROVAÇÃO DA EQUIPE antes de submeter*\\n` +\n    `Responda OK para confirmar inscrição ou CANCELAR para arquivar.`,\n  subject: `[Victor Capital] Edital aprovado: ${d.titulo}`,\n  score: d.score,\n  deve_preencher: true,\n};"
+      },
+      "id": "montar-msg-aprovado",
+      "name": "Monta Mensagem (Aprovado)",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1340, 200]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Monta mensagem de notificação para score BAIXO (<60)\nconst d = $('parse-analise').item.json;\nconst analise = d.analise;\n\nconst pontos_atencao = (analise.pontos_atencao || []).slice(0, 3).map(p => `• ${p}`).join('\\n');\n\nreturn {\n  mensagem: `📊 *Victor Capital — Edital Analisado (Score Baixo)*\\n\\n` +\n    `📋 *${d.titulo}*\\n` +\n    `🔴 Score: ${d.score}/100 — abaixo do mínimo (60)\\n` +\n    `💰 Valor: R$ ${d.valor.toLocaleString('pt-BR')}\\n` +\n    `📅 Prazo: ${d.prazo}\\n\\n` +\n    `📝 *Motivo:*\\n${analise.justificativa || ''}\\n\\n` +\n    `⚠️ *Pontos de atenção:*\\n${pontos_atencao}\\n\\n` +\n    `❌ *Recomendação: NÃO INSCREVER*\\n` +\n    `Arquivado no pipeline. Victor continua buscando editais melhores.`,\n  subject: `[Victor Capital] Edital arquivado: ${d.titulo}`,\n  score: d.score,\n  deve_preencher: false,\n};"
+      },
+      "id": "montar-msg-reprovado",
+      "name": "Monta Mensagem (Reprovado)",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,\n      "position": [1120, 400]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Merge dos dois caminhos — pega a mensagem disponível\nconst aprovado = $('montar-msg-aprovado').item?.json;\nconst reprovado = $('montar-msg-reprovado').item?.json;\nreturn aprovado || reprovado || { mensagem: 'Análise concluída', subject: 'Victor Capital' };"
+      },
+      "id": "merge-notificacao",
+      "name": "Merge Notificação",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1560, 300]
+    },
+    {
+      "parameters": {
+        "url": "={{ $env.N8N_WHATSAPP_WEBHOOK || 'http://localhost:5678/webhook/whatsapp-send' }}",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"group\": \"{{ $env.VICTOR_NOTIFY_GROUP || 'titanio-captacao' }}\",\n  \"message\": {{ JSON.stringify($json.mensagem) }}\n}",
+        "options": {}
+      },
+      "id": "enviar-whatsapp",
+      "name": "Envia WhatsApp à Equipe",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [1780, 300],
+      "notes": "Envia para o grupo de captação da Titanio"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Salva resultado em arquivo local para auditoria\nconst fs = require('fs');\nconst path = require('path');\n\nconst pastaAuditoria = '/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/projetos/fundos/pipeline/auditoria';\nif (!fs.existsSync(pastaAuditoria)) fs.mkdirSync(pastaAuditoria, { recursive: true });\n\nconst timestamp = new Date().toISOString().replace(/[:.]/g, '-');\nconst arquivo = path.join(pastaAuditoria, `n8n_processamento_${timestamp}.json`);\n\nconst registro = {\n  timestamp: new Date().toISOString(),\n  analise: $('parse-analise').item.json.analise,\n  mensagem_enviada: $('merge-notificacao').item.json.mensagem,\n  status: 'processado',\n};\n\nfs.writeFileSync(arquivo, JSON.stringify(registro, null, 2));\n\nreturn { arquivo_salvo: arquivo, status: 'ok' };"
+      },
+      "id": "salvar-auditoria",
+      "name": "Salva Auditoria Local",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [2000, 300]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={\n  \"status\": \"processado\",\n  \"edital\": \"{{ $('parse-analise').item.json.titulo }}\",\n  \"score\": {{ $('parse-analise').item.json.score }},\n  \"recomendacao\": \"{{ $('parse-analise').item.json.recomendacao }}\",\n  \"preenchimento_gerado\": {{ $('parse-analise').item.json.deve_preencher }}\n}"
+      },
+      "id": "webhook-resposta",
+      "name": "Responde ao Webhook",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [2220, 300]
+    }
+  ],
+  "connections": {
+    "Webhook — Recebe URL do Edital": {
+      "main": [[{"node": "Executa Análise do Edital", "type": "main", "index": 0}]]
+    },
+    "Executa Análise do Edital": {
+      "main": [[{"node": "Parse Resultado da Análise", "type": "main", "index": 0}]]
+    },
+    "Parse Resultado da Análise": {
+      "main": [[{"node": "Score >= 60?", "type": "main", "index": 0}]]
+    },
+    "Score >= 60?": {
+      "main": [
+        [{"node": "Executa Preenchimento", "type": "main", "index": 0}],
+        [{"node": "Monta Mensagem (Reprovado)", "type": "main", "index": 0}]
+      ]
+    },
+    "Executa Preenchimento": {
+      "main": [[{"node": "Monta Mensagem (Aprovado)", "type": "main", "index": 0}]]
+    },
+    "Monta Mensagem (Aprovado)": {
+      "main": [[{"node": "Merge Notificação", "type": "main", "index": 0}]]
+    },
+    "Monta Mensagem (Reprovado)": {
+      "main": [[{"node": "Merge Notificação", "type": "main", "index": 0}]]
+    },
+    "Merge Notificação": {
+      "main": [[{"node": "Envia WhatsApp à Equipe", "type": "main", "index": 0}]]
+    },
+    "Envia WhatsApp à Equipe": {
+      "main": [[{"node": "Salva Auditoria Local", "type": "main", "index": 0}]]
+    },
+    "Salva Auditoria Local": {
+      "main": [[{"node": "Responde ao Webhook", "type": "main", "index": 0}]]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "_meta": {
+    "descricao": "Workflow Victor Capital — Análise e preenchimento automático de editais para a Titanio Studio",
+    "versao": "1.0",
+    "criado": "2026-03-18",
+    "instrucoes": [
+      "1. Importe este JSON no N8n (Workflows > Import)",
+      "2. Configure variável de ambiente: ANTHROPIC_API_KEY",
+      "3. Configure: VICTOR_NOTIFY_GROUP (ID do grupo WhatsApp)",
+      "4. Ative o workflow",
+      "5. Teste enviando POST para: http://localhost:5678/webhook/victor-edital",
+      "   Body: { 'url': 'https://finep.gov.br/chamadapublica/...', 'titulo': 'FINEP ...' }"
+    ]
+  }
+}

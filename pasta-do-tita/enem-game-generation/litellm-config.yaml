@@ -1,0 +1,59 @@
+model_list:
+  # StepFlash — Tasks leves, rápidos, health checks
+  - model_name: "stepflash"
+    litellm_params:
+      model: "openrouter/stepfun/step-3.5-flash:free"
+      api_key: "os.environ/OPENROUTER_API_KEY"
+      max_tokens: 4000
+      temperature: 0.3
+      timeout: 60
+
+  # Nemotron — Tasks pesadas, reasoning, contexto longo (262K)
+  - model_name: "nemotron"
+    litellm_params:
+      model: "openrouter/nvidia/nemotron-3-super-120b-a12b:free"
+      api_key: "os.environ/OPENROUTER_API_KEY"
+      max_tokens: 4000
+      temperature: 0.5
+      timeout: 120
+
+# Fallback chain
+fallback_models:
+  - "stepflash"
+  - "nemotron"
+
+# Quota monitoring
+quota_monitoring:
+  enabled: true
+  check_interval_seconds: 60
+  stepflash_daily_limit: null  # OpenRouter :free sem limite explícito
+  nemotron_daily_limit: null
+
+# Retry policy
+retry_policy:
+  max_retries: 3
+  retry_wait_seconds: 5
+  exponential_backoff: true
+
+# Logging
+logging:
+  level: "INFO"
+  log_file: "/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/pasta-do-tita/enem-game-generation/logs/litellm.log"
+  log_tokens: true
+  log_cost: true
+
+# Cost tracking
+cost_tracking:
+  enabled: true
+  output_file: "/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/pasta-do-tita/enem-game-generation/logs/cost.json"
+  warning_threshold_usd: 0.01  # Alert se passar de R$ 0.01
+
+# Router behavior
+router:
+  smart_routing: true
+  distribution_strategy:
+    "game_designer": "nemotron"           # Design complexo
+    "content_creator": "stepflash"        # Tarefas estruturadas
+    "code_generator": "nemotron"          # GDScript complexo
+    "qa_tester": "stepflash"              # Health checks
+  fallback_to_other_on_quota: true

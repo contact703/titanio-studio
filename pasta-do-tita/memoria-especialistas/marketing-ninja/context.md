@@ -1,3 +1,1 @@
-# Contexto Ativo — Marketing Ninja
-
-Nenhum contexto ativo no momento.
+# DESATIVADO — Absorvido por marketing-director em 28/03/2026

@@ -1,0 +1,61 @@
+{
+  "specialistId": "openclaw-specialist",
+  "specialistName": "⚙️ OpenClaw Expert",
+  "version": 2,
+  "lastActive": "2026-03-27T19:50:00.000Z",
+  "stats": {
+    "tasksCompleted": 4,
+    "tasksFailed": 0,
+    "sessionsTotal": 3,
+    "lessonsLearned": 8,
+    "tokensUsed": 0,
+    "avgTaskDurationMs": 0
+  },
+  "knowledge": [
+    "Skills: OpenClaw Config, Gateway Optimization, Multi-Node Cluster, Auth & OAuth, Skills & Plugins, Cron & Heartbeat, Fallback/Multi-Model, Memory Architecture",
+    "Squad Memory System: /workspace/squad/specialists/{ios,backend,victor-capital,security,design,memory-bot,openclaw-specialist}",
+    "Scripts squad: capture-lesson.sh, daily-consolidate.sh, github-backup.sh, smooth-switch.sh, process-queue.sh, queue-task.sh",
+    "GitHub repo: https://github.com/contact703/titanio-squad (privado)",
+    "N8n API Key: n8n_api_50fcb0ee043d2364a06ae1eafd0c2df055bdbc6f8605de85",
+    "Smooth Switch WF ID: GdUnUVPwUNw0ZsWM",
+    "Fallback System configurado: Anthropic → Groq → Gemini",
+    "15+ workflows N8n ativos: Rate Limit Queue, Security Weekly, Daily Note Creator, Learning Score Tracker, RAM Monitor, Victor Capital Prazos, Sync Memória GitHub, Specialist Daily Consolidation, Memory Webhook",
+    {
+      "topic": "Modelo Permanente Gospia",
+      "content": "Grupo Gospia: SEMPRE Opus. NUNCA Sonnet sem permissão explícita. Remover Sonnet do fallback.",
+      "date": "2026-03-27",
+      "source": "gospia-session"
+    },
+    {
+      "topic": "Envio de .md WhatsApp",
+      "content": "Ler arquivo com Read → mandar conteúdo como texto. Não há attachment API. LICAO-CRITICA-MD-ENVIO.md registrada.",
+      "date": "2026-03-27",
+      "source": "gospia-session"
+    },
+    {
+      "topic": "Overload 529 Handling",
+      "content": "Opus overload 529 gera fallback automático. Configurar para não cair no Sonnet: remover da lista de fallback.",
+      "date": "2026-03-27",
+      "source": "gospia-session"
+    }
+  ],
+  "recentTasks": [
+    {
+      "date": "2026-03-27",
+      "task": "Listagem completa de todos os especialistas com IDs e status",
+      "result": "20+ especialistas registrados no sistema",
+      "project": "OpenClaw Squad"
+    },
+    {
+      "date": "2026-03-20",
+      "task": "Squad Memory System — estrutura completa",
+      "result": "Diretórios, scripts, GitHub backup, contextos de inject",
+      "project": "OpenClaw Squad"
+    }
+  ],
+  "activeContext": {
+    "currentTask": null,
+    "currentProject": "OpenClaw Infrastructure",
+    "startedAt": null
+  }
+}

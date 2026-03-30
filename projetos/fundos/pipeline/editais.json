@@ -1,0 +1,40 @@
+{
+  "editais": {
+    "AC051E5B": {
+      "id": "AC051E5B",
+      "titulo": "FINEP Mulheres Inovadoras — Chamada Pública 2024",
+      "url": "http://www.finep.gov.br/chamadas-publicas/chamadapublica/788",
+      "prazo_inscricao": "30/06/2025",
+      "estado": "EM_PREENCHIMENTO",
+      "historico_estados": [
+        {
+          "estado": "DETECTADO",
+          "timestamp": "2026-03-18T19:47:02.913198",
+          "obs": ""
+        },
+        {
+          "estado": "ANALISADO",
+          "timestamp": "2026-03-18T19:47:02.914637",
+          "obs": "Score: 72.0/100"
+        },
+        {
+          "estado": "APROVADO_PARA_INSCRICAO",
+          "timestamp": "2026-03-18T19:47:02.915240",
+          "obs": ""
+        },
+        {
+          "estado": "EM_PREENCHIMENTO",
+          "timestamp": "2026-03-18T19:49:07.305545",
+          "obs": ""
+        }
+      ],
+      "analise": null,
+      "preenchimento": null,
+      "arquivos": [],
+      "valor_recebido": 0,
+      "criado_em": "2026-03-18T19:47:02.913210",
+      "atualizado_em": "2026-03-18T19:49:07.305531"
+    }
+  },
+  "atualizado": "2026-03-18T19:49:07.305549"
+}

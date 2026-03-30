@@ -1,0 +1,21 @@
+{
+  "specialistId": "code-ninja",
+  "specialistName": "Code Ninja",
+  "version": 2,
+  "lastActive": "2026-03-23T18:38:15.813Z",
+  "stats": {
+    "tasksCompleted": 1,
+    "tasksFailed": 0,
+    "sessionsTotal": 0,
+    "lessonsLearned": 37,
+    "tokensUsed": 0,
+    "avgTaskDurationMs": 0
+  },
+  "knowledge": [],
+  "recentTasks": [],
+  "activeContext": {
+    "currentTask": null,
+    "currentProject": null,
+    "startedAt": null
+  }
+}

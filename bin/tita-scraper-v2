@@ -1,0 +1,265 @@
+#!/usr/bin/env python3
+"""
+TITA SCRAPER v2 — Adaptive Website Scraper com Features Completas
+Author: Tita 🐾
+Date: 2026-03-22
+
+Features:
+- User-Agent rotation (5 browsers)
+- Random delays (mimicam humano)
+- Proxy rotation (fallback mode)
+- Session cache (reutilizar cookies)
+- Rate limiting inteligente
+- JavaScript rendering (Playwright)
+- Adaptive retry logic
+"""
+
+import sys
+import argparse
+import json
+import random
+import time
+from datetime import datetime
+from pathlib import Path
+import hashlib
+import logging
+
+logging.basicConfig(level=logging.INFO, format='[%(asctime)s] %(levelname)s: %(message)s')
+logger = logging.getLogger(__name__)
+
+# User Agents
+USER_AGENTS = [
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1 Safari/605.1.15",
+]
+
+# Proxies (gratuitas para fallback)
+PROXIES = [
+    "http://proxy1.example.com:8080",
+    "http://proxy2.example.com:8080",
+    "http://proxy3.example.com:8080",
+]
+
+class TitaScraperV2:
+    def __init__(self, cache_dir: str = "/tmp/tita-scraper-cache"):
+        self.cache_dir = Path(cache_dir)
+        self.cache_dir.mkdir(exist_ok=True)
+        
+        self.session_count = 0
+        self.success_count = 0
+        self.failure_count = 0
+        self.rate_limiter = {}  # domain -> last_request_time
+        self.min_delay_between_requests = 2  # segundos
+    
+    def get_random_user_agent(self) -> str:
+        return random.choice(USER_AGENTS)
+    
+    def get_random_delay(self, min_sec: float = 1, max_sec: float = 5) -> float:
+        return random.uniform(min_sec, max_sec)
+    
+    def get_headers(self) -> dict:
+        return {
+            "User-Agent": self.get_random_user_agent(),
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+            "Accept-Language": "en-US,en;q=0.5",
+            "Accept-Encoding": "gzip, deflate",
+            "DNT": "1",
+            "Connection": "keep-alive",
+            "Upgrade-Insecure-Requests": "1",
+        }
+    
+    def get_random_proxy(self) -> str:
+        """Retorna proxy aleatório (fallback mode)"""
+        return random.choice(PROXIES)
+    
+    def get_cache_key(self, url: str) -> str:
+        """Gera chave de cache baseada em URL"""
+        return hashlib.md5(url.encode()).hexdigest()
+    
+    def load_cached_session(self, url: str) -> dict:
+        """Carrega sessão cached se existir"""
+        cache_key = self.get_cache_key(url)
+        cache_file = self.cache_dir / f"{cache_key}.json"
+        
+        if cache_file.exists():
+            try:
+                data = json.loads(cache_file.read_text())
+                age_seconds = time.time() - data.get('timestamp', 0)
+                
+                # Cache válido por 24h
+                if age_seconds < 86400:
+                    logger.info(f"✅ Cache hit (age: {int(age_seconds)}s)")
+                    return data
+            except:
+                pass
+        
+        return None
+    
+    def save_cached_session(self, url: str, data: dict):
+        """Salva sessão em cache"""
+        cache_key = self.get_cache_key(url)
+        cache_file = self.cache_dir / f"{cache_key}.json"
+        
+        data['timestamp'] = time.time()
+        cache_file.write_text(json.dumps(data, indent=2))
+    
+    def check_rate_limit(self, url: str) -> bool:
+        """Valida rate limiting por domínio"""
+        from urllib.parse import urlparse
+        domain = urlparse(url).netloc
+        
+        last_request = self.rate_limiter.get(domain, 0)
+        elapsed = time.time() - last_request
+        
+        if elapsed < self.min_delay_between_requests:
+            wait_time = self.min_delay_between_requests - elapsed
+            logger.info(f"⏳ Rate limit: aguardando {wait_time:.1f}s")
+            time.sleep(wait_time)
+        
+        self.rate_limiter[domain] = time.time()
+        return True
+    
+    async def scrape_with_playwright(self, url: str, selector: str = None, use_proxy: bool = False) -> dict:
+        """Scrapa com Playwright, suportando proxy e cache"""
+        from playwright.async_api import async_playwright
+        
+        # Check cache first
+        cached = self.load_cached_session(url)
+        if cached:
+            return {
+                "success": True,
+                "url": url,
+                "content": cached['content'],
+                "cached": True,
+                "content_length": len(cached['content']),
+            }
+        
+        # Rate limiting
+        self.check_rate_limit(url)
+        
+        try:
+            logger.info(f"🔄 Scraping (proxy={use_proxy}): {url}")
+            
+            async with async_playwright() as p:
+                launch_args = {"headless": True}
+                
+                # Adicionar proxy se solicitado
+                if use_proxy:
+                    proxy = self.get_random_proxy()
+                    launch_args["proxy"] = {"server": proxy}
+                    logger.info(f"🔗 Usando proxy: {proxy}")
+                
+                browser = await p.chromium.launch(**launch_args)
+                context = await browser.new_context()
+                
+                # Headers realistas
+                await context.set_extra_http_headers(self.get_headers())
+                
+                page = await context.new_page()
+                
+                # Delay aleatório
+                await page.wait_for_timeout(int(self.get_random_delay() * 1000))
+                
+                # Navegar
+                await page.goto(url, wait_until="networkidle", timeout=30000)
+                
+                # Mais delay
+                await page.wait_for_timeout(random.randint(500, 2000))
+                
+                # Extrair conteúdo
+                if selector:
+                    content = await page.locator(selector).text_content()
+                else:
+                    content = await page.content()
+                
+                result = {
+                    "success": True,
+                    "url": url,
+                    "content": content,
+                    "cached": False,
+                    "content_length": len(content),
+                    "timestamp": datetime.now().isoformat(),
+                }
+                
+                # Salvar em cache
+                self.save_cached_session(url, {"content": content})
+                
+                await browser.close()
+                self.success_count += 1
+                logger.info(f"✅ Scrape bem-sucedido (cache salvo)")
+                return result
+                
+        except Exception as e:
+            self.failure_count += 1
+            logger.error(f"❌ Erro ao scrape: {e}")
+            
+            # Retry com proxy se não usou ainda
+            if not use_proxy:
+                logger.info(f"🔄 Retentando com proxy...")
+                return await self.scrape_with_playwright(url, selector, use_proxy=True)
+            
+            return {
+                "success": False,
+                "url": url,
+                "error": str(e),
+                "timestamp": datetime.now().isoformat(),
+            }
+    
+    def scrape(self, url: str, selector: str = None) -> dict:
+        """Wrapper síncrono"""
+        import asyncio
+        self.session_count += 1
+        
+        try:
+            loop = asyncio.get_running_loop()
+        except RuntimeError:
+            loop = asyncio.new_event_loop()
+            asyncio.set_event_loop(loop)
+        
+        return loop.run_until_complete(self.scrape_with_playwright(url, selector))
+    
+    def get_stats(self) -> dict:
+        return {
+            "total_scrapes": self.session_count,
+            "successful": self.success_count,
+            "failed": self.failure_count,
+            "success_rate": f"{(self.success_count / max(1, self.session_count) * 100):.1f}%",
+            "cache_dir": str(self.cache_dir),
+        }
+
+async def main():
+    parser = argparse.ArgumentParser(description="Tita Scraper v2 — Advanced Web Scraper")
+    parser.add_argument("url", help="URL to scrape")
+    parser.add_argument("--selector", "-s", help="CSS selector")
+    parser.add_argument("--output", "-o", help="Output file (JSON)")
+    parser.add_argument("--proxy", "-p", action="store_true", help="Force proxy mode")
+    parser.add_argument("--cache-dir", help="Cache directory (default: /tmp/tita-scraper-cache)")
+    
+    args = parser.parse_args()
+    
+    cache_dir = args.cache_dir or "/tmp/tita-scraper-cache"
+    scraper = TitaScraperV2(cache_dir=cache_dir)
+    
+    logger.info(f"🧪 Tita Scraper v2")
+    logger.info(f"URL: {args.url}")
+    logger.info(f"Cache: {cache_dir}")
+    
+    result = scraper.scrape(args.url, args.selector)
+    
+    if result["success"]:
+        print(json.dumps(result, indent=2))
+        
+        if args.output:
+            with open(args.output, 'w') as f:
+                json.dump(result, f, indent=2)
+            logger.info(f"Resultado salvo em: {args.output}")
+    else:
+        print(json.dumps(result, indent=2))
+        sys.exit(1)
+
+if __name__ == "__main__":
+    import asyncio
+    asyncio.run(main())

@@ -1,0 +1,31 @@
+#!/bin/bash
+MEMORIA_DIR="/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/pasta-do-tita/memoria-especialistas"
+TIMESTAMP=$(date -u '+%Y-%m-%dT%H:%M:%SZ')
+LOG_FILE="/tmp/tita-specialist-consolidate.log"
+
+echo "[$(date '+%Y-%m-%d %H:%M:%S')] 🧹 Consolidação..." >> "$LOG_FILE"
+
+CONSOLIDADOS=0
+for specialist_dir in "$MEMORIA_DIR"/*/; do
+    [ ! -d "$specialist_dir" ] && continue
+    specialist_id=$(basename "$specialist_dir")
+    memory_file="$specialist_dir/memory.json"
+    [ ! -f "$memory_file" ] && continue
+    
+    python3 << PYTHON
+import json
+from pathlib import Path
+memory_file = Path("$memory_file")
+memory = json.loads(memory_file.read_text())
+if 'knowledge' in memory:
+    memory['knowledge'] = list(dict.fromkeys(memory['knowledge']))
+if 'recentTasks' in memory:
+    memory['recentTasks'] = memory['recentTasks'][-30:]
+memory['lastConsolidated'] = "$TIMESTAMP"
+memory_file.write_text(json.dumps(memory, indent=2))
+PYTHON
+    
+    CONSOLIDADOS=$((CONSOLIDADOS + 1))
+done
+
+echo "✅ Consolidação: $CONSOLIDADOS especialistas" >> "$LOG_FILE"

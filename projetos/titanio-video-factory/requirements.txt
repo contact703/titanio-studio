@@ -1,0 +1,31 @@
+# Titanio Video Factory — Dependências
+# Python 3.11+
+# Instalar: pip3 install -r requirements.txt --break-system-packages
+
+# ─── Voz / TTS ───────────────────────────────────────────────────────────────
+edge-tts>=7.0.0          # Voz neural PT-BR (Microsoft, gratuita, sem API key)
+
+# ─── Vídeo / Áudio ──────────────────────────────────────────────────────────
+moviepy==1.0.3           # Composição de vídeo (versão estável)
+# ffmpeg instalado via sistema: brew install ffmpeg
+
+# ─── Imagens / Texto ─────────────────────────────────────────────────────────
+Pillow>=10.0.0           # Manipulação de imagens, renderização de texto
+numpy>=1.24.0            # Arrays para manipulação de frames
+
+# ─── IA / LLM ────────────────────────────────────────────────────────────────
+anthropic>=0.20.0        # Claude (roteiro) — requer ANTHROPIC_API_KEY
+# ollama instalado separadamente: https://ollama.ai  (alternativa local)
+
+# ─── Transcrição (opcional) ──────────────────────────────────────────────────
+# openai-whisper          # Legendas automáticas (pesado, instalar se necessário)
+
+# ─── Utilitários ─────────────────────────────────────────────────────────────
+python-dotenv>=1.0.0     # Carregar .env com API keys
+requests>=2.31.0         # HTTP requests
+tqdm>=4.65.0             # Barra de progresso
+loguru>=0.7.0            # Logging bonito
+
+# ─── Async ───────────────────────────────────────────────────────────────────
+aiohttp>=3.9.0           # HTTP assíncrono (usado pelo edge-tts)
+aiofiles>=23.0.0         # I/O assíncrono

@@ -1,0 +1,129 @@
+{
+  "titulo_edital": "FINEP Mulheres Inovadoras — Chamada Pública 2024",
+  "campos_preenchidos": [
+    {
+      "campo": "Nome da empresa",
+      "resposta": "Titanio Studio",
+      "caracteres": 15,
+      "notas": ""
+    },
+    {
+      "campo": "Descrição",
+      "resposta": "Empresa de produção audiovisual e IA. 20 anos, 40+ países.",
+      "caracteres": 60,
+      "notas": ""
+    }
+  ],
+  "descricao_projeto": "Desenvolvimento e expansão do VoxDescriber — app de audiodescrição automática para 6,5M brasileiros com deficiência visual.",
+  "justificativa": "A Titanio Studio une 20 anos de audiovisual com IA de ponta.",
+  "objetivos": {
+    "geral": "Escalar VoxDescriber no Brasil",
+    "especificos": [
+      "Aumentar base de usuários",
+      "Parcerias institucionais",
+      "Expansão de funcionalidades"
+    ]
+  },
+  "metodologia": "Desenvolvimento ágil com entregas mensais, validação com usuários com deficiência visual.",
+  "cronograma": [
+    {
+      "mes": 1,
+      "atividade": "Fase 1",
+      "descricao": "Atividades do mês 1"
+    },
+    {
+      "mes": 2,
+      "atividade": "Fase 2",
+      "descricao": "Atividades do mês 2"
+    },
+    {
+      "mes": 3,
+      "atividade": "Fase 3",
+      "descricao": "Atividades do mês 3"
+    },
+    {
+      "mes": 4,
+      "atividade": "Fase 4",
+      "descricao": "Atividades do mês 4"
+    },
+    {
+      "mes": 5,
+      "atividade": "Fase 5",
+      "descricao": "Atividades do mês 5"
+    },
+    {
+      "mes": 6,
+      "atividade": "Fase 6",
+      "descricao": "Atividades do mês 6"
+    }
+  ],
+  "orcamento": {
+    "total": 425000.0,
+    "itens": [
+      {
+        "categoria": "RH",
+        "valor": 300000.0,
+        "justificativa": "Equipe técnica"
+      }
+    ]
+  },
+  "resultados_esperados": [
+    "100k usuários ativos",
+    "Parcerias com 10 instituições",
+    "Expansão para LATAM"
+  ],
+  "impacto_social": "Acessibilidade para 6,5M brasileiros com deficiência visual.",
+  "equipe": [
+    {
+      "nome": "Tiago Arakilian",
+      "cargo": "CEO/Fundador",
+      "qualificacao": "Sorbonne, 20 anos de audiovisual"
+    }
+  ],
+  "documentos_checklist": [
+    {
+      "documento": "CNPJ ativo e regular",
+      "status": "preparar",
+      "observacao": ""
+    },
+    {
+      "documento": "Balanço patrimonial dos últimos 2 anos",
+      "status": "preparar",
+      "observacao": ""
+    },
+    {
+      "documento": "Declaração de empresa de inovação",
+      "status": "preparar",
+      "observacao": ""
+    },
+    {
+      "documento": "Currículo do responsável técnico (Lattes ou similar)",
+      "status": "preparar",
+      "observacao": ""
+    },
+    {
+      "documento": "Plano de negócios resumido",
+      "status": "preparar",
+      "observacao": ""
+    },
+    {
+      "documento": "Certidões negativas de débito (federal, estadual, municipal)",
+      "status": "preparar",
+      "observacao": ""
+    },
+    {
+      "documento": "Declaração de composição societária",
+      "status": "preparar",
+      "observacao": ""
+    }
+  ],
+  "resumo_executivo": "Titanio Studio solicita recursos para expandir VoxDescriber, impactando 6,5M brasileiros com deficiência visual.",
+  "alertas": [
+    "⚠️ Revisão humana obrigatória antes de submeter",
+    "⚠️ Confirmar CNPJ e dados cadastrais"
+  ],
+  "_meta": {
+    "status": "RASCUNHO DEMO — não submeter sem revisão",
+    "data_preenchimento": "2026-03-18T19:46:45.610389"
+  }
+}

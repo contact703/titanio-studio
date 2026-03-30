@@ -1,0 +1,77 @@
+{
+  "bots": [
+    {
+      "id": "bot-error-monitor",
+      "name": "Error Monitor",
+      "description": "Monitora logs e detecta erros automaticamente",
+      "type": "error-monitor",
+      "status": "running",
+      "isGlobal": true,
+      "createdAt": "2026-03-19T19:08:31.013Z",
+      "runCount": 0,
+      "errorCount": 0,
+      "config": {}
+    },
+    {
+      "id": "bot-rate-limit-resolver",
+      "name": "Rate Limit Resolver",
+      "description": "Resolve erros de rate limit da API",
+      "type": "rate-limit-resolver",
+      "status": "running",
+      "isGlobal": true,
+      "createdAt": "2026-03-19T19:08:31.013Z",
+      "runCount": 0,
+      "errorCount": 0,
+      "config": {}
+    },
+    {
+      "id": "bot-timeout-resolver",
+      "name": "Timeout Resolver",
+      "description": "Resolve timeouts de requisições",
+      "type": "timeout-resolver",
+      "status": "running",
+      "isGlobal": true,
+      "createdAt": "2026-03-19T19:08:31.013Z",
+      "runCount": 0,
+      "errorCount": 0,
+      "config": {}
+    },
+    {
+      "id": "bot-media-processor",
+      "name": "Media Processor",
+      "description": "Processa vídeos e áudios automaticamente",
+      "type": "media-processor",
+      "status": "running",
+      "isGlobal": true,
+      "createdAt": "2026-03-19T19:08:31.013Z",
+      "runCount": 0,
+      "errorCount": 0,
+      "config": {}
+    },
+    {
+      "id": "bot-knowledge-sync",
+      "name": "Knowledge Sync",
+      "description": "Sincroniza conhecimento entre máquinas",
+      "type": "knowledge-sync",
+      "status": "running",
+      "isGlobal": true,
+      "createdAt": "2026-03-19T19:08:31.013Z",
+      "runCount": 0,
+      "errorCount": 0,
+      "config": {}
+    },
+    {
+      "id": "bot-claw-cluster",
+      "name": "Claw Cluster Manager",
+      "description": "Gerencia cluster de OpenClaw",
+      "type": "claw-cluster",
+      "status": "running",
+      "isGlobal": true,
+      "createdAt": "2026-03-19T19:08:31.013Z",
+      "runCount": 0,
+      "errorCount": 0,
+      "config": {}
+    }
+  ],
+  "updatedAt": "2026-03-26T17:24:32.115Z"
+}

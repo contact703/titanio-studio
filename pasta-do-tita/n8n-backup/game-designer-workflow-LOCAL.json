@@ -1,0 +1,145 @@
+{
+  "name": "ENEM Game Designer - Local Ollama (REAL)",
+  "description": "Generates game structure using Qwen 32B (Local Ollama) - REAL execution, zero external deps",
+  "nodes": [
+    {
+      "parameters": {
+        "trigger": "at"
+      },
+      "name": "Workflow Start",
+      "type": "n8n-nodes-base.cron",
+      "typeVersion": 1,
+      "position": [250, 300],
+      "id": "node-start"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://localhost:11434/api/generate",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "bodyParametersUi": "json",
+        "body": {
+          "model": "qwen2.5:32b",
+          "prompt": "You are a game designer specializing in educational RPGs. Generate ONLY valid JSON (no markdown) with complete Godot game structure for an ENEM study game (pixel art, Stardew Valley style). Output MUST be: {\"game_title\": \"...\", \"engine\": \"Godot 4.x\", \"scene_tree\": {\"root\": \"Main\", \"scenes\": [{\"name\": \"Overworld\", \"type\": \"Node2D\"}]}, \"core_systems\": {\"progression\": {...}, \"combat\": {...}, \"inventory\": {...}}, \"content_categories\": [\"Português\", \"Matemática\", \"Ciências Naturais\", \"Ciências Humanas\", \"Redação\"], \"art_style\": {...}, \"ui_screens\": [...], \"difficulty_settings\": [...], \"tech_stack\": {...}, \"timeline\": {...}}",
+          "stream": false,
+          "temperature": 0.5,
+          "top_p": 0.9,
+          "top_k": 40
+        }
+      },
+      "name": "Call Qwen 32B (Local Ollama)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [450, 300],
+      "id": "node-ollama"
+    },
+    {
+      "parameters": {
+        "functionCode": "const response = $input.first().json;\n\nif (!response.response) {\n  throw new Error('Invalid Ollama response');\n}\n\nconst content = response.response;\n\n// Try to parse JSON from response\nlet gameStructure;\ntry {\n  gameStructure = JSON.parse(content);\n} catch (e) {\n  // Try to extract JSON from markdown code blocks\n  const jsonMatch = content.match(/```json\\n?([\\s\\S]*?)\\n?```/);\n  if (jsonMatch) {\n    gameStructure = JSON.parse(jsonMatch[1]);\n  } else {\n    // Try to find JSON object directly\n    const jsonStart = content.indexOf('{');\n    const jsonEnd = content.lastIndexOf('}');\n    if (jsonStart !== -1 && jsonEnd !== -1) {\n      const jsonStr = content.substring(jsonStart, jsonEnd + 1);\n      gameStructure = JSON.parse(jsonStr);\n    } else {\n      throw new Error('Could not extract JSON from Ollama response');\n    }\n  }\n}\n\nreturn {\n  game_structure: gameStructure,\n  model: 'qwen2.5:32b (Ollama local)',\n  timestamp: new Date().toISOString(),\n  source: 'Ollama (localhost:11434)'\n};"
+      },
+      "name": "Parse Game Structure",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [650, 300],
+      "id": "node-parse"
+    },
+    {
+      "parameters": {
+        "fileName": "game-structure.json",
+        "fileContent": "{{ JSON.stringify($node[\"Parse Game Structure\"].json.game_structure, null, 2) }}",
+        "directory": "/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/pasta-do-tita/enem-game-generation/outputs"
+      },
+      "name": "Save Game Structure",
+      "type": "n8n-nodes-base.writeFile",
+      "typeVersion": 1,
+      "position": [850, 300],
+      "id": "node-save"
+    },
+    {
+      "parameters": {
+        "webhookUrl": "http://localhost:4444/webhook/enem-game-designer",
+        "method": "POST",
+        "authentication": "none",
+        "sendQuery": false,
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParametersUi": "json",
+        "body": {
+          "status": "success",
+          "component": "game_designer",
+          "output_file": "game-structure.json",
+          "model": "{{ $node[\"Parse Game Structure\"].json.model }}",
+          "source": "{{ $node[\"Parse Game Structure\"].json.source }}",
+          "timestamp": "{{ $node[\"Parse Game Structure\"].json.timestamp }}"
+        }
+      },
+      "name": "Webhook Callback",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [1050, 300],
+      "id": "node-webhook"
+    }
+  ],
+  "connections": {
+    "Workflow Start": {
+      "main": [
+        [
+          {
+            "node": "Call Qwen 32B (Local Ollama)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call Qwen 32B (Local Ollama)": {
+      "main": [
+        [
+          {
+            "node": "Parse Game Structure",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Game Structure": {
+      "main": [
+        [
+          {
+            "node": "Save Game Structure",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Save Game Structure": {
+      "main": [
+        [
+          {
+            "node": "Webhook Callback",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

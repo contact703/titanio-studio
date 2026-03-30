@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tandem Titanio</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body { width: 280px; }
+  </style>
+</head>
+<body class="popup-body">
+  <div class="popup-header">
+    <div class="popup-title">⚡ TANDEM</div>
+    <div class="popup-subtitle">Titanio AI Browser · v1.0.0</div>
+  </div>
+
+  <div class="popup-content">
+    <!-- Status da Tita -->
+    <div class="popup-status">
+      <span class="popup-status-label">Status da Tita</span>
+      <div id="statusBadge" class="status-badge checking">
+        <span id="statusDot">⏳</span>
+        <span id="statusText">Verificando...</span>
+      </div>
+    </div>
+
+    <!-- Última ação -->
+    <div style="padding: 6px 12px; background: var(--bg-card); border-radius: var(--radius); border: 1px solid var(--border);">
+      <div style="font-size: 10px; color: var(--text-muted); margin-bottom: 3px;">ÚLTIMA AÇÃO</div>
+      <div id="lastAction" style="font-size: 11.5px; color: var(--text-secondary);">Nenhuma ação ainda</div>
+    </div>
+
+    <!-- Botões -->
+    <button id="openPanelBtn" class="btn btn-primary open-panel-btn">
+      🤖 Abrir Painel da Tita
+    </button>
+
+    <button id="captureBtn" class="btn btn-secondary" style="width: 100%; justify-content: center;">
+      📸 Capturar página atual
+    </button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

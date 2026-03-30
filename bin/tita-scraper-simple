@@ -1,0 +1,99 @@
+#!/usr/bin/env python3
+"""
+TITA SCRAPER — Versão Simples e Funcional
+Scraping robusto com Playwright (sem async complexo)
+"""
+
+import sys
+import json
+import time
+import random
+from datetime import datetime
+from pathlib import Path
+
+def scrape_url(url: str, selector: str = None, output: str = None) -> dict:
+    """Scrapa URL com Playwright (síncrono simples)"""
+    
+    try:
+        from playwright.sync_api import sync_playwright
+    except ImportError:
+        return {
+            "success": False,
+            "error": "Playwright not installed. Run: pip3 install playwright && playwright install",
+            "timestamp": datetime.now().isoformat()
+        }
+    
+    try:
+        with sync_playwright() as p:
+            print(f"[INFO] 🌐 Scraping: {url}")
+            
+            browser = p.chromium.launch(headless=True)
+            page = browser.new_page()
+            
+            # Headers realistas
+            page.set_extra_http_headers({
+                "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "DNT": "1"
+            })
+            
+            # Delay aleatório
+            time.sleep(random.uniform(1, 3))
+            
+            # Navegar
+            page.goto(url, wait_until="networkidle", timeout=30000)
+            
+            # Delay final
+            time.sleep(random.uniform(1, 2))
+            
+            # Extrair conteúdo
+            if selector:
+                content = page.locator(selector).first.text_content()
+            else:
+                content = page.content()
+            
+            result = {
+                "success": True,
+                "url": url,
+                "content_length": len(content),
+                "content": content[:2000],  # Primeiros 2000 chars
+                "timestamp": datetime.now().isoformat()
+            }
+            
+            browser.close()
+            
+            # Salvar em arquivo se solicitado
+            if output:
+                Path(output).write_text(json.dumps(result, indent=2))
+                print(f"[INFO] 💾 Salvo em: {output}")
+            
+            print(f"[INFO] ✅ Sucesso: {result['content_length']} chars")
+            return result
+    
+    except Exception as e:
+        error_result = {
+            "success": False,
+            "url": url,
+            "error": str(e),
+            "timestamp": datetime.now().isoformat()
+        }
+        print(f"[ERROR] ❌ {str(e)[:100]}")
+        return error_result
+
+if __name__ == "__main__":
+    import argparse
+    
+    parser = argparse.ArgumentParser(description="TITA Scraper — Web Scraping Simples")
+    parser.add_argument("url", help="URL to scrape")
+    parser.add_argument("--selector", "-s", help="CSS selector (optional)")
+    parser.add_argument("--output", "-o", help="Output JSON file")
+    
+    args = parser.parse_args()
+    
+    result = scrape_url(args.url, args.selector, args.output)
+    
+    # Output JSON
+    print(json.dumps(result, indent=2))
+    
+    # Exit code
+    sys.exit(0 if result["success"] else 1)

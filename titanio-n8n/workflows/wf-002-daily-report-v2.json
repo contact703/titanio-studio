@@ -1,0 +1,76 @@
+{
+  "name": "WF-002 · DAILY-REPORT",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [{ "field": "cronExpression", "expression": "0 9 * * *" }]
+        }
+      },
+      "id": "cron",
+      "name": "Schedule 9h diário",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "http://host.docker.internal:4444/api/reports",
+        "qs": {
+          "parameters": [
+            { "name": "date", "value": "={{ $today }}" }
+          ]
+        },
+        "options": { "timeout": 10000 }
+      },
+      "id": "fetch-reports",
+      "name": "GET /api/reports",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "const data = $input.item.json;\n\n// suporta { reports: [...] } ou array direto\nconst reports = Array.isArray(data) ? data : (data.reports || data.data || data.bots || []);\nconst summary = data.summary || data;\n\nconst top5 = reports.slice(0, 5);\nconst dateStr = new Date().toLocaleDateString('pt-BR', {\n  timeZone: 'America/Sao_Paulo',\n  weekday: 'long', day: '2-digit', month: '2-digit'\n});\n\nconst lines = top5.length > 0\n  ? top5.map((r, i) => {\n      const name = r.bot_name || r.name || r.specialist || `Bot ${i+1}`;\n      const tasks = r.tasks_done ?? r.tasks ?? r.total ?? 0;\n      const tokens = r.tokens_used ?? r.tokens ?? 0;\n      const status = r.status === 'error' ? '🔴' : '🟢';\n      return `  ${i+1}. ${status} *${name}*: ${tasks} tarefas · ${tokens} tokens`;\n    }).join('\\n')\n  : '  • Sem dados hoje';\n\nconst totalTasks = summary.total_tasks ?? reports.reduce((a, r) => a + (r.tasks_done || r.tasks || 0), 0);\nconst totalErrors = summary.errors ?? reports.filter(r => r.status === 'error').length;\n\nconst message = [\n  `📊 *Relatório Titanio — ${dateStr}*`,\n  '',\n  `✅ Tarefas concluídas: *${totalTasks}*`,\n  `❌ Erros: *${totalErrors}*`,\n  '',\n  '*Top 5 especialistas:*',\n  lines,\n  '',\n  `_${new Date().toLocaleTimeString('pt-BR', { timeZone: 'America/Sao_Paulo' })} · Titanio Dashboard_`\n].join('\\n');\n\nreturn [{ json: { message } }];"
+      },
+      "id": "format-report",
+      "name": "Formatar Top 5",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [680, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:18789/api/message",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [{ "name": "Content-Type", "value": "application/json" }]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"to\": \"120363405462114071@g.us\",\n  \"message\": {{ JSON.stringify($json.message) }}\n}",
+        "options": { "timeout": 15000 }
+      },
+      "id": "send-whatsapp",
+      "name": "POST OpenClaw WhatsApp",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [900, 300]
+    }
+  ],
+  "connections": {
+    "Schedule 9h diário": { "main": [[{ "node": "GET /api/reports", "type": "main", "index": 0 }]] },
+    "GET /api/reports": { "main": [[{ "node": "Formatar Top 5", "type": "main", "index": 0 }]] },
+    "Formatar Top 5": { "main": [[{ "node": "POST OpenClaw WhatsApp", "type": "main", "index": 0 }]] }
+  },
+  "active": true,
+  "settings": { "executionOrder": "v1" },
+  "tags": ["titanio", "relatorio", "daily"],
+  "meta": {
+    "description": "Busca relatório do dashboard às 9h, formata top 5 especialistas e envia para grupo Gospia.",
+    "version": "2.0.0"
+  }
+}

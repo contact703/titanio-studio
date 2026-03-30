@@ -1,0 +1,54 @@
+{
+  "project": "OpenMOSS Tradução de Livros",
+  "start_date": "2026-03-21T00:34:00Z",
+  "test_duration_days": 7,
+  "status": "awaiting_workflow",
+  
+  "guardrails": {
+    "max_daily_cost_usd": null,
+    "max_execution_timeout_minutes": 5,
+    "max_error_rate_percent": 10,
+    "validation_enabled": true,
+    "auto_rollback_enabled": true
+  },
+
+  "metrics": {
+    "total_executions": 0,
+    "successful_executions": 0,
+    "failed_executions": 0,
+    "total_books_processed": 0,
+    "total_tokens_used": 0,
+    "estimated_cost_usd": 0,
+    "avg_execution_time_seconds": 0,
+    "error_rate_percent": 0,
+    "last_execution": null,
+    "next_scheduled_execution": null
+  },
+
+  "errors_log": [],
+
+  "quality_samples": [
+    {
+      "book_id": null,
+      "original_text": null,
+      "translated_text": null,
+      "corrections_applied": null,
+      "manual_review_status": null,
+      "notes": null
+    }
+  ],
+
+  "cost_breakdown": {
+    "translation_tokens": 0,
+    "correction_tokens": 0,
+    "validation_tokens": 0,
+    "total_tokens": 0,
+    "estimated_cost_usd": 0,
+    "cost_per_book_usd": 0
+  },
+
+  "alerts": [],
+
+  "notes": "Aguardando workflow de Zica. Setup completo e pronto.",
+  "updated_at": "2026-03-21T00:34:00Z"
+}

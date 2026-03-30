@@ -1,0 +1,85 @@
+{
+  "lessons": [
+    {
+      "id": 1,
+      "timestamp": "2026-03-23 15:39",
+      "date": "2026-03-23",
+      "time": "15:39",
+      "task": "Dashboard v2 GitHub + fix paths Eduardo",
+      "result": "Sucesso - clonado repo, corrigido hardcoded paths TITA_039, todos servicos UP",
+      "category": "infra",
+      "success": true
+    },
+    {
+      "id": 2,
+      "timestamp": "2026-03-23 16:08",
+      "date": "2026-03-23",
+      "time": "16:08",
+      "task": "Diagnostico completo Dashboard v2",
+      "result": "Sucesso - usuario Helber ativo, 30 especialistas, watchdog, memoria 30 specs",
+      "category": "infra",
+      "success": true
+    },
+    {
+      "id": 3,
+      "timestamp": "2026-03-23 16:19",
+      "date": "2026-03-23",
+      "time": "16:19",
+      "task": "N8n workflows configurados via SQLite",
+      "result": "Sucesso - 5 workflows, 4 ativos, API key salva",
+      "category": "infra",
+      "success": true
+    },
+    {
+      "id": 4,
+      "timestamp": "2026-03-23 16:39",
+      "date": "2026-03-23",
+      "time": "16:39",
+      "task": "Fix nome Zica→Helber: defaults hardcoded em page.tsx, Header.tsx, Sidebar.tsx. localStorage pode cachear user antigo.",
+      "result": "Sucesso",
+      "category": "debug",
+      "success": true
+    },
+    {
+      "id": 5,
+      "timestamp": "2026-03-23 16:39",
+      "date": "2026-03-23",
+      "time": "16:39",
+      "task": "Debug Hunter: fix nome Zica para Helber no frontend",
+      "result": "Sucesso - 4 arquivos corrigidos, rebuild feito",
+      "category": "debug",
+      "success": true
+    },
+    {
+      "id": 6,
+      "timestamp": "2026-03-23 16:46",
+      "date": "2026-03-23",
+      "time": "16:46",
+      "task": "Auditoria completa integração especialistas + memória",
+      "result": "Sucesso - 30 specs integrados, LightRAG respondendo, N8n 4 workflows ativos, MEMORY.md 208 linhas",
+      "category": "audit",
+      "success": true
+    },
+    {
+      "id": 7,
+      "timestamp": "2026-03-23 17:02",
+      "date": "2026-03-23",
+      "time": "17:02",
+      "task": "Backup triplo: local + GitHub + TITA_039",
+      "result": "Sucesso - 23MB no TITA_039, 2 repos pushed, suite principal synced",
+      "category": "backup",
+      "success": true
+    },
+    {
+      "id": 8,
+      "timestamp": "2026-03-23 17:33",
+      "date": "2026-03-23",
+      "time": "17:33",
+      "task": "Sync lições Dashboard: lessons.json + memory.json para 30 especialistas",
+      "result": "Sucesso - 16 lições, 5 especialistas com dados, TITA_039 sincronizado",
+      "category": "sync",
+      "success": true
+    }
+  ],
+  "version": 2
+}

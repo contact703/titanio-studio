@@ -89,5 +89,6 @@
       "successRate": 1,
       "source": "system-knowledge"
     }
-  ]
+  ],
+  "version": 2
 }

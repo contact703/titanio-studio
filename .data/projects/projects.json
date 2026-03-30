@@ -1,0 +1,299 @@
+{
+  "projects": [
+    {
+      "id": "project-1773947325774",
+      "name": "backend",
+      "description": "Control Center híbrido para frota de OpenClaw agents",
+      "ownerId": "contacttitanio",
+      "visibility": "pessoal",
+      "client": "",
+      "bots": [],
+      "members": [
+        "contacttitanio"
+      ],
+      "tags": [],
+      "status": "active",
+      "createdAt": "2026-03-19T19:08:45.774Z",
+      "updatedAt": "2026-03-19T19:08:45.774Z",
+      "stats": {
+        "totalBots": 0,
+        "activeBots": 0,
+        "lastActivity": "2026-03-19T19:08:45.774Z"
+      }
+    },
+    {
+      "id": "project-1773947325775",
+      "name": "marica-site-mirror",
+      "description": "Projeto JavaScript/TypeScript",
+      "ownerId": "contacttitanio",
+      "visibility": "pessoal",
+      "client": "",
+      "bots": [],
+      "members": [
+        "contacttitanio"
+      ],
+      "tags": [],
+      "status": "active",
+      "createdAt": "2026-03-19T19:08:45.775Z",
+      "updatedAt": "2026-03-19T19:08:45.775Z",
+      "stats": {
+        "totalBots": 0,
+        "activeBots": 0,
+        "lastActivity": "2026-03-19T19:08:45.775Z"
+      }
+    },
+    {
+      "id": "project-1773947325776",
+      "name": "frontend",
+      "description": "Projeto JavaScript/TypeScript",
+      "ownerId": "contacttitanio",
+      "visibility": "pessoal",
+      "client": "",
+      "bots": [],
+      "members": [
+        "contacttitanio"
+      ],
+      "tags": [],
+      "status": "active",
+      "createdAt": "2026-03-19T19:08:45.776Z",
+      "updatedAt": "2026-03-19T19:08:45.776Z",
+      "stats": {
+        "totalBots": 0,
+        "activeBots": 0,
+        "lastActivity": "2026-03-19T19:08:45.776Z"
+      }
+    },
+    {
+      "id": "project-1773947325777",
+      "name": "workspace",
+      "description": "Projeto Unknown",
+      "ownerId": "contacttitanio",
+      "visibility": "pessoal",
+      "client": "",
+      "bots": [],
+      "members": [
+        "contacttitanio"
+      ],
+      "tags": [],
+      "status": "active",
+      "createdAt": "2026-03-19T19:08:45.777Z",
+      "updatedAt": "2026-03-19T19:08:45.777Z",
+      "stats": {
+        "totalBots": 0,
+        "activeBots": 0,
+        "lastActivity": "2026-03-19T19:08:45.777Z"
+      }
+    },
+    {
+      "id": "project-1773947325778",
+      "name": "marica-standalone",
+      "description": "Projeto Unknown",
+      "ownerId": "contacttitanio",
+      "visibility": "pessoal",
+      "client": "",
+      "bots": [],
+      "members": [
+        "contacttitanio"
+      ],
+      "tags": [],
+      "status": "active",
+      "createdAt": "2026-03-19T19:08:45.778Z",
+      "updatedAt": "2026-03-19T19:08:45.778Z",
+      "stats": {
+        "totalBots": 0,
+        "activeBots": 0,
+        "lastActivity": "2026-03-19T19:08:45.778Z"
+      }
+    },
+    {
+      "id": "project-1773947325779",
+      "name": "titanio-dashboard",
+      "description": "**Dashboard inteligente para times de desenvolvimento. Multi-usuário, cluster de máquinas e IA integrada.**",
+      "ownerId": "contacttitanio",
+      "visibility": "pessoal",
+      "client": "",
+      "bots": [],
+      "members": [
+        "contacttitanio"
+      ],
+      "tags": [],
+      "status": "active",
+      "createdAt": "2026-03-19T19:08:45.779Z",
+      "updatedAt": "2026-03-19T19:08:45.779Z",
+      "stats": {
+        "totalBots": 0,
+        "activeBots": 0,
+        "lastActivity": "2026-03-19T19:08:45.779Z"
+      }
+    },
+    {
+      "id": "project-1773947325780",
+      "name": "tita-nio-campaign",
+      "description": "![License](https://img.shields.io/badge/license-MIT-green)",
+      "ownerId": "contacttitanio",
+      "visibility": "pessoal",
+      "client": "",
+      "bots": [],
+      "members": [
+        "contacttitanio"
+      ],
+      "tags": [],
+      "status": "active",
+      "createdAt": "2026-03-19T19:08:45.780Z",
+      "updatedAt": "2026-03-19T19:08:45.780Z",
+      "stats": {
+        "totalBots": 0,
+        "activeBots": 0,
+        "lastActivity": "2026-03-19T19:08:45.780Z"
+      }
+    },
+    {
+      "id": "project-1774039621395",
+      "name": "espelho",
+      "description": "Projeto JavaScript/TypeScript",
+      "ownerId": "contacttitanio",
+      "visibility": "pessoal",
+      "client": "",
+      "bots": [],
+      "members": [
+        "contacttitanio"
+      ],
+      "tags": [],
+      "status": "active",
+      "createdAt": "2026-03-20T20:47:01.395Z",
+      "updatedAt": "2026-03-20T20:47:01.395Z",
+      "stats": {
+        "totalBots": 0,
+        "activeBots": 0,
+        "lastActivity": "2026-03-20T20:47:01.395Z"
+      }
+    },
+    {
+      "id": "project-1774039621396",
+      "name": "kitesurf-brasil",
+      "description": "![Version](https://img.shields.io/badge/version-3.0-blue)",
+      "ownerId": "contacttitanio",
+      "visibility": "pessoal",
+      "client": "",
+      "bots": [],
+      "members": [
+        "contacttitanio"
+      ],
+      "tags": [],
+      "status": "active",
+      "createdAt": "2026-03-20T20:47:01.396Z",
+      "updatedAt": "2026-03-20T20:47:01.396Z",
+      "stats": {
+        "totalBots": 0,
+        "activeBots": 0,
+        "lastActivity": "2026-03-20T20:47:01.396Z"
+      }
+    },
+    {
+      "id": "project-1774039621397",
+      "name": "rosario-temp",
+      "description": "Projeto Unknown",
+      "ownerId": "contacttitanio",
+      "visibility": "pessoal",
+      "client": "",
+      "bots": [],
+      "members": [
+        "contacttitanio"
+      ],
+      "tags": [],
+      "status": "active",
+      "createdAt": "2026-03-20T20:47:01.397Z",
+      "updatedAt": "2026-03-20T20:47:01.397Z",
+      "stats": {
+        "totalBots": 0,
+        "activeBots": 0,
+        "lastActivity": "2026-03-20T20:47:01.397Z"
+      }
+    },
+    {
+      "id": "project-1774039621398",
+      "name": "squad",
+      "description": "Cada especialista tem sua pasta, acumula conhecimento, aprende todo dia e tem backup automático no GitHub.",
+      "ownerId": "contacttitanio",
+      "visibility": "pessoal",
+      "client": "",
+      "bots": [],
+      "members": [
+        "contacttitanio"
+      ],
+      "tags": [],
+      "status": "active",
+      "createdAt": "2026-03-20T20:47:01.398Z",
+      "updatedAt": "2026-03-20T20:47:01.398Z",
+      "stats": {
+        "totalBots": 0,
+        "activeBots": 0,
+        "lastActivity": "2026-03-20T20:47:01.398Z"
+      }
+    },
+    {
+      "id": "project-1774052812653",
+      "name": "code",
+      "description": "Titanio Command Center - Dashboard Desktop para gerenciamento de bots e frota",
+      "ownerId": "contacttitanio",
+      "visibility": "pessoal",
+      "client": "",
+      "bots": [],
+      "members": [
+        "contacttitanio"
+      ],
+      "tags": [],
+      "status": "active",
+      "createdAt": "2026-03-21T00:26:52.653Z",
+      "updatedAt": "2026-03-21T00:26:52.653Z",
+      "stats": {
+        "totalBots": 0,
+        "activeBots": 0,
+        "lastActivity": "2026-03-21T00:26:52.653Z"
+      }
+    },
+    {
+      "id": "project-1774052812655",
+      "name": "politico-chat-app",
+      "description": "App de campanha com chat do candidato e rede social de militantes.",
+      "ownerId": "contacttitanio",
+      "visibility": "pessoal",
+      "client": "",
+      "bots": [],
+      "members": [
+        "contacttitanio"
+      ],
+      "tags": [],
+      "status": "active",
+      "createdAt": "2026-03-21T00:26:52.655Z",
+      "updatedAt": "2026-03-21T00:26:52.655Z",
+      "stats": {
+        "totalBots": 0,
+        "activeBots": 0,
+        "lastActivity": "2026-03-21T00:26:52.655Z"
+      }
+    },
+    {
+      "id": "project-1774052812656",
+      "name": "curl-site",
+      "description": "Projeto Unknown",
+      "ownerId": "contacttitanio",
+      "visibility": "pessoal",
+      "client": "",
+      "bots": [],
+      "members": [
+        "contacttitanio"
+      ],
+      "tags": [],
+      "status": "active",
+      "createdAt": "2026-03-21T00:26:52.656Z",
+      "updatedAt": "2026-03-21T00:26:52.656Z",
+      "stats": {
+        "totalBots": 0,
+        "activeBots": 0,
+        "lastActivity": "2026-03-21T00:26:52.656Z"
+      }
+    }
+  ],
+  "updatedAt": "2026-03-21T00:26:52.656Z"
+}

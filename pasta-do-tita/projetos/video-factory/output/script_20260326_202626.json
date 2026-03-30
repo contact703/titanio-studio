@@ -1,0 +1,35 @@
+{
+  "title": "3 Dicas de Produtividade que Todo Empreendedor Precisa Saber",
+  "scenes": [
+    {
+      "number": 1,
+      "duration": 5,
+      "narration": "Você está perdendo tempo precioso no seu negócio?",
+      "visual_description": "Empresário estressado olhando para múltiplas telas de computador com expressão de sobrecarga",
+      "text_overlay": "PERDENDO TEMPO?"
+    },
+    {
+      "number": 2,
+      "duration": 8,
+      "narration": "Primeira dica: Use a regra dos 2 minutos. Se uma tarefa leva menos de 2 minutos, faça agora!",
+      "visual_description": "Cronômetro mostrando 2 minutos com pessoa executando tarefas rápidas como responder email",
+      "text_overlay": "REGRA DOS 2 MINUTOS"
+    },
+    {
+      "number": 3,
+      "duration": 8,
+      "narration": "Segunda dica: Bloqueie 2 horas pela manhã só para tarefas importantes. Sem distrações!",
+      "visual_description": "Agenda com bloco de 2 horas destacado, pessoa focada trabalhando com celular desligado",
+      "text_overlay": "2H DE FOCO TOTAL"
+    },
+    {
+      "number": 4,
+      "duration": 9,
+      "narration": "Terceira dica: Delegue ou elimine tarefas que não geram resultado. Seu tempo vale ouro!",
+      "visual_description": "Pessoa passando tarefas para equipe, com gráfico mostrando aumento de resultados",
+      "text_overlay": "DELEGUE OU ELIMINE"
+    }
+  ],
+  "total_duration": 30,
+  "music_mood": "energética e motivacional, ritmo acelerado"
+}

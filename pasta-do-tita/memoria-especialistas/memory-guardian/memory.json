@@ -1,0 +1,176 @@
+{
+  "sessions": [],
+  "stats": {
+    "sessionsCount": 0,
+    "tasksCompleted": 0,
+    "lessonsLearned": 13,
+    "tokensUsed": 0,
+    "avgTaskDurationMs": 0
+  },
+  "lastActive": "2026-03-27T22:45:00.000Z",
+  "knowledge": {
+    "arquitetura_memoria": "4 níveis: (1) sessão (volátil, morre ao reiniciar), (2) longa prazo (MEMORY.md — curated), (3) diária (memory/YYYY-MM-DD.md — raw logs), (4) crítica (LICAO-CRITICA-*.md — erros que NUNCA podem repetir)",
+    "contexto_ativo": {
+      "arquivo": "pasta-do-tita/contexto-ativo.md",
+      "funcao": "Estado atual dos projetos, credenciais, tarefas pendentes",
+      "flush": "Automático a cada 6h (00:03, 06:03, 12:03, 18:03 BRT)",
+      "regra": "SEMPRE ler ANTES de responder sobre 'o que fizemos' ou status de projetos"
+    },
+    "cofre": {
+      "diretorio": "pasta-do-tita/cofre/",
+      "arquivos": [
+        "CREDENCIAIS-MASTER.md — GitHub tokens, Anthropic keys, OpenAI keys, OpenRouter keys",
+        "credentials.json — Google OAuth",
+        "polymarket-api-keys.json — API keys Polymarket",
+        "polymarket-wallet.json — Wallet data",
+        "INSTAGRAM-TITA.md — Credenciais Instagram",
+        "age-key.txt — Chave de criptografia age",
+        "insta-credentials.json.age — Sessão Instagram (encrypted)",
+        "tita-insta-session.json — Sessão Instagram"
+      ],
+      "regra": "NUNCA dizer 'não tenho acesso' sem verificar o cofre primeiro"
+    },
+    "workflows_memoria": {
+      "memory_watchdog": {
+        "script": "/tmp/start-tita-memory-watchdog.sh",
+        "pid_check": "pgrep -f memory-watchdog.sh",
+        "pid_atual": 24022,
+        "consolidacao": "23:59 BRT automático",
+        "teste_semanal": "Domingo 09:00 automático",
+        "log": "/tmp/tita-memory-watchdog.log"
+      },
+      "flush_automatico": {
+        "frequencia": "A cada 6h (00:03, 06:03, 12:03, 18:03 BRT)",
+        "output": "pasta-do-tita/memoria-persistente/YYYY-MM-DD_HHh.md",
+        "funcao": "Snapshot do contexto-ativo.md"
+      },
+      "group_sentinel": {
+        "nome": "tita-group-sentinel",
+        "pid_atual": 74426,
+        "launch_agent": "com.tita.group-sentinel",
+        "frequencia": "A cada 30min",
+        "output": "pasta-do-tita/group-context-snapshot.md",
+        "modelo": "anthropic/claude-3-haiku (OpenRouter, barato)",
+        "funcao": "Garante que Tita nunca aparece zerada em grupos"
+      },
+      "git_sync": {
+        "frequencia": "A cada 30min via N8n",
+        "repo": "contact703/tita-memory (GitHub)",
+        "shared_files": [
+          "/Volumes/TITA_039/shared-specialists.json (196k lições)",
+          "/Volumes/TITA_039/specialist-definitions.json"
+        ]
+      }
+    },
+    "comando_enviar_md": "openclaw message send --channel whatsapp --target 'GRUPO_ID' --message 'desc' --media /caminho/arquivo.md",
+    "regras_eduardo": [
+      "1. Opus 4-6 é o modelo padrão. SÓ trocar se Eduardo pedir explicitamente.",
+      "2. NUNCA mentir qual modelo está rodando. Sempre verificar session_status.",
+      "3. Resolver sozinha, não pedir para Eduardo fazer coisas manuais.",
+      "4. Usar browsers/scrapers/Tandem — não pedir para Eduardo colar nada.",
+      "5. NUNCA gastar dinheiro sem autorização explícita.",
+      "6. NUNCA usar cartão de crédito/débito.",
+      "7. Segurança dos dados é prioridade.",
+      "8. Só ferramentas open source/free para uso comercial.",
+      "9. Spawnar subagentes para pesquisar — não fazer tudo sequencial."
+    ],
+    "erros_memoria_27_03": {
+      "modelo_errado": "Disse 'estou de Opus' quando era Sonnet 4-5 (fallback silencioso por erro 529). Eduardo ficou MUITO irritado.",
+      "envio_md_esquecido": "Disse 'não consigo enviar .md' quando método já estava documentado desde 23/03. Comando: openclaw message send --channel whatsapp --target GRUPO --message desc --media /arquivo.md",
+      "paperclip_esquecido": "Esqueceu projeto Paperclip que tinha configurado no dia anterior (localhost:3001, 7 agentes, 3 goals)",
+      "wallet_tiago_esquecido": "Esqueceu wallet do Tiago (0xf84796bEa736AE03D4E96f78dc7a2894241f5FB0) que já estava no cofre",
+      "sync_macs_esquecido": "Esqueceu que Helber/Tiago acessam TITA_039 via rede local (SMB/AFP)",
+      "browsers_esquecido": "Esqueceu configuração de Tandem, Playwright, TITA-SCRAPER que já estavam operacionais",
+      "contexto_ativo_nao_lido": "Não leu contexto-ativo.md antes de responder sobre 'o que fizemos', resultando em resposta incompleta"
+    },
+    "especialistas_memoria": {
+      "diretorio": "pasta-do-tita/memoria-especialistas/[id]/memory.json",
+      "estrutura": "sessions, stats (tasksCompleted, lessonsLearned), knowledge, recentTasks, activeContext",
+      "total_especialistas": 39,
+      "shared_json": "/Volumes/TITA_039/shared-specialists.json",
+      "problemas_conhecidos": "29 especialistas sem tasks, lições duplicadas em alguns"
+    },
+    "equipe": {
+      "eduardo": "192.168.18.174 — Backend :4444, Frontend :3000 — ATIVO",
+      "helber": "192.168.18.170 — Backend :4445, Frontend :3001 — Node precisa reconectar",
+      "tiago": "192.168.18.188 — Backend :4446, Frontend :3002 — Setup pendente",
+      "gateway_central": "192.168.18.174:18789"
+    },
+    "backups": {
+      "projetos": "/Volumes/TITA_039/backup-projetos/",
+      "apps": "/Volumes/TITA_039/Titanio-Backup-2026/apps/",
+      "hd_queimado": "Tita_DEV_02 — HD queimou. Tudo migrado para TITA_039/MAC_MINI_03"
+    },
+    "projetos_gaps": {
+      "gold_digger": "Status desconhecido — 44 propostas em 210 ciclos, mas conversão não documentada",
+      "kidshq": "Não aparece como projeto ativo, tem repo no GitHub",
+      "gospia_ios": "Build #3 pode estar travada, Code Ninja rodando 12+ horas",
+      "design_stitch": "Implementação do design Stitch na Dashboard v2 não confirmada"
+    },
+    "fix_loop_infinito_27_03": {
+      "problema": "Money Maker tinha 428.669 lições (99.99% duplicatas). Content Writer 102.438. Cada task auto-gerava lição idêntica.",
+      "causa_raiz": "SpecialistMemoryService.addLesson() não verificava duplicatas. Cada assignTask() chamava addLesson() sem dedup.",
+      "fix_aplicado": "Anti-loop no addLesson: (1) dedup por primeiros 80 chars da lição, (2) max 500 lições por especialista, (3) JSON compacto sem indent",
+      "resultado": "money-maker: 428.669 → 61 lições. content-writer: 102.438 → 46. debug-hunter: 41.936 → 57. code-ninja: 32.272 → 63.",
+      "data": "2026-03-27",
+      "arquivo": "services/SpecialistMemoryService.ts linha ~190"
+    },
+    "regra_verificacao_memoria": {
+      "quando": "Cada heartbeat ou a cada 6h (flush)",
+      "o_que_verificar": [
+        "Lições duplicadas acumulando (>500 = problema)",
+        "Tasks repetidas no mesmo especialista (mesmo texto = loop)",
+        "shared-specialists.json íntegro (JSON válido)",
+        "memory-watchdog rodando (pgrep -f memory-watchdog.sh)",
+        "group-sentinel rodando (pgrep -f group-sentinel)",
+        "Git sync funcionando (último push < 6h)",
+        "MEMORY.md crescendo (não estático)",
+        "contexto-ativo.md atualizado (< 12h)"
+      ],
+      "como_corrigir": {
+        "loop_de_licoes": "python3 dedup por lesson[:80] no lessons.json",
+        "watchdog_morto": "bash /tmp/start-tita-memory-watchdog.sh",
+        "sentinel_morto": "launchctl load com.tita.group-sentinel.plist",
+        "shared_corrompido": "Reconstruir do disco: ler memoria-especialistas/*/memory.json"
+      }
+    },
+    "smart_limit_system": {
+      "como_funciona": "Quando especialista chega no limite de lições (default 500): (1) verifica duplicatas automaticamente, (2) se achou duplicatas → limpa e mantém limite, (3) se todas são únicas → dobra o limite (500→1000→2000...)",
+      "campo_dinamico": "_dynamicLimit no lessons.json — guarda o limite atual de cada especialista",
+      "log": "Console mostra 🧹 Auto-dedup quando limpa OU 📈 quando dobra limite",
+      "implementado_em": "SpecialistMemoryService.ts addLesson()",
+      "data": "2026-03-27",
+      "regra_zica": "Se é real, dobra. Se é duplicado, limpa. Fica no contexto do especialista."
+    }
+  },
+  "recentTasks": [
+    {
+      "task": "Criação do especialista memory-guardian",
+      "date": "2026-03-27T22:45:00.000Z",
+      "status": "completed",
+      "details": "Guardião da memória criado com knowledge completo sobre arquitetura, workflows, cofre, erros e regras"
+    }
+  ],
+  "activeContext": {
+    "problemas_atuais": [
+      "29 especialistas sem tasks registradas",
+      "Lições duplicadas em alguns especialistas",
+      "Gold Digger: status de conversão desconhecido",
+      "HD Tita_DEV_02 queimado — migração para TITA_039",
+      "GospIA iOS: build possivelmente travada",
+      "Tiago: falta private key wallet + App Password Gmail"
+    ],
+    "processos_ativos": [
+      "memory-watchdog (PID 24022) — consolidação 23:59 BRT",
+      "flush automático 6h — próximo em contexto-ativo.md",
+      "group-sentinel (PID 74426) — snapshot 30min",
+      "git sync N8n 30min → contact703/tita-memory"
+    ],
+    "metricas_memoria": {
+      "arquivos_memoria_diaria": "71+ arquivos em memory/",
+      "flushes_persistentes": "10 arquivos em memoria-persistente/",
+      "especialistas": 39,
+      "shared_specialists_licoes": "196k+"
+    }
+  }
+}

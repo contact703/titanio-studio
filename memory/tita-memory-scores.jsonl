@@ -1,0 +1,18 @@
+{"timestamp": "2026-03-28T10:11:08.395034", "message_preview": "manda o md aqui (1a vez)", "used_memory": false, "correct": false, "score": -2, "notes": "Colou texto em vez de mandar arquivo"}
+{"timestamp": "2026-03-28T10:11:08.413211", "message_preview": "manda o md aqui (2a vez)", "used_memory": false, "correct": false, "score": -2, "notes": "Colou texto de novo mesmo com lição escrita"}
+{"timestamp": "2026-03-28T10:11:08.431094", "message_preview": "manda o arquivo aqui (3a vez)", "used_memory": true, "correct": true, "score": 2, "notes": "Consultou memória e usou --media"}
+{"timestamp": "2026-03-28T10:11:08.449845", "message_preview": "relatório polymarket", "used_memory": true, "correct": true, "score": 2, "notes": "Buscou dados corretos"}
+{"timestamp": "2026-03-28T10:11:08.468091", "message_preview": "pesquisa problema memória", "used_memory": true, "correct": true, "score": 2, "notes": "Pesquisou e montou relatório"}
+{"timestamp": "2026-03-28T10:19:02.168319", "message_preview": "upgrade AAA implementação completa", "used_memory": true, "correct": true, "score": 2, "notes": "Implementou tudo + mandou arquivo corretamente"}
+{"timestamp": "2026-03-28T14:12:21.693842", "message_preview": "Dashboard endpoints+pipelines+lightning implementados de verdade", "used_memory": true, "correct": true, "score": 2, "notes": "12/12 testes, 7 endpoints novos, 12 pipelines"}
+{"timestamp": "2026-03-29T13:16:43.115143", "message_preview": "sessão de grupo - Zica pediu print mídia + MD Helber/Tiago + memória", "used_memory": true, "correct": true, "score": 2, "notes": ""}
+{"timestamp": "2026-03-29T13:25:07.661022", "message_preview": "auto-test: 0/10 (0%)", "used_memory": false, "correct": false, "score": -2, "notes": ""}
+{"timestamp": "2026-03-29T13:27:04.155930", "message_preview": "auto-test: 0/10 (0%)", "used_memory": false, "correct": false, "score": -2, "notes": ""}
+{"timestamp": "2026-03-29T13:28:16.271321", "message_preview": "auto-test: 0/10 (0%)", "used_memory": false, "correct": false, "score": -2, "notes": ""}
+{"timestamp": "2026-03-29T13:28:38.545129", "message_preview": "auto-test: 10/10 (100%)", "used_memory": true, "correct": true, "score": 2, "notes": ""}
+{"timestamp": "2026-03-29T13:29:51.679106", "message_preview": "auto-test: 10/10 (100%)", "used_memory": true, "correct": true, "score": 2, "notes": ""}
+{"timestamp": "2026-03-29T13:29:53.143602", "message_preview": "auto-test: 10/10 (100%)", "used_memory": true, "correct": true, "score": 2, "notes": ""}
+{"timestamp": "2026-03-29T17:24:37.816562", "message_preview": "auto-test: 10/10 (100%)", "used_memory": true, "correct": true, "score": 2, "notes": ""}
+{"timestamp": "2026-03-29T17:26:23.110505", "message_preview": "auto-test: 10/10 (100%)", "used_memory": true, "correct": true, "score": 2, "notes": ""}
+{"timestamp": "2026-03-29T19:13:42.731873", "message_preview": "auto-test: 10/10 (100%)", "used_memory": true, "correct": true, "score": 2, "notes": ""}
+{"timestamp": "2026-03-29T21:28:24.404570", "message_preview": "auto-test: 10/10 (100%)", "used_memory": true, "correct": true, "score": 2, "notes": ""}

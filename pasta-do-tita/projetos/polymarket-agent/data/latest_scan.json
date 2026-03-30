@@ -1,0 +1,57 @@
+{
+  "timestamp": "2026-03-29 21:16",
+  "markets_total": 30,
+  "opportunities": 2,
+  "analyses": [
+    {
+      "question": "OpenAI receives federal backstop for infrastructure before July?",
+      "yes": 0.295,
+      "no": 0.705,
+      "volume": 99731.03235899977,
+      "analysis": {
+        "confianca": 75,
+        "direcao": "NO",
+        "razao": "Apoio federal para infraestrutura de IA requer processo legislativo longo, improvável em 6 meses com outras prioridades orçamentárias",
+        "risco": "medio"
+      },
+      "timestamp": "2026-03-29 21:16",
+      "condition_id": "0x388459f1cfd0d310154e13f16f49d31fd301e5e3502072c8b09d3a0697b2823f"
+    },
+    {
+      "question": "Will Mikael Ishak score the most goals in the 2025-26 UEFA Europa Conference League?",
+      "yes": 0.68,
+      "no": 0.32,
+      "volume": 9951.5109,
+      "analysis": {
+        "confianca": 25,
+        "direcao": "NO",
+        "razao": "Mercado pequeno, jogador pouco conhecido, competição imprevisível com muitas variáveis",
+        "risco": "alto"
+      },
+      "timestamp": "2026-03-29 21:16",
+      "condition_id": "0x71116149166610ae90c5bbda1b3fed3c202e31f3d31599e39866466c7b985114"
+    }
+  ],
+  "top_events": [
+    {
+      "title": "Democratic Presidential Nominee 2028",
+      "volume": 935745736.0856612
+    },
+    {
+      "title": "Republican Presidential Nominee 2028",
+      "volume": 490222593.2767397
+    },
+    {
+      "title": "Presidential Election Winner 2028",
+      "volume": 470820013.8012099
+    },
+    {
+      "title": "2026 FIFA World Cup Winner ",
+      "volume": 415783222.1101423
+    },
+    {
+      "title": "English Premier League Winner ",
+      "volume": 312471504.7457489
+    }
+  ]
+}

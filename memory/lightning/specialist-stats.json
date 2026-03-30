@@ -1,0 +1,112 @@
+{
+  "code-ninja": {
+    "total_tasks": 5,
+    "successes": 5,
+    "failures": 0,
+    "total_score": 42,
+    "avg_score": 8.4,
+    "streak": 5,
+    "best_streak": 5,
+    "last_task": "2026-03-28T14:51:25.427424",
+    "grade": "AA ⭐"
+  },
+  "debug-hunter": {
+    "total_tasks": 5,
+    "successes": 5,
+    "failures": 0,
+    "total_score": 49,
+    "avg_score": 9.8,
+    "streak": 5,
+    "best_streak": 5,
+    "last_task": "2026-03-28T17:04:04.940370",
+    "grade": "AAA 🏆"
+  },
+  "content-writer": {
+    "total_tasks": 2,
+    "successes": 2,
+    "failures": 0,
+    "total_score": 15,
+    "avg_score": 7.5,
+    "streak": 2,
+    "best_streak": 2,
+    "last_task": "2026-03-28T17:11:39.128Z",
+    "grade": "A 🟢"
+  },
+  "trader": {
+    "total_tasks": 1,
+    "successes": 0,
+    "failures": 1,
+    "total_score": 5,
+    "avg_score": 5,
+    "streak": 0,
+    "best_streak": 0,
+    "last_task": "2026-03-28T11:55:36.734339",
+    "grade": "B 🟡"
+  },
+  "memory-bot": {
+    "total_tasks": 2,
+    "successes": 2,
+    "failures": 0,
+    "total_score": 18,
+    "avg_score": 9,
+    "streak": 2,
+    "best_streak": 2,
+    "last_task": "2026-03-28T17:11:39.232Z",
+    "grade": "AAA 🏆"
+  },
+  "instagramer": {
+    "total_tasks": 2,
+    "successes": 2,
+    "failures": 0,
+    "total_score": 17,
+    "avg_score": 8.5,
+    "streak": 2,
+    "best_streak": 2,
+    "last_task": "2026-03-28T17:04:04.908111",
+    "grade": "AA ⭐"
+  },
+  "security-guardian": {
+    "total_tasks": 1,
+    "successes": 1,
+    "failures": 0,
+    "total_score": 7,
+    "avg_score": 7,
+    "streak": 1,
+    "best_streak": 1,
+    "last_task": "2026-03-28T11:55:36.789165",
+    "grade": "A 🟢"
+  },
+  "automation-bot": {
+    "total_tasks": 1,
+    "successes": 0,
+    "failures": 1,
+    "total_score": 6,
+    "avg_score": 6,
+    "streak": 0,
+    "best_streak": 0,
+    "last_task": "2026-03-28T11:55:36.806879",
+    "grade": "B 🟡"
+  },
+  "ios-specialist": {
+    "total_tasks": 1,
+    "successes": 1,
+    "failures": 0,
+    "total_score": 8,
+    "avg_score": 8,
+    "streak": 1,
+    "best_streak": 1,
+    "last_task": "2026-03-28T11:55:36.824874",
+    "grade": "AA ⭐"
+  },
+  "design-wizard": {
+    "total_tasks": 2,
+    "successes": 2,
+    "failures": 0,
+    "total_score": 18,
+    "avg_score": 9.0,
+    "streak": 2,
+    "best_streak": 2,
+    "last_task": "2026-03-28T16:10:51.071079",
+    "grade": "AAA 🏆"
+  }
+}

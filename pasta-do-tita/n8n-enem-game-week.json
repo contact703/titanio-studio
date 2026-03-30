@@ -1,0 +1,367 @@
+{
+  "name": "🎮 ENEM Game — Week-Long Parallel Development",
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        50,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "manual",
+        "dayOfWeek": [],
+        "hour": 0,
+        "minute": 0,
+        "second": 0
+      },
+      "name": "Trigger — Week Start",
+      "type": "n8n-nodes-base.cronTrigger",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://localhost:11434/api/generate",
+        "authentication": "none",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "model",
+              "value": "qwen2.5"
+            },
+            {
+              "name": "prompt",
+              "value": "Research ENEM exam topics: math, physics, chemistry, biology, history. Create 50 quiz questions based on recent exam patterns. Format: JSON with question, options, correct answer, explanation."
+            },
+            {
+              "name": "stream",
+              "value": false
+            }
+          ]
+        }
+      },
+      "name": "Bot 1 — ENEM Researcher",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        500,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://localhost:11434/api/generate",
+        "authentication": "none",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "model",
+              "value": "qwen2.5"
+            },
+            {
+              "name": "prompt",
+              "value": "Research classic RPG mechanics and pixel art games. Create game design document with: plot outline, 5 main characters with backstories, 3 quest chains, game progression system, UI mockup descriptions. Format as detailed JSON."
+            },
+            {
+              "name": "stream",
+              "value": false
+            }
+          ]
+        }
+      },
+      "name": "Bot 2 — RPG/Game Designer",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        500,
+        250
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://localhost:11434/api/generate",
+        "authentication": "none",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "model",
+              "value": "qwen2.5"
+            },
+            {
+              "name": "prompt",
+              "value": "Create pixel art game specifications: 16x16 sprite sheet designs for 5 characters, isometric tile set (32x32) for environments, UI elements in retro style, color palette (8-bit friendly). Detailed descriptions of visual style, animations needed, and asset specifications. Format: JSON with detailed descriptions."
+            },
+            {
+              "name": "stream",
+              "value": false
+            }
+          ]
+        }
+      },
+      "name": "Bot 3 — Pixel Art Designer",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        500,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://localhost:11434/api/generate",
+        "authentication": "none",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "model",
+              "value": "qwen2.5"
+            },
+            {
+              "name": "prompt",
+              "value": "Generate complete game engine code structure: React components (GameCanvas, HUD, DialogueBox, InventorySystem), game loop logic, state management, collision detection. Create sample implementations for 2 game scenes. Include TypeScript types and comments. Output complete, runnable code in JSON format."
+            },
+            {
+              "name": "stream",
+              "value": false
+            }
+          ]
+        }
+      },
+      "name": "Bot 4 — Developer/Coder",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        500,
+        550
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://localhost:11434/api/generate",
+        "authentication": "none",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "model",
+              "value": "qwen2.5"
+            },
+            {
+              "name": "prompt",
+              "value": "QA Testing specifications: Create 40 test cases covering gameplay mechanics, ENEM quiz accuracy, pixel art rendering, UI responsiveness, progression system bugs. Include edge cases, performance tests, cross-browser checks. Format: JSON with test ID, description, expected result, priority."
+            },
+            {
+              "name": "stream",
+              "value": false
+            }
+          ]
+        }
+      },
+      "name": "Bot 5 — QA Tester",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        500,
+        700
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "convert",
+        "fromFormat": "json",
+        "toFormat": "table"
+      },
+      "name": "Consolidate Results",
+      "type": "n8n-nodes-base.spreadsheetParser",
+      "typeVersion": 1,
+      "position": [
+        800,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://localhost:11434/api/generate",
+        "authentication": "none",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "model",
+              "value": "qwen2.5"
+            },
+            {
+              "name": "prompt",
+              "value": "Integrate results from ENEM research, game design, pixel art specs, developer code, and QA tests. Create final game summary: complete game structure, all ENEM questions integrated, full codebase outline, art specifications, testing report. Output: comprehensive JSON with all integrated deliverables."
+            },
+            {
+              "name": "stream",
+              "value": false
+            }
+          ]
+        }
+      },
+      "name": "Integration Bot",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1050,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "options": {}
+      },
+      "name": "Save to File",
+      "type": "n8n-nodes-base.writeBinaryFile",
+      "typeVersion": 1,
+      "position": [
+        1350,
+        400
+      ]
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Trigger — Week Start",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Trigger — Week Start": {
+      "main": [
+        [
+          {
+            "node": "Bot 1 — ENEM Researcher",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Bot 2 — RPG/Game Designer",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Bot 3 — Pixel Art Designer",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Bot 4 — Developer/Coder",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Bot 5 — QA Tester",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Bot 1 — ENEM Researcher": {
+      "main": [
+        [
+          {
+            "node": "Consolidate Results",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Bot 2 — RPG/Game Designer": {
+      "main": [
+        [
+          {
+            "node": "Consolidate Results",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Bot 3 — Pixel Art Designer": {
+      "main": [
+        [
+          {
+            "node": "Consolidate Results",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Bot 4 — Developer/Coder": {
+      "main": [
+        [
+          {
+            "node": "Consolidate Results",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Bot 5 — QA Tester": {
+      "main": [
+        [
+          {
+            "node": "Consolidate Results",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Consolidate Results": {
+      "main": [
+        [
+          {
+            "node": "Integration Bot",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Integration Bot": {
+      "main": [
+        [
+          {
+            "node": "Save to File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

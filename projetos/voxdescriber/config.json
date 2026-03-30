@@ -1,0 +1,25 @@
+{
+  "tts": {
+    "engine": "auto",
+    "voice": "Luciana",
+    "speed": 155,
+    "piper_model": "pt_BR-faber-medium"
+  },
+  "audio": {
+    "narration_volume": 1.0,
+    "original_volume_during_ad": 0.25,
+    "min_silence_duration": 0.8,
+    "silence_threshold_db": -35
+  },
+  "vision": {
+    "ollama_url": "http://localhost:11434",
+    "model": "moondream",
+    "fallback_model": "llava",
+    "frames_per_second": 1
+  },
+  "output": {
+    "format": "mp4",
+    "video_codec": "libx264",
+    "audio_codec": "aac"
+  }
+}

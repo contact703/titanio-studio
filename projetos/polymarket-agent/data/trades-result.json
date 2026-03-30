@@ -1,0 +1,23 @@
+[
+  {
+    "mercado": "OKC Thunder - 2026 NBA Champion",
+    "posicao": "Yes",
+    "valor": "$12",
+    "status": "executado",
+    "erro": null
+  },
+  {
+    "mercado": "Jesus Christ Returns Before GTA VI",
+    "posicao": "No",
+    "valor": "$15",
+    "status": "executado",
+    "erro": null
+  },
+  {
+    "mercado": "Colorado Avalanche - 2026 Stanley Cup",
+    "posicao": "No",
+    "valor": "$8",
+    "status": "executado",
+    "erro": null
+  }
+]

@@ -1,0 +1,34 @@
+{
+  "status": "completed",
+  "steps": [
+    {
+      "step": "script",
+      "status": "ok",
+      "scenes": 4,
+      "title": "3 Dicas de Produtividade que Todo Empreendedor Precisa Saber"
+    },
+    {
+      "step": "illustrations",
+      "status": "ok",
+      "count": 4
+    },
+    {
+      "step": "narration",
+      "status": "ok",
+      "count": 4
+    },
+    {
+      "step": "render",
+      "status": "ok",
+      "path": "/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/pasta-do-tita/projetos/video-factory/src/../output/video_20260326_202626.mp4"
+    }
+  ],
+  "timestamp": "20260326_202626",
+  "video_path": "/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/pasta-do-tita/projetos/video-factory/src/../output/video_20260326_202626.mp4",
+  "title": "3 Dicas de Produtividade que Todo Empreendedor Precisa Saber",
+  "scenes_count": 4,
+  "duration_seconds": 30,
+  "elapsed_seconds": 49.4,
+  "format": "vertical",
+  "resolution": "1080x1920"
+}

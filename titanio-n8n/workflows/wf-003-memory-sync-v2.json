@@ -1,0 +1,90 @@
+{
+  "name": "WF-003 · Memory Sync (Execute Command)",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [{ "field": "cronExpression", "expression": "0 */6 * * *" }]
+        }
+      },
+      "id": "cron-trigger",
+      "name": "Schedule 6h",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "command": "bash /workspace/sync-memory.sh 2>&1"
+      },
+      "id": "exec-sync",
+      "name": "Execute sync-memory.sh",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "const output = $input.item.json.stdout || '';\nconst stderr = $input.item.json.stderr || '';\nconst exitCode = $input.item.json.exitCode ?? 0;\n\nconst hasChanges = output.includes('Already up to date') === false\n  || output.includes('Updating')\n  || output.includes('Fast-forward');\n\nconst changed = hasChanges && exitCode === 0;\n\nlet summary = output.trim().split('\\n').slice(0, 5).join('\\n');\nif (!summary) summary = 'Sem output';\n\nreturn [{ json: { changed, exitCode, summary, stderr: stderr.slice(0, 200) } }];"
+      },
+      "id": "parse-output",
+      "name": "Parse Output",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [680, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "conditions": [
+            {
+              "leftValue": "={{ $json.changed }}",
+              "rightValue": true,
+              "operator": { "type": "boolean", "operation": "true" }
+            }
+          ]
+        }
+      },
+      "id": "if-changed",
+      "name": "Tem mudanças?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [900, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:18789/api/message",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [{ "name": "Content-Type", "value": "application/json" }]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"to\": \"120363405462114071@g.us\",\n  \"message\": \"🧠 *Memória da Tita atualizada!*\\n\\n{{ $json.summary }}\"\n}",
+        "options": { "timeout": 15000 }
+      },
+      "id": "notify-whatsapp",
+      "name": "Notify WhatsApp Gospia",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [1120, 180]
+    }
+  ],
+  "connections": {
+    "Schedule 6h": { "main": [[{ "node": "Execute sync-memory.sh", "type": "main", "index": 0 }]] },
+    "Execute sync-memory.sh": { "main": [[{ "node": "Parse Output", "type": "main", "index": 0 }]] },
+    "Parse Output": { "main": [[{ "node": "Tem mudanças?", "type": "main", "index": 0 }]] },
+    "Tem mudanças?": {
+      "main": [
+        [{ "node": "Notify WhatsApp Gospia", "type": "main", "index": 0 }],
+        []
+      ]
+    }
+  },
+  "active": true,
+  "settings": { "executionOrder": "v1" },
+  "tags": ["titanio", "memoria", "sync"],
+  "meta": { "version": "2.0.0", "replaces": "wf-003-sync-memoria-github.json" }
+}

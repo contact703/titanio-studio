@@ -1,0 +1,89 @@
+{
+  "titulo": "FINEP Mulheres Inovadoras — Chamada Pública 2024",
+  "organizacao": "FINEP — Financiadora de Estudos e Projetos",
+  "valor_max": 500000.0,
+  "prazo_inscricao": "30/06/2025",
+  "elegibilidade": [
+    "Empresas com liderança feminina (>50% do corpo gerencial ou CEO mulher)",
+    "Empresa brasileira com CNPJ ativo",
+    "Micro, Pequena ou Média Empresa",
+    "Atividade de inovação tecnológica"
+  ],
+  "despesas_elegiveis": [
+    "Recursos humanos (pesquisadores, técnicos)",
+    "Equipamentos e softwares",
+    "Serviços de terceiros (consultoria técnica)",
+    "Viagens e diárias (nacionais)",
+    "Material de consumo"
+  ],
+  "documentos_obrigatorios": [
+    "CNPJ ativo e regular",
+    "Balanço patrimonial dos últimos 2 anos",
+    "Declaração de empresa de inovação",
+    "Currículo do responsável técnico (Lattes ou similar)",
+    "Plano de negócios resumido",
+    "Certidões negativas de débito (federal, estadual, municipal)",
+    "Declaração de composição societária"
+  ],
+  "criterios_avaliacao": [
+    {
+      "criterio": "Mérito técnico e inovação",
+      "peso": 30,
+      "descricao": "Grau de inovação e relevância tecnológica"
+    },
+    {
+      "criterio": "Potencial de mercado",
+      "peso": 25,
+      "descricao": "Tamanho do mercado e viabilidade comercial"
+    },
+    {
+      "criterio": "Liderança feminina",
+      "peso": 20,
+      "descricao": "Representatividade e protagonismo de mulheres"
+    },
+    {
+      "criterio": "Impacto social",
+      "peso": 15,
+      "descricao": "Benefícios para a sociedade"
+    },
+    {
+      "criterio": "Capacidade da equipe",
+      "peso": 10,
+      "descricao": "Qualificação para execução do projeto"
+    }
+  ],
+  "fit_titanio_score": 72.0,
+  "recomendacao": "inscrever",
+  "justificativa": "A Titanio Studio apresenta forte alinhamento com este edital. O VoxDescriber é uma inovação tecnológica com impacto social claro (6,5M de beneficiários), posicionando bem nos critérios de maior peso (mérito técnico + impacto social). Verificar composição de gênero da liderança para confirmar elegibilidade completa.",
+  "pontos_fortes": [
+    "VoxDescriber é inovação tecnológica real com mercado definido",
+    "Impacto social mensurável: 6,5M brasileiros com deficiência visual",
+    "20 anos de histórico comprova capacidade de execução",
+    "Presença internacional valida potencial de mercado",
+    "Fundador com formação na Sorbonne — credibilidade técnica"
+  ],
+  "pontos_atencao": [
+    "Verificar critério de liderança feminina — pode ser restritivo",
+    "Confirmar porte da empresa (MPE) no CNPJ",
+    "Documentação financeira (balanços) precisa ser preparada",
+    "Adaptar CNPJ e dados cadastrais corretos antes de submeter"
+  ],
+  "produto_recomendado": "VoxDescriber",
+  "angulo_recomendado": "empresa_tecnologia",
+  "tom_recomendado": "técnico-científico",
+  "tags_detectadas": [
+    "inovação",
+    "tecnologia",
+    "mulheres",
+    "startup",
+    "impacto social"
+  ],
+  "tipo_programa": "FINEP",
+  "resumo_executivo": "Edital FINEP para empresas lideradas por mulheres com foco em inovação tecnológica. Score 72/100 — recomendado para inscrição com VoxDescriber como produto principal. Atenção: confirmar critério de liderança feminina na composição atual da empresa.",
+  "_meta": {
+    "fonte": "simulado",
+    "data_analise": "2026-03-18T19:46:45.586261",
+    "versao": "1.0",
+    "caracteres_analisados": 5000
+  }
+}

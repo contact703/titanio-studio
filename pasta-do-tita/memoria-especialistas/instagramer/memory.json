@@ -1,0 +1,70 @@
+{
+  "specialistId": "instagramer",
+  "specialistName": "Instagramer",
+  "version": 2,
+  "lastActive": "2026-03-27T11:02:00.000Z",
+  "stats": {
+    "tasksCompleted": 10,
+    "tasksFailed": 0,
+    "sessionsTotal": 3,
+    "lessonsLearned": 10,
+    "tokensUsed": 0,
+    "avgTaskDurationMs": 0
+  },
+  "knowledge": [
+    "Scripts shell para posting automatizado no Instagram via OpenClaw",
+    "Usa OpenRouter API com modelo moonshot-v1-128k (Kimi) para gerar conteúdo",
+    "Bot design-instagram.sh para formatos, ferramentas e automação N8n",
+    "Bot openclaw-posting-instagram.sh para posting automatizado",
+    "Bot design-tools-opensource.sh para ferramentas open source",
+    "Integração com instagrapi para scraping e posting",
+    {
+      "topic": "Bot Design Instagram Results",
+      "content": "3 bots rodaram 12 rounds cada com modelo nvidia/nemotron free. Guias completos de automação de design para Instagram gerados.",
+      "date": "2026-03-27",
+      "source": "gospia-session"
+    },
+    {
+      "topic": "Rate Limit Workaround",
+      "content": "OpenRouter free tier: 50 req/dia. Solução: trocar para nvidia/nemotron-3-nano-30b-a3b:free (sem rate limit).",
+      "date": "2026-03-27",
+      "source": "gospia-session"
+    },
+    {
+      "topic": "Kimi API Alternative",
+      "content": "moonshot-v1-128k via api.moonshot.ai funciona como alternativa ao OpenRouter quando rate limited.",
+      "date": "2026-03-27",
+      "source": "gospia-session"
+    }
+  ],
+  "recentTasks": [
+    {
+      "date": "2026-03-27",
+      "task": "Scripts de bot Instagram — design + posting automatizado",
+      "result": "Scripts shell criados em pasta-do-tita",
+      "project": "Gold Digger / Instagram Automation"
+    },
+    {
+      "date": "2026-03-26",
+      "task": "Bot design tools opensource para conteúdo Instagram",
+      "result": "Script funcional com OpenRouter + Kimi API",
+      "project": "Gold Digger"
+    },
+    {
+      "description": "3 design bots relaunched",
+      "date": "2026-03-27",
+      "result": "success",
+      "details": "bot-design-instagram, bot-design-tools-opensource, bot-openclaw-posting-instagram. 12 rounds cada."
+    }
+  ],
+  "activeContext": {
+    "currentTask": null,
+    "currentProject": "Gold Digger - Instagram Automation",
+    "startedAt": null
+  },
+  "credentials": {
+    "openrouter_key": "sk-or-v1-f2ced54e... (ver scripts)",
+    "kimi_key": "sk-fk265pU0... (ver scripts)",
+    "model": "moonshot-v1-128k"
+  }
+}

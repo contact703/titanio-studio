@@ -1,13 +1,9 @@
 {
-  "specialistId": "data-analyst",
-  "specialistName": "Data Analyst",
-  "version": 2,
-  "lastActive": "2026-03-19T18:57:13.938Z",
+  "sessions": [],
   "stats": {
+    "sessionsCount": 0,
     "tasksCompleted": 0,
-    "tasksFailed": 0,
-    "sessionsTotal": 0,
-    "lessonsLearned": 2,
+    "lessonsLearned": 32,
     "tokensUsed": 0,
     "avgTaskDurationMs": 0
   },

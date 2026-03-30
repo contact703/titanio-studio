@@ -1,0 +1,115 @@
+{
+  "name": "WF-011 · Weekly Memory Consolidation",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [{ "field": "cronExpression", "expression": "0 9 * * 1" }]
+        }
+      },
+      "id": "cron",
+      "name": "Schedule Segunda 9h",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "http://host.docker.internal:4444/api/memory/weekly-notes",
+        "qs": { "parameters": [{ "name": "days", "value": "7" }] },
+        "options": { "timeout": 15000 }
+      },
+      "id": "fetch-notes",
+      "name": "Fetch Last 7 Days Notes",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [460, 300],
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.anthropic.com/v1/messages",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "x-api-key", "value": "={{ $env.ANTHROPIC_API_KEY }}" },
+            { "name": "anthropic-version", "value": "2023-06-01" },
+            { "name": "Content-Type", "value": "application/json" }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"claude-sonnet-4-6\",\n  \"max_tokens\": 2048,\n  \"system\": \"Você é o sistema de memória da Tita, IA assistente da Titanio. Analise as notas da semana e extraia o que merece ser lembrado permanentemente.\",\n  \"messages\": [{\n    \"role\": \"user\",\n    \"content\": \"Analise estas notas dos últimos 7 dias e extraia:\\n1. Decisões importantes tomadas\\n2. Lições aprendidas (erros e acertos)\\n3. Estado atual dos projetos (só mudanças relevantes)\\n4. Preferências ou padrões do Eduardo observados\\n5. Qualquer contexto crítico para sessões futuras\\n\\nFormato: Markdown conciso, máximo 400 palavras. Não repetir o que já é conhecido.\\n\\nNotas da semana:\\n{{ JSON.stringify($json.notes || 'sem notas disponíveis') }}\"\n  }]\n}",
+        "options": { "timeout": 60000 }
+      },
+      "id": "claude-consolidate",
+      "name": "Claude Consolidation",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [680, 300]
+    },
+    {
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "const claudeResponse = $input.item.json;\nconst consolidation = claudeResponse.content?.[0]?.text || 'Sem consolidação disponível';\nconst date = new Date().toISOString().split('T')[0];\nconst weekStart = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0];\n\nconst update = [\n  `\\n---`,\n  `## Consolidação Semanal: ${weekStart} → ${date}`,\n  '',\n  consolidation,\n  '',\n  `_Gerado automaticamente pelo WF-011 em ${new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' })}_`\n].join('\\n');\n\nreturn [{ json: { update, consolidation, date, weekStart } }];"
+      },
+      "id": "format-update",
+      "name": "Format MEMORY Update",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [900, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:4444/api/memory/append",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"file\": \"MEMORY.md\",\n  \"content\": {{ JSON.stringify($json.update) }}\n}",
+        "options": {}
+      },
+      "id": "update-memory",
+      "name": "Append to MEMORY.md",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [1120, 200],
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:18789/api/message",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"to\": \"{{ $env.EDUARDO_WHATSAPP }}\",\n  \"message\": \"🧠 *Consolidação semanal da Tita concluída!*\\n\\n{{ $('Format MEMORY Update').item.json.consolidation.slice(0, 500) }}\\n\\n_Ver completo em MEMORY.md_\"\n}",
+        "options": {}
+      },
+      "id": "notify",
+      "name": "Notify Eduardo",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [1120, 400],
+      "continueOnFail": true
+    }
+  ],
+  "connections": {
+    "Schedule Segunda 9h": { "main": [[{ "node": "Fetch Last 7 Days Notes", "type": "main", "index": 0 }]] },
+    "Fetch Last 7 Days Notes": { "main": [[{ "node": "Claude Consolidation", "type": "main", "index": 0 }]] },
+    "Claude Consolidation": { "main": [[{ "node": "Format MEMORY Update", "type": "main", "index": 0 }]] },
+    "Format MEMORY Update": {
+      "main": [[
+        { "node": "Append to MEMORY.md", "type": "main", "index": 0 },
+        { "node": "Notify Eduardo", "type": "main", "index": 0 }
+      ]]
+    }
+  },
+  "active": true,
+  "settings": { "executionOrder": "v1" },
+  "tags": ["titanio", "memory", "consolidation", "weekly"],
+  "meta": {
+    "description": "Toda segunda às 9h: lê notas dos últimos 7 dias, usa Claude para extrair insights, atualiza MEMORY.md e notifica Eduardo.",
+    "requires": "ANTHROPIC_API_KEY no .env + endpoint /api/memory/weekly-notes no dashboard"
+  }
+}

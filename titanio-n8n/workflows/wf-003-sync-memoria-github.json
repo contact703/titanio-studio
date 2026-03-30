@@ -1,0 +1,216 @@
+{
+  "name": "WF-003 · Sync Memória → GitHub",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 */6 * * *"
+            }
+          ]
+        }
+      },
+      "id": "cron-trigger",
+      "name": "Cron a cada 6h",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.github.com/repos/contact703/tita-memory/commits",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "Authorization", "value": "=Bearer {{ $env.GITHUB_TOKEN }}" },
+            { "name": "Accept", "value": "application/vnd.github.v3+json" },
+            { "name": "User-Agent", "value": "Titanio-N8n/1.0" }
+          ]
+        },
+        "qs": {
+          "parameters": [
+            { "name": "per_page", "value": "5" }
+          ]
+        },
+        "options": { "timeout": 15000 }
+      },
+      "id": "fetch-commits",
+      "name": "Buscar Commits Recentes",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [460, 200]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "http://host.docker.internal:4444/api/memory/last-sync",
+        "options": { "timeout": 5000 },
+        "continueOnFail": true
+      },
+      "id": "fetch-last-sync",
+      "name": "Buscar Último Sync Local",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [460, 400],
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combinationMode": "mergeByPosition",
+        "options": {}
+      },
+      "id": "merge-data",
+      "name": "Merge Commits + LastSync",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [680, 300]
+    },
+    {
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "const commits = $('Buscar Commits Recentes').all().map(i => i.json);\nconst lastSyncData = $('Buscar Último Sync Local').first()?.json;\n\nif (!commits || commits.length === 0) {\n  return [{ json: { hasUpdates: false, reason: 'Nenhum commit encontrado', commits: [] } }];\n}\n\nconst lastSyncTime = lastSyncData?.last_sync_at \n  ? new Date(lastSyncData.last_sync_at) \n  : new Date(Date.now() - 7 * 60 * 60 * 1000); // fallback: 7h atrás\n\nconst recentCommits = commits.filter(c => {\n  const commitDate = new Date(c.commit?.author?.date || c.commit?.committer?.date);\n  return commitDate > lastSyncTime;\n});\n\nconst hasUpdates = recentCommits.length > 0;\n\nconst commitLines = recentCommits.slice(0, 3).map(c => {\n  const msg = c.commit?.message?.split('\\n')[0] || 'sem mensagem';\n  const author = c.commit?.author?.name || 'Tita';\n  const date = new Date(c.commit?.author?.date).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });\n  return `  • ${msg} (${author} · ${date})`;\n}).join('\\n');\n\nconst latestCommit = commits[0];\nconst latestSha = latestCommit?.sha?.slice(0, 7);\nconst latestMsg = latestCommit?.commit?.message?.split('\\n')[0];\nconst latestDate = new Date(latestCommit?.commit?.author?.date).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });\n\nreturn [{\n  json: {\n    hasUpdates,\n    newCommitsCount: recentCommits.length,\n    commitLines,\n    latestSha,\n    latestMsg,\n    latestDate,\n    lastSyncTime: lastSyncTime.toISOString(),\n    totalCommitsChecked: commits.length\n  }\n}];"
+      },
+      "id": "analyze-changes",
+      "name": "Analisar Mudanças",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [900, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "conditions": [
+            {
+              "id": "has-updates",
+              "leftValue": "={{ $json.hasUpdates }}",
+              "rightValue": true,
+              "operator": { "type": "boolean", "operation": "true" }
+            }
+          ]
+        }
+      },
+      "id": "check-has-updates",
+      "name": "Tem Updates?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [1120, 300]
+    },
+    {
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "const d = $input.item.json;\n\nconst message = [\n  `🧠 *Memória da Tita atualizada!*`,\n  '',\n  `📦 *${d.newCommitsCount} novo(s) commit(s)* desde o último sync:`,\n  d.commitLines,\n  '',\n  `🔖 *Último commit:* \\`${d.latestSha}\\``,\n  `📝 ${d.latestMsg}`,\n  `🕐 ${d.latestDate}`,\n  '',\n  `🔗 github.com/contact703/tita-memory`\n].join('\\n');\n\nreturn [{ json: { ...d, notification_message: message } }];"
+      },
+      "id": "build-notification",
+      "name": "Formatar Notificação",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1340, 180]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:18789/api/message/send",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "Content-Type", "value": "application/json" }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"channel\": \"whatsapp\",\n  \"to\": \"{{ $env.EDUARDO_WHATSAPP }}\",\n  \"message\": {{ JSON.stringify($json.notification_message) }}\n}",
+        "options": { "timeout": 15000 }
+      },
+      "id": "send-whatsapp-update",
+      "name": "Notificar Eduardo",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [1560, 180]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:4444/api/memory/sync-record",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"synced_at\": \"{{ $now.toISO() }}\",\n  \"latest_sha\": \"{{ $('Analisar Mudanças').item.json.latestSha }}\",\n  \"new_commits\": {{ $('Analisar Mudanças').item.json.newCommitsCount }},\n  \"workflow\": \"WF-003\"\n}",
+        "options": {}
+      },
+      "id": "record-sync",
+      "name": "Registrar Sync no Dashboard",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [1780, 300],
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:4444/api/events/log",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"type\": \"memory_sync_check\",\n  \"workflow\": \"WF-003\",\n  \"has_updates\": {{ $('Tem Updates?').item.json.hasUpdates ?? false }},\n  \"timestamp\": \"{{ $now.toISO() }}\"\n}",
+        "options": {}
+      },
+      "id": "log-no-update",
+      "name": "Log Sem Updates",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [1340, 420],
+      "continueOnFail": true
+    }
+  ],
+  "connections": {
+    "Cron a cada 6h": {
+      "main": [
+        [
+          { "node": "Buscar Commits Recentes", "type": "main", "index": 0 },
+          { "node": "Buscar Último Sync Local", "type": "main", "index": 0 }
+        ]
+      ]
+    },
+    "Buscar Commits Recentes": {
+      "main": [[{ "node": "Merge Commits + LastSync", "type": "main", "index": 0 }]]
+    },
+    "Buscar Último Sync Local": {
+      "main": [[{ "node": "Merge Commits + LastSync", "type": "main", "index": 1 }]]
+    },
+    "Merge Commits + LastSync": {
+      "main": [[{ "node": "Analisar Mudanças", "type": "main", "index": 0 }]]
+    },
+    "Analisar Mudanças": {
+      "main": [[{ "node": "Tem Updates?", "type": "main", "index": 0 }]]
+    },
+    "Tem Updates?": {
+      "main": [
+        [{ "node": "Formatar Notificação", "type": "main", "index": 0 }],
+        [{ "node": "Log Sem Updates", "type": "main", "index": 0 }]
+      ]
+    },
+    "Formatar Notificação": {
+      "main": [[{ "node": "Notificar Eduardo", "type": "main", "index": 0 }]]
+    },
+    "Notificar Eduardo": {
+      "main": [[{ "node": "Registrar Sync no Dashboard", "type": "main", "index": 0 }]]
+    },
+    "Log Sem Updates": {
+      "main": [[{ "node": "Registrar Sync no Dashboard", "type": "main", "index": 0 }]]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "continueOnFail": false
+  },
+  "tags": ["titanio", "memoria", "github", "sync"],
+  "meta": {
+    "description": "A cada 6h, verifica novos commits no repo contact703/tita-memory. Se houver atualizações desde o último sync, notifica Eduardo via WhatsApp com o resumo dos commits.",
+    "requires": "GITHUB_TOKEN no .env do N8n com permissão read:repo",
+    "version": "1.0.0"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "drive_folder": "15ZlJ4y3sDJWhdQvRSYy3o3qVCIcNtigl",
+  "locations": [
+    {"drive_name": "ALDEIA MATA VERDE BONITA", "en_id": 1590, "pt_id": 1596, "en_title": "Aldeia Mata Verde Bonita", "pt_title": "Aldeia Mata Verde Bonita"},
+    {"drive_name": "Bairro Divinea", "en_id": 1306, "pt_id": 1363, "en_title": "Divineia Neighborhood", "pt_title": "Bairro Divineia"},
+    {"drive_name": "CASA DE CULTURA", "en_id": 1586, "pt_id": 1592, "en_title": "Casa de Cultura", "pt_title": "Casa de Cultura"},
+    {"drive_name": "CINE HENFIL", "en_id": 1152, "pt_id": 1107, "en_title": "Henfil Cinema", "pt_title": "Cinema Henfil"},
+    {"drive_name": "ESTÁDIO MUNICIPAL JOÃO SALDANHA", "en_id": 1304, "pt_id": 1398, "en_title": "João Saldanha Stadium", "pt_title": "Estádio de Futebol João Saldanha"},
+    {"drive_name": "FAROL DE PONTA NEGRA", "en_id": 1301, "pt_id": 1649, "en_title": "Ponta Negra Lighthouse", "pt_title": "Farol de Ponta Negra"},
+    {"drive_name": "FAZENDA ITAOCAIA", "en_id": 1588, "pt_id": 1594, "en_title": "Fazenda Itaocaia", "pt_title": "Fazenda Itaocaia"},
+    {"drive_name": "FAZENDA JOAQUIM PIÑERO", "en_id": 1589, "pt_id": 1595, "en_title": "Fazenda Joaquim Piñero", "pt_title": "Fazenda Joaquim Piñero"},
+    {"drive_name": "GRUTA DA SACRISTIA", "en_id": 1299, "pt_id": 1432, "en_title": "Sacristia Grotto", "pt_title": "Gruta da Sacristia"},
+    {"drive_name": "Hospital Municipal Che Guevara", "en_id": 1591, "pt_id": 1597, "en_title": "Hospital Municipal Dr. Ernesto Che Guevara", "pt_title": "Hospital Municipal Dr. Ernesto Che Guevara"},
+    {"drive_name": "LAGOA DE ARAÇATIBA", "en_id": 1298, "pt_id": 1358, "en_title": "Araçatiba Lagoon", "pt_title": "Lagoa de Araçatiba"},
+    {"drive_name": "PARÓQUIA NOSSA SENHORA DO AMPARO", "en_id": 1302, "pt_id": 1408, "en_title": "Nossa Senhora do Amparo Church", "pt_title": "Igreja Matriz de Nossa Senhora do Amparo"},
+    {"drive_name": "Parque Linear Flamengo", "en_id": 1303, "pt_id": 1373, "en_title": "Flamengo Linear Park", "pt_title": "Parque Linear do bairro Flamengo"},
+    {"drive_name": "PEDRA DO MACACO", "en_id": 1300, "pt_id": 1403, "en_title": "Monkey Rock", "pt_title": "Pedra do Macaco"},
+    {"drive_name": "PRAÇA ORLANDO DE BARROS PIMENTEL", "en_id": 1587, "pt_id": 1593, "en_title": "Orlando de Barros Pimentel Square", "pt_title": "Praça Orlando de Barros Pimentel"},
+    {"drive_name": "PRAIA DE ITAPUAÇÚ", "en_id": 1294, "pt_id": 1383, "en_title": "Itaipuaçu Beaches", "pt_title": "Praias de Itaipuaçu"},
+    {"drive_name": "PRAIA DE PONTA NEGRA", "en_id": 1295, "pt_id": 1413, "en_title": "Ponta Negra Beach", "pt_title": "Praia de Ponta Negra"},
+    {"drive_name": "PRAIA DO RECANTO", "en_id": 1296, "pt_id": 1418, "en_title": "Recanto Beach", "pt_title": "Praia do Recanto"},
+    {"drive_name": "RESTINGA", "en_id": 1297, "pt_id": 1427, "en_title": "Restinga Extension", "pt_title": "Extensão da Restinga"}
+  ]
+}

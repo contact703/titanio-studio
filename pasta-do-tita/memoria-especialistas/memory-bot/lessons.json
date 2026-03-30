@@ -1,240 +1,1572 @@
 {
   "lessons": [
     {
-      "id": "daa93423-db0c-404a-8890-f12555329216",
-      "date": "2026-03-22",
-      "time": "12:40",
-      "successRate": 1,
-      "lesson": "Tarefa executada: Você é Tita, uma IA assistente. Analise sua atividade recente e extraia insights para sua memória de",
-      "context": "Resultado: ## [Geração de Memória de Longo Prazo] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nAnalisando a atividade recente e extraindo insights para a memória de longo prazo:\n\n### Fatos importa",
+      "id": "memory-bot-2026-03-27-1774602003",
+      "date": "2026-03-27",
+      "time": "06:00",
       "category": "process",
       "domain": "memory-bot",
+      "lesson": "Backup automático de memória",
+      "context": "Lições=37 especialistas=36",
       "impact": "medium",
       "tags": [
-        "auto-task"
-      ]
-    },
-    {
-      "id": "f98861b2-8c99-4e64-a4ca-52056dff0c87",
-      "date": "2026-03-22",
-      "time": "04:25",
-      "successRate": 1,
-      "lesson": "Tarefa executada: Você é Tita, uma IA assistente. Analise sua atividade recente e extraia insights para sua memória de",
-      "context": "Resultado: ## [Geração de Memória de Longo Prazo] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nAnalisando a atividade recente e extraindo insights para a memória de longo prazo:\n\n### Fatos importa",
-      "category": "process",
-      "domain": "memory-bot",
-      "impact": "medium",
-      "tags": [
-        "auto-task"
-      ]
-    },
-    {
-      "id": "d2ec02aa-3f36-441d-8a42-24a1720adb78",
-      "date": "2026-03-22",
-      "time": "00:24",
-      "successRate": 1,
-      "lesson": "Tarefa executada: Você é Tita, uma IA assistente. Analise sua atividade recente e extraia insights para sua memória de",
-      "context": "Resultado: ## [Geração de Memória de Longo Prazo] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nAnalisando a atividade recente e extraindo insights para a memória de longo prazo:\n\n### Fatos importa",
-      "category": "process",
-      "domain": "memory-bot",
-      "impact": "medium",
-      "tags": [
-        "auto-task"
-      ]
-    },
-    {
-      "id": "6d05d5e9-5f2a-46a9-8431-d10435000d30",
-      "date": "2026-03-21",
-      "time": "18:11",
-      "successRate": 1,
-      "lesson": "Tarefa executada: Você é Tita, uma IA assistente. Analise sua atividade recente e extraia insights para sua memória de",
-      "context": "Resultado: ## [Geração de Memória de Longo Prazo] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nAnalisando a atividade recente e extraindo insights para a memória de longo prazo:\n\n### Fatos importa",
-      "category": "process",
-      "domain": "memory-bot",
-      "impact": "medium",
-      "tags": [
-        "auto-task"
-      ]
-    },
-    {
-      "id": "memory-bot-instagram-0",
-      "date": "2026-03-19",
-      "time": "17:08",
-      "category": "tool",
-      "domain": "instagram",
-      "lesson": "Ver vídeos do Instagram: usar instaloader (pip3 install instaloader). Requer login salvo. Comando: python3 -m instaloader --login USUARIO <shortcode>. Após login, sessão salva em ~/.config/instaloader/. Posts públicos AINDA precisam de autenticação na API do Instagram em 2025/2026.",
-      "context": "Instagram video download",
-      "impact": "high",
-      "tags": [
-        "instagram",
-        "video",
-        "instaloader",
-        "yt-dlp"
-      ],
-      "successRate": 1,
-      "source": "system-knowledge"
-    },
-    {
-      "id": "memory-bot-instagram-1",
-      "date": "2026-03-19",
-      "time": "17:08",
-      "category": "tool",
-      "domain": "instagram",
-      "lesson": "yt-dlp suporta Instagram MAS exige cookies autenticados. Usar: yt-dlp --cookies-from-browser chrome URL (se Chrome tiver sessão do Instagram). Sem login = erro 401. Melhor alternativa: instaloader com sessão salva.",
-      "context": "Instagram yt-dlp",
-      "impact": "high",
-      "tags": [
-        "yt-dlp",
-        "instagram",
-        "cookies",
-        "chrome"
-      ],
-      "successRate": 1,
-      "source": "system-knowledge"
-    },
-    {
-      "id": "memory-bot-instagram-2",
-      "date": "2026-03-19",
-      "time": "17:08",
-      "category": "process",
-      "domain": "instagram",
-      "lesson": "Fluxo completo para baixar vídeo Instagram: 1) instaloader instalado ✅, 2) fazer login: python3 -m instaloader --login SEU_USUARIO, 3) baixar: instaloader --login USER -- https://instagram.com/p/SHORTCODE/, 4) vídeo salvo na pasta atual como .mp4",
-      "context": "Instagram download workflow",
-      "impact": "high",
-      "tags": [
-        "instagram",
-        "video",
-        "workflow",
-        "instaloader"
-      ],
-      "successRate": 1,
-      "source": "system-knowledge"
-    },
-    {
-      "id": "memory-bot-instagram-3",
-      "date": "2026-03-19",
-      "time": "17:08",
-      "category": "technical",
-      "domain": "instagram",
-      "lesson": "Para extrair APENAS a URL do vídeo (sem baixar): python3 -c \"import instaloader; L=instaloader.Instaloader(); L.load_session_from_file(\"USERNAME\"); post=instaloader.Post.from_shortcode(L.context,\"SHORTCODE\"); print(post.video_url)\"",
-      "context": "Instagram get video URL",
-      "impact": "medium",
-      "tags": [
-        "instagram",
-        "python",
-        "instaloader",
-        "api"
-      ],
-      "successRate": 1,
-      "source": "system-knowledge"
-    },
-    {
-      "id": "memory-bot-instagram-4",
-      "date": "2026-03-19",
-      "time": "17:08",
-      "category": "process",
-      "domain": "instagram",
-      "lesson": "NUNCA afirmar que não consegue ver vídeos do Instagram. O método certo é: instaloader + sessão autenticada. Credenciais do Instagram da Titanio devem ficar no Cofre de Credenciais da Dashboard.",
-      "context": "Instagram policy",
-      "impact": "high",
-      "tags": [
-        "instagram",
-        "policy",
-        "credenciais"
-      ],
-      "successRate": 1,
-      "source": "system-knowledge"
-    },
-    {
-      "id": "bdd97093-c447-4bec-98b1-0f54470af881",
-      "date": "2026-03-19",
-      "time": "15:57",
-      "category": "process",
-      "domain": "documentation",
-      "lesson": "Documentação deve ser escrita durante o desenvolvimento, não depois",
-      "context": "Tentativa de documentar sistema legado sem contexto",
-      "impact": "high",
-      "tags": [
-        "documentation",
-        "process"
+        "memory-bot",
+        "backup"
       ],
       "successRate": 1
     },
     {
-      "id": "56062dbc-95ae-471e-a613-e29f8a732662",
-      "date": "2026-03-19",
-      "time": "15:57",
+      "id": "memory-bot-2026-03-27-1774580403",
+      "date": "2026-03-27",
+      "time": "00:00",
       "category": "process",
-      "domain": "learning",
-      "lesson": "Lições aprendidas devem incluir contexto suficiente para serem aplicáveis no futuro",
-      "context": "Revisão de lições antigas sem contexto útil",
+      "domain": "memory-bot",
+      "lesson": "Backup automático de memória",
+      "context": "Lições=36 especialistas=36",
       "impact": "medium",
       "tags": [
-        "learning",
-        "memory"
+        "memory-bot",
+        "backup"
       ],
       "successRate": 1
     },
     {
-      "id": "memory-bot-init-0",
-      "date": "2026-03-19",
-      "time": "16:04",
-      "category": "technical",
-      "domain": "memoria",
-      "lesson": "Arquivos markdown são mais auditáveis que bancos vetoriais para memória de agentes locais",
-      "context": "Pesquisa memória IA",
-      "impact": "high",
-      "tags": [
-        "memoria",
-        "ia"
-      ],
-      "successRate": 1,
-      "source": "initial-knowledge"
-    },
-    {
-      "id": "memory-bot-init-1",
-      "date": "2026-03-19",
-      "time": "16:04",
-      "category": "technical",
-      "domain": "ferramentas",
-      "lesson": "Mem0, Letta/MemGPT, Reflexion, Zep, ChromaDB: melhores sistemas memória AI agents 2025",
-      "context": "Pesquisa",
-      "impact": "medium",
-      "tags": [
-        "ferramentas"
-      ],
-      "successRate": 1,
-      "source": "initial-knowledge"
-    },
-    {
-      "id": "memory-bot-init-2",
-      "date": "2026-03-19",
-      "time": "16:04",
+      "id": "memory-bot-2026-03-26-1774537203",
+      "date": "2026-03-26",
+      "time": "12:00",
       "category": "process",
-      "domain": "squad",
-      "lesson": "Squad lessons compartilhadas: todos os especialistas aprendem de todos via arquivo JSON compartilhado",
-      "context": "tita-learning-system",
-      "impact": "high",
-      "tags": [
-        "squad"
-      ],
-      "successRate": 1,
-      "source": "initial-knowledge"
-    },
-    {
-      "id": "memory-bot-init-3",
-      "date": "2026-03-19",
-      "time": "16:04",
-      "category": "error",
-      "domain": "script",
-      "lesson": "capture-lesson.sh: campo timestamp ausente — bug corrigido usando date+time separados",
-      "context": "bug fix",
+      "domain": "memory-bot",
+      "lesson": "Backup automático de memória",
+      "context": "Lições=28 especialistas=34",
       "impact": "medium",
       "tags": [
-        "script"
+        "memory-bot",
+        "backup"
       ],
       "successRate": 1,
-      "source": "initial-knowledge"
+      "sourceMachine": "Mac-mini-de-Macmini.local"
+    },
+    {
+      "id": "memory-bot-2026-03-26-1774515603",
+      "date": "2026-03-26",
+      "time": "06:00",
+      "category": "process",
+      "domain": "memory-bot",
+      "lesson": "Backup automático de memória",
+      "context": "Lições=27 especialistas=34",
+      "impact": "medium",
+      "tags": [
+        "memory-bot",
+        "backup"
+      ],
+      "successRate": 1,
+      "sourceMachine": "Mac-mini-de-Macmini.local"
+    },
+    {
+      "id": "memory-bot-2026-03-26-1774494003",
+      "date": "2026-03-26",
+      "time": "00:00",
+      "category": "process",
+      "domain": "memory-bot",
+      "lesson": "Backup automático de memória",
+      "context": "Lições=26 especialistas=34",
+      "impact": "medium",
+      "tags": [
+        "memory-bot",
+        "backup"
+      ],
+      "successRate": 1,
+      "sourceMachine": "Mac-mini-de-Macmini.local"
+    },
+    {
+      "id": "memory-bot-2026-03-26-1774558803",
+      "date": "2026-03-26",
+      "time": "18:00",
+      "category": "process",
+      "domain": "memory-bot",
+      "lesson": "Backup automático de memória",
+      "context": "Lições=35 especialistas=36",
+      "impact": "medium",
+      "tags": [
+        "memory-bot",
+        "backup"
+      ],
+      "successRate": 1
+    },
+    {
+      "id": "memory-bot-2026-03-25-1774450827",
+      "date": "2026-03-25",
+      "time": "12:00",
+      "category": "process",
+      "domain": "memory-bot",
+      "lesson": "Backup automático de memória",
+      "context": "Lições=24 especialistas=34",
+      "impact": "medium",
+      "tags": [
+        "memory-bot",
+        "backup"
+      ],
+      "successRate": 1,
+      "sourceMachine": "Mac-mini-de-Macmini.local"
+    },
+    {
+      "id": "memory-bot-2026-03-25-1774429227",
+      "date": "2026-03-25",
+      "time": "06:00",
+      "category": "process",
+      "domain": "memory-bot",
+      "lesson": "Backup automático de memória",
+      "context": "Lições=23 especialistas=34",
+      "impact": "medium",
+      "tags": [
+        "memory-bot",
+        "backup"
+      ],
+      "successRate": 1,
+      "sourceMachine": "Mac-mini-de-Macmini.local"
+    },
+    {
+      "id": "memory-bot-2026-03-25-1774407627",
+      "date": "2026-03-25",
+      "time": "00:00",
+      "category": "process",
+      "domain": "memory-bot",
+      "lesson": "Backup automático de memória",
+      "context": "Lições=22 especialistas=34",
+      "impact": "medium",
+      "tags": [
+        "memory-bot",
+        "backup"
+      ],
+      "successRate": 1,
+      "sourceMachine": "Mac-mini-de-Macmini.local"
+    },
+    {
+      "id": "memory-bot-2026-03-25-1774472403",
+      "date": "2026-03-25",
+      "time": "18:00",
+      "category": "process",
+      "domain": "memory-bot",
+      "lesson": "Backup automático de memória",
+      "context": "Lições=25 especialistas=34",
+      "impact": "medium",
+      "tags": [
+        "memory-bot",
+        "backup"
+      ],
+      "successRate": 1,
+      "sourceMachine": "Mac-mini-de-Macmini.local"
+    },
+    {
+      "id": "memory-bot-2026-03-24-1774386027",
+      "date": "2026-03-24",
+      "time": "18:00",
+      "category": "process",
+      "domain": "memory-bot",
+      "lesson": "Backup automático de memória",
+      "context": "Lições=21 especialistas=34",
+      "impact": "medium",
+      "tags": [
+        "memory-bot",
+        "backup"
+      ],
+      "successRate": 1,
+      "sourceMachine": "Mac-mini-de-Macmini.local"
+    },
+    {
+      "id": "kratos-1",
+      "date": "2026-03-23",
+      "time": "15:39",
+      "category": "technical",
+      "domain": "infra",
+      "lesson": "Dashboard v2 GitHub + fix paths Eduardo",
+      "context": "Sucesso - clonado repo, corrigido hardcoded paths TITA_039, todos servicos UP",
+      "impact": "high",
+      "tags": [
+        "infra",
+        "kratos",
+        "helber"
+      ],
+      "successRate": 100,
+      "source": "kratos"
+    },
+    {
+      "id": "kratos-2",
+      "date": "2026-03-23",
+      "time": "16:08",
+      "category": "technical",
+      "domain": "infra",
+      "lesson": "Diagnostico completo Dashboard v2",
+      "context": "Sucesso - usuario Helber ativo, 30 especialistas, watchdog, memoria 30 specs",
+      "impact": "high",
+      "tags": [
+        "infra",
+        "kratos",
+        "helber"
+      ],
+      "successRate": 100,
+      "source": "kratos"
+    },
+    {
+      "id": "kratos-3",
+      "date": "2026-03-23",
+      "time": "16:19",
+      "category": "technical",
+      "domain": "infra",
+      "lesson": "N8n workflows configurados via SQLite",
+      "context": "Sucesso - 5 workflows, 4 ativos, API key salva",
+      "impact": "high",
+      "tags": [
+        "infra",
+        "kratos",
+        "helber"
+      ],
+      "successRate": 100,
+      "source": "kratos"
+    },
+    {
+      "id": "kratos-4",
+      "date": "2026-03-23",
+      "time": "16:39",
+      "category": "technical",
+      "domain": "debug",
+      "lesson": "Fix nome Zica→Helber: defaults hardcoded em page.tsx, Header.tsx, Sidebar.tsx. localStorage pode cachear user antigo.",
+      "context": "Sucesso",
+      "impact": "high",
+      "tags": [
+        "debug",
+        "kratos",
+        "helber"
+      ],
+      "successRate": 100,
+      "source": "kratos"
+    },
+    {
+      "id": "kratos-5",
+      "date": "2026-03-23",
+      "time": "16:39",
+      "category": "technical",
+      "domain": "debug",
+      "lesson": "Debug Hunter: fix nome Zica para Helber no frontend",
+      "context": "Sucesso - 4 arquivos corrigidos, rebuild feito",
+      "impact": "high",
+      "tags": [
+        "debug",
+        "kratos",
+        "helber"
+      ],
+      "successRate": 100,
+      "source": "kratos"
+    },
+    {
+      "id": "kratos-6",
+      "date": "2026-03-23",
+      "time": "16:46",
+      "category": "technical",
+      "domain": "audit",
+      "lesson": "Auditoria completa integração especialistas + memória",
+      "context": "Sucesso - 30 specs integrados, LightRAG respondendo, N8n 4 workflows ativos, MEMORY.md 208 linhas",
+      "impact": "high",
+      "tags": [
+        "audit",
+        "kratos",
+        "helber"
+      ],
+      "successRate": 100,
+      "source": "kratos"
+    },
+    {
+      "id": "kratos-7",
+      "date": "2026-03-23",
+      "time": "17:02",
+      "category": "technical",
+      "domain": "backup",
+      "lesson": "Backup triplo: local + GitHub + TITA_039",
+      "context": "Sucesso - 23MB no TITA_039, 2 repos pushed, suite principal synced",
+      "impact": "high",
+      "tags": [
+        "backup",
+        "kratos",
+        "helber"
+      ],
+      "successRate": 100,
+      "source": "kratos"
+    },
+    {
+      "id": "kratos-8",
+      "date": "2026-03-23",
+      "time": "17:33",
+      "category": "technical",
+      "domain": "sync",
+      "lesson": "Sync lições Dashboard: lessons.json + memory.json para 30 especialistas",
+      "context": "Sucesso - 16 lições, 5 especialistas com dados, TITA_039 sincronizado",
+      "impact": "high",
+      "tags": [
+        "sync",
+        "kratos",
+        "helber"
+      ],
+      "successRate": 100,
+      "source": "kratos"
+    },
+    {
+      "id": "mem-1",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "ios",
+      "lesson": "GospIA iOS** (`gospia-ios/`) — React Native/Expo, Chat Pastor Elder, Rádio, Fórum, Apple Sign In, ElevenLabs TTS (Antonio)",
+      "context": "From Eduardo MEMORY.md: Sessão 14/03/2026 — Dia de trabalho com Zica (Gosp",
+      "impact": "high",
+      "tags": [
+        "ios",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-2",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "ios",
+      "lesson": "KidsHQ Kids iOS Swift** (`KidsHQ/kidshq-kids-swift/`) — Swift nativo com FamilyControls (bloquear apps, monitorar uso)",
+      "context": "From Eduardo MEMORY.md: Sessão 14/03/2026 — Dia de trabalho com Zica (Gosp",
+      "impact": "high",
+      "tags": [
+        "ios",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-3",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "ios",
+      "lesson": "KidsHQ Kids iOS RN** (`KidsHQ/kidshq-kids-ios/`) — versão React Native de backup",
+      "context": "From Eduardo MEMORY.md: Sessão 14/03/2026 — Dia de trabalho com Zica (Gosp",
+      "impact": "high",
+      "tags": [
+        "ios",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-4",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "ios",
+      "lesson": "FamilyControls** = entitlement especial Apple para controle parental real (bloquear apps, monitorar uso)",
+      "context": "From Eduardo MEMORY.md: Sessão 14/03/2026 — Dia de trabalho com Zica (Gosp",
+      "impact": "high",
+      "tags": [
+        "ios",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-5",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Dizer \"não tenho ferramenta pra anexar\"",
+      "context": "From Eduardo MEMORY.md: 🔴 LIÇÃO CRÍTICA: ENVIAR ARQUIVOS VIA WHATSAPP (202",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-6",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Oferecer \"colocar no Desktop\" como solução",
+      "context": "From Eduardo MEMORY.md: 🔴 LIÇÃO CRÍTICA: ENVIAR ARQUIVOS VIA WHATSAPP (202",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-7",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Copiar/colar texto em vez de enviar arquivo",
+      "context": "From Eduardo MEMORY.md: 🔴 LIÇÃO CRÍTICA: ENVIAR ARQUIVOS VIA WHATSAPP (202",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-8",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "messaging",
+      "lesson": "SEMPRE usar `openclaw message send --media`",
+      "context": "From Eduardo MEMORY.md: 🔴 LIÇÃO CRÍTICA: ENVIAR ARQUIVOS VIA WHATSAPP (202",
+      "impact": "high",
+      "tags": [
+        "messaging",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-9",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "ferramenta**: instaloader (pip3 install instaloader) ✅ instalado",
+      "context": "From Eduardo MEMORY.md: Instagram Video — Método Real (2026-03-19)",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-10",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "login**: `python3 -m instaloader --login USUARIO` → sessão salva em ~/.config/instaloader/",
+      "context": "From Eduardo MEMORY.md: Instagram Video — Método Real (2026-03-19)",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-11",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "social-media",
+      "lesson": "baixar vídeo**: `instaloader --login USER -- https://instagram.com/p/SHORTCODE/`",
+      "context": "From Eduardo MEMORY.md: Instagram Video — Método Real (2026-03-19)",
+      "impact": "high",
+      "tags": [
+        "social-media",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-12",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "só URL**: `python3 -c \"import instaloader; L=instaloader.Instaloader(); L.load_session_from_file('USER'); post=instaloader.Post.from_shortcode(L.context,'SHORTCODE'); print(post.video_url)\"`",
+      "context": "From Eduardo MEMORY.md: Instagram Video — Método Real (2026-03-19)",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-13",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "social-media",
+      "lesson": "yt-dlp**: funciona com `--cookies-from-browser chrome` se Chrome tiver sessão do Instagram",
+      "context": "From Eduardo MEMORY.md: Instagram Video — Método Real (2026-03-19)",
+      "impact": "high",
+      "tags": [
+        "social-media",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-14",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "NUNCA dizer que não consegue** — o método existe e funciona com autenticação",
+      "context": "From Eduardo MEMORY.md: Instagram Video — Método Real (2026-03-19)",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-15",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "social-media",
+      "lesson": "Credenciais Instagram Titanio**: cadastrar no Cofre de Credenciais da Dashboard",
+      "context": "From Eduardo MEMORY.md: Instagram Video — Método Real (2026-03-19)",
+      "impact": "high",
+      "tags": [
+        "social-media",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-16",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "RAM warning: 45.6k pages (abaixo de 50k) — 2026-03-22 06:24 AM",
+      "context": "From Eduardo MEMORY.md: Semana 2026-03-22 — Auto-consolidação",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-17",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "social-media",
+      "lesson": "instagrapi** — Login + photo_upload (TESTADO 2x HOJE COM SUCESSO)",
+      "context": "From Eduardo MEMORY.md: Sessão 22/03/2026 — Testes Completos + Deployment ",
+      "impact": "high",
+      "tags": [
+        "social-media",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-18",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "social-media",
+      "lesson": "yt-dlp** — Baixa vídeos (TESTADO)",
+      "context": "From Eduardo MEMORY.md: Sessão 22/03/2026 — Testes Completos + Deployment ",
+      "impact": "high",
+      "tags": [
+        "social-media",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-19",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "social-media",
+      "lesson": "web_fetch direto** — Instagram bloqueia scraping public",
+      "context": "From Eduardo MEMORY.md: Sessão 22/03/2026 — Testes Completos + Deployment ",
+      "impact": "high",
+      "tags": [
+        "social-media",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-20",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Playwright** — Automação de browser",
+      "context": "From Eduardo MEMORY.md: Sessão 22/03/2026 — Testes Completos + Deployment ",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-21",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "ai-models",
+      "lesson": "API endpoints funcionando:**",
+      "context": "From Eduardo MEMORY.md: Sessão 22/03/2026 — Testes Completos + Deployment ",
+      "impact": "high",
+      "tags": [
+        "ai-models",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-22",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "dashboard",
+      "lesson": "Testei Dashboard (backend + frontend)",
+      "context": "From Eduardo MEMORY.md: Sessão 22/03/2026 — Testes Completos + Deployment ",
+      "impact": "high",
+      "tags": [
+        "dashboard",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-23",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "social-media",
+      "lesson": "Postei 2 posts reais (Instagram funciona)",
+      "context": "From Eduardo MEMORY.md: Sessão 22/03/2026 — Testes Completos + Deployment ",
+      "impact": "high",
+      "tags": [
+        "social-media",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-24",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "social-media",
+      "lesson": "Criei Instagram Poster especialista",
+      "context": "From Eduardo MEMORY.md: Sessão 22/03/2026 — Testes Completos + Deployment ",
+      "impact": "high",
+      "tags": [
+        "social-media",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-25",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "ai-models",
+      "lesson": "Testei 8 modelos diferentes",
+      "context": "From Eduardo MEMORY.md: Sessão 22/03/2026 — Testes Completos + Deployment ",
+      "impact": "high",
+      "tags": [
+        "ai-models",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-26",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Confirmei context transfer",
+      "context": "From Eduardo MEMORY.md: Sessão 22/03/2026 — Testes Completos + Deployment ",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-27",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Criei instalador automático",
+      "context": "From Eduardo MEMORY.md: Sessão 22/03/2026 — Testes Completos + Deployment ",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-28",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "automation",
+      "lesson": "Preparei 4 docs + 32 especialistas + 8 workflows",
+      "context": "From Eduardo MEMORY.md: Sessão 22/03/2026 — Testes Completos + Deployment ",
+      "impact": "high",
+      "tags": [
+        "automation",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-29",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "devops",
+      "lesson": "Tudo pronto pra deployment amanhã",
+      "context": "From Eduardo MEMORY.md: Sessão 22/03/2026 — Testes Completos + Deployment ",
+      "impact": "high",
+      "tags": [
+        "devops",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-33",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "dashboard",
+      "lesson": "Dizer \"Dashboard diz que trocou, logo trocou\"",
+      "context": "From Eduardo MEMORY.md: ✅ CRÍTICO RESOLVIDO: Model Sync — Todas as 3 Camad",
+      "impact": "high",
+      "tags": [
+        "dashboard",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-34",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Confiar em screenshot/UI desconectada",
+      "context": "From Eduardo MEMORY.md: ✅ CRÍTICO RESOLVIDO: Model Sync — Todas as 3 Camad",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-35",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Inventar uma solução (dessa vez foi DE VERDADE)",
+      "context": "From Eduardo MEMORY.md: ✅ CRÍTICO RESOLVIDO: Model Sync — Todas as 3 Camad",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-36",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "memory-system",
+      "lesson": "Memory-watchdog rodando (PID 24022)",
+      "context": "From Eduardo MEMORY.md: Heartbeat 2026-03-22 19:05",
+      "impact": "high",
+      "tags": [
+        "memory-system",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-37",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "caffeinate ativo",
+      "context": "From Eduardo MEMORY.md: Heartbeat 2026-03-22 19:05",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-38",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "watchdog.sh ativo",
+      "context": "From Eduardo MEMORY.md: Heartbeat 2026-03-22 19:05",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-39",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "dashboard",
+      "lesson": "Dashboard testado: Backend + Frontend + 32 especialistas funcionando",
+      "context": "From Eduardo MEMORY.md: Heartbeat 2026-03-22 19:05",
+      "impact": "high",
+      "tags": [
+        "dashboard",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-40",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "social-media",
+      "lesson": "Instagram Poster: 2 posts publicados de verdade",
+      "context": "From Eduardo MEMORY.md: Heartbeat 2026-03-22 19:05",
+      "impact": "high",
+      "tags": [
+        "social-media",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-41",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "ai-models",
+      "lesson": "Troca de modelo: 8 modelos testados (context transfer OK)",
+      "context": "From Eduardo MEMORY.md: Heartbeat 2026-03-22 19:05",
+      "impact": "high",
+      "tags": [
+        "ai-models",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-42",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "memory-system",
+      "lesson": "AUTO-MEMORY-SYSTEM criado (memory-watchdog rodando 24/7)",
+      "context": "From Eduardo MEMORY.md: Heartbeat 2026-03-22 19:05",
+      "impact": "high",
+      "tags": [
+        "memory-system",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-43",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "REAL-LEARNING-SYSTEM criado (especialistas aprendem de verdade)",
+      "context": "From Eduardo MEMORY.md: Heartbeat 2026-03-22 19:05",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-44",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "social-media",
+      "lesson": "Visualizou post Instagram via Playwright browser",
+      "context": "From Eduardo MEMORY.md: Heartbeat 2026-03-22 19:05",
+      "impact": "high",
+      "tags": [
+        "social-media",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-45",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "ai-models",
+      "lesson": "Post era sobre Scrapling (ferramenta web scraping sem detecção)",
+      "context": "From Eduardo MEMORY.md: Heartbeat 2026-03-22 19:05",
+      "impact": "high",
+      "tags": [
+        "ai-models",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "spec-debug-hunter-67",
+      "date": "2026-03-19",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "debug-hunter",
+      "lesson": "Lição:** Fix nome Zica→Helber: defaults hardcoded em page.tsx, Header.tsx, Sidebar.tsx. localStorage pode cachear user antigo.",
+      "context": "From debug-hunter specialist",
+      "impact": "high",
+      "tags": [
+        "debug-hunter",
+        "tita39",
+        "specialist"
+      ],
+      "successRate": 100,
+      "source": "tita39-debug-hunter"
+    },
+    {
+      "id": "spec-debug-hunter-68",
+      "date": "2026-03-19",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "debug-hunter",
+      "lesson": "Resultado:** ✅ Sucesso",
+      "context": "From debug-hunter specialist",
+      "impact": "high",
+      "tags": [
+        "debug-hunter",
+        "tita39",
+        "specialist"
+      ],
+      "successRate": 100,
+      "source": "tita39-debug-hunter"
+    },
+    {
+      "id": "spec-victor-capital-69",
+      "date": "2026-03-19",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "victor-capital",
+      "lesson": "NVIDIA Inception:** rejeita email genérico (contact@) — usar email pessoal do fundador",
+      "context": "From victor-capital specialist",
+      "impact": "high",
+      "tags": [
+        "victor-capital",
+        "tita39",
+        "specialist"
+      ],
+      "successRate": 100,
+      "source": "tita39-victor-capital"
+    },
+    {
+      "id": "spec-victor-capital-70",
+      "date": "2026-03-19",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "victor-capital",
+      "lesson": "YC:** magic link enviado para contact@titaniofilms.com — verificar email ANTES de iniciar",
+      "context": "From victor-capital specialist",
+      "impact": "high",
+      "tags": [
+        "victor-capital",
+        "tita39",
+        "specialist"
+      ],
+      "successRate": 100,
+      "source": "tita39-victor-capital"
+    },
+    {
+      "id": "spec-victor-capital-71",
+      "date": "2026-03-19",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "victor-capital",
+      "lesson": "Todos os programas:** exigem verificação de email ou captcha — sem acesso ao email, travado",
+      "context": "From victor-capital specialist",
+      "impact": "high",
+      "tags": [
+        "victor-capital",
+        "tita39",
+        "specialist"
+      ],
+      "successRate": 100,
+      "source": "tita39-victor-capital"
+    },
+    {
+      "id": "spec-victor-capital-72",
+      "date": "2026-03-19",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "victor-capital",
+      "lesson": "Automação de formulários:** captcha é a barreira final — ter sessão ativa no browser ajuda",
+      "context": "From victor-capital specialist",
+      "impact": "high",
+      "tags": [
+        "victor-capital",
+        "tita39",
+        "specialist"
+      ],
+      "successRate": 100,
+      "source": "tita39-victor-capital"
+    },
+    {
+      "id": "spec-victor-capital-73",
+      "date": "2026-03-19",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "victor-capital",
+      "lesson": "Status: **magic link enviado** para contact@titaniofilms.com",
+      "context": "From victor-capital specialist",
+      "impact": "high",
+      "tags": [
+        "victor-capital",
+        "tita39",
+        "specialist"
+      ],
+      "successRate": 100,
+      "source": "tita39-victor-capital"
+    },
+    {
+      "id": "spec-victor-capital-74",
+      "date": "2026-03-19",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "victor-capital",
+      "lesson": "Status: **rejeitado** no formulário",
+      "context": "From victor-capital specialist",
+      "impact": "high",
+      "tags": [
+        "victor-capital",
+        "tita39",
+        "specialist"
+      ],
+      "successRate": 100,
+      "source": "tita39-victor-capital"
+    },
+    {
+      "id": "spec-victor-capital-75",
+      "date": "2026-03-19",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "victor-capital",
+      "lesson": "Status: formulário preenchido, aguardando confirmação",
+      "context": "From victor-capital specialist",
+      "impact": "high",
+      "tags": [
+        "victor-capital",
+        "tita39",
+        "specialist"
+      ],
+      "successRate": 100,
+      "source": "tita39-victor-capital"
+    },
+    {
+      "id": "spec-victor-capital-76",
+      "date": "2026-03-19",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "victor-capital",
+      "lesson": "Status: página aberta, login necessário",
+      "context": "From victor-capital specialist",
+      "impact": "high",
+      "tags": [
+        "victor-capital",
+        "tita39",
+        "specialist"
+      ],
+      "successRate": 100,
+      "source": "tita39-victor-capital"
+    },
+    {
+      "id": "spec-victor-capital-77",
+      "date": "2026-03-19",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "victor-capital",
+      "lesson": "Status: código de verificação enviado para email",
+      "context": "From victor-capital specialist",
+      "impact": "high",
+      "tags": [
+        "victor-capital",
+        "tita39",
+        "specialist"
+      ],
+      "successRate": 100,
+      "source": "tita39-victor-capital"
+    },
+    {
+      "id": "lessons-md-46",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "devops",
+      "lesson": "Verificar credenciais ANTES de iniciar qualquer deploy ou integração",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "devops",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-47",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Nunca afirmar status de projeto sem ler `contexto-ativo.md` primeiro",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-48",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "messaging",
+      "lesson": "Endpoint WhatsApp via OpenClaw: `POST /api/message` (não `/api/message/send`)",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "messaging",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-49",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "devops",
+      "lesson": "`GITHUB_TOKEN` sem scope `workflow` não cria GitHub Actions — confirmar escopos",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "devops",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-50",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "automation",
+      "lesson": "`N8N_ENCRYPTION_KEY` deve ser sempre a mesma após primeiro uso",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "automation",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-51",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "ai-models",
+      "lesson": "**Modelos gratuitos (StepFlash, Nemotron) = APENAS manutenção infra simples. Especialistas usam Sonnet SEMPRE.** Subagentes podem receber instruções incorretas — verificar regra antes de executar qual",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "ai-models",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-52",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Respostas diretas, sem \"Claro!\", \"Com certeza!\", \"Ótima pergunta!\"",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-53",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "messaging",
+      "lesson": "WhatsApp é canal principal para urgências",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "messaging",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-54",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Prefere soluções práticas entregues, não opções para escolher",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-55",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Quando offline 2+ dias: tarefas de infra podem ser feitas proativamente",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-56",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Flushes de memória a cada 3h funcionam — manter",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-57",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Estrutura MEMORY.md + daily notes é sólida",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-58",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Sub-agentes especializados (Code Ninja, DevOps, etc.) produzem resultado melhor",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-59",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "automation",
+      "lesson": "N8n Docker: usar `host.docker.internal` para acessar serviços do Mac host",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "automation",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-60",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "automation",
+      "lesson": "Workflows N8n: criar sub-workflow \"Send WhatsApp\" reutilizável evita duplicação",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "automation",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-61",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Grupo Gospia ID: `120363405462114071@g.us`",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-62",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "automation",
+      "lesson": "N8n webhooks: URL de produção é `/webhook/`, URL de teste é `/webhook-test/` (só funciona com editor aberto)",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "automation",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-63",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "security",
+      "lesson": "Nunca hardcodar tokens/senhas em arquivos de código",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "security",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-64",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Nunca criar \"mega-workflows\" — um workflow, uma responsabilidade",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-65",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Nunca assumir que endpoint REST segue convenção padrão sem verificar",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-66",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Nunca fazer `rm` sem confirmação — usar `trash` ou pedir permissão",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
     }
-  ]
+  ],
+  "version": 2
 }

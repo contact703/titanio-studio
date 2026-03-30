@@ -16,7 +16,12 @@
     "script_referencia": "projetos/polymarket-agent/COMO-FAZER-TRADES.md",
     "scanner_api": "https://gamma-api.polymarket.com/markets — retorna 100 mercados ativos",
     "monitor_24_7": "projetos/polymarket-agent/src/monitor.py — roda a cada 10min, salva em data/latest_scan.json",
-    "criterio_trade": "Confiança IA >= 65-70%. Máx $15 por trade. Diversificar entre YES e NO."
+    "criterio_trade": "Confiança IA >= 65-70%. Máx $15 por trade. Diversificar entre YES e NO.",
+    "LICAO_MAGIC_VS_METAMASK": "Magic email (OTP) = impossível automatizar sem App Password do Gmail. Google OAuth = funciona perfeitamente. MetaMask = ideal para controle total da private key.",
+    "LICAO_API_VS_BROWSER": "API CLOB POST dá 401 porque signer da bot wallet ≠ signer das API keys do Tiago. Playwright via browser é o método que funciona.",
+    "LICAO_GEOBLOCK": "Cloudflare pode bloquear IPs do Brasil. Verificar se VPN é necessária.",
+    "LICAO_DUPLICATAS": "Mercado 'Jesus Christ before GTA VI' virou 'Drake Iceman' — confirmar nome do mercado ANTES de executar trade.",
+    "PORTFOLIO_27_03": "Italy YES $5, OKC Thunder YES $12, Colorado NO $8, Drake Iceman NO ~$13. Total: ~$40 de $44.86. Caixa restante: $4.86"
   },
   "recentTasks": [
     {
@@ -59,10 +64,31 @@
   ],
   "activeContext": {
     "portfolio_aberto": [
-      {"mercado": "Italy Copa 2026 FIFA", "posicao": "YES", "valor_investido": "$5", "shares": "6.58 @ 76¢", "potencial": "$6.58 se Italy qualificar"},
-      {"mercado": "Jesus Christ before GTA VI", "posicao": "NO", "valor_investido": "$15", "nota": "GTA VI sai antes"},
-      {"mercado": "OKC Thunder NBA Finals 2026", "posicao": "YES", "valor_investido": "$12", "nota": "Time jovem em ascensão"},
-      {"mercado": "Colorado Avalanche Stanley Cup 2026", "posicao": "NO", "valor_investido": "$8", "nota": "Time não é favorito"}
+      {
+        "mercado": "Italy Copa 2026 FIFA",
+        "posicao": "YES",
+        "valor_investido": "$5",
+        "shares": "6.58 @ 76¢",
+        "potencial": "$6.58 se Italy qualificar"
+      },
+      {
+        "mercado": "Jesus Christ before GTA VI",
+        "posicao": "NO",
+        "valor_investido": "$15",
+        "nota": "GTA VI sai antes"
+      },
+      {
+        "mercado": "OKC Thunder NBA Finals 2026",
+        "posicao": "YES",
+        "valor_investido": "$12",
+        "nota": "Time jovem em ascensão"
+      },
+      {
+        "mercado": "Colorado Avalanche Stanley Cup 2026",
+        "posicao": "NO",
+        "valor_investido": "$8",
+        "nota": "Time não é favorito"
+      }
     ],
     "total_investido": "$40",
     "saldo_restante": "$4.86",

@@ -1,13 +1,9 @@
 {
-  "specialistId": "ios-specialist",
-  "specialistName": "iOS Specialist",
-  "version": 2,
-  "lastActive": "2026-03-19T19:22:24.713Z",
+  "sessions": [],
   "stats": {
+    "sessionsCount": 0,
     "tasksCompleted": 0,
-    "tasksFailed": 0,
-    "sessionsTotal": 0,
-    "lessonsLearned": 7,
+    "lessonsLearned": 36,
     "tokensUsed": 0,
     "avgTaskDurationMs": 0
   },

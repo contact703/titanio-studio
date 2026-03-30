@@ -1,21 +1,39 @@
 {
   "specialistId": "fund-hunter",
-  "specialistName": "Victor Capital",
+  "specialistName": "Victor Capital / Fund Hunter",
   "version": 2,
-  "lastActive": "2026-03-19T19:04:57.831Z",
+  "lastActive": "2026-03-20T16:41:00.000Z",
   "stats": {
-    "tasksCompleted": 0,
+    "tasksCompleted": 2,
     "tasksFailed": 0,
-    "sessionsTotal": 0,
-    "lessonsLearned": 4,
+    "sessionsTotal": 2,
+    "lessonsLearned": 36,
     "tokensUsed": 0,
     "avgTaskDurationMs": 0
   },
-  "knowledge": [],
-  "recentTasks": [],
+  "knowledge": [
+    "YC (Y Combinator) application: magic link enviado, aguardando email",
+    "Workflow N8n 'Victor Capital Prazos' ativo para monitorar deadlines de editais",
+    "Foco: editais, fundos de investimento, aceleradoras",
+    "Integrado ao squad memory system em /workspace/squad/specialists/victor-capital/"
+  ],
+  "recentTasks": [
+    {
+      "date": "2026-03-20",
+      "task": "YC Application — magic link",
+      "result": "Link enviado, aguardando confirmação por email",
+      "project": "Victor Capital"
+    },
+    {
+      "date": "2026-03-20",
+      "task": "Workflow N8n para prazos de editais",
+      "result": "Ativo e monitorando deadlines",
+      "project": "Victor Capital"
+    }
+  ],
   "activeContext": {
-    "currentTask": null,
-    "currentProject": null,
-    "startedAt": null
+    "currentTask": "Aguardando YC magic link",
+    "currentProject": "Victor Capital",
+    "startedAt": "2026-03-20"
   }
 }

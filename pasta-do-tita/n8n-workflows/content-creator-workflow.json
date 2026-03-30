@@ -1,0 +1,142 @@
+{
+  "name": "ENEM Content Creator - Real Execution",
+  "description": "Generates 500+ ENEM questions using StepFlash (free) - REAL API calls",
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Workflow Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [250, 300],
+      "id": "node-trigger"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.openrouter.ai/api/v1/chat/completions",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer {{ $env.OPENROUTER_API_KEY }}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "bodyParametersUi": "json",
+        "body": {
+          "model": "openrouter/stepfun/step-3.5-flash:free",
+          "max_tokens": 4000,
+          "temperature": 0.4,
+          "messages": [
+            {
+              "role": "system",
+              "content": "You are an ENEM content expert. Generate ONLY valid JSON with no markdown."
+            },
+            {
+              "role": "user",
+              "content": "Generate 100 ENEM-style multiple choice questions. Output ONLY JSON: {\"metadata\": {\"total_questions\": 100, \"categories\": 5}, \"questions\": [{\"id\": \"Q001\", \"category\": \"português\", \"difficulty\": \"easy\", \"text\": \"...\", \"options\": [{\"letter\": \"A\", \"text\": \"...\"}, ...], \"correct_answer\": \"C\", \"explanation\": \"...\", \"tips\": [\"...\", \"...\"]}]}. NO markdown."
+            }
+          ]
+        }
+      },
+      "name": "Call StepFlash - Content Generator",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [450, 300],
+      "id": "node-stepflash"
+    },
+    {
+      "parameters": {
+        "functionCode": "const response = $input.first().json;\n\nif (!response.choices || !response.choices[0].message.content) {\n  throw new Error('Invalid OpenRouter response');\n}\n\nconst content = response.choices[0].message.content;\nlet questionsData;\n\ntry {\n  questionsData = JSON.parse(content);\n} catch (e) {\n  const jsonMatch = content.match(/```json\\n?([\\s\\S]*?)\\n?```/);\n  if (jsonMatch) {\n    questionsData = JSON.parse(jsonMatch[1]);\n  } else {\n    const jsonStart = content.indexOf('{');\n    const jsonEnd = content.lastIndexOf('}');\n    if (jsonStart !== -1 && jsonEnd !== -1) {\n      questionsData = JSON.parse(content.substring(jsonStart, jsonEnd + 1));\n    } else {\n      throw new Error('Could not extract JSON');\n    }\n  }\n}\n\nreturn {\n  questions_data: questionsData,\n  tokens_used: response.usage?.total_tokens || 0,\n  model: response.model,\n  timestamp: new Date().toISOString()\n};"
+      },
+      "name": "Parse Questions",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [650, 300],
+      "id": "node-parse"
+    },
+    {
+      "parameters": {
+        "fileName": "questions.json",
+        "fileContent": "{{ JSON.stringify($node[\"Parse Questions\"].json.questions_data, null, 2) }}",
+        "directory": "/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/pasta-do-tita/enem-game-generation/outputs"
+      },
+      "name": "Save Questions",
+      "type": "n8n-nodes-base.writeFile",
+      "typeVersion": 1,
+      "position": [850, 300],
+      "id": "node-save"
+    },
+    {
+      "parameters": {
+        "webhookUrl": "http://localhost:4444/webhook/enem-content-creator",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParametersUi": "json",
+        "body": {
+          "status": "success",
+          "component": "content_creator",
+          "output_file": "questions.json",
+          "total_questions": "{{ $node[\"Parse Questions\"].json.questions_data.metadata.total_questions }}",
+          "tokens_used": "{{ $node[\"Parse Questions\"].json.tokens_used }}"
+        }
+      },
+      "name": "Webhook Callback",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [1050, 300],
+      "id": "node-webhook"
+    }
+  ],
+  "connections": {
+    "Workflow Trigger": {
+      "main": [
+        [
+          {
+            "node": "Call StepFlash - Content Generator",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call StepFlash - Content Generator": {
+      "main": [
+        [
+          {
+            "node": "Parse Questions",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Questions": {
+      "main": [
+        [
+          {
+            "node": "Save Questions",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Save Questions": {
+      "main": [
+        [
+          {
+            "node": "Webhook Callback",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

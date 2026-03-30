@@ -1,0 +1,129 @@
+{
+  "name": "ENEM Code Generator - Local Ollama (REAL)",
+  "description": "Generates GDScript using Qwen 32B (Local) - REAL execution",
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Workflow Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [250, 300],
+      "id": "node-trigger"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://localhost:11434/api/generate",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "bodyParametersUi": "json",
+        "body": {
+          "model": "qwen2.5:32b",
+          "prompt": "You are a Godot/GDScript expert. Generate ONLY production-ready GDScript code (no markdown, no explanation). Generate main.gd for an ENEM RPG game that: 1) Initializes the game, 2) Loads questions from JSON, 3) Manages game state, 4) Handles scene transitions. Output ONLY GDScript code, starting with 'extends Node2D'. Include: _ready() function, _process() function, load_questions() function, change_scene() function, save_game() function.",
+          "stream": false,
+          "temperature": 0.3
+        }
+      },
+      "name": "Call Qwen 32B - Code Generator",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [450, 300],
+      "id": "node-ollama"
+    },
+    {
+      "parameters": {
+        "functionCode": "const response = $input.first().json;\nconst content = response.response;\n\n// Extract GDScript code\nlet code = content;\n\n// Remove markdown code blocks if present\nconst codeMatch = content.match(/```gdscript\\n?([\\s\\S]*?)\\n?```/);\nif (codeMatch) {\n  code = codeMatch[1];\n} else {\n  // Find the start of the code (extends or class_name)\n  const startIdx = content.indexOf('extends');\n  if (startIdx !== -1) {\n    code = content.substring(startIdx);\n  }\n}\n\nreturn {\n  code: code.trim(),\n  model: 'qwen2.5:32b (Ollama local)',\n  filename: 'main.gd',\n  timestamp: new Date().toISOString()\n};"
+      },
+      "name": "Parse Generated Code",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [650, 300],
+      "id": "node-parse"
+    },
+    {
+      "parameters": {
+        "fileName": "main.gd",
+        "fileContent": "{{ $node[\"Parse Generated Code\"].json.code }}",
+        "directory": "/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/pasta-do-tita/enem-game-generation/outputs/code"
+      },
+      "name": "Save main.gd",
+      "type": "n8n-nodes-base.writeFile",
+      "typeVersion": 1,
+      "position": [850, 300],
+      "id": "node-save"
+    },
+    {
+      "parameters": {
+        "webhookUrl": "http://localhost:4444/webhook/enem-code-generator",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParametersUi": "json",
+        "body": {
+          "status": "success",
+          "component": "code_generator",
+          "files_generated": 1,
+          "filename": "main.gd",
+          "model": "qwen2.5:32b (Ollama)"
+        }
+      },
+      "name": "Webhook Callback",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [1050, 300],
+      "id": "node-webhook"
+    }
+  ],
+  "connections": {
+    "Workflow Trigger": {
+      "main": [
+        [
+          {
+            "node": "Call Qwen 32B - Code Generator",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call Qwen 32B - Code Generator": {
+      "main": [
+        [
+          {
+            "node": "Parse Generated Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Generated Code": {
+      "main": [
+        [
+          {
+            "node": "Save main.gd",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Save main.gd": {
+      "main": [
+        [
+          {
+            "node": "Webhook Callback",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

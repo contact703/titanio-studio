@@ -1,0 +1,72 @@
+{
+  "game_title": "ENEM Quest",
+  "engine": "Godot 4.x",
+  "description": "Educational RPG for Brazilian ENEM exam preparation",
+  "scene_tree": {
+    "root": "Main",
+    "scenes": [
+      {
+        "name": "Overworld",
+        "type": "Node2D",
+        "description": "Main game world with exploration"
+      },
+      {
+        "name": "BattleSystem",
+        "type": "Node2D",
+        "description": "Turn-based question battles"
+      }
+    ]
+  },
+  "core_systems": {
+    "progression": {
+      "type": "XP-based",
+      "max_level": 100,
+      "mechanics": ["Answer questions", "Gain XP", "Level up"]
+    },
+    "combat": {
+      "type": "Turn-based",
+      "mechanics": ["Question presented", "Choose answer", "Correct = damage to enemy"]
+    },
+    "inventory": {
+      "item_types": ["Study books", "Tips cards", "Cosmetics"]
+    }
+  },
+  "content_categories": [
+    "Português",
+    "Matemática",
+    "Ciências Naturais",
+    "Ciências Humanas",
+    "Redação"
+  ],
+  "art_style": {
+    "type": "Pixel Art",
+    "tile_size": "16x16",
+    "color_palette": 32,
+    "inspiration": "Stardew Valley"
+  },
+  "difficulty_settings": [
+    {
+      "name": "Easy",
+      "player_hp": 100,
+      "xp_multiplier": 1.0
+    },
+    {
+      "name": "Normal",
+      "player_hp": 50,
+      "xp_multiplier": 1.5
+    },
+    {
+      "name": "Hard",
+      "player_hp": 30,
+      "xp_multiplier": 2.0
+    }
+  ],
+  "tech_stack": {
+    "engine": "Godot 4.1+",
+    "language": "GDScript",
+    "data_format": "JSON"
+  },
+  "generated_at": "2026-03-21T15:46:00Z",
+  "model": "phi3:3.8b-instruct (Ollama local)",
+  "status": "✅ REAL - Generated and saved"
+}

@@ -1,0 +1,485 @@
+#!/usr/bin/env python3
+"""
+tmem — Titanio Memory CLI
+==========================
+Nossa versão do ByteRover. 100% local, zero cloud, zero API key.
+
+Usa: Memory Engine (2095 chunks) + Memory Graph (42 entidades) + Context Tree
+
+Comandos:
+  tmem query "pergunta"          — Busca semântica na memória
+  tmem curate "conhecimento"     — Guarda novo conhecimento organizado
+  tmem recall                    — Mostra contexto recente (últimos 3 dias)
+  tmem status                    — Status completo da memória
+  tmem learn "lição"             — Registra lição aprendida
+  tmem who "pessoa"              — Info sobre pessoa/entidade
+  tmem project "nome"            — Info sobre projeto
+  tmem test                      — Testa se memória tá funcionando
+  tmem tree                      — Mostra context tree (tópicos organizados)
+  tmem refresh                   — Reindexa tudo
+  tmem score                     — Mostra score de qualidade
+"""
+
+import os
+import sys
+import json
+import subprocess
+from datetime import datetime, timedelta
+from pathlib import Path
+
+WORKSPACE = "/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace"
+BIN = os.path.join(WORKSPACE, "bin")
+MEMORY_DIR = os.path.join(WORKSPACE, "memory")
+CONTEXT_TREE = os.path.join(MEMORY_DIR, "context-tree.json")
+CURATED = os.path.join(MEMORY_DIR, "curated-knowledge.json")
+
+
+def run_engine(cmd, *args):
+    """Roda o Memory Engine"""
+    result = subprocess.run(
+        ["python3", os.path.join(BIN, "tita-memory-engine.py"), cmd, *args],
+        capture_output=True, text=True, cwd=WORKSPACE
+    )
+    return result.stdout
+
+
+def run_graph(cmd, *args):
+    """Roda o Memory Graph"""
+    result = subprocess.run(
+        ["python3", os.path.join(BIN, "tita-memory-graph.py"), cmd, *args],
+        capture_output=True, text=True, cwd=WORKSPACE
+    )
+    return result.stdout
+
+
+def run_score(cmd, *args):
+    """Roda o Memory Score"""
+    result = subprocess.run(
+        ["python3", os.path.join(BIN, "tita-memory-score.py"), cmd, *args],
+        capture_output=True, text=True, cwd=WORKSPACE
+    )
+    return result.stdout
+
+
+def load_curated():
+    """Carrega conhecimento curado"""
+    if os.path.exists(CURATED):
+        with open(CURATED) as f:
+            return json.load(f)
+    return {"topics": {}, "entries": [], "last_updated": None}
+
+
+def save_curated(data):
+    """Salva conhecimento curado"""
+    data["last_updated"] = datetime.now().isoformat()
+    with open(CURATED, "w") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False, default=str)
+
+
+def load_tree():
+    """Carrega context tree"""
+    if os.path.exists(CONTEXT_TREE):
+        with open(CONTEXT_TREE) as f:
+            return json.load(f)
+    return {
+        "people": {},
+        "projects": {},
+        "tools": {},
+        "decisions": [],
+        "lessons": [],
+        "credentials": {},
+        "workflows": {},
+        "last_updated": None
+    }
+
+
+def save_tree(tree):
+    """Salva context tree"""
+    tree["last_updated"] = datetime.now().isoformat()
+    with open(CONTEXT_TREE, "w") as f:
+        json.dump(tree, f, indent=2, ensure_ascii=False, default=str)
+
+
+def auto_categorize(text):
+    """Categoriza automaticamente o conhecimento"""
+    text_lower = text.lower()
+    
+    # Pessoas
+    people_keywords = ["zica", "eduardo", "helber", "tiago", "caio", "elber"]
+    for p in people_keywords:
+        if p in text_lower:
+            return "people", p
+    
+    # Projetos
+    project_keywords = {
+        "polymarket": "polymarket", "poly": "polymarket",
+        "dashboard": "dashboard", "titanio dashboard": "dashboard",
+        "gospia": "gospia", "manda a nota": "mandaanota",
+        "comfyui": "comfyui", "flux": "comfyui",
+        "titanio media": "titanio-media", "media": "titanio-media",
+        "instagram": "instagram", "insta": "instagram",
+        "paperclip": "paperclip", "hiclaw": "hiclaw",
+        "memory": "memory-system", "memória": "memory-system",
+        "enem": "enem-game", "voxdescriber": "voxdescriber",
+        "scraper": "scraper", "browser": "browser",
+        "n8n": "n8n", "workflow": "n8n",
+        "gold digger": "gold-digger",
+    }
+    for kw, proj in project_keywords.items():
+        if kw in text_lower:
+            return "projects", proj
+    
+    # Ferramentas
+    tool_keywords = ["ollama", "playwright", "whisper", "ffmpeg", "pillow", "moviepy"]
+    for t in tool_keywords:
+        if t in text_lower:
+            return "tools", t
+    
+    # Decisões
+    decision_words = ["decidiu", "decidimos", "regra", "nunca", "sempre", "proibido"]
+    for d in decision_words:
+        if d in text_lower:
+            return "decisions", None
+    
+    # Lições
+    lesson_words = ["aprendi", "lição", "erro", "corrigir", "fix", "bug"]
+    for l in lesson_words:
+        if l in text_lower:
+            return "lessons", None
+    
+    return "general", None
+
+
+# ============================================================
+# COMANDOS
+# ============================================================
+
+def cmd_query(query):
+    """Busca semântica na memória"""
+    print(f"🔍 Buscando: '{query}'\n")
+    
+    # 1. Memory Engine (vetorial)
+    engine_result = run_engine("search", query)
+    
+    # 2. Memory Graph (entidades)
+    graph_result = run_graph("query", query)
+    
+    # 3. Curated knowledge
+    curated = load_curated()
+    curated_matches = []
+    query_lower = query.lower()
+    for entry in curated.get("entries", []):
+        if any(w in entry.get("text", "").lower() for w in query_lower.split()):
+            curated_matches.append(entry)
+    
+    # Output
+    print("📊 MEMORY ENGINE (busca semântica):")
+    print(engine_result[:800] if engine_result else "  Sem resultados")
+    
+    if graph_result and "conexões" in graph_result:
+        print("\n🕸️ MEMORY GRAPH (entidades):")
+        print(graph_result[:400])
+    
+    if curated_matches:
+        print(f"\n📚 CONHECIMENTO CURADO ({len(curated_matches)} matches):")
+        for cm in curated_matches[:3]:
+            print(f"  [{cm.get('topic','?')}] {cm.get('text','')[:150]}")
+            print(f"  📅 {cm.get('date','?')}")
+            print()
+
+
+def cmd_curate(knowledge):
+    """Guarda novo conhecimento organizado"""
+    category, subtopic = auto_categorize(knowledge)
+    
+    curated = load_curated()
+    tree = load_tree()
+    
+    entry = {
+        "text": knowledge,
+        "category": category,
+        "subtopic": subtopic,
+        "date": datetime.now().strftime("%Y-%m-%d %H:%M"),
+        "id": len(curated.get("entries", []))
+    }
+    
+    # Adicionar ao curated
+    if "entries" not in curated:
+        curated["entries"] = []
+    curated["entries"].append(entry)
+    
+    # Adicionar ao context tree
+    if category == "people" and subtopic:
+        if subtopic not in tree.get("people", {}):
+            tree["people"][subtopic] = []
+        tree["people"][subtopic].append({"text": knowledge, "date": entry["date"]})
+    elif category == "projects" and subtopic:
+        if subtopic not in tree.get("projects", {}):
+            tree["projects"][subtopic] = []
+        tree["projects"][subtopic].append({"text": knowledge, "date": entry["date"]})
+    elif category == "tools" and subtopic:
+        if subtopic not in tree.get("tools", {}):
+            tree["tools"][subtopic] = []
+        tree["tools"][subtopic].append({"text": knowledge, "date": entry["date"]})
+    elif category == "decisions":
+        tree.setdefault("decisions", []).append({"text": knowledge, "date": entry["date"]})
+    elif category == "lessons":
+        tree.setdefault("lessons", []).append({"text": knowledge, "date": entry["date"]})
+    
+    # Adicionar ao tópico no curated
+    topic_key = subtopic or category
+    if topic_key not in curated.get("topics", {}):
+        curated["topics"][topic_key] = 0
+    curated["topics"][topic_key] = curated["topics"].get(topic_key, 0) + 1
+    
+    save_curated(curated)
+    save_tree(tree)
+    
+    total = len(curated["entries"])
+    print(f"✅ Curado: [{category}/{subtopic or 'geral'}] ({total} total)")
+    print(f"   '{knowledge[:80]}{'...' if len(knowledge)>80 else ''}'")
+
+
+def cmd_recall():
+    """Mostra contexto recente"""
+    print("🧠 RECALL — Últimos 3 dias\n")
+    
+    today = datetime.now()
+    for i in range(3):
+        date = today - timedelta(days=i)
+        date_str = date.strftime("%Y-%m-%d")
+        daily = os.path.join(MEMORY_DIR, f"{date_str}.md")
+        
+        if os.path.exists(daily):
+            with open(daily) as f:
+                content = f.read()
+            lines = content.strip().split("\n")
+            print(f"📅 {date_str} ({len(lines)} linhas)")
+            # Primeiras 5 linhas relevantes
+            for line in lines[:5]:
+                if line.strip():
+                    print(f"   {line.strip()[:100]}")
+            print()
+    
+    # Curated recente
+    curated = load_curated()
+    recent = [e for e in curated.get("entries", []) 
+              if e.get("date", "").startswith(today.strftime("%Y-%m"))]
+    if recent:
+        print(f"📚 {len(recent)} conhecimentos curados este mês")
+        for e in recent[-5:]:
+            print(f"   [{e.get('category','?')}] {e.get('text','')[:80]}")
+
+
+def cmd_status():
+    """Status completo da memória"""
+    print("🧠 TITANIO MEMORY — STATUS\n")
+    
+    # Engine
+    engine_stats = run_engine("stats")
+    print("📊 Memory Engine:")
+    for line in engine_stats.strip().split("\n")[:5]:
+        print(f"   {line}")
+    
+    # Graph
+    graph_stats = run_graph("stats")
+    if graph_stats:
+        print(f"\n🕸️ Memory Graph:")
+        for line in graph_stats.strip().split("\n")[:5]:
+            print(f"   {line}")
+    
+    # Curated
+    curated = load_curated()
+    entries = len(curated.get("entries", []))
+    topics = len(curated.get("topics", {}))
+    print(f"\n📚 Curated Knowledge: {entries} entries, {topics} tópicos")
+    if curated.get("topics"):
+        top = sorted(curated["topics"].items(), key=lambda x: x[1], reverse=True)[:5]
+        for t, c in top:
+            print(f"   {t}: {c} entries")
+    
+    # Context tree
+    tree = load_tree()
+    print(f"\n🌳 Context Tree:")
+    print(f"   Pessoas: {len(tree.get('people', {}))}")
+    print(f"   Projetos: {len(tree.get('projects', {}))}")
+    print(f"   Ferramentas: {len(tree.get('tools', {}))}")
+    print(f"   Decisões: {len(tree.get('decisions', []))}")
+    print(f"   Lições: {len(tree.get('lessons', []))}")
+    
+    # Score
+    score = run_score("report")
+    if score:
+        print(f"\n📊 Memory Score:")
+        for line in score.strip().split("\n"):
+            print(f"   {line}")
+    
+    # SESSION-CONTEXT
+    sc = os.path.join(WORKSPACE, "SESSION-CONTEXT.md")
+    if os.path.exists(sc):
+        import time
+        mtime = os.path.getmtime(sc)
+        age_min = (time.time() - mtime) / 60
+        size = os.path.getsize(sc)
+        print(f"\n📄 SESSION-CONTEXT.md: {size:,} bytes, {age_min:.0f}min atrás")
+
+
+def cmd_learn(lesson):
+    """Registra lição aprendida"""
+    cmd_curate(f"LIÇÃO: {lesson}")
+    
+    # Também salvar no LESSONS.md
+    lessons_file = os.path.join(WORKSPACE, "LESSONS.md")
+    with open(lessons_file, "a") as f:
+        f.write(f"\n- **{datetime.now().strftime('%d/%m/%Y')}:** {lesson}\n")
+    
+    print(f"📝 Também salvo em LESSONS.md")
+
+
+def cmd_who(person):
+    """Info sobre pessoa"""
+    print(f"👤 Buscando info sobre: '{person}'\n")
+    
+    # Graph
+    graph = run_graph("query", person)
+    if graph:
+        print("🕸️ Conexões:")
+        print(graph[:500])
+    
+    # Curated
+    tree = load_tree()
+    person_lower = person.lower()
+    if person_lower in tree.get("people", {}):
+        entries = tree["people"][person_lower]
+        print(f"\n📚 Conhecimento curado ({len(entries)} entries):")
+        for e in entries[-5:]:
+            print(f"   {e.get('text','')[:100]}")
+    
+    # Engine search
+    engine = run_engine("search", person)
+    if engine:
+        print(f"\n📊 Memórias relacionadas:")
+        print(engine[:400])
+
+
+def cmd_project(name):
+    """Info sobre projeto"""
+    print(f"📁 Projeto: '{name}'\n")
+    
+    # Context tree
+    tree = load_tree()
+    name_lower = name.lower().replace(" ", "-")
+    for key in tree.get("projects", {}):
+        if name_lower in key or key in name_lower:
+            entries = tree["projects"][key]
+            print(f"📚 Conhecimento curado ({len(entries)} entries):")
+            for e in entries[-5:]:
+                print(f"   {e.get('text','')[:100]}")
+            break
+    
+    # Engine
+    engine = run_engine("search", name)
+    if engine:
+        print(f"\n📊 Memórias:")
+        print(engine[:600])
+
+
+def cmd_tree():
+    """Mostra context tree"""
+    tree = load_tree()
+    
+    print("🌳 CONTEXT TREE\n")
+    
+    sections = [
+        ("👤 Pessoas", "people"),
+        ("📁 Projetos", "projects"),
+        ("🛠️ Ferramentas", "tools"),
+    ]
+    
+    for title, key in sections:
+        items = tree.get(key, {})
+        if items:
+            print(f"{title} ({len(items)}):")
+            for name, entries in sorted(items.items()):
+                latest = entries[-1].get("text", "")[:60] if entries else ""
+                print(f"   {name} ({len(entries)}) — {latest}")
+            print()
+    
+    decisions = tree.get("decisions", [])
+    if decisions:
+        print(f"⚖️ Decisões ({len(decisions)}):")
+        for d in decisions[-5:]:
+            print(f"   {d.get('text','')[:80]}")
+        print()
+    
+    lessons = tree.get("lessons", [])
+    if lessons:
+        print(f"📝 Lições ({len(lessons)}):")
+        for l in lessons[-5:]:
+            print(f"   {l.get('text','')[:80]}")
+
+
+def cmd_test():
+    """Testa memória"""
+    result = subprocess.run(
+        ["bash", os.path.join(BIN, "tita-memory-test.sh")],
+        capture_output=True, text=True, cwd=WORKSPACE
+    )
+    print(result.stdout)
+
+
+def cmd_refresh():
+    """Reindexa tudo"""
+    print("🔄 Reindexando Memory Engine...")
+    print(run_engine("index"))
+    print("\n🔄 Reconstruindo Graph...")
+    print(run_graph("build"))
+    print("\n✅ Refresh completo!")
+
+
+def cmd_score():
+    """Mostra score"""
+    print(run_score("report"))
+
+
+# ============================================================
+# MAIN
+# ============================================================
+
+def main():
+    if len(sys.argv) < 2:
+        print(__doc__)
+        return
+    
+    cmd = sys.argv[1]
+    args = " ".join(sys.argv[2:]) if len(sys.argv) > 2 else ""
+    
+    commands = {
+        "query": lambda: cmd_query(args),
+        "q": lambda: cmd_query(args),
+        "curate": lambda: cmd_curate(args),
+        "c": lambda: cmd_curate(args),
+        "recall": cmd_recall,
+        "status": cmd_status,
+        "s": cmd_status,
+        "learn": lambda: cmd_learn(args),
+        "l": lambda: cmd_learn(args),
+        "who": lambda: cmd_who(args),
+        "project": lambda: cmd_project(args),
+        "p": lambda: cmd_project(args),
+        "tree": cmd_tree,
+        "t": cmd_tree,
+        "test": cmd_test,
+        "refresh": cmd_refresh,
+        "score": cmd_score,
+    }
+    
+    if cmd in commands:
+        commands[cmd]()
+    else:
+        print(f"❌ Comando desconhecido: {cmd}")
+        print(__doc__)
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,31 @@
+# VoxDescriber - Dependências
+# Python 3.11+
+
+# VAD e Transcrição
+whisperx>=3.1.1
+torch>=2.1.0
+torchaudio>=2.1.0
+
+# Visão e LLM (via Ollama local)
+ollama>=0.1.7
+Pillow>=10.0.0
+
+# TTS - Piper (instalado via binário, não pip)
+# https://github.com/rhasspy/piper
+# Instalar separadamente: pip install piper-tts
+piper-tts>=1.2.0
+
+# Mixagem de áudio/vídeo
+ffmpeg-python>=0.2.0
+
+# Interface gráfica
+PySide6>=6.6.0
+
+# Utilitários
+numpy>=1.24.0
+scipy>=1.11.0
+soundfile>=0.12.1
+librosa>=0.10.0
+tqdm>=4.65.0
+pydantic>=2.0.0
+loguru>=0.7.0

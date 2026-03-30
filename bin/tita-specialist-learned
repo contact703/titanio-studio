@@ -1,0 +1,103 @@
+#!/bin/bash
+# TITA SPECIALIST REAL-LEARNING
+# Roda quando especialista completa tarefa
+# Atualiza memory.json e lessons.json com aprendizado real
+
+SPECIALIST_ID="$1"
+TASK_ID="$2"
+LEARNING="$3"
+TIMESTAMP=$(date -u '+%Y-%m-%dT%H:%M:%SZ')
+
+MEMORY_DIR="/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/pasta-do-tita/memoria-especialistas/$SPECIALIST_ID"
+MEMORY_FILE="$MEMORY_DIR/memory.json"
+LESSONS_FILE="$MEMORY_DIR/lessons.json"
+
+if [ ! -d "$MEMORY_DIR" ]; then
+    echo "❌ Especialista não encontrado: $SPECIALIST_ID"
+    exit 1
+fi
+
+# 1. Atualizar memory.json - adicionar ao knowledge
+echo "📝 Atualizando memory.json..."
+
+python3 << PYTHON
+import json
+from pathlib import Path
+from datetime import datetime
+
+memory_file = Path("$MEMORY_FILE")
+learning = """$LEARNING"""
+
+if memory_file.exists():
+    memory = json.loads(memory_file.read_text())
+else:
+    memory = {
+        "specialistId": "$SPECIALIST_ID",
+        "knowledge": [],
+        "recentTasks": [],
+        "lastLearned": None
+    }
+
+# Adicionar aprendizado ao knowledge
+if learning not in memory.get("knowledge", []):
+    memory["knowledge"].append(learning)
+
+# Registrar tarefa
+memory["recentTasks"].append({
+    "id": "$TASK_ID",
+    "learned": learning,
+    "date": "$TIMESTAMP"
+})
+
+# Manter só últimas 20 tarefas
+memory["recentTasks"] = memory["recentTasks"][-20:]
+
+# Atualizar timestamp
+memory["lastLearned"] = "$TIMESTAMP"
+
+# Salvar
+memory_file.write_text(json.dumps(memory, indent=2))
+print(f"✅ Memory atualizado com aprendizado: {learning[:60]}...")
+
+PYTHON
+
+# 2. Registrar em lessons.json
+echo "📚 Registrando lição..."
+
+python3 << PYTHON
+import json
+from pathlib import Path
+from datetime import datetime
+
+lessons_file = Path("$LESSONS_FILE")
+learning = """$LEARNING"""
+
+if lessons_file.exists():
+    lessons = json.loads(lessons_file.read_text())
+else:
+    lessons = {
+        "specialistId": "$SPECIALIST_ID",
+        "lessonsLearned": []
+    }
+
+# Adicionar lição
+lessons["lessonsLearned"].append({
+    "id": f"lesson-{len(lessons['lessonsLearned']) + 1}",
+    "task": "$TASK_ID",
+    "title": learning[:100],
+    "description": learning,
+    "learnedAt": "$TIMESTAMP",
+    "applicable": True,
+    "priority": "medium"
+})
+
+# Salvar
+lessons_file.write_text(json.dumps(lessons, indent=2))
+print(f"✅ Lição registrada")
+
+PYTHON
+
+# 3. Log
+echo "[$(date '+%Y-%m-%d %H:%M:%S')] ✅ [$SPECIALIST_ID] Aprendizado capturado: $LEARNING" >> /tmp/tita-specialist-learning.log
+
+echo "✅ [$SPECIALIST_ID] Aprendizado registrado em memory.json e lessons.json"

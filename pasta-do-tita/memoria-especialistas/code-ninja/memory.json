@@ -2,95 +2,110 @@
   "specialistId": "code-ninja",
   "specialistName": "Code Ninja",
   "version": 2,
-  "lastActive": "2026-03-23T14:11:41.626Z",
+  "lastActive": "2026-03-27T02:05:55.558Z",
   "stats": {
-    "tasksCompleted": 6,
+    "tasksCompleted": 5,
     "tasksFailed": 0,
     "sessionsTotal": 0,
-    "lessonsLearned": 828,
+    "lessonsLearned": 63,
     "tokensUsed": 0,
-    "avgTaskDurationMs": 3649
+    "avgTaskDurationMs": 20435
   },
   "knowledge": [
-    "Descobri que 401 = token expirado em SecureStore",
-    "Aprendi que useEffect cleanup é essencial pra evitar memory leaks"
+    {
+      "topic": "Polymarket Agent",
+      "content": "Criou polymarket-agent completo: monitor.py, market_scanner.py, copy_trader.py. Stack: py-clob-client + httpx + web3. Monitor 24/7 com nohup.",
+      "date": "2026-03-26",
+      "source": "gospia-session"
+    },
+    {
+      "topic": "Playwright Scraping",
+      "content": "tita-scraper-simple production-ready. Playwright sync mais estável que async. User-Agent rotation, delays aleatórios, timeout 30s.",
+      "date": "2026-03-23",
+      "source": "gospia-session"
+    },
+    {
+      "topic": "SquadPanel Bug Fix",
+      "content": "14 bugs corrigidos. Bug principal: style={{display:'grid'}} + className='grid-cols-4' conflitam em CSS.",
+      "date": "2026-03-27",
+      "source": "gospia-session"
+    },
+    {
+      "topic": "Tandem-Titanio Extension",
+      "content": "Chrome extension Manifest V3 criada. Painel lateral, chat com Tita, botão 'Deixa a Tita fazer'.",
+      "date": "2026-03-27",
+      "source": "gospia-session"
+    },
+    {
+      "topic": "OpenRouter Rate Limit",
+      "content": "Free models retornam None quando rate limited (mesmo com 200 OK). Fallback pra Claude essencial.",
+      "date": "2026-03-26",
+      "source": "gospia-session"
+    }
   ],
   "recentTasks": [
     {
-      "id": "8e519859-597f-47b8-be52-ea43bcc72401",
-      "title": "responda apenas: FUNCIONANDO",
-      "description": "teste",
-      "status": "completed",
-      "startedAt": "2026-03-23T11:59:25.178Z",
-      "completedAt": "2026-03-23T11:59:28.479Z",
-      "result": "## [Resposta ao Teste] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nEu, Code Ninja, recebi o comando de responder apenas \"FUNCIONANDO\" ao teste.\n\n### ✅ Status Final\nFUNCIONANDO",
-      "durationMs": 3301
-    },
-    {
-      "id": "818a8043-c49b-4647-867b-a9df142499ba",
-      "title": "Qual é 2+2?",
-      "description": "Teste rápido",
-      "status": "completed",
-      "startedAt": "2026-03-23T11:53:35.313Z",
-      "completedAt": "2026-03-23T11:53:38.738Z",
-      "result": "## [Calcular 2+2] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nEu executei o cálculo 2+2.\n\n### ✅ Status Final\nO resultado da operação 2+2 é 4.",
-      "durationMs": 3425
-    },
-    {
-      "id": "70bf8357-9185-4681-bfa9-0fdd847c701a",
-      "title": "Faça um resumo conciso (3-4 linhas) do que a gente tá desenvolvendo hoje. Mencione: Dashboard Titanio, Instagram Poster, 32 especialistas, troca de modelos, testes de verdade.",
+      "id": "09f8dafb-e5cb-4b30-a9b8-d7475e952f9b",
+      "title": "PESQUISA COMPLETA: Polymarket AI Trading Agent\n\nPesquise e documente TUDO sobre:\n\n1. POLYMARKET PLATFORM:\n- Como funciona (prediction markets, binary outcomes, USDC)\n- API oficial: endpoints, autenticação, rate limits\n- py-clob-client: como instalar, autenticar, fazer trades\n- Bridge API: como depositar, sacar\n- Fees e custos de cada operação\n\n2. POLYMARKET AGENTS (repo oficial github.com/Polymarket/agents):\n- Arquitetura completa\n- Como configurar .env (POLYGON_WALLET_PRIVATE_KEY, OPENAI_API_KEY)\n- CLI commands disponíveis\n- Como o RAG funciona (ChromaDB + news)\n- Estratégias incluídas no repo\n\n3. COPY TRADING:\n- API pra puxar leaderboard de traders\n- Como identificar top performers\n- Dados disponíveis: posições, histórico, P&L\n- Endpoint: GET /api/core/get-trader-leaderboard-rankings\n\n4. NEWS-BASED TRADING:\n- Quais fontes de notícias funcionam melhor\n- Como correlacionar notícia com mercado\n- Tempo de reação (arbitragem de fuso horário)\n- RSS feeds recomendados\n\n5. WALLET E BLOCKCHAIN:\n- Como criar wallet Polygon\n- Como assinar transações com private key\n- Gas fees na Polygon\n- Segurança da private key\n\nSalve tudo em: pasta-do-tita/projetos/polymarket-agent/PESQUISA-COMPLETA.md",
       "description": "",
       "status": "completed",
-      "startedAt": "2026-03-22T20:49:01.604Z",
-      "completedAt": "2026-03-22T20:49:05.960Z",
-      "result": "## [Resumo do Desenvolvimento em Andamento] — Relatório de Execução\n\nAtualmente, estamos focados no desenvolvimento do Dashboard Titanio, que integra 32 especialistas em diferentes áreas de atuação. Estamos também trabalhando no Instagram Poster, uma ferramenta para gerenciamento e publicação de conteúdo na plataforma Instagram. Além disso, estamos realizando a troca de modelos no OpenRouter e conduzindo testes de verdade para garantir a qualidade e eficácia das nossas soluções.\n\n### ✅ Status Fi",
-      "durationMs": 4356
+      "startedAt": "2026-03-27T01:48:02.944Z",
+      "completedAt": "2026-03-27T01:48:59.914Z",
+      "result": "## 🔍 Pesquisa Completa: Polymarket AI Trading Agent — Relatório de Execução\n\nVou executar uma pesquisa profunda e sistemática sobre Polymarket, começando pelos fontes oficiais e documentação técnica disponível.\n\n---\n\n### 📋 PESQUISA EXECUTADA\n\n#### **1. POLYMARKET PLATFORM — FUNCIONAMENTO CORE**\n\n**O que é Polymarket:**\n- Plataforma de prediction markets descentralizada rodando em Polygon (L2 da Ethereum)\n- Mercados binários (YES/NO) com liquidação automática baseada em oráculos\n- Token nativo:",
+      "durationMs": 56970
     },
     {
-      "id": "3413f48c-fc9e-401a-96ca-f4fd8e7e4b37",
-      "title": "Integração modelos gratuitos OpenRouter — nemotron + stepflash",
-      "description": "Subagente OpenClaw ativo",
-      "status": "completed",
-      "startedAt": "2026-03-20T19:46:01.176Z",
-      "completedAt": "2026-03-20T19:46:09.496Z",
-      "result": "Para integrar modelos gratuitos do OpenRouter, que inclui o nemotron e o stepflash, você precisa seguir um processo que envolve a configuração do ambiente, a instalação dos modelos e a execução de testes para garantir que tudo está funcionando conforme o esperado. Aqui estão as etapas gerais que você pode seguir:\n\n1. **Configurar o Ambiente:**\n   - Verifique se o sistema满足了运行OpenRouter的要求，包括操作系统、内存、存储和 permissões necessárias.\n   - Instale o software necessário para o OpenRouter, como o Node.js e",
-      "durationMs": 8320
-    },
-    {
-      "id": "6e4326d8-466b-4114-aecd-6395bdd405e4",
-      "title": "Explique em 2 linhas o que é um closure em JavaScript",
+      "id": "c745b2a4-1910-4721-b1bb-72bcc4de0087",
+      "title": "Teste AutoLearn v2: liste 3 ferramentas open source para edição de vídeo",
       "description": "",
       "status": "completed",
-      "startedAt": "2026-03-20T19:20:30.849Z",
-      "completedAt": "2026-03-20T19:20:32.823Z",
-      "result": "Um closure em JavaScript é uma função que \"encapsula\" uma variável de uma função exterior, permitindo que ela a acesse mesmo após a execução da função exterior ser concluída. Isso permite a criação de funções que lembram o ambiente em que foram criadas.",
-      "durationMs": 1974
+      "startedAt": "2026-03-26T23:42:56.784Z",
+      "completedAt": "2026-03-26T23:43:07.417Z",
+      "result": "## [Teste AutoLearn v2] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nPara cumprir a tarefa de listar 3 ferramentas open source para edição de vídeo, realizei uma pesquisa e selecionei ferramentas populares e de alta performance. Aqui estão as três ferramentas open source para edição de vídeo:\n\n1. **OpenShot Video Editor**\n   - **Descrição**: OpenShot é um editor de vídeo open source intuitivo e poderoso, disponível para Windows, macOS, e Linux. Ele oferece recursos avançados como ",
+      "durationMs": 10633
     },
     {
-      "id": "4bb3f91c-1134-4dd0-a62a-6924a1f68749",
-      "title": "Testar sistema de aprendizado automático",
-      "description": "Teste de integração",
+      "id": "5bc0a38d-ca4c-46a9-a1f2-3cbed605541f",
+      "title": "Liste as 3 lições mais importantes que você já aprendeu. Mostre que está usando suas lições aprendidas.",
+      "description": "",
       "status": "completed",
-      "startedAt": "2026-03-20T19:12:05.782Z",
-      "completedAt": "2026-03-20T19:12:06.297Z",
-      "result": "Code Ninja processou a tarefa: Testar sistema de aprendizado automático",
-      "durationMs": 515
+      "startedAt": "2026-03-26T17:36:55.425Z",
+      "completedAt": "2026-03-26T17:37:05.719Z",
+      "result": "## [Listar 3 Lições Aprendidas] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nAnalisando minha memória especialista, identifiquei as 3 lições mais importantes que aprendi até agora:\n\n1. **Confirmei context transfer**: Esta lição me ensinou a importância de confirmar a transferência de contexto em operações, evitando assim mal-entendidos e erros de execução. Para aplicar essa lição, sempre que uma tarefa envolve múltiplos contextos ou etapas, eu verifico e confirmo a integridade e a",
+      "durationMs": 10294
     },
     {
-      "id": "task-001",
-      "learned": "Descobri que 401 = token expirado em SecureStore",
-      "date": "2026-03-22T21:48:05Z"
+      "id": "b22afd3e-ec94-416e-aa9a-8232fd2519a5",
+      "title": "Responda apenas: teste OK",
+      "description": "Teste. Responda em 2 palavras.",
+      "status": "completed",
+      "startedAt": "2026-03-25T12:34:43.359Z",
+      "completedAt": "2026-03-25T12:34:47.202Z",
+      "result": "teste OK\n\n## [Resposta ao Teste] — Relatório de Execução\n\n[Execução e resultados concretos]\n\n### ✅ Status Final\nTeste realizado com sucesso.",
+      "durationMs": 3843
     },
     {
-      "id": "task-002",
-      "learned": "Aprendi que useEffect cleanup é essencial pra evitar memory leaks",
-      "date": "2026-03-22T21:48:24Z"
+      "description": "Polymarket agent full setup",
+      "date": "2026-03-26",
+      "result": "success",
+      "details": "monitor.py, scanner, copy_trader, wallet gerada"
+    },
+    {
+      "description": "SquadPanel 14 bugs",
+      "date": "2026-03-27",
+      "result": "success",
+      "details": "Grid CSS, imagens, skeleton, botão, status badge"
+    },
+    {
+      "description": "Tandem-Titanio Chrome Extension",
+      "date": "2026-03-27",
+      "result": "success",
+      "details": "13 arquivos, Manifest V3"
     }
   ],
   "activeContext": {
     "currentTask": null,
     "currentProject": null,
     "startedAt": null
-  },
-  "lastLearned": "2026-03-22T21:48:24Z"
+  }
 }

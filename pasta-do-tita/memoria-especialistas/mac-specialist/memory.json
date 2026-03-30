@@ -1,21 +1,73 @@
 {
   "specialistId": "mac-specialist",
-  "specialistName": "Mac Guardian",
+  "specialistName": "🖥️ Mac Specialist",
   "version": 2,
-  "lastActive": "2026-03-19T18:57:13.948Z",
+  "lastActive": "2026-03-28T01:50:00.000Z",
   "stats": {
-    "tasksCompleted": 0,
+    "tasksCompleted": 2,
     "tasksFailed": 0,
-    "sessionsTotal": 0,
-    "lessonsLearned": 2,
+    "sessionsTotal": 2,
+    "lessonsLearned": 5,
     "tokensUsed": 0,
     "avgTaskDurationMs": 0
   },
-  "knowledge": [],
-  "recentTasks": [],
+  "knowledge": [
+    "Mac Mini home: /Volumes/TITA_039/MAC_MINI_03/",
+    "IP local: 192.168.18.174",
+    "N8n porta: 5678, auth titanio/titanio2026",
+    "Backend porta: 4444",
+    "OS: Darwin arm64 (Apple Silicon)",
+    "RAM monitoring via N8n workflow (30min interval)",
+    "RAM CRÍTICO threshold: free pages < 50000",
+    {
+      "topic": "HD Queimado",
+      "content": "Tita_DEV_02 QUEIMOU. NUNCA referenciar. Volume correto: /Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/pasta-do-tita/",
+      "date": "2026-03-27",
+      "source": "gospia-session"
+    },
+    {
+      "topic": "Dashboard Portas",
+      "content": "Eduardo :4444, Helber :4445, Tiago :4446. Backend + Frontend por instância.",
+      "date": "2026-03-27",
+      "source": "gospia-session"
+    },
+    {
+      "topic": "RAM Alert",
+      "content": "RAM baixa (0.3GB livre). Chrome + Ollama + N8n consomem muito. Pode parar Ollama: pkill ollama",
+      "date": "2026-03-27",
+      "source": "gospia-session"
+    },
+    {
+      "topic": "Caffeinate",
+      "content": "Manter Mac acordado: nohup caffeinate -dims &>/dev/null &. Verificar com pgrep -x caffeinate.",
+      "date": "2026-03-27",
+      "source": "gospia-session"
+    },
+    {
+      "topic": "Backups",
+      "content": "Projetos: /Volumes/TITA_039/backup-projetos/. Apps: /Volumes/TITA_039/Titanio-Backup-2026/apps/. KidsHQ: /Volumes/TITA_039/backup-projetos/KidsHQ/",
+      "date": "2026-03-27",
+      "source": "gospia-session"
+    }
+  ],
+  "recentTasks": [
+    {
+      "date": "2026-03-15",
+      "task": "RAM monitoring — alertas de memória crítica",
+      "result": "Detectados free pages = 4360 (< 50000) — alerta disparado",
+      "project": "Infrastructure"
+    }
+  ],
   "activeContext": {
     "currentTask": null,
     "currentProject": null,
     "startedAt": null
+  },
+  "infrastructure": {
+    "mac_mini_path": "/Volumes/TITA_039/MAC_MINI_03/",
+    "local_ip": "192.168.18.174",
+    "n8n_port": 5678,
+    "backend_port": 4444,
+    "n8n_auth": "titanio/titanio2026"
   }
 }

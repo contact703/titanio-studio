@@ -1,0 +1,7 @@
+moviepy>=2.0
+pillow
+requests
+openai-whisper
+piper-tts
+edge-tts
+python-dotenv

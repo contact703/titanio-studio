@@ -1,0 +1,50 @@
+#!/bin/bash
+# TITA SPECIALIST MEMORY LOADER
+# Carrega memória do especialista ANTES de executar tarefa
+# Injeta conhecimento anterior no contexto
+
+SPECIALIST_ID="$1"
+
+MEMORY_FILE="/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/pasta-do-tita/memoria-especialistas/$SPECIALIST_ID/memory.json"
+
+if [ ! -f "$MEMORY_FILE" ]; then
+    echo "❌ Memória não encontrada: $SPECIALIST_ID"
+    exit 1
+fi
+
+python3 << PYTHON
+import json
+from pathlib import Path
+
+memory_file = Path("$MEMORY_FILE")
+memory = json.loads(memory_file.read_text())
+
+# Extrair conhecimento
+knowledge = memory.get("knowledge", [])
+recent_tasks = memory.get("recentTasks", [])[-5:]  # Últimas 5 tarefas
+
+# Montar contexto
+context = f"""
+[SPECIALIST MEMORY — {memory.get('specialistId', 'Unknown')}]
+
+KNOWLEDGE BASE (Aprendizados anteriores):
+"""
+
+if knowledge:
+    for i, k in enumerate(knowledge, 1):
+        context += f"{i}. {k}\n"
+else:
+    context += "(Nenhum aprendizado registrado ainda)\n"
+
+context += f"\nRECENT TASKS (Últimas execuções):\n"
+if recent_tasks:
+    for task in recent_tasks:
+        learned = task.get("learned", task.get("result", "N/A"))
+        context += f"- [{task.get('id', '?')}] {learned[:80]}\n"
+else:
+    context += "(Nenhuma tarefa anterior)\n"
+
+# Output
+print(context)
+
+PYTHON

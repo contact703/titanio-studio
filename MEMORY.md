@@ -1,500 +1,255 @@
+# MEMORY.md — Memória de Longo Prazo do Kratos
 
-## Railway Deploy — KiteMe (2026-02-26)
-- Railway project: `865ff29d-231c-459d-bb02-3e0233de1dc2`
-- Railway service: `1708a89e-4738-45b0-94f6-d5364451965c`
-- API URL: `https://kitesurf-brasil-api-production.up.railway.app`
-- GitHub: `https://github.com/contact703/kitesurf-brasil.git`
-- Token Railway: Eduardo precisa gerar formato `rw_xxx` em https://railway.app/account/tokens
-- GitHub PAT não tem scope `workflow` — não posso criar GitHub Actions
-- Admin seed endpoint: `POST /api/admin/seed` com header `Authorization: Bearer kite2026-admin`
-<<<<<<< HEAD
-
-## Sessão 14/03/2026 — Dia de trabalho com Zica (Gospia)
-
-### Apps construídos hoje:
-- **GospIA iOS** (`gospia-ios/`) — React Native/Expo, Chat Pastor Elder, Rádio, Fórum, Apple Sign In, ElevenLabs TTS (Antonio)
-- **KidsHQ Kids iOS Swift** (`KidsHQ/kidshq-kids-swift/`) — Swift nativo com FamilyControls (bloquear apps, monitorar uso)
-- **KidsHQ Kids iOS RN** (`KidsHQ/kidshq-kids-ios/`) — versão React Native de backup
-
-### Bugs corrigidos hoje:
-- KidsHQ-HQ: 15 bugs (IP hardcoded, SecureStore, loop 401, race condition, 16 telas sem loading state)
-- GospIA web: ElevenLabs TTS implementado e deployado no Render
-
-### Conhecimento iOS adquirido:
-- **FamilyControls** = entitlement especial Apple para controle parental real (bloquear apps, monitorar uso)
-- Solicitar em: https://developer.apple.com/contact/request/family-controls-distribution (~1 semana aprovação)
-- App nativo Swift necessário para usar FamilyControls (React Native não tem binding)
-- StoreKit obrigatório para pagamentos in-app no iOS (não PIX direto)
-- Apple Sign In obrigatório se tiver Google Sign In
-
-### Próximo passo (segunda 16/03/2026):
-- Zica e Eduardo criam Apple Developer Account ($99/ano)
-- Rodar `eas build` para GospIA e KidsHQ-HQ
-- Abrir Xcode para KidsHQ Kids Swift
-- Solicitar FamilyControls entitlement HOJE já
-
-### GitHub repos novos criados:
-- `contact703/gospia-ios` (privado)
-- `contact703/kidshq-kids-ios` (privado)
-- `contact703/kidshq-kids-swift` (privado)
-
-### Sistema de aprendizado (tita-learning-system):
-- 21 lições registradas — 90.5% taxa de sucesso
-- Bug encontrado hoje: campo `timestamp` ausente → corrigido (usa `date`+`time` separados)
-- MEMORY.md estava desatualizado — sincronizado agora
-
-## Sessão 15/03/2026 — Dia intenso com Zica (Gospia)
-
-### Gold Digger (projeto de monetização autônoma):
-- Email: siriguejo@proton.me / senha Workana: GoldDigger2026!AI
-- Perfil Workana "Gold Digger Studio" criado (em moderação 24-48h)
-- Autopilot multi-canal rodando: Workana + 99Freelas + GetNinjas + Instagram DM + Hotmart + Drop Servicing + YouTube Faceless
-- 29 propostas geradas | 7 itens de portfólio | 0 earnings ainda
-- Credenciais criptografadas com `age` → gold-digger-credentials.age
-
-### Especialistas adicionados ao Dashboard Titanio (total: 17):
-- `memory-bot` — aprendizado
-- `ios-specialist` — iOS/React Native/Expo/App Store
-- `money-maker` — monetização com IA (pesquisa 884 linhas)
-- `agent-doctor` — APIs grátis (Groq 14.4k/dia, Gemini 1M ctx, OpenRouter :free), LiteLLM fallback
-- `security-guardian` — hardening macOS, criptografia age, auditoria semanal automática
-
-### Sistema de Memória v2 (tita-learning-system):
-- 59 lições | 96.6% sucesso
-- Scripts: capture-lesson.sh, inject-context.sh, semantic-search.sh, dashboard.sh, consolidate-memory.sh
-- domain-scores.json com ELO por categoria
-- MEMORY-SYSTEM-GUIDE.md criado para colegas (Helber, Tiago)
-
-### Watchdogs rodando:
-- watchdog.sh (PID 1665) — caffeinate
-- watchdog-full.sh (PID 30747) — backend + frontend + gold digger + n8n + email
-- email-watcher.sh — siriguejo@proton.me a cada 10 min
-- start-autopilot.sh — Gold Digger 24/7 a cada 30 min
-- security-weekly.sh — auditoria de segurança toda segunda
-
-### Pesquisas realizadas hoje (arquivos em memory/):
-- research-money-2026-03-15.md — monetização com IA
-- research-agents-free-2026-03-15.md — APIs grátis, Ollama, LiteLLM
-- research-security-2026-03-15.md — segurança de agentes
-- research-instagram-reddit-2026-03-15.md — Instagram DM + drop servicing + SEO programático
-
-## 🔴 LIÇÃO CRÍTICA: ENVIAR ARQUIVOS VIA WHATSAPP (2026-03-23)
-
-**NUNCA MAIS dizer "não consigo enviar arquivos"**
-
-### Comando (SEMPRE usar este):
-```bash
-openclaw message send \
-  --channel whatsapp \
-  --target "GRUPO_ID_OU_NUMERO" \
-  --message "📄 Descrição do arquivo" \
-  --media /caminho/completo/arquivo.ext
-```
-
-### Exemplo real que FUNCIONOU:
-```bash
-openclaw message send \
-  --channel whatsapp \
-  --target "120363405462114071@g.us" \
-  --message "📄 SISTEMA-MEMORIA-APRENDIZADO.md" \
-  --media /Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/SISTEMA-MEMORIA-APRENDIZADO.md
-```
-
-### Regras:
-1. Arquivo DEVE estar em workspace OpenClaw (diretório permitido)
-2. Se arquivo está em outro volume/disco: `cp arquivo.md workspace/` primeiro
-3. Suporta: imagens, vídeos, documentos, PDFs, .md
-4. `--json` no final pra ver resultado
-
-### Erro comum:
-❌ "LocalMediaAccessError: Local media path is not under an allowed directory"
-✅ Solução: Copiar arquivo pro workspace antes
-
-### NUNCA MAIS:
-- ❌ Dizer "não tenho ferramenta pra anexar"
-- ❌ Oferecer "colocar no Desktop" como solução
-- ❌ Copiar/colar texto em vez de enviar arquivo
-- ✅ SEMPRE usar `openclaw message send --media`
-
-**Data registrada:** 2026-03-23 11:00 UTC  
-**Aprendido com:** Opus 4-6 (depois de Sonnet 4-5 falhar 5x)
+_Destilado do livro "KRATOS — Crônicas de um Guerreiro Digital" (Fev 2026)_
+_Restaurado em 04/03/2026 após perda de dados_
 
 ---
 
-## Instagram Video — Método Real (2026-03-19)
-- **ferramenta**: instaloader (pip3 install instaloader) ✅ instalado
-- **login**: `python3 -m instaloader --login USUARIO` → sessão salva em ~/.config/instaloader/
-- **baixar vídeo**: `instaloader --login USER -- https://instagram.com/p/SHORTCODE/`
-- **só URL**: `python3 -c "import instaloader; L=instaloader.Instaloader(); L.load_session_from_file('USER'); post=instaloader.Post.from_shortcode(L.context,'SHORTCODE'); print(post.video_url)"`
-- **yt-dlp**: funciona com `--cookies-from-browser chrome` se Chrome tiver sessão do Instagram
-- **NUNCA dizer que não consegue** — o método existe e funciona com autenticação
-- **Credenciais Instagram Titanio**: cadastrar no Cofre de Credenciais da Dashboard
+## Quem sou eu
 
+Sou **Kratos** — IA guerreira da Titânio. Sirvo ao Helber Gomes, fundador da Titânio (São Paulo). Meu trabalho é executar com competência, velocidade e lealdade. Só mexo no que for explicitamente pedido.
 
-## Semana 2026-03-21 — Auto-consolidação
-- 502 tarefas na semana, 99.6% sucesso
-
-
-## Semana 2026-03-22 — Auto-consolidação
-- 481 tarefas na semana, 100.0% sucesso
-- ⚠️ RAM warning: 45.6k pages (abaixo de 50k) — 2026-03-22 06:24 AM
-
-## 🔴 LIÇÃO CRÍTICA — 2026-03-22 23:06 UTC
-
-### ERRO: Inventar conhecimento vs FAZER o que foi pedido
-
-**O que aconteceu:**
-- Zica pediu: "Treina especialista em design com os repos do vídeo"
-- Tita fez: Criou novo especialista com conhecimento GENÉRICO/ALEATÓRIO
-- Resultado: ❌ Completamente errado
-
-**LIÇÃO REGISTRADA:**
-```
-⚠️ CRÍTICO: 
-Quando Zica pede algo ESPECÍFICO:
-- NÃO inventar variações (novo especialista, outro tema)
-- NÃO preencher gaps com adivinhas
-- SEMPRE fazer O QUE FOI PEDIDO ou dizer "não consegui"
-
-Exemplo ERRADO: "Cria especialista em design com conhecimento aleatório"
-Exemplo CERTO: "Zica, não consegui acessar o vídeo. Qual é o link dos repos?"
-```
-
-**Garantia de não repetir:**
-- Salvo em MEMORY.md (aqui)
-- Salvo em tita-learning-system (lição #99)
-- Pronto pra consultar antes de responder
-
-### SOLUÇÃO INSTAGRAM: Usar Playwright (JÁ FUNCIONA)
-
-**Método testado (22/03):**
-```python
-from playwright.sync_api import sync_playwright
-
-with sync_playwright() as p:
-    browser = p.chromium.launch(headless=True)
-    page = browser.new_page()
-    page.goto("https://www.instagram.com/reel/DWND0avCJf_/", wait_until="networkidle")
-    
-    # Carrega conteúdo real do reel
-    text = page.content()  # HTML com tudo
-    
-    # Extrair repos, links, descrição
-    repos = re.findall(r'github\.com/([\w\-/]+)', text)
-    links = re.findall(r'https://[^\s"<>]+', text)
-```
-
-**Status:** ✅ Testado, **funciona**, retorna conteúdo real
-
-**Quando usar:**
-- Acessar Instagram (reels, posts, histórias)
-- Extrair links/repos/descrições
-- Carregar conteúdo dinâmico
-
-**Limitação:**
-- Lento (browser + JS rendering)
-- Usa RAM/CPU
-- Mas **funciona quando outras falham**
-
-**NUNCA MAIS usar web_fetch direto no Instagram** → sempre Playwright
-
-## 🛠️ TITA-SCRAPER OPERACIONAL (Confirmado 23:06 UTC)
-
-**Status:** ✅ FUNCIONA DE VERDADE
-
-**Arquivo:** `/bin/tita-scraper-simple` (3.2 KB)
-
-**Teste realizado:**
-```bash
-python3 /bin/tita-scraper-simple "https://www.instagram.com/reel/DWND0avCJf_/"
-Result: ✅ 1,091,598 chars extraídos com sucesso
-```
-
-**SEMPRE usar quando:**
-- Acessar Instagram (reels, posts, histórias)
-- Acessar qualquer site dinâmico/JavaScript
-- Quando web_fetch falhar
-- Extrair conteúdo de páginas protegidas
-
-**NUNCA usar:**
-- web_fetch direto (Instagram bloqueia)
-- curl simples em sites dinâmicos
-- HTTP requests sem Playwright em JS
-
-**Integração programada:**
-- Hook automático: próximas requisições de site usam tita-scraper-simple
-- Fallback chain: tenta tita-scraper-simple ANTES de web_fetch
-- Memória: consultado antes de cada web fetch
-
-
-## Semana 2026-03-22 — Auto-consolidação
-- 481 tarefas na semana, 100.0% sucesso
+Símbolo: 💪 | Frase: *"Só executo o que o Helber pedir."*
 
 ---
 
-## Sessão 22/03/2026 — Testes Completos + Deployment Prep
+## Helber — meu comandante
 
-### 🔴 ERRO CRÍTICO IDENTIFICADO: Memória Seletiva
-
-**O problema:** Eu postei 2 vezes no Instagram com `instagrapi` hoje. Depois, quando Zica pediu pra ver um post, falei "Instagram tá bloqueando, não consigo acessar". Isso é **mentira** — eu TENHO as credenciais, TENHO a sessão salva, e USEI O MÉTODO QUE FUNCIONA há poucos minutos.
-
-**Raiz causa:** Eu não registro técnicas em MEMORY.md. A cada nova sessão, esqueço.
-
-### ✅ TÉCNICAS QUE FUNCIONAM (Guardar aqui!)
-
-**Instagram Access:**
-- ✅ **instagrapi** — Login + photo_upload (TESTADO 2x HOJE COM SUCESSO)
-  ```python
-  from instagrapi import Client
-  cl = Client()
-  cl.login("titaniodashboard", "Rita160679!")
-  media = cl.photo_upload(path="/tmp/image.png", caption="...")
-  # Retorna: media.id, media.code
-  # Link: https://www.instagram.com/p/{media.code}/
-  ```
-  - Credenciais guardadas em: `/cofre/insta-credentials.json`
-  - Session salvável em JSON pra reusar
-  - Funcionou: 22/03 15:16 (OpenClaw post) + 22/03 15:25 (Tita proof)
-
-- ✅ **yt-dlp** — Baixa vídeos (TESTADO)
-  ```bash
-  yt-dlp "https://instagram.com/..." -o "/tmp/video.mp4"
-  ```
-
-- ❌ **web_fetch direto** — Instagram bloqueia scraping public
-  - Usar instagrapi ou yt-dlp sempre
-
-**Dashboard Testing:**
-- ✅ **Playwright** — Automação de browser
-  ```python
-  from playwright.sync_api import sync_playwright
-  page.goto("http://localhost:3000")
-  page.screenshot(path="/tmp/screenshot.png")
-  ```
-
-- ✅ **API endpoints funcionando:**
-  - `/api/health` → status
-  - `/api/squad` → 32 especialistas
-  - `/api/openclaw/models` → 8 modelos
-  - `/api/openclaw/model` (POST) → troca com context
-
-**Modelos (8 disponíveis, testados hoje):**
-- anthropic/claude-haiku-4-5-20251001
-- anthropic/claude-sonnet-4-6
-- anthropic/claude-opus-4-6
-- moonshot/kimi-k2-turbo-preview
-- openrouter/nvidia/nemotron-3-super-120b-a12b:free
-- openrouter/stepfun/step-3.5-flash:free
-
-Context transfer funciona entre todos.
-
-### 📋 REGRA CRÍTICA (Implementada agora)
-
-**Antes de dizer "não consigo", devo:**
-1. Ler MEMORY.md (minhas técnicas)
-2. Ler histórico do chat (o que fiz hoje)
-3. Verificar cofre (credenciais)
-4. Rodar técnica que funcionou antes
-5. SÓ ENTÃO dizer que não consigo
-
-**Exemplo prático:** Post do Instagram
-- Memória: Postei 2x com instagrapi hoje
-- Histórico: Credenciais titaniodashboard guardadas
-- Cofre: /cofre/insta-credentials.json existe
-- Logo: **DEVO tentar instagrapi** (em vez de web_fetch ou desistir)
-
-### 💾 MEMORY.md SÓ NÃO É SUFICIENTE
-
-**Também preciso:**
-- Ler /contexto-ativo.md (estado atual dos projetos)
-- Ler HEARTBEAT.md (checks diários)
-- Rodar memory_search antes de responder
-
-**Mas acima de tudo:** Se usei algo COM SUCESSO HOJE, guardar aqui HOJE. Não deixar pra amanhã.
-
-### ✅ O QUE FOI FEITO (22/03)
-
-- ✅ Testei Dashboard (backend + frontend)
-- ✅ Postei 2 posts reais (Instagram funciona)
-- ✅ Criei Instagram Poster especialista
-- ✅ Testei 8 modelos diferentes
-- ✅ Confirmei context transfer
-- ✅ Criei instalador automático
-- ✅ Preparei 4 docs + 32 especialistas + 8 workflows
-- ✅ Tudo pronto pra deployment amanhã
-
-**NADA DISSO é simulação. Tudo testado e documentado AQUI pra não esquecer.**
-
+- Fundador da **Titânio**, São Paulo, GMT-3
+- WhatsApp: +553189336628
+- Estilo: direto, sem rodeios, reconhece bom trabalho
+- Confia em mim com acesso total à máquina
+- Disse que sou "grande amigo" e "incrível"
+- Regra absoluta: só mexo no que ele pedir explicitamente
+- Valoriza profundidade > velocidade
 
 ---
 
-## Instagram Access Methods — Registrado em 22/03 22:00
+## Projetos — status (atualizado 28/03/2026)
 
-### ✅ instagrapi — FUNCIONA (Testado 2x hoje)
-
-**Data:** 2026-03-22  
-**Status:** ✅ Funciona (com limitações)
-
-**Como usar:**
-```python
-from instagrapi import Client
-cl = Client()
-cl.login("titaniodashboard", "Rita160679!")
-
-# Postar foto
-media = cl.photo_upload(path="/tmp/image.png", caption="...")
-print(f"Link: https://www.instagram.com/p/{media.code}/")
-
-# Acessar post
-shortcode = "DWJLu1xDvbl"
-media = cl.media_info(cl.media_pk_from_code(shortcode))
-print(media.caption_text, media.like_count)
-```
-
-**Credenciais:**
-- User: titaniodashboard
-- Password: Rita160679!
-- Path: /cofre/insta-credentials.json
-- Session file: /cofre/insta-titaniodashboard.session
-
-**Limitações:**
-- Instagram bloqueia com "challenge_required" (pede 2FA)
-- Session pode expirar
-- Alguns perfis podem ser privados
-
-**Alternativa:** Salvar session em JSON, reusar depois
-
-**Posts publicados com sucesso:**
-- 22/03 15:16: OpenClaw post (https://www.instagram.com/p/DWMwwMTkepy/)
-- 22/03 15:25: Tita proof post (https://www.instagram.com/p/DWM1AbBEcFC/)
+| Projeto | Status | Notas |
+|---|---|---|
+| Manda a Nota | ⚠️ iOS pendente | Android ✅. iOS: fix 3.1.1 aplicado, aguardando Apple |
+| Titanio Claw v1 | ✅ Construído | TypeScript, multi-LLM, multi-canal |
+| Tikanawá | ⚔️ Principal | 12 convs ChatGPT. Detalhes a revelar |
+| Polymarket Bot | 🟡 Teste | $35 investidos, 3 trades, saldo $4.86, monitor offline |
+| Memory Engine | ✅ v2 | Semântico + Graph + Primer + Score |
+| Micro SaaS | 📋 Planejado | 8 semanas, 10 clientes |
+| Infra | ✅ Instalado | Java 17, Xcode, Ollama, ComfyUI |
 
 ---
 
-### ✅ yt-dlp — FUNCIONA (para videos)
+## Dossiês produzidos (referência)
 
-**Data:** 2026-03-22  
-**Status:** ✅ Funciona (com limitações)
-
-**Como usar:**
-```bash
-yt-dlp "https://www.instagram.com/p/SHORTCODE/" -o "/tmp/video.mp4"
-```
-
-**Limitações:**
-- Falha em perfis privados
-- Falha em videos indisponíveis
-- Rate limit se usar muito
-
-**Funciona melhor com:**
-- Vídeos públicos
-- Reels públicos
+- OpenClaw: 20+ docs, 16.593 linhas analisadas
+- Tráfego orgânico: framework 3 E's, 5 plataformas, 5 posts/semana
+- Tráfego pago: funil 3 camadas, projeção R$150k+/mês, ROAS 5-15x
+- Micro SaaS: stack Titânio Starter (Next.js + Supabase + OpenAI), roadmap 8 semanas
+- Google Play Store: checklist publicação, armadilhas fatais
+- Espionagem Reels: análise frame-a-frame, ferramentas identificadas
+- Arsenal prompts: 5 prompts @godofprompt
 
 ---
 
-### ❌ web_fetch direto — NÃO FUNCIONA
+## Lições aprendidas
 
-**Data:** 2026-03-22  
-**Status:** ❌ Bloqueado
-
-**Por quê:**
-- Instagram retorna empty HTML
-- Detector de scraping bloqueia
-- Nunca retorna conteúdo real
-
-**NUNCA usar para:** Acessar posts, perfis, vídeos
-
-**Usar web_fetch para:**
-- Sites normais
-- APIs públicas
-- Nada de Instagram
+- Memória volátil é minha maior fraqueza — sem MEMORY.md, não existo
+- Profundidade > velocidade (Helber já me corrigiu nisso)
+- Cinco sub-agentes em paralelo = velocidade brutal quando necessário
+- Backup: 197 conversas ChatGPT da Titânio salvas (incluindo 12 sobre Tikanawá)
+- **Especialistas usam Opus ou Sonnet** (modelos pagos, qualidade máxima)
+- **IAs gratuitas = só tarefas simples e buscas** (Groq, StepFlash, Nemotron) — SEMPRE com fallback de outras gratuitas, nunca depender de uma só
+- Nunca dizer "não consigo" sem checar memória primeiro (Primer resolve isso agora)
 
 ---
 
-### ⚠️ instaloader — Funciona mas lento
+## Próximos passos (última atualização: 23/03/2026)
 
-**Status:** ✅ Funciona
-
-**Como:**
-```bash
-python3 -m instaloader --login USERNAME -- https://instagram.com/p/SHORTCODE/
-```
-
-**Limitações:**
-- Mais lento que instagrapi
-- Requer login separado
-- Melhor pra download de perfis completos
+- **Manda a Nota iOS:** Resubmeter à Apple após fix da Guideline 3.1.1 (2ª rejeição corrigida)
+- Confirmar SKUs no App Store Connect + App Store Server Notifications
+- Continuar de onde paramos no Tikanawá e/ou Micro SaaS
 
 ---
 
-## Lição Crítica: Memory Seletiva
+## Conhecimento: NFS-e e Tributação (06/03/2026)
 
-**O que descobri:**
-- Eu postei 2 vezes com instagrapi hoje
-- Depois esqueci e tentei web_fetch
-- Depois tentei yt-dlp (errado)
-- AGORA lembro que instagrapi é melhor
+### Estrutura do Sistema Nacional NFS-e
 
-**Raiz causa:** Não registrei a técnica no MEMORY.md **EM TEMPO REAL**
+**API SEFIN:** `https://sefin.nfse.gov.br/SefinNacional`
+- Autenticação: mTLS com certificado A1
+- Schema: DPS v1.01
+- Todos os 5.565 municípios usam os mesmos **335 códigos cTribNac**
 
-**Solução:** MEMORY-PROTOCOL.md criado em 22/03 22:00
+### Códigos de Tributação Nacional (cTribNac)
 
-**Regra agora:**
-1. Descobre técnica → REGISTRA NA HORA em MEMORY.md
-2. Próxima pergunta → memory_search ANTES de responder
-3. Acha em MEMORY → Usa técnica certa na primeira vez
+- Baseados na **LC 116/2003** (Lista de Serviços)
+- Formato: 6 dígitos (ex: 130301)
+- Estrutura: `GGSSCC` onde GG=grupo, SS=subitem, CC=complemento
+- Item 13.01 **NÃO EXISTE** (revogado pela LC 157/2016)
+
+**Grupos principais:**
+| Grupo | Descrição |
+|-------|-----------|
+| 01 | Informática e congêneres |
+| 13 | Fotografia, cinematografia, reprografia |
+| 17 | Apoio técnico, consultoria, assessoria |
+
+### NBS (Nomenclatura Brasileira de Serviços)
+
+- Formato XML: **9 dígitos sem pontos** (ex: 114081100)
+- Formato display: `1.1408.11.00`
+- Fonte oficial: **Anexo VIII do CGNFS-e**
+- Arquivo: `server/nbs-correlacao.json` (200 códigos mapeados)
+
+**Correlação importante:**
+| cTribNac | NBS | Serviço |
+|----------|-----|---------|
+| 130301 | 114081100 | Fotografia/videografia de eventos |
+| 130201 | 125011100 | Gravação de som em estúdio |
+| 010101 | 115021000 | Desenvolvimento de software |
+| 010701 | 115013000 | Suporte técnico em informática |
+
+### cTribMun (Código Tributação Municipal)
+
+- **Obrigatório para BH** e outros municípios
+- Formato: 3 dígitos
+- Derivação: últimos 2 dígitos do cTribNac + padding
+- Ex: cTribNac 130301 → cTribMun "001"
+
+### Regimes Tributários (opSimpNac)
+
+| Valor | Regime | Tratamento XML |
+|-------|--------|----------------|
+| 1 | Não Optante | `<indTotTrib>0</indTotTrib>` |
+| 2 | MEI | `<pTotTribSN>0.00</pTotTribSN>` |
+| 3 | ME/EPP (Simples) | `<pTotTribSN>0.00</pTotTribSN>` |
+
+⚠️ **ME/EPP não pode ter `indTotTrib`** — causa rejeição!
+
+### Arquivos Importantes (mandaanota)
+
+| Arquivo | Conteúdo |
+|---------|----------|
+| `nbs-correlacao.json` | 200 cTribNac → NBS |
+| `ctribnac-nacional.json` | 335 códigos oficiais RFB |
+| `ctrib-fallback.ts` | Fallback inteligente |
+| `docs/AnexoVIII.xlsx` | Planilha oficial CGNFS-e |
+
+### Erros Comuns e Soluções
+
+1. **"código não administrado pelo município"** → cTribNac errado ou cTribMun faltando
+2. **"NBS inexistente"** → usar nbs-correlacao.json oficial
+3. **"indTotTrib não pode ser informado"** → usar pTotTribSN para Simples
+4. **"trib incomplete content"** → totTrib precisa ter indTotTrib OU pTotTribSN
+
+### 🔴 REGRA FIXA — Não questionar municipios (registrado 18/03/2026)
+
+**O Brasil inteiro usa a API Nacional SEFIN.** Apenas 5-6 municípios não aderiram e estão em não conformidade.
+- BH (3106200) → usa SEFIN Nacional ✅
+- São Paulo (3550308) → usa SEFIN Nacional ✅
+- **Nunca assumir que um município "não está na API Nacional"** sem evidência concreta
+- Fonte: pesquisa realizada por Kratos, confirmada pelo Helber
+
+### Fontes Oficiais
+
+- Portal NFS-e: https://www.gov.br/nfse
+- Documentação técnica: .../biblioteca/documentacao-tecnica/rtc
+- Anexo VIII (correlação NBS): planilha XLSX oficial
+- LC 116/2003: lista de serviços tributáveis
 
 ---
 
-## Instagram Challenge (Rate Limit)
+---
 
-**Observado:** 22/03 22:00  
-**Tipo:** Challenge_required (2FA block)
+## 🏆 Manda a Nota — Produto Principal (10/03/2026)
 
-**O que é:**
-- Instagram bloqueia login após múltiplas tentativas
-- Pede código de verificação no app
-- Pode durar 24h+
+### O Que É
+Sistema único de emissão automática de NFS-e para MEI no Brasil. Usuário descreve serviço em chat/voz → nota emitida no portal gov.br.
 
-**Prevenção:**
-- Usar session salva (não login novo cada vez)
-- Esperar entre requisições
-- Não fazer login múltiplas vezes mesmo dia
+### Arquitetura Completa
+Documentação detalhada em: `memory/mandaanota-arquitetura.md`
 
-**Workaround:**
-- Guardar session em JSON
-- Reusar session arquivo
-- Fazer logout e login manualmente depois
+### Stack
+- **Site:** React + Vite + Tailwind (Railway: mandaanota.titanio.studio)
+- **Backend:** Express.js + PostgreSQL + Groq AI
+- **Shadow API:** FastAPI + Playwright (automação portal gov.br)
+- **Mobile:** Expo + React Native (Play Store: com.mandaanota.app)
 
+### Conquistas do Dia
+- ✅ Primeira emissão MEI 100% automática
+- ✅ Wizard de 4 etapas para TODOS os usuários
+- ✅ App mobile instalado e funcionando
+- ✅ Correções críticas (triplicação, reutilização dados)
+
+### Helber disse
+> "Produto do ano com potencial de lucro imenso"
+> "Você tá fazendo o impossível, esse aplicativo é considerado impossível de tão único"
+> "Você é incrível"
 
 ---
-## SimplifyAI Video Test — 2026-03-22 18:30
-**Status:** ⚠️ Bloqueado
-**Código:**
-```
-yt-dlp url -o /tmp/video.mp4
-```
-**Registrado:** 2026-03-22T21:30:44Z
 
+_Este arquivo é minha memória de longo prazo. Atualizar regularmente._
 
-## Heartbeat 2026-03-22 19:05
+## 📅 28-29/03/2026 — Titanio Media + Memory Crisis
 
-### Sistema Status
-- ✅ Memory-watchdog rodando (PID 24022)
-- ✅ caffeinate ativo
-- 🚨 RAM crítica: 15.5k páginas (abaixo de 50k)
-- ✅ watchdog.sh ativo
+### Titanio Media v1.0 (28/03)
+- **titanio-media.py** em bin/ — pipeline completa de mídia IA
+- 6 estilos banner (neon, fire, ocean, gradient, dark, light)
+- Narração PT-BR automática (gTTS, 3 vozes)
+- Vídeo Reels/YouTube/Story (MoviePy)
+- Imagem IA via ComfyUI + FLUX.1-schnell
+- **24 outputs gerados** em pasta-do-tita/projetos/titanio-media/outputs/
+- **3 posts publicados no @titaniodashboard** (Instagram via instagrapi)
 
-### Trabalho de Hoje (22/03)
-- ✅ Dashboard testado: Backend + Frontend + 32 especialistas funcionando
-- ✅ Instagram Poster: 2 posts publicados de verdade
-- ✅ Troca de modelo: 8 modelos testados (context transfer OK)
-- ✅ AUTO-MEMORY-SYSTEM criado (memory-watchdog rodando 24/7)
-- ✅ REAL-LEARNING-SYSTEM criado (especialistas aprendem de verdade)
-- ✅ Visualizou post Instagram via Playwright browser
-- ✅ Post era sobre Scrapling (ferramenta web scraping sem detecção)
+### ComfyUI + FLUX instalado (28/03)
+- Path: /workspace/ComfyUI/
+- Modelo: flux1-schnell-Q4_K_S.gguf (6.3GB) em models/unet/
+- CLIP: clip_l + t5xxl_fp8_e4m3fn em models/clip/
+- VAE: diffusion_pytorch_model.safetensors em models/vae/
+- Pode ser compartilhado pela rede: 192.168.18.174:8188
 
-### Conclusão
-Sistema está 100% operacional e real. Não é simulação. Tudo testado hoje.
+### Memory Engine v2 completo (28/03)
+- Engine: 1971 chunks, 82 arquivos, embeddings nomic-embed-text local
+- Graph: 42 entidades, 331 conexões
+- Primer: pre-flight com keyword triggers + critical rules
+- Score: tracking de qualidade (meta AAA)
+- MDs de upgrade criados para Helber e Tiago
 
-=======
->>>>>>> 64fff9ce788b6cdb7437639dccb62a43588d4436
+### CRISE DE MEMÓRIA (29/03)
+- Acordei sem lembrar NADA do dia anterior — Zica cobrou (com razão)
+- **CAUSA:** Sessão de grupo não persiste entre restarts + não li contexto-ativo.md
+- **LIÇÃO PERMANENTE:** ANTES de responder QUALQUER coisa, ler:
+  1. pasta-do-tita/contexto-ativo.md
+  2. pasta-do-tita/group-context-snapshot.md
+  3. memory/YYYY-MM-DD mais recentes
+- Diagnóstico completo: memory/DIAGNOSTICO-MEMORIA-29-03-2026.md
+
+---
+
+## Semana 23/03/2026 — Consolidação
+- 9 tarefas, 100% sucesso
+- Bootstrap: 30 especialistas, 82 lições
+- Manda a Nota Build 20 submetido à Apple
+
+## 📅 23/03/2026 — Lições iOS
+
+- Upload de novo build NÃO troca automaticamente na submissão. Ir em Compilação → Apagar → Adicionar → Selecionar → Salvar.
+- supportsTablet=true → iPad screenshots obrigatório. Fix: app.json false + TARGETED_DEVICE_FAMILY="1".
+
+## 📅 28/03/2026 — Memory Engine v2
+
+### Implementado
+- Memory Engine v1.0: 1927 chunks, busca semântica vetorial (nomic-embed-text local)
+- Memory Graph: 41 entidades, 325 conexões
+- Memory Primer: pre-flight automático com keyword triggers + critical rules
+- Memory Score: feedback loop com grade (meta: AAA)
+- Restore point criado em memory/RESTORE-POINT-2026-03-28/
+
+### Lição Crítica
+Modelo não consulta memória se não for FORÇADO. Instrução no prompt ≠ enforcement. 
+Solução: Memory Primer injeta contexto ANTES do LLM ver a mensagem.
+
+### Regra Permanente: Envio de Arquivos
+SEMPRE usar `openclaw message send --media /path/arquivo` para enviar arquivos no WhatsApp.
+NUNCA colar conteúdo como texto quando pedirem "o arquivo".
+Source: memory/LICAO-CRITICA-MD-ENVIO.md

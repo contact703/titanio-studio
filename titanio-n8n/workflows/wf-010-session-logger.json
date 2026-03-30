@@ -1,0 +1,126 @@
+{
+  "name": "WF-010 · Session Logger",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "session-log",
+        "options": { "responseMode": "onReceived" }
+      },
+      "id": "webhook",
+      "name": "Webhook session-log",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "const d = $input.item.json;\nconst date = new Date().toISOString().split('T')[0];\nconst time = new Date().toLocaleTimeString('pt-BR', { timeZone: 'America/Sao_Paulo' });\n\n// Montar entrada para o arquivo daily\nconst entry = [\n  `\\n## Sessão ${time}`,\n  `**Duração:** ${d.duration_min || '?'}min`,\n  `**Tarefas:** ${(d.tasks || []).join(', ') || 'não especificado'}`,\n  `**Tokens usados:** ${d.tokens || 'n/d'}`,\n  d.outcome ? `**Resultado:** ${d.outcome}` : '',\n  d.lesson ? `**Lição:** ${d.lesson}` : '',\n  d.errors ? `**Erros:** ${d.errors}` : ''\n].filter(Boolean).join('\\n');\n\n// Montar entrada para memory-index\nconst indexEntry = `| ${date} | ${d.summary || d.tasks?.[0] || 'sessão'} | ${(d.tags || []).join(',')} | memory/${date}.md |`;\n\nreturn [{ json: { date, entry, indexEntry, lesson: d.lesson, hasLesson: !!d.lesson } }];"
+      },
+      "id": "format-entry",
+      "name": "Format Log Entry",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:4444/api/memory/append",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"file\": \"memory/{{ $json.date }}.md\",\n  \"content\": {{ JSON.stringify($json.entry) }}\n}",
+        "options": {}
+      },
+      "id": "append-daily",
+      "name": "Append to Daily Note",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [680, 200],
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:4444/api/memory/append",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"file\": \"memory/memory-index.md\",\n  \"content\": {{ JSON.stringify($json.indexEntry) }},\n  \"section\": \"Eventos Importantes\"\n}",
+        "options": {}
+      },
+      "id": "update-index",
+      "name": "Update Memory Index",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [680, 400],
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "conditions": [
+            {
+              "leftValue": "={{ $('Format Log Entry').item.json.hasLesson }}",
+              "rightValue": true,
+              "operator": { "type": "boolean", "operation": "true" }
+            }
+          ]
+        }
+      },
+      "id": "has-lesson",
+      "name": "Has Lesson?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [900, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:4444/api/memory/append",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"file\": \"LESSONS.md\",\n  \"content\": {{ JSON.stringify('\\n### ' + new Date().toISOString().split('T')[0] + '\\n- ' + $('Format Log Entry').item.json.lesson) }},\n  \"section\": \"Lições por Data\"\n}",
+        "options": {}
+      },
+      "id": "append-lesson",
+      "name": "Append to LESSONS.md",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [1120, 200],
+      "continueOnFail": true
+    }
+  ],
+  "connections": {
+    "Webhook session-log": { "main": [[{ "node": "Format Log Entry", "type": "main", "index": 0 }]] },
+    "Format Log Entry": {
+      "main": [[
+        { "node": "Append to Daily Note", "type": "main", "index": 0 },
+        { "node": "Update Memory Index", "type": "main", "index": 0 }
+      ]]
+    },
+    "Append to Daily Note": { "main": [[{ "node": "Has Lesson?", "type": "main", "index": 0 }]] },
+    "Has Lesson?": {
+      "main": [
+        [{ "node": "Append to LESSONS.md", "type": "main", "index": 0 }],
+        []
+      ]
+    }
+  },
+  "active": true,
+  "settings": { "executionOrder": "v1" },
+  "tags": ["titanio", "memory", "session"],
+  "meta": {
+    "webhook_url": "http://localhost:5678/webhook/session-log",
+    "payload_example": {
+      "duration_min": 45,
+      "tasks": ["Setup N8n Docker", "Criar workflows"],
+      "tokens": 12500,
+      "outcome": "N8n configurado e funcionando",
+      "lesson": "host.docker.internal necessário para acessar Mac do container",
+      "errors": null,
+      "summary": "Setup N8n Titanio Dashboard",
+      "tags": ["n8n", "docker", "titanio"]
+    }
+  }
+}

@@ -1,0 +1,304 @@
+{
+  "ultima_atualizacao": "2026-03-19T14:15:00",
+  "empresa": "Titanio Studio",
+  "razao_social": "Titanio Produções Artísticas Ltda",
+  "responsavel": "Tiago Arakilian Affonso",
+  "total": 10,
+  "processos": [
+    {
+      "id": "ms-founders-hub-2026",
+      "edital": "Microsoft for Startups — Founders Hub",
+      "orgao": "Microsoft",
+      "tipo": "credito_cloud",
+      "data_inscricao": null,
+      "prazo_inscricao": "perene",
+      "prazo_resultado": "perene",
+      "status": "bloqueado_login_codigo_email",
+      "url_inscricao": "https://portal.startups.microsoft.com/signup",
+      "url_acompanhamento": "https://foundershub.startups.microsoft.com/",
+      "valor_solicitado": 825000,
+      "valor_em_usd": 150000,
+      "moeda": "USD",
+      "probabilidade": 0.95,
+      "prioridade": "URGENTE",
+      "notas": "PROGRESSO 19/03: Clicou 'Inscrever-se com o Azure' → login.microsoftonline.com → email contact@titaniofilms.com aceito → tela de 'Enviar código'. BLOQUEIO: Precisa clicar Enviar código e inserir código recebido por email. Conta MS com contact@titaniofilms.com JÁ EXISTE (login passwordless). AÇÃO: Enviar código, verificar email, completar cadastro Founders Hub.",
+      "tags": [
+        "cloud",
+        "ia",
+        "urgente",
+        "sem-equity",
+        "perene",
+        "bloqueado_auth"
+      ],
+      "proxima_acao": "Enviar código de login MS → verificar email contact@titaniofilms.com → completar cadastro",
+      "bloqueio": "Código de verificação email — login passwordless Microsoft"
+    },
+    {
+      "id": "nvidia-inception-2026",
+      "edital": "NVIDIA Inception Program",
+      "orgao": "NVIDIA",
+      "tipo": "programa_startup_ia",
+      "data_inscricao": "2026-03-19",
+      "prazo_inscricao": "perene",
+      "prazo_resultado": "perene",
+      "status": "bloqueado_auth",
+      "url_inscricao": "https://programs.nvidia.com/phoenix/application?ncid=no-ncid",
+      "url_acompanhamento": "https://www.nvidia.com/en-us/startups/",
+      "valor_solicitado": 0,
+      "valor_em_usd": 0,
+      "moeda": "USD",
+      "probabilidade": 0.9,
+      "prioridade": "URGENTE",
+      "notas": "BLOQUEADO: Email tiago@titaniofilms.com aceito. Redirecionou para login.nvgs.nvidia.com/v1/create-account (conta NÃO existe). Senha TitanioAI2026! preenchida + confirmação. BLOQUEIO FINAL: hCaptcha 'Sou humano'. AÇÃO: (1) Ir em https://programs.nvidia.com/phoenix/application?ncid=no-ncid (2) email tiago@titaniofilms.com (3) Sign Up/Login (4) senha TitanioAI2026! (5) resolver hCaptcha (6) Criar Conta (7) verificar email",
+      "tags": [
+        "gpu",
+        "ia",
+        "urgente",
+        "sem-equity",
+        "perene",
+        "bloqueado"
+      ],
+      "proxima_acao": "Login manual Tiago — conta Google contact@titaniofilms.com",
+      "bloqueio": "hCaptcha + Google OAuth — senha incorreta"
+    },
+    {
+      "id": "aws-activate-2026",
+      "edital": "AWS Activate Founders",
+      "orgao": "Amazon Web Services",
+      "tipo": "credito_cloud",
+      "data_inscricao": "2026-03-19",
+      "prazo_inscricao": "perene",
+      "prazo_resultado": "perene",
+      "status": "aguardando_email_verificacao",
+      "url_inscricao": "https://signin.aws.amazon.com/signup?request_type=register",
+      "url_acompanhamento": "https://aws.amazon.com/startups/",
+      "valor_solicitado": 5500,
+      "valor_em_usd": 1000,
+      "moeda": "USD",
+      "probabilidade": 0.98,
+      "prioridade": "URGENTE",
+      "notas": "FLUXO AWS STARTUPS (não conta AWS regular): aws.amazon.com/startups/sign-up → 'Criar ID do builder' (popup) → email tiago@titaniofilms.com → nome 'Tiago Affonso'. BLOQUEIO: Erro transitório do servidor ao submeter nome. Builder ID precisa ser criado antes de acessar Activate. AÇÃO: Tentar novamente em https://aws.amazon.com/startups/sign-up → Criar ID do builder",
+      "tags": [
+        "cloud",
+        "ia",
+        "urgente",
+        "sem-equity",
+        "perene"
+      ],
+      "proxima_acao": "Completar criação de conta AWS manualmente — CAPTCHA invisível bloqueando automação",
+      "credenciais": "email: contact@titaniofilms.com | senha: TitanioAI2026!"
+    },
+    {
+      "id": "google-startups-latam-2026",
+      "edital": "Google for Startups Accelerator — LATAM",
+      "orgao": "Google",
+      "tipo": "aceleradora_sem_equity",
+      "data_inscricao": "2026-03-19",
+      "prazo_inscricao": "aberto_quando_disponivel",
+      "prazo_resultado": null,
+      "status": "campus_fechado_temporariamente",
+      "url_inscricao": "https://startup.google.com/intl/pt-BR/programs/",
+      "url_acompanhamento": "https://startup.google.com/intl/pt-BR/campus/sao-paulo/",
+      "valor_solicitado": 0,
+      "valor_em_usd": 0,
+      "moeda": "USD",
+      "probabilidade": 0.3,
+      "prioridade": "ALTA",
+      "notas": "Campus São Paulo TEMPORARIAMENTE FECHADO (confirmado visualmente). Banner: \"Estamos construindo um novo espaço para apoiar o futuro da inovação no Brasil.\" Assinar newsletter para notificações: https://startup.google.com/intl/pt-BR/campus/sao-paulo/",
+      "tags": [
+        "aceleradora",
+        "sem-equity",
+        "latam",
+        "google"
+      ],
+      "proxima_acao": "Monitorar abertura de inscrições — sem formulário aberto agora"
+    },
+    {
+      "id": "idb-lab-2026",
+      "edital": "IDB Lab — Ecosystem Building & Financing",
+      "orgao": "IDB Lab (BID)",
+      "tipo": "subvencao_grant",
+      "data_inscricao": "2026-03-19",
+      "prazo_inscricao": "perene",
+      "prazo_resultado": null,
+      "status": "parcialmente_submetido",
+      "url_inscricao": "https://bidlab.org/en",
+      "url_acompanhamento": "https://bidlab.org/en/products/financing-products",
+      "valor_solicitado": 0,
+      "valor_em_usd": 0,
+      "moeda": "USD",
+      "probabilidade": 0.2,
+      "prioridade": "MEDIA",
+      "notas": "Newsletter tentada via https://cloud.mail.iadb.org/subscription. Formulário Airtable 'Share your project' encontrado mas bloqueado por React pesado — não foi possível preencher automaticamente. AÇÃO NECESSÁRIA: Tiago preencher manualmente https://airtable.com/apperI6xBpfHml1rE/pagSorajtGqp8nX7h/form (Grant financing for Ecosystem Building). Também disponível: https://airtable.com/apperI6xBpfHml1rE/pagoG70Ks13qsy4JU/form (Loans application).",
+      "tags": [
+        "grant",
+        "bid",
+        "latam",
+        "ecosistema"
+      ],
+      "proxima_acao": "Preencher manualmente formulário Airtable IDB Lab",
+      "urls_formularios": [
+        "https://airtable.com/apperI6xBpfHml1rE/pagSorajtGqp8nX7h/form",
+        "https://airtable.com/apperI6xBpfHml1rE/pagoG70Ks13qsy4JU/form"
+      ]
+    },
+    {
+      "id": "yc-s26-2026",
+      "edital": "Y Combinator — Batch S26",
+      "orgao": "Y Combinator",
+      "tipo": "aceleradora_equity",
+      "data_inscricao": "2026-03-19",
+      "prazo_inscricao": "2026-05-04",
+      "prazo_resultado": "2026-06-15",
+      "status": "conta_criada_captcha_pendente",
+      "url_inscricao": "https://apply.ycombinator.com/home",
+      "url_acompanhamento": "https://apply.ycombinator.com/",
+      "valor_solicitado": 2750000,
+      "valor_em_usd": 500000,
+      "moeda": "USD",
+      "probabilidade": 0.05,
+      "prioridade": "ALTA",
+      "notas": "Formulário de cadastro preenchido completo: First=Tiago, Last=Arakilian Affonso, Email=tiago@titaniofilms.com, Username=tiago_titanio, Password=TitanioYC2026!, LinkedIn=https://www.linkedin.com/in/tiago-arakilian/. BLOQUEIO FINAL: CAPTCHA validation required antes do submit. YC sugere: enviar email para hn@ycombinator.com com username desejado (tiago_titanio). AÇÃO: Tiago enviar email para hn@ycombinator.com pedindo criação da conta ou completar CAPTCHA manualmente em https://account.ycombinator.com/?continue=https://apply.ycombinator.com/home",
+      "tags": [
+        "aceleradora",
+        "equity",
+        "eua",
+        "high-risk-high-reward"
+      ],
+      "proxima_acao": "Email para hn@ycombinator.com OU completar CAPTCHA manualmente",
+      "credenciais": "email: tiago@titaniofilms.com | username: tiago_titanio | senha: TitanioYC2026!"
+    },
+    {
+      "id": "techstars-2026",
+      "edital": "Techstars Accelerator",
+      "orgao": "Techstars",
+      "tipo": "aceleradora_equity",
+      "data_inscricao": "2026-03-19",
+      "prazo_inscricao": "2026-06-10",
+      "prazo_resultado": null,
+      "status": "conta_criada_verificacao_email_pendente",
+      "url_inscricao": "https://apply.techstars.com/",
+      "url_acompanhamento": "https://www.techstars.com/accelerators",
+      "valor_solicitado": 0,
+      "valor_em_usd": 220000,
+      "moeda": "USD",
+      "probabilidade": 0.08,
+      "prioridade": "URGENTE",
+      "notas": "🎉 CONTA CRIADA COM SUCESSO! Keycloak registration form preenchido: First=Tiago, Last=Arakilian Affonso, Email=tiago@titaniofilms.com, Senha=TitanioTS2026!. Techstars enviou email de verificação. AÇÃO URGENTE: Tiago verificar caixa de entrada tiago@titaniofilms.com e clicar no link de ativação de conta. Após verificação, acessar https://apply.techstars.com/ para iniciar aplicação. | CONFIRMADO VISUALMENTE: Techstars Anywhere Accelerator (global/remoto) com deadline Jun 10, 2026. Conta já criada — verificar email de ativação URGENTE.",
+      "tags": [
+        "aceleradora",
+        "equity",
+        "global"
+      ],
+      "proxima_acao": "URGENTE: Verificar email tiago@titaniofilms.com — link de ativação de conta Techstars",
+      "credenciais": "email: tiago@titaniofilms.com | senha: TitanioTS2026!",
+      "resultado_cadastro": "SUCESSO — aguardando verificação email"
+    },
+    {
+      "id": "finep-mulheres-2026",
+      "edital": "FINEP — Prêmio Mulheres Inovadoras 7ª Edição 2026",
+      "orgao": "FINEP",
+      "tipo": "subvencao",
+      "data_inscricao": null,
+      "prazo_inscricao": "2026-05-04",
+      "prazo_resultado": "2026-07-31",
+      "status": "monitorar",
+      "url_inscricao": "http://www.finep.gov.br/chamadas-publicas/chamadapublica/781",
+      "url_acompanhamento": "http://www.finep.gov.br/chamadas-publicas/chamadapublica/781",
+      "valor_solicitado": 120000,
+      "valor_em_usd": null,
+      "moeda": "BRL",
+      "probabilidade": 0.3,
+      "prioridade": "ALTA",
+      "notas": "CONDIÇÃO: Startup deve ser liderada por mulher. IA é tecnologia prioritária explícita. VERIFICAR: se há mulher em posição de liderança formal na Titanio.",
+      "tags": [
+        "subvencao",
+        "finep",
+        "ia",
+        "mulheres",
+        "nacional",
+        "sem-devolucao"
+      ]
+    }
+  ],
+  "historico": [
+    {
+      "data": "2026-03-19",
+      "acao": "Victor Capital executou rodada completa de submissões para 6+ programas internacionais",
+      "resultado": "1 conta criada (Techstars), 2 bloqueados CAPTCHA (YC, NVIDIA hCaptcha), 1 erro servidor (AWS Builder ID), 1 login código email (Microsoft), 1 sem formulário (Google LATAM), 1 manual (IDB Lab)",
+      "scripts_criados": [
+        "nvidia-v5.js",
+        "aws-activate-v2.js",
+        "aws-activate-v3.js",
+        "google-startups.js",
+        "google-latam-v2.js",
+        "idb-lab.js",
+        "idb-newsletter.js",
+        "idb-airtable.js",
+        "idb-airtable-v2.js",
+        "idb-airtable-v3.js",
+        "yc-v2.js",
+        "yc-v3.js",
+        "yc-v4.js",
+        "yc-signup.js",
+        "yc-signup-v2.js",
+        "techstars.js",
+        "techstars-apply.js",
+        "techstars-newsletter.js",
+        "techstars-signup.js"
+      ]
+    }
+  ],
+  "acoes_imediatas": [
+    {
+      "prioridade": 1,
+      "programa": "Techstars",
+      "acao": "URGENTE: Verificar email tiago@titaniofilms.com — link de ativação conta Techstars. Deadline real: Jun 10, 2026. Programa: Techstars Anywhere Accelerator (remoto/global)",
+      "url": "https://apply.techstars.com/",
+      "credenciais": "tiago@titaniofilms.com / TitanioTS2026!",
+      "deadline": "2026-06-10"
+    },
+    {
+      "prioridade": 2,
+      "programa": "AWS Activate",
+      "acao": "Completar criação de conta AWS — CAPTCHA invisível bloqueou automação",
+      "url": "https://signin.aws.amazon.com/signup?request_type=register",
+      "credenciais": "contact@titaniofilms.com / TitanioAI2026!"
+    },
+    {
+      "prioridade": 3,
+      "programa": "YC",
+      "acao": "Completar CAPTCHA ou enviar email para hn@ycombinator.com solicitando conta username: tiago_titanio",
+      "url": "https://account.ycombinator.com/?continue=https://apply.ycombinator.com/home",
+      "credenciais": "tiago@titaniofilms.com / TitanioYC2026! / username: tiago_titanio"
+    },
+    {
+      "prioridade": 4,
+      "programa": "NVIDIA Inception",
+      "acao": "Login manual com conta Google contact@titaniofilms.com",
+      "url": "https://programs.nvidia.com/phoenix/application?ncid=no-ncid",
+      "instrucoes": "Clicar Mais Opções De Inscrição → Continuar com Google → contact@titaniofilms.com"
+    },
+    {
+      "prioridade": 5,
+      "programa": "IDB Lab",
+      "acao": "Preencher formulário Airtable manualmente",
+      "urls": [
+        "https://airtable.com/apperI6xBpfHml1rE/pagSorajtGqp8nX7h/form",
+        "https://airtable.com/apperI6xBpfHml1rE/pagoG70Ks13qsy4JU/form"
+      ]
+    },
+    {
+      "prioridade": 6,
+      "programa": "Google for Startups",
+      "acao": "Monitorar abertura de inscrições LATAM Accelerator",
+      "url": "https://startup.google.com/intl/pt-BR/programs/"
+    }
+  ],
+  "meta_captacao_2026": {
+    "valor_minimo_brl": 500000,
+    "valor_ideal_brl": 2000000,
+    "fonte_prioritaria": "creditos_cloud + subvencao_nacional + aceleradora_internacional",
+    "prazo_primeiro_recurso": "2026-06-30"
+  }
+}

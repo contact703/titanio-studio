@@ -1,0 +1,15 @@
+```json
+
+{
+
+    "title": "ENEM Quest",
+
+    "engine": "Godot 4.x",
+
+    "systems": ["progression", "combat", "inventory"],
+
+    "categories": ["Português", "Matemática", "Ciências", "História", "Redação"]
+
+}
+
+```

@@ -1,0 +1,1199 @@
+{
+  "iOS Specialist": {
+    "chunk_ids": [
+      "chunk-491f8d58fed341ac732bad3e2118f8f8"
+    ],
+    "count": 1,
+    "create_time": 1774284970,
+    "update_time": 1774284970,
+    "_id": "iOS Specialist"
+  },
+  "Xcode": {
+    "chunk_ids": [
+      "chunk-491f8d58fed341ac732bad3e2118f8f8"
+    ],
+    "count": 1,
+    "create_time": 1774284970,
+    "update_time": 1774284970,
+    "_id": "Xcode"
+  },
+  "EAS": {
+    "chunk_ids": [
+      "chunk-491f8d58fed341ac732bad3e2118f8f8"
+    ],
+    "count": 1,
+    "create_time": 1774284971,
+    "update_time": 1774284971,
+    "_id": "EAS"
+  },
+  "React Native": {
+    "chunk_ids": [
+      "chunk-491f8d58fed341ac732bad3e2118f8f8"
+    ],
+    "count": 1,
+    "create_time": 1774284971,
+    "update_time": 1774284971,
+    "_id": "React Native"
+  },
+  "Expo": {
+    "chunk_ids": [
+      "chunk-491f8d58fed341ac732bad3e2118f8f8"
+    ],
+    "count": 1,
+    "create_time": 1774284971,
+    "update_time": 1774284971,
+    "_id": "Expo"
+  },
+  "GospIA": {
+    "chunk_ids": [
+      "chunk-491f8d58fed341ac732bad3e2118f8f8",
+      "chunk-2249d6178377ebf1c8b9af2d5d17c841"
+    ],
+    "count": 2,
+    "update_time": 1774285988,
+    "_id": "GospIA"
+  },
+  "Bundle ID": {
+    "chunk_ids": [
+      "chunk-491f8d58fed341ac732bad3e2118f8f8"
+    ],
+    "count": 1,
+    "create_time": 1774284972,
+    "update_time": 1774284972,
+    "_id": "Bundle ID"
+  },
+  "Backend-Specialist": {
+    "chunk_ids": [
+      "chunk-491f8d58fed341ac732bad3e2118f8f8"
+    ],
+    "count": 1,
+    "create_time": 1774284972,
+    "update_time": 1774284972,
+    "_id": "Backend-Specialist"
+  },
+  "Next.js": {
+    "chunk_ids": [
+      "chunk-491f8d58fed341ac732bad3e2118f8f8"
+    ],
+    "count": 1,
+    "create_time": 1774284972,
+    "update_time": 1774284972,
+    "_id": "Next.js"
+  },
+  "Supabase": {
+    "chunk_ids": [
+      "chunk-491f8d58fed341ac732bad3e2118f8f8"
+    ],
+    "count": 1,
+    "create_time": 1774284972,
+    "update_time": 1774284972,
+    "_id": "Supabase"
+  },
+  "Security-Guardian": {
+    "chunk_ids": [
+      "chunk-491f8d58fed341ac732bad3e2118f8f8"
+    ],
+    "count": 1,
+    "create_time": 1774284972,
+    "update_time": 1774284972,
+    "_id": "Security-Guardian"
+  },
+  "Titanio iOS": {
+    "chunk_ids": [
+      "chunk-491f8d58fed341ac732bad3e2118f8f8"
+    ],
+    "count": 1,
+    "create_time": 1774284972,
+    "update_time": 1774284972,
+    "_id": "Titanio iOS"
+  },
+  "travado": {
+    "chunk_ids": [
+      "chunk-8ee78aa11af474f805bf70860814ecce"
+    ],
+    "count": 1,
+    "create_time": 1774285220,
+    "update_time": 1774285220,
+    "_id": "travado"
+  },
+  "Y Combinator": {
+    "chunk_ids": [
+      "chunk-8ee78aa11af474f805bf70860814ecce"
+    ],
+    "count": 1,
+    "create_time": 1774285220,
+    "update_time": 1774285220,
+    "_id": "Y Combinator"
+  },
+  "NVIDIA Inception": {
+    "chunk_ids": [
+      "chunk-8ee78aa11af474f805bf70860814ecce",
+      "chunk-1f96bfb541afd67c14f9e42163fb4d0a"
+    ],
+    "count": 2,
+    "update_time": 1774285864,
+    "_id": "NVIDIA Inception"
+  },
+  "AWS Activate": {
+    "chunk_ids": [
+      "chunk-8ee78aa11af474f805bf70860814ecce",
+      "chunk-1f96bfb541afd67c14f9e42163fb4d0a"
+    ],
+    "count": 2,
+    "update_time": 1774285864,
+    "_id": "AWS Activate"
+  },
+  "Google for Startups": {
+    "chunk_ids": [
+      "chunk-8ee78aa11af474f805bf70860814ecce",
+      "chunk-1f96bfb541afd67c14f9e42163fb4d0a"
+    ],
+    "count": 2,
+    "update_time": 1774285864,
+    "_id": "Google for Startups"
+  },
+  "Microsoft for Startups": {
+    "chunk_ids": [
+      "chunk-8ee78aa11af474f805bf70860814ecce",
+      "chunk-1f96bfb541afd67c14f9e42163fb4d0a"
+    ],
+    "count": 2,
+    "update_time": 1774285864,
+    "_id": "Microsoft for Startups"
+  },
+  "Eduardo/Tiago": {
+    "chunk_ids": [
+      "chunk-8ee78aa11af474f805bf70860814ecce"
+    ],
+    "count": 1,
+    "create_time": 1774285224,
+    "update_time": 1774285224,
+    "_id": "Eduardo/Tiago"
+  },
+  "99Freelas": {
+    "chunk_ids": [
+      "chunk-8ee78aa11af474f805bf70860814ecce"
+    ],
+    "count": 1,
+    "create_time": 1774285224,
+    "update_time": 1774285224,
+    "_id": "99Freelas"
+  },
+  "siriguejo": {
+    "chunk_ids": [
+      "chunk-8ee78aa11af474f805bf70860814ecce"
+    ],
+    "count": 1,
+    "create_time": 1774285224,
+    "update_time": 1774285224,
+    "_id": "siriguejo"
+  },
+  "titaniofilms": {
+    "chunk_ids": [
+      "chunk-8ee78aa11af474f805bf70860814ecce"
+    ],
+    "count": 1,
+    "create_time": 1774285224,
+    "update_time": 1774285224,
+    "_id": "titaniofilms"
+  },
+  "99Freelas Platform": {
+    "chunk_ids": [
+      "chunk-8ee78aa11af474f805bf70860814ecce"
+    ],
+    "count": 1,
+    "create_time": 1774285224,
+    "update_time": 1774285224,
+    "_id": "99Freelas Platform"
+  },
+  "contact@titaniofilms.com": {
+    "chunk_ids": [
+      "chunk-8ee78aa11af474f805bf70860814ecce"
+    ],
+    "count": 1,
+    "create_time": 1774285224,
+    "update_time": 1774285224,
+    "_id": "contact@titaniofilms.com"
+  },
+  "expo": {
+    "chunk_ids": [
+      "chunk-dd05f28a71961c08cabdb8963260dc46"
+    ],
+    "count": 1,
+    "create_time": 1774285336,
+    "update_time": 1774285336,
+    "_id": "expo"
+  },
+  "ReactCodegen": {
+    "chunk_ids": [
+      "chunk-dd05f28a71961c08cabdb8963260dc46"
+    ],
+    "count": 1,
+    "create_time": 1774285336,
+    "update_time": 1774285336,
+    "_id": "ReactCodegen"
+  },
+  "Metro bundler": {
+    "chunk_ids": [
+      "chunk-dd05f28a71961c08cabdb8963260dc46"
+    ],
+    "count": 1,
+    "create_time": 1774285338,
+    "update_time": 1774285338,
+    "_id": "Metro bundler"
+  },
+  "pod install": {
+    "chunk_ids": [
+      "chunk-dd05f28a71961c08cabdb8963260dc46"
+    ],
+    "count": 1,
+    "create_time": 1774285338,
+    "update_time": 1774285338,
+    "_id": "pod install"
+  },
+  "xcodebuild archive": {
+    "chunk_ids": [
+      "chunk-dd05f28a71961c08cabdb8963260dc46"
+    ],
+    "count": 1,
+    "create_time": 1774285339,
+    "update_time": 1774285339,
+    "_id": "xcodebuild archive"
+  },
+  "Apple Distribution": {
+    "chunk_ids": [
+      "chunk-dd05f28a71961c08cabdb8963260dc46"
+    ],
+    "count": 1,
+    "create_time": 1774285339,
+    "update_time": 1774285339,
+    "_id": "Apple Distribution"
+  },
+  "Titanio Squad": {
+    "chunk_ids": [
+      "chunk-dd05f28a71961c08cabdb8963260dc46"
+    ],
+    "count": 1,
+    "create_time": 1774285339,
+    "update_time": 1774285339,
+    "_id": "Titanio Squad"
+  },
+  "iOS": {
+    "chunk_ids": [
+      "chunk-dd05f28a71961c08cabdb8963260dc46"
+    ],
+    "count": 1,
+    "create_time": 1774285340,
+    "update_time": 1774285340,
+    "_id": "iOS"
+  },
+  "GospIA iOS": {
+    "chunk_ids": [
+      "chunk-dd05f28a71961c08cabdb8963260dc46"
+    ],
+    "count": 1,
+    "create_time": 1774285342,
+    "update_time": 1774285342,
+    "_id": "GospIA iOS"
+  },
+  "Titanio Studio": {
+    "chunk_ids": [
+      "chunk-fc474458c065038296b12622d391d1e5"
+    ],
+    "count": 1,
+    "create_time": 1774285346,
+    "update_time": 1774285346,
+    "_id": "Titanio Studio"
+  },
+  "Instagram": {
+    "chunk_ids": [
+      "chunk-fc474458c065038296b12622d391d1e5",
+      "chunk-28efe485a38973826ef1f69dbeb726a4"
+    ],
+    "count": 2,
+    "update_time": 1774285438,
+    "_id": "Instagram"
+  },
+  "Reels": {
+    "chunk_ids": [
+      "chunk-fc474458c065038296b12622d391d1e5"
+    ],
+    "count": 1,
+    "create_time": 1774285346,
+    "update_time": 1774285346,
+    "_id": "Reels"
+  },
+  "Growth Hacking": {
+    "chunk_ids": [
+      "chunk-fc474458c065038296b12622d391d1e5"
+    ],
+    "count": 1,
+    "create_time": 1774285346,
+    "update_time": 1774285346,
+    "_id": "Growth Hacking"
+  },
+  "[NOME]": {
+    "chunk_ids": [
+      "chunk-fc474458c065038296b12622d391d1e5"
+    ],
+    "count": 1,
+    "create_time": 1774285346,
+    "update_time": 1774285346,
+    "_id": "[NOME]"
+  },
+  "Direct Message": {
+    "chunk_ids": [
+      "chunk-fc474458c065038296b12622d391d1e5"
+    ],
+    "count": 1,
+    "create_time": 1774285346,
+    "update_time": 1774285346,
+    "_id": "Direct Message"
+  },
+  "[squad]": {
+    "chunk_ids": [
+      "chunk-fc474458c065038296b12622d391d1e5"
+    ],
+    "count": 1,
+    "create_time": 1774285346,
+    "update_time": 1774285346,
+    "_id": "[squad]"
+  },
+  "Titanio": {
+    "chunk_ids": [
+      "chunk-28efe485a38973826ef1f69dbeb726a4",
+      "chunk-1f96bfb541afd67c14f9e42163fb4d0a"
+    ],
+    "count": 2,
+    "update_time": 1774285861,
+    "_id": "Titanio"
+  },
+  "Tiago": {
+    "chunk_ids": [
+      "chunk-28efe485a38973826ef1f69dbeb726a4"
+    ],
+    "count": 1,
+    "create_time": 1774285441,
+    "update_time": 1774285441,
+    "_id": "Tiago"
+  },
+  "Marketing Ninja": {
+    "chunk_ids": [
+      "chunk-28efe485a38973826ef1f69dbeb726a4"
+    ],
+    "count": 1,
+    "create_time": 1774285441,
+    "update_time": 1774285441,
+    "_id": "Marketing Ninja"
+  },
+  "Copywriter": {
+    "chunk_ids": [
+      "chunk-28efe485a38973826ef1f69dbeb726a4"
+    ],
+    "count": 1,
+    "create_time": 1774285441,
+    "update_time": 1774285441,
+    "_id": "Copywriter"
+  },
+  "API Meta": {
+    "chunk_ids": [
+      "chunk-28efe485a38973826ef1f69dbeb726a4"
+    ],
+    "count": 1,
+    "create_time": 1774285441,
+    "update_time": 1774285441,
+    "_id": "API Meta"
+  },
+  "Google": {
+    "chunk_ids": [
+      "chunk-28efe485a38973826ef1f69dbeb726a4"
+    ],
+    "count": 1,
+    "create_time": 1774285441,
+    "update_time": 1774285441,
+    "_id": "Google"
+  },
+  "Blog Content": {
+    "chunk_ids": [
+      "chunk-28efe485a38973826ef1f69dbeb726a4"
+    ],
+    "count": 1,
+    "create_time": 1774285441,
+    "update_time": 1774285441,
+    "_id": "Blog Content"
+  },
+  "API Master": {
+    "chunk_ids": [
+      "chunk-28efe485a38973826ef1f69dbeb726a4"
+    ],
+    "count": 1,
+    "create_time": 1774285441,
+    "update_time": 1774285441,
+    "_id": "API Master"
+  },
+  "Especialista OpenClaw da squad Titanio": {
+    "chunk_ids": [
+      "chunk-1f96bfb541afd67c14f9e42163fb4d0a"
+    ],
+    "count": 1,
+    "create_time": 1774285861,
+    "update_time": 1774285861,
+    "_id": "Especialista OpenClaw da squad Titanio"
+  },
+  "Mac Mini arm64": {
+    "chunk_ids": [
+      "chunk-1f96bfb541afd67c14f9e42163fb4d0a"
+    ],
+    "count": 1,
+    "create_time": 1774285864,
+    "update_time": 1774285864,
+    "_id": "Mac Mini arm64"
+  },
+  "Darwin 24.6.0": {
+    "chunk_ids": [
+      "chunk-1f96bfb541afd67c14f9e42163fb4d0a"
+    ],
+    "count": 1,
+    "create_time": 1774285864,
+    "update_time": 1774285864,
+    "_id": "Darwin 24.6.0"
+  },
+  "Node v22.22.0": {
+    "chunk_ids": [
+      "chunk-1f96bfb541afd67c14f9e42163fb4d0a"
+    ],
+    "count": 1,
+    "create_time": 1774285864,
+    "update_time": 1774285864,
+    "_id": "Node v22.22.0"
+  },
+  "Workspace: /Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace": {
+    "chunk_ids": [
+      "chunk-1f96bfb541afd67c14f9e42163fb4d0a"
+    ],
+    "count": 1,
+    "create_time": 1774285864,
+    "update_time": 1774285864,
+    "_id": "Workspace: /Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace"
+  },
+  "Agente: Tita (claude-sonnet-4-6)": {
+    "chunk_ids": [
+      "chunk-1f96bfb541afd67c14f9e42163fb4d0a"
+    ],
+    "count": 1,
+    "create_time": 1774285864,
+    "update_time": 1774285864,
+    "_id": "Agente: Tita (claude-sonnet-4-6)"
+  },
+  "Canais: WhatsApp (grupo Gospia: 120363405462114071@g.us)": {
+    "chunk_ids": [
+      "chunk-1f96bfb541afd67c14f9e42163fb4d0a"
+    ],
+    "count": 1,
+    "create_time": 1774285864,
+    "update_time": 1774285864,
+    "_id": "Canais: WhatsApp (grupo Gospia: 120363405462114071@g.us)"
+  },
+  "Skills ativas: coding-agent, gh-issues, github, n8n-api, academic-research, agent-council, agent-dashboard": {
+    "chunk_ids": [
+      "chunk-1f96bfb541afd67c14f9e42163fb4d0a"
+    ],
+    "count": 1,
+    "create_time": 1774285864,
+    "update_time": 1774285864,
+    "_id": "Skills ativas: coding-agent, gh-issues, github, n8n-api, academic-research, agent-council, agent-dashboard"
+  },
+  "Especialista iOS da squad Titanio": {
+    "chunk_ids": [
+      "chunk-1f96bfb541afd67c14f9e42163fb4d0a"
+    ],
+    "count": 1,
+    "create_time": 1774285864,
+    "update_time": 1774285864,
+    "_id": "Especialista iOS da squad Titanio"
+  },
+  "iOS Specialist - Contexto (injetar no início de cada sessão)": {
+    "chunk_ids": [
+      "chunk-1f96bfb541afd67c14f9e42163fb4d0a"
+    ],
+    "count": 1,
+    "create_time": 1774285864,
+    "update_time": 1774285864,
+    "_id": "iOS Specialist - Contexto (injetar no início de cada sessão)"
+  },
+  "/Volumes/TITA_039/backup-projetos/gospia-v2": {
+    "chunk_ids": [
+      "chunk-1f96bfb541afd67c14f9e42163fb4d0a"
+    ],
+    "count": 1,
+    "create_time": 1774285864,
+    "update_time": 1774285864,
+    "_id": "/Volumes/TITA_039/backup-projetos/gospia-v2"
+  },
+  "Bundle ID: com.titanio.gospia": {
+    "chunk_ids": [
+      "chunk-1f96bfb541afd67c14f9e42163fb4d0a"
+    ],
+    "count": 1,
+    "create_time": 1774285864,
+    "update_time": 1774285864,
+    "_id": "Bundle ID: com.titanio.gospia"
+  },
+  "Victor Capital - Perfil": {
+    "chunk_ids": [
+      "chunk-1f96bfb541afd67c14f9e42163fb4d0a"
+    ],
+    "count": 1,
+    "create_time": 1774285864,
+    "update_time": 1774285864,
+    "_id": "Victor Capital - Perfil"
+  },
+  "Especialidade: Captação de recursos, editais, aceleradoras, programas de fomento": {
+    "chunk_ids": [
+      "chunk-1f96bfb541afd67c14f9e42163fb4d0a"
+    ],
+    "count": 1,
+    "create_time": 1774285864,
+    "update_time": 1774285864,
+    "_id": "Especialidade: Captação de recursos, editais, aceleradoras, programas de fomento"
+  },
+  "Y Combinator (YC)": {
+    "chunk_ids": [
+      "chunk-1f96bfb541afd67c14f9e42163fb4d0a"
+    ],
+    "count": 1,
+    "create_time": 1774285864,
+    "update_time": 1774285864,
+    "_id": "Y Combinator (YC)"
+  },
+  "Sebrae, BNDES, FINEP": {
+    "chunk_ids": [
+      "chunk-1f96bfb541afd67c14f9e42163fb4d0a"
+    ],
+    "count": 1,
+    "create_time": 1774285864,
+    "update_time": 1774285864,
+    "_id": "Sebrae, BNDES, FINEP"
+  },
+  "NVIDIA Inception: rejeita email genérico (contact@) - usar email pessoal do fundador": {
+    "chunk_ids": [
+      "chunk-1f96bfb541afd67c14f9e42163fb4d0a"
+    ],
+    "count": 1,
+    "create_time": 1774285864,
+    "update_time": 1774285864,
+    "_id": "NVIDIA Inception: rejeita email genérico (contact@) - usar email pessoal do fundador"
+  },
+  "YC: magic link enviado para contact@titaniofilms.com - verificar email ANTES de iniciar": {
+    "chunk_ids": [
+      "chunk-1f96bfb541afd67c14f9e42163fb4d0a"
+    ],
+    "count": 1,
+    "create_time": 1774285864,
+    "update_time": 1774285864,
+    "_id": "YC: magic link enviado para contact@titaniofilms.com - verificar email ANTES de iniciar"
+  },
+  "Toda as regras listadas são importantes para Victor Capital.": {
+    "chunk_ids": [
+      "chunk-1f96bfb541afd67c14f9e42163fb4d0a"
+    ],
+    "count": 1,
+    "create_time": 1774285864,
+    "update_time": 1774285864,
+    "_id": "Toda as regras listadas são importantes para Victor Capital."
+  },
+  "World Athletics Federation": {
+    "chunk_ids": [
+      "chunk-1f96bfb541afd67c14f9e42163fb4d0a",
+      "chunk-2249d6178377ebf1c8b9af2d5d17c841"
+    ],
+    "count": 2,
+    "update_time": 1774285988,
+    "_id": "World Athletics Federation"
+  },
+  "Especialista: victor-capital": {
+    "chunk_ids": [
+      "chunk-1f96bfb541afd67c14f9e42163fb4d0a"
+    ],
+    "count": 1,
+    "create_time": 1774285864,
+    "update_time": 1774285864,
+    "_id": "Especialista: victor-capital"
+  },
+  "Responsabilidades": {
+    "chunk_ids": [
+      "chunk-1f96bfb541afd67c14f9e42163fb4d0a"
+    ],
+    "count": 1,
+    "create_time": 1774285864,
+    "update_time": 1774285864,
+    "_id": "Responsabilidades"
+  },
+  "Programas Monitorados": {
+    "chunk_ids": [
+      "chunk-1f96bfb541afd67c14f9e42163fb4d0a"
+    ],
+    "count": 1,
+    "create_time": 1774285865,
+    "update_time": 1774285865,
+    "_id": "Programas Monitorados"
+  },
+  "Carbon-Fiber Spikes": {
+    "chunk_ids": [
+      "chunk-1f96bfb541afd67c14f9e42163fb4d0a"
+    ],
+    "count": 1,
+    "create_time": 1774285865,
+    "update_time": 1774285865,
+    "_id": "Carbon-Fiber Spikes"
+  },
+  "Noah Carter": {
+    "chunk_ids": [
+      "chunk-1f96bfb541afd67c14f9e42163fb4d0a",
+      "chunk-2249d6178377ebf1c8b9af2d5d17c841"
+    ],
+    "count": 2,
+    "update_time": 1774285988,
+    "_id": "Noah Carter"
+  },
+  "StoreKit": {
+    "chunk_ids": [
+      "chunk-2249d6178377ebf1c8b9af2d5d17c841"
+    ],
+    "count": 1,
+    "create_time": 1774285985,
+    "update_time": 1774285985,
+    "_id": "StoreKit"
+  },
+  "Apple Sign In": {
+    "chunk_ids": [
+      "chunk-2249d6178377ebf1c8b9af2d5d17c841"
+    ],
+    "count": 1,
+    "create_time": 1774285985,
+    "update_time": 1774285985,
+    "_id": "Apple Sign In"
+  },
+  "Zica": {
+    "chunk_ids": [
+      "chunk-2249d6178377ebf1c8b9af2d5d17c841",
+      "chunk-ca7497057356c8b4a1e40cfabe483df4"
+    ],
+    "count": 2,
+    "update_time": 1774286160,
+    "_id": "Zica"
+  },
+  "Eduardo": {
+    "chunk_ids": [
+      "chunk-2249d6178377ebf1c8b9af2d5d17c841"
+    ],
+    "count": 1,
+    "create_time": 1774285988,
+    "update_time": 1774285988,
+    "_id": "Eduardo"
+  },
+  "Apple Developer Account": {
+    "chunk_ids": [
+      "chunk-2249d6178377ebf1c8b9af2d5d17c841"
+    ],
+    "count": 1,
+    "create_time": 1774285988,
+    "update_time": 1774285988,
+    "_id": "Apple Developer Account"
+  },
+  "KidsHQ-HQ": {
+    "chunk_ids": [
+      "chunk-2249d6178377ebf1c8b9af2d5d17c841"
+    ],
+    "count": 1,
+    "create_time": 1774285988,
+    "update_time": 1774285988,
+    "_id": "KidsHQ-HQ"
+  },
+  "KidsHQ Kids Swift": {
+    "chunk_ids": [
+      "chunk-2249d6178377ebf1c8b9af2d5d17c841"
+    ],
+    "count": 1,
+    "create_time": 1774285988,
+    "update_time": 1774285988,
+    "_id": "KidsHQ Kids Swift"
+  },
+  "FamilyControls entitlement": {
+    "chunk_ids": [
+      "chunk-2249d6178377ebf1c8b9af2d5d17c841"
+    ],
+    "count": 1,
+    "create_time": 1774285988,
+    "update_time": 1774285988,
+    "_id": "FamilyControls entitlement"
+  },
+  "contact703": {
+    "chunk_ids": [
+      "chunk-2249d6178377ebf1c8b9af2d5d17c841"
+    ],
+    "count": 1,
+    "create_time": 1774285988,
+    "update_time": 1774285988,
+    "_id": "contact703"
+  },
+  "GitHub repos": {
+    "chunk_ids": [
+      "chunk-2249d6178377ebf1c8b9af2d5d17c841"
+    ],
+    "count": 1,
+    "create_time": 1774285988,
+    "update_time": 1774285988,
+    "_id": "GitHub repos"
+  },
+  "tita-learning-system": {
+    "chunk_ids": [
+      "chunk-2249d6178377ebf1c8b9af2d5d17c841"
+    ],
+    "count": 1,
+    "create_time": 1774285988,
+    "update_time": 1774285988,
+    "_id": "tita-learning-system"
+  },
+  "Gold Digger Studio": {
+    "chunk_ids": [
+      "chunk-2249d6178377ebf1c8b9af2d5d17c841"
+    ],
+    "count": 1,
+    "create_time": 1774285988,
+    "update_time": 1774285988,
+    "_id": "Gold Digger Studio"
+  },
+  "Workana": {
+    "chunk_ids": [
+      "chunk-2249d6178377ebf1c8b9af2d5d17c841"
+    ],
+    "count": 1,
+    "create_time": 1774285988,
+    "update_time": 1774285988,
+    "_id": "Workana"
+  },
+  "Drop Servicing": {
+    "chunk_ids": [
+      "chunk-2249d6178377ebf1c8b9af2d5d17c841"
+    ],
+    "count": 1,
+    "create_time": 1774285988,
+    "update_time": 1774285988,
+    "_id": "Drop Servicing"
+  },
+  "YouTube Faceless": {
+    "chunk_ids": [
+      "chunk-2249d6178377ebf1c8b9af2d5d17c841"
+    ],
+    "count": 1,
+    "create_time": 1774285988,
+    "update_time": 1774285988,
+    "_id": "YouTube Faceless"
+  },
+  "memory-bot": {
+    "chunk_ids": [
+      "chunk-2249d6178377ebf1c8b9af2d5d17c841"
+    ],
+    "count": 1,
+    "create_time": 1774285988,
+    "update_time": 1774285988,
+    "_id": "memory-bot"
+  },
+  "ios-specialist": {
+    "chunk_ids": [
+      "chunk-2249d6178377ebf1c8b9af2d5d17c841"
+    ],
+    "count": 1,
+    "create_time": 1774285988,
+    "update_time": 1774285988,
+    "_id": "ios-specialist"
+  },
+  "money-maker": {
+    "chunk_ids": [
+      "chunk-2249d6178377ebf1c8b9af2d5d17c841"
+    ],
+    "count": 1,
+    "create_time": 1774285988,
+    "update_time": 1774285988,
+    "_id": "money-maker"
+  },
+  "agent-doctor": {
+    "chunk_ids": [
+      "chunk-2249d6178377ebf1c8b9af2d5d17c841"
+    ],
+    "count": 1,
+    "create_time": 1774285988,
+    "update_time": 1774285988,
+    "_id": "agent-doctor"
+  },
+  "Sistema de Memória v2": {
+    "chunk_ids": [
+      "chunk-2249d6178377ebf1c8b9af2d5d17c841"
+    ],
+    "count": 1,
+    "create_time": 1774285988,
+    "update_time": 1774285988,
+    "_id": "Sistema de Memória v2"
+  },
+  "Noah Carter's Record": {
+    "chunk_ids": [
+      "chunk-2249d6178377ebf1c8b9af2d5d17c841"
+    ],
+    "count": 1,
+    "create_time": 1774285988,
+    "update_time": 1774285988,
+    "_id": "Noah Carter's Record"
+  },
+  "World Athletics Championship": {
+    "chunk_ids": [
+      "chunk-2249d6178377ebf1c8b9af2d5d17c841"
+    ],
+    "count": 1,
+    "create_time": 1774285988,
+    "update_time": 1774285988,
+    "_id": "World Athletics Championship"
+  },
+  "Carbon-Fiber Spikes' Manufacturer": {
+    "chunk_ids": [
+      "chunk-2249d6178377ebf1c8b9af2d5d17c841"
+    ],
+    "count": 1,
+    "create_time": 1774285988,
+    "update_time": 1774285988,
+    "_id": "Carbon-Fiber Spikes' Manufacturer"
+  },
+  "OpenClaw": {
+    "chunk_ids": [
+      "chunk-4ae5d19350b9789a3605676107592fe8"
+    ],
+    "count": 1,
+    "create_time": 1774286137,
+    "update_time": 1774286137,
+    "_id": "OpenClaw"
+  },
+  "Tita": {
+    "chunk_ids": [
+      "chunk-4ae5d19350b9789a3605676107592fe8",
+      "chunk-ca7497057356c8b4a1e40cfabe483df4"
+    ],
+    "count": 2,
+    "update_time": 1774286160,
+    "_id": "Tita"
+  },
+  "Apple Team": {
+    "chunk_ids": [
+      "chunk-4ae5d19350b9789a3605676107592fe8"
+    ],
+    "count": 1,
+    "create_time": 1774286144,
+    "update_time": 1774286144,
+    "_id": "Apple Team"
+  },
+  "/tmp/gospia-certs/": {
+    "chunk_ids": [
+      "chunk-4ae5d19350b9789a3605676107592fe8"
+    ],
+    "count": 1,
+    "create_time": 1774286144,
+    "update_time": 1774286144,
+    "_id": "/tmp/gospia-certs/"
+  },
+  "6760674894": {
+    "chunk_ids": [
+      "chunk-4ae5d19350b9789a3605676107592fe8"
+    ],
+    "count": 1,
+    "create_time": 1774286144,
+    "update_time": 1774286144,
+    "_id": "6760674894"
+  },
+  ".openclaw/workspace/squad/specialists/ios-specialist/": {
+    "chunk_ids": [
+      "chunk-4ae5d19350b9789a3605676107592fe8"
+    ],
+    "count": 1,
+    "create_time": 1774286144,
+    "update_time": 1774286144,
+    "_id": ".openclaw/workspace/squad/specialists/ios-specialist/"
+  },
+  "Mac Mini": {
+    "chunk_ids": [
+      "chunk-4ae5d19350b9789a3605676107592fe8"
+    ],
+    "count": 1,
+    "create_time": 1774286144,
+    "update_time": 1774286144,
+    "_id": "Mac Mini"
+  },
+  ".openclaw/workspace/squad/": {
+    "chunk_ids": [
+      "chunk-4ae5d19350b9789a3605676107592fe8"
+    ],
+    "count": 1,
+    "create_time": 1774286144,
+    "update_time": 1774286144,
+    "_id": ".openclaw/workspace/squad/"
+  },
+  "Julian Goldie": {
+    "chunk_ids": [
+      "chunk-4ae5d19350b9789a3605676107592fe8"
+    ],
+    "count": 1,
+    "create_time": 1774286144,
+    "update_time": 1774286144,
+    "_id": "Julian Goldie"
+  },
+  "ClaWHub": {
+    "chunk_ids": [
+      "chunk-4ae5d19350b9789a3605676107592fe8"
+    ],
+    "count": 1,
+    "create_time": 1774286144,
+    "update_time": 1774286144,
+    "_id": "ClaWHub"
+  },
+  "GitHub": {
+    "chunk_ids": [
+      "chunk-4ae5d19350b9789a3605676107592fe8"
+    ],
+    "count": 1,
+    "create_time": 1774286144,
+    "update_time": 1774286144,
+    "_id": "GitHub"
+  },
+  "Discord": {
+    "chunk_ids": [
+      "chunk-4ae5d19350b9789a3605676107592fe8"
+    ],
+    "count": 1,
+    "create_time": 1774286145,
+    "update_time": 1774286145,
+    "_id": "Discord"
+  },
+  "nclaw message send": {
+    "chunk_ids": [
+      "chunk-ca7497057356c8b4a1e40cfabe483df4"
+    ],
+    "count": 1,
+    "create_time": 1774286157,
+    "update_time": 1774286157,
+    "_id": "nclaw message send"
+  },
+  "whatsapp": {
+    "chunk_ids": [
+      "chunk-ca7497057356c8b4a1e40cfabe483df4"
+    ],
+    "count": 1,
+    "create_time": 1774286157,
+    "update_time": 1774286157,
+    "_id": "whatsapp"
+  },
+  "120363405462114071@g.us": {
+    "chunk_ids": [
+      "chunk-ca7497057356c8b4a1e40cfabe483df4"
+    ],
+    "count": 1,
+    "create_time": 1774286158,
+    "update_time": 1774286158,
+    "_id": "120363405462114071@g.us"
+  },
+  "SISTEMA-MEMORIA-APRENDIZADO.md": {
+    "chunk_ids": [
+      "chunk-ca7497057356c8b4a1e40cfabe483df4"
+    ],
+    "count": 1,
+    "create_time": 1774286158,
+    "update_time": 1774286158,
+    "_id": "SISTEMA-MEMORIA-APRENDIZADO.md"
+  },
+  "/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/SISTEMA-MEMORIA-APRENDIZADO.md": {
+    "chunk_ids": [
+      "chunk-ca7497057356c8b4a1e40cfabe483df4"
+    ],
+    "count": 1,
+    "create_time": 1774286158,
+    "update_time": 1774286158,
+    "_id": "/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/SISTEMA-MEMORIA-APRENDIZADO.md"
+  },
+  "Instaloader": {
+    "chunk_ids": [
+      "chunk-ca7497057356c8b4a1e40cfabe483df4"
+    ],
+    "count": 1,
+    "create_time": 1774286159,
+    "update_time": 1774286159,
+    "_id": "Instaloader"
+  },
+  "yt-dlp": {
+    "chunk_ids": [
+      "chunk-ca7497057356c8b4a1e40cfabe483df4",
+      "chunk-32ec395bb414afdd733a72eb255993d6"
+    ],
+    "count": 2,
+    "update_time": 1774286260,
+    "_id": "yt-dlp"
+  },
+  "instagram.com/p/SHORTCODE/": {
+    "chunk_ids": [
+      "chunk-ca7497057356c8b4a1e40cfabe483df4"
+    ],
+    "count": 1,
+    "create_time": 1774286159,
+    "update_time": 1774286159,
+    "_id": "instagram.com/p/SHORTCODE/"
+  },
+  "USER": {
+    "chunk_ids": [
+      "chunk-ca7497057356c8b4a1e40cfabe483df4"
+    ],
+    "count": 1,
+    "create_time": 1774286159,
+    "update_time": 1774286159,
+    "_id": "USER"
+  },
+  "/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace": {
+    "chunk_ids": [
+      "chunk-ca7497057356c8b4a1e40cfabe483df4"
+    ],
+    "count": 1,
+    "create_time": 1774286159,
+    "update_time": 1774286159,
+    "_id": "/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace"
+  },
+  "Playwright": {
+    "chunk_ids": [
+      "chunk-ca7497057356c8b4a1e40cfabe483df4",
+      "chunk-32ec395bb414afdd733a72eb255993d6"
+    ],
+    "count": 2,
+    "update_time": 1774286263,
+    "_id": "Playwright"
+  },
+  "Dashboard Testing": {
+    "chunk_ids": [
+      "chunk-32ec395bb414afdd733a72eb255993d6"
+    ],
+    "count": 1,
+    "create_time": 1774286260,
+    "update_time": 1774286260,
+    "_id": "Dashboard Testing"
+  },
+  "API Endpoints": {
+    "chunk_ids": [
+      "chunk-32ec395bb414afdd733a72eb255993d6"
+    ],
+    "count": 1,
+    "create_time": 1774286263,
+    "update_time": 1774286263,
+    "_id": "API Endpoints"
+  },
+  "Health Status": {
+    "chunk_ids": [
+      "chunk-32ec395bb414afdd733a72eb255993d6"
+    ],
+    "count": 1,
+    "create_time": 1774286263,
+    "update_time": 1774286263,
+    "_id": "Health Status"
+  },
+  "Squad": {
+    "chunk_ids": [
+      "chunk-32ec395bb414afdd733a72eb255993d6"
+    ],
+    "count": 1,
+    "create_time": 1774286263,
+    "update_time": 1774286263,
+    "_id": "Squad"
+  },
+  "Openclaw Models": {
+    "chunk_ids": [
+      "chunk-32ec395bb414afdd733a72eb255993d6"
+    ],
+    "count": 1,
+    "create_time": 1774286263,
+    "update_time": 1774286263,
+    "_id": "Openclaw Models"
+  },
+  "Anthropic Claude Haiku 4-5-20251001": {
+    "chunk_ids": [
+      "chunk-32ec395bb414afdd733a72eb255993d6"
+    ],
+    "count": 1,
+    "create_time": 1774286263,
+    "update_time": 1774286263,
+    "_id": "Anthropic Claude Haiku 4-5-20251001"
+  },
+  "Moonshot Kimi K2 Turbo Preview": {
+    "chunk_ids": [
+      "chunk-32ec395bb414afdd733a72eb255993d6"
+    ],
+    "count": 1,
+    "create_time": 1774286263,
+    "update_time": 1774286263,
+    "_id": "Moonshot Kimi K2 Turbo Preview"
+  },
+  "Nemotron 3 Super 120b A12b:free": {
+    "chunk_ids": [
+      "chunk-32ec395bb414afdd733a72eb255993d6"
+    ],
+    "count": 1,
+    "create_time": 1774286263,
+    "update_time": 1774286263,
+    "_id": "Nemotron 3 Super 120b A12b:free"
+  },
+  "Nemotron": {
+    "chunk_ids": [
+      "chunk-32ec395bb414afdd733a72eb255993d6"
+    ],
+    "count": 1,
+    "create_time": 1774286263,
+    "update_time": 1774286263,
+    "_id": "Nemotron"
+  },
+  "Instagram Poster Specialist": {
+    "chunk_ids": [
+      "chunk-32ec395bb414afdd733a72eb255993d6"
+    ],
+    "count": 1,
+    "create_time": 1774286263,
+    "update_time": 1774286263,
+    "_id": "Instagram Poster Specialist"
+  },
+  "Context Transfer": {
+    "chunk_ids": [
+      "chunk-32ec395bb414afdd733a72eb255993d6"
+    ],
+    "count": 1,
+    "create_time": 1774286264,
+    "update_time": 1774286264,
+    "_id": "Context Transfer"
+  },
+  "Sistema": {
+    "chunk_ids": [
+      "chunk-1f4585f785d3d217c236a90ddc81c26a"
+    ],
+    "count": 1,
+    "create_time": 1774286350,
+    "update_time": 1774286350,
+    "_id": "Sistema"
+  },
+  "Conclusão": {
+    "chunk_ids": [
+      "chunk-1f4585f785d3d217c236a90ddc81c26a"
+    ],
+    "count": 1,
+    "create_time": 1774286350,
+    "update_time": 1774286350,
+    "_id": "Conclusão"
+  },
+  "100% Operacional e Real": {
+    "chunk_ids": [
+      "chunk-1f4585f785d3d217c236a90ddc81c26a"
+    ],
+    "count": 1,
+    "create_time": 1774286350,
+    "update_time": 1774286350,
+    "_id": "100% Operacional e Real"
+  }
+}

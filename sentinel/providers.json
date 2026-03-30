@@ -1,0 +1,49 @@
+{
+  "providers": [
+    {
+      "id": "anthropic-primary",
+      "name": "Anthropic Primary",
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-6",
+      "priority": 1,
+      "envKey": "ANTHROPIC_API_KEY",
+      "limits": {
+        "rpm": 50,
+        "tpm": 40000,
+        "daily_tokens": 1000000
+      },
+      "warningThreshold": 0.80,
+      "enabled": true
+    },
+    {
+      "id": "anthropic-secondary",
+      "name": "Anthropic Secondary",
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-6",
+      "priority": 2,
+      "envKey": "ANTHROPIC_API_KEY_SECONDARY",
+      "limits": {
+        "rpm": 50,
+        "tpm": 40000,
+        "daily_tokens": 1000000
+      },
+      "warningThreshold": 0.80,
+      "enabled": true
+    },
+    {
+      "id": "kimi-fallback",
+      "name": "Kimi K2.5 Fallback",
+      "provider": "moonshot",
+      "model": "moonshot/kimi-k2.5",
+      "priority": 3,
+      "envKey": "KIMI_API_KEY",
+      "limits": {
+        "rpm": 60,
+        "tpm": 128000,
+        "daily_tokens": 5000000
+      },
+      "warningThreshold": 0.85,
+      "enabled": true
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "current_provider": "anthropic-primary",
+  "last_updated": "2026-03-20T14:08:32Z",
+  "providers": {
+    "anthropic-primary": {
+      "status": "healthy",
+      "last_error": null,
+      "last_error_code": null,
+      "tokens_this_hour": 0,
+      "tokens_today": 0,
+      "requests_this_minute": 0,
+      "minute_window_start": "",
+      "hour_window_start": "",
+      "day_window_start": "",
+      "consecutive_errors": 0,
+      "last_healthcheck": "2026-03-20T14:08:32Z",
+      "healthcheck_ok": true
+    },
+    "anthropic-secondary": {
+      "status": "healthy",
+      "last_error": null,
+      "last_error_code": null,
+      "tokens_this_hour": 0,
+      "tokens_today": 0,
+      "requests_this_minute": 0,
+      "minute_window_start": "",
+      "hour_window_start": "",
+      "day_window_start": "",
+      "consecutive_errors": 0,
+      "last_healthcheck": "",
+      "healthcheck_ok": true
+    },
+    "kimi-fallback": {
+      "status": "healthy",
+      "last_error": null,
+      "last_error_code": null,
+      "tokens_this_hour": 0,
+      "tokens_today": 0,
+      "requests_this_minute": 0,
+      "minute_window_start": "",
+      "hour_window_start": "",
+      "day_window_start": "",
+      "consecutive_errors": 0,
+      "last_healthcheck": "",
+      "healthcheck_ok": true
+    }
+  }
+}

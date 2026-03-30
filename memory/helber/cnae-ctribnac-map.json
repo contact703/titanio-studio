@@ -1,0 +1,2263 @@
+{
+  "version": "1.0",
+  "updated": "2026-03-05",
+  "fonte": "LC 116/2003 + LC 157/2016 + CNAE 2.3 IBGE",
+  "notas": "cTribNac segue formato AABBCC: AA=item LC116 (2 dígitos), BB=subitem (2 dígitos), CC=variante (2 dígitos, normalmente 01). Correlação CNAE→cTribNac é indicativa; consultar legislação municipal.",
+  "cnaes": {
+
+    "=== TI - TECNOLOGIA DA INFORMAÇÃO ===": {},
+
+    "6201-5/00": {
+      "descricao": "Desenvolvimento de programas de computador sob encomenda",
+      "principal": "010101",
+      "descricaoPrincipal": "Análise e desenvolvimento de sistemas (LC116 1.01)",
+      "alternativas": [
+        {"cTribNac": "010201", "descricao": "Programação (LC116 1.02)", "quando_usar": "Quando o contrato é especificamente de programação/codificação"},
+        {"cTribNac": "010401", "descricao": "Elaboração de programas de computador (LC116 1.04)", "quando_usar": "Quando o objeto é entrega de programa/software pronto"},
+        {"cTribNac": "010601", "descricao": "Assessoria e consultoria em informática (LC116 1.06)", "quando_usar": "Quando inclui consultoria técnica"}
+      ]
+    },
+
+    "6201-5/01": {
+      "descricao": "Desenvolvimento de programas de computador sob encomenda",
+      "principal": "010101",
+      "descricaoPrincipal": "Análise e desenvolvimento de sistemas (LC116 1.01)",
+      "alternativas": [
+        {"cTribNac": "010201", "descricao": "Programação (LC116 1.02)", "quando_usar": "Quando o contrato é especificamente de programação"},
+        {"cTribNac": "010401", "descricao": "Elaboração de programas de computador (LC116 1.04)", "quando_usar": "Entrega de software pronto"}
+      ]
+    },
+
+    "6201-5/02": {
+      "descricao": "Web design",
+      "principal": "010101",
+      "descricaoPrincipal": "Análise e desenvolvimento de sistemas (LC116 1.01)",
+      "alternativas": [
+        {"cTribNac": "010801", "descricao": "Planejamento, confecção, manutenção e atualização de páginas eletrônicas (LC116 1.08)", "quando_usar": "Quando o serviço é de criação/manutenção de sites"},
+        {"cTribNac": "010201", "descricao": "Programação (LC116 1.02)", "quando_usar": "Quando inclui desenvolvimento de código front-end/back-end"}
+      ]
+    },
+
+    "6202-3/00": {
+      "descricao": "Desenvolvimento e licenciamento de programas de computador customizáveis",
+      "principal": "010201",
+      "descricaoPrincipal": "Programação (LC116 1.02)",
+      "alternativas": [
+        {"cTribNac": "010101", "descricao": "Análise e desenvolvimento de sistemas (LC116 1.01)", "quando_usar": "Quando inclui análise e modelagem"},
+        {"cTribNac": "010501", "descricao": "Licenciamento ou cessão de direito de uso de programas de computação (LC116 1.05)", "quando_usar": "Quando o contrato é de licenciamento do software"},
+        {"cTribNac": "010401", "descricao": "Elaboração de programas de computador (LC116 1.04)", "quando_usar": "Quando é entrega de programa"}
+      ]
+    },
+
+    "6203-1/00": {
+      "descricao": "Desenvolvimento e licenciamento de programas de computador não-customizáveis",
+      "principal": "010501",
+      "descricaoPrincipal": "Licenciamento ou cessão de direito de uso de programas de computação (LC116 1.05)",
+      "alternativas": [
+        {"cTribNac": "010401", "descricao": "Elaboração de programas de computador (LC116 1.04)", "quando_usar": "Quando o objeto é desenvolvimento do programa"},
+        {"cTribNac": "010101", "descricao": "Análise e desenvolvimento de sistemas (LC116 1.01)", "quando_usar": "Quando inclui análise e desenvolvimento"}
+      ]
+    },
+
+    "6204-0/00": {
+      "descricao": "Consultoria em tecnologia da informação",
+      "principal": "010601",
+      "descricaoPrincipal": "Assessoria e consultoria em informática (LC116 1.06)",
+      "alternativas": [
+        {"cTribNac": "170101", "descricao": "Assessoria ou consultoria de qualquer natureza (LC116 17.01)", "quando_usar": "Quando a consultoria é de gestão/negócios via TI"},
+        {"cTribNac": "010101", "descricao": "Análise e desenvolvimento de sistemas (LC116 1.01)", "quando_usar": "Quando inclui análise de sistemas"}
+      ]
+    },
+
+    "6209-1/00": {
+      "descricao": "Suporte técnico, manutenção e outros serviços em tecnologia da informação",
+      "principal": "010701",
+      "descricaoPrincipal": "Suporte técnico em informática, inclusive instalação, configuração e manutenção (LC116 1.07)",
+      "alternativas": [
+        {"cTribNac": "010601", "descricao": "Assessoria e consultoria em informática (LC116 1.06)", "quando_usar": "Quando o serviço é de consultoria técnica"},
+        {"cTribNac": "010101", "descricao": "Análise e desenvolvimento de sistemas (LC116 1.01)", "quando_usar": "Quando inclui análise/correção de sistemas"},
+        {"cTribNac": "140201", "descricao": "Assistência técnica (LC116 14.02)", "quando_usar": "Quando é assistência técnica em hardware/equipamentos"}
+      ]
+    },
+
+    "6311-9/00": {
+      "descricao": "Tratamento de dados, provedores de serviços de aplicação e serviços de hospedagem na internet",
+      "principal": "010301",
+      "descricaoPrincipal": "Processamento, armazenamento ou hospedagem de dados (LC116 1.03)",
+      "alternativas": [
+        {"cTribNac": "010901", "descricao": "Disponibilização de conteúdo por internet (LC116 1.09)", "quando_usar": "Quando é disponibilização de conteúdo digital"},
+        {"cTribNac": "010101", "descricao": "Análise e desenvolvimento de sistemas (LC116 1.01)", "quando_usar": "Quando inclui desenvolvimento de plataforma"}
+      ]
+    },
+
+    "6311-9/01": {
+      "descricao": "Portais, provedores de conteúdo e outros serviços de informação na internet",
+      "principal": "010901",
+      "descricaoPrincipal": "Disponibilização de conteúdo de áudio, vídeo, imagem e texto por internet (LC116 1.09)",
+      "alternativas": [
+        {"cTribNac": "010301", "descricao": "Processamento, armazenamento ou hospedagem de dados (LC116 1.03)", "quando_usar": "Quando é hospedagem/processamento"},
+        {"cTribNac": "010801", "descricao": "Páginas eletrônicas (LC116 1.08)", "quando_usar": "Quando é criação/manutenção de portal"}
+      ]
+    },
+
+    "6311-9/02": {
+      "descricao": "Atividades de comércio eletrônico",
+      "principal": "010301",
+      "descricaoPrincipal": "Processamento, armazenamento ou hospedagem de dados (LC116 1.03)",
+      "alternativas": [
+        {"cTribNac": "010101", "descricao": "Análise e desenvolvimento de sistemas (LC116 1.01)", "quando_usar": "Quando é desenvolvimento da plataforma e-commerce"},
+        {"cTribNac": "010901", "descricao": "Disponibilização de conteúdo por internet (LC116 1.09)", "quando_usar": "Quando é marketplace/plataforma"}
+      ]
+    },
+
+    "6319-4/00": {
+      "descricao": "Portais, provedores de conteúdo e outros serviços de informação na internet",
+      "principal": "010901",
+      "descricaoPrincipal": "Disponibilização de conteúdo de áudio, vídeo, imagem e texto por internet (LC116 1.09)",
+      "alternativas": [
+        {"cTribNac": "010301", "descricao": "Processamento, armazenamento ou hospedagem de dados (LC116 1.03)", "quando_usar": "Quando é hospedagem"},
+        {"cTribNac": "010801", "descricao": "Páginas eletrônicas (LC116 1.08)", "quando_usar": "Quando é portal/site"}
+      ]
+    },
+
+    "6391-7/00": {
+      "descricao": "Agências de notícias",
+      "principal": "100701",
+      "descricaoPrincipal": "Agenciamento de notícias (LC116 10.07)",
+      "alternativas": [
+        {"cTribNac": "010901", "descricao": "Disponibilização de conteúdo por internet (LC116 1.09)", "quando_usar": "Quando é distribuição online de conteúdo"}
+      ]
+    },
+
+    "6399-2/00": {
+      "descricao": "Outras atividades de prestação de serviços de informação não especificadas anteriormente",
+      "principal": "010301",
+      "descricaoPrincipal": "Processamento, armazenamento ou hospedagem de dados (LC116 1.03)",
+      "alternativas": [
+        {"cTribNac": "170101", "descricao": "Assessoria ou consultoria de qualquer natureza (LC116 17.01)", "quando_usar": "Quando é consultoria/assessoria de informação"},
+        {"cTribNac": "010601", "descricao": "Assessoria e consultoria em informática (LC116 1.06)", "quando_usar": "Quando é consultoria em TI"}
+      ]
+    },
+
+    "6110-8/01": {
+      "descricao": "Serviços de telefonia fixa comutada - STFC",
+      "principal": "010301",
+      "descricaoPrincipal": "Processamento, armazenamento ou hospedagem de dados (LC116 1.03)",
+      "alternativas": [
+        {"cTribNac": "010901", "descricao": "Disponibilização de conteúdo por internet (LC116 1.09)", "quando_usar": "Quando é VoIP/telefonia via internet"}
+      ]
+    },
+
+    "6120-5/01": {
+      "descricao": "Telefonia móvel celular",
+      "principal": "010301",
+      "descricaoPrincipal": "Processamento, armazenamento ou hospedagem de dados (LC116 1.03)",
+      "alternativas": []
+    },
+
+    "6190-6/00": {
+      "descricao": "Outras atividades de telecomunicações",
+      "principal": "010301",
+      "descricaoPrincipal": "Processamento, armazenamento ou hospedagem de dados (LC116 1.03)",
+      "alternativas": []
+    },
+
+    "6201-5/03": {
+      "descricao": "Desenvolvimento e licenciamento de jogos eletrônicos",
+      "principal": "010401",
+      "descricaoPrincipal": "Elaboração de programas de computador, inclusive de jogos eletrônicos (LC116 1.04)",
+      "alternativas": [
+        {"cTribNac": "010101", "descricao": "Análise e desenvolvimento de sistemas (LC116 1.01)", "quando_usar": "Quando inclui análise/arquitetura do sistema do jogo"},
+        {"cTribNac": "010501", "descricao": "Licenciamento de programas (LC116 1.05)", "quando_usar": "Quando é licenciamento do jogo"}
+      ]
+    },
+
+    "=== SAÚDE ===": {},
+
+    "8610-1/01": {
+      "descricao": "Atividades de atendimento hospitalar, exceto pronto-socorro",
+      "principal": "040301",
+      "descricaoPrincipal": "Hospitais, clínicas, laboratórios, sanatórios e congêneres (LC116 4.03)",
+      "alternativas": [
+        {"cTribNac": "040101", "descricao": "Medicina e biomedicina (LC116 4.01)", "quando_usar": "Quando é serviço médico específico"}
+      ]
+    },
+
+    "8610-1/02": {
+      "descricao": "Atividades de atendimento em pronto-socorro e unidades de urgência",
+      "principal": "040301",
+      "descricaoPrincipal": "Hospitais, clínicas, laboratórios e congêneres (LC116 4.03)",
+      "alternativas": [
+        {"cTribNac": "042101", "descricao": "Unidade de atendimento móvel e congêneres (LC116 4.21)", "quando_usar": "Quando é unidade móvel de atendimento"}
+      ]
+    },
+
+    "8621-6/01": {
+      "descricao": "UTI móvel",
+      "principal": "042101",
+      "descricaoPrincipal": "Unidade de atendimento, assistência ou tratamento móvel (LC116 4.21)",
+      "alternativas": [
+        {"cTribNac": "040301", "descricao": "Hospitais, clínicas e congêneres (LC116 4.03)", "quando_usar": "Quando é prestação vinculada a hospital"}
+      ]
+    },
+
+    "8621-6/02": {
+      "descricao": "Serviços móveis de atendimento a urgências, exceto UTI móvel",
+      "principal": "042101",
+      "descricaoPrincipal": "Unidade de atendimento, assistência ou tratamento móvel (LC116 4.21)",
+      "alternativas": []
+    },
+
+    "8630-5/01": {
+      "descricao": "Atividade médica ambulatorial com recursos para cirurgia",
+      "principal": "040101",
+      "descricaoPrincipal": "Medicina e biomedicina (LC116 4.01)",
+      "alternativas": [
+        {"cTribNac": "040301", "descricao": "Hospitais, clínicas e congêneres (LC116 4.03)", "quando_usar": "Quando é clínica/ambulatório"}
+      ]
+    },
+
+    "8630-5/02": {
+      "descricao": "Atividade médica ambulatorial com recursos para exames complementares",
+      "principal": "040201",
+      "descricaoPrincipal": "Análises clínicas, patologia, exames de imagem e congêneres (LC116 4.02)",
+      "alternativas": [
+        {"cTribNac": "040101", "descricao": "Medicina e biomedicina (LC116 4.01)", "quando_usar": "Quando é consulta médica"},
+        {"cTribNac": "040301", "descricao": "Hospitais, clínicas e congêneres (LC116 4.03)", "quando_usar": "Quando é clínica"}
+      ]
+    },
+
+    "8630-5/03": {
+      "descricao": "Atividade médica ambulatorial restrita a consultas",
+      "principal": "040101",
+      "descricaoPrincipal": "Medicina e biomedicina (LC116 4.01)",
+      "alternativas": [
+        {"cTribNac": "040301", "descricao": "Hospitais, clínicas e congêneres (LC116 4.03)", "quando_usar": "Quando é clínica médica"}
+      ]
+    },
+
+    "8630-5/04": {
+      "descricao": "Atividade odontológica",
+      "principal": "041201",
+      "descricaoPrincipal": "Odontologia (LC116 4.12)",
+      "alternativas": [
+        {"cTribNac": "040301", "descricao": "Hospitais, clínicas e congêneres (LC116 4.03)", "quando_usar": "Quando é clínica odontológica"}
+      ]
+    },
+
+    "8630-5/06": {
+      "descricao": "Serviços de vacinação e imunização humana",
+      "principal": "040101",
+      "descricaoPrincipal": "Medicina e biomedicina (LC116 4.01)",
+      "alternativas": [
+        {"cTribNac": "040901", "descricao": "Terapias destinadas ao tratamento físico, orgânico e mental (LC116 4.09)", "quando_usar": "Quando é terapia"}
+      ]
+    },
+
+    "8630-5/07": {
+      "descricao": "Atividades de reprodução humana assistida",
+      "principal": "041801",
+      "descricaoPrincipal": "Inseminação artificial, fertilização in vitro e congêneres (LC116 4.18)",
+      "alternativas": [
+        {"cTribNac": "040101", "descricao": "Medicina e biomedicina (LC116 4.01)", "quando_usar": "Quando é consulta/procedimento médico"}
+      ]
+    },
+
+    "8640-2/01": {
+      "descricao": "Laboratórios de anatomia patológica e citológica",
+      "principal": "040201",
+      "descricaoPrincipal": "Análises clínicas, patologia, eletricidade médica e congêneres (LC116 4.02)",
+      "alternativas": []
+    },
+
+    "8640-2/02": {
+      "descricao": "Laboratórios clínicos",
+      "principal": "040201",
+      "descricaoPrincipal": "Análises clínicas, patologia e congêneres (LC116 4.02)",
+      "alternativas": [
+        {"cTribNac": "040301", "descricao": "Laboratórios e congêneres (LC116 4.03)", "quando_usar": "Quando é laboratório integrado a hospital/clínica"}
+      ]
+    },
+
+    "8640-2/03": {
+      "descricao": "Serviços de diálise e nefrologia",
+      "principal": "040201",
+      "descricaoPrincipal": "Análises clínicas e congêneres (LC116 4.02)",
+      "alternativas": [
+        {"cTribNac": "040301", "descricao": "Hospitais, clínicas e congêneres (LC116 4.03)", "quando_usar": "Quando é clínica de diálise"}
+      ]
+    },
+
+    "8640-2/04": {
+      "descricao": "Serviços de tomografia",
+      "principal": "040201",
+      "descricaoPrincipal": "Análises clínicas, patologia, tomografia e congêneres (LC116 4.02)",
+      "alternativas": []
+    },
+
+    "8640-2/05": {
+      "descricao": "Serviços de diagnóstico por imagem com radiação ionizante",
+      "principal": "040201",
+      "descricaoPrincipal": "Análises clínicas, radiologia, tomografia e congêneres (LC116 4.02)",
+      "alternativas": []
+    },
+
+    "8640-2/06": {
+      "descricao": "Serviços de ressonância magnética",
+      "principal": "040201",
+      "descricaoPrincipal": "Análises clínicas, ressonância magnética e congêneres (LC116 4.02)",
+      "alternativas": []
+    },
+
+    "8640-2/07": {
+      "descricao": "Serviços de diagnóstico por imagem sem radiação ionizante",
+      "principal": "040201",
+      "descricaoPrincipal": "Análises clínicas, ultrassonografia e congêneres (LC116 4.02)",
+      "alternativas": []
+    },
+
+    "8640-2/08": {
+      "descricao": "Serviços de diagnóstico por registro gráfico - ECG, EEG e similares",
+      "principal": "040201",
+      "descricaoPrincipal": "Análises clínicas, eletricidade médica e congêneres (LC116 4.02)",
+      "alternativas": []
+    },
+
+    "8640-2/09": {
+      "descricao": "Serviços de diagnóstico por métodos ópticos - endoscopia e similares",
+      "principal": "040201",
+      "descricaoPrincipal": "Análises clínicas e congêneres (LC116 4.02)",
+      "alternativas": []
+    },
+
+    "8640-2/10": {
+      "descricao": "Serviços de quimioterapia",
+      "principal": "040201",
+      "descricaoPrincipal": "Quimioterapia (LC116 4.02)",
+      "alternativas": [
+        {"cTribNac": "040301", "descricao": "Hospitais, clínicas e congêneres (LC116 4.03)", "quando_usar": "Quando é clínica oncológica"}
+      ]
+    },
+
+    "8640-2/11": {
+      "descricao": "Serviços de radioterapia",
+      "principal": "040201",
+      "descricaoPrincipal": "Radioterapia e congêneres (LC116 4.02)",
+      "alternativas": []
+    },
+
+    "8640-2/12": {
+      "descricao": "Serviços de hemoterapia",
+      "principal": "041901",
+      "descricaoPrincipal": "Bancos de sangue, leite, pele, olhos e congêneres (LC116 4.19)",
+      "alternativas": [
+        {"cTribNac": "042001", "descricao": "Coleta de sangue e materiais biológicos (LC116 4.20)", "quando_usar": "Quando é coleta de sangue"}
+      ]
+    },
+
+    "8640-2/14": {
+      "descricao": "Serviços de bancos de células e tecidos humanos",
+      "principal": "041901",
+      "descricaoPrincipal": "Bancos de sangue, pele, olhos e congêneres (LC116 4.19)",
+      "alternativas": []
+    },
+
+    "8650-0/01": {
+      "descricao": "Atividades de enfermagem",
+      "principal": "040601",
+      "descricaoPrincipal": "Enfermagem, inclusive serviços auxiliares (LC116 4.06)",
+      "alternativas": [
+        {"cTribNac": "040301", "descricao": "Hospitais, clínicas e congêneres (LC116 4.03)", "quando_usar": "Quando é empresa prestadora de serviços de enfermagem hospitalar"}
+      ]
+    },
+
+    "8650-0/02": {
+      "descricao": "Atividades de profissionais da nutrição",
+      "principal": "041001",
+      "descricaoPrincipal": "Nutrição (LC116 4.10)",
+      "alternativas": [
+        {"cTribNac": "040901", "descricao": "Terapias destinadas ao tratamento físico e orgânico (LC116 4.09)", "quando_usar": "Quando é terapia nutricional"}
+      ]
+    },
+
+    "8650-0/03": {
+      "descricao": "Atividades de psicologia e psicanálise",
+      "principal": "041601",
+      "descricaoPrincipal": "Psicologia (LC116 4.16)",
+      "alternativas": [
+        {"cTribNac": "041501", "descricao": "Psicanálise (LC116 4.15)", "quando_usar": "Quando é serviço de psicanálise especificamente"},
+        {"cTribNac": "040901", "descricao": "Terapias destinadas ao tratamento físico, orgânico e mental (LC116 4.09)", "quando_usar": "Quando é terapia mental em geral"}
+      ]
+    },
+
+    "8650-0/04": {
+      "descricao": "Atividades de fisioterapia",
+      "principal": "040801",
+      "descricaoPrincipal": "Terapia ocupacional, fisioterapia e fonoaudiologia (LC116 4.08)",
+      "alternativas": [
+        {"cTribNac": "040901", "descricao": "Terapias para tratamento físico e orgânico (LC116 4.09)", "quando_usar": "Quando é terapia não classificada"}
+      ]
+    },
+
+    "8650-0/05": {
+      "descricao": "Atividades de terapia ocupacional",
+      "principal": "040801",
+      "descricaoPrincipal": "Terapia ocupacional, fisioterapia e fonoaudiologia (LC116 4.08)",
+      "alternativas": []
+    },
+
+    "8650-0/06": {
+      "descricao": "Atividades de fonoaudiologia",
+      "principal": "040801",
+      "descricaoPrincipal": "Terapia ocupacional, fisioterapia e fonoaudiologia (LC116 4.08)",
+      "alternativas": []
+    },
+
+    "8650-0/07": {
+      "descricao": "Atividades de terapia de nutrição enteral e parenteral",
+      "principal": "040901",
+      "descricaoPrincipal": "Terapias de qualquer espécie destinadas ao tratamento físico, orgânico e mental (LC116 4.09)",
+      "alternativas": [
+        {"cTribNac": "041001", "descricao": "Nutrição (LC116 4.10)", "quando_usar": "Quando é nutrição clínica"}
+      ]
+    },
+
+    "8660-7/00": {
+      "descricao": "Atividades de apoio à gestão de saúde",
+      "principal": "040301",
+      "descricaoPrincipal": "Hospitais, clínicas, laboratórios e congêneres (LC116 4.03)",
+      "alternativas": [
+        {"cTribNac": "170101", "descricao": "Assessoria ou consultoria de qualquer natureza (LC116 17.01)", "quando_usar": "Quando é consultoria em gestão de saúde"}
+      ]
+    },
+
+    "8690-9/01": {
+      "descricao": "Atividades de práticas integrativas e complementares em saúde humana",
+      "principal": "040901",
+      "descricaoPrincipal": "Terapias de qualquer espécie destinadas ao tratamento físico, orgânico e mental (LC116 4.09)",
+      "alternativas": []
+    },
+
+    "8690-9/03": {
+      "descricao": "Atividades de acupuntura",
+      "principal": "040501",
+      "descricaoPrincipal": "Acupuntura (LC116 4.05)",
+      "alternativas": [
+        {"cTribNac": "040901", "descricao": "Terapias de qualquer espécie (LC116 4.09)", "quando_usar": "Quando abrange outras terapias"}
+      ]
+    },
+
+    "8690-9/04": {
+      "descricao": "Atividades de podologia",
+      "principal": "040901",
+      "descricaoPrincipal": "Terapias de qualquer espécie (LC116 4.09)",
+      "alternativas": [
+        {"cTribNac": "040601", "descricao": "Enfermagem (LC116 4.06)", "quando_usar": "Quando é serviço de saúde vinculado"}
+      ]
+    },
+
+    "8690-9/99": {
+      "descricao": "Outras atividades de atenção à saúde humana não especificadas anteriormente",
+      "principal": "040901",
+      "descricaoPrincipal": "Terapias de qualquer espécie (LC116 4.09)",
+      "alternativas": [
+        {"cTribNac": "040101", "descricao": "Medicina e biomedicina (LC116 4.01)", "quando_usar": "Quando é serviço médico"}
+      ]
+    },
+
+    "8711-5/01": {
+      "descricao": "Clínicas e residências geriátricas",
+      "principal": "041701",
+      "descricaoPrincipal": "Casas de repouso e de recuperação, creches, asilos e congêneres (LC116 4.17)",
+      "alternativas": [
+        {"cTribNac": "040301", "descricao": "Hospitais, clínicas e congêneres (LC116 4.03)", "quando_usar": "Quando tem estrutura clínica hospitalar"}
+      ]
+    },
+
+    "8711-5/02": {
+      "descricao": "Instituições de longa permanência para idosos",
+      "principal": "041701",
+      "descricaoPrincipal": "Casas de repouso, asilos e congêneres (LC116 4.17)",
+      "alternativas": []
+    },
+
+    "8711-5/03": {
+      "descricao": "Atividades de assistência a deficientes físicos, imunodeprimidos e convalescentes",
+      "principal": "041701",
+      "descricaoPrincipal": "Casas de recuperação e congêneres (LC116 4.17)",
+      "alternativas": []
+    },
+
+    "8712-3/00": {
+      "descricao": "Atividades de fornecimento de infraestrutura de apoio e assistência a paciente no domicílio",
+      "principal": "042101",
+      "descricaoPrincipal": "Unidade de atendimento, assistência ou tratamento móvel e congêneres (LC116 4.21)",
+      "alternativas": [
+        {"cTribNac": "040601", "descricao": "Enfermagem (LC116 4.06)", "quando_usar": "Quando é serviço de enfermagem domiciliar"}
+      ]
+    },
+
+    "8720-4/01": {
+      "descricao": "Atividades de centros de assistência psicossocial",
+      "principal": "041601",
+      "descricaoPrincipal": "Psicologia (LC116 4.16)",
+      "alternativas": [
+        {"cTribNac": "041701", "descricao": "Casas de repouso, asilos e congêneres (LC116 4.17)", "quando_usar": "Quando é residência terapêutica"}
+      ]
+    },
+
+    "8730-1/01": {
+      "descricao": "Orfanatos",
+      "principal": "041701",
+      "descricaoPrincipal": "Casas de repouso, creches, asilos e congêneres (LC116 4.17)",
+      "alternativas": []
+    },
+
+    "8730-1/02": {
+      "descricao": "Albergues assistenciais",
+      "principal": "041701",
+      "descricaoPrincipal": "Casas de repouso, asilos e congêneres (LC116 4.17)",
+      "alternativas": []
+    },
+
+    "8800-6/00": {
+      "descricao": "Serviços de assistência social sem alojamento",
+      "principal": "041701",
+      "descricaoPrincipal": "Casas de repouso, creches e congêneres (LC116 4.17)",
+      "alternativas": [
+        {"cTribNac": "170101", "descricao": "Assessoria ou consultoria de qualquer natureza (LC116 17.01)", "quando_usar": "Quando é assessoria social"}
+      ]
+    },
+
+    "=== EDUCAÇÃO ===": {},
+
+    "8511-2/00": {
+      "descricao": "Educação infantil - creche",
+      "principal": "080101",
+      "descricaoPrincipal": "Ensino regular pré-escolar, fundamental, médio e superior (LC116 8.01)",
+      "alternativas": [
+        {"cTribNac": "041701", "descricao": "Creches e congêneres (LC116 4.17)", "quando_usar": "Quando o foco é no aspecto de assistência à criança"}
+      ]
+    },
+
+    "8512-1/00": {
+      "descricao": "Educação infantil - pré-escola",
+      "principal": "080101",
+      "descricaoPrincipal": "Ensino regular pré-escolar (LC116 8.01)",
+      "alternativas": []
+    },
+
+    "8513-9/00": {
+      "descricao": "Ensino fundamental",
+      "principal": "080101",
+      "descricaoPrincipal": "Ensino regular fundamental (LC116 8.01)",
+      "alternativas": []
+    },
+
+    "8520-1/00": {
+      "descricao": "Ensino médio",
+      "principal": "080101",
+      "descricaoPrincipal": "Ensino regular médio (LC116 8.01)",
+      "alternativas": []
+    },
+
+    "8531-7/00": {
+      "descricao": "Educação superior - graduação",
+      "principal": "080101",
+      "descricaoPrincipal": "Ensino regular superior (LC116 8.01)",
+      "alternativas": []
+    },
+
+    "8532-5/00": {
+      "descricao": "Educação superior - graduação e pós-graduação",
+      "principal": "080101",
+      "descricaoPrincipal": "Ensino regular superior e pós-graduação (LC116 8.01)",
+      "alternativas": [
+        {"cTribNac": "080201", "descricao": "Instrução, treinamento, orientação pedagógica (LC116 8.02)", "quando_usar": "Quando é extensão/curso"}
+      ]
+    },
+
+    "8533-3/00": {
+      "descricao": "Educação superior - pós-graduação e extensão",
+      "principal": "080101",
+      "descricaoPrincipal": "Ensino regular pós-graduação (LC116 8.01)",
+      "alternativas": [
+        {"cTribNac": "080201", "descricao": "Instrução, treinamento, orientação pedagógica (LC116 8.02)", "quando_usar": "Quando é extensão/MBA corporativo"}
+      ]
+    },
+
+    "8541-4/00": {
+      "descricao": "Educação profissional de nível técnico",
+      "principal": "080201",
+      "descricaoPrincipal": "Instrução, treinamento, orientação pedagógica e educacional (LC116 8.02)",
+      "alternativas": [
+        {"cTribNac": "080101", "descricao": "Ensino regular (LC116 8.01)", "quando_usar": "Quando tem reconhecimento MEC como ensino regular"}
+      ]
+    },
+
+    "8542-2/00": {
+      "descricao": "Educação profissional de nível tecnológico",
+      "principal": "080101",
+      "descricaoPrincipal": "Ensino regular superior (LC116 8.01)",
+      "alternativas": [
+        {"cTribNac": "080201", "descricao": "Instrução, treinamento, orientação pedagógica (LC116 8.02)", "quando_usar": "Quando é curso livre tecnológico"}
+      ]
+    },
+
+    "8550-3/01": {
+      "descricao": "Administração de caixas escolares",
+      "principal": "170301",
+      "descricaoPrincipal": "Planejamento, coordenação, programação ou organização técnica, financeira ou administrativa (LC116 17.03)",
+      "alternativas": []
+    },
+
+    "8550-3/02": {
+      "descricao": "Atividades de apoio à educação",
+      "principal": "080201",
+      "descricaoPrincipal": "Instrução, treinamento, orientação pedagógica e educacional (LC116 8.02)",
+      "alternativas": []
+    },
+
+    "8591-1/00": {
+      "descricao": "Ensino de esportes",
+      "principal": "080201",
+      "descricaoPrincipal": "Instrução, treinamento, avaliação de conhecimentos (LC116 8.02)",
+      "alternativas": [
+        {"cTribNac": "060401", "descricao": "Ginástica, dança, esportes, natação, artes marciais (LC116 6.04)", "quando_usar": "Quando é academia/esporte"}
+      ]
+    },
+
+    "8592-9/01": {
+      "descricao": "Ensino de dança",
+      "principal": "080201",
+      "descricaoPrincipal": "Instrução, treinamento (LC116 8.02)",
+      "alternativas": [
+        {"cTribNac": "060401", "descricao": "Ginástica, dança, esportes (LC116 6.04)", "quando_usar": "Quando é academia/estúdio de dança"}
+      ]
+    },
+
+    "8592-9/02": {
+      "descricao": "Ensino de artes cênicas, exceto dança",
+      "principal": "080201",
+      "descricaoPrincipal": "Instrução, treinamento (LC116 8.02)",
+      "alternativas": []
+    },
+
+    "8592-9/03": {
+      "descricao": "Ensino de música",
+      "principal": "080201",
+      "descricaoPrincipal": "Instrução, treinamento, avaliação de conhecimentos (LC116 8.02)",
+      "alternativas": []
+    },
+
+    "8592-9/99": {
+      "descricao": "Ensino de arte e cultura não especificado anteriormente",
+      "principal": "080201",
+      "descricaoPrincipal": "Instrução, treinamento, avaliação de conhecimentos (LC116 8.02)",
+      "alternativas": []
+    },
+
+    "8593-7/00": {
+      "descricao": "Ensino de idiomas",
+      "principal": "080201",
+      "descricaoPrincipal": "Instrução, treinamento, avaliação de conhecimentos de qualquer natureza (LC116 8.02)",
+      "alternativas": []
+    },
+
+    "8599-6/01": {
+      "descricao": "Formação de condutores",
+      "principal": "080201",
+      "descricaoPrincipal": "Instrução, treinamento, avaliação de conhecimentos (LC116 8.02)",
+      "alternativas": []
+    },
+
+    "8599-6/02": {
+      "descricao": "Cursos de pilotagem",
+      "principal": "080201",
+      "descricaoPrincipal": "Instrução, treinamento (LC116 8.02)",
+      "alternativas": []
+    },
+
+    "8599-6/03": {
+      "descricao": "Treinamento em informática",
+      "principal": "080201",
+      "descricaoPrincipal": "Instrução, treinamento (LC116 8.02)",
+      "alternativas": [
+        {"cTribNac": "010601", "descricao": "Assessoria e consultoria em informática (LC116 1.06)", "quando_usar": "Quando é consultoria técnica em TI"}
+      ]
+    },
+
+    "8599-6/04": {
+      "descricao": "Treinamento em desenvolvimento profissional e gerencial",
+      "principal": "080201",
+      "descricaoPrincipal": "Instrução, treinamento, orientação pedagógica e educacional (LC116 8.02)",
+      "alternativas": [
+        {"cTribNac": "172401", "descricao": "Apresentação de palestras, conferências, seminários (LC116 17.24)", "quando_usar": "Quando é palestra/seminário pontual"}
+      ]
+    },
+
+    "8599-6/05": {
+      "descricao": "Cursos preparatórios para concursos",
+      "principal": "080201",
+      "descricaoPrincipal": "Instrução, treinamento, avaliação de conhecimentos (LC116 8.02)",
+      "alternativas": []
+    },
+
+    "8599-6/99": {
+      "descricao": "Outras atividades de ensino não especificadas anteriormente",
+      "principal": "080201",
+      "descricaoPrincipal": "Instrução, treinamento, avaliação de conhecimentos de qualquer natureza (LC116 8.02)",
+      "alternativas": []
+    },
+
+    "=== CONSTRUÇÃO CIVIL ===": {},
+
+    "4110-7/00": {
+      "descricao": "Incorporação de empreendimentos imobiliários",
+      "principal": "070201",
+      "descricaoPrincipal": "Execução de obras de construção civil, hidráulica ou elétrica (LC116 7.02)",
+      "alternativas": [
+        {"cTribNac": "070301", "descricao": "Elaboração de planos diretores, estudos de viabilidade (LC116 7.03)", "quando_usar": "Quando é estudo/projeto"}
+      ]
+    },
+
+    "4120-4/00": {
+      "descricao": "Construção de edifícios",
+      "principal": "070201",
+      "descricaoPrincipal": "Execução, por administração, empreitada ou subempreitada, de obras de construção civil (LC116 7.02)",
+      "alternativas": [
+        {"cTribNac": "070501", "descricao": "Reparação, conservação e reforma de edifícios (LC116 7.05)", "quando_usar": "Quando é reforma/conservação"}
+      ]
+    },
+
+    "4211-1/01": {
+      "descricao": "Construção de rodovias e ferrovias",
+      "principal": "070201",
+      "descricaoPrincipal": "Execução de obras de construção civil (LC116 7.02)",
+      "alternativas": [
+        {"cTribNac": "070501", "descricao": "Reparação, conservação e reforma de estradas e pontes (LC116 7.05)", "quando_usar": "Quando é conservação/manutenção de rodovias"}
+      ]
+    },
+
+    "4211-1/02": {
+      "descricao": "Pintura para sinalização em pistas rodoviárias e aeroportos",
+      "principal": "070501",
+      "descricaoPrincipal": "Reparação, conservação e reforma (LC116 7.05)",
+      "alternativas": []
+    },
+
+    "4212-0/00": {
+      "descricao": "Construção de obras de arte especiais",
+      "principal": "070201",
+      "descricaoPrincipal": "Execução de obras de construção civil (LC116 7.02)",
+      "alternativas": []
+    },
+
+    "4213-8/00": {
+      "descricao": "Obras de urbanização - ruas, praças e calçadas",
+      "principal": "070201",
+      "descricaoPrincipal": "Execução de obras de construção civil (LC116 7.02)",
+      "alternativas": []
+    },
+
+    "4221-9/02": {
+      "descricao": "Construção de estações e redes de distribuição de energia elétrica",
+      "principal": "070201",
+      "descricaoPrincipal": "Execução de obras de construção civil e elétrica (LC116 7.02)",
+      "alternativas": []
+    },
+
+    "4221-9/03": {
+      "descricao": "Manutenção de redes de distribuição de energia elétrica",
+      "principal": "070501",
+      "descricaoPrincipal": "Reparação, conservação e reforma (LC116 7.05)",
+      "alternativas": [
+        {"cTribNac": "070201", "descricao": "Execução de obras de construção elétrica (LC116 7.02)", "quando_usar": "Quando é construção nova"}
+      ]
+    },
+
+    "4221-9/04": {
+      "descricao": "Construção de estações e redes de telecomunicações",
+      "principal": "070201",
+      "descricaoPrincipal": "Execução de obras de construção civil (LC116 7.02)",
+      "alternativas": []
+    },
+
+    "4222-7/01": {
+      "descricao": "Construção de redes de abastecimento de água, coleta de esgoto",
+      "principal": "070201",
+      "descricaoPrincipal": "Execução de obras de construção civil hidráulica (LC116 7.02)",
+      "alternativas": []
+    },
+
+    "4292-8/01": {
+      "descricao": "Montagem de estruturas metálicas",
+      "principal": "070201",
+      "descricaoPrincipal": "Execução de obras de construção civil (LC116 7.02)",
+      "alternativas": [
+        {"cTribNac": "140601", "descricao": "Instalação e montagem de aparelhos, máquinas e equipamentos (LC116 14.06)", "quando_usar": "Quando é montagem de equipamentos industriais"}
+      ]
+    },
+
+    "4292-8/02": {
+      "descricao": "Obras de montagem industrial",
+      "principal": "070201",
+      "descricaoPrincipal": "Execução de obras de construção civil (LC116 7.02)",
+      "alternativas": [
+        {"cTribNac": "140601", "descricao": "Instalação e montagem industrial (LC116 14.06)", "quando_usar": "Quando é montagem de equipamentos"}
+      ]
+    },
+
+    "4311-8/01": {
+      "descricao": "Demolição de edifícios e outras estruturas",
+      "principal": "070401",
+      "descricaoPrincipal": "Demolição (LC116 7.04)",
+      "alternativas": []
+    },
+
+    "4311-8/02": {
+      "descricao": "Preparação de canteiro e limpeza de terreno",
+      "principal": "070201",
+      "descricaoPrincipal": "Execução de obras - escavação, terraplanagem (LC116 7.02)",
+      "alternativas": []
+    },
+
+    "4312-6/00": {
+      "descricao": "Perfurações e sondagens",
+      "principal": "070201",
+      "descricaoPrincipal": "Execução de obras - sondagem, perfuração de poços (LC116 7.02)",
+      "alternativas": []
+    },
+
+    "4313-4/00": {
+      "descricao": "Obras de terraplenagem",
+      "principal": "070201",
+      "descricaoPrincipal": "Execução de obras - terraplenagem, pavimentação (LC116 7.02)",
+      "alternativas": []
+    },
+
+    "4321-5/00": {
+      "descricao": "Instalação e manutenção elétrica",
+      "principal": "070201",
+      "descricaoPrincipal": "Execução de obras elétricas (LC116 7.02)",
+      "alternativas": [
+        {"cTribNac": "070501", "descricao": "Reparação, conservação e reforma (LC116 7.05)", "quando_usar": "Quando é manutenção/reforma elétrica"},
+        {"cTribNac": "140201", "descricao": "Assistência técnica (LC116 14.02)", "quando_usar": "Quando é assistência técnica em instalações elétricas"}
+      ]
+    },
+
+    "4322-3/01": {
+      "descricao": "Instalações hidráulicas, sanitárias e de gás",
+      "principal": "070201",
+      "descricaoPrincipal": "Execução de obras de construção civil hidráulica (LC116 7.02)",
+      "alternativas": [
+        {"cTribNac": "070501", "descricao": "Reparação, conservação e reforma (LC116 7.05)", "quando_usar": "Quando é manutenção/reparo hidráulico"}
+      ]
+    },
+
+    "4322-3/02": {
+      "descricao": "Instalação e manutenção de sistemas de ar condicionado e refrigeração",
+      "principal": "070201",
+      "descricaoPrincipal": "Execução de obras de construção e instalação (LC116 7.02)",
+      "alternativas": [
+        {"cTribNac": "140101", "descricao": "Manutenção e conservação de máquinas e equipamentos (LC116 14.01)", "quando_usar": "Quando é manutenção de equipamento de ar condicionado"}
+      ]
+    },
+
+    "4322-3/03": {
+      "descricao": "Instalações de sistema de prevenção contra incêndio",
+      "principal": "070201",
+      "descricaoPrincipal": "Execução de obras de construção e instalação (LC116 7.02)",
+      "alternativas": []
+    },
+
+    "4329-1/03": {
+      "descricao": "Instalação, manutenção e reparação de elevadores, escadas e esteiras rolantes",
+      "principal": "140101",
+      "descricaoPrincipal": "Manutenção e conservação de máquinas e equipamentos (LC116 14.01)",
+      "alternativas": [
+        {"cTribNac": "070201", "descricao": "Execução de obras de construção e instalação (LC116 7.02)", "quando_usar": "Quando é instalação nova em obra"}
+      ]
+    },
+
+    "4329-1/99": {
+      "descricao": "Outras obras de instalações em construções não especificadas anteriormente",
+      "principal": "070201",
+      "descricaoPrincipal": "Execução de obras de construção civil (LC116 7.02)",
+      "alternativas": []
+    },
+
+    "4330-4/01": {
+      "descricao": "Impermeabilização em obras de engenharia civil",
+      "principal": "070501",
+      "descricaoPrincipal": "Reparação, conservação e reforma de edifícios (LC116 7.05)",
+      "alternativas": [
+        {"cTribNac": "070201", "descricao": "Execução de obras de construção civil (LC116 7.02)", "quando_usar": "Quando é obra nova"}
+      ]
+    },
+
+    "4330-4/02": {
+      "descricao": "Instalação de portas, janelas, tetos, divisórias e armários embutidos",
+      "principal": "070601",
+      "descricaoPrincipal": "Colocação e instalação de tapetes, carpetes, divisórias e congêneres (LC116 7.06)",
+      "alternativas": [
+        {"cTribNac": "070201", "descricao": "Execução de obras de construção civil (LC116 7.02)", "quando_usar": "Quando é obra nova"}
+      ]
+    },
+
+    "4330-4/03": {
+      "descricao": "Obras de acabamento em gesso e estuque",
+      "principal": "070201",
+      "descricaoPrincipal": "Execução de obras de construção civil (LC116 7.02)",
+      "alternativas": [
+        {"cTribNac": "070501", "descricao": "Reparação, conservação e reforma (LC116 7.05)", "quando_usar": "Quando é reforma/conservação"}
+      ]
+    },
+
+    "4330-4/04": {
+      "descricao": "Serviços de pintura de edifícios em geral",
+      "principal": "070501",
+      "descricaoPrincipal": "Reparação, conservação e reforma de edifícios (LC116 7.05)",
+      "alternativas": [
+        {"cTribNac": "070201", "descricao": "Execução de obras de construção civil (LC116 7.02)", "quando_usar": "Quando é pintura em obra nova"}
+      ]
+    },
+
+    "4330-4/05": {
+      "descricao": "Aplicação de revestimentos e de resinas em interiores e exteriores",
+      "principal": "070501",
+      "descricaoPrincipal": "Reparação, conservação e reforma (LC116 7.05)",
+      "alternativas": []
+    },
+
+    "4330-4/99": {
+      "descricao": "Outras obras de acabamento da construção",
+      "principal": "070201",
+      "descricaoPrincipal": "Execução de obras de construção civil (LC116 7.02)",
+      "alternativas": []
+    },
+
+    "4391-6/00": {
+      "descricao": "Obras de fundações",
+      "principal": "070201",
+      "descricaoPrincipal": "Execução de obras de construção civil (LC116 7.02)",
+      "alternativas": []
+    },
+
+    "4399-1/01": {
+      "descricao": "Administração de obras",
+      "principal": "071901",
+      "descricaoPrincipal": "Acompanhamento e fiscalização da execução de obras de engenharia, arquitetura e urbanismo (LC116 7.19)",
+      "alternativas": [
+        {"cTribNac": "070101", "descricao": "Engenharia, arquitetura e congêneres (LC116 7.01)", "quando_usar": "Quando é serviço de engenharia/arquitetura"},
+        {"cTribNac": "070201", "descricao": "Execução de obras de construção civil (LC116 7.02)", "quando_usar": "Quando é execução/empreitada"}
+      ]
+    },
+
+    "4399-1/02": {
+      "descricao": "Montagem e desmontagem de andaimes e outras estruturas temporárias",
+      "principal": "030501",
+      "descricaoPrincipal": "Cessão de andaimes, palcos, coberturas e outras estruturas de uso temporário (LC116 3.05)",
+      "alternativas": [
+        {"cTribNac": "070201", "descricao": "Execução de obras de construção civil (LC116 7.02)", "quando_usar": "Quando andaime é parte de obra maior"}
+      ]
+    },
+
+    "4399-1/03": {
+      "descricao": "Obras de alvenaria",
+      "principal": "070201",
+      "descricaoPrincipal": "Execução de obras de construção civil (LC116 7.02)",
+      "alternativas": []
+    },
+
+    "4399-1/05": {
+      "descricao": "Perfuração e construção de poços de água",
+      "principal": "070201",
+      "descricaoPrincipal": "Execução de obras - perfuração de poços (LC116 7.02)",
+      "alternativas": []
+    },
+
+    "4399-1/99": {
+      "descricao": "Serviços especializados para construção não especificados anteriormente",
+      "principal": "070201",
+      "descricaoPrincipal": "Execução de obras de construção civil (LC116 7.02)",
+      "alternativas": []
+    },
+
+    "7111-1/00": {
+      "descricao": "Serviços de arquitetura",
+      "principal": "070101",
+      "descricaoPrincipal": "Engenharia, arquitetura, geologia, urbanismo, paisagismo e congêneres (LC116 7.01)",
+      "alternativas": [
+        {"cTribNac": "070301", "descricao": "Elaboração de planos, projetos básicos e executivos para trabalhos de engenharia (LC116 7.03)", "quando_usar": "Quando é elaboração de projetos"}
+      ]
+    },
+
+    "7112-0/00": {
+      "descricao": "Serviços de engenharia",
+      "principal": "070101",
+      "descricaoPrincipal": "Engenharia, arquitetura, agronomia e congêneres (LC116 7.01)",
+      "alternativas": [
+        {"cTribNac": "070301", "descricao": "Elaboração de planos diretores, projetos de engenharia (LC116 7.03)", "quando_usar": "Quando é elaboração de projeto"},
+        {"cTribNac": "071901", "descricao": "Acompanhamento e fiscalização de obras (LC116 7.19)", "quando_usar": "Quando é fiscalização/gestão de obras"}
+      ]
+    },
+
+    "7119-7/01": {
+      "descricao": "Serviços de cartografia, topografia e geodésia",
+      "principal": "072001",
+      "descricaoPrincipal": "Aerofotogrametria, cartografia, mapeamento, levantamentos topográficos e geodésicos (LC116 7.20)",
+      "alternativas": [
+        {"cTribNac": "070101", "descricao": "Engenharia e agrimensura (LC116 7.01)", "quando_usar": "Quando é agrimensura"}
+      ]
+    },
+
+    "7119-7/02": {
+      "descricao": "Atividades de estudos geológicos",
+      "principal": "070101",
+      "descricaoPrincipal": "Engenharia, geologia, geofísica (LC116 7.01)",
+      "alternativas": [
+        {"cTribNac": "072001", "descricao": "Levantamentos geológicos e geofísicos (LC116 7.20)", "quando_usar": "Quando é levantamento/mapeamento geológico"}
+      ]
+    },
+
+    "7119-7/03": {
+      "descricao": "Serviços de desenho técnico relacionados à arquitetura e engenharia",
+      "principal": "070301",
+      "descricaoPrincipal": "Elaboração de projetos básicos e executivos para trabalhos de engenharia (LC116 7.03)",
+      "alternativas": []
+    },
+
+    "7119-7/04": {
+      "descricao": "Serviços de perícia técnica relacionados à segurança do trabalho",
+      "principal": "170901",
+      "descricaoPrincipal": "Perícias, laudos, exames técnicos e análises técnicas (LC116 17.09)",
+      "alternativas": []
+    },
+
+    "7119-7/99": {
+      "descricao": "Atividades técnicas relacionadas à engenharia e arquitetura não especificadas anteriormente",
+      "principal": "070101",
+      "descricaoPrincipal": "Engenharia, arquitetura e congêneres (LC116 7.01)",
+      "alternativas": []
+    },
+
+    "=== CONTABILIDADE ===": {},
+
+    "6920-6/01": {
+      "descricao": "Atividades de contabilidade",
+      "principal": "171901",
+      "descricaoPrincipal": "Contabilidade, inclusive serviços técnicos e auxiliares (LC116 17.19)",
+      "alternativas": [
+        {"cTribNac": "170101", "descricao": "Assessoria ou consultoria de qualquer natureza (LC116 17.01)", "quando_usar": "Quando é consultoria financeira/fiscal"},
+        {"cTribNac": "172001", "descricao": "Consultoria e assessoria econômica ou financeira (LC116 17.20)", "quando_usar": "Quando é consultoria econômica/financeira"}
+      ]
+    },
+
+    "6920-6/02": {
+      "descricao": "Atividades de consultoria e auditoria contábil e tributária",
+      "principal": "171601",
+      "descricaoPrincipal": "Auditoria (LC116 17.16)",
+      "alternativas": [
+        {"cTribNac": "171901", "descricao": "Contabilidade, inclusive serviços técnicos e auxiliares (LC116 17.19)", "quando_usar": "Quando é contabilidade/assessoria contábil"},
+        {"cTribNac": "170101", "descricao": "Assessoria ou consultoria de qualquer natureza (LC116 17.01)", "quando_usar": "Quando é consultoria tributária"}
+      ]
+    },
+
+    "=== ADVOCACIA E SERVIÇOS JURÍDICOS ===": {},
+
+    "6911-7/00": {
+      "descricao": "Atividades jurídicas, exceto cartórios",
+      "principal": "171401",
+      "descricaoPrincipal": "Advocacia (LC116 17.14)",
+      "alternativas": [
+        {"cTribNac": "171501", "descricao": "Arbitragem de qualquer espécie, inclusive jurídica (LC116 17.15)", "quando_usar": "Quando é arbitragem"},
+        {"cTribNac": "170101", "descricao": "Assessoria ou consultoria de qualquer natureza (LC116 17.01)", "quando_usar": "Quando é consultoria jurídica sem atuação processual"}
+      ]
+    },
+
+    "6911-7/01": {
+      "descricao": "Serviços advocatícios",
+      "principal": "171401",
+      "descricaoPrincipal": "Advocacia (LC116 17.14)",
+      "alternativas": [
+        {"cTribNac": "170101", "descricao": "Assessoria ou consultoria de qualquer natureza (LC116 17.01)", "quando_usar": "Quando é assessoria jurídica sem patrocínio"}
+      ]
+    },
+
+    "6911-7/02": {
+      "descricao": "Atividades auxiliares da justiça",
+      "principal": "170901",
+      "descricaoPrincipal": "Perícias, laudos, exames técnicos e análises técnicas (LC116 17.09)",
+      "alternativas": [
+        {"cTribNac": "210101", "descricao": "Serviços de registros públicos, cartorários e notariais (LC116 21.01)", "quando_usar": "Quando é serviço cartorário/notarial"}
+      ]
+    },
+
+    "6911-7/03": {
+      "descricao": "Agente de propriedade industrial",
+      "principal": "170101",
+      "descricaoPrincipal": "Assessoria ou consultoria de qualquer natureza (LC116 17.01)",
+      "alternativas": [
+        {"cTribNac": "100301", "descricao": "Agenciamento, corretagem ou intermediação de direitos de propriedade industrial (LC116 10.03)", "quando_usar": "Quando é intermediação de direitos industriais"}
+      ]
+    },
+
+    "6912-5/00": {
+      "descricao": "Cartórios",
+      "principal": "210101",
+      "descricaoPrincipal": "Serviços de registros públicos, cartorários e notariais (LC116 21.01)",
+      "alternativas": []
+    },
+
+    "=== CONSULTORIA E GESTÃO EMPRESARIAL ===": {},
+
+    "7020-4/00": {
+      "descricao": "Atividades de consultoria em gestão empresarial, exceto consultoria técnica específica",
+      "principal": "170101",
+      "descricaoPrincipal": "Assessoria ou consultoria de qualquer natureza (LC116 17.01)",
+      "alternativas": [
+        {"cTribNac": "172001", "descricao": "Consultoria e assessoria econômica ou financeira (LC116 17.20)", "quando_usar": "Quando é consultoria econômica/financeira"},
+        {"cTribNac": "170301", "descricao": "Planejamento, coordenação, programação ou organização técnica, financeira ou administrativa (LC116 17.03)", "quando_usar": "Quando é planejamento e organização"}
+      ]
+    },
+
+    "7020-4/01": {
+      "descricao": "Atividades de consultoria em gestão empresarial",
+      "principal": "170101",
+      "descricaoPrincipal": "Assessoria ou consultoria de qualquer natureza (LC116 17.01)",
+      "alternativas": [
+        {"cTribNac": "170301", "descricao": "Planejamento, coordenação, programação ou organização técnica, financeira ou administrativa (LC116 17.03)", "quando_usar": "Quando é planejamento organizacional"}
+      ]
+    },
+
+    "7020-4/02": {
+      "descricao": "Atividades de consultoria ambiental",
+      "principal": "170101",
+      "descricaoPrincipal": "Assessoria ou consultoria de qualquer natureza (LC116 17.01)",
+      "alternativas": [
+        {"cTribNac": "071201", "descricao": "Controle e tratamento de efluentes e agentes físicos, químicos e biológicos (LC116 7.12)", "quando_usar": "Quando é controle ambiental/efluentes"}
+      ]
+    },
+
+    "7490-1/04": {
+      "descricao": "Atividades de intermediação e agenciamento de serviços e negócios em geral, exceto imobiliários",
+      "principal": "100901",
+      "descricaoPrincipal": "Representação de qualquer natureza, inclusive comercial (LC116 10.09)",
+      "alternativas": []
+    },
+
+    "7490-1/05": {
+      "descricao": "Agenciamento de profissionais para atividades esportivas, culturais e artísticas",
+      "principal": "100901",
+      "descricaoPrincipal": "Representação de qualquer natureza (LC116 10.09)",
+      "alternativas": []
+    },
+
+    "=== SEGURANÇA ===": {},
+
+    "8011-1/01": {
+      "descricao": "Atividades de vigilância e segurança privada",
+      "principal": "110201",
+      "descricaoPrincipal": "Vigilância, segurança ou monitoramento de bens, pessoas e semoventes (LC116 11.02)",
+      "alternativas": [
+        {"cTribNac": "110301", "descricao": "Escolta, inclusive de veículos e cargas (LC116 11.03)", "quando_usar": "Quando é escolta armada"}
+      ]
+    },
+
+    "8011-1/02": {
+      "descricao": "Serviços de adestramento de cães de guarda",
+      "principal": "110201",
+      "descricaoPrincipal": "Vigilância e segurança (LC116 11.02)",
+      "alternativas": []
+    },
+
+    "8012-9/00": {
+      "descricao": "Atividades de transporte de valores",
+      "principal": "110301",
+      "descricaoPrincipal": "Escolta, inclusive de veículos e cargas (LC116 11.03)",
+      "alternativas": [
+        {"cTribNac": "110201", "descricao": "Vigilância e segurança (LC116 11.02)", "quando_usar": "Quando inclui serviço de vigilância"}
+      ]
+    },
+
+    "8020-0/01": {
+      "descricao": "Atividades de monitoramento de sistemas de segurança eletrônica",
+      "principal": "110201",
+      "descricaoPrincipal": "Vigilância, segurança ou monitoramento de bens e pessoas (LC116 11.02)",
+      "alternativas": [
+        {"cTribNac": "110501", "descricao": "Monitoramento e rastreamento a distância de veículos, cargas, pessoas (LC116 11.05)", "quando_usar": "Quando é rastreamento veicular/de cargas"}
+      ]
+    },
+
+    "8020-0/02": {
+      "descricao": "Outras atividades de serviços de segurança",
+      "principal": "110201",
+      "descricaoPrincipal": "Vigilância, segurança ou monitoramento (LC116 11.02)",
+      "alternativas": []
+    },
+
+    "8030-7/00": {
+      "descricao": "Atividades de investigação particular",
+      "principal": "110201",
+      "descricaoPrincipal": "Vigilância, segurança ou monitoramento (LC116 11.02)",
+      "alternativas": [
+        {"cTribNac": "170101", "descricao": "Assessoria ou consultoria de qualquer natureza (LC116 17.01)", "quando_usar": "Quando é assessoria investigativa empresarial"}
+      ]
+    },
+
+    "=== LIMPEZA E CONSERVAÇÃO ===": {},
+
+    "8111-7/00": {
+      "descricao": "Serviços combinados para apoio a edifícios, exceto condomínios prediais",
+      "principal": "071001",
+      "descricaoPrincipal": "Limpeza, manutenção e conservação de imóveis, piscinas, parques e jardins (LC116 7.10)",
+      "alternativas": [
+        {"cTribNac": "170501", "descricao": "Fornecimento de mão-de-obra (LC116 17.05)", "quando_usar": "Quando é fornecimento de pessoal de apoio"}
+      ]
+    },
+
+    "8112-5/00": {
+      "descricao": "Condomínios prediais",
+      "principal": "071001",
+      "descricaoPrincipal": "Limpeza, manutenção e conservação de imóveis (LC116 7.10)",
+      "alternativas": [
+        {"cTribNac": "171201", "descricao": "Administração em geral, inclusive de bens e negócios de terceiros (LC116 17.12)", "quando_usar": "Quando é administração de condomínio"}
+      ]
+    },
+
+    "8121-4/00": {
+      "descricao": "Limpeza em prédios e em domicílios",
+      "principal": "071001",
+      "descricaoPrincipal": "Limpeza, manutenção e conservação de imóveis (LC116 7.10)",
+      "alternativas": []
+    },
+
+    "8122-2/00": {
+      "descricao": "Imunização e controle de pragas urbanas",
+      "principal": "071301",
+      "descricaoPrincipal": "Dedetização, desinfecção, desinsetização, imunização, higienização e desratização (LC116 7.13)",
+      "alternativas": []
+    },
+
+    "8129-0/00": {
+      "descricao": "Atividades de limpeza não especificadas anteriormente",
+      "principal": "071001",
+      "descricaoPrincipal": "Limpeza, manutenção e conservação (LC116 7.10)",
+      "alternativas": []
+    },
+
+    "8130-3/00": {
+      "descricao": "Atividades paisagísticas",
+      "principal": "071101",
+      "descricaoPrincipal": "Decoração e jardinagem, inclusive corte e poda de árvores (LC116 7.11)",
+      "alternativas": []
+    },
+
+    "=== PUBLICIDADE E MARKETING ===": {},
+
+    "7311-4/00": {
+      "descricao": "Agências de publicidade",
+      "principal": "170601",
+      "descricaoPrincipal": "Propaganda e publicidade, promoção de vendas, planejamento de campanhas publicitárias (LC116 17.06)",
+      "alternativas": [
+        {"cTribNac": "100801", "descricao": "Agenciamento de publicidade e propaganda (LC116 10.08)", "quando_usar": "Quando é agenciamento de veiculação publicitária"}
+      ]
+    },
+
+    "7312-2/00": {
+      "descricao": "Agenciamento de espaços para publicidade, exceto em veículos de comunicação",
+      "principal": "100801",
+      "descricaoPrincipal": "Agenciamento de publicidade e propaganda, inclusive agenciamento de veiculação (LC116 10.08)",
+      "alternativas": []
+    },
+
+    "7319-0/02": {
+      "descricao": "Promoção de vendas",
+      "principal": "170601",
+      "descricaoPrincipal": "Propaganda e publicidade, promoção de vendas (LC116 17.06)",
+      "alternativas": []
+    },
+
+    "7319-0/03": {
+      "descricao": "Marketing direto",
+      "principal": "170601",
+      "descricaoPrincipal": "Propaganda e publicidade (LC116 17.06)",
+      "alternativas": []
+    },
+
+    "7319-0/04": {
+      "descricao": "Consultoria em publicidade",
+      "principal": "170101",
+      "descricaoPrincipal": "Assessoria ou consultoria de qualquer natureza (LC116 17.01)",
+      "alternativas": [
+        {"cTribNac": "170601", "descricao": "Propaganda e publicidade (LC116 17.06)", "quando_usar": "Quando inclui criação/execução de publicidade"}
+      ]
+    },
+
+    "7319-0/99": {
+      "descricao": "Outras atividades de publicidade não especificadas anteriormente",
+      "principal": "170601",
+      "descricaoPrincipal": "Propaganda e publicidade (LC116 17.06)",
+      "alternativas": []
+    },
+
+    "7320-3/00": {
+      "descricao": "Pesquisas de mercado e de opinião pública",
+      "principal": "170101",
+      "descricaoPrincipal": "Análise, pesquisa, coleta, compilação e fornecimento de dados e informações (LC116 17.01)",
+      "alternativas": [
+        {"cTribNac": "020101", "descricao": "Serviços de pesquisas e desenvolvimento de qualquer natureza (LC116 2.01)", "quando_usar": "Quando é pesquisa científica/desenvolvimento"}
+      ]
+    },
+
+    "=== RECURSOS HUMANOS ===": {},
+
+    "7810-8/00": {
+      "descricao": "Seleção e agenciamento de mão-de-obra",
+      "principal": "170401",
+      "descricaoPrincipal": "Recrutamento, agenciamento, seleção e colocação de mão-de-obra (LC116 17.04)",
+      "alternativas": [
+        {"cTribNac": "170501", "descricao": "Fornecimento de mão-de-obra, mesmo em caráter temporário (LC116 17.05)", "quando_usar": "Quando é fornecimento/locação de mão-de-obra"}
+      ]
+    },
+
+    "7820-5/00": {
+      "descricao": "Locação de mão-de-obra temporária",
+      "principal": "170501",
+      "descricaoPrincipal": "Fornecimento de mão-de-obra, mesmo em caráter temporário (LC116 17.05)",
+      "alternativas": []
+    },
+
+    "7830-2/00": {
+      "descricao": "Outras formas de fornecimento de recursos humanos",
+      "principal": "170501",
+      "descricaoPrincipal": "Fornecimento de mão-de-obra (LC116 17.05)",
+      "alternativas": []
+    },
+
+    "=== TRANSPORTE ===": {},
+
+    "4911-6/00": {
+      "descricao": "Transporte ferroviário de passageiros intermunicipal e interestadual",
+      "principal": "160101",
+      "descricaoPrincipal": "Serviços de transporte coletivo municipal (LC116 16.01)",
+      "alternativas": [
+        {"cTribNac": "160201", "descricao": "Outros serviços de transporte de natureza municipal (LC116 16.02)", "quando_usar": "Quando é transporte municipal"}
+      ]
+    },
+
+    "4929-9/01": {
+      "descricao": "Transporte rodoviário coletivo de passageiros, com itinerário fixo, municipal",
+      "principal": "160101",
+      "descricaoPrincipal": "Serviços de transporte coletivo municipal rodovário (LC116 16.01)",
+      "alternativas": []
+    },
+
+    "4929-9/02": {
+      "descricao": "Transporte rodoviário coletivo de passageiros, com itinerário fixo, intermunicipal",
+      "principal": "160201",
+      "descricaoPrincipal": "Outros serviços de transporte de natureza municipal (LC116 16.02)",
+      "alternativas": []
+    },
+
+    "4993-3/00": {
+      "descricao": "Transporte especial de passageiros",
+      "principal": "160201",
+      "descricaoPrincipal": "Outros serviços de transporte de natureza municipal (LC116 16.02)",
+      "alternativas": []
+    },
+
+    "=== FOTOGRAFIA, AUDIOVISUAL E DESIGN ===": {},
+
+    "7410-2/02": {
+      "descricao": "Design de interiores",
+      "principal": "230101",
+      "descricaoPrincipal": "Serviços de programação e comunicação visual, desenho industrial e congêneres (LC116 23.01)",
+      "alternativas": [
+        {"cTribNac": "070101", "descricao": "Engenharia, arquitetura, paisagismo e congêneres (LC116 7.01)", "quando_usar": "Quando é projeto arquitetônico de interiores"}
+      ]
+    },
+
+    "7410-2/03": {
+      "descricao": "Design gráfico",
+      "principal": "230101",
+      "descricaoPrincipal": "Serviços de programação e comunicação visual, desenho industrial (LC116 23.01)",
+      "alternativas": [
+        {"cTribNac": "170601", "descricao": "Propaganda e publicidade, elaboração de materiais publicitários (LC116 17.06)", "quando_usar": "Quando é design para publicidade/marketing"}
+      ]
+    },
+
+    "7420-0/01": {
+      "descricao": "Atividades de produção de fotografias, exceto aérea e submarina",
+      "principal": "130301",
+      "descricaoPrincipal": "Fotografia e cinematografia (LC116 13.03)",
+      "alternativas": []
+    },
+
+    "7420-0/02": {
+      "descricao": "Atividades de produção de fotografias aéreas e submarinas",
+      "principal": "130301",
+      "descricaoPrincipal": "Fotografia e cinematografia (LC116 13.03)",
+      "alternativas": []
+    },
+
+    "7490-1/01": {
+      "descricao": "Serviços de tradução, interpretação e similares",
+      "principal": "170201",
+      "descricaoPrincipal": "Datilografia, digitação, redação, edição, interpretação, revisão, tradução (LC116 17.02)",
+      "alternativas": []
+    },
+
+    "=== SERVIÇOS FINANCEIROS ===": {},
+
+    "6410-7/00": {
+      "descricao": "Banco Central",
+      "principal": "150101",
+      "descricaoPrincipal": "Administração de fundos quaisquer, de consórcio, de cartão de crédito (LC116 15.01)",
+      "alternativas": []
+    },
+
+    "6421-2/00": {
+      "descricao": "Bancos comerciais",
+      "principal": "150201",
+      "descricaoPrincipal": "Abertura de contas em geral, manutenção de contas ativas e inativas (LC116 15.02)",
+      "alternativas": []
+    },
+
+    "6436-1/00": {
+      "descricao": "Sociedades de crédito imobiliário",
+      "principal": "151801",
+      "descricaoPrincipal": "Serviços relacionados a crédito imobiliário (LC116 15.18)",
+      "alternativas": []
+    },
+
+    "6612-6/01": {
+      "descricao": "Corretoras de títulos e valores mobiliários",
+      "principal": "100201",
+      "descricaoPrincipal": "Agenciamento, corretagem ou intermediação de títulos e valores mobiliários (LC116 10.02)",
+      "alternativas": []
+    },
+
+    "6612-6/02": {
+      "descricao": "Distribuidoras de títulos e valores mobiliários",
+      "principal": "100201",
+      "descricaoPrincipal": "Agenciamento, corretagem ou intermediação de títulos e valores mobiliários (LC116 10.02)",
+      "alternativas": []
+    },
+
+    "6621-5/01": {
+      "descricao": "Sociedades seguradoras",
+      "principal": "180101",
+      "descricaoPrincipal": "Serviços de regulação de sinistros, inspeção e avaliação de riscos para cobertura de seguros (LC116 18.01)",
+      "alternativas": []
+    },
+
+    "6630-4/00": {
+      "descricao": "Atividades de gestão de fundos e carteiras",
+      "principal": "150101",
+      "descricaoPrincipal": "Administração de fundos (LC116 15.01)",
+      "alternativas": []
+    },
+
+    "6641-0/03": {
+      "descricao": "Corretores e agentes de seguros, de planos de previdência complementar e de saúde",
+      "principal": "100101",
+      "descricaoPrincipal": "Agenciamento, corretagem ou intermediação de câmbio, de seguros e de planos de saúde (LC116 10.01)",
+      "alternativas": []
+    },
+
+    "=== CUIDADOS PESSOAIS E ESTÉTICA ===": {},
+
+    "9602-5/01": {
+      "descricao": "Cabeleireiros",
+      "principal": "060101",
+      "descricaoPrincipal": "Barbearia, cabeleireiros, manicuros, pedicuros e congêneres (LC116 6.01)",
+      "alternativas": []
+    },
+
+    "9602-5/02": {
+      "descricao": "Outras atividades de tratamento de beleza",
+      "principal": "060201",
+      "descricaoPrincipal": "Esteticistas, tratamento de pele, depilação e congêneres (LC116 6.02)",
+      "alternativas": [
+        {"cTribNac": "060101", "descricao": "Barbearia, cabeleireiros, manicuros e congêneres (LC116 6.01)", "quando_usar": "Quando é salão de beleza geral"}
+      ]
+    },
+
+    "9313-1/00": {
+      "descricao": "Atividades de condicionamento físico",
+      "principal": "060401",
+      "descricaoPrincipal": "Ginástica, dança, esportes, natação, artes marciais e demais atividades físicas (LC116 6.04)",
+      "alternativas": [
+        {"cTribNac": "080201", "descricao": "Instrução, treinamento (LC116 8.02)", "quando_usar": "Quando é personal trainer/treinamento"}
+      ]
+    },
+
+    "=== VETERINÁRIA ===": {},
+
+    "7500-1/00": {
+      "descricao": "Atividades veterinárias",
+      "principal": "050101",
+      "descricaoPrincipal": "Medicina veterinária e zootecnia (LC116 5.01)",
+      "alternativas": [
+        {"cTribNac": "050201", "descricao": "Hospitais, clínicas, ambulatórios e congêneres na área veterinária (LC116 5.02)", "quando_usar": "Quando é clínica veterinária"}
+      ]
+    },
+
+    "=== OUTROS SERVIÇOS PROFISSIONAIS ===": {},
+
+    "6910-8/00": {
+      "descricao": "Atividades de atendimento a clientes, assistência técnica e afins",
+      "principal": "140201",
+      "descricaoPrincipal": "Assistência técnica (LC116 14.02)",
+      "alternativas": []
+    },
+
+    "6621-5/02": {
+      "descricao": "Peritos e avaliadores de seguros",
+      "principal": "180101",
+      "descricaoPrincipal": "Serviços de regulação de sinistros, inspeção e avaliação de riscos (LC116 18.01)",
+      "alternativas": [
+        {"cTribNac": "170901", "descricao": "Perícias, laudos, exames técnicos e análises técnicas (LC116 17.09)", "quando_usar": "Quando é perícia técnica"}
+      ]
+    },
+
+    "7210-0/00": {
+      "descricao": "Pesquisa e desenvolvimento experimental em ciências físicas e naturais",
+      "principal": "020101",
+      "descricaoPrincipal": "Serviços de pesquisas e desenvolvimento de qualquer natureza (LC116 2.01)",
+      "alternativas": []
+    },
+
+    "7220-7/00": {
+      "descricao": "Pesquisa e desenvolvimento experimental em ciências sociais e humanas",
+      "principal": "020101",
+      "descricaoPrincipal": "Serviços de pesquisas e desenvolvimento de qualquer natureza (LC116 2.01)",
+      "alternativas": []
+    },
+
+    "9001-9/01": {
+      "descricao": "Produção teatral",
+      "principal": "120101",
+      "descricaoPrincipal": "Espetáculos teatrais (LC116 12.01)",
+      "alternativas": [
+        {"cTribNac": "121301", "descricao": "Produção de eventos, espetáculos, shows, teatros e congêneres (LC116 12.13)", "quando_usar": "Quando é produção por conta própria"}
+      ]
+    },
+
+    "9001-9/02": {
+      "descricao": "Produção musical",
+      "principal": "120701",
+      "descricaoPrincipal": "Shows, ballets, danças, desfiles, óperas, concertos, recitais e congêneres (LC116 12.07)",
+      "alternativas": [
+        {"cTribNac": "130201", "descricao": "Fonografia ou gravação de sons, inclusive trucagem, dublagem e mixagem (LC116 13.02)", "quando_usar": "Quando é gravação/produção de áudio"}
+      ]
+    },
+
+    "9001-9/03": {
+      "descricao": "Produção de espetáculos de dança",
+      "principal": "120701",
+      "descricaoPrincipal": "Shows, ballets, danças e congêneres (LC116 12.07)",
+      "alternativas": []
+    },
+
+    "9001-9/06": {
+      "descricao": "Atividades de apoio às artes cênicas",
+      "principal": "121301",
+      "descricaoPrincipal": "Produção de eventos, espetáculos e congêneres (LC116 12.13)",
+      "alternativas": []
+    },
+
+    "7500-1/01": {
+      "descricao": "Veterinária clínica e cirúrgica",
+      "principal": "050101",
+      "descricaoPrincipal": "Medicina veterinária e zootecnia (LC116 5.01)",
+      "alternativas": [
+        {"cTribNac": "050201", "descricao": "Hospitais, clínicas, ambulatórios veterinários (LC116 5.02)", "quando_usar": "Quando é clínica veterinária"}
+      ]
+    },
+
+    "9609-2/99": {
+      "descricao": "Outras atividades de serviços pessoais não especificadas anteriormente",
+      "principal": "170101",
+      "descricaoPrincipal": "Assessoria ou consultoria de qualquer natureza (LC116 17.01)",
+      "alternativas": []
+    },
+
+    "=== TURISMO E HOSPEDAGEM ===": {},
+
+    "5510-8/01": {
+      "descricao": "Hotéis",
+      "principal": "090101",
+      "descricaoPrincipal": "Hospedagem de qualquer natureza em hotéis, apart-hotéis, motéis, pensões e congêneres (LC116 9.01)",
+      "alternativas": []
+    },
+
+    "5590-6/01": {
+      "descricao": "Albergues, exceto assistenciais",
+      "principal": "090101",
+      "descricaoPrincipal": "Hospedagem de qualquer natureza em hotéis, pensões e congêneres (LC116 9.01)",
+      "alternativas": []
+    },
+
+    "7911-2/00": {
+      "descricao": "Agências de viagens",
+      "principal": "090201",
+      "descricaoPrincipal": "Agenciamento, organização, promoção, intermediação e execução de programas de turismo (LC116 9.02)",
+      "alternativas": []
+    },
+
+    "7912-1/00": {
+      "descricao": "Operadoras de viagens",
+      "principal": "090201",
+      "descricaoPrincipal": "Agenciamento, organização, promoção e execução de programas de turismo (LC116 9.02)",
+      "alternativas": []
+    },
+
+    "=== ARMAZENAGEM E LOGÍSTICA ===": {},
+
+    "5211-7/01": {
+      "descricao": "Armazéns gerais - emissão de warrant",
+      "principal": "110401",
+      "descricaoPrincipal": "Armazenamento, depósito, carga, descarga, arrumação e guarda de bens (LC116 11.04)",
+      "alternativas": []
+    },
+
+    "5211-7/99": {
+      "descricao": "Depósitos de mercadorias para terceiros, exceto armazéns gerais e guarda-móveis",
+      "principal": "110401",
+      "descricaoPrincipal": "Armazenamento, depósito, carga, descarga, arrumação e guarda de bens (LC116 11.04)",
+      "alternativas": []
+    },
+
+    "5212-5/00": {
+      "descricao": "Carga e descarga",
+      "principal": "110401",
+      "descricaoPrincipal": "Armazenamento, carga, descarga e guarda de bens (LC116 11.04)",
+      "alternativas": []
+    },
+
+    "=== IMÓVEIS ===": {},
+
+    "6821-8/01": {
+      "descricao": "Corretagem na compra e venda e avaliação de imóveis",
+      "principal": "100501",
+      "descricaoPrincipal": "Agenciamento, corretagem ou intermediação de bens móveis ou imóveis (LC116 10.05)",
+      "alternativas": []
+    },
+
+    "6822-6/00": {
+      "descricao": "Gestão e administração da propriedade imobiliária",
+      "principal": "171201",
+      "descricaoPrincipal": "Administração em geral, inclusive de bens e negócios de terceiros (LC116 17.12)",
+      "alternativas": [
+        {"cTribNac": "100501", "descricao": "Agenciamento, corretagem ou intermediação de bens imóveis (LC116 10.05)", "quando_usar": "Quando é corretagem imobiliária"}
+      ]
+    },
+
+    "=== REPARAÇÃO E MANUTENÇÃO ===": {},
+
+    "9511-8/00": {
+      "descricao": "Reparação e manutenção de computadores e de equipamentos periféricos",
+      "principal": "010701",
+      "descricaoPrincipal": "Suporte técnico em informática, instalação, configuração e manutenção (LC116 1.07)",
+      "alternativas": [
+        {"cTribNac": "140101", "descricao": "Manutenção e conservação de máquinas, equipamentos e motores (LC116 14.01)", "quando_usar": "Quando é manutenção de hardware/equipamentos físicos"}
+      ]
+    },
+
+    "9512-6/00": {
+      "descricao": "Reparação e manutenção de equipamentos de comunicação",
+      "principal": "140101",
+      "descricaoPrincipal": "Manutenção e conservação de máquinas, aparelhos, equipamentos e motores (LC116 14.01)",
+      "alternativas": []
+    },
+
+    "9521-5/00": {
+      "descricao": "Reparação e manutenção de equipamentos eletroeletrônicos de uso pessoal e doméstico",
+      "principal": "140101",
+      "descricaoPrincipal": "Manutenção e conservação de máquinas, aparelhos e equipamentos (LC116 14.01)",
+      "alternativas": []
+    },
+
+    "9529-1/01": {
+      "descricao": "Reparação de calçados, bolsas e artigos de viagem",
+      "principal": "140101",
+      "descricaoPrincipal": "Manutenção e conservação de qualquer objeto (LC116 14.01)",
+      "alternativas": []
+    },
+
+    "9529-1/05": {
+      "descricao": "Reparação de artigos do mobiliário",
+      "principal": "140101",
+      "descricaoPrincipal": "Manutenção e conservação de qualquer objeto (LC116 14.01)",
+      "alternativas": []
+    },
+
+    "4520-0/01": {
+      "descricao": "Serviços de manutenção e reparação mecânica de veículos automotores",
+      "principal": "140101",
+      "descricaoPrincipal": "Manutenção e conservação de máquinas, veículos, aparelhos e equipamentos (LC116 14.01)",
+      "alternativas": []
+    },
+
+    "4520-0/02": {
+      "descricao": "Serviços de lanternagem ou funilaria e pintura de veículos automotores",
+      "principal": "141201",
+      "descricaoPrincipal": "Funilaria e lanternagem (LC116 14.12)",
+      "alternativas": []
+    },
+
+    "=== SERVIÇOS FUNERÁRIOS ===": {},
+
+    "9603-3/01": {
+      "descricao": "Gestão e manutenção de cemitérios",
+      "principal": "250401",
+      "descricaoPrincipal": "Manutenção e conservação de jazigos e cemitérios (LC116 25.04)",
+      "alternativas": []
+    },
+
+    "9603-3/02": {
+      "descricao": "Serviços de cremação",
+      "principal": "250201",
+      "descricaoPrincipal": "Translado intramunicipal e cremação de corpos e partes de corpos cadavéricos (LC116 25.02)",
+      "alternativas": []
+    },
+
+    "9603-3/03": {
+      "descricao": "Serviços de sepultamento",
+      "principal": "250101",
+      "descricaoPrincipal": "Funerais, inclusive fornecimento de caixão, transporte do corpo cadavérico e congêneres (LC116 25.01)",
+      "alternativas": []
+    },
+
+    "9603-3/04": {
+      "descricao": "Serviços de funerárias",
+      "principal": "250101",
+      "descricaoPrincipal": "Funerais e congêneres (LC116 25.01)",
+      "alternativas": [
+        {"cTribNac": "250301", "descricao": "Planos ou convênio funerários (LC116 25.03)", "quando_usar": "Quando é plano funerário"}
+      ]
+    }
+  },
+
+  "keywords": {
+    "análise": "010101",
+    "desenvolvimento": "010101",
+    "sistema": "010101",
+    "sistemas": "010101",
+    "software": "010101",
+    "aplicativo": "010101",
+    "app": "010101",
+    "plataforma": "010101",
+    "arquitetura": "010101",
+
+    "programação": "010201",
+    "programacao": "010201",
+    "código": "010201",
+    "codigo": "010201",
+    "codificação": "010201",
+    "frontend": "010201",
+    "backend": "010201",
+
+    "processamento": "010301",
+    "hospedagem": "010301",
+    "hosting": "010301",
+    "cloud": "010301",
+    "servidor": "010301",
+    "datacenter": "010301",
+    "armazenamento de dados": "010301",
+
+    "jogo": "010401",
+    "jogo eletrônico": "010401",
+    "game": "010401",
+    "games": "010401",
+
+    "licença": "010501",
+    "licenciamento": "010501",
+    "saas": "010501",
+    "software as a service": "010501",
+    "assinatura de software": "010501",
+    "cessão de direito": "010501",
+
+    "consultoria em ti": "010601",
+    "consultoria em informática": "010601",
+    "assessoria em informática": "010601",
+    "assessoria tecnológica": "010601",
+
+    "suporte": "010701",
+    "suporte técnico": "010701",
+    "manutenção de software": "010701",
+    "manutenção de sistema": "010701",
+    "configuração": "010701",
+    "instalação de software": "010701",
+    "helpdesk": "010701",
+    "help desk": "010701",
+
+    "site": "010801",
+    "website": "010801",
+    "página web": "010801",
+    "pagina web": "010801",
+    "webdesign": "010801",
+    "web design": "010801",
+
+    "streaming": "010901",
+    "conteúdo digital": "010901",
+    "conteudo digital": "010901",
+    "disponibilização": "010901",
+
+    "pesquisa e desenvolvimento": "020101",
+    "p&d": "020101",
+    "pesquisa científica": "020101",
+    "inovação": "020101",
+    "startup": "020101",
+
+    "medicina": "040101",
+    "médico": "040101",
+    "medico": "040101",
+    "consulta médica": "040101",
+    "biomedicina": "040101",
+
+    "exame": "040201",
+    "laboratório": "040201",
+    "laboratorio": "040201",
+    "análise clínica": "040201",
+    "patologia": "040201",
+    "radiologia": "040201",
+    "ultrassom": "040201",
+    "tomografia": "040201",
+    "ressonância": "040201",
+    "quimioterapia": "040201",
+    "radioterapia": "040201",
+
+    "hospital": "040301",
+    "clínica": "040301",
+    "clinica": "040301",
+    "ambulatório": "040301",
+    "ambulatorio": "040301",
+    "pronto-socorro": "040301",
+
+    "acupuntura": "040501",
+
+    "enfermagem": "040601",
+    "enfermeiro": "040601",
+
+    "farmácia": "040701",
+    "farmacia": "040701",
+    "farmacêutico": "040701",
+    "farmaceutico": "040701",
+
+    "fisioterapia": "040801",
+    "fisioterapeuta": "040801",
+    "terapia ocupacional": "040801",
+    "fonoaudiologia": "040801",
+    "fonoaudiólogo": "040801",
+
+    "psicologia": "041601",
+    "psicólogo": "041601",
+    "psicologo": "041601",
+    "psicoterapia": "041601",
+    "psicanálise": "041501",
+    "psicanalise": "041501",
+
+    "nutrição": "041001",
+    "nutricao": "041001",
+    "nutricionista": "041001",
+
+    "odontologia": "041201",
+    "odontologico": "041201",
+    "dentista": "041201",
+    "dental": "041201",
+
+    "creche": "041701",
+    "berçário": "041701",
+    "bercario": "041701",
+    "asilo": "041701",
+    "casa de repouso": "041701",
+    "idosos": "041701",
+
+    "plano de saúde": "042201",
+    "plano de saude": "042201",
+    "convênio médico": "042201",
+    "convenio medico": "042201",
+
+    "ensino": "080101",
+    "escola": "080101",
+    "colégio": "080101",
+    "colegio": "080101",
+    "faculdade": "080101",
+    "universidade": "080101",
+    "graduação": "080101",
+    "graduacao": "080101",
+    "pós-graduação": "080101",
+    "pos-graduacao": "080101",
+
+    "curso": "080201",
+    "treinamento": "080201",
+    "capacitação": "080201",
+    "capacitacao": "080201",
+    "educação corporativa": "080201",
+    "elearning": "080201",
+    "e-learning": "080201",
+    "palestra": "172401",
+    "seminário": "172401",
+    "seminario": "172401",
+    "workshop": "080201",
+
+    "engenharia": "070101",
+    "arquitetura": "070101",
+    "urbanismo": "070101",
+    "geologia": "070101",
+    "agrimensura": "070101",
+    "paisagismo": "070101",
+
+    "obra": "070201",
+    "construção": "070201",
+    "construcao": "070201",
+    "empreitada": "070201",
+    "subempreitada": "070201",
+    "execução de obra": "070201",
+    "edificação": "070201",
+
+    "projeto": "070301",
+    "projeto de engenharia": "070301",
+    "projeto arquitetônico": "070101",
+    "plano diretor": "070301",
+    "estudo de viabilidade": "070301",
+
+    "demolição": "070401",
+    "demolicao": "070401",
+
+    "reforma": "070501",
+    "reparação": "070501",
+    "conservação de edifício": "070501",
+    "manutenção predial": "070501",
+
+    "limpeza": "071001",
+    "conservação predial": "071001",
+    "higienização predial": "071001",
+    "limpeza de imóvel": "071001",
+
+    "jardinagem": "071101",
+    "decoração paisagística": "071101",
+    "poda": "071101",
+
+    "dedetização": "071301",
+    "desinsetização": "071301",
+    "desratização": "071301",
+    "controle de pragas": "071301",
+    "imunização predial": "071301",
+
+    "topografia": "072001",
+    "cartografia": "072001",
+    "levantamento topográfico": "072001",
+
+    "vigilância": "110201",
+    "segurança patrimonial": "110201",
+    "monitoramento": "110201",
+    "portaria": "110201",
+    "ronda": "110201",
+
+    "escolta": "110301",
+    "transporte de valores": "110301",
+
+    "rastreamento": "110501",
+    "rastreio veicular": "110501",
+    "gps veicular": "110501",
+
+    "contabilidade": "171901",
+    "contador": "171901",
+    "escrituração": "171901",
+    "fiscal": "171901",
+    "tributário": "170101",
+    "tributario": "170101",
+
+    "auditoria": "171601",
+
+    "advocacia": "171401",
+    "advogado": "171401",
+    "jurídico": "171401",
+    "juridico": "171401",
+    "assessoria jurídica": "171401",
+    "assessoria juridica": "171401",
+
+    "consultoria": "170101",
+    "assessoria": "170101",
+    "consultor": "170101",
+
+    "consultoria financeira": "172001",
+    "consultoria econômica": "172001",
+    "consultoria economica": "172001",
+
+    "recrutamento": "170401",
+    "seleção": "170401",
+    "selecao": "170401",
+    "headhunter": "170401",
+
+    "mão de obra": "170501",
+    "mao de obra": "170501",
+    "locação de pessoal": "170501",
+    "terceirização": "170501",
+    "terceirizacao": "170501",
+
+    "publicidade": "170601",
+    "marketing": "170601",
+    "propaganda": "170601",
+    "campanha publicitária": "170601",
+
+    "perícia": "170901",
+    "pericia": "170901",
+    "laudo": "170901",
+    "vistoria técnica": "170901",
+
+    "administração": "171201",
+    "gestão de condomínio": "171201",
+    "gestão de condominio": "171201",
+
+    "mediação": "171501",
+    "mediacao": "171501",
+    "arbitragem": "171501",
+
+    "representação comercial": "100901",
+    "representacao comercial": "100901",
+    "representante": "100901",
+
+    "cartório": "210101",
+    "cartorio": "210101",
+    "notarial": "210101",
+    "tabelionato": "210101",
+
+    "hospedagem hotel": "090101",
+    "hotel": "090101",
+    "pousada": "090101",
+    "motel": "090101",
+
+    "agência de viagem": "090201",
+    "agencia de viagem": "090201",
+    "turismo": "090201",
+    "excursão": "090201",
+
+    "fotografia": "130301",
+    "cinematografia": "130301",
+    "filmagem": "130301",
+    "vídeo": "130301",
+    "video": "130301",
+
+    "design gráfico": "230101",
+    "design grafico": "230101",
+    "comunicação visual": "230101",
+    "comunicacao visual": "230101",
+    "identidade visual": "230101",
+    "logo": "230101",
+    "logotipo": "230101",
+
+    "tradução": "170201",
+    "traducao": "170201",
+    "interpretação": "170201",
+    "interpretacao": "170201",
+
+    "veterinário": "050101",
+    "veterinario": "050101",
+    "veterinária": "050101",
+    "veterinaria": "050101",
+    "pet": "050801",
+    "banho e tosa": "050801",
+
+    "cabeleireiro": "060101",
+    "salão": "060101",
+    "salao": "060101",
+    "manicure": "060101",
+    "manicuro": "060101",
+    "barbearia": "060101",
+
+    "estética": "060201",
+    "estetica": "060201",
+    "depilação": "060201",
+    "depilacao": "060201",
+    "spa": "060501",
+
+    "academia": "060401",
+    "personal trainer": "060401",
+    "crossfit": "060401",
+    "pilates": "060401",
+
+    "funeral": "250101",
+    "funerária": "250101",
+    "funeraria": "250101",
+    "sepultamento": "250101",
+    "cemitério": "250401",
+    "cemiterio": "250401",
+
+    "manutenção de equipamento": "140101",
+    "manutenção de máquina": "140101",
+    "manutenção de computador": "010701",
+    "assistência técnica": "140201",
+    "assistencia tecnica": "140201",
+
+    "corretagem": "100501",
+    "corretor de imóveis": "100501",
+    "corretor de imoveis": "100501",
+    "imobiliária": "100501",
+    "imobiliaria": "100501"
+  },
+
+  "cTribNacRef": {
+    "010101": "Análise e desenvolvimento de sistemas (LC116, item 1.01)",
+    "010201": "Programação (LC116, item 1.02)",
+    "010301": "Processamento, armazenamento ou hospedagem de dados, textos, imagens, vídeos, páginas eletrônicas, aplicativos e sistemas de informação (LC116, item 1.03)",
+    "010401": "Elaboração de programas de computadores, inclusive de jogos eletrônicos (LC116, item 1.04)",
+    "010501": "Licenciamento ou cessão de direito de uso de programas de computação (LC116, item 1.05)",
+    "010601": "Assessoria e consultoria em informática (LC116, item 1.06)",
+    "010701": "Suporte técnico em informática, inclusive instalação, configuração e manutenção de programas de computação e bancos de dados (LC116, item 1.07)",
+    "010801": "Planejamento, confecção, manutenção e atualização de páginas eletrônicas (LC116, item 1.08)",
+    "010901": "Disponibilização, sem cessão definitiva, de conteúdos de áudio, vídeo, imagem e texto por meio da internet (LC116, item 1.09)",
+    "020101": "Serviços de pesquisas e desenvolvimento de qualquer natureza (LC116, item 2.01)",
+    "030201": "Cessão de direito de uso de marcas e de sinais de propaganda (LC116, item 3.02)",
+    "030301": "Exploração de salões de festas, centro de convenções, escritórios virtuais, stands, quadras esportivas e congêneres (LC116, item 3.03)",
+    "030401": "Locação, sublocação, arrendamento, direito de passagem ou permissão de uso de ferrovia, rodovia, postes, cabos, dutos e condutos (LC116, item 3.04)",
+    "030501": "Cessão de andaimes, palcos, coberturas e outras estruturas de uso temporário (LC116, item 3.05)",
+    "040101": "Medicina e biomedicina (LC116, item 4.01)",
+    "040201": "Análises clínicas, patologia, eletricidade médica, radioterapia, quimioterapia, ultrassonografia, ressonância magnética, radiologia, tomografia e congêneres (LC116, item 4.02)",
+    "040301": "Hospitais, clínicas, laboratórios, sanatórios, manicômios, casas de saúde, prontos-socorros, ambulatórios e congêneres (LC116, item 4.03)",
+    "040401": "Instrumentação cirúrgica (LC116, item 4.04)",
+    "040501": "Acupuntura (LC116, item 4.05)",
+    "040601": "Enfermagem, inclusive serviços auxiliares (LC116, item 4.06)",
+    "040701": "Serviços farmacêuticos (LC116, item 4.07)",
+    "040801": "Terapia ocupacional, fisioterapia e fonoaudiologia (LC116, item 4.08)",
+    "040901": "Terapias de qualquer espécie destinadas ao tratamento físico, orgânico e mental (LC116, item 4.09)",
+    "041001": "Nutrição (LC116, item 4.10)",
+    "041101": "Obstetrícia (LC116, item 4.11)",
+    "041201": "Odontologia (LC116, item 4.12)",
+    "041301": "Ortóptica (LC116, item 4.13)",
+    "041401": "Próteses sob encomenda (LC116, item 4.14)",
+    "041501": "Psicanálise (LC116, item 4.15)",
+    "041601": "Psicologia (LC116, item 4.16)",
+    "041701": "Casas de repouso e de recuperação, creches, asilos e congêneres (LC116, item 4.17)",
+    "041801": "Inseminação artificial, fertilização in vitro e congêneres (LC116, item 4.18)",
+    "041901": "Bancos de sangue, leite, pele, olhos, óvulos, sêmen e congêneres (LC116, item 4.19)",
+    "042001": "Coleta de sangue, leite, tecidos, sêmen, órgãos e materiais biológicos de qualquer espécie (LC116, item 4.20)",
+    "042101": "Unidade de atendimento, assistência ou tratamento móvel e congêneres (LC116, item 4.21)",
+    "042201": "Planos de medicina de grupo ou individual e convênios para prestação de assistência médica, hospitalar, odontológica e congêneres (LC116, item 4.22)",
+    "042301": "Outros planos de saúde que se cumpram através de serviços de terceiros contratados, credenciados, cooperados (LC116, item 4.23)",
+    "050101": "Medicina veterinária e zootecnia (LC116, item 5.01)",
+    "050201": "Hospitais, clínicas, ambulatórios, prontos-socorros na área veterinária (LC116, item 5.02)",
+    "050301": "Laboratórios de análise na área veterinária (LC116, item 5.03)",
+    "050801": "Guarda, tratamento, amestramento, embelezamento, alojamento e congêneres (LC116, item 5.08)",
+    "050901": "Planos de atendimento e assistência médico-veterinária (LC116, item 5.09)",
+    "060101": "Barbearia, cabeleireiros, manicuros, pedicuros e congêneres (LC116, item 6.01)",
+    "060201": "Esteticistas, tratamento de pele, depilação e congêneres (LC116, item 6.02)",
+    "060301": "Banhos, duchas, sauna, massagens e congêneres (LC116, item 6.03)",
+    "060401": "Ginástica, dança, esportes, natação, artes marciais e demais atividades físicas (LC116, item 6.04)",
+    "060501": "Centros de emagrecimento, spa e congêneres (LC116, item 6.05)",
+    "060601": "Aplicação de tatuagens, piercings e congêneres (LC116, item 6.06)",
+    "070101": "Engenharia, agronomia, agrimensura, arquitetura, geologia, urbanismo, paisagismo e congêneres (LC116, item 7.01)",
+    "070201": "Execução, por administração, empreitada ou subempreitada, de obras de construção civil, hidráulica ou elétrica e outras obras semelhantes (LC116, item 7.02)",
+    "070301": "Elaboração de planos diretores, estudos de viabilidade, projetos básicos e executivos para trabalhos de engenharia (LC116, item 7.03)",
+    "070401": "Demolição (LC116, item 7.04)",
+    "070501": "Reparação, conservação e reforma de edifícios, estradas, pontes, portos e congêneres (LC116, item 7.05)",
+    "070601": "Colocação e instalação de tapetes, carpetes, assoalhos, cortinas, revestimentos de parede, vidros, divisórias (LC116, item 7.06)",
+    "070701": "Recuperação, raspagem, polimento e lustração de pisos e congêneres (LC116, item 7.07)",
+    "070801": "Calafetar (LC116, item 7.08)",
+    "070901": "Varição, coleta, remoção, incineração, tratamento, reciclagem, separação e destinação final de lixo e rejeitos (LC116, item 7.09)",
+    "071001": "Limpeza, manutenção e conservação de vias e logradouros públicos, imóveis, chaminés, piscinas, parques e jardins (LC116, item 7.10)",
+    "071101": "Decoração e jardinagem, inclusive corte e poda de árvores (LC116, item 7.11)",
+    "071201": "Controle e tratamento de efluentes de qualquer natureza e de agentes físicos, químicos e biológicos (LC116, item 7.12)",
+    "071301": "Dedetização, desinfecção, desinsetização, imunização, higienização, desratização, pulverização e congêneres (LC116, item 7.13)",
+    "071601": "Florestamento, reflorestamento, semeadura, adubação, reparação de solo, plantio, silvicultura, exploração florestal e congêneres (LC116, item 7.16)",
+    "071701": "Escoramento, contenção de encostas e serviços congêneres (LC116, item 7.17)",
+    "071801": "Limpeza e dragagem de rios, portos, canais, baías, lagos, lagoas, represas e açudes (LC116, item 7.18)",
+    "071901": "Acompanhamento e fiscalização da execução de obras de engenharia, arquitetura e urbanismo (LC116, item 7.19)",
+    "072001": "Aerofotogrametria, cartografia, mapeamento, levantamentos topográficos, batimétricos, geográficos, geodésicos, geológicos e geofísicos (LC116, item 7.20)",
+    "072101": "Pesquisa, perfuração, cimentação, mergulho, perfilagem e outros serviços relacionados com a exploração e explotação de petróleo e gás (LC116, item 7.21)",
+    "080101": "Ensino regular pré-escolar, fundamental, médio e superior (LC116, item 8.01)",
+    "080201": "Instrução, treinamento, orientação pedagógica e educacional, avaliação de conhecimentos de qualquer natureza (LC116, item 8.02)",
+    "090101": "Hospedagem de qualquer natureza em hotéis, apart-hotéis, hotéis residência, motéis, pensões e congêneres (LC116, item 9.01)",
+    "090201": "Agenciamento, organização, promoção, intermediação e execução de programas de turismo, passeios, viagens, excursões e hospedagens (LC116, item 9.02)",
+    "090301": "Guias de turismo (LC116, item 9.03)",
+    "100101": "Agenciamento, corretagem ou intermediação de câmbio, de seguros, de cartões de crédito, de planos de saúde e de planos de previdência privada (LC116, item 10.01)",
+    "100201": "Agenciamento, corretagem ou intermediação de títulos em geral, valores mobiliários e contratos quaisquer (LC116, item 10.02)",
+    "100301": "Agenciamento, corretagem ou intermediação de direitos de propriedade industrial, artística ou literária (LC116, item 10.03)",
+    "100401": "Agenciamento, corretagem ou intermediação de contratos de arrendamento mercantil (leasing), de franquia (franchising) e de faturização (factoring) (LC116, item 10.04)",
+    "100501": "Agenciamento, corretagem ou intermediação de bens móveis ou imóveis (LC116, item 10.05)",
+    "100601": "Agenciamento marítimo (LC116, item 10.06)",
+    "100701": "Agenciamento de notícias (LC116, item 10.07)",
+    "100801": "Agenciamento de publicidade e propaganda, inclusive o agenciamento de veiculação por quaisquer meios (LC116, item 10.08)",
+    "100901": "Representação de qualquer natureza, inclusive comercial (LC116, item 10.09)",
+    "101001": "Distribuição de bens de terceiros (LC116, item 10.10)",
+    "110101": "Guarda e estacionamento de veículos terrestres automotores, de aeronaves e de embarcações (LC116, item 11.01)",
+    "110201": "Vigilância, segurança ou monitoramento de bens, pessoas e semoventes (LC116, item 11.02)",
+    "110301": "Escolta, inclusive de veículos e cargas (LC116, item 11.03)",
+    "110401": "Armazenamento, depósito, carga, descarga, arrumação e guarda de bens de qualquer espécie (LC116, item 11.04)",
+    "110501": "Serviços relacionados ao monitoramento e rastreamento a distância de veículos, cargas, pessoas e semoventes (LC116, item 11.05)",
+    "120101": "Espetáculos teatrais (LC116, item 12.01)",
+    "120201": "Exibições cinematográficas (LC116, item 12.02)",
+    "120301": "Espetáculos circenses (LC116, item 12.03)",
+    "120401": "Programas de auditório (LC116, item 12.04)",
+    "120501": "Parques de diversões, centros de lazer e congêneres (LC116, item 12.05)",
+    "120701": "Shows, ballet, danças, desfiles, bailes, óperas, concertos, recitais, festivais e congêneres (LC116, item 12.07)",
+    "121101": "Competições esportivas ou de destreza física ou intelectual (LC116, item 12.11)",
+    "121201": "Execução de música (LC116, item 12.12)",
+    "121301": "Produção de eventos, espetáculos, shows, ballet, danças, bailes, teatros, óperas, concertos, recitais e congêneres (LC116, item 12.13)",
+    "121701": "Recreação e animação, inclusive em festas e eventos de qualquer natureza (LC116, item 12.17)",
+    "130201": "Fonografia ou gravação de sons, inclusive trucagem, dublagem, mixagem e congêneres (LC116, item 13.02)",
+    "130301": "Fotografia e cinematografia, inclusive revelação, ampliação, cópia, reprodução, trucagem e congêneres (LC116, item 13.03)",
+    "130401": "Reprografia, microfilmagem e digitalização (LC116, item 13.04)",
+    "130501": "Composição gráfica, inclusive confecção de impressos gráficos, fotocomposição, clicheria, zincografia, litografia e fotolitografia (LC116, item 13.05)",
+    "140101": "Lubrificação, limpeza, lustração, revisão, carga e recarga, conserto, restauração, blindagem, manutenção e conservação de máquinas, veículos, aparelhos, equipamentos, motores e elevadores (LC116, item 14.01)",
+    "140201": "Assistência técnica (LC116, item 14.02)",
+    "140301": "Recondicionamento de motores (LC116, item 14.03)",
+    "140601": "Instalação e montagem de aparelhos, máquinas e equipamentos, inclusive montagem industrial (LC116, item 14.06)",
+    "141001": "Tinturaria e lavanderia (LC116, item 14.10)",
+    "141201": "Funilaria e lanternagem (LC116, item 14.12)",
+    "141301": "Carpintaria e serralheria (LC116, item 14.13)",
+    "141401": "Guincho intramunicipal, guindaste e içamento (LC116, item 14.14)",
+    "150101": "Administração de fundos quaisquer, de consórcio, de cartão de crédito ou débito e congêneres (LC116, item 15.01)",
+    "150201": "Abertura de contas em geral, inclusive conta-corrente, conta de investimentos e caderneta de poupança (LC116, item 15.02)",
+    "150801": "Emissão, reemissão, alteração, cessão e substituição de contratos de crédito, avais, fianças e anuências (LC116, item 15.08)",
+    "150901": "Arrendamento mercantil (leasing) de quaisquer bens (LC116, item 15.09)",
+    "151001": "Serviços relacionados a cobranças, recebimentos ou pagamentos em geral de títulos quaisquer (LC116, item 15.10)",
+    "151801": "Serviços relacionados a crédito imobiliário, avaliação e vistoria de imóvel ou obra (LC116, item 15.18)",
+    "160101": "Serviços de transporte coletivo municipal rodoviário, metroviário, ferroviário e aquaviário de passageiros (LC116, item 16.01)",
+    "160201": "Outros serviços de transporte de natureza municipal (LC116, item 16.02)",
+    "170101": "Assessoria ou consultoria de qualquer natureza; análise, exame, pesquisa, coleta, compilação e fornecimento de dados e informações de qualquer natureza (LC116, item 17.01)",
+    "170201": "Datilografia, digitação, estenografia, expediente, secretaria em geral, resposta audível, redação, edição, interpretação, revisão, tradução, apoio e infraestrutura administrativa (LC116, item 17.02)",
+    "170301": "Planejamento, coordenação, programação ou organização técnica, financeira ou administrativa (LC116, item 17.03)",
+    "170401": "Recrutamento, agenciamento, seleção e colocação de mão-de-obra (LC116, item 17.04)",
+    "170501": "Fornecimento de mão-de-obra, mesmo em caráter temporário, inclusive de empregados ou trabalhadores, avulsos ou temporários (LC116, item 17.05)",
+    "170601": "Propaganda e publicidade, inclusive promoção de vendas, planejamento de campanhas ou sistemas de publicidade, elaboração de desenhos, textos e demais materiais publicitários (LC116, item 17.06)",
+    "170801": "Franquia (franchising) (LC116, item 17.08)",
+    "170901": "Perícias, laudos, exames técnicos e análises técnicas (LC116, item 17.09)",
+    "171001": "Planejamento, organização e administração de feiras, exposições, congressos e congêneres (LC116, item 17.10)",
+    "171101": "Organização de festas e recepções; bufê (LC116, item 17.11)",
+    "171201": "Administração em geral, inclusive de bens e negócios de terceiros (LC116, item 17.12)",
+    "171301": "Leilão e congêneres (LC116, item 17.13)",
+    "171401": "Advocacia (LC116, item 17.14)",
+    "171501": "Arbitragem de qualquer espécie, inclusive jurídica (LC116, item 17.15)",
+    "171601": "Auditoria (LC116, item 17.16)",
+    "171701": "Análise de Organização e Métodos (LC116, item 17.17)",
+    "171801": "Atuária e cálculos técnicos de qualquer natureza (LC116, item 17.18)",
+    "171901": "Contabilidade, inclusive serviços técnicos e auxiliares (LC116, item 17.19)",
+    "172001": "Consultoria e assessoria econômica ou financeira (LC116, item 17.20)",
+    "172101": "Estatística (LC116, item 17.21)",
+    "172201": "Cobrança em geral (LC116, item 17.22)",
+    "172301": "Assessoria, análise, avaliação, atendimento, consulta, cadastro, seleção, gerenciamento de informações relacionados a operações de faturização (factoring) (LC116, item 17.23)",
+    "172401": "Apresentação de palestras, conferências, seminários e congêneres (LC116, item 17.24)",
+    "172501": "Inserção de textos, desenhos e outros materiais de propaganda e publicidade em qualquer meio (LC116, item 17.25)",
+    "180101": "Serviços de regulação de sinistros vinculados a contratos de seguros; inspeção e avaliação de riscos para cobertura de contratos de seguros (LC116, item 18.01)",
+    "190101": "Serviços de distribuição e venda de bilhetes e demais produtos de loteria, bingos, cartões, pules ou cupons de apostas, sorteios, prêmios (LC116, item 19.01)",
+    "200101": "Serviços portuários, ferroportuários, utilização de porto, movimentação de passageiros, reboque de embarcações, atracação, desatracação, práticagem, capatazia (LC116, item 20.01)",
+    "200201": "Serviços aeroportuários, utilização de aeroporto, movimentação de passageiros, armazenagem de qualquer natureza, capatazia, movimentação de aeronaves (LC116, item 20.02)",
+    "200301": "Serviços de terminais rodoviários, ferroviários, metroviários, movimentação de passageiros e mercadorias (LC116, item 20.03)",
+    "210101": "Serviços de registros públicos, cartorários e notariais (LC116, item 21.01)",
+    "220101": "Serviços de exploração de rodovia mediante cobrança de preço ou pedágio dos usuários (LC116, item 22.01)",
+    "230101": "Serviços de programação e comunicação visual, desenho industrial e congêneres (LC116, item 23.01)",
+    "240101": "Serviços de chaveiros, confecção de carimbos, placas, sinalização visual, banners, adesivos e congêneres (LC116, item 24.01)",
+    "250101": "Funerais, inclusive fornecimento de caixão, urna, transporte do corpo cadavérico, flores, coroas, embalsamento e congêneres (LC116, item 25.01)",
+    "250201": "Translado intramunicipal e cremação de corpos e partes de corpos cadavéricos (LC116, item 25.02)",
+    "250301": "Planos ou convênio funerários (LC116, item 25.03)",
+    "250401": "Manutenção e conservação de jazigos e cemitérios (LC116, item 25.04)",
+    "250501": "Cessão de uso de espaços em cemitérios para sepultamento (LC116, item 25.05)",
+    "260101": "Serviços de coleta, remessa ou entrega de correspondências, documentos, objetos, bens ou valores, inclusive pelos correios e suas agências franqueadas; courrier e congêneres (LC116, item 26.01)"
+  }
+}

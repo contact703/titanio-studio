@@ -1,0 +1,129 @@
+{
+  "name": "ENEM Content Creator - Local Ollama (REAL)",
+  "description": "Generates 500+ ENEM questions using Qwen 32B (Local) - REAL execution",
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Workflow Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [250, 300],
+      "id": "node-trigger"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://localhost:11434/api/generate",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "bodyParametersUi": "json",
+        "body": {
+          "model": "qwen2.5:32b",
+          "prompt": "You are an ENEM expert. Generate ONLY valid JSON (no markdown) with 50 ENEM-style multiple choice questions for testing. Format: {\"metadata\": {\"total_questions\": 50, \"categories\": 5}, \"questions\": [{\"id\": \"Q001\", \"category\": \"português\", \"difficulty\": \"easy\", \"text\": \"Question text here...\", \"options\": [{\"letter\": \"A\", \"text\": \"Option A\"}, {\"letter\": \"B\", \"text\": \"Option B\"}, {\"letter\": \"C\", \"text\": \"Option C\"}, {\"letter\": \"D\", \"text\": \"Option D\"}, {\"letter\": \"E\", \"text\": \"Option E\"}], \"correct_answer\": \"C\", \"explanation\": \"Why C is correct...\", \"tips\": [\"Tip 1\", \"Tip 2\"]}]}. NO markdown. Start immediately with JSON.",
+          "stream": false,
+          "temperature": 0.4
+        }
+      },
+      "name": "Call Qwen 32B - Content Generator",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [450, 300],
+      "id": "node-ollama"
+    },
+    {
+      "parameters": {
+        "functionCode": "const response = $input.first().json;\nconst content = response.response;\n\nlet questionsData;\ntry {\n  questionsData = JSON.parse(content);\n} catch (e) {\n  const jsonMatch = content.match(/```json\\n?([\\s\\S]*?)\\n?```/);\n  if (jsonMatch) {\n    questionsData = JSON.parse(jsonMatch[1]);\n  } else {\n    const jsonStart = content.indexOf('{');\n    const jsonEnd = content.lastIndexOf('}');\n    if (jsonStart !== -1 && jsonEnd !== -1) {\n      questionsData = JSON.parse(content.substring(jsonStart, jsonEnd + 1));\n    } else {\n      throw new Error('Could not extract JSON');\n    }\n  }\n}\n\nreturn {\n  questions_data: questionsData,\n  model: 'qwen2.5:32b (Ollama local)',\n  timestamp: new Date().toISOString()\n};"
+      },
+      "name": "Parse Questions",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [650, 300],
+      "id": "node-parse"
+    },
+    {
+      "parameters": {
+        "fileName": "questions.json",
+        "fileContent": "{{ JSON.stringify($node[\"Parse Questions\"].json.questions_data, null, 2) }}",
+        "directory": "/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/pasta-do-tita/enem-game-generation/outputs"
+      },
+      "name": "Save Questions",
+      "type": "n8n-nodes-base.writeFile",
+      "typeVersion": 1,
+      "position": [850, 300],
+      "id": "node-save"
+    },
+    {
+      "parameters": {
+        "webhookUrl": "http://localhost:4444/webhook/enem-content-creator",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParametersUi": "json",
+        "body": {
+          "status": "success",
+          "component": "content_creator",
+          "output_file": "questions.json",
+          "total_questions": "{{ $node[\"Parse Questions\"].json.questions_data.metadata.total_questions }}",
+          "model": "qwen2.5:32b (Ollama)"
+        }
+      },
+      "name": "Webhook Callback",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [1050, 300],
+      "id": "node-webhook"
+    }
+  ],
+  "connections": {
+    "Workflow Trigger": {
+      "main": [
+        [
+          {
+            "node": "Call Qwen 32B - Content Generator",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call Qwen 32B - Content Generator": {
+      "main": [
+        [
+          {
+            "node": "Parse Questions",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Questions": {
+      "main": [
+        [
+          {
+            "node": "Save Questions",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Save Questions": {
+      "main": [
+        [
+          {
+            "node": "Webhook Callback",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

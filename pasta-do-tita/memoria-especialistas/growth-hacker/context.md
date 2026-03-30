@@ -1,3 +1,1 @@
-# Contexto Ativo — Growth Hacker
-
-Nenhum contexto ativo no momento.
+# DESATIVADO — Absorvido por marketing-director em 28/03/2026

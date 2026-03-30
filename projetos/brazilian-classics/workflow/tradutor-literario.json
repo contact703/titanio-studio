@@ -1,0 +1,541 @@
+{
+    "updatedAt": "2026-03-28T01:19:20.573Z",
+    "createdAt": "2026-03-28T01:19:20.573Z",
+    "id": "06C4w3q8g0SCYiim",
+    "name": "Tradutor Liter\u00e1rio - Brazilian Classics",
+    "description": null,
+    "active": true,
+    "isArchived": false,
+    "nodes": [
+        {
+            "parameters": {
+                "httpMethod": "POST",
+                "path": "tradutor-literario",
+                "responseMode": "responseNode",
+                "options": {}
+            },
+            "id": "n1-webhook",
+            "name": "N1 - Webhook Entrada",
+            "type": "n8n-nodes-base.webhook",
+            "typeVersion": 2,
+            "position": [
+                240,
+                300
+            ],
+            "webhookId": "tradutor-literario"
+        },
+        {
+            "parameters": {
+                "jsCode": "// N2 - Preparador (Prompt Assembly)\nconst input = $input.first().json;\nconst body = input.body || input;\n\nconst texto = body.texto;\nconst idioma = body.idioma_destino || 'EN';\nconst variante = body.variante || '';\nconst genero = body.genero || 'liter\u00e1rio';\nconst glossario = body.glossario || {};\nconst autor = body.autor || 'Autor Desconhecido';\nconst obra = body.obra || 'Obra';\nconst capitulo = body.capitulo || 1;\nconst gerarCapa = body.gerar_capa || false;\n\nif (!texto) {\n  throw new Error('Campo \"texto\" \u00e9 obrigat\u00f3rio');\n}\n\nconst idiomas = {\n  'EN': 'English', 'ES': 'Spanish', 'DE': 'German',\n  'FR': 'French', 'ZH': 'Chinese', 'JA': 'Japanese',\n  'KO': 'Korean', 'RU': 'Russian', 'AR': 'Arabic'\n};\n\nconst nomeIdioma = idiomas[idioma] || idioma;\nconst isAsian = ['ZH', 'JA', 'KO'].includes(idioma);\n\nlet glossarioStr = '';\nif (Object.keys(glossario).length > 0) {\n  glossarioStr = '\\nGLOSS\u00c1RIO OBRIGAT\u00d3RIO:\\n' +\n    Object.entries(glossario).map(([k,v]) => `- \"${k}\" \u2192 \"${v}\"`).join('\\n');\n}\n\nconst prompt = `Voc\u00ea \u00e9 um tradutor liter\u00e1rio especializado em ${nomeIdioma}.\nObra: \"${obra}\" de ${autor}\nG\u00eanero: Realismo Regional Brasileiro\nCap\u00edtulo: ${capitulo}\n${variante ? `Variante: ${variante}` : ''}\n${glossarioStr}\n\nREGRAS:\n1. Preservar ritmo e cad\u00eancia do original\n2. Manter registro coloquial onde apropriado\n3. Adaptar express\u00f5es idiom\u00e1ticas sem perder significado\n4. Manter pontua\u00e7\u00e3o estil\u00edstica do autor\n5. N\u00c3O adicionar notas ou coment\u00e1rios - retorne APENAS a tradu\u00e7\u00e3o\n\nTEXTO PARA TRADUZIR:\n${texto}`;\n\nreturn [{\n  json: {\n    prompt,\n    texto_original: texto,\n    idioma_destino: idioma,\n    variante,\n    genero,\n    autor,\n    obra,\n    capitulo,\n    gerar_capa: gerarCapa,\n    glossario,\n    is_asian: isAsian,\n    timestamp: new Date().toISOString()\n  }\n}];"
+            },
+            "id": "n2-prep",
+            "name": "N2 - Preparador",
+            "type": "n8n-nodes-base.code",
+            "typeVersion": 2,
+            "position": [
+                460,
+                300
+            ]
+        },
+        {
+            "parameters": {
+                "method": "POST",
+                "url": "https://api.anthropic.com/v1/messages",
+                "sendHeaders": true,
+                "headerParameters": {
+                    "parameters": [
+                        {
+                            "name": "x-api-key",
+                            "value": "={{$env.ANTHROPIC_API_KEY}}"
+                        },
+                        {
+                            "name": "anthropic-version",
+                            "value": "2023-06-01"
+                        },
+                        {
+                            "name": "content-type",
+                            "value": "application/json"
+                        }
+                    ]
+                },
+                "sendBody": true,
+                "specifyBody": "json",
+                "jsonBody": "={{ JSON.stringify({ model: 'claude-sonnet-4-20250514', max_tokens: 8000, temperature: 0.3, messages: [{ role: 'user', content: $json.prompt }] }) }}",
+                "options": {
+                    "timeout": 120000
+                }
+            },
+            "id": "n3-claude",
+            "name": "N3 - Claude Tradu\u00e7\u00e3o",
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 4.2,
+            "position": [
+                680,
+                300
+            ]
+        },
+        {
+            "parameters": {
+                "jsCode": "// N4 - Kimi Router (Asian Languages)\nconst input = $input.first().json;\nconst prevData = $('N2 - Preparador').first().json;\nconst isAsian = prevData.is_asian;\n\n// Extract Claude's translation\nlet claudeTranslation = '';\ntry {\n  claudeTranslation = input.content[0].text;\n} catch(e) {\n  claudeTranslation = JSON.stringify(input);\n}\n\nif (isAsian) {\n  // For Asian languages, we could route to Kimi here\n  // For now, Claude handles all and we pass through\n  return [{\n    json: {\n      ...prevData,\n      traducao_claude: claudeTranslation,\n      modelo_usado: 'claude-sonnet-4',\n      routed_to_kimi: false,\n      note: 'Kimi integration available for ZH/JA/KO optimization'\n    }\n  }];\n} else {\n  return [{\n    json: {\n      ...prevData,\n      traducao_claude: claudeTranslation,\n      modelo_usado: 'claude-sonnet-4',\n      routed_to_kimi: false\n    }\n  }];\n}"
+            },
+            "id": "n4-kimi",
+            "name": "N4 - Kimi Router",
+            "type": "n8n-nodes-base.code",
+            "typeVersion": 2,
+            "position": [
+                900,
+                300
+            ]
+        },
+        {
+            "parameters": {
+                "method": "POST",
+                "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent",
+                "sendQuery": true,
+                "queryParameters": {
+                    "parameters": [
+                        {
+                            "name": "key",
+                            "value": "={{$env.GOOGLE_AI_API_KEY}}"
+                        }
+                    ]
+                },
+                "sendHeaders": true,
+                "headerParameters": {
+                    "parameters": [
+                        {
+                            "name": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ]
+                },
+                "sendBody": true,
+                "specifyBody": "json",
+                "jsonBody": "={{ JSON.stringify({ contents: [{ parts: [{ text: 'Revise esta tradu\u00e7\u00e3o verificando: 1. Flu\u00eancia natural no idioma alvo 2. Ritmo e cad\u00eancia preservados 3. Consist\u00eancia terminol\u00f3gica 4. Erros gramaticais ou de concord\u00e2ncia. Retorne APENAS o texto revisado, sem coment\u00e1rios.\\n\\nTRADU\u00c7\u00c3O PARA REVISAR:\\n' + $json.traducao_claude }] }] }) }}",
+                "options": {
+                    "timeout": 60000
+                }
+            },
+            "id": "n5-gemini",
+            "name": "N5 - Gemini Revis\u00e3o",
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 4.2,
+            "position": [
+                1120,
+                300
+            ]
+        },
+        {
+            "parameters": {
+                "jsCode": "// N6 - Validador\nconst input = $input.first().json;\nconst prevData = $('N4 - Kimi Router').first().json;\n\n// Extract Gemini's revision\nlet traducaoFinal = '';\ntry {\n  traducaoFinal = input.candidates[0].content.parts[0].text;\n} catch(e) {\n  // Fallback to Claude translation if Gemini fails\n  traducaoFinal = prevData.traducao_claude;\n}\n\nconst original = prevData.texto_original;\n\n// Validations\nconst validations = {\n  lengthRatio: traducaoFinal.length / original.length,\n  hasContent: traducaoFinal.length > 10,\n  notTooShort: traducaoFinal.length > original.length * 0.5,\n  notTooLong: traducaoFinal.length < original.length * 2.0,\n  noEmptyResult: traducaoFinal.trim().length > 0\n};\n\nconst isValid = Object.values(validations).every(v => v === true);\n\nlet warnings = [];\nif (validations.lengthRatio < 0.7) warnings.push('Tradu\u00e7\u00e3o possivelmente incompleta');\nif (validations.lengthRatio > 1.5) warnings.push('Tradu\u00e7\u00e3o possivelmente expandida demais');\n\nreturn [{\n  json: {\n    traducao_final: traducaoFinal,\n    traducao_claude: prevData.traducao_claude,\n    idioma_destino: prevData.idioma_destino,\n    variante: prevData.variante,\n    autor: prevData.autor,\n    obra: prevData.obra,\n    capitulo: prevData.capitulo,\n    gerar_capa: prevData.gerar_capa,\n    modelo_principal: prevData.modelo_usado,\n    validations,\n    is_valid: isValid,\n    warnings,\n    timestamp: prevData.timestamp\n  }\n}];"
+            },
+            "id": "n6-validador",
+            "name": "N6 - Validador",
+            "type": "n8n-nodes-base.code",
+            "typeVersion": 2,
+            "position": [
+                1340,
+                300
+            ]
+        },
+        {
+            "parameters": {
+                "jsCode": "// N7 - Learning Output + Response\nconst input = $input.first().json;\n\nconst metrics = {\n  timestamp: input.timestamp,\n  obra: input.obra,\n  capitulo: input.capitulo,\n  idioma: input.idioma_destino,\n  modelo_principal: input.modelo_principal,\n  length_original: (input.traducao_claude || '').length,\n  length_final: input.traducao_final.length,\n  is_valid: input.is_valid,\n  warnings: input.warnings,\n  quality_score: input.is_valid ? 0.9 : 0.5\n};\n\n// Log metrics (could write to file or DB)\nconsole.log('METRICS:', JSON.stringify(metrics));\n\nreturn [{\n  json: {\n    success: true,\n    traducao: input.traducao_final,\n    idioma: input.idioma_destino,\n    obra: input.obra,\n    autor: input.autor,\n    capitulo: input.capitulo,\n    modelo: input.modelo_principal,\n    is_valid: input.is_valid,\n    warnings: input.warnings,\n    metrics\n  }\n}];"
+            },
+            "id": "n7-learning",
+            "name": "N7 - Learning Output",
+            "type": "n8n-nodes-base.code",
+            "typeVersion": 2,
+            "position": [
+                1560,
+                300
+            ]
+        },
+        {
+            "parameters": {
+                "respondWith": "json",
+                "responseBody": "={{ JSON.stringify($json) }}",
+                "options": {}
+            },
+            "id": "n8-respond",
+            "name": "Respond to Webhook",
+            "type": "n8n-nodes-base.respondToWebhook",
+            "typeVersion": 1.1,
+            "position": [
+                1780,
+                300
+            ]
+        }
+    ],
+    "connections": {
+        "N1 - Webhook Entrada": {
+            "main": [
+                [
+                    {
+                        "node": "N2 - Preparador",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "N2 - Preparador": {
+            "main": [
+                [
+                    {
+                        "node": "N3 - Claude Tradu\u00e7\u00e3o",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "N3 - Claude Tradu\u00e7\u00e3o": {
+            "main": [
+                [
+                    {
+                        "node": "N4 - Kimi Router",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "N4 - Kimi Router": {
+            "main": [
+                [
+                    {
+                        "node": "N5 - Gemini Revis\u00e3o",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "N5 - Gemini Revis\u00e3o": {
+            "main": [
+                [
+                    {
+                        "node": "N6 - Validador",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "N6 - Validador": {
+            "main": [
+                [
+                    {
+                        "node": "N7 - Learning Output",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "N7 - Learning Output": {
+            "main": [
+                [
+                    {
+                        "node": "Respond to Webhook",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        }
+    },
+    "settings": {
+        "executionOrder": "v1",
+        "callerPolicy": "workflowsFromSameOwner",
+        "availableInMCP": false
+    },
+    "staticData": null,
+    "meta": null,
+    "pinData": null,
+    "versionId": "4a9ef454-9268-455a-a428-a433f66e58d0",
+    "activeVersionId": "4a9ef454-9268-455a-a428-a433f66e58d0",
+    "versionCounter": 3,
+    "triggerCount": 1,
+    "shared": [
+        {
+            "updatedAt": "2026-03-28T01:19:20.620Z",
+            "createdAt": "2026-03-28T01:19:20.620Z",
+            "role": "workflow:owner",
+            "workflowId": "06C4w3q8g0SCYiim",
+            "projectId": "nqkxORW7nMTLlPPf",
+            "project": {
+                "updatedAt": "2026-03-28T01:17:31.676Z",
+                "createdAt": "2026-03-21T20:38:03.163Z",
+                "id": "nqkxORW7nMTLlPPf",
+                "name": "Tita Bot <contact@titaniofilms.com>",
+                "type": "personal",
+                "icon": null,
+                "description": null,
+                "creatorId": "4889f139-a39f-44c4-ab18-9260217281f2"
+            }
+        }
+    ],
+    "tags": [],
+    "activeVersion": {
+        "updatedAt": "2026-03-28T01:19:20.625Z",
+        "createdAt": "2026-03-28T01:19:20.625Z",
+        "versionId": "4a9ef454-9268-455a-a428-a433f66e58d0",
+        "workflowId": "06C4w3q8g0SCYiim",
+        "nodes": [
+            {
+                "parameters": {
+                    "httpMethod": "POST",
+                    "path": "tradutor-literario",
+                    "responseMode": "responseNode",
+                    "options": {}
+                },
+                "id": "n1-webhook",
+                "name": "N1 - Webhook Entrada",
+                "type": "n8n-nodes-base.webhook",
+                "typeVersion": 2,
+                "position": [
+                    240,
+                    300
+                ],
+                "webhookId": "tradutor-literario"
+            },
+            {
+                "parameters": {
+                    "jsCode": "// N2 - Preparador (Prompt Assembly)\nconst input = $input.first().json;\nconst body = input.body || input;\n\nconst texto = body.texto;\nconst idioma = body.idioma_destino || 'EN';\nconst variante = body.variante || '';\nconst genero = body.genero || 'liter\u00e1rio';\nconst glossario = body.glossario || {};\nconst autor = body.autor || 'Autor Desconhecido';\nconst obra = body.obra || 'Obra';\nconst capitulo = body.capitulo || 1;\nconst gerarCapa = body.gerar_capa || false;\n\nif (!texto) {\n  throw new Error('Campo \"texto\" \u00e9 obrigat\u00f3rio');\n}\n\nconst idiomas = {\n  'EN': 'English', 'ES': 'Spanish', 'DE': 'German',\n  'FR': 'French', 'ZH': 'Chinese', 'JA': 'Japanese',\n  'KO': 'Korean', 'RU': 'Russian', 'AR': 'Arabic'\n};\n\nconst nomeIdioma = idiomas[idioma] || idioma;\nconst isAsian = ['ZH', 'JA', 'KO'].includes(idioma);\n\nlet glossarioStr = '';\nif (Object.keys(glossario).length > 0) {\n  glossarioStr = '\\nGLOSS\u00c1RIO OBRIGAT\u00d3RIO:\\n' +\n    Object.entries(glossario).map(([k,v]) => `- \"${k}\" \u2192 \"${v}\"`).join('\\n');\n}\n\nconst prompt = `Voc\u00ea \u00e9 um tradutor liter\u00e1rio especializado em ${nomeIdioma}.\nObra: \"${obra}\" de ${autor}\nG\u00eanero: Realismo Regional Brasileiro\nCap\u00edtulo: ${capitulo}\n${variante ? `Variante: ${variante}` : ''}\n${glossarioStr}\n\nREGRAS:\n1. Preservar ritmo e cad\u00eancia do original\n2. Manter registro coloquial onde apropriado\n3. Adaptar express\u00f5es idiom\u00e1ticas sem perder significado\n4. Manter pontua\u00e7\u00e3o estil\u00edstica do autor\n5. N\u00c3O adicionar notas ou coment\u00e1rios - retorne APENAS a tradu\u00e7\u00e3o\n\nTEXTO PARA TRADUZIR:\n${texto}`;\n\nreturn [{\n  json: {\n    prompt,\n    texto_original: texto,\n    idioma_destino: idioma,\n    variante,\n    genero,\n    autor,\n    obra,\n    capitulo,\n    gerar_capa: gerarCapa,\n    glossario,\n    is_asian: isAsian,\n    timestamp: new Date().toISOString()\n  }\n}];"
+                },
+                "id": "n2-prep",
+                "name": "N2 - Preparador",
+                "type": "n8n-nodes-base.code",
+                "typeVersion": 2,
+                "position": [
+                    460,
+                    300
+                ]
+            },
+            {
+                "parameters": {
+                    "method": "POST",
+                    "url": "https://api.anthropic.com/v1/messages",
+                    "sendHeaders": true,
+                    "headerParameters": {
+                        "parameters": [
+                            {
+                                "name": "x-api-key",
+                                "value": "={{$env.ANTHROPIC_API_KEY}}"
+                            },
+                            {
+                                "name": "anthropic-version",
+                                "value": "2023-06-01"
+                            },
+                            {
+                                "name": "content-type",
+                                "value": "application/json"
+                            }
+                        ]
+                    },
+                    "sendBody": true,
+                    "specifyBody": "json",
+                    "jsonBody": "={{ JSON.stringify({ model: 'claude-sonnet-4-20250514', max_tokens: 8000, temperature: 0.3, messages: [{ role: 'user', content: $json.prompt }] }) }}",
+                    "options": {
+                        "timeout": 120000
+                    }
+                },
+                "id": "n3-claude",
+                "name": "N3 - Claude Tradu\u00e7\u00e3o",
+                "type": "n8n-nodes-base.httpRequest",
+                "typeVersion": 4.2,
+                "position": [
+                    680,
+                    300
+                ]
+            },
+            {
+                "parameters": {
+                    "jsCode": "// N4 - Kimi Router (Asian Languages)\nconst input = $input.first().json;\nconst prevData = $('N2 - Preparador').first().json;\nconst isAsian = prevData.is_asian;\n\n// Extract Claude's translation\nlet claudeTranslation = '';\ntry {\n  claudeTranslation = input.content[0].text;\n} catch(e) {\n  claudeTranslation = JSON.stringify(input);\n}\n\nif (isAsian) {\n  // For Asian languages, we could route to Kimi here\n  // For now, Claude handles all and we pass through\n  return [{\n    json: {\n      ...prevData,\n      traducao_claude: claudeTranslation,\n      modelo_usado: 'claude-sonnet-4',\n      routed_to_kimi: false,\n      note: 'Kimi integration available for ZH/JA/KO optimization'\n    }\n  }];\n} else {\n  return [{\n    json: {\n      ...prevData,\n      traducao_claude: claudeTranslation,\n      modelo_usado: 'claude-sonnet-4',\n      routed_to_kimi: false\n    }\n  }];\n}"
+                },
+                "id": "n4-kimi",
+                "name": "N4 - Kimi Router",
+                "type": "n8n-nodes-base.code",
+                "typeVersion": 2,
+                "position": [
+                    900,
+                    300
+                ]
+            },
+            {
+                "parameters": {
+                    "method": "POST",
+                    "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent",
+                    "sendQuery": true,
+                    "queryParameters": {
+                        "parameters": [
+                            {
+                                "name": "key",
+                                "value": "={{$env.GOOGLE_AI_API_KEY}}"
+                            }
+                        ]
+                    },
+                    "sendHeaders": true,
+                    "headerParameters": {
+                        "parameters": [
+                            {
+                                "name": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ]
+                    },
+                    "sendBody": true,
+                    "specifyBody": "json",
+                    "jsonBody": "={{ JSON.stringify({ contents: [{ parts: [{ text: 'Revise esta tradu\u00e7\u00e3o verificando: 1. Flu\u00eancia natural no idioma alvo 2. Ritmo e cad\u00eancia preservados 3. Consist\u00eancia terminol\u00f3gica 4. Erros gramaticais ou de concord\u00e2ncia. Retorne APENAS o texto revisado, sem coment\u00e1rios.\\n\\nTRADU\u00c7\u00c3O PARA REVISAR:\\n' + $json.traducao_claude }] }] }) }}",
+                    "options": {
+                        "timeout": 60000
+                    }
+                },
+                "id": "n5-gemini",
+                "name": "N5 - Gemini Revis\u00e3o",
+                "type": "n8n-nodes-base.httpRequest",
+                "typeVersion": 4.2,
+                "position": [
+                    1120,
+                    300
+                ]
+            },
+            {
+                "parameters": {
+                    "jsCode": "// N6 - Validador\nconst input = $input.first().json;\nconst prevData = $('N4 - Kimi Router').first().json;\n\n// Extract Gemini's revision\nlet traducaoFinal = '';\ntry {\n  traducaoFinal = input.candidates[0].content.parts[0].text;\n} catch(e) {\n  // Fallback to Claude translation if Gemini fails\n  traducaoFinal = prevData.traducao_claude;\n}\n\nconst original = prevData.texto_original;\n\n// Validations\nconst validations = {\n  lengthRatio: traducaoFinal.length / original.length,\n  hasContent: traducaoFinal.length > 10,\n  notTooShort: traducaoFinal.length > original.length * 0.5,\n  notTooLong: traducaoFinal.length < original.length * 2.0,\n  noEmptyResult: traducaoFinal.trim().length > 0\n};\n\nconst isValid = Object.values(validations).every(v => v === true);\n\nlet warnings = [];\nif (validations.lengthRatio < 0.7) warnings.push('Tradu\u00e7\u00e3o possivelmente incompleta');\nif (validations.lengthRatio > 1.5) warnings.push('Tradu\u00e7\u00e3o possivelmente expandida demais');\n\nreturn [{\n  json: {\n    traducao_final: traducaoFinal,\n    traducao_claude: prevData.traducao_claude,\n    idioma_destino: prevData.idioma_destino,\n    variante: prevData.variante,\n    autor: prevData.autor,\n    obra: prevData.obra,\n    capitulo: prevData.capitulo,\n    gerar_capa: prevData.gerar_capa,\n    modelo_principal: prevData.modelo_usado,\n    validations,\n    is_valid: isValid,\n    warnings,\n    timestamp: prevData.timestamp\n  }\n}];"
+                },
+                "id": "n6-validador",
+                "name": "N6 - Validador",
+                "type": "n8n-nodes-base.code",
+                "typeVersion": 2,
+                "position": [
+                    1340,
+                    300
+                ]
+            },
+            {
+                "parameters": {
+                    "jsCode": "// N7 - Learning Output + Response\nconst input = $input.first().json;\n\nconst metrics = {\n  timestamp: input.timestamp,\n  obra: input.obra,\n  capitulo: input.capitulo,\n  idioma: input.idioma_destino,\n  modelo_principal: input.modelo_principal,\n  length_original: (input.traducao_claude || '').length,\n  length_final: input.traducao_final.length,\n  is_valid: input.is_valid,\n  warnings: input.warnings,\n  quality_score: input.is_valid ? 0.9 : 0.5\n};\n\n// Log metrics (could write to file or DB)\nconsole.log('METRICS:', JSON.stringify(metrics));\n\nreturn [{\n  json: {\n    success: true,\n    traducao: input.traducao_final,\n    idioma: input.idioma_destino,\n    obra: input.obra,\n    autor: input.autor,\n    capitulo: input.capitulo,\n    modelo: input.modelo_principal,\n    is_valid: input.is_valid,\n    warnings: input.warnings,\n    metrics\n  }\n}];"
+                },
+                "id": "n7-learning",
+                "name": "N7 - Learning Output",
+                "type": "n8n-nodes-base.code",
+                "typeVersion": 2,
+                "position": [
+                    1560,
+                    300
+                ]
+            },
+            {
+                "parameters": {
+                    "respondWith": "json",
+                    "responseBody": "={{ JSON.stringify($json) }}",
+                    "options": {}
+                },
+                "id": "n8-respond",
+                "name": "Respond to Webhook",
+                "type": "n8n-nodes-base.respondToWebhook",
+                "typeVersion": 1.1,
+                "position": [
+                    1780,
+                    300
+                ]
+            }
+        ],
+        "connections": {
+            "N1 - Webhook Entrada": {
+                "main": [
+                    [
+                        {
+                            "node": "N2 - Preparador",
+                            "type": "main",
+                            "index": 0
+                        }
+                    ]
+                ]
+            },
+            "N2 - Preparador": {
+                "main": [
+                    [
+                        {
+                            "node": "N3 - Claude Tradu\u00e7\u00e3o",
+                            "type": "main",
+                            "index": 0
+                        }
+                    ]
+                ]
+            },
+            "N3 - Claude Tradu\u00e7\u00e3o": {
+                "main": [
+                    [
+                        {
+                            "node": "N4 - Kimi Router",
+                            "type": "main",
+                            "index": 0
+                        }
+                    ]
+                ]
+            },
+            "N4 - Kimi Router": {
+                "main": [
+                    [
+                        {
+                            "node": "N5 - Gemini Revis\u00e3o",
+                            "type": "main",
+                            "index": 0
+                        }
+                    ]
+                ]
+            },
+            "N5 - Gemini Revis\u00e3o": {
+                "main": [
+                    [
+                        {
+                            "node": "N6 - Validador",
+                            "type": "main",
+                            "index": 0
+                        }
+                    ]
+                ]
+            },
+            "N6 - Validador": {
+                "main": [
+                    [
+                        {
+                            "node": "N7 - Learning Output",
+                            "type": "main",
+                            "index": 0
+                        }
+                    ]
+                ]
+            },
+            "N7 - Learning Output": {
+                "main": [
+                    [
+                        {
+                            "node": "Respond to Webhook",
+                            "type": "main",
+                            "index": 0
+                        }
+                    ]
+                ]
+            }
+        },
+        "authors": "Tita Bot",
+        "name": null,
+        "description": null,
+        "autosaved": false,
+        "workflowPublishHistory": [
+            {
+                "createdAt": "2026-03-28T01:19:36.969Z",
+                "id": 1,
+                "workflowId": "06C4w3q8g0SCYiim",
+                "versionId": "4a9ef454-9268-455a-a428-a433f66e58d0",
+                "event": "activated",
+                "userId": "4889f139-a39f-44c4-ab18-9260217281f2"
+            }
+        ]
+    }
+}

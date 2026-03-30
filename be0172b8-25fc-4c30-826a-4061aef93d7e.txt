@@ -1,0 +1,6 @@
+Eu não sei se você está fazendo teste só no code, olhando pelo code por trás, vai
+para você testar pelo browser, porque você está falando que o site está arrumado, mas
+não está, ele está a mesma coisa de ontem, ele não carrega, ele carrega só meia página
+inicial, está a uma bagunça, não dá para clicar nos links, então abre o browser e
+tenta utilizar pelo browser, tenta clicar nos links, investiga, inspeciona o browser,
+vê o console, vê o que está acontecendo e por que não está funcionando, faz esse teste real.

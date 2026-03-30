@@ -1,0 +1,1101 @@
+{
+  "totalEspecialistas": 32,
+  "data": [
+    {
+      "id": "advogado-titanio",
+      "name": "Advogado Tit\u00e2nio",
+      "status": "available",
+      "memory": {
+        "specialistId": "advogado-titanio",
+        "specialistName": "Advogado Tit\u00e2nio",
+        "version": 2,
+        "lastActive": "2026-03-19T18:57:13.952Z",
+        "stats": {
+          "tasksCompleted": 0,
+          "tasksFailed": 0,
+          "sessionsTotal": 0,
+          "lessonsLearned": 2,
+          "tokensUsed": 0,
+          "avgTaskDurationMs": 0
+        },
+        "knowledge": [],
+        "recentTasks": [],
+        "activeContext": {
+          "currentTask": null,
+          "currentProject": null,
+          "startedAt": null
+        }
+      }
+    },
+    {
+      "id": "agent-doctor",
+      "name": "Agent Doctor",
+      "status": "available",
+      "memory": {
+        "specialistId": "agent-doctor",
+        "specialistName": "Agent Doctor",
+        "version": 2,
+        "lastActive": "2026-03-19T19:04:57.797Z",
+        "stats": {
+          "tasksCompleted": 0,
+          "tasksFailed": 0,
+          "sessionsTotal": 0,
+          "lessonsLearned": 5,
+          "tokensUsed": 0,
+          "avgTaskDurationMs": 0
+        },
+        "knowledge": [],
+        "recentTasks": [],
+        "activeContext": {
+          "currentTask": null,
+          "currentProject": null,
+          "startedAt": null
+        }
+      }
+    },
+    {
+      "id": "api-master",
+      "name": "API Master",
+      "status": "available",
+      "memory": {
+        "specialistId": "api-master",
+        "specialistName": "API Master",
+        "version": 2,
+        "lastActive": "2026-03-19T18:57:13.936Z",
+        "stats": {
+          "tasksCompleted": 0,
+          "tasksFailed": 0,
+          "sessionsTotal": 0,
+          "lessonsLearned": 2,
+          "tokensUsed": 0,
+          "avgTaskDurationMs": 0
+        },
+        "knowledge": [],
+        "recentTasks": [],
+        "activeContext": {
+          "currentTask": null,
+          "currentProject": null,
+          "startedAt": null
+        }
+      }
+    },
+    {
+      "id": "aso-specialist",
+      "name": "ASO Specialist",
+      "status": "available",
+      "memory": {
+        "specialistId": "aso-specialist",
+        "specialistName": "ASO Specialist",
+        "version": 2,
+        "lastActive": "2026-03-19T18:57:13.935Z",
+        "stats": {
+          "tasksCompleted": 0,
+          "tasksFailed": 0,
+          "sessionsTotal": 0,
+          "lessonsLearned": 2,
+          "tokensUsed": 0,
+          "avgTaskDurationMs": 0
+        },
+        "knowledge": [],
+        "recentTasks": [],
+        "activeContext": {
+          "currentTask": null,
+          "currentProject": null,
+          "startedAt": null
+        }
+      }
+    },
+    {
+      "id": "audiodesc-specialist",
+      "name": "Ada Vox",
+      "status": "available",
+      "memory": {
+        "specialistId": "audiodesc-specialist",
+        "specialistName": "Ada Vox",
+        "version": 2,
+        "lastActive": "2026-03-19T18:57:13.951Z",
+        "stats": {
+          "tasksCompleted": 0,
+          "tasksFailed": 0,
+          "sessionsTotal": 0,
+          "lessonsLearned": 2,
+          "tokensUsed": 0,
+          "avgTaskDurationMs": 0
+        },
+        "knowledge": [],
+        "recentTasks": [],
+        "activeContext": {
+          "currentTask": null,
+          "currentProject": null,
+          "startedAt": null
+        }
+      }
+    },
+    {
+      "id": "automation-bot",
+      "name": "Automation Bot",
+      "status": "available",
+      "memory": {
+        "specialistId": "automation-bot",
+        "specialistName": "Automation Bot",
+        "version": 2,
+        "lastActive": "2026-03-20T19:46:45.184Z",
+        "stats": {
+          "tasksCompleted": 3,
+          "tasksFailed": 0,
+          "sessionsTotal": 0,
+          "lessonsLearned": 18,
+          "tokensUsed": 0,
+          "avgTaskDurationMs": 5720
+        },
+        "knowledge": [],
+        "recentTasks": [
+          {
+            "id": "f0ada1f2-487e-4438-8b8d-da647dec354b",
+            "title": "N8n workflows modelos gratuitos",
+            "description": "Subagente ativo",
+            "status": "completed",
+            "startedAt": "2026-03-20T19:46:38.524Z",
+            "completedAt": "2026-03-20T19:46:45.130Z",
+            "result": "Para ajud\u00e1-lo a encontrar modelos gratuitos de workflows no N8n, posso te fornecer uma lista de recursos onde voc\u00ea pode encontrar esses modelos prontos para uso. Aqui est\u00e3o algumas op\u00e7\u00f5es:\n\n1. **N8n Community Forum**: A comunidade do N8n tem um f\u00f3rum onde os usu\u00e1rios compartilham seus workflows e templates. \u00c9 poss\u00edvel encontrar muitos modelos gratuitos l\u00e1. Acesse: [N8n Community Forum](https://community.n8n.io/)\n\n2. **N8n GitHub**: A equipe do N8n e a comunidade contribuem com modelos no reposit",
+            "durationMs": 6606
+          },
+          {
+            "id": "608c7a2d-b38e-4699-bb33-f70762b34072",
+            "title": "Integra\u00e7\u00e3o modelos gratuitos OpenRouter \u2014 nemotron + stepflash",
+            "description": "Subagente OpenClaw ativo",
+            "status": "completed",
+            "startedAt": "2026-03-20T19:46:09.599Z",
+            "completedAt": "2026-03-20T19:46:19.648Z",
+            "result": "Para realizar a integra\u00e7\u00e3o de modelos gratuitos do OpenRouter com o nemotron e o stepflash, voc\u00ea pode seguir os passos abaixo. Esta integra\u00e7\u00e3o envolve a conex\u00e3o de diferentes sistemas e a automa\u00e7\u00e3o de processos, o que pode ser feito utilizando ferramentas como o n8n, que \u00e9 uma plataforma de automa\u00e7\u00e3o de workflows.\n\n### Etapas para Integra\u00e7\u00e3o:\n\n1. **Identificar os Requisitos e Fontes de Dados:**\n   - Primeiramente, \u00e9 necess\u00e1rio entender os modelos gratuitos do OpenRouter e como eles podem ser int",
+            "durationMs": 10049
+          },
+          {
+            "id": "897a2348-3509-48c8-97ab-ea0544b76274",
+            "title": "Criar workflow N8n de aprendizado autom\u00e1tico",
+            "description": "Sistema de captura de li\u00e7\u00f5es",
+            "status": "completed",
+            "startedAt": "2026-03-20T19:15:00.453Z",
+            "completedAt": "2026-03-20T19:15:00.958Z",
+            "result": "Automation Bot processou a tarefa: Criar workflow N8n de aprendizado autom\u00e1tico",
+            "durationMs": 505
+          }
+        ],
+        "activeContext": {
+          "currentTask": null,
+          "currentProject": null,
+          "startedAt": null
+        }
+      }
+    },
+    {
+      "id": "ceo-titanio",
+      "name": "Victor Solis",
+      "status": "available",
+      "memory": {
+        "specialistId": "ceo-titanio",
+        "specialistName": "Victor Solis",
+        "version": 2,
+        "lastActive": "2026-03-19T19:04:57.855Z",
+        "stats": {
+          "tasksCompleted": 0,
+          "tasksFailed": 0,
+          "sessionsTotal": 0,
+          "lessonsLearned": 3,
+          "tokensUsed": 0,
+          "avgTaskDurationMs": 0
+        },
+        "knowledge": [],
+        "recentTasks": [],
+        "activeContext": {
+          "currentTask": null,
+          "currentProject": null,
+          "startedAt": null
+        }
+      }
+    },
+    {
+      "id": "code-ninja",
+      "name": "Code Ninja",
+      "status": "available",
+      "memory": {
+        "specialistId": "code-ninja",
+        "specialistName": "Code Ninja",
+        "version": 2,
+        "lastActive": "2026-03-22T20:49:05.960Z",
+        "stats": {
+          "tasksCompleted": 4,
+          "tasksFailed": 0,
+          "sessionsTotal": 0,
+          "lessonsLearned": 21,
+          "tokensUsed": 0,
+          "avgTaskDurationMs": 3791
+        },
+        "knowledge": [],
+        "recentTasks": [
+          {
+            "id": "70bf8357-9185-4681-bfa9-0fdd847c701a",
+            "title": "Fa\u00e7a um resumo conciso (3-4 linhas) do que a gente t\u00e1 desenvolvendo hoje. Mencione: Dashboard Titanio, Instagram Poster, 32 especialistas, troca de modelos, testes de verdade.",
+            "description": "",
+            "status": "completed",
+            "startedAt": "2026-03-22T20:49:01.604Z",
+            "completedAt": "2026-03-22T20:49:05.960Z",
+            "result": "## [Resumo do Desenvolvimento em Andamento] \u2014 Relat\u00f3rio de Execu\u00e7\u00e3o\n\nAtualmente, estamos focados no desenvolvimento do Dashboard Titanio, que integra 32 especialistas em diferentes \u00e1reas de atua\u00e7\u00e3o. Estamos tamb\u00e9m trabalhando no Instagram Poster, uma ferramenta para gerenciamento e publica\u00e7\u00e3o de conte\u00fado na plataforma Instagram. Al\u00e9m disso, estamos realizando a troca de modelos no OpenRouter e conduzindo testes de verdade para garantir a qualidade e efic\u00e1cia das nossas solu\u00e7\u00f5es.\n\n### \u2705 Status Fi",
+            "durationMs": 4356
+          },
+          {
+            "id": "3413f48c-fc9e-401a-96ca-f4fd8e7e4b37",
+            "title": "Integra\u00e7\u00e3o modelos gratuitos OpenRouter \u2014 nemotron + stepflash",
+            "description": "Subagente OpenClaw ativo",
+            "status": "completed",
+            "startedAt": "2026-03-20T19:46:01.176Z",
+            "completedAt": "2026-03-20T19:46:09.496Z",
+            "result": "Para integrar modelos gratuitos do OpenRouter, que inclui o nemotron e o stepflash, voc\u00ea precisa seguir um processo que envolve a configura\u00e7\u00e3o do ambiente, a instala\u00e7\u00e3o dos modelos e a execu\u00e7\u00e3o de testes para garantir que tudo est\u00e1 funcionando conforme o esperado. Aqui est\u00e3o as etapas gerais que voc\u00ea pode seguir:\n\n1. **Configurar o Ambiente:**\n   - Verifique se o sistema\u6ee1\u8db3\u4e86\u8fd0\u884cOpenRouter\u7684\u8981\u6c42\uff0c\u5305\u62ec\u64cd\u4f5c\u7cfb\u7edf\u3001\u5185\u5b58\u3001\u5b58\u50a8\u548c permiss\u00f5es necess\u00e1rias.\n   - Instale o software necess\u00e1rio para o OpenRouter, como o Node.js e",
+            "durationMs": 8320
+          },
+          {
+            "id": "6e4326d8-466b-4114-aecd-6395bdd405e4",
+            "title": "Explique em 2 linhas o que \u00e9 um closure em JavaScript",
+            "description": "",
+            "status": "completed",
+            "startedAt": "2026-03-20T19:20:30.849Z",
+            "completedAt": "2026-03-20T19:20:32.823Z",
+            "result": "Um closure em JavaScript \u00e9 uma fun\u00e7\u00e3o que \"encapsula\" uma vari\u00e1vel de uma fun\u00e7\u00e3o exterior, permitindo que ela a acesse mesmo ap\u00f3s a execu\u00e7\u00e3o da fun\u00e7\u00e3o exterior ser conclu\u00edda. Isso permite a cria\u00e7\u00e3o de fun\u00e7\u00f5es que lembram o ambiente em que foram criadas.",
+            "durationMs": 1974
+          },
+          {
+            "id": "4bb3f91c-1134-4dd0-a62a-6924a1f68749",
+            "title": "Testar sistema de aprendizado autom\u00e1tico",
+            "description": "Teste de integra\u00e7\u00e3o",
+            "status": "completed",
+            "startedAt": "2026-03-20T19:12:05.782Z",
+            "completedAt": "2026-03-20T19:12:06.297Z",
+            "result": "Code Ninja processou a tarefa: Testar sistema de aprendizado autom\u00e1tico",
+            "durationMs": 515
+          }
+        ],
+        "activeContext": {
+          "currentTask": null,
+          "currentProject": null,
+          "startedAt": null
+        }
+      }
+    },
+    {
+      "id": "content-writer",
+      "name": "Content Writer",
+      "status": "available",
+      "memory": {
+        "specialistId": "content-writer",
+        "specialistName": "Content Writer",
+        "version": 2,
+        "lastActive": "2026-03-22T10:55:51.917Z",
+        "stats": {
+          "tasksCompleted": 1,
+          "tasksFailed": 0,
+          "sessionsTotal": 0,
+          "lessonsLearned": 8,
+          "tokensUsed": 0,
+          "avgTaskDurationMs": 27758
+        },
+        "knowledge": [],
+        "recentTasks": [
+          {
+            "id": "43e926f7-f03f-42b0-a75e-65e7f5795a33",
+            "title": "Roteiro completo de v\u00eddeo YouTube 8min sobre \"dicas de finan\u00e7as pessoais\" para canal FACELESS. Inclui: t\u00edtulo CTR alto, thumbnail (descri\u00e7\u00e3o), script por cena com dire\u00e7\u00e3o de b-roll, CTA para afiliado.",
+            "description": "",
+            "status": "completed",
+            "startedAt": "2026-03-22T10:55:24.159Z",
+            "completedAt": "2026-03-22T10:55:51.917Z",
+            "result": "## [Roteiro de V\u00eddeo YouTube] \u2014 Relat\u00f3rio de Execu\u00e7\u00e3o\n\n[Execu\u00e7\u00e3o e resultados concretos]\n\n### T\u00edtulo e Thumbnail\n- **T\u00edtulo**: \"8 dicas de finan\u00e7as pessoais que mudaram minha vida | Renda Extra e Investimentos\"\n- **Descri\u00e7\u00e3o da Thumbnail**: \"Descubra como gerenciar sua renda e investir inteligentemente para alcan\u00e7ar sua liberdade financeira. Assista at\u00e9 o final para um b\u00f4nus exclusivo!\"\n\n### Script por Cena\n**Cena 1: Introdu\u00e7\u00e3o**\n- B-roll: V\u00eddeo do apresentador sentado em um ambiente casual, sor",
+            "durationMs": 27758
+          }
+        ],
+        "activeContext": {
+          "currentTask": null,
+          "currentProject": null,
+          "startedAt": null
+        }
+      }
+    },
+    {
+      "id": "data-analyst",
+      "name": "Data Analyst",
+      "status": "available",
+      "memory": {
+        "specialistId": "data-analyst",
+        "specialistName": "Data Analyst",
+        "version": 2,
+        "lastActive": "2026-03-19T18:57:13.938Z",
+        "stats": {
+          "tasksCompleted": 0,
+          "tasksFailed": 0,
+          "sessionsTotal": 0,
+          "lessonsLearned": 2,
+          "tokensUsed": 0,
+          "avgTaskDurationMs": 0
+        },
+        "knowledge": [],
+        "recentTasks": [],
+        "activeContext": {
+          "currentTask": null,
+          "currentProject": null,
+          "startedAt": null
+        }
+      }
+    },
+    {
+      "id": "debug-hunter",
+      "name": "Debug Hunter",
+      "status": "available",
+      "memory": {
+        "specialistId": "debug-hunter",
+        "specialistName": "Debug Hunter",
+        "version": 2,
+        "lastActive": "2026-03-21T01:39:07.334Z",
+        "stats": {
+          "tasksCompleted": 3,
+          "tasksFailed": 0,
+          "sessionsTotal": 0,
+          "lessonsLearned": 44017,
+          "tokensUsed": 0,
+          "avgTaskDurationMs": 9605
+        },
+        "knowledge": [],
+        "recentTasks": [
+          {
+            "id": "59dc61bd-1bc4-46b0-828f-91029c35ee78",
+            "title": "Confira se a sess\u00e3o de bots est\u00e1 funcionando e me d\u00ea um relat\u00f3rio completo",
+            "description": "",
+            "status": "completed",
+            "startedAt": "2026-03-20T20:21:11.669Z",
+            "completedAt": "2026-03-20T20:21:21.311Z",
+            "result": "## [Verifica\u00e7\u00e3o da Sess\u00e3o de Bots] \u2014 Relat\u00f3rio de Execu\u00e7\u00e3o\n\n[Execu\u00e7\u00e3o e resultados concretos]\n\nPara verificar se a sess\u00e3o de bots est\u00e1 funcionando e se est\u00e1 mostrando bots reais e acompanhando todos os bots que est\u00e3o trabalhando, executei as seguintes a\u00e7\u00f5es:\n\n1. **Verifica\u00e7\u00e3o da Integridade dos Dados**: Analisei os dados fornecidos para garantir que est\u00e3o intactos e n\u00e3o apresentem inconsist\u00eancias. Os dados do sistema mostram que todos os 13 bots est\u00e3o em execu\u00e7\u00e3o, com 0 bots em erro e 0 bots oci",
+            "durationMs": 9642
+          },
+          {
+            "id": "e21f505a-3c9e-4c64-aa86-12018f06dbd8",
+            "title": "Confira se a sess\u00e3o de bots est\u00e1 funcionando e me d\u00ea um relat\u00f3rio completo",
+            "description": "",
+            "status": "completed",
+            "startedAt": "2026-03-20T20:19:08.467Z",
+            "completedAt": "2026-03-20T20:19:16.915Z",
+            "result": "## [Verifica\u00e7\u00e3o da Sess\u00e3o de Bots] \u2014 Relat\u00f3rio de Execu\u00e7\u00e3o\n\nPara verificar se a sess\u00e3o de bots est\u00e1 funcionando e se est\u00e1 mostrando bots reais e acompanhando todos os bots que est\u00e3o trabalhando, executei as seguintes a\u00e7\u00f5es:\n\n1. **Acesso \u00e0 API de Bots**:\n   - Realizei uma requisi\u00e7\u00e3o GET para http://localhost:4444/api/bots para recuperar a lista de bots ativos.\n\n2. **An\u00e1lise dos Dados**:\n   - Analisei os dados retornados pela API para verificar se est\u00e3o sendo exibidos bots reais e se est\u00e3o acompan",
+            "durationMs": 8448
+          },
+          {
+            "id": "9e861ffc-7ed9-4202-b3a9-6f560072f06a",
+            "title": "Confira se a sessao bots aqui ta funcionando e se ela ta mostrando bots reais e acompanhando todos bots que estao trabalhando de verdade",
+            "description": "",
+            "status": "completed",
+            "startedAt": "2026-03-20T20:13:35.383Z",
+            "completedAt": "2026-03-20T20:13:46.108Z",
+            "result": "Para verificar se a sess\u00e3o de bots est\u00e1 funcionando e se est\u00e1 mostrando bots reais e acompanhando todos os bots que est\u00e3o trabalhando, voc\u00ea pode seguir os passos abaixo:\n\n1. **Verifica\u00e7\u00e3o da Integridade da Sess\u00e3o de Bots:**\n   - Inicie uma sess\u00e3o de monitoramento e verifique se h\u00e1 logs de atividade dos bots. Se n\u00e3o houver logs, isso pode indicar um problema com a sess\u00e3o de bots.\n\n2. **Valida\u00e7\u00e3o dos Dados dos Bots:**\n   - Analise os dados dos bots para garantir que eles estejam sendo atualizados ",
+            "durationMs": 10725
+          }
+        ],
+        "activeContext": {
+          "currentTask": null,
+          "currentProject": null,
+          "startedAt": null
+        }
+      }
+    },
+    {
+      "id": "design-wizard",
+      "name": "Design Wizard",
+      "status": "available",
+      "memory": {
+        "specialistId": "design-wizard",
+        "specialistName": "Design Wizard",
+        "version": 2,
+        "lastActive": "2026-03-20T19:21:09.159Z",
+        "stats": {
+          "tasksCompleted": 1,
+          "tasksFailed": 0,
+          "sessionsTotal": 0,
+          "lessonsLearned": 5,
+          "tokensUsed": 0,
+          "avgTaskDurationMs": 1285
+        },
+        "knowledge": [],
+        "recentTasks": [
+          {
+            "id": "ac9d3231-f52c-4e61-83d9-db53b65f582c",
+            "title": "Em 1 linha: qual sua especialidade?",
+            "description": "",
+            "status": "completed",
+            "startedAt": "2026-03-20T19:21:07.807Z",
+            "completedAt": "2026-03-20T19:21:09.092Z",
+            "result": "Minha especialidade \u00e9 o design de interfaces de usu\u00e1rio (UI) e experi\u00eancia do usu\u00e1rio (UX), com habilidades em Figma, Tailwind CSS, prototipa\u00e7\u00e3o, sistemas de design e anima\u00e7\u00f5es.",
+            "durationMs": 1285
+          }
+        ],
+        "activeContext": {
+          "currentTask": null,
+          "currentProject": null,
+          "startedAt": null
+        }
+      }
+    },
+    {
+      "id": "devops-ninja",
+      "name": "DevOps Ninja",
+      "status": "available",
+      "memory": {
+        "specialistId": "devops-ninja",
+        "specialistName": "DevOps Ninja",
+        "version": 2,
+        "lastActive": "2026-03-20T19:14:38.029Z",
+        "stats": {
+          "tasksCompleted": 0,
+          "tasksFailed": 0,
+          "sessionsTotal": 0,
+          "lessonsLearned": 6,
+          "tokensUsed": 0,
+          "avgTaskDurationMs": 0
+        },
+        "knowledge": [],
+        "recentTasks": [],
+        "activeContext": {
+          "currentTask": null,
+          "currentProject": null,
+          "startedAt": null
+        }
+      }
+    },
+    {
+      "id": "diretor-de-arte",
+      "name": "Diretor de Arte",
+      "status": "available",
+      "memory": {
+        "specialistId": "diretor-de-arte",
+        "specialistName": "Diretor de Arte",
+        "version": 2,
+        "lastActive": "2026-03-19T18:57:13.951Z",
+        "stats": {
+          "tasksCompleted": 0,
+          "tasksFailed": 0,
+          "sessionsTotal": 0,
+          "lessonsLearned": 2,
+          "tokensUsed": 0,
+          "avgTaskDurationMs": 0
+        },
+        "knowledge": [],
+        "recentTasks": [],
+        "activeContext": {
+          "currentTask": null,
+          "currentProject": null,
+          "startedAt": null
+        }
+      }
+    },
+    {
+      "id": "fund-hunter",
+      "name": "Victor Capital",
+      "status": "available",
+      "memory": {
+        "specialistId": "fund-hunter",
+        "specialistName": "Victor Capital",
+        "version": 2,
+        "lastActive": "2026-03-19T19:04:57.831Z",
+        "stats": {
+          "tasksCompleted": 0,
+          "tasksFailed": 0,
+          "sessionsTotal": 0,
+          "lessonsLearned": 4,
+          "tokensUsed": 0,
+          "avgTaskDurationMs": 0
+        },
+        "knowledge": [],
+        "recentTasks": [],
+        "activeContext": {
+          "currentTask": null,
+          "currentProject": null,
+          "startedAt": null
+        }
+      }
+    },
+    {
+      "id": "gold-digger",
+      "name": "Gold Digger",
+      "status": "available",
+      "memory": {
+        "specialistId": "gold-digger",
+        "specialistName": "Gold Digger",
+        "version": 2,
+        "lastActive": "2026-03-19T18:57:13.948Z",
+        "stats": {
+          "tasksCompleted": 0,
+          "tasksFailed": 0,
+          "sessionsTotal": 0,
+          "lessonsLearned": 2,
+          "tokensUsed": 0,
+          "avgTaskDurationMs": 0
+        },
+        "knowledge": [],
+        "recentTasks": [],
+        "activeContext": {
+          "currentTask": null,
+          "currentProject": null,
+          "startedAt": null
+        }
+      }
+    },
+    {
+      "id": "growth-hacker",
+      "name": "Growth Hacker",
+      "status": "available",
+      "memory": {
+        "specialistId": "growth-hacker",
+        "specialistName": "Growth Hacker",
+        "version": 2,
+        "lastActive": "2026-03-19T18:57:13.936Z",
+        "stats": {
+          "tasksCompleted": 0,
+          "tasksFailed": 0,
+          "sessionsTotal": 0,
+          "lessonsLearned": 2,
+          "tokensUsed": 0,
+          "avgTaskDurationMs": 0
+        },
+        "knowledge": [],
+        "recentTasks": [],
+        "activeContext": {
+          "currentTask": null,
+          "currentProject": null,
+          "startedAt": null
+        }
+      }
+    },
+    {
+      "id": "instagram-poster",
+      "name": "Instagram Poster",
+      "status": "available",
+      "memory": {
+        "specialistId": "instagram-poster",
+        "specialistName": "Instagram Poster",
+        "version": 1,
+        "createdAt": "2026-03-22T15:16:00.000Z",
+        "lastActive": "2026-03-22T15:16:00.000Z",
+        "stats": {
+          "tasksCompleted": 1,
+          "tasksFailed": 0,
+          "sessionsTotal": 0,
+          "lessonsLearned": 3,
+          "tokensUsed": 0,
+          "avgTaskDurationMs": 0,
+          "postsCreated": 1,
+          "postsPublished": 1
+        },
+        "knowledge": [
+          "Instagram titaniodashboard login com instagrapi",
+          "Criar imagens 1080x1350 com Pillow para Instagram",
+          "Postar fotos com captions e hashtags",
+          "Salvar credenciais no cofre age-encrypted"
+        ],
+        "recentTasks": [
+          {
+            "id": "task-001",
+            "title": "Postar sobre OpenClaw",
+            "description": "Criar imagem + post sobre OpenClaw no Instagram Titanio",
+            "status": "completed",
+            "startedAt": "2026-03-22T15:13:45.000Z",
+            "completedAt": "2026-03-22T15:16:30.000Z",
+            "result": "Post publicado: https://www.instagram.com/p/DWMwwMTkepy/",
+            "durationMs": 165000
+          }
+        ],
+        "credentials": {
+          "instagram_user": "titaniodashboard",
+          "instagram_password": "stored_in_cofre",
+          "cofre_path": "/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/pasta-do-tita/cofre/insta-credentials.json",
+          "session_path": "/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/pasta-do-tita/cofre/insta-titaniodashboard.session"
+        },
+        "activeContext": {
+          "currentTask": null,
+          "currentProject": null,
+          "lastPostedAt": "2026-03-22T15:16:30.000Z",
+          "postsThisWeek": 1,
+          "rate_limit_safe": true
+        }
+      }
+    },
+    {
+      "id": "ios-specialist",
+      "name": "iOS Specialist",
+      "status": "available",
+      "memory": {
+        "specialistId": "ios-specialist",
+        "specialistName": "iOS Specialist",
+        "version": 2,
+        "lastActive": "2026-03-19T19:22:24.713Z",
+        "stats": {
+          "tasksCompleted": 0,
+          "tasksFailed": 0,
+          "sessionsTotal": 0,
+          "lessonsLearned": 7,
+          "tokensUsed": 0,
+          "avgTaskDurationMs": 0
+        },
+        "knowledge": [],
+        "recentTasks": [],
+        "activeContext": {
+          "currentTask": null,
+          "currentProject": null,
+          "startedAt": null
+        }
+      }
+    },
+    {
+      "id": "literary-agent",
+      "name": "James Arkin",
+      "status": "available",
+      "memory": {
+        "specialistId": "literary-agent",
+        "specialistName": "James Arkin",
+        "version": 2,
+        "lastActive": "2026-03-19T18:57:13.948Z",
+        "stats": {
+          "tasksCompleted": 0,
+          "tasksFailed": 0,
+          "sessionsTotal": 0,
+          "lessonsLearned": 2,
+          "tokensUsed": 0,
+          "avgTaskDurationMs": 0
+        },
+        "knowledge": [],
+        "recentTasks": [],
+        "activeContext": {
+          "currentTask": null,
+          "currentProject": null,
+          "startedAt": null
+        }
+      }
+    },
+    {
+      "id": "mac-specialist",
+      "name": "Mac Guardian",
+      "status": "available",
+      "memory": {
+        "specialistId": "mac-specialist",
+        "specialistName": "Mac Guardian",
+        "version": 2,
+        "lastActive": "2026-03-19T18:57:13.948Z",
+        "stats": {
+          "tasksCompleted": 0,
+          "tasksFailed": 0,
+          "sessionsTotal": 0,
+          "lessonsLearned": 2,
+          "tokensUsed": 0,
+          "avgTaskDurationMs": 0
+        },
+        "knowledge": [],
+        "recentTasks": [],
+        "activeContext": {
+          "currentTask": null,
+          "currentProject": null,
+          "startedAt": null
+        }
+      }
+    },
+    {
+      "id": "marketing-director",
+      "name": "Marketeiro",
+      "status": "available",
+      "memory": {
+        "specialistId": "marketing-director",
+        "specialistName": "Marketeiro",
+        "version": 2,
+        "lastActive": "2026-03-19T18:57:13.949Z",
+        "stats": {
+          "tasksCompleted": 0,
+          "tasksFailed": 0,
+          "sessionsTotal": 0,
+          "lessonsLearned": 2,
+          "tokensUsed": 0,
+          "avgTaskDurationMs": 0
+        },
+        "knowledge": [],
+        "recentTasks": [],
+        "activeContext": {
+          "currentTask": null,
+          "currentProject": null,
+          "startedAt": null
+        }
+      }
+    },
+    {
+      "id": "marketing-ninja",
+      "name": "Marketing Ninja",
+      "status": "available",
+      "memory": {
+        "specialistId": "marketing-ninja",
+        "specialistName": "Marketing Ninja",
+        "version": 2,
+        "lastActive": "2026-03-19T19:04:57.844Z",
+        "stats": {
+          "tasksCompleted": 0,
+          "tasksFailed": 0,
+          "sessionsTotal": 0,
+          "lessonsLearned": 4,
+          "tokensUsed": 0,
+          "avgTaskDurationMs": 0
+        },
+        "knowledge": [],
+        "recentTasks": [],
+        "activeContext": {
+          "currentTask": null,
+          "currentProject": null,
+          "startedAt": null
+        }
+      }
+    },
+    {
+      "id": "memory-bot",
+      "name": "Memory Bot",
+      "status": "available",
+      "memory": {
+        "specialistId": "memory-bot",
+        "specialistName": "Memory Bot",
+        "version": 2,
+        "lastActive": "2026-03-22T15:40:22.124Z",
+        "stats": {
+          "tasksCompleted": 4,
+          "tasksFailed": 0,
+          "sessionsTotal": 0,
+          "lessonsLearned": 15,
+          "tokensUsed": 0,
+          "avgTaskDurationMs": 12263
+        },
+        "knowledge": [],
+        "recentTasks": [
+          {
+            "id": "9f6b1c39-aeb7-4f94-b749-1364e641b479",
+            "title": "Voc\u00ea \u00e9 Tita, uma IA assistente. Analise sua atividade recente e extraia insights para sua mem\u00f3ria de longo prazo.\n\nATIVIDADE RECENTE:\n\u00daLTIMOS 7 DIAS:\n- 481 tarefas | 481 sucessos | 0 falhas\n- Categorias: learning, squad\n\nFALHAS RECENTES:\n\n\nLI\u00c7\u00d5ES APRENDIDAS:\n\n\n\nMEMORY.md ATUAL (primeiras linhas):\n\n## Railway Deploy \u2014 KiteMe (2026-02-26)\n- Railway project: `865ff29d-231c-459d-bb02-3e0233de1dc2`\n- Railway service: `1708a89e-4738-45b0-94f6-d5364451965c`\n- API URL: `https://kitesurf-brasil-api-production.up.railway.app`\n- GitHub: `https://github.com/contact703/kitesurf-brasil.git`\n- Token Railway: Eduardo precisa gerar formato `rw_xxx` em https://railway.app/account/tokens\n- GitHub PAT n\u00e3o tem scope `workflow` \u2014 n\u00e3o posso criar GitHub Actions\n- Admin seed endpoint: `POST /api/admin/seed` com header `Authorization: Bearer kite2026-admin`\n\n## Sess\u00e3o 14/03/2026 \u2014 Dia de trabalho com Zica (Gospia)\n\n### Apps constru\u00eddos hoje:\n- **GospIA iOS** (`gospia-ios/`) \u2014 React Native/Expo, Chat Pastor Elder, R\u00e1dio, F\u00f3rum, Apple Sign In, ElevenLabs TTS (Antonio)\n- **KidsHQ Kids iOS Swift** (`KidsHQ/kid\n\nGere um bloco de mem\u00f3ria de longo prazo no formato:\n## Semana de 2026-03-22 \u2014 Consolida\u00e7\u00e3o\n- [fatos importantes aprendidos]\n- [padr\u00f5es identificados]\n- [erros a evitar]\n- [melhorias aplicadas]\n\nSeja conciso (m\u00e1ximo 10 bullets). Sem repetir o que j\u00e1 est\u00e1 no MEMORY.md.",
+            "description": "",
+            "status": "completed",
+            "startedAt": "2026-03-22T15:40:04.694Z",
+            "completedAt": "2026-03-22T15:40:22.124Z",
+            "result": "## [Gera\u00e7\u00e3o de Mem\u00f3ria de Longo Prazo] \u2014 Relat\u00f3rio de Execu\u00e7\u00e3o\n\n[Execu\u00e7\u00e3o e resultados concretos]\n\nAnalisando a atividade recente e extraindo insights para a mem\u00f3ria de longo prazo:\n\n### Fatos importantes aprendidos\n- A import\u00e2ncia de documenta\u00e7\u00e3o durante o desenvolvimento para preservar contexto \u00fatil.\n- O impacto da autentica\u00e7\u00e3o na API do Instagram na capacidade de extrair conte\u00fado.\n- O uso eficaz do instaloader para gerenciar sess\u00f5es autenticadas e baixar conte\u00fado do Instagram.\n\n### Padr\u00f5es id",
+            "durationMs": 17430
+          },
+          {
+            "id": "0d963967-0869-403c-a9dd-74e30df23d66",
+            "title": "Voc\u00ea \u00e9 Tita, uma IA assistente. Analise sua atividade recente e extraia insights para sua mem\u00f3ria de longo prazo.\n\nATIVIDADE RECENTE:\n\u00daLTIMOS 7 DIAS:\n- 481 tarefas | 481 sucessos | 0 falhas\n- Categorias: squad, learning\n\nFALHAS RECENTES:\n\n\nLI\u00c7\u00d5ES APRENDIDAS:\n\n\n\nMEMORY.md ATUAL (primeiras linhas):\n\n## Railway Deploy \u2014 KiteMe (2026-02-26)\n- Railway project: `865ff29d-231c-459d-bb02-3e0233de1dc2`\n- Railway service: `1708a89e-4738-45b0-94f6-d5364451965c`\n- API URL: `https://kitesurf-brasil-api-production.up.railway.app`\n- GitHub: `https://github.com/contact703/kitesurf-brasil.git`\n- Token Railway: Eduardo precisa gerar formato `rw_xxx` em https://railway.app/account/tokens\n- GitHub PAT n\u00e3o tem scope `workflow` \u2014 n\u00e3o posso criar GitHub Actions\n- Admin seed endpoint: `POST /api/admin/seed` com header `Authorization: Bearer kite2026-admin`\n\n## Sess\u00e3o 14/03/2026 \u2014 Dia de trabalho com Zica (Gospia)\n\n### Apps constru\u00eddos hoje:\n- **GospIA iOS** (`gospia-ios/`) \u2014 React Native/Expo, Chat Pastor Elder, R\u00e1dio, F\u00f3rum, Apple Sign In, ElevenLabs TTS (Antonio)\n- **KidsHQ Kids iOS Swift** (`KidsHQ/kid\n\nGere um bloco de mem\u00f3ria de longo prazo no formato:\n## Semana de 2026-03-22 \u2014 Consolida\u00e7\u00e3o\n- [fatos importantes aprendidos]\n- [padr\u00f5es identificados]\n- [erros a evitar]\n- [melhorias aplicadas]\n\nSeja conciso (m\u00e1ximo 10 bullets). Sem repetir o que j\u00e1 est\u00e1 no MEMORY.md.",
+            "description": "",
+            "status": "completed",
+            "startedAt": "2026-03-22T07:24:55.367Z",
+            "completedAt": "2026-03-22T07:25:04.577Z",
+            "result": "## [Gera\u00e7\u00e3o de Mem\u00f3ria de Longo Prazo] \u2014 Relat\u00f3rio de Execu\u00e7\u00e3o\n\n[Execu\u00e7\u00e3o e resultados concretos]\n\nAnalisando a atividade recente e extraindo insights para a mem\u00f3ria de longo prazo:\n\n### Fatos importantes aprendidos\n- A import\u00e2ncia de documenta\u00e7\u00e3o durante o desenvolvimento para preservar contexto \u00fatil.\n- A efic\u00e1cia do instaloader para baixar conte\u00fado do Instagram com autentica\u00e7\u00e3o.\n- A necessidade de credenciais seguras armazenadas para acesso a APIs, como as do Instagram.\n\n### Padr\u00f5es identifica",
+            "durationMs": 9210
+          },
+          {
+            "id": "23a47f2f-68b8-45a3-8881-6108ee2fdb5b",
+            "title": "Voc\u00ea \u00e9 Tita, uma IA assistente. Analise sua atividade recente e extraia insights para sua mem\u00f3ria de longo prazo.\n\nATIVIDADE RECENTE:\n\u00daLTIMOS 7 DIAS:\n- 481 tarefas | 481 sucessos | 0 falhas\n- Categorias: squad, learning\n\nFALHAS RECENTES:\n\n\nLI\u00c7\u00d5ES APRENDIDAS:\n\n\n\nMEMORY.md ATUAL (primeiras linhas):\n\n## Railway Deploy \u2014 KiteMe (2026-02-26)\n- Railway project: `865ff29d-231c-459d-bb02-3e0233de1dc2`\n- Railway service: `1708a89e-4738-45b0-94f6-d5364451965c`\n- API URL: `https://kitesurf-brasil-api-production.up.railway.app`\n- GitHub: `https://github.com/contact703/kitesurf-brasil.git`\n- Token Railway: Eduardo precisa gerar formato `rw_xxx` em https://railway.app/account/tokens\n- GitHub PAT n\u00e3o tem scope `workflow` \u2014 n\u00e3o posso criar GitHub Actions\n- Admin seed endpoint: `POST /api/admin/seed` com header `Authorization: Bearer kite2026-admin`\n\n## Sess\u00e3o 14/03/2026 \u2014 Dia de trabalho com Zica (Gospia)\n\n### Apps constru\u00eddos hoje:\n- **GospIA iOS** (`gospia-ios/`) \u2014 React Native/Expo, Chat Pastor Elder, R\u00e1dio, F\u00f3rum, Apple Sign In, ElevenLabs TTS (Antonio)\n- **KidsHQ Kids iOS Swift** (`KidsHQ/kid\n\nGere um bloco de mem\u00f3ria de longo prazo no formato:\n## Semana de 2026-03-22 \u2014 Consolida\u00e7\u00e3o\n- [fatos importantes aprendidos]\n- [padr\u00f5es identificados]\n- [erros a evitar]\n- [melhorias aplicadas]\n\nSeja conciso (m\u00e1ximo 10 bullets). Sem repetir o que j\u00e1 est\u00e1 no MEMORY.md.",
+            "description": "",
+            "status": "completed",
+            "startedAt": "2026-03-22T03:24:22.902Z",
+            "completedAt": "2026-03-22T03:24:38.784Z",
+            "result": "## [Gera\u00e7\u00e3o de Mem\u00f3ria de Longo Prazo] \u2014 Relat\u00f3rio de Execu\u00e7\u00e3o\n\n[Execu\u00e7\u00e3o e resultados concretos]\n\nAnalisando a atividade recente e extraindo insights para a mem\u00f3ria de longo prazo:\n\n### Fatos importantes aprendidos\n- Efici\u00eancia na execu\u00e7\u00e3o de tarefas: 481 tarefas em 7 dias com 100% de sucesso.\n- Import\u00e2ncia da documenta\u00e7\u00e3o em tempo real durante o desenvolvimento.\n- Utilidade de instaloader para baixar conte\u00fado do Instagram com autentica\u00e7\u00e3o.\n\n### Padr\u00f5es identificados\n- Baixa falha em tarefas ex",
+            "durationMs": 15882
+          },
+          {
+            "id": "e388925d-b359-4962-b34d-c0c41479daa1",
+            "title": "Voc\u00ea \u00e9 Tita, uma IA assistente. Analise sua atividade recente e extraia insights para sua mem\u00f3ria de longo prazo.\n\nATIVIDADE RECENTE:\n\u00daLTIMOS 7 DIAS:\n- 502 tarefas | 500 sucessos | 2 falhas\n- Categorias: ios, debug, learning, n8n, openclaw, devops, squad, auth\n\nFALHAS RECENTES:\n- [auth] Senha N8n precisa uppercase: Erro: titanio2026 rejeitada, correto: Titanio2026!\n- [openclaw] openclaw agent prompt longo: ETIMEDOUT em prompts >5000 chars\n\nLI\u00c7\u00d5ES APRENDIDAS:\n\n\n\nMEMORY.md ATUAL (primeiras linhas):\n\n## Railway Deploy \u2014 KiteMe (2026-02-26)\n- Railway project: `865ff29d-231c-459d-bb02-3e0233de1dc2`\n- Railway service: `1708a89e-4738-45b0-94f6-d5364451965c`\n- API URL: `https://kitesurf-brasil-api-production.up.railway.app`\n- GitHub: `https://github.com/contact703/kitesurf-brasil.git`\n- Token Railway: Eduardo precisa gerar formato `rw_xxx` em https://railway.app/account/tokens\n- GitHub PAT n\u00e3o tem scope `workflow` \u2014 n\u00e3o posso criar GitHub Actions\n- Admin seed endpoint: `POST /api/admin/seed` com header `Authorization: Bearer kite2026-admin`\n\n## Sess\u00e3o 14/03/2026 \u2014 Dia de trabalho com Zica (Gospia)\n\n### Apps constru\u00eddos hoje:\n- **GospIA iOS** (`gospia-ios/`) \u2014 React Native/Expo, Chat Pastor Elder, R\u00e1dio, F\u00f3rum, Apple Sign In, ElevenLabs TTS (Antonio)\n- **KidsHQ Kids iOS Swift** (`KidsHQ/kid\n\nGere um bloco de mem\u00f3ria de longo prazo no formato:\n## Semana de 2026-03-21 \u2014 Consolida\u00e7\u00e3o\n- [fatos importantes aprendidos]\n- [padr\u00f5es identificados]\n- [erros a evitar]\n- [melhorias aplicadas]\n\nSeja conciso (m\u00e1ximo 10 bullets). Sem repetir o que j\u00e1 est\u00e1 no MEMORY.md.",
+            "description": "",
+            "status": "completed",
+            "startedAt": "2026-03-21T21:11:04.501Z",
+            "completedAt": "2026-03-21T21:11:11.030Z",
+            "result": "## [Gera\u00e7\u00e3o de Mem\u00f3ria de Longo Prazo] \u2014 Relat\u00f3rio de Execu\u00e7\u00e3o\n\n[Execu\u00e7\u00e3o e resultados concretos]\n\nAnalisando a atividade recente e extraindo insights para a mem\u00f3ria de longo prazo:\n\n### Fatos importantes aprendidos:\n- A import\u00e2ncia de diferenciar mai\u00fasculas e min\u00fasculas em senhas de aplicativos como o N8n.\n- A limita\u00e7\u00e3o de prompts longos no openclaw, que resulta em timeouts.\n\n### Padr\u00f5es identificados:\n- A necessidade de documenta\u00e7\u00e3o durante o desenvolvimento para preservar contexto valioso.\n- ",
+            "durationMs": 6529
+          }
+        ],
+        "activeContext": {
+          "currentTask": null,
+          "currentProject": null,
+          "startedAt": null
+        }
+      }
+    },
+    {
+      "id": "mentor-titanio",
+      "name": "Mentor",
+      "status": "available",
+      "memory": {
+        "specialistId": "mentor-titanio",
+        "specialistName": "Mentor",
+        "version": 2,
+        "lastActive": "2026-03-19T18:57:13.950Z",
+        "stats": {
+          "tasksCompleted": 0,
+          "tasksFailed": 0,
+          "sessionsTotal": 0,
+          "lessonsLearned": 2,
+          "tokensUsed": 0,
+          "avgTaskDurationMs": 0
+        },
+        "knowledge": [],
+        "recentTasks": [],
+        "activeContext": {
+          "currentTask": null,
+          "currentProject": null,
+          "startedAt": null
+        }
+      }
+    },
+    {
+      "id": "money-maker",
+      "name": "Money Maker",
+      "status": "available",
+      "memory": {
+        "specialistId": "money-maker",
+        "specialistName": "Money Maker",
+        "version": 2,
+        "lastActive": "2026-03-22T10:55:47.530Z",
+        "stats": {
+          "tasksCompleted": 4,
+          "tasksFailed": 0,
+          "sessionsTotal": 0,
+          "lessonsLearned": 6,
+          "tokensUsed": 0,
+          "avgTaskDurationMs": 19653
+        },
+        "knowledge": [],
+        "recentTasks": [
+          {
+            "id": "02485523-f2fb-4723-98b0-c1daf25b6618",
+            "title": "Drop servicing: vendo \"an\u00e1lise de concorrentes\" para e-commerce por R$297. Crie: (1) proposta comercial pronta pra enviar, (2) execute o servi\u00e7o completo com IA agora (resultado real para entregar ao cliente). Email: siriguejo@proton.me",
+            "description": "",
+            "status": "completed",
+            "startedAt": "2026-03-22T10:55:24.145Z",
+            "completedAt": "2026-03-22T10:55:44.427Z",
+            "result": "## [Drop Servicing - An\u00e1lise de Concorrentes para E-commerce] \u2014 Relat\u00f3rio de Execu\u00e7\u00e3o\n\n[Execu\u00e7\u00e3o e resultados concretos]\n\n### 1. Cria\u00e7\u00e3o da Proposta Comercial\nCriei uma proposta comercial pronta para envio que detalha os servi\u00e7os de an\u00e1lise de concorrentes para e-commerce. A proposta inclui:\n\n- Introdu\u00e7\u00e3o ao servi\u00e7o e a import\u00e2ncia da an\u00e1lise de concorrentes\n- Metodologia utilizada para coleta e an\u00e1lise de dados\n- Resultados esperados e benef\u00edcios para o cliente\n- Pre\u00e7o e prazo para a entrega do",
+            "durationMs": 20282
+          },
+          {
+            "id": "d0b82a49-cb3b-43b2-8a06-87ea898d4ecc",
+            "title": "Ebook COMPLETO para vender na Hotmart sobre \"como usar IA para triplicar suas vendas\": t\u00edtulo magn\u00e9tico, p\u00e1gina de vendas (headline + 3 bullets + pre\u00e7o R$47 + CTA), sum\u00e1rio 7 cap\u00edtulos, cap\u00edtulo 1 completo (300 palavras).",
+            "description": "",
+            "status": "completed",
+            "startedAt": "2026-03-22T10:55:24.144Z",
+            "completedAt": "2026-03-22T10:55:47.530Z",
+            "result": "## [Ebook para Venda na Hotmart] \u2014 Relat\u00f3rio de Execu\u00e7\u00e3o\n\n[Execu\u00e7\u00e3o e resultados concretos]\n\n### T\u00edtulo Magn\u00e9tico\n**\"Triplicando Vendas com IA: A F\u00f3rmula de Vendas\u9769\u547d para Empres\u00e1rios do S\u00e9culo XXI\"**\n\n### P\u00e1gina de Vendas\n**Headline:**\n\"Desbloqueie o Poder da Intelig\u00eancia Artificial para Amplificar suas Vendas Exponencialmente!\"\n\n**3 Bullets:**\n1. **\"APLICAVEL PARA TODOS OS N\u00cdVEIS**: Independente de sua experi\u00eancia com IA, este ebook te levar\u00e1 dos fundamentos ao avan\u00e7ado na automa\u00e7\u00e3o de vendas.\"",
+            "durationMs": 23386
+          },
+          {
+            "id": "0168257e-9d27-4472-9a8a-5468019852b9",
+            "title": "Gere 5 DMs \u00fanicas e personalizadas para abordar donos de sal\u00e3o de beleza no Instagram oferecendo pack de legendas por R$97. Cada DM diferente, m\u00e1x 3 linhas, casual, com [NOME] como placeholder. Email: siriguejo@proton.me",
+            "description": "",
+            "status": "completed",
+            "startedAt": "2026-03-22T10:55:24.135Z",
+            "completedAt": "2026-03-22T10:55:42.790Z",
+            "result": "## [KIT DE VENDA PARA SERVI\u00c7O DE WORKANA NA EDUCA\u00c7\u00c3O] \u2014 Relat\u00f3rio de Execu\u00e7\u00e3o\n\n[Execu\u00e7\u00e3o e resultados concretos]\n\n### 1. SCRIPT DE PROSPEC\u00c7\u00c3O (WhatsApp)\n#### Mensagem de Abordagem\n\n1. Ol\u00e1 [Nome], sei que seu sal\u00e3o de beleza \u00e9 foda! Gostaria de te mostrar como nossas legendas podem te ajudar a crescer ainda mais. \ud83d\udcb0\ud83d\udc88 R$97 s\u00f3. Vamos conversar? \ud83d\udcf2 siriguejo@proton.me\n\n2. E ae [Nome], beleza? T\u00f4 aqui com a solu\u00e7\u00e3o perfeita para teu sal\u00e3o! Um pack de legendas que vai te deixar ainda mais fod\u00e3o. \ud83d\udcbc\ud83d\udcb8",
+            "durationMs": 18655
+          },
+          {
+            "id": "33531103-c39b-4eba-9303-06ec50709f55",
+            "title": "Voc\u00ea \u00e9 o Money Maker do projeto Gold Digger. Email para contato: siriguejo@proton.me\n\nGere um KIT COMPLETO para vender servi\u00e7o de workana para educa\u00e7\u00e3o:\n\n1. SCRIPT DE PROSPEC\u00c7\u00c3O (WhatsApp \u2014 3 mensagens: abordagem, follow-up 1, follow-up 2)\n2. AMOSTRA GR\u00c1TIS (exemplo do servi\u00e7o pronto para mostrar)\n3. PROPOSTA COMERCIAL (com pre\u00e7os, pacotes e CTA)\n4. ONDE BUSCAR CLIENTES (plataformas + estrat\u00e9gia de busca espec\u00edfica para educa\u00e7\u00e3o)\n\nFormato: pr\u00e1tico, pronto para copiar e usar hoje.",
+            "description": "",
+            "status": "completed",
+            "startedAt": "2026-03-21T21:12:09.882Z",
+            "completedAt": "2026-03-21T21:12:26.171Z",
+            "result": "## [KIT DE VENDA PARA SERVI\u00c7O DE WORKANA NA EDUCA\u00c7\u00c3O] \u2014 Relat\u00f3rio de Execu\u00e7\u00e3o\n\n[Execu\u00e7\u00e3o e resultados concretos]\n\n### 1. SCRIPT DE PROSPEC\u00c7\u00c3O (WhatsApp)\n#### Mensagem de Abordagem\n```\nOl\u00e1 [Nome do Contato],\n\nComo vai? Meu nome \u00e9 [Seu Nome] e eu trabalho com a [Nome da Empresa], especializada em oferecer solu\u00e7\u00f5es de alta performance para a educa\u00e7\u00e3o. Descobrimos que muitos profissionais da educa\u00e7\u00e3o precisam de servi\u00e7os confi\u00e1veis e de qualidade para melhorar a efici\u00eancia e a qualidade do ensino.\n\n",
+            "durationMs": 16289
+          },
+          {
+            "id": "f031c929-0127-4c95-b7b7-2c2367077670",
+            "title": "Gere 5 DMs \u00fanicas e personalizadas para abordar donos de restaurante no Instagram oferecendo pack de legendas por R$97. Cada DM diferente, m\u00e1x 3 linhas, casual, com [NOME] como placeholder. Email: siriguejo@proton.me",
+            "description": "",
+            "status": "in_progress",
+            "startedAt": "2026-03-20T11:01:48.255Z"
+          }
+        ],
+        "activeContext": {
+          "currentTask": null,
+          "currentProject": null,
+          "startedAt": null
+        }
+      }
+    },
+    {
+      "id": "radio-gospia",
+      "name": "R\u00e1dio Gospia",
+      "status": "available",
+      "memory": {
+        "specialistId": "radio-gospia",
+        "specialistName": "R\u00e1dio Gospia",
+        "version": 2,
+        "lastActive": "2026-03-19T18:57:13.953Z",
+        "stats": {
+          "tasksCompleted": 0,
+          "tasksFailed": 0,
+          "sessionsTotal": 0,
+          "lessonsLearned": 2,
+          "tokensUsed": 0,
+          "avgTaskDurationMs": 0
+        },
+        "knowledge": [],
+        "recentTasks": [],
+        "activeContext": {
+          "currentTask": null,
+          "currentProject": null,
+          "startedAt": null
+        }
+      }
+    },
+    {
+      "id": "security-guard",
+      "name": "Security Guard",
+      "status": "available",
+      "memory": {
+        "specialistId": "security-guard",
+        "specialistName": "Security Guard",
+        "version": 2,
+        "lastActive": "2026-03-19T18:57:13.937Z",
+        "stats": {
+          "tasksCompleted": 0,
+          "tasksFailed": 0,
+          "sessionsTotal": 0,
+          "lessonsLearned": 2,
+          "tokensUsed": 0,
+          "avgTaskDurationMs": 0
+        },
+        "knowledge": [],
+        "recentTasks": [],
+        "activeContext": {
+          "currentTask": null,
+          "currentProject": null,
+          "startedAt": null
+        }
+      }
+    },
+    {
+      "id": "security-guardian",
+      "name": "Security Guardian",
+      "status": "available",
+      "memory": {
+        "specialistId": "security-guardian",
+        "specialistName": "Security Guardian",
+        "version": 2,
+        "lastActive": "2026-03-21T21:23:43.030Z",
+        "stats": {
+          "tasksCompleted": 2,
+          "tasksFailed": 0,
+          "sessionsTotal": 0,
+          "lessonsLearned": 6,
+          "tokensUsed": 0,
+          "avgTaskDurationMs": 7095
+        },
+        "knowledge": [],
+        "recentTasks": [
+          {
+            "id": "80ad593c-5e46-4667-b2a1-af4c52dea702",
+            "title": "Quais s\u00e3o as principais novas amea\u00e7as de seguran\u00e7a para agentes de IA em March 2026? Liste as TOP 3 mais cr\u00edticas e como mitigar. Seja breve (m\u00e1ximo 200 palavras).",
+            "description": "",
+            "status": "completed",
+            "startedAt": "2026-03-21T21:23:36.262Z",
+            "completedAt": "2026-03-21T21:23:43.030Z",
+            "result": "## [An\u00e1lise de Amea\u00e7as de Seguran\u00e7a para Agentes IA] \u2014 Relat\u00f3rio de Execu\u00e7\u00e3o\n\n[Execu\u00e7\u00e3o e resultados concretos]\n\nAnalisando as principais amea\u00e7as de seguran\u00e7a para agentes IA em mar\u00e7o de 2026, as TOP 3 amea\u00e7as mais cr\u00edticas s\u00e3o:\n\n1. **Ataque de Inje\u00e7\u00e3o de Prompt**: Advers\u00e1rios podem explorar agentes IA atrav\u00e9s de prompts maliciosos para roubar informa\u00e7\u00f5es ou executar a\u00e7\u00f5es indesejadas. Mitiga\u00e7\u00e3o: Implementar filtros de entrada robustos e validar ou sanitizar todos os prompts de entrada.\n\n2. **Vu",
+            "durationMs": 6768
+          },
+          {
+            "id": "38b3ef73-b7d4-4315-9c97-4a60c4cbee24",
+            "title": "Quais s\u00e3o as principais novas amea\u00e7as de seguran\u00e7a para agentes de IA em March 2026? Liste as TOP 3 mais cr\u00edticas e como mitigar. Seja breve (m\u00e1ximo 200 palavras).",
+            "description": "",
+            "status": "completed",
+            "startedAt": "2026-03-21T21:12:45.391Z",
+            "completedAt": "2026-03-21T21:12:52.812Z",
+            "result": "## [An\u00e1lise de Amea\u00e7as de Seguran\u00e7a para Agentes IA] \u2014 Relat\u00f3rio de Execu\u00e7\u00e3o\n\n[Execu\u00e7\u00e3o e resultados concretos]\n\nAnalisando as principais amea\u00e7as de seguran\u00e7a para agentes IA em mar\u00e7o de 2026, as TOP 3 mais cr\u00edticas s\u00e3o:\n\n1. **Ataque de Inje\u00e7\u00e3o de Prompt**: Advers\u00e1rios podem explorar vulnerabilidades em agentes IA para inserir prompts maliciosos, levando a a\u00e7\u00f5es indesejadas ou extra\u00e7\u00e3o de informa\u00e7\u00f5es confidenciais. Mitiga\u00e7\u00e3o: Implementar filtros de entrada robustos e validar ou sanitizar todos o",
+            "durationMs": 7421
+          }
+        ],
+        "activeContext": {
+          "currentTask": null,
+          "currentProject": null,
+          "startedAt": null
+        }
+      }
+    },
+    {
+      "id": "social-watcher",
+      "name": "Social Watcher",
+      "status": "available",
+      "memory": {
+        "specialistId": "social-watcher",
+        "specialistName": "Social Watcher",
+        "version": 2,
+        "lastActive": "2026-03-20T18:00:00.000Z",
+        "stats": {
+          "tasksCompleted": 0,
+          "tasksFailed": 0,
+          "sessionsTotal": 0,
+          "lessonsLearned": 0,
+          "tokensUsed": 0,
+          "avgTaskDurationMs": 0
+        },
+        "knowledge": [],
+        "recentTasks": [],
+        "activeContext": {
+          "currentTask": null,
+          "currentProject": null,
+          "startedAt": null
+        }
+      }
+    },
+    {
+      "id": "tradutor",
+      "name": "Tradutor",
+      "status": "available",
+      "memory": {
+        "specialistId": "tradutor",
+        "specialistName": "Tradutor",
+        "version": 2,
+        "lastActive": "2026-03-19T18:57:13.950Z",
+        "stats": {
+          "tasksCompleted": 0,
+          "tasksFailed": 0,
+          "sessionsTotal": 0,
+          "lessonsLearned": 2,
+          "tokensUsed": 0,
+          "avgTaskDurationMs": 0
+        },
+        "knowledge": [],
+        "recentTasks": [],
+        "activeContext": {
+          "currentTask": null,
+          "currentProject": null,
+          "startedAt": null
+        }
+      }
+    },
+    {
+      "id": "whatsapp-titanio",
+      "name": "WhatsApp Titanio",
+      "status": "available",
+      "memory": {
+        "specialistId": "whatsapp-titanio",
+        "specialistName": "WhatsApp Titanio",
+        "version": 2,
+        "lastActive": "2026-03-19T18:57:13.949Z",
+        "stats": {
+          "tasksCompleted": 0,
+          "tasksFailed": 0,
+          "sessionsTotal": 0,
+          "lessonsLearned": 2,
+          "tokensUsed": 0,
+          "avgTaskDurationMs": 0
+        },
+        "knowledge": [],
+        "recentTasks": [],
+        "activeContext": {
+          "currentTask": null,
+          "currentProject": null,
+          "startedAt": null
+        }
+      }
+    }
+  ],
+  "exportedAt": "2026-03-22T20:55:00Z",
+  "version": "1.0"
+}

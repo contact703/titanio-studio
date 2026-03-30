@@ -1,0 +1,162 @@
+{
+  "name": "ENEM Game Designer - Real Execution",
+  "description": "Generates game structure using Nemotron (free) - REAL API calls",
+  "nodes": [
+    {
+      "parameters": {
+        "trigger": "at"
+      },
+      "name": "Workflow Start",
+      "type": "n8n-nodes-base.cron",
+      "typeVersion": 1,
+      "position": [250, 300],
+      "id": "node-start"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.openrouter.ai/api/v1/chat/completions",
+        "authentication": "genericCredentialType",
+        "genericCredentialType": {
+          "credentialsType": "httpCustomAuth",
+          "authentication": "predefinedCredentialType",
+          "predefinedCredentialType": "httpBasicAuth"
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer sk-or-v1-{{ $env.OPENROUTER_API_KEY }}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "bodyParametersUi": "json",
+        "body": {
+          "model": "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
+          "max_tokens": 4000,
+          "temperature": 0.5,
+          "messages": [
+            {
+              "role": "system",
+              "content": "You are a game designer specializing in educational RPGs. Generate ONLY valid JSON with no markdown or extra text."
+            },
+            {
+              "role": "user",
+              "content": "Design a complete Godot game structure for an ENEM study RPG (pixel art, Stardew Valley style). Output ONLY JSON with: game_title, engine, scene_tree (with Node names and types), core_systems (progression, combat, inventory, questing, persistence), content_categories (5 ENEM categories), art_style, ui_screens, difficulty_settings, tech_stack, timeline. NO markdown, NO explanation. JSON ONLY."
+            }
+          ]
+        }
+      },
+      "name": "Call Nemotron - Game Designer",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [450, 300],
+      "id": "node-nemotron"
+    },
+    {
+      "parameters": {
+        "functionCode": "// Extract AI response\nconst response = $input.first().json;\n\nif (!response.choices || !response.choices[0].message.content) {\n  throw new Error('Invalid OpenRouter response');\n}\n\nconst content = response.choices[0].message.content;\n\n// Try to parse JSON from response\nlet gameStructure;\ntry {\n  gameStructure = JSON.parse(content);\n} catch (e) {\n  // Try to extract JSON from markdown code blocks\n  const jsonMatch = content.match(/```json\\n?([\\s\\S]*?)\\n?```/);\n  if (jsonMatch) {\n    gameStructure = JSON.parse(jsonMatch[1]);\n  } else {\n    // Try to find JSON object directly\n    const jsonStart = content.indexOf('{');\n    const jsonEnd = content.lastIndexOf('}');\n    if (jsonStart !== -1 && jsonEnd !== -1) {\n      gameStructure = JSON.parse(content.substring(jsonStart, jsonEnd + 1));\n    } else {\n      throw new Error('Could not extract JSON from response');\n    }\n  }\n}\n\nreturn {\n  game_structure: gameStructure,\n  tokens_used: response.usage?.total_tokens || 0,\n  model: response.model,\n  timestamp: new Date().toISOString()\n};"
+      },
+      "name": "Parse Game Structure",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [650, 300],
+      "id": "node-parse"
+    },
+    {
+      "parameters": {
+        "fileName": "game-structure.json",
+        "fileContent": "{{ JSON.stringify($node[\"Parse Game Structure\"].json.game_structure, null, 2) }}",
+        "directory": "/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/pasta-do-tita/enem-game-generation/outputs"
+      },
+      "name": "Save Game Structure",
+      "type": "n8n-nodes-base.writeFile",
+      "typeVersion": 1,
+      "position": [850, 300],
+      "id": "node-save"
+    },
+    {
+      "parameters": {
+        "webhookUrl": "http://localhost:4444/webhook/enem-game-designer",
+        "method": "POST",
+        "authentication": "none",
+        "sendQuery": false,
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParametersUi": "json",
+        "body": {
+          "status": "success",
+          "component": "game_designer",
+          "output_file": "game-structure.json",
+          "tokens_used": "{{ $node[\"Parse Game Structure\"].json.tokens_used }}",
+          "model": "{{ $node[\"Parse Game Structure\"].json.model }}",
+          "timestamp": "{{ $node[\"Parse Game Structure\"].json.timestamp }}"
+        }
+      },
+      "name": "Webhook Callback",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [1050, 300],
+      "id": "node-webhook"
+    }
+  ],
+  "connections": {
+    "Workflow Start": {
+      "main": [
+        [
+          {
+            "node": "Call Nemotron - Game Designer",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call Nemotron - Game Designer": {
+      "main": [
+        [
+          {
+            "node": "Parse Game Structure",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Game Structure": {
+      "main": [
+        [
+          {
+            "node": "Save Game Structure",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Save Game Structure": {
+      "main": [
+        [
+          {
+            "node": "Webhook Callback",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}
