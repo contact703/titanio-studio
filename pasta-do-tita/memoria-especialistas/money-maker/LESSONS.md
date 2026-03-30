@@ -2282,3 +2282,14 @@ Foram criadas 5 DMs únicas e personalizadas par
 **Duração:** 90.3s
 - [process] Tarefa demorou 90s — considerar otimização
 
+
+## 2026-03-30 05:50 — Gere 5 DMs únicas e personalizadas para abordar donos de res
+**Status:** ✅ Sucesso
+**Duração:** 11.7s
+- [integration] Integrações: instagram
+- [process] Gere 5 DMs únicas e personalizadas para abordar donos de restaurante no Instagra → ## [Geração de DMs para Dones de Restaurante] — Relatório de Execução
+
+[Execução e resultados concretos]
+
+Foram criadas 5 DMs únicas e personalizadas 
+
