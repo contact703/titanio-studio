@@ -28,12 +28,11 @@ if grep -qF "$LEARNING" "$LESSONS" 2>/dev/null; then
     exit 0
 fi
 
-# Smart limit — if LESSONS > 500 lines, remove oldest entries (keep last 400)
+# NUNCA apagar lições — memória é ouro
+# Se LESSONS ficou grande, só avisar (não truncar)
 LINE_COUNT=$(wc -l < "$LESSONS")
 if [ "$LINE_COUNT" -gt 500 ]; then
-    echo "🧹 Smart limit: $LINE_COUNT lines → keeping last 400"
-    tail -400 "$LESSONS" > "${LESSONS}.tmp"
-    mv "${LESSONS}.tmp" "$LESSONS"
+    echo "📝 LESSONS grande ($LINE_COUNT linhas) — mantendo TUDO (memória é ouro)"
 fi
 
 # Append learning
