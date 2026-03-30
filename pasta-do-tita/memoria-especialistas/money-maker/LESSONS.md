@@ -1965,3 +1965,180 @@ Foram criadas 5 DMs únicas e personalizad
 ### 1. Criação do Título Magnético
 **Título Ma
 
+
+## 2026-03-30 21:40 — Gere 5 DMs únicas e personalizadas para abordar donos de pet
+**Status:** ✅ Sucesso
+**Duração:** 13.7s
+- [integration] Integrações: instagram
+- [process] Gere 5 DMs únicas e personalizadas para abordar donos de pet shop no Instagram o → ## [Geração de DMs para Dones de Pet Shop] — Relatório de Execução
+
+[Execução e resultados concretos]
+
+Foram criadas 5 DMs únicas e personalizadas par
+
+
+## 2026-03-30 22:11 — Gere 5 DMs únicas e personalizadas para abordar donos de res
+**Status:** ✅ Sucesso
+**Duração:** 13.7s
+- [integration] Integrações: instagram
+- [process] Gere 5 DMs únicas e personalizadas para abordar donos de restaurante no Instagra → ## [Geração de DMs para Dones de Restaurante] — Relatório de Execução
+
+[Execução e resultados concretos]
+
+Foram criadas 5 DMs únicas e personalizadas 
+
+
+## 2026-03-30 22:11 — Drop servicing: vendo "relatório de redes sociais" para rest
+**Status:** ✅ Sucesso
+**Duração:** 17.4s
+- [integration] Integrações: apple
+- [process] Drop servicing: vendo "relatório de redes sociais" para restaurante por R$197. C → ## [Drop Servicing - Relatório de Redes Sociais para Restaurante] — Relatório de Execução
+
+[Execução e resultados concretos]
+
+### 1. Criação da Propos
+
+
+## 2026-03-30 22:41 — Gere 5 DMs únicas e personalizadas para abordar donos de sal
+**Status:** ✅ Sucesso
+**Duração:** 12.0s
+- [integration] Integrações: instagram
+- [process] Gere 5 DMs únicas e personalizadas para abordar donos de salão de beleza no Inst → ## [Geração de DMs para Dones de Salão de Beleza] — Relatório de Execução
+
+[Execução e resultados concretos]
+
+Foram criadas 5 DMs únicas e personaliza
+
+
+## 2026-03-30 22:41 — Ebook COMPLETO para vender na Hotmart sobre "como usar IA pa
+**Status:** ✅ Sucesso
+**Duração:** 19.0s
+- [process] Ebook COMPLETO para vender na Hotmart sobre "como usar IA para triplicar suas ve → ## [Criação de Ebook para Venda na Hotmart] — Relatório de Execução
+
+[Execução e resultados concretos]
+
+### 1. Criação do Título Magnético
+**Título Ma
+
+
+## 2026-03-30 23:11 — Gere 5 DMs únicas e personalizadas para abordar donos de clí
+**Status:** ✅ Sucesso
+**Duração:** 16.2s
+- [integration] Integrações: instagram
+- [process] Gere 5 DMs únicas e personalizadas para abordar donos de clínica estética no Ins → ## [Geração de DMs para Dones de Clínica Estética] — Relatório de Execução
+
+[Execução e resultados concretos]
+
+Foram criadas 5 DMs únicas e personaliz
+
+
+## 2026-03-30 23:12 — Drop servicing: vendo "kit de conteúdo mensal" para clínica 
+**Status:** ✅ Sucesso
+**Duração:** 26.8s
+- [integration] Integrações: instagram
+- [process] Drop servicing: vendo "kit de conteúdo mensal" para clínica por R$397. Crie: (1) → ## [Drop Servicing - Kit de Conteúdo Mensal para Clínica] — Relatório de Execução
+
+[Execução e resultados concretos]
+
+### 1. Criação da Proposta Comer
+
+
+## 2026-03-30 23:43 — Gere 5 DMs únicas e personalizadas para abordar donos de loj
+**Status:** ✅ Sucesso
+**Duração:** 16.8s
+- [integration] Integrações: instagram
+- [process] Gere 5 DMs únicas e personalizadas para abordar donos de loja de roupas no Insta → ## [Geração de DMs para Dones de Loja de Roupas] — Relatório de Execução
+
+[Execução e resultados concretos]
+
+Foram criadas 5 DMs únicas e personalizad
+
+
+## 2026-03-30 00:14 — Gere 5 DMs únicas e personalizadas para abordar donos de pet
+**Status:** ✅ Sucesso
+**Duração:** 11.1s
+- [integration] Integrações: instagram
+- [process] Gere 5 DMs únicas e personalizadas para abordar donos de pet shop no Instagram o → ## [Geração de DMs para Dones de Pet Shop] — Relatório de Execução
+
+[Execução e resultados concretos]
+
+Foram criadas 5 DMs únicas e personalizadas par
+
+
+## 2026-03-30 00:14 — Drop servicing: vendo "análise de concorrentes" para e-comme
+**Status:** ✅ Sucesso
+**Duração:** 15.2s
+- [integration] Integrações: apple
+- [process] Drop servicing: vendo "análise de concorrentes" para e-commerce por R$297. Crie: → ## [Drop Servicing - Análise de Concorrentes para E-commerce] — Relatório de Execução
+
+[Execução e resultados concretos]
+
+### 1. Criação da Proposta C
+
+
+## 2026-03-30 00:14 — Ebook COMPLETO para vender na Hotmart sobre "guia completo d
+**Status:** ✅ Sucesso
+**Duração:** 23.8s
+- [integration] Integrações: instagram
+- [process] Ebook COMPLETO para vender na Hotmart sobre "guia completo de legendas que vende → ## [Criação de Ebook para Venda na Hotmart] — Relatório de Execução
+
+[Execução e resultados concretos]
+
+### 1. Criação do Título Magnético
+**Título Ma
+
+
+## 2026-03-30 00:44 — Gere 5 DMs únicas e personalizadas para abordar donos de res
+**Status:** ✅ Sucesso
+**Duração:** 14.6s
+- [integration] Integrações: instagram
+- [process] Gere 5 DMs únicas e personalizadas para abordar donos de restaurante no Instagra → ## [Geração de DMs para Dones de Restaurante] — Relatório de Execução
+
+[Execução e resultados concretos]
+
+Foram criadas 5 DMs únicas e personalizadas 
+
+
+## 2026-03-30 01:15 — Gere 5 DMs únicas e personalizadas para abordar donos de sal
+**Status:** ✅ Sucesso
+**Duração:** 15.1s
+- [integration] Integrações: instagram
+- [process] Gere 5 DMs únicas e personalizadas para abordar donos de salão de beleza no Inst → ## [Geração de DMs para Dones de Salão de Beleza] — Relatório de Execução
+
+[Execução e resultados concretos]
+
+Foram criadas 5 DMs únicas e personaliza
+
+
+## 2026-03-30 01:15 — Drop servicing: vendo "relatório de redes sociais" para rest
+**Status:** ✅ Sucesso
+**Duração:** 21.7s
+- [process] Drop servicing: vendo "relatório de redes sociais" para restaurante por R$197. C → ## [Drop Servicing - Relatório de Redes Sociais para Restaurante] — Relatório de Execução
+
+[Execução e resultados concretos]
+
+### 1. Criação da Propos
+
+
+## 2026-03-30 01:46 — Gere 5 DMs únicas e personalizadas para abordar donos de clí
+**Status:** ✅ Sucesso
+**Duração:** 13.6s
+- [integration] Integrações: instagram
+- [process] Gere 5 DMs únicas e personalizadas para abordar donos de clínica estética no Ins → ## [Geração de DMs para Dones de Clínica Estética] — Relatório de Execução
+
+[Execução e resultados concretos]
+
+Foram criadas 5 DMs únicas e personaliz
+
+
+## 2026-03-30 01:47 — Ebook COMPLETO para vender na Hotmart sobre "automação para 
+**Status:** ✅ Sucesso
+**Duração:** 19.5s
+- [integration] Integrações: apple
+- [process] Ebook COMPLETO para vender na Hotmart sobre "automação para pequenos negócios co → ## [Criação de Ebook para Venda na Hotmart] — Relatório de Execução
+
+[Execução e resultados concretos]
+
+### 1. Criação do Título Magnético
+**Título Ma
+

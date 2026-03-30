@@ -290,3 +290,17 @@ Vou entregar um roteiro profissional, pronto para produção, com todas as camad
 ### Título do Vídeo
 "SMART FINANCE: 8 Personal Finance Tips 
 
+
+## 2026-03-30 23:13 — Roteiro completo de vídeo YouTube 8min sobre "curiosidades s
+**Status:** ❌ Falhou
+**Duração:** 91.5s
+- [integration] Integrações: youtube, apple
+- [process] Tarefa demorou 91s — considerar otimização
+
+
+## 2026-03-30 01:16 — Roteiro completo de vídeo YouTube 8min sobre "como ganhar di
+**Status:** ❌ Falhou
+**Duração:** 91.1s
+- [integration] Integrações: youtube
+- [process] Tarefa demorou 91s — considerar otimização
+

@@ -120,4 +120,14 @@ echo "" >> "$OUTPUT"
 echo "---" >> "$OUTPUT"
 echo "_Gerado: $(date '+%H:%M BRT %d/%m/%Y') | ${LINES} linhas, ${SIZE} bytes | Refresh: a cada 30min_" >> "$OUTPUT"
 
+# Auto git push (CI/CD básico)
+cd "$WORKSPACE"
+if git diff --quiet 2>/dev/null && git diff --cached --quiet 2>/dev/null; then
+    : # Nada pra commitar
+else
+    git add -A 2>/dev/null || true
+    git commit -m "🔄 auto: $(date '+%Y-%m-%d %H:%M')" 2>/dev/null || true
+    git push tita-memory HEAD:main --force 2>/dev/null &
+fi
+
 echo "✅ SESSION-CONTEXT.md gerado (${LINES} linhas, ${SIZE} bytes)"

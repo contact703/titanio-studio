@@ -1,4 +1,4 @@
-# 🧠 Contexto de Sessão — Auto-gerado 2026-03-29 22:53 BRT
+# 🧠 Contexto de Sessão — Auto-gerado 2026-03-30 01:53 BRT
 
 > LEIA ISTO ANTES DE RESPONDER QUALQUER COISA.
 > Este arquivo contém o que aconteceu nos últimos dias.
@@ -52,6 +52,41 @@
 - yt-dlp + ffmpeg + Claude vision = análise de reels ✅
 - Script: ~/.openclaw/workspace/bin/video-analyze.sh "URL"
 - Tempo: ~15 segundos por vídeo
+
+## 📅 Memória 2026-03-30 (      42 linhas)
+
+- **21:08** [Content Writer] Roteiro completo de vídeo YouTube 8min sobre "dicas de finanças pessoais" para c → ✅ (14s)
+
+- **21:08** [Money Maker] Gere 5 DMs únicas e personalizadas para abordar donos de loja de roupas no Insta → ✅ (24s)
+
+- **21:08** [Money Maker] Ebook COMPLETO para vender na Hotmart sobre "automação para pequenos negócios co → ✅ (24s)
+
+- **21:40** [Money Maker] Gere 5 DMs únicas e personalizadas para abordar donos de pet shop no Instagram o → ✅ (14s)
+
+- **22:11** [Money Maker] Gere 5 DMs únicas e personalizadas para abordar donos de restaurante no Instagra → ✅ (14s)
+
+- **22:11** [Money Maker] Drop servicing: vendo "relatório de redes sociais" para restaurante por R$197. C → ✅ (17s)
+
+- **22:41** [Money Maker] Gere 5 DMs únicas e personalizadas para abordar donos de salão de beleza no Inst → ✅ (12s)
+
+- **22:41** [Money Maker] Ebook COMPLETO para vender na Hotmart sobre "como usar IA para triplicar suas ve → ✅ (19s)
+
+- **23:12** [Money Maker] Gere 5 DMs únicas e personalizadas para abordar donos de clínica estética no Ins → ✅ (16s)
+
+- **23:12** [Money Maker] Drop servicing: vendo "kit de conteúdo mensal" para clínica por R$397. Crie: (1) → ✅ (27s)
+
+- **23:13** [Content Writer] Roteiro completo de vídeo YouTube 8min sobre "curiosidades sobre IA" para canal  → ❌ (91s)
+
+- **23:43** [Money Maker] Gere 5 DMs únicas e personalizadas para abordar donos de loja de roupas no Insta → ✅ (17s)
+
+- **00:14** [Money Maker] Gere 5 DMs únicas e personalizadas para abordar donos de pet shop no Instagram o → ✅ (11s)
+
+- **00:14** [Money Maker] Drop servicing: vendo "análise de concorrentes" para e-commerce por R$297. Crie: → ✅ (15s)
+
+- **00:14** [Money Maker] Ebook COMPLETO para vender na Hotmart sobre "guia completo de legendas que vende → ✅ (24s)
+... (mais 12 linhas em memory/2026-03-30.md)
+
+## 🔄 Último Flush 2026-03-30 (2026-03-30_00h.md)
 
 ## 📅 Memória 2026-03-29 (     192 linhas)
 
@@ -193,8 +228,6 @@ Recomendação: $30 Polymarket + $20 Grid Trading
 
 ## 🔄 Último Flush 2026-03-26 (2026-03-26_12h.md)
 
-## 🔄 Último Flush 2026-03-25 (2026-03-25_21h.md)
-
 ## 📝 Memórias Recentes (últimos 3 dias)
 - **relatorio-memoria-evermind-vs-tita.md** (8724 bytes)
 - **pesquisa-problema-memoria-recall-2026-03-28.md** (7056 bytes)
@@ -259,4 +292,4 @@ Recomendação: $30 Polymarket + $20 Grid Trading
 - **Dashboard Titanio 2.0** — 3 instâncias (Eduardo:4444, Helber:4445, Tiago:4446)
 
 ---
-_Gerado: 22:53 BRT 29/03/2026 | 259 linhas, 14460 bytes | Refresh: a cada 30min_
+_Gerado: 01:53 BRT 30/03/2026 | 292 linhas, 16408 bytes | Refresh: a cada 30min_

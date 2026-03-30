@@ -57,3 +57,7 @@
 - **29/03/2026:** DeerFlow memory middleware = interceptar ANTES de responder e injetar contexto. É o que SESSION-CONTEXT.md + REGRA #0 fazem pra nós.
 
 - **29/03/2026:** Polymarket: py-clob-client funciona com private key + derive_api_key(). Não precisa de browser login. Mas precisa de USDC na wallet.
+
+- **29/03/2026:** Todo trabalho de cliente DEVE alimentar a memória dos especialistas. tmem curate após cada tarefa. Lições do cliente X melhoram atendimento do cliente Y.
+
+- **30/03/2026:** SCAN SEGURANÇA 29/03: Firewall DESLIGADO, 4+ endpoints sem auth, 9 portas expostas na rede (não localhost), cofre no histórico git (3 commits). CRÍTICO.

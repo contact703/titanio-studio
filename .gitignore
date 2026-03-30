@@ -31,3 +31,14 @@ Thumbs.db
 cofre/
 *.age
 vault*.json
+
+# Security
+**/cofre/**
+**/.env
+**/credentials*.json
+**/wallet*.json
+**/bot-api-creds*.json
+*secret*
+*private_key*
+*.pem
+*.key

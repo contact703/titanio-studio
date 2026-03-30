@@ -1,57 +1,57 @@
 {
-  "timestamp": "2026-03-29 21:16",
+  "timestamp": "2026-03-30 02:01",
   "markets_total": 30,
   "opportunities": 2,
   "analyses": [
     {
+      "question": "Will the Miami Heat make the NBA Playoffs?",
+      "yes": 0.49,
+      "no": 0.51,
+      "volume": 99837.02473200005,
+      "analysis": {
+        "confianca": 72,
+        "direcao": "YES",
+        "razao": "Heat historicamente supera expectativas, tem cultura vencedora e Spoelstra é excelente técnico para playoffs",
+        "risco": "medio"
+      },
+      "timestamp": "2026-03-30 02:01",
+      "condition_id": "0xe538b3af4e8d0368cff984c05c06badcf1233c6c8074a36f0d6e2ba37f538444"
+    },
+    {
       "question": "OpenAI receives federal backstop for infrastructure before July?",
-      "yes": 0.295,
-      "no": 0.705,
-      "volume": 99731.03235899977,
+      "yes": 0.2775,
+      "no": 0.7225,
+      "volume": 99736.03235899977,
       "analysis": {
         "confianca": 75,
         "direcao": "NO",
-        "razao": "Apoio federal para infraestrutura de IA requer processo legislativo longo, improvável em 6 meses com outras prioridades orçamentárias",
+        "razao": "Prazo muito curto (6 meses) para aprovação de infraestrutura federal complexa envolvendo IA, considerando processos burocráticos e debates regulatórios em andamento",
         "risco": "medio"
       },
-      "timestamp": "2026-03-29 21:16",
+      "timestamp": "2026-03-30 02:01",
       "condition_id": "0x388459f1cfd0d310154e13f16f49d31fd301e5e3502072c8b09d3a0697b2823f"
-    },
-    {
-      "question": "Will Mikael Ishak score the most goals in the 2025-26 UEFA Europa Conference League?",
-      "yes": 0.68,
-      "no": 0.32,
-      "volume": 9951.5109,
-      "analysis": {
-        "confianca": 25,
-        "direcao": "NO",
-        "razao": "Mercado pequeno, jogador pouco conhecido, competição imprevisível com muitas variáveis",
-        "risco": "alto"
-      },
-      "timestamp": "2026-03-29 21:16",
-      "condition_id": "0x71116149166610ae90c5bbda1b3fed3c202e31f3d31599e39866466c7b985114"
     }
   ],
   "top_events": [
     {
       "title": "Democratic Presidential Nominee 2028",
-      "volume": 935745736.0856612
+      "volume": 936413325.4846913
     },
     {
       "title": "Republican Presidential Nominee 2028",
-      "volume": 490222593.2767397
+      "volume": 491860687.3142647
     },
     {
       "title": "Presidential Election Winner 2028",
-      "volume": 470820013.8012099
+      "volume": 471445173.890423
     },
     {
       "title": "2026 FIFA World Cup Winner ",
-      "volume": 415783222.1101423
+      "volume": 423661388.4181722
     },
     {
       "title": "English Premier League Winner ",
-      "volume": 312471504.7457489
+      "volume": 312501555.4544229
     }
   ]
 }

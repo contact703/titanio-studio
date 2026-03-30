@@ -7,9 +7,9 @@
 
 ## ⚠️ Status do Flush
 
-**Último flush:** 2026-03-29 21:03 UTC (18:03 BRT 29/03) ← **AGORA** ✨  
-**Anterior:** 2026-03-29 15:03 UTC (12:03 BRT 29/03)  
-**Anteriores:** 2026-03-29 09:03 UTC, 2026-03-29 03:03 UTC, 2026-03-28 15:03 UTC, 2026-03-28 03:03 UTC, 2026-03-27 21:03 UTC, 2026-03-27 03:03 UTC, 2026-03-26 09:03 UTC  
+**Último flush:** 2026-03-30 03:03 UTC (00:03 BRT 30/03) ← **AGORA** ✨  
+**Anterior:** 2026-03-29 21:03 UTC (18:03 BRT 29/03)  
+**Anteriores:** 2026-03-29 15:03 UTC, 2026-03-29 09:03 UTC, 2026-03-29 03:03 UTC, 2026-03-28 15:03 UTC, 2026-03-28 03:03 UTC, 2026-03-27 21:03 UTC, 2026-03-27 03:03 UTC, 2026-03-26 09:03 UTC  
 **Volume Tita_DEV_02:** ❌ HD queimou — usando TITA_039/MAC_MINI_03  
 **Nota:** Usar SEMPRE `/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/pasta-do-tita/`
 

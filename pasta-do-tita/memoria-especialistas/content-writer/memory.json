@@ -5,11 +5,31 @@
     "tasksCompleted": 64,
     "lessonsLearned": 46,
     "tokensUsed": 0,
-    "avgTaskDurationMs": 31144,
-    "tasksFailed": 1
+    "avgTaskDurationMs": 33011,
+    "tasksFailed": 3
   },
   "knowledge": [],
   "recentTasks": [
+    {
+      "id": "44da7d63-37d0-4acb-b7c4-2ea1cf4a8c7a",
+      "title": "Roteiro completo de vídeo YouTube 8min sobre \"como ganhar dinheiro online\" para canal FACELESS. Inclui: título CTR alto, thumbnail (descrição), script por cena com direção de b-roll, CTA para afiliado.",
+      "description": "",
+      "status": "failed",
+      "startedAt": "2026-03-30T04:14:46.176Z",
+      "completedAt": "2026-03-30T04:16:17.400Z",
+      "result": "⚠️ Content Writer encontrou um problema: Nenhuma API disponível. Verifique a conexão com o OpenClaw Gateway.",
+      "durationMs": 91224
+    },
+    {
+      "id": "314a1a09-c836-4e1c-b8ba-2cfd4979798f",
+      "title": "Roteiro completo de vídeo YouTube 8min sobre \"curiosidades sobre IA\" para canal FACELESS. Inclui: título CTR alto, thumbnail (descrição), script por cena com direção de b-roll, CTA para afiliado.",
+      "description": "",
+      "status": "failed",
+      "startedAt": "2026-03-30T02:11:41.432Z",
+      "completedAt": "2026-03-30T02:13:13.066Z",
+      "result": "⚠️ Content Writer encontrou um problema: Nenhuma API disponível. Verifique a conexão com o OpenClaw Gateway.",
+      "durationMs": 91634
+    },
     {
       "id": "f4464561-bfe1-4141-8c2f-dfa9ee9a318c",
       "title": "Roteiro completo de vídeo YouTube 8min sobre \"dicas de finanças pessoais\" para canal FACELESS. Inclui: título CTR alto, thumbnail (descrição), script por cena com direção de b-roll, CTA para afiliado.",
@@ -483,26 +503,6 @@
       "completedAt": "2026-03-26T00:04:12.505Z",
       "result": "## [Roteiro de Vídeo YouTube] — Relatório de Execução\n\n[Execução e resultados concretos]\n\n### Título do Vídeo\n\"AI SECRETS REVEALED: 8 Mind-Blowing Facts About Artificial Intelligence\"\n\n### Thumbnail Description\n\"Dive into the fascinating world of AI with us! 🤖 Discover 8 astonishing facts about artificial intelligence that will change the way you think about technology. Click to unlock the future! 🚀 #AI #ArtificialIntelligence #TechFacts\"\n\n### Script por Cena\n\n**Cena 1: Introdução**\n[B-roll: I",
       "durationMs": 50360
-    },
-    {
-      "id": "126a9c78-d443-42a1-b73a-a9f9556bf800",
-      "title": "Roteiro completo de vídeo YouTube 8min sobre \"dicas de finanças pessoais\" para canal FACELESS. Inclui: título CTR alto, thumbnail (descrição), script por cena com direção de b-roll, CTA para afiliado.",
-      "description": "",
-      "status": "completed",
-      "startedAt": "2026-03-25T21:57:36.091Z",
-      "completedAt": "2026-03-25T21:58:20.560Z",
-      "result": "## [Roteiro de Vídeo YouTube] — Relatório de Execução\n\n[Execução e resultados concretos]\n\n### Título do Vídeo\n\"8 Dicas de Finanças Pessoais para Ganhar Mais e Gastar Menos | FACELESS\"\n\n### Thumbnail Descrição\n\"Descubra como gerenciar melhor seu dinheiro com esses 8 conselhos financeiros essenciais. Junte-se a nós e comece a construir sua liberdade financeira hoje!\"\n\n### Script por Cena\n\n**Cena 1: Introdução**\n*B-roll: Imagens de pessoas usando cartões de crédito e dinheiro.*\n\n\"Olá, pessoal! Bem-",
-      "durationMs": 44469
-    },
-    {
-      "id": "44f39087-e2d8-42fc-9513-037694a66466",
-      "title": "Roteiro completo de vídeo YouTube 8min sobre \"como ganhar dinheiro online\" para canal FACELESS. Inclui: título CTR alto, thumbnail (descrição), script por cena com direção de b-roll, CTA para afiliado.",
-      "description": "",
-      "status": "completed",
-      "startedAt": "2026-03-25T19:51:51.906Z",
-      "completedAt": "2026-03-25T19:52:35.523Z",
-      "result": "## [Roteiro de Vídeo YouTube] — Relatório de Execução\n\n[Execução e resultados concretos]\n\n### Título do Vídeo\n\"Descubra 5 Maneiras Surpresa de Ganhar Dinheiro Online em 2026\"\n\n### Thumbnail (Descrição)\n\"Confira as 5 maneiras inovadoras de ganhar dinheiro online que estão dominando em 2026. Siga nossas dicas e aumente sua renda hoje!\"\n\n### Script por Cena com Direção de B-roll\n\n**Cena 1: Introdução**\n- B-roll: Imagens de pessoas trabalhando em casa e usando dispositivos móveis.\n- Script: \"Olá, pe",
-      "durationMs": 43617
     }
   ],
   "activeContext": {
@@ -510,5 +510,5 @@
     "currentProject": null,
     "startedAt": null
   },
-  "lastActive": "2026-03-30T00:08:36.843Z"
+  "lastActive": "2026-03-30T04:16:17.400Z"
 }
