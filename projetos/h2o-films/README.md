@@ -56,3 +56,24 @@ h2o-films/
 - [ ] PDF proposta bonito
 - [ ] Apresentação pro Tiago aprovar
 - [ ] Contato com H2O Films
+
+## 🗄️ PocketBase CRM
+
+**Status:** ✅ RODANDO
+**URL:** http://localhost:8090
+**Admin:** http://localhost:8090/_/
+**Auto-start:** LaunchAgent (com.tita.pocketbase)
+
+### Funcionalidades
+- CRM de filmes e contatos
+- API REST automática
+- Dashboard admin built-in
+- Backup automático
+- Zero dependência externa
+
+### Collections a criar (no admin)
+- **filmes** — catálogo de 80+ filmes
+- **contatos** — distribuidores, exibidores, parceiros
+- **campanhas** — marketing por filme
+- **analytics** — métricas Instagram, views, engagement
+- **tarefas** — pipeline de trabalho

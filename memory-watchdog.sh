@@ -15,7 +15,7 @@ while true; do
     # Consolidação diária às 23:59
     if [ "$HOUR" = "23" ] && [ "$MINUTE" = "59" ]; then
         echo "[$(date '+%Y-%m-%d %H:%M:%S')] 🔄 Consolidando memória..." >> "$LOG_FILE"
-        bash "$BIN_DIR/tita-consolidate-memory" >> "$LOG_FILE" 2>&1
+        python3 "$BIN_DIR/tita-consolidate-memory" >> "$LOG_FILE" 2>&1
     fi
     
     # Teste semanal domingo 09:00

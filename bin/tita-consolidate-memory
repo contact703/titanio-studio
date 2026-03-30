@@ -1,27 +1,165 @@
-#!/bin/bash
-# tita-consolidate-memory — Consolida memória diária em MEMORY.md
-WORKSPACE="/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace"
-MEMORY="$WORKSPACE/MEMORY.md"
-TODAY=$(date +%Y-%m-%d)
-DAILY="$WORKSPACE/memory/$TODAY.md"
+#!/usr/bin/env python3
+# tita-consolidate-memory — Consolida resumos dos arquivos diários em MEMORY.md
+#
+# Uso:
+#   python3 tita-consolidate-memory               → processa hoje
+#   python3 tita-consolidate-memory 2026-03-28    → processa data específica
+#   python3 tita-consolidate-memory 2026-03-28 2026-03-29  → múltiplas datas
+#
+# Lógica:
+#   - Lê memory/YYYY-MM-DD.md
+#   - Extrai o bloco de resumo humano (seções "## 📅" e "###" headers)
+#   - IGNORA linhas de bot-log ([Money Maker], [Content Writer], alertas de sistema)
+#   - Dedup: verifica se o header da data já está em MEMORY.md
+#   - Append do conteúdo novo ao final de MEMORY.md
+#   - Log em /tmp/tita-consolidate.log
 
-echo "[$(date)] 🔄 Consolidando memória do dia $TODAY..."
+import sys
+import os
+import re
+from datetime import datetime
 
-if [ ! -f "$DAILY" ]; then
-    echo "[$(date)] ⚠️ Nenhum arquivo diário encontrado: $DAILY"
-    exit 0
-fi
+WORKSPACE = "/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace"
+MEMORY_FILE = os.path.join(WORKSPACE, "MEMORY.md")
+MEMORY_DIR  = os.path.join(WORKSPACE, "memory")
+LOG_FILE    = "/tmp/tita-consolidate.log"
 
-LINES=$(wc -l < "$DAILY")
-echo "[$(date)] 📊 Arquivo diário: $LINES linhas"
+# Padrões de linhas de bot-log para IGNORAR
+BOT_LOG_PATTERNS = [
+    re.compile(r"^- \*\*\d{2}:\d{2}\*\* \[(Money Maker|Content Writer)\]"),
+    re.compile(r"^\[20\d{2}-\d{2}-\d{2}"),          # [2026-03-28 10:35] ⚠️ RAM LOW
+    re.compile(r"^\d{4}-\d{2}-\d{2} \d{2}:\d{2}"),  # timestamps de sistema
+]
 
-# Append date header + summary to MEMORY.md if not already there
-if ! grep -q "## 📅 $TODAY" "$MEMORY" 2>/dev/null; then
-    echo "" >> "$MEMORY"
-    echo "## 📅 $TODAY — Consolidação Automática" >> "$MEMORY"
-    echo "- Linhas registradas: $LINES" >> "$MEMORY"
-    echo "- Consolidado: $(date '+%H:%M BRT')" >> "$MEMORY"
-    echo "[$(date)] ✅ Consolidado com sucesso"
-else
-    echo "[$(date)] ℹ️ Já consolidado hoje"
-fi
+def log(msg):
+    ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    line = f"[{ts}] {msg}"
+    print(line)
+    with open(LOG_FILE, "a", encoding="utf-8") as f:
+        f.write(line + "\n")
+
+def is_bot_log_line(line):
+    for pat in BOT_LOG_PATTERNS:
+        if pat.match(line):
+            return True
+    return False
+
+def extract_summary(daily_file):
+    """
+    Extrai o bloco de resumo humano do arquivo diário.
+    Retorna string com o conteúdo, ou None se não houver resumo.
+
+    Regra: o resumo começa na primeira linha "## 📅" encontrada.
+    Bot-logs que aparecem ANTES do resumo são ignorados.
+    Bot-logs que aparecem DEPOIS do resumo encerram a extração.
+    """
+    try:
+        with open(daily_file, "r", encoding="utf-8") as f:
+            lines = f.readlines()
+    except FileNotFoundError:
+        return None
+
+    # Encontrar a primeira linha "## 📅" (início do resumo humano)
+    start_idx = None
+    for i, line in enumerate(lines):
+        if line.strip().startswith("## 📅"):
+            start_idx = i
+            break
+
+    if start_idx is None:
+        return None  # sem resumo humano no arquivo
+
+    # Coletar linhas do resumo, parando ao encontrar bot-logs
+    summary_lines = []
+    for line in lines[start_idx:]:
+        stripped = line.rstrip("\n")
+        if is_bot_log_line(stripped):
+            # Bot-logs após o resumo: encerra aqui
+            break
+        summary_lines.append(line)
+
+    content = "".join(summary_lines).rstrip()
+    return content if content else None
+
+def get_date_header(summary_text):
+    """
+    Extrai o identificador único do resumo (primeira linha ## 📅 ...).
+    Usado para dedup em MEMORY.md.
+    """
+    first_line = summary_text.split("\n")[0].strip()
+    # Tenta extrair "## 📅 DD/MM/YYYY"
+    m = re.search(r"## 📅 (\d{2}/\d{2}/\d{4})", first_line)
+    if m:
+        return f"## 📅 {m.group(1)}"
+    return first_line  # fallback: usa linha completa
+
+def already_in_memory(header_text):
+    """Verifica se o header já existe em MEMORY.md (dedup)."""
+    if not os.path.exists(MEMORY_FILE):
+        return False
+    with open(MEMORY_FILE, "r", encoding="utf-8") as f:
+        content = f.read()
+    return header_text in content
+
+def consolidate_date(date_str):
+    """
+    Processa um arquivo de data e faz append em MEMORY.md se necessário.
+    Retorna: 'done' | 'already' | 'no-summary' | 'no-file'
+    """
+    daily_file = os.path.join(MEMORY_DIR, f"{date_str}.md")
+
+    if not os.path.exists(daily_file):
+        log(f"⚠️  Arquivo não encontrado: {daily_file}")
+        return "no-file"
+
+    summary = extract_summary(daily_file)
+
+    if not summary:
+        log(f"ℹ️  {date_str}.md — sem resumo humano (só bot-logs)")
+        return "no-summary"
+
+    header = get_date_header(summary)
+
+    if already_in_memory(header):
+        log(f"✅ {date_str} — já consolidado ({header})")
+        return "already"
+
+    # Append ao MEMORY.md
+    with open(MEMORY_FILE, "a", encoding="utf-8") as f:
+        f.write("\n\n")
+        f.write(summary)
+        f.write("\n")
+
+    lines_added = len(summary.split("\n"))
+    log(f"✅ {date_str} — consolidado! '{header}' ({lines_added} linhas → MEMORY.md)")
+    return "done"
+
+def main():
+    log("=" * 60)
+    log("🔄 tita-consolidate-memory iniciado")
+
+    # Datas a processar: argumentos CLI ou hoje
+    if len(sys.argv) > 1:
+        dates = sys.argv[1:]
+    else:
+        dates = [datetime.now().strftime("%Y-%m-%d")]
+
+    results = {"done": 0, "already": 0, "no-summary": 0, "no-file": 0}
+
+    for date_str in dates:
+        try:
+            datetime.strptime(date_str, "%Y-%m-%d")
+        except ValueError:
+            log(f"❌ Formato inválido: '{date_str}' (esperado YYYY-MM-DD)")
+            continue
+        result = consolidate_date(date_str)
+        results[result] = results.get(result, 0) + 1
+
+    log(
+        f"📊 Resultado: {results['done']} novos | {results['already']} já existentes | "
+        f"{results['no-summary']} sem resumo | {results['no-file']} não encontrados"
+    )
+    log("✅ Concluído")
+
+if __name__ == "__main__":
+    main()
