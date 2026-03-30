@@ -2,14 +2,24 @@
   "sessions": [],
   "stats": {
     "sessionsCount": 0,
-    "tasksCompleted": 68,
+    "tasksCompleted": 69,
     "lessonsLearned": 46,
     "tokensUsed": 0,
-    "avgTaskDurationMs": 31153,
+    "avgTaskDurationMs": 30722,
     "tasksFailed": 3
   },
   "knowledge": [],
   "recentTasks": [
+    {
+      "id": "a3bf0262-9ed6-46d3-9147-ca231e381502",
+      "title": "Roteiro completo de vídeo YouTube 8min sobre \"curiosidades sobre IA\" para canal FACELESS. Inclui: título CTR alto, thumbnail (descrição), script por cena com direção de b-roll, CTA para afiliado.",
+      "description": "",
+      "status": "completed",
+      "startedAt": "2026-03-30T14:25:05.252Z",
+      "completedAt": "2026-03-30T14:25:28.090Z",
+      "result": "## [Roteiro de Vídeo YouTube] — Relatório de Execução\n\n[Execução e resultados concretos]\n\n### Título do Vídeo\n\"AI SECRETS REVEALED: 8 Mind-Blowing Facts About Artificial Intelligence\"\n\n### Thumbnail Descrição\n\"Descubra 8 fatos incríveis sobre inteligência artificial que mudam a maneira como você pensa sobre a tecnologia. Clique e aumente seu conhecimento!\"\n\n### Script por Cena\n\n**Introdução:**\n- Cena 1: Abertura com imagem dinâmica de IA e pergunta cativante (\"Você sabe o que a IA não pode fazer",
+      "durationMs": 22838
+    },
     {
       "id": "0e57aeac-2e8d-487c-a7a6-7a1360b86a4d",
       "title": "Roteiro completo de vídeo YouTube 8min sobre \"dicas de finanças pessoais\" para canal FACELESS. Inclui: título CTR alto, thumbnail (descrição), script por cena com direção de b-roll, CTA para afiliado.",
@@ -496,16 +506,6 @@
       "completedAt": "2026-03-26T10:37:24.710Z",
       "result": "## [Roteiro de Vídeo YouTube] — Relatório de Execução\n\n[Execução e resultados concretos]\n\n### Título do Vídeo:\n\"8 Dicas Impactantes de Finanças Pessoais para Ganhar Mais e Gastar Menos\"\n\n### Thumbnail (Descrição):\n\"Desbravando o mundo das finanças pessoais! Neste vídeo de 8 minutos, descubra dicas poderosas para aumentar seus ganhos e diminuir seus gastos. Não perca!\"\n\n### Script por Cena com Direção de B-roll:\n\n**Cena 1: Introdução**\n- B-roll: Imagens de pessoas usando celulares e computadores ",
       "durationMs": 48427
-    },
-    {
-      "id": "5a78fbdc-5805-433c-a862-93a70b913dce",
-      "title": "Roteiro completo de vídeo YouTube 8min sobre \"como ganhar dinheiro online\" para canal FACELESS. Inclui: título CTR alto, thumbnail (descrição), script por cena com direção de b-roll, CTA para afiliado.",
-      "description": "",
-      "status": "completed",
-      "startedAt": "2026-03-26T08:30:11.570Z",
-      "completedAt": "2026-03-26T08:31:01.584Z",
-      "result": "## [Roteiro de Vídeo YouTube] — Relatório de Execução\n\n[Execução e resultados concretos]\n\n### Título do Vídeo\n\"Descubra 5 Maneiras Surpresas de Ganhar Dinheiro Online Sem Investimento!\"\n\n### Thumbnail (Descrição)\n\"Confira as 5 maneiras surpreendentes de ganhar dinheiro online que você não sabia! Clique e descubra como começar hoje mesmo!\"\n\n### Script por Cena com Direção de B-roll\n\n**Cena 1: Introdução**\n- B-roll: Imagens de pessoas trabalhando em casa e usando dispositivos móveis.\n- Script: \"Ol",
-      "durationMs": 50014
     }
   ],
   "activeContext": {
@@ -513,5 +513,5 @@
     "currentProject": null,
     "startedAt": null
   },
-  "lastActive": "2026-03-30T12:24:02.446Z"
+  "lastActive": "2026-03-30T14:25:28.090Z"
 }

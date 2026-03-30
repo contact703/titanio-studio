@@ -352,3 +352,15 @@ Vou entregar um roteiro profissional, pronto para produção, com todas as camad
 ### Título do Vídeo
 "SMART FINANCE: 8 Personal Finance Tips 
 
+
+## 2026-03-30 11:25 — Roteiro completo de vídeo YouTube 8min sobre "curiosidades s
+**Status:** ✅ Sucesso
+**Duração:** 22.8s
+- [integration] Integrações: youtube, apple
+- [process] Roteiro completo de vídeo YouTube 8min sobre "curiosidades sobre IA" para canal  → ## [Roteiro de Vídeo YouTube] — Relatório de Execução
+
+[Execução e resultados concretos]
+
+### Título do Vídeo
+"AI SECRETS REVEALED: 8 Mind-Blowing Fac
+

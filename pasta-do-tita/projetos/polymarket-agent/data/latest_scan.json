@@ -1,71 +1,57 @@
 {
-  "timestamp": "2026-03-30 11:15",
+  "timestamp": "2026-03-30 11:47",
   "markets_total": 30,
-  "opportunities": 3,
+  "opportunities": 2,
   "analyses": [
     {
-      "question": "OpenAI receives federal backstop for infrastructure before July?",
-      "yes": 0.2825,
-      "no": 0.7175,
-      "volume": 99745.61505899977,
-      "analysis": {
-        "confianca": 75,
-        "direcao": "NO",
-        "razao": "Processo legislativo federal é lento, especialmente para apoio direto a empresas privadas. 6 meses é prazo muito apertado para aprovação de backstop federal para OpenAI",
-        "risco": "medio"
-      },
-      "timestamp": "2026-03-30 11:15",
-      "condition_id": "0x388459f1cfd0d310154e13f16f49d31fd301e5e3502072c8b09d3a0697b2823f"
-    },
-    {
       "question": "Will Mikael Ishak score the most goals in the 2025-26 UEFA Europa Conference League?",
-      "yes": 0.71,
-      "no": 0.29,
+      "yes": 0.7,
+      "no": 0.3,
       "volume": 9958.918306,
       "analysis": {
         "confianca": 25,
         "direcao": "NO",
-        "razao": "Odds de 71% parecem muito altas para artilheiro de torneio com muitos clubes e jogadores talentosos",
+        "razao": "Odds muito altas para um jogador específico em competição com muitas variáveis imprevisíveis",
         "risco": "alto"
       },
-      "timestamp": "2026-03-30 11:15",
+      "timestamp": "2026-03-30 11:47",
       "condition_id": "0x71116149166610ae90c5bbda1b3fed3c202e31f3d31599e39866466c7b985114"
     },
     {
       "question": "Will USD reach 1.8M Iranian rials by April 30?",
-      "yes": 0.27,
-      "no": 0.73,
+      "yes": 0.275,
+      "no": 0.725,
       "volume": 9958.43628,
       "analysis": {
         "confianca": 75,
         "direcao": "YES",
-        "razao": "Rial iraniano historicamente volátil, sanções econômicas persistentes e inflação alta tendem a depreciar a moeda contra USD",
+        "razao": "Rial iraniano sob pressão constante por sanctions, inflação alta e instabilidade geopolítica. Taxa atual já próxima deste nível.",
         "risco": "medio"
       },
-      "timestamp": "2026-03-30 11:15",
+      "timestamp": "2026-03-30 11:47",
       "condition_id": "0x699093850ff73cf30baa4c571272900c3162932f9745400256a6455d6b2d0789"
     }
   ],
   "top_events": [
     {
       "title": "Democratic Presidential Nominee 2028",
-      "volume": 940229528.6054593
+      "volume": 940549303.7760595
     },
     {
       "title": "Republican Presidential Nominee 2028",
-      "volume": 494332813.4215445
+      "volume": 494568475.8493325
     },
     {
       "title": "Presidential Election Winner 2028",
-      "volume": 473639473.80184287
+      "volume": 473819776.94875497
     },
     {
       "title": "2026 FIFA World Cup Winner ",
-      "volume": 428748599.4631882
+      "volume": 428902913.3027022
     },
     {
       "title": "English Premier League Winner ",
-      "volume": 312576999.28730685
+      "volume": 312578733.8428748
     }
   ]
 }
