@@ -2406,3 +2406,37 @@ Foram criadas 5 DMs únicas e personalizadas
 
 Foram criadas 5 DMs únicas e personaliza
 
+
+## 2026-03-30 09:23 — Gere 5 DMs únicas e personalizadas para abordar donos de clí
+**Status:** ✅ Sucesso
+**Duração:** 10.3s
+- [integration] Integrações: instagram
+- [process] Gere 5 DMs únicas e personalizadas para abordar donos de clínica estética no Ins → ## [Geração de DMs para Dones de Clínica Estética] — Relatório de Execução
+
+[Execução e resultados concretos]
+
+Foram criadas 5 DMs únicas e personaliz
+
+
+## 2026-03-30 09:23 — Drop servicing: vendo "análise de concorrentes" para e-comme
+**Status:** ✅ Sucesso
+**Duração:** 13.6s
+- [integration] Integrações: apple
+- [process] Drop servicing: vendo "análise de concorrentes" para e-commerce por R$297. Crie: → ## [Drop Servicing - Análise de Concorrentes para E-commerce] — Relatório de Execução
+
+[Execução e resultados concretos]
+
+### 1. Criação da Proposta C
+
+
+## 2026-03-30 09:24 — Ebook COMPLETO para vender na Hotmart sobre "guia completo d
+**Status:** ✅ Sucesso
+**Duração:** 16.1s
+- [integration] Integrações: instagram
+- [process] Ebook COMPLETO para vender na Hotmart sobre "guia completo de legendas que vende → ## [Criação de Ebook para Venda na Hotmart] — Relatório de Execução
+
+[Execução e resultados concretos]
+
+### 1. Criação do Título Magnético
+**Título Ma
+

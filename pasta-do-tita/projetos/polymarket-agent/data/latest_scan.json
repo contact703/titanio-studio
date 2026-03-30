@@ -1,20 +1,20 @@
 {
-  "timestamp": "2026-03-30 08:44",
+  "timestamp": "2026-03-30 09:17",
   "markets_total": 30,
-  "opportunities": 3,
+  "opportunities": 2,
   "analyses": [
     {
       "question": "OpenAI receives federal backstop for infrastructure before July?",
-      "yes": 0.27,
-      "no": 0.73,
+      "yes": 0.275,
+      "no": 0.725,
       "volume": 99743.73505899977,
       "analysis": {
         "confianca": 75,
         "direcao": "NO",
-        "razao": "Processo regulatório federal complexo, prazo curto (6 meses), e falta de precedentes claros para backstop específico de IA",
+        "razao": "Apoio federal para infraestrutura de IA envolve processos regulatórios complexos e longos debates no Congresso, improvável em 6 meses",
         "risco": "medio"
       },
-      "timestamp": "2026-03-30 08:44",
+      "timestamp": "2026-03-30 09:17",
       "condition_id": "0x388459f1cfd0d310154e13f16f49d31fd301e5e3502072c8b09d3a0697b2823f"
     },
     {
@@ -25,47 +25,33 @@
       "analysis": {
         "confianca": 75,
         "direcao": "YES",
-        "razao": "Rial iraniano em desvalorização contínua devido a sanções, instabilidade política e pressões econômicas. Taxa atual próxima a 1.5M sugere movimento plausível para 1.8M até abril.",
+        "razao": "Iran enfrenta inflação severa, sanções internacionais e instabilidade econômica contínua, favorecendo desvalorização do rial",
         "risco": "medio"
       },
-      "timestamp": "2026-03-30 08:44",
+      "timestamp": "2026-03-30 09:17",
       "condition_id": "0x699093850ff73cf30baa4c571272900c3162932f9745400256a6455d6b2d0789"
-    },
-    {
-      "question": "Will the Republican Party win the VA-05 House seat?",
-      "yes": 0.275,
-      "no": 0.725,
-      "volume": 9946.546297,
-      "analysis": {
-        "confianca": 65,
-        "direcao": "YES",
-        "razao": "VA-05 é distrito historicamente republicano com advantage estrutural do GOP, odds atuais podem estar subestimando chances republicanas",
-        "risco": "medio"
-      },
-      "timestamp": "2026-03-30 08:44",
-      "condition_id": "0x7dae18f53f698e29f24a8739aba96b9560034f6fabe31951fc1b4e6c9e624d59"
     }
   ],
   "top_events": [
     {
       "title": "Democratic Presidential Nominee 2028",
-      "volume": 938938656.9108163
+      "volume": 939243244.6154685
     },
     {
       "title": "Republican Presidential Nominee 2028",
-      "volume": 493404816.1748222
+      "volume": 493629050.6032113
     },
     {
       "title": "Presidential Election Winner 2028",
-      "volume": 472853565.367138
+      "volume": 473047524.1309303
     },
     {
       "title": "2026 FIFA World Cup Winner ",
-      "volume": 427581644.2481362
+      "volume": 427775708.2399082
     },
     {
       "title": "English Premier League Winner ",
-      "volume": 312559204.14739084
+      "volume": 312562000.97541183
     }
   ]
 }

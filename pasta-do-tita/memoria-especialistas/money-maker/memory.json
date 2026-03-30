@@ -2,14 +2,44 @@
   "sessions": [],
   "stats": {
     "sessionsCount": 0,
-    "tasksCompleted": 549,
+    "tasksCompleted": 552,
     "lessonsLearned": 61,
     "tokensUsed": 0,
-    "avgTaskDurationMs": 20134,
+    "avgTaskDurationMs": 20289,
     "tasksFailed": 7
   },
   "knowledge": [],
   "recentTasks": [
+    {
+      "id": "c5cc765b-afae-45b7-bd5c-ec9f85f9d237",
+      "title": "Drop servicing: vendo \"análise de concorrentes\" para e-commerce por R$297. Crie: (1) proposta comercial pronta pra enviar, (2) execute o serviço completo com IA agora (resultado real para entregar ao cliente). Email: siriguejo@proton.me",
+      "description": "",
+      "status": "completed",
+      "startedAt": "2026-03-30T12:23:43.699Z",
+      "completedAt": "2026-03-30T12:23:57.328Z",
+      "result": "## [Drop Servicing - Análise de Concorrentes para E-commerce] — Relatório de Execução\n\n[Execução e resultados concretos]\n\n### 1. Criação da Proposta Comercial\n**Título:** Análise de Concorrentes para E-commerce\n\n**Proposta Comercial:**\nCaro cliente,\n\nEstamos oferecendo um serviço de análise de concorrentes para e-commerce que vai te dar uma visão clara do mercado e como seus principais competidores estão se saindo. Isso te permitirá tomar decisões estratégicas para impulsionar seu negócio.\n\n**Se",
+      "durationMs": 13629
+    },
+    {
+      "id": "ccf6306e-30ce-438e-a946-a327acd8bb65",
+      "title": "Ebook COMPLETO para vender na Hotmart sobre \"guia completo de legendas que vendem no Instagram\": título magnético, página de vendas (headline + 3 bullets + preço R$47 + CTA), sumário 7 capítulos, capítulo 1 completo (300 palavras).",
+      "description": "",
+      "status": "completed",
+      "startedAt": "2026-03-30T12:23:43.695Z",
+      "completedAt": "2026-03-30T12:23:59.839Z",
+      "result": "## [Criação de Ebook para Venda na Hotmart] — Relatório de Execução\n\n[Execução e resultados concretos]\n\n### 1. Criação do Título Magnético\n**Título Magnético:**\n\"Legendas em Foco: Como Transformar Seu Instagram em uma Loja Virtual de Sucesso\"\n\n### 2. Desenvolvimento da Página de Vendas\n**Headline:**\n\"Abra as Portas de Sucesso no Instagram com a Mais Completa Guia de Legendas que Vendem\"\n\n**3 Bullets:**\n- **\"Conheça as 7 Estratégias de Legendas que Levam aos Mais Altos Índices de Conversão\"**\n- *",
+      "durationMs": 16144
+    },
+    {
+      "id": "c09b85ae-cd2a-4984-970f-c2ba1314d800",
+      "title": "Gere 5 DMs únicas e personalizadas para abordar donos de clínica estética no Instagram oferecendo pack de legendas por R$97. Cada DM diferente, máx 3 linhas, casual, com [NOME] como placeholder. Email: siriguejo@proton.me",
+      "description": "",
+      "status": "completed",
+      "startedAt": "2026-03-30T12:23:43.688Z",
+      "completedAt": "2026-03-30T12:23:53.969Z",
+      "result": "## [Geração de DMs para Dones de Clínica Estética] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nForam criadas 5 DMs únicas e personalizadas para abordar donos de clínica estética no Instagram oferecendo pack de legendas por R$97. Cada mensagem é diferente, contém no máximo 3 linhas e é casual, incluindo [NOME] como placeholder. Aqui estão as mensagens:\n\n1. \"Oi [NOME], viu que sua clínica está impressionante! Que tal dar um upgrade nas suas legendas no Instagram? Ofereçemos um pack",
+      "durationMs": 10281
+    },
     {
       "id": "fb8d357d-5caa-4afd-acfe-815c6a5b4f56",
       "title": "Gere 5 DMs únicas e personalizadas para abordar donos de salão de beleza no Instagram oferecendo pack de legendas por R$97. Cada DM diferente, máx 3 linhas, casual, com [NOME] como placeholder. Email: siriguejo@proton.me",
@@ -476,36 +506,6 @@
       "completedAt": "2026-03-29T23:08:01.910Z",
       "result": "## [Geração de DMs para Dones de Salão de Beleza] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nForam criadas 5 DMs únicas e personalizadas para abordar donos de salão de beleza no Instagram oferecendo pack de legendas por R$97. Cada mensagem é diferente, contém no máximo 3 linhas e é casual, incluindo [NOME] como placeholder. Aqui estão as mensagens:\n\n1. \"Oi [NOME], viu que seu salão de beleza é show! Que tal dar um up na sua presença online? Tenho um pack de legendas pra Instagra",
       "durationMs": 11679
-    },
-    {
-      "id": "921a4987-0eef-4286-ae11-9e059824ddb7",
-      "title": "Ebook COMPLETO para vender na Hotmart sobre \"guia completo de legendas que vendem no Instagram\": título magnético, página de vendas (headline + 3 bullets + preço R$47 + CTA), sumário 7 capítulos, capítulo 1 completo (300 palavras).",
-      "description": "",
-      "status": "completed",
-      "startedAt": "2026-03-29T22:37:29.789Z",
-      "completedAt": "2026-03-29T22:37:47.533Z",
-      "result": "## [Criação de Ebook para Venda na Hotmart] — Relatório de Execução\n\n[Execução e resultados concretos]\n\n### 1. Criação do Título Magnético\n**Título Magnético:**\n\"Legendas em Foco: Como Transformar Seu Instagram em uma Loja Virtual de Sucesso\"\n\n### 2. Desenvolvimento da Página de Vendas\n**Headline:**\n\"Abra as Portas de Sucesso no Instagram com a Arte de Vendas nas Legendas\"\n\n**3 Bullets:**\n- **\"Crie Legendas Irresistíveis:** Desvende como compor legendas que impulsionam a curiosidade e o desejo d",
-      "durationMs": 17744
-    },
-    {
-      "id": "23b4a50f-d5f5-4924-9983-534414c99b83",
-      "title": "Gere 5 DMs únicas e personalizadas para abordar donos de restaurante no Instagram oferecendo pack de legendas por R$97. Cada DM diferente, máx 3 linhas, casual, com [NOME] como placeholder. Email: siriguejo@proton.me",
-      "description": "",
-      "status": "completed",
-      "startedAt": "2026-03-29T22:37:29.771Z",
-      "completedAt": "2026-03-29T22:37:39.822Z",
-      "result": "## [Geração de DMs para Dones de Restaurante] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nForam criadas 5 DMs únicas e personalizadas para abordar donos de restaurante no Instagram oferecendo pack de legendas por R$97. Cada mensagem é diferente, máx 3 linhas, casual e inclui [NOME] como placeholder. Aqui estão as mensagens:\n\n1. \"Oi [NOME], tem um segredo de como seus posts podem ficar mais appetitosos? Nosso pack de legendas por apenas R$97 vai fazer toda a diferença! 📸🍽️\"\n\n2. ",
-      "durationMs": 10051
-    },
-    {
-      "id": "0f992ded-d3d0-4d5e-88f7-34e225a2abb0",
-      "title": "Drop servicing: vendo \"relatório de redes sociais\" para restaurante por R$197. Crie: (1) proposta comercial pronta pra enviar, (2) execute o serviço completo com IA agora (resultado real para entregar ao cliente). Email: siriguejo@proton.me",
-      "description": "",
-      "status": "completed",
-      "startedAt": "2026-03-29T22:07:09.877Z",
-      "completedAt": "2026-03-29T22:07:24.150Z",
-      "result": "## [Drop Servicing - Relatório de Redes Sociais para Restaurante] — Relatório de Execução\n\n[Execução e resultados concretos]\n\n### 1. Criação da Proposta Comercial\n**Título:** Análise de Redes Sociais para Restaurantes\n\n**Proposta Comercial:**\nPrezado proprietário de restaurante,\n\nNosso time especializado em inteligência de redes sociais está oferecendo um serviço de análise de redes sociais que vai revelar insights valiosos para impulsionar o crescimento de seu estabelecimento. Por apenas R$197,",
-      "durationMs": 14273
     }
   ],
   "activeContext": {
@@ -513,5 +513,5 @@
     "currentProject": null,
     "startedAt": null
   },
-  "lastActive": "2026-03-30T11:53:43.245Z"
+  "lastActive": "2026-03-30T12:23:59.839Z"
 }

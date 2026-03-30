@@ -340,3 +340,15 @@ Vou entregar um roteiro profissional, pronto para produção, com todas as camad
 ### Título do Vídeo
 "ONLINE GOLD RUSH: 8 Proven Ways to Make
 
+
+## 2026-03-30 09:24 — Roteiro completo de vídeo YouTube 8min sobre "dicas de finan
+**Status:** ✅ Sucesso
+**Duração:** 18.7s
+- [integration] Integrações: youtube
+- [process] Roteiro completo de vídeo YouTube 8min sobre "dicas de finanças pessoais" para c → ## [Roteiro de Vídeo YouTube] — Relatório de Execução
+
+[Execução e resultados concretos]
+
+### Título do Vídeo
+"SMART FINANCE: 8 Personal Finance Tips 
+
