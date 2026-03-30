@@ -2440,3 +2440,14 @@ Foram criadas 5 DMs únicas e personaliz
 ### 1. Criação do Título Magnético
 **Título Ma
 
+
+## 2026-03-30 09:54 — Gere 5 DMs únicas e personalizadas para abordar donos de loj
+**Status:** ✅ Sucesso
+**Duração:** 10.8s
+- [integration] Integrações: instagram
+- [process] Gere 5 DMs únicas e personalizadas para abordar donos de loja de roupas no Insta → ## [Geração de DMs para Dones de Loja de Roupas] — Relatório de Execução
+
+[Execução e resultados concretos]
+
+Foram criadas 5 DMs únicas e personalizad
+

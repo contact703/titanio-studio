@@ -1,21 +1,35 @@
 {
-  "timestamp": "2026-03-30 09:17",
+  "timestamp": "2026-03-30 09:49",
   "markets_total": 30,
-  "opportunities": 2,
+  "opportunities": 3,
   "analyses": [
     {
       "question": "OpenAI receives federal backstop for infrastructure before July?",
       "yes": 0.275,
       "no": 0.725,
-      "volume": 99743.73505899977,
+      "volume": 99745.61505899977,
       "analysis": {
         "confianca": 75,
         "direcao": "NO",
-        "razao": "Apoio federal para infraestrutura de IA envolve processos regulatórios complexos e longos debates no Congresso, improvável em 6 meses",
+        "razao": "Processo legislativo americano é lento e complexo, especialmente para subsídios federais a empresas privadas. Julho é prazo muito curto para aprovação congressual.",
         "risco": "medio"
       },
-      "timestamp": "2026-03-30 09:17",
+      "timestamp": "2026-03-30 09:49",
       "condition_id": "0x388459f1cfd0d310154e13f16f49d31fd301e5e3502072c8b09d3a0697b2823f"
+    },
+    {
+      "question": "Will TISZA – Respect and Freedom Party (TISZA) win the most seats in the next Hungarian parliamentary election?",
+      "yes": 0.685,
+      "no": 0.315,
+      "volume": 996449.7379770045,
+      "analysis": {
+        "confianca": 25,
+        "direcao": "NO",
+        "razao": "Fidesz mantém forte controle há 14 anos, sistema eleitoral favorável ao partido no poder, TISZA é relativamente novo (2024)",
+        "risco": "alto"
+      },
+      "timestamp": "2026-03-30 09:49",
+      "condition_id": "0xfcde02af15efe40e336d67f0ef9aa49e9d40c37b92961fb890afc4afdbfe54d6"
     },
     {
       "question": "Will USD reach 1.8M Iranian rials by April 30?",
@@ -25,33 +39,33 @@
       "analysis": {
         "confianca": 75,
         "direcao": "YES",
-        "razao": "Iran enfrenta inflação severa, sanções internacionais e instabilidade econômica contínua, favorecendo desvalorização do rial",
+        "razao": "Rial iraniano historicamente volátil com tendência de desvalorização contínua devido a sanções e instabilidade econômica",
         "risco": "medio"
       },
-      "timestamp": "2026-03-30 09:17",
+      "timestamp": "2026-03-30 09:49",
       "condition_id": "0x699093850ff73cf30baa4c571272900c3162932f9745400256a6455d6b2d0789"
     }
   ],
   "top_events": [
     {
       "title": "Democratic Presidential Nominee 2028",
-      "volume": 939243244.6154685
+      "volume": 939517818.0846708
     },
     {
       "title": "Republican Presidential Nominee 2028",
-      "volume": 493629050.6032113
+      "volume": 493870344.99954134
     },
     {
       "title": "Presidential Election Winner 2028",
-      "volume": 473047524.1309303
+      "volume": 473211381.04278946
     },
     {
       "title": "2026 FIFA World Cup Winner ",
-      "volume": 427775708.2399082
+      "volume": 427940600.4854232
     },
     {
       "title": "English Premier League Winner ",
-      "volume": 312562000.97541183
+      "volume": 312565223.4273829
     }
   ]
 }
