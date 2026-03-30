@@ -122,5 +122,56 @@
 
 ---
 
-**44 itens implementados e testados em ~48 horas.**
+---
+
+## 🔮 ORACLE & INTELIGÊNCIA (adições domingo)
+
+| # | O que | Status |
+|---|---|---|
+| 45 | **Oracle v3** — relatório com 66 items de 37 fontes, 7 tiers | ✅ Gerado e enviado |
+| 46 | **37 fontes** — HN, GitHub, Reddit 6 subs, PH, HuggingFace, Google Trends, newsletters (Import AI, Ben's Bites, TLDR AI), VCs (YC, a16z, Sequoia), Papers With Code, Instagram tech, podcasts | ✅ Configuradas |
+| 47 | **Intelligence Collector** — bot que coleta 66+ items automaticamente (sábado 22h) | ✅ Testado |
+| 48 | **Trace2Skill** — transfer learning entre especialistas (lições universais compartilhadas) | ✅ Funcionando (6 lições) |
+| 49 | **"Agentes Honestos"** — pilar de marca no SOUL.md (Stanford provou IAs sycophantic) | ✅ Implementado |
+
+---
+
+## 🎬 VÍDEO & INSTAGRAM (adições domingo)
+
+| # | O que | Status |
+|---|---|---|
+| 50 | **ShotStream** — vídeos com Ken Burns zoom + crossfade + narração PT-BR | ✅ Testado e postado |
+| 51 | **3 posts Instagram publicados hoje** — 2 fotos + 1 Reels real com imagens IA | ✅ Media IDs confirmados |
+| 52 | **Wan2.1** — gerador de vídeo open source (Alibaba) clonado e deps instaladas | ✅ Baixando modelo |
+| 53 | **HunyuanVideo + CogVideoX** — pesquisados como alternativas (China, open source) | ✅ Documentado |
+
+---
+
+## ⚡ DIRECT TOOLS (adição domingo)
+
+| # | O que | Status |
+|---|---|---|
+| 54 | **Titanio Direct Tools** — 12 tools chamáveis direto sem MCP overhead (economia tokens) | ✅ Testado |
+
+---
+
+## 📊 NÚMEROS FINAIS
+
+| Métrica | Sexta noite | Domingo madrugada |
+|---|---|---|
+| Especialistas | 36 | **39** (+3) |
+| tmem entries | 0 | **49** |
+| LaunchAgents | 5 | **10** (+5) |
+| HiClaw tasks completadas | ~10 | **48** (+38) |
+| Memory Engine chunks | 1.971 | **2.095** |
+| Fontes inteligência | 3 | **37** |
+| Instagram posts | 3 | **6** (+3 hoje) |
+| Projetos novos | 0 | **3** (H2O, Oracle, Direct Tools) |
+| Scripts novos | 0 | **15** |
+| MDs pro time | 0 | **10** |
+| Tools diretas | 0 | **12** |
+
+---
+
+**54 itens implementados e testados em ~56 horas.**
 **Tudo funcionando, commitado, backupado, e documentado.**

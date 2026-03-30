@@ -1,4 +1,4 @@
-# 🧠 Contexto de Sessão — Auto-gerado 2026-03-30 03:53 BRT
+# 🧠 Contexto de Sessão — Auto-gerado 2026-03-30 04:24 BRT
 
 > LEIA ISTO ANTES DE RESPONDER QUALQUER COISA.
 > Este arquivo contém o que aconteceu nos últimos dias.
@@ -53,7 +53,7 @@
 - Script: ~/.openclaw/workspace/bin/video-analyze.sh "URL"
 - Tempo: ~15 segundos por vídeo
 
-## 📅 Memória 2026-03-30 (     146 linhas)
+## 📅 Memória 2026-03-30 (     150 linhas)
 
 - **21:08** [Content Writer] Roteiro completo de vídeo YouTube 8min sobre "dicas de finanças pessoais" para c → ✅ (14s)
 
@@ -84,7 +84,7 @@
 - **00:14** [Money Maker] Drop servicing: vendo "análise de concorrentes" para e-commerce por R$297. Crie: → ✅ (15s)
 
 - **00:14** [Money Maker] Ebook COMPLETO para vender na Hotmart sobre "guia completo de legendas que vende → ✅ (24s)
-... (mais 116 linhas em memory/2026-03-30.md)
+... (mais 120 linhas em memory/2026-03-30.md)
 
 ## 🔄 Último Flush 2026-03-30 (2026-03-30_00h.md)
 
@@ -279,9 +279,9 @@ Recomendação: $30 Polymarket + $20 Grid Trading
 - **UPGRADE-HICLAW-DEERFLOW.md** (29/03 21:39)
 - **UPGRADE-HELBER-MEMORY-ENGINE.md** (28/03 09:50)
 - **UPGRADE-FASE2-LIGHTNING-ESPECIALISTAS.md** (28/03 11:56)
+- **UPGRADE-DIRECT-TOOLS-HELBER-TIAGO.md** (30/03 04:01)
 - **UPGRADE-AAA-MEMORIA-FINAL.md** (28/03 10:18)
 - **TITANIO-BROWSER-SETUP.md** (28/03 14:51)
-- **SOUL.md** (30/03 03:01)
 
 ## 🛠️ Ferramentas Instaladas
 - **titanio-media.py** — Pipeline mídia IA (banners, narração, vídeo, imagens FLUX)
@@ -292,4 +292,4 @@ Recomendação: $30 Polymarket + $20 Grid Trading
 - **Dashboard Titanio 2.0** — 3 instâncias (Eduardo:4444, Helber:4445, Tiago:4446)
 
 ---
-_Gerado: 03:53 BRT 30/03/2026 | 292 linhas, 16439 bytes | Refresh: a cada 30min_
+_Gerado: 04:24 BRT 30/03/2026 | 292 linhas, 16468 bytes | Refresh: a cada 30min_

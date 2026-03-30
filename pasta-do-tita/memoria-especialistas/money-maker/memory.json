@@ -2,14 +2,34 @@
   "sessions": [],
   "stats": {
     "sessionsCount": 0,
-    "tasksCompleted": 533,
+    "tasksCompleted": 535,
     "lessonsLearned": 61,
     "tokensUsed": 0,
-    "avgTaskDurationMs": 15313,
+    "avgTaskDurationMs": 15562,
     "tasksFailed": 5
   },
   "knowledge": [],
   "recentTasks": [
+    {
+      "id": "2ee6985d-e932-4d48-87e9-475283108728",
+      "title": "Drop servicing: vendo \"relatório de redes sociais\" para restaurante por R$197. Crie: (1) proposta comercial pronta pra enviar, (2) execute o serviço completo com IA agora (resultado real para entregar ao cliente). Email: siriguejo@proton.me",
+      "description": "",
+      "status": "completed",
+      "startedAt": "2026-03-30T07:18:23.659Z",
+      "completedAt": "2026-03-30T07:18:49.488Z",
+      "result": "## [Drop Servicing - Relatório de Redes Sociais para Restaurante] — Relatório de Execução\n\n[Execução e resultados concretos]\n\n### 1. Criação da Proposta Comercial\n**Título:** Análise de Redes Sociais para Restaurantes\n\n**Proposta Comercial:**\nPrezado proprietário de restaurante,\n\nNosso time especializado em inteligência de redes sociais está oferecendo um serviço de análise de redes sociais que vai revelar insights valiosos para impulsionar a presença digital de seu restaurante. Por apenas R$197",
+      "durationMs": 25829
+    },
+    {
+      "id": "2350ad40-8e78-40e4-a4c5-d5edaa55ed05",
+      "title": "Gere 5 DMs únicas e personalizadas para abordar donos de clínica estética no Instagram oferecendo pack de legendas por R$97. Cada DM diferente, máx 3 linhas, casual, com [NOME] como placeholder. Email: siriguejo@proton.me",
+      "description": "",
+      "status": "completed",
+      "startedAt": "2026-03-30T07:18:23.643Z",
+      "completedAt": "2026-03-30T07:18:40.505Z",
+      "result": "## [Geração de DMs para Dones de Clínica Estética] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nForam criadas 5 DMs únicas e personalizadas para abordar donos de clínica estética no Instagram oferecendo pack de legendas por R$97. Cada mensagem é diferente, contém no máximo 3 linhas e é casual, incluindo [NOME] como placeholder. Aqui estão as mensagens:\n\n1. \"Oi [NOME], viu que sua clínica está impressionante! Que tal impulsionar ainda mais com nosso pack de legendas por R$97? Vamos",
+      "durationMs": 16862
+    },
     {
       "id": "31cc150a-837c-46e2-a934-23d93158bb58",
       "title": "Gere 5 DMs únicas e personalizadas para abordar donos de salão de beleza no Instagram oferecendo pack de legendas por R$97. Cada DM diferente, máx 3 linhas, casual, com [NOME] como placeholder. Email: siriguejo@proton.me",
@@ -486,26 +506,6 @@
       "completedAt": "2026-03-29T18:04:15.515Z",
       "result": "## [Geração de DMs para Dones de Salão de Beleza] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nForam criadas 5 DMs únicas e personalizadas para abordar donos de salão de beleza no Instagram oferecendo pack de legendas por R$97. Cada mensagem é diferente, contém no máximo 3 linhas e é casual, incluindo [NOME] como placeholder. Aqui estão as mensagens:\n\n1. \"Oi [NOME], viu que seu salão de beleza é show! Que tal dar um up na sua presença online? Tenho um pack de legendas que vai faze",
       "durationMs": 11382
-    },
-    {
-      "id": "51966f52-658d-4a3c-8aae-8ba86d0f534d",
-      "title": "Gere 5 DMs únicas e personalizadas para abordar donos de restaurante no Instagram oferecendo pack de legendas por R$97. Cada DM diferente, máx 3 linhas, casual, com [NOME] como placeholder. Email: siriguejo@proton.me",
-      "description": "",
-      "status": "completed",
-      "startedAt": "2026-03-29T17:33:46.108Z",
-      "completedAt": "2026-03-29T17:33:58.346Z",
-      "result": "## [Geração de DMs para Dones de Restaurante] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nForam criadas 5 DMs únicas e personalizadas para abordar donos de restaurante no Instagram oferecendo pack de legendas por R$97. Cada mensagem é diferente, contém no máximo 3 linhas e é casual, incluindo [NOME] como placeholder. Aqui estão as mensagens:\n\n1. \"Oi [NOME], tem um segredo de como seus posts podem ficar mais appetitosos? Nosso pack de legendas por apenas R$97 vai deixar sua comida",
-      "durationMs": 12238
-    },
-    {
-      "id": "83000c4d-325c-42eb-a313-d75f2466d8a5",
-      "title": "Drop servicing: vendo \"kit de conteúdo mensal\" para clínica por R$397. Crie: (1) proposta comercial pronta pra enviar, (2) execute o serviço completo com IA agora (resultado real para entregar ao cliente). Email: siriguejo@proton.me",
-      "description": "",
-      "status": "completed",
-      "startedAt": "2026-03-29T17:03:25.204Z",
-      "completedAt": "2026-03-29T17:03:44.149Z",
-      "result": "## [Drop Servicing - Kit de Conteúdo Mensal para Clínica] — Relatório de Execução\n\n[Execução e resultados concretos]\n\n### 1. Criação da Proposta Comercial\n**Título:** Kit de Conteúdo Mensal para Clínica\n\n**Proposta Comercial:**\nPrezado dono de clínica,\n\nNosso time especializado em IA oferece um kit de conteúdo mensal para clínicas que buscam melhorar a presença digital e aumentar a geração de leads. O kit é personalizado e inclui:\n\n- 4 posts exclusivos para Instagram\n- 2 stories atrativas\n- 1 ví",
-      "durationMs": 18945
     }
   ],
   "activeContext": {
@@ -513,5 +513,5 @@
     "currentProject": null,
     "startedAt": null
   },
-  "lastActive": "2026-03-30T06:48:20.900Z"
+  "lastActive": "2026-03-30T07:18:49.488Z"
 }
