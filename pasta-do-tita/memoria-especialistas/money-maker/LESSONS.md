@@ -2395,3 +2395,14 @@ Foram criadas 5 DMs únicas e personalizadas
 
 ### 1. Criação da Proposta Comer
 
+
+## 2026-03-30 08:53 — Gere 5 DMs únicas e personalizadas para abordar donos de sal
+**Status:** ✅ Sucesso
+**Duração:** 9.5s
+- [integration] Integrações: instagram
+- [process] Gere 5 DMs únicas e personalizadas para abordar donos de salão de beleza no Inst → ## [Geração de DMs para Dones de Salão de Beleza] — Relatório de Execução
+
+[Execução e resultados concretos]
+
+Foram criadas 5 DMs únicas e personaliza
+
