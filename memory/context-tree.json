@@ -86,6 +86,10 @@
       {
         "text": "Titanio Media Machine: titanio-auto-post.sh criado. 3 posts/dia (09h, 14h, 19h) + 1 Reels/dia (20h). 15 temas rotativos. LaunchAgents ativos.",
         "date": "2026-03-29 21:55"
+      },
+      {
+        "text": "Instagram Reels REAL publicado 30/03: 3 imagens IA (robot, agents, future) + narração PT-BR + Ken Burns zoom + crossfade. Media ID 3864055515018228171. ShotStream funciona!",
+        "date": "2026-03-30 03:16"
       }
     ],
     "dashboard": [
@@ -130,6 +134,10 @@
       {
         "text": "FIX SEGURANÇA: tita-specialist-learned.sh ANTES truncava lições >500 linhas. CORRIGIDO: nunca mais apaga. 25 scripts auditados, ZERO apagam memória. Backup NUNCA deleta (6.3TB livres).",
         "date": "2026-03-30 02:22"
+      },
+      {
+        "text": "Oracle v3: YC AI Stack publicado (alinhar nossa stack), Stanford sycophancy mainstream (Agentes Honestos timing perfeito), HuggingFace validou Trace2Skill+ShotStream (estamos junto com a tendência). 5 passos: publicar stack, token economy, manifesto cinema+IA, paper memória, public APIs.",
+        "date": "2026-03-30 03:23"
       }
     ],
     "mandaanota": [
@@ -156,6 +164,12 @@
       {
         "text": "Backup 3-2-1 implementado: 3 cópias (original+disco+GitHub), diário/semanal/mensal, cofre encriptado separado, checksums SHA256, N8n export automático. 336 arquivos, 23MB. Testado e funcionando.",
         "date": "2026-03-30 02:12"
+      }
+    ],
+    "instagram": [
+      {
+        "text": "Oracle fontes expandidas: 37 fontes em 7 tiers (essential, intelligence, market, niche, newsletters, instagram, deep). Import AI, Ben's Bites, TLDR AI, Latent Space, a16z, YC, Papers With Code.",
+        "date": "2026-03-30 03:16"
       }
     ]
   },
@@ -189,5 +203,5 @@
   ],
   "credentials": {},
   "workflows": {},
-  "last_updated": "2026-03-30T02:49:41.078877"
+  "last_updated": "2026-03-30T03:23:42.501918"
 }

@@ -4,50 +4,50 @@
     {
       "title": "Founder of GitLab battles cancer by founding companies",
       "url": "https://sytse.com/cancer/",
-      "score": 1347,
+      "score": 1350,
       "comments": 248
     },
     {
       "title": "Spanish legislation as a Git repo",
       "url": "https://github.com/EnriqueLop/legalize-es",
-      "score": 794,
+      "score": 795,
       "comments": 227
     },
     {
       "title": "AI overly affirms users asking for personal advice",
       "url": "https://news.stanford.edu/stories/2026/03/ai-advice-sycophantic-models-research",
-      "score": 761,
-      "comments": 597
+      "score": 765,
+      "comments": 599
     },
     {
       "title": "LinkedIn uses 2.4 GB RAM across two tabs",
       "url": "",
-      "score": 681,
-      "comments": 394
+      "score": 688,
+      "comments": 396
     },
     {
       "title": "I decompiled the White House's new app",
       "url": "https://thereallo.dev/blog/decompiling-the-white-house-app",
       "score": 629,
-      "comments": 231
+      "comments": 232
     },
     {
       "title": "Say No to Palantir in Europe",
       "url": "https://action.wemove.eu/sign/2026-03-palantir-petition-EN",
-      "score": 536,
-      "comments": 151
+      "score": 538,
+      "comments": 153
     },
     {
       "title": "Nitrile and latex gloves may cause overestimation of microplastics",
       "url": "https://news.umich.edu/nitrile-and-latex-gloves-may-cause-overestimation-of-microplastics-u-m-study-reveals/",
-      "score": 534,
+      "score": 537,
       "comments": 241
     },
     {
-      "title": "CSS is DOOMed",
-      "url": "https://nielsleenheer.com/articles/2026/css-is-doomed-rendering-doom-in-3d-with-css/",
-      "score": 479,
-      "comments": 108
+      "title": "ChatGPT won't let you type until Cloudflare reads your React state",
+      "url": "https://www.buchodi.com/chatgpt-wont-let-you-type-until-cloudflare-reads-your-react-state-i-decrypted-the-program-that-does-it/",
+      "score": 480,
+      "comments": 336
     }
   ],
   "github_trending": [
@@ -96,19 +96,19 @@
     "ClaudeAI": [
       {
         "title": "Update on Session Limits",
-        "score": 1023
+        "score": 1026
       },
       {
         "title": "Jean-Claude",
-        "score": 417
+        "score": 428
       },
       {
         "title": "Nicolas Carlini (67.2k citations on Google Scholar) says Claude is a better security researcher than",
-        "score": 484
+        "score": 487
       },
       {
         "title": "Claude Usage Limits Discussion Megathread Ongoing (sort this by New!)",
-        "score": 80
+        "score": 101
       }
     ],
     "SaaS": [
@@ -118,29 +118,29 @@
       },
       {
         "title": "Customer asked if they could pay us more. I thought it was a joke. It wasn't.",
-        "score": 292
+        "score": 301
       },
       {
         "title": "Lost our entire database at 3am because I ran a migration script on production instead of staging. N",
-        "score": 104
+        "score": 106
       },
       {
         "title": "I'll be your first user. No catch.",
-        "score": 27
+        "score": 26
       }
     ],
     "MachineLearning": [
       {
         "title": "[D] Self-Promotion Thread",
-        "score": 16
+        "score": 17
       },
       {
         "title": "[D] Monthly Who's Hiring and Who wants to be Hired?",
-        "score": 14
+        "score": 16
       },
       {
         "title": "[P] Built an open source tool to find the location of any street picture",
-        "score": 175
+        "score": 182
       },
       {
         "title": "[P] Implemented TurboQuant in Python",
@@ -150,45 +150,41 @@
     "Entrepreneur": [
       {
         "title": "🎙️ Episode 003: AMA Ellie Heisler (Attorney - Entertainment Law) ) | /r/Entrepreneur Podcast",
-        "score": 9
-      },
-      {
-        "title": "Accomplishments and Lessons-Learned Saturday! - March 28, 2026",
-        "score": 14
-      },
-      {
-        "title": "Building is the easiest part, Distribution is challenging",
         "score": 11
       },
       {
-        "title": "Buying a company 4x profit",
-        "score": 9
+        "title": "Accomplishments and Lessons-Learned Saturday! - March 28, 2026",
+        "score": 13
       },
       {
-        "title": "Sold my business for over $100k",
-        "score": 61
+        "title": "Building is the easiest part, Distribution is challenging",
+        "score": 15
+      },
+      {
+        "title": "Buying a company 4x profit",
+        "score": 10
       }
     ],
     "Filmmakers": [
       {
         "title": "New Rules Regarding AI on /r/filmmakers!",
-        "score": 473
+        "score": 467
       },
       {
         "title": "READ THIS BEFORE ASKING A QUESTION! Official Filmmaking FAQ and Information Post",
-        "score": 976
+        "score": 980
       },
       {
         "title": "Is this just a really well-trained horse or is there some trickery going on?",
-        "score": 174
+        "score": 185
       },
       {
         "title": "I physically printed every single frame of my short film on embossed paper and rescanned them. Thoug",
-        "score": 481
+        "score": 487
       },
       {
         "title": "Francis Ford Coppola's Former California Home Where He Wrote \"The Godfather\" Lists For $6.75 Million",
-        "score": 68
+        "score": 69
       }
     ]
   },
@@ -197,7 +193,7 @@
       "name": "Performing security verification"
     },
     {
-      "name": "Ray ID: 9e44d2959b5397cc"
+      "name": "Ray ID: 9e4503098b1ac72e"
     },
     {
       "name": "Performance and Security by Cloudflare"

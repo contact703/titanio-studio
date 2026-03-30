@@ -4,9 +4,9 @@
     "zica": 6,
     "comfyui": 1,
     "eduardo": 1,
-    "titanio-media": 2,
+    "titanio-media": 3,
     "dashboard": 3,
-    "memory-system": 7,
+    "memory-system": 8,
     "helber": 1,
     "tiago": 2,
     "mandaanota": 1,
@@ -15,7 +15,8 @@
     "general": 7,
     "n8n": 3,
     "lessons": 3,
-    "decisions": 1
+    "decisions": 1,
+    "instagram": 1
   },
   "entries": [
     {
@@ -332,7 +333,28 @@
       "subtopic": null,
       "date": "2026-03-30 02:49",
       "id": 44
+    },
+    {
+      "text": "Instagram Reels REAL publicado 30/03: 3 imagens IA (robot, agents, future) + narração PT-BR + Ken Burns zoom + crossfade. Media ID 3864055515018228171. ShotStream funciona!",
+      "category": "projects",
+      "subtopic": "titanio-media",
+      "date": "2026-03-30 03:16",
+      "id": 45
+    },
+    {
+      "text": "Oracle fontes expandidas: 37 fontes em 7 tiers (essential, intelligence, market, niche, newsletters, instagram, deep). Import AI, Ben's Bites, TLDR AI, Latent Space, a16z, YC, Papers With Code.",
+      "category": "projects",
+      "subtopic": "instagram",
+      "date": "2026-03-30 03:16",
+      "id": 46
+    },
+    {
+      "text": "Oracle v3: YC AI Stack publicado (alinhar nossa stack), Stanford sycophancy mainstream (Agentes Honestos timing perfeito), HuggingFace validou Trace2Skill+ShotStream (estamos junto com a tendência). 5 passos: publicar stack, token economy, manifesto cinema+IA, paper memória, public APIs.",
+      "category": "projects",
+      "subtopic": "memory-system",
+      "date": "2026-03-30 03:23",
+      "id": 47
     }
   ],
-  "last_updated": "2026-03-30T02:49:41.078621"
+  "last_updated": "2026-03-30T03:23:42.501685"
 }

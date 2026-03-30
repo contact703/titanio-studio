@@ -1,0 +1,39 @@
+{
+  "newsletters": [],
+  "deep": [
+    {
+      "source": "indiehackers",
+      "text": "Performing security verification"
+    },
+    {
+      "source": "indiehackers",
+      "text": "Performance and Security by Cloudflare"
+    }
+  ],
+  "vc_insights": [
+    {
+      "source": "ycombinator",
+      "text": "Adding Canada Back to Our List of Accepted Countries of Incorporation"
+    },
+    {
+      "source": "ycombinator",
+      "text": "Congratulations to EquipmentShare on Going Public"
+    },
+    {
+      "source": "ycombinator",
+      "text": "Announcing the YC AI Stack"
+    },
+    {
+      "source": "ycombinator",
+      "text": "by Tim Brady12/10/2025"
+    },
+    {
+      "source": "ycombinator",
+      "text": "Congratulations to Groww"
+    },
+    {
+      "source": "ycombinator",
+      "text": "by Jon Levy11/12/2025"
+    }
+  ]
+}

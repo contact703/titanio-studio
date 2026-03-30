@@ -1,34 +1,277 @@
 {
   "sources": {
     "tier1_essential": [
-      {"name": "HackerNews Best", "url": "https://news.ycombinator.com/best", "type": "aggregator", "frequency": "daily", "why": "Top developers/founders discutem tendências reais"},
-      {"name": "GitHub Trending", "url": "https://github.com/trending?since=weekly", "type": "code", "frequency": "weekly", "why": "O que devs estão construindo AGORA"},
-      {"name": "Reddit r/LocalLLaMA", "url": "https://www.reddit.com/r/LocalLLaMA/hot.json", "type": "community", "frequency": "daily", "why": "Modelos locais, hardware, benchmarks"},
-      {"name": "Reddit r/ClaudeAI", "url": "https://www.reddit.com/r/ClaudeAI/hot.json", "type": "community", "frequency": "daily", "why": "Updates Claude, limits, uso real"},
-      {"name": "Reddit r/SaaS", "url": "https://www.reddit.com/r/SaaS/hot.json", "type": "business", "frequency": "weekly", "why": "Estratégias SaaS, pricing, growth"},
-      {"name": "Product Hunt", "url": "https://www.producthunt.com", "type": "products", "frequency": "daily", "why": "Novos produtos IA lançando TODO DIA"}
+      {
+        "name": "HackerNews Best",
+        "url": "https://news.ycombinator.com/best",
+        "type": "aggregator",
+        "frequency": "daily",
+        "why": "Top developers/founders discutem tendências reais"
+      },
+      {
+        "name": "GitHub Trending",
+        "url": "https://github.com/trending?since=weekly",
+        "type": "code",
+        "frequency": "weekly",
+        "why": "O que devs estão construindo AGORA"
+      },
+      {
+        "name": "Reddit r/LocalLLaMA",
+        "url": "https://www.reddit.com/r/LocalLLaMA/hot.json",
+        "type": "community",
+        "frequency": "daily",
+        "why": "Modelos locais, hardware, benchmarks"
+      },
+      {
+        "name": "Reddit r/ClaudeAI",
+        "url": "https://www.reddit.com/r/ClaudeAI/hot.json",
+        "type": "community",
+        "frequency": "daily",
+        "why": "Updates Claude, limits, uso real"
+      },
+      {
+        "name": "Reddit r/SaaS",
+        "url": "https://www.reddit.com/r/SaaS/hot.json",
+        "type": "business",
+        "frequency": "weekly",
+        "why": "Estratégias SaaS, pricing, growth"
+      },
+      {
+        "name": "Product Hunt",
+        "url": "https://www.producthunt.com",
+        "type": "products",
+        "frequency": "daily",
+        "why": "Novos produtos IA lançando TODO DIA"
+      }
     ],
     "tier2_intelligence": [
-      {"name": "ArXiv AI", "url": "https://arxiv.org/list/cs.AI/recent", "type": "research", "frequency": "weekly", "why": "Papers de pesquisa — o que vem ANTES do mercado"},
-      {"name": "Hugging Face Papers", "url": "https://huggingface.co/papers", "type": "research", "frequency": "weekly", "why": "Papers mais hypados da semana"},
-      {"name": "Reddit r/MachineLearning", "url": "https://www.reddit.com/r/MachineLearning/hot.json", "type": "research", "frequency": "weekly", "why": "ML avançado, novos modelos"},
-      {"name": "OpenClaw GitHub", "url": "https://github.com/openclaw/openclaw/releases", "type": "platform", "frequency": "weekly", "why": "Updates da nossa plataforma base"},
-      {"name": "OpenClaw Discord", "url": "https://discord.com/invite/clawd", "type": "community", "frequency": "weekly", "why": "Comunidade, bugs, features pedidas"},
-      {"name": "ClaHub", "url": "https://clawhub.com", "type": "skills", "frequency": "weekly", "why": "Novos skills pro OpenClaw"}
+      {
+        "name": "ArXiv AI",
+        "url": "https://arxiv.org/list/cs.AI/recent",
+        "type": "research",
+        "frequency": "weekly",
+        "why": "Papers de pesquisa — o que vem ANTES do mercado"
+      },
+      {
+        "name": "Hugging Face Papers",
+        "url": "https://huggingface.co/papers",
+        "type": "research",
+        "frequency": "weekly",
+        "why": "Papers mais hypados da semana"
+      },
+      {
+        "name": "Reddit r/MachineLearning",
+        "url": "https://www.reddit.com/r/MachineLearning/hot.json",
+        "type": "research",
+        "frequency": "weekly",
+        "why": "ML avançado, novos modelos"
+      },
+      {
+        "name": "OpenClaw GitHub",
+        "url": "https://github.com/openclaw/openclaw/releases",
+        "type": "platform",
+        "frequency": "weekly",
+        "why": "Updates da nossa plataforma base"
+      },
+      {
+        "name": "OpenClaw Discord",
+        "url": "https://discord.com/invite/clawd",
+        "type": "community",
+        "frequency": "weekly",
+        "why": "Comunidade, bugs, features pedidas"
+      },
+      {
+        "name": "ClaHub",
+        "url": "https://clawhub.com",
+        "type": "skills",
+        "frequency": "weekly",
+        "why": "Novos skills pro OpenClaw"
+      }
     ],
     "tier3_market": [
-      {"name": "TechCrunch AI", "url": "https://techcrunch.com/category/artificial-intelligence/", "type": "news", "frequency": "daily", "why": "Funding, exits, M&A em IA"},
-      {"name": "The Information", "url": "https://www.theinformation.com", "type": "news", "frequency": "weekly", "why": "Intel de bastidores da indústria"},
-      {"name": "Reddit r/Entrepreneur", "url": "https://www.reddit.com/r/Entrepreneur/hot.json", "type": "business", "frequency": "weekly", "why": "Ideias, validação, PMF"},
-      {"name": "IndieHackers", "url": "https://www.indiehackers.com", "type": "business", "frequency": "weekly", "why": "Founders solo, receita, growth hacks"},
-      {"name": "Google Trends", "url": "https://trends.google.com/trending?geo=BR", "type": "trends", "frequency": "daily", "why": "O que o Brasil tá buscando"}
+      {
+        "name": "TechCrunch AI",
+        "url": "https://techcrunch.com/category/artificial-intelligence/",
+        "type": "news",
+        "frequency": "daily",
+        "why": "Funding, exits, M&A em IA"
+      },
+      {
+        "name": "The Information",
+        "url": "https://www.theinformation.com",
+        "type": "news",
+        "frequency": "weekly",
+        "why": "Intel de bastidores da indústria"
+      },
+      {
+        "name": "Reddit r/Entrepreneur",
+        "url": "https://www.reddit.com/r/Entrepreneur/hot.json",
+        "type": "business",
+        "frequency": "weekly",
+        "why": "Ideias, validação, PMF"
+      },
+      {
+        "name": "IndieHackers",
+        "url": "https://www.indiehackers.com",
+        "type": "business",
+        "frequency": "weekly",
+        "why": "Founders solo, receita, growth hacks"
+      },
+      {
+        "name": "Google Trends",
+        "url": "https://trends.google.com/trending?geo=BR",
+        "type": "trends",
+        "frequency": "daily",
+        "why": "O que o Brasil tá buscando"
+      }
     ],
     "tier4_niche": [
-      {"name": "Film Industry Network", "url": "https://www.reddit.com/r/Filmmakers/hot.json", "type": "cinema", "frequency": "weekly", "why": "Tendências cinema — relevante pra H2O"},
-      {"name": "Polymarket", "url": "https://polymarket.com", "type": "prediction", "frequency": "daily", "why": "Mercados de previsão — nosso trade"},
-      {"name": "Instagram @synthixlabs", "url": "https://instagram.com/synthixlabs", "type": "social", "frequency": "weekly", "why": "Conteúdo tech IA no Instagram"},
-      {"name": "Anthropic Blog", "url": "https://www.anthropic.com/research", "type": "provider", "frequency": "weekly", "why": "Updates do Claude (nosso modelo principal)"},
-      {"name": "ANCINE", "url": "https://www.gov.br/ancine", "type": "cinema", "frequency": "monthly", "why": "Editais, regulação cinema BR — H2O"}
+      {
+        "name": "Film Industry Network",
+        "url": "https://www.reddit.com/r/Filmmakers/hot.json",
+        "type": "cinema",
+        "frequency": "weekly",
+        "why": "Tendências cinema — relevante pra H2O"
+      },
+      {
+        "name": "Polymarket",
+        "url": "https://polymarket.com",
+        "type": "prediction",
+        "frequency": "daily",
+        "why": "Mercados de previsão — nosso trade"
+      },
+      {
+        "name": "Instagram @synthixlabs",
+        "url": "https://instagram.com/synthixlabs",
+        "type": "social",
+        "frequency": "weekly",
+        "why": "Conteúdo tech IA no Instagram"
+      },
+      {
+        "name": "Anthropic Blog",
+        "url": "https://www.anthropic.com/research",
+        "type": "provider",
+        "frequency": "weekly",
+        "why": "Updates do Claude (nosso modelo principal)"
+      },
+      {
+        "name": "ANCINE",
+        "url": "https://www.gov.br/ancine",
+        "type": "cinema",
+        "frequency": "monthly",
+        "why": "Editais, regulação cinema BR — H2O"
+      }
+    ],
+    "tier5_newsletters": [
+      {
+        "name": "Import AI (Jack Clark)",
+        "url": "https://importai.substack.com",
+        "type": "newsletter",
+        "frequency": "weekly",
+        "why": "Deep dive em AI research por ex-OpenAI policy director"
+      },
+      {
+        "name": "The Batch (Andrew Ng)",
+        "url": "https://www.deeplearning.ai/the-batch/",
+        "type": "newsletter",
+        "frequency": "weekly",
+        "why": "AI news curado pelo Andrew Ng — prático e sem hype"
+      },
+      {
+        "name": "Ben's Bites",
+        "url": "https://bensbites.beehiiv.com",
+        "type": "newsletter",
+        "frequency": "daily",
+        "why": "Curadoria diária de AI tools e news pra builders"
+      },
+      {
+        "name": "AI Valley",
+        "url": "https://www.theaivalley.com",
+        "type": "newsletter",
+        "frequency": "daily",
+        "why": "Tools IA novos todo dia — oportunidades de mercado"
+      },
+      {
+        "name": "TLDR AI",
+        "url": "https://tldr.tech/ai",
+        "type": "newsletter",
+        "frequency": "daily",
+        "why": "Resumo rápido das top AI news do dia"
+      }
+    ],
+    "tier6_instagram_tech": [
+      {
+        "name": "@synthixlabs",
+        "url": "https://instagram.com/synthixlabs",
+        "type": "instagram",
+        "frequency": "daily",
+        "why": "Posts sobre repos e tools IA (quem mandou o DeerFlow)"
+      },
+      {
+        "name": "@this.girl.tech",
+        "url": "https://instagram.com/this.girl.tech",
+        "type": "instagram",
+        "frequency": "daily",
+        "why": "Repos underrated (quem mandou Coolify/PocketBase)"
+      },
+      {
+        "name": "@davision.eth",
+        "url": "https://instagram.com/davision.eth",
+        "type": "instagram",
+        "frequency": "daily",
+        "why": "OpenClaw + ByteRover + memory plugins"
+      },
+      {
+        "name": "@ai_daily_digest",
+        "url": "https://instagram.com/ai_daily_digest",
+        "type": "instagram",
+        "frequency": "daily",
+        "why": "Resumo diário IA no Instagram"
+      },
+      {
+        "name": "@theaivalley",
+        "url": "https://instagram.com/theaivalley",
+        "type": "instagram",
+        "frequency": "daily",
+        "why": "AI tools e news — muito seguido"
+      }
+    ],
+    "tier7_deep": [
+      {
+        "name": "Latent Space Podcast",
+        "url": "https://www.latent.space/podcast",
+        "type": "podcast",
+        "frequency": "weekly",
+        "why": "Entrevistas profundas com builders de AI (técnico)"
+      },
+      {
+        "name": "Y Combinator Blog",
+        "url": "https://www.ycombinator.com/blog",
+        "type": "blog",
+        "frequency": "weekly",
+        "why": "O que YC tá investindo = onde o mercado vai"
+      },
+      {
+        "name": "a16z AI Blog",
+        "url": "https://a16z.com/ai/",
+        "type": "blog",
+        "frequency": "weekly",
+        "why": "Andreessen Horowitz — maior VC de AI"
+      },
+      {
+        "name": "Sequoia AI Blog",
+        "url": "https://www.sequoiacap.com/article/ai/",
+        "type": "blog",
+        "frequency": "monthly",
+        "why": "Sequoia Capital — tendências macro de AI"
+      },
+      {
+        "name": "Papers With Code",
+        "url": "https://paperswithcode.com/latest",
+        "type": "research",
+        "frequency": "daily",
+        "why": "Papers com código — implementável direto"
+      }
     ]
   },
   "scraping_rules": {

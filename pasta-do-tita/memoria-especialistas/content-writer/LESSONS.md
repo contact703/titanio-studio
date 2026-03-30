@@ -304,3 +304,15 @@ Vou entregar um roteiro profissional, pronto para produção, com todas as camad
 - [integration] Integrações: youtube
 - [process] Tarefa demorou 91s — considerar otimização
 
+
+## 2026-03-30 03:18 — Roteiro completo de vídeo YouTube 8min sobre "dicas de finan
+**Status:** ✅ Sucesso
+**Duração:** 23.5s
+- [integration] Integrações: youtube
+- [process] Roteiro completo de vídeo YouTube 8min sobre "dicas de finanças pessoais" para c → ## [Roteiro de Vídeo YouTube] — Relatório de Execução
+
+[Execução e resultados concretos]
+
+### Título do Vídeo
+"SMART FINANCE: 8 Personal Finance Tips 
+
