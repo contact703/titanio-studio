@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-03-30 07:20",
+  "timestamp": "2026-03-30 07:51",
   "markets_total": 30,
-  "opportunities": 3,
+  "opportunities": 2,
   "analyses": [
     {
       "question": "OpenAI receives federal backstop for infrastructure before July?",
@@ -11,25 +11,11 @@
       "analysis": {
         "confianca": 75,
         "direcao": "NO",
-        "razao": "Julho está muito próximo para aprovação federal complexa, processo legislativo lento e falta precedentes claros para backstop de IA",
+        "razao": "Prazo muito curto para aprovação de backstop federal complexo, especialmente com mudança de governo recente e prioridades orçamentárias concorrentes",
         "risco": "medio"
       },
-      "timestamp": "2026-03-30 07:20",
+      "timestamp": "2026-03-30 07:51",
       "condition_id": "0x388459f1cfd0d310154e13f16f49d31fd301e5e3502072c8b09d3a0697b2823f"
-    },
-    {
-      "question": "Will Mikael Ishak score the most goals in the 2025-26 UEFA Europa Conference League?",
-      "yes": 0.655,
-      "no": 0.345,
-      "volume": 9958.918306,
-      "analysis": {
-        "confianca": 25,
-        "direcao": "NO",
-        "razao": "Jogador relativamente desconhecido em competição imprevisível com muitos atacantes talentosos",
-        "risco": "alto"
-      },
-      "timestamp": "2026-03-30 07:20",
-      "condition_id": "0x71116149166610ae90c5bbda1b3fed3c202e31f3d31599e39866466c7b985114"
     },
     {
       "question": "Will USD reach 1.8M Iranian rials by April 30?",
@@ -39,33 +25,33 @@
       "analysis": {
         "confianca": 75,
         "direcao": "YES",
-        "razao": "Rial iraniano em queda acelerada devido a sanções, instabilidade política e pressão econômica contínua",
+        "razao": "Rial iraniano tem histórico de desvalorização contínua devido a sanções econômicas e instabilidade política. Taxa atual já próxima deste valor.",
         "risco": "medio"
       },
-      "timestamp": "2026-03-30 07:20",
+      "timestamp": "2026-03-30 07:51",
       "condition_id": "0x699093850ff73cf30baa4c571272900c3162932f9745400256a6455d6b2d0789"
     }
   ],
   "top_events": [
     {
       "title": "Democratic Presidential Nominee 2028",
-      "volume": 938124925.8758734
+      "volume": 938440902.8191677
     },
     {
       "title": "Republican Presidential Nominee 2028",
-      "volume": 492827348.161007
+      "volume": 493041488.630083
     },
     {
       "title": "Presidential Election Winner 2028",
-      "volume": 472341309.9793035
+      "volume": 472536325.24793166
     },
     {
       "title": "2026 FIFA World Cup Winner ",
-      "volume": 427151581.5648642
+      "volume": 427319396.10906523
     },
     {
       "title": "English Premier League Winner ",
-      "volume": 312545198.3154489
+      "volume": 312552756.62436587
     }
   ]
 }

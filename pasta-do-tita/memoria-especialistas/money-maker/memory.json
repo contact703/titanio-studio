@@ -2,14 +2,34 @@
   "sessions": [],
   "stats": {
     "sessionsCount": 0,
-    "tasksCompleted": 544,
+    "tasksCompleted": 546,
     "lessonsLearned": 61,
     "tokensUsed": 0,
-    "avgTaskDurationMs": 20394,
+    "avgTaskDurationMs": 20319,
     "tasksFailed": 7
   },
   "knowledge": [],
   "recentTasks": [
+    {
+      "id": "056fba99-2529-4666-a34b-f4918720cff4",
+      "title": "Ebook COMPLETO para vender na Hotmart sobre \"como usar IA para triplicar suas vendas\": título magnético, página de vendas (headline + 3 bullets + preço R$47 + CTA), sumário 7 capítulos, capítulo 1 completo (300 palavras).",
+      "description": "",
+      "status": "completed",
+      "startedAt": "2026-03-30T10:53:01.593Z",
+      "completedAt": "2026-03-30T10:53:16.662Z",
+      "result": "## [Criação de Ebook para Venda na Hotmart] — Relatório de Execução\n\n[Execução e resultados concretos]\n\n### 1. Criação do Título Magnético\n**Título Magnético:**\n\"Vendas Exponenciais: Usando Inteligência Artificial para Triplicar suas Vendas em 90 Dias\"\n\n### 2. Criação da Página de Vendas\n**Headline:**\n\"Desbloqueie o Potencial da IA para Ampliar suas Vendas de Forma Exponencial!\"\n\n**3 Bullets:**\n- \"Acesso à estratégia革命性的 que usamos para aumentar as vendas de clientes em todo o mundo\"\n- \"Conheça ",
+      "durationMs": 15069
+    },
+    {
+      "id": "c2fcc566-f3cc-4112-b626-91fd13c73580",
+      "title": "Gere 5 DMs únicas e personalizadas para abordar donos de pet shop no Instagram oferecendo pack de legendas por R$97. Cada DM diferente, máx 3 linhas, casual, com [NOME] como placeholder. Email: siriguejo@proton.me",
+      "description": "",
+      "status": "completed",
+      "startedAt": "2026-03-30T10:53:01.586Z",
+      "completedAt": "2026-03-30T10:53:11.625Z",
+      "result": "## [Geração de DMs para Dones de Pet Shop] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nForam criadas 5 DMs únicas e personalizadas para abordar donos de pet shop no Instagram oferecendo pack de legendas por R$97. Cada mensagem é diferente, contém no máximo 3 linhas e é casual, incluindo [NOME] como placeholder para personalização. Abaixo, estão as 5 DMs:\n\n1. \"Oi [NOME], tem um pack de legendas que vai fazer sua pet shop explodir no Instagram por apenas R$97. Vamos dar um olhada? ",
+      "durationMs": 10039
+    },
     {
       "id": "597c66b2-944d-4f82-a698-f47ea4728ad6",
       "title": "Drop servicing: vendo \"relatório de redes sociais\" para restaurante por R$197. Crie: (1) proposta comercial pronta pra enviar, (2) execute o serviço completo com IA agora (resultado real para entregar ao cliente). Email: siriguejo@proton.me",
@@ -486,26 +506,6 @@
       "completedAt": "2026-03-29T21:06:46.908Z",
       "result": "## [Drop Servicing - Análise de Concorrentes para E-commerce] — Relatório de Execução\n\n[Execução e resultados concretos]\n\n### 1. Criação da Proposta Comercial\n**Título:** Análise de Concorrentes para E-commerce\n\n**Proposta:**\nCaro cliente,\n\nEstamos diante de uma oportunidade única de revolucionar a sua estratégia de e-commerce com a nossa solução personalizada de Análise de Concorrentes. Nossa proposta é desenvolver um relatório detalhado que analisa as estratégias, preços, produtos e métricas d",
       "durationMs": 14733
-    },
-    {
-      "id": "e02a4a0f-c5ac-4be4-9ffe-29d85a4ecfb6",
-      "title": "Ebook COMPLETO para vender na Hotmart sobre \"como usar IA para triplicar suas vendas\": título magnético, página de vendas (headline + 3 bullets + preço R$47 + CTA), sumário 7 capítulos, capítulo 1 completo (300 palavras).",
-      "description": "",
-      "status": "completed",
-      "startedAt": "2026-03-29T21:06:32.173Z",
-      "completedAt": "2026-03-29T21:06:49.929Z",
-      "result": "## [Criação de Ebook para Venda na Hotmart] — Relatório de Execução\n\n[Execução e resultados concretos]\n\n### 1. Criação do Título Magnético\n**Título Magnético:**\n\"Vendas Exponenciais: Usando Inteligência Artificial para Triplicar suas Vendas em 90 Dias\"\n\n### 2. Criação da Página de Vendas\n**Headline:**\n\"Desbloqueie o Potencial da IA para Ampliar suas Vendas Exponencialmente\"\n\n**3 Bullets:**\n- \"Aprendizado de Máquina e IA na sua Empresa: Como Configurar e Otimizar\"\n- \"Estratégias de Vendas com IA:",
-      "durationMs": 17756
-    },
-    {
-      "id": "c574a070-280e-49ea-a8bc-cae459d74c57",
-      "title": "Gere 5 DMs únicas e personalizadas para abordar donos de clínica estética no Instagram oferecendo pack de legendas por R$97. Cada DM diferente, máx 3 linhas, casual, com [NOME] como placeholder. Email: siriguejo@proton.me",
-      "description": "",
-      "status": "completed",
-      "startedAt": "2026-03-29T21:06:32.163Z",
-      "completedAt": "2026-03-29T21:06:43.186Z",
-      "result": "## [Geração de DMs para Dones de Clínica Estética] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nForam criadas 5 DMs únicas e personalizadas para abordar donos de clínica estética no Instagram oferecendo pack de legendas por R$97. Cada mensagem é diferente, contém no máximo 3 linhas e é casual, incluindo [NOME] como placeholder. Aqui estão as mensagens:\n\n1. \"Oi [NOME], viu que sua clínica está impressionante! Que tal impulsionar ainda mais com nosso pack de legendas por R$97? 🚀\"\n\n",
-      "durationMs": 11023
     }
   ],
   "activeContext": {
@@ -513,5 +513,5 @@
     "currentProject": null,
     "startedAt": null
   },
-  "lastActive": "2026-03-30T10:22:52.788Z"
+  "lastActive": "2026-03-30T10:53:16.662Z"
 }

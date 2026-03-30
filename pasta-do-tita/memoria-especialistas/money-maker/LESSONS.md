@@ -2351,3 +2351,25 @@ Foram criadas 5 DMs únicas e personalizad
 
 ### 1. Criação da Propos
 
+
+## 2026-03-30 07:53 — Gere 5 DMs únicas e personalizadas para abordar donos de pet
+**Status:** ✅ Sucesso
+**Duração:** 10.0s
+- [integration] Integrações: instagram
+- [process] Gere 5 DMs únicas e personalizadas para abordar donos de pet shop no Instagram o → ## [Geração de DMs para Dones de Pet Shop] — Relatório de Execução
+
+[Execução e resultados concretos]
+
+Foram criadas 5 DMs únicas e personalizadas par
+
+
+## 2026-03-30 07:53 — Ebook COMPLETO para vender na Hotmart sobre "como usar IA pa
+**Status:** ✅ Sucesso
+**Duração:** 15.1s
+- [process] Ebook COMPLETO para vender na Hotmart sobre "como usar IA para triplicar suas ve → ## [Criação de Ebook para Venda na Hotmart] — Relatório de Execução
+
+[Execução e resultados concretos]
+
+### 1. Criação do Título Magnético
+**Título Ma
+
