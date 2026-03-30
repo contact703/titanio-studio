@@ -2,14 +2,34 @@
   "sessions": [],
   "stats": {
     "sessionsCount": 0,
-    "tasksCompleted": 535,
+    "tasksCompleted": 537,
     "lessonsLearned": 61,
     "tokensUsed": 0,
-    "avgTaskDurationMs": 15562,
+    "avgTaskDurationMs": 15704,
     "tasksFailed": 5
   },
   "knowledge": [],
   "recentTasks": [
+    {
+      "id": "5db77786-5ea9-4051-aa57-b07b1f7d95c3",
+      "title": "Ebook COMPLETO para vender na Hotmart sobre \"guia completo de legendas que vendem no Instagram\": título magnético, página de vendas (headline + 3 bullets + preço R$47 + CTA), sumário 7 capítulos, capítulo 1 completo (300 palavras).",
+      "description": "",
+      "status": "completed",
+      "startedAt": "2026-03-30T07:48:51.809Z",
+      "completedAt": "2026-03-30T07:49:10.755Z",
+      "result": "## [Criação de Ebook para Venda na Hotmart] — Relatório de Execução\n\n[Execução e resultados concretos]\n\n### 1. Criação do Título Magnético\n**Título Magnético:**\n\"Legendas em Foco: Como Transformar Seu Instagram em uma Loja Virtual de Sucesso\"\n\n### 2. Desenvolvimento da Página de Vendas\n**Headline:**\n\"Abra as Portas de Sucesso no Instagram com a Arte de Vendas por Legendas\"\n\n**3 Bullets:**\n- \"Descubra como escrever legendas que impulsionam vendas e engajamento\"\n- \"Aprenda a personalizar suas lege",
+      "durationMs": 18946
+    },
+    {
+      "id": "987b9755-237c-4414-83ee-ba3271319db0",
+      "title": "Gere 5 DMs únicas e personalizadas para abordar donos de loja de roupas no Instagram oferecendo pack de legendas por R$97. Cada DM diferente, máx 3 linhas, casual, com [NOME] como placeholder. Email: siriguejo@proton.me",
+      "description": "",
+      "status": "completed",
+      "startedAt": "2026-03-30T07:48:51.803Z",
+      "completedAt": "2026-03-30T07:49:06.396Z",
+      "result": "## [Geração de DMs para Dones de Loja de Roupas] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nForam criadas 5 DMs únicas e personalizadas para abordar donos de loja de roupas no Instagram oferecendo pack de legendas por R$97. Cada mensagem é diferente, contém no máximo 3 linhas e é casual, incluindo [NOME] como placeholder. Aqui estão as mensagens:\n\n1. \"Oi [NOME], viu que sua loja de roupas está linda! Precisa de legendas para aumentar as vendas? Tenho um pack por R$97. Vamos conv",
+      "durationMs": 14593
+    },
     {
       "id": "2ee6985d-e932-4d48-87e9-475283108728",
       "title": "Drop servicing: vendo \"relatório de redes sociais\" para restaurante por R$197. Crie: (1) proposta comercial pronta pra enviar, (2) execute o serviço completo com IA agora (resultado real para entregar ao cliente). Email: siriguejo@proton.me",
@@ -486,26 +506,6 @@
       "completedAt": "2026-03-29T18:04:22.740Z",
       "result": "## [Drop Servicing - Análise de Concorrentes para E-commerce] — Relatório de Execução\n\n[Execução e resultados concretos]\n\n### 1. Criação da Proposta Comercial\n**Título:** Análise de Concorrentes para E-commerce\n\n**Proposta Comercial:**\nPrezado cliente,\n\nEstamos empolgados em apresentar a você nosso serviço de Análise de Concorrentes, desenvolvido para e-commerce, que custa apenas R$297. Nossa equipe especializada realizará uma análise aprofundada da atividade de seus concorrentes, fornecendo ins",
       "durationMs": 18598
-    },
-    {
-      "id": "3fa79665-57a4-4201-8891-80866acf3db4",
-      "title": "Ebook COMPLETO para vender na Hotmart sobre \"guia completo de legendas que vendem no Instagram\": título magnético, página de vendas (headline + 3 bullets + preço R$47 + CTA), sumário 7 capítulos, capítulo 1 completo (300 palavras).",
-      "description": "",
-      "status": "completed",
-      "startedAt": "2026-03-29T18:04:04.141Z",
-      "completedAt": "2026-03-29T18:04:19.331Z",
-      "result": "## [Criação de Ebook para Venda na Hotmart] — Relatório de Execução\n\n[Execução e resultados concretos]\n\n### 1. Criação do Título Magnético\n**Título Magnético:**\n\"Legendas em Foco: Como Transformar Seu Instagram em uma Loja Virtual de Sucesso\"\n\n### 2. Desenvolvimento da Página de Vendas\n**Headline:**\n\"Abra as Portas de Sucesso no Instagram com a Arte de Vendas por Legendas\"\n\n**3 Bullets:**\n- **\"Conquiste clientes com uma frase\":** Descubra como criar legendas que capturem a atenção e impulsionem ",
-      "durationMs": 15190
-    },
-    {
-      "id": "1638c8ca-781c-4d07-94d7-c1b0bc400527",
-      "title": "Gere 5 DMs únicas e personalizadas para abordar donos de salão de beleza no Instagram oferecendo pack de legendas por R$97. Cada DM diferente, máx 3 linhas, casual, com [NOME] como placeholder. Email: siriguejo@proton.me",
-      "description": "",
-      "status": "completed",
-      "startedAt": "2026-03-29T18:04:04.133Z",
-      "completedAt": "2026-03-29T18:04:15.515Z",
-      "result": "## [Geração de DMs para Dones de Salão de Beleza] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nForam criadas 5 DMs únicas e personalizadas para abordar donos de salão de beleza no Instagram oferecendo pack de legendas por R$97. Cada mensagem é diferente, contém no máximo 3 linhas e é casual, incluindo [NOME] como placeholder. Aqui estão as mensagens:\n\n1. \"Oi [NOME], viu que seu salão de beleza é show! Que tal dar um up na sua presença online? Tenho um pack de legendas que vai faze",
-      "durationMs": 11382
     }
   ],
   "activeContext": {
@@ -513,5 +513,5 @@
     "currentProject": null,
     "startedAt": null
   },
-  "lastActive": "2026-03-30T07:18:49.488Z"
+  "lastActive": "2026-03-30T07:49:10.755Z"
 }

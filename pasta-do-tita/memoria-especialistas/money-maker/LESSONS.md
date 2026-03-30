@@ -2242,3 +2242,26 @@ Foram criadas 5 DMs únicas e personaliz
 
 ### 1. Criação da Propos
 
+
+## 2026-03-30 04:49 — Gere 5 DMs únicas e personalizadas para abordar donos de loj
+**Status:** ✅ Sucesso
+**Duração:** 14.6s
+- [integration] Integrações: instagram
+- [process] Gere 5 DMs únicas e personalizadas para abordar donos de loja de roupas no Insta → ## [Geração de DMs para Dones de Loja de Roupas] — Relatório de Execução
+
+[Execução e resultados concretos]
+
+Foram criadas 5 DMs únicas e personalizad
+
+
+## 2026-03-30 04:49 — Ebook COMPLETO para vender na Hotmart sobre "guia completo d
+**Status:** ✅ Sucesso
+**Duração:** 18.9s
+- [integration] Integrações: instagram
+- [process] Ebook COMPLETO para vender na Hotmart sobre "guia completo de legendas que vende → ## [Criação de Ebook para Venda na Hotmart] — Relatório de Execução
+
+[Execução e resultados concretos]
+
+### 1. Criação do Título Magnético
+**Título Ma
+
