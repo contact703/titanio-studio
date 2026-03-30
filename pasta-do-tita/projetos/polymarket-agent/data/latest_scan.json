@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-03-30 13:45",
+  "timestamp": "2026-03-30 14:17",
   "markets_total": 30,
-  "opportunities": 5,
+  "opportunities": 3,
   "analyses": [
     {
       "question": "Will a dozen eggs cost between $2.25–2.50 in March?",
@@ -9,63 +9,63 @@
       "no": 0.44,
       "volume": 9996.513810999993,
       "analysis": {
-        "confianca": 72,
+        "confianca": 65,
         "direcao": "YES",
-        "razao": "Preços de ovos historicamente se estabilizam nessa faixa após picos de gripe aviária. Produção se recuperando gradualmente.",
+        "razao": "Preços de ovos historicamente sazonais, faixa $2.25-2.50 alinha com padrões típicos de março pós-picos de inverno",
         "risco": "medio"
       },
-      "timestamp": "2026-03-30 13:45",
+      "timestamp": "2026-03-30 14:17",
       "condition_id": "0x1987acaadb70417227fdf1aa56697fc04a157c9562146124dd1394d6dabf201e"
     },
     {
       "question": "OpenAI receives federal backstop for infrastructure before July?",
-      "yes": 0.285,
-      "no": 0.715,
+      "yes": 0.275,
+      "no": 0.725,
       "volume": 99804.27453899977,
       "analysis": {
         "confianca": 75,
         "direcao": "NO",
-        "razao": "Processo legislativo federal é lento, 6 meses é prazo muito curto para aprovação de backstop específico para OpenAI",
+        "razao": "Processo legislativo federal é lento, prazo até julho muito apertado para aprovação de backstop de infraestrutura específico para OpenAI",
         "risco": "medio"
       },
-      "timestamp": "2026-03-30 13:45",
+      "timestamp": "2026-03-30 14:17",
       "condition_id": "0x388459f1cfd0d310154e13f16f49d31fd301e5e3502072c8b09d3a0697b2823f"
     },
     {
-      "question": "Pistons vs. Thunder: O/U 218.5",
-      "yes": 0.505,
-      "no": 0.495,
-      "volume": 99782.44194799996,
+      "question": "Will Mikael Ishak score the most goals in the 2025-26 UEFA Europa Conference League?",
+      "yes": 0.695,
+      "no": 0.305,
+      "volume": 9958.918306,
       "analysis": {
-        "confianca": 35,
+        "confianca": 25,
         "direcao": "NO",
-        "razao": "Pistons tem defesa melhorada e ritmo mais lento recentemente, favorecendo under",
+        "razao": "Odds muito altas para um jogador específico em competição com muitas variáveis - lesões, forma, qualificação do clube",
         "risco": "alto"
       },
-      "timestamp": "2026-03-30 13:45",
-      "condition_id": "0x99d32be64dbe4f98fabb5f267dbd11a557d7151fc696a905cda411f147767390"
+      "timestamp": "2026-03-30 14:17",
+      "condition_id": "0x71116149166610ae90c5bbda1b3fed3c202e31f3d31599e39866466c7b985114"
     }
   ],
   "top_events": [
     {
       "title": "Democratic Presidential Nominee 2028",
-      "volume": 941805115.5757053
+      "volume": 942140653.9256415
     },
     {
       "title": "Republican Presidential Nominee 2028",
-      "volume": 495528945.7468577
+      "volume": 495700530.49512875
     },
     {
       "title": "Presidential Election Winner 2028",
-      "volume": 474502871.99102855
+      "volume": 474725046.07766074
     },
     {
       "title": "2026 FIFA World Cup Winner ",
-      "volume": 429811961.4866602
+      "volume": 429942064.52170914
     },
     {
       "title": "English Premier League Winner ",
-      "volume": 312603209.0763008
+      "volume": 312637853.18514484
     }
   ]
 }
