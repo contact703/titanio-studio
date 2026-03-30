@@ -2,14 +2,24 @@
   "sessions": [],
   "stats": {
     "sessionsCount": 0,
-    "tasksCompleted": 65,
+    "tasksCompleted": 66,
     "lessonsLearned": 46,
     "tokensUsed": 0,
-    "avgTaskDurationMs": 32583,
+    "avgTaskDurationMs": 31883,
     "tasksFailed": 3
   },
   "knowledge": [],
   "recentTasks": [
+    {
+      "id": "54c31208-3e2d-4d69-a90a-4d406a176075",
+      "title": "Roteiro completo de vídeo YouTube 8min sobre \"curiosidades sobre IA\" para canal FACELESS. Inclui: título CTR alto, thumbnail (descrição), script por cena com direção de b-roll, CTA para afiliado.",
+      "description": "",
+      "status": "completed",
+      "startedAt": "2026-03-30T08:19:11.151Z",
+      "completedAt": "2026-03-30T08:19:27.203Z",
+      "result": "## [Roteiro de Vídeo YouTube] — Relatório de Execução\n\n[Execução e resultados concretos]\n\n### Título do Vídeo\n\"AI SECRETS REVEALED: 8 Mind-Blowing Facts About Artificial Intelligence\"\n\n### Thumbnail Descrição\n\"Curiosidades sobre IA: Descubra 8 fatos incríveis sobre inteligência artificial que mudam a maneira como você pensa sobre a tecnologia.\"\n\n### Script por Cena\n\n**Introdução:**\n- Cena 1: Abertura com uma pergunta cativante: \"Você sabe o que a IA pode fazer hoje em dia? Prepare-se para ser su",
+      "durationMs": 16052
+    },
     {
       "id": "826328e7-7f07-4de3-a6ea-c1e3e467330d",
       "title": "Roteiro completo de vídeo YouTube 8min sobre \"dicas de finanças pessoais\" para canal FACELESS. Inclui: título CTR alto, thumbnail (descrição), script por cena com direção de b-roll, CTA para afiliado.",
@@ -493,16 +503,6 @@
       "description": "",
       "status": "in_progress",
       "startedAt": "2026-03-26T04:16:38.150Z"
-    },
-    {
-      "id": "0a36724b-f2e8-4078-a298-88e63a3cd641",
-      "title": "Roteiro completo de vídeo YouTube 8min sobre \"como ganhar dinheiro online\" para canal FACELESS. Inclui: título CTR alto, thumbnail (descrição), script por cena com direção de b-roll, CTA para afiliado.",
-      "description": "",
-      "status": "completed",
-      "startedAt": "2026-03-26T02:09:52.592Z",
-      "completedAt": "2026-03-26T02:10:38.109Z",
-      "result": "## [Roteiro de Vídeo YouTube] — Relatório de Execução\n\n[Execução e resultados concretos]\n\n### Título do Vídeo\n\"Descubra 5 Maneiras Surpresas de Ganhar Dinheiro Online Sem Investimento!\"\n\n### Thumbnail (Descrição)\n\"Cansado de procurar formas de ganhar dinheiro online? Este vídeo te mostra 5 maneiras surpreendentes e reais de ganhar dinheiro sem precisar investir um centavo! Clique e descubra agora!\"\n\n### Script por Cena com Direção de B-roll\n\n**Cena 1: Introdução**\n- B-roll: Imagens de pessoas tr",
-      "durationMs": 45517
     }
   ],
   "activeContext": {
@@ -510,5 +510,5 @@
     "currentProject": null,
     "startedAt": null
   },
-  "lastActive": "2026-03-30T06:18:05.762Z"
+  "lastActive": "2026-03-30T08:19:27.203Z"
 }

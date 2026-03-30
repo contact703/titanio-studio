@@ -2,14 +2,34 @@
   "sessions": [],
   "stats": {
     "sessionsCount": 0,
-    "tasksCompleted": 537,
+    "tasksCompleted": 538,
     "lessonsLearned": 61,
     "tokensUsed": 0,
-    "avgTaskDurationMs": 15704,
-    "tasksFailed": 5
+    "avgTaskDurationMs": 17165,
+    "tasksFailed": 6
   },
   "knowledge": [],
   "recentTasks": [
+    {
+      "id": "30600655-0f56-4a47-857c-cd9580e50db0",
+      "title": "Drop servicing: vendo \"kit de conteúdo mensal\" para clínica por R$397. Crie: (1) proposta comercial pronta pra enviar, (2) execute o serviço completo com IA agora (resultado real para entregar ao cliente). Email: siriguejo@proton.me",
+      "description": "",
+      "status": "failed",
+      "startedAt": "2026-03-30T08:19:11.134Z",
+      "completedAt": "2026-03-30T08:20:41.465Z",
+      "result": "⚠️ Money Maker encontrou um problema: Nenhuma API disponível. Verifique a conexão com o OpenClaw Gateway.",
+      "durationMs": 90331
+    },
+    {
+      "id": "76c61462-2598-4545-912d-1f5365cf2e15",
+      "title": "Gere 5 DMs únicas e personalizadas para abordar donos de pet shop no Instagram oferecendo pack de legendas por R$97. Cada DM diferente, máx 3 linhas, casual, com [NOME] como placeholder. Email: siriguejo@proton.me",
+      "description": "",
+      "status": "completed",
+      "startedAt": "2026-03-30T08:19:11.128Z",
+      "completedAt": "2026-03-30T08:19:22.671Z",
+      "result": "## [Geração de DMs para Dones de Pet Shop] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nForam criadas 5 DMs únicas e personalizadas para abordar donos de pet shop no Instagram oferecendo pack de legendas por R$97. Abaixo, você encontrará cada uma das mensagens, com o placeholder [NOME] para personalização final:\n\n1. \"Oi [NOME], viu que seu pet shop é show! Estou aqui para te ajudar a vender mais com legendas quentes por R$97. Vamos conversar? 🐾\"\n\n2. \"Ei [NOME], sei que gerir um p",
+      "durationMs": 11543
+    },
     {
       "id": "5db77786-5ea9-4051-aa57-b07b1f7d95c3",
       "title": "Ebook COMPLETO para vender na Hotmart sobre \"guia completo de legendas que vendem no Instagram\": título magnético, página de vendas (headline + 3 bullets + preço R$47 + CTA), sumário 7 capítulos, capítulo 1 completo (300 palavras).",
@@ -486,26 +506,6 @@
       "completedAt": "2026-03-29T19:05:07.862Z",
       "result": "## [Geração de DMs para Dones de Loja de Roupas] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nForam criadas 5 DMs únicas e personalizadas para abordar donos de loja de roupas no Instagram oferecendo pack de legendas por R$97. Cada mensagem é diferente, contém no máximo 3 linhas e é casual, incluindo [NOME] como placeholder. Aqui estão as mensagens:\n\n1. \"Oi [NOME], viu que sua loja está linda, mas e as legendas? Tenho um pack de legendas que vai deixar seu Instagram ainda mais vend",
       "durationMs": 13780
-    },
-    {
-      "id": "ebb5c8a2-ce39-48d3-8682-6c7e748380b0",
-      "title": "Gere 5 DMs únicas e personalizadas para abordar donos de clínica estética no Instagram oferecendo pack de legendas por R$97. Cada DM diferente, máx 3 linhas, casual, com [NOME] como placeholder. Email: siriguejo@proton.me",
-      "description": "",
-      "status": "completed",
-      "startedAt": "2026-03-29T18:34:36.943Z",
-      "completedAt": "2026-03-29T18:34:48.623Z",
-      "result": "## [Geração de DMs para Dones de Clínica Estética] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nForam criadas 5 DMs únicas e personalizadas para abordar donos de clínica estética no Instagram oferecendo pack de legendas por R$97. Cada mensagem é diferente, contém no máximo 3 linhas e é casual, incluindo [NOME] como placeholder. Aqui estão as mensagens:\n\n1. \"Oi [NOME], viu que sua clínica está linda! Tem interesse em aumentar suas vendas com legendas personalizadas por apenas R$97?",
-      "durationMs": 11680
-    },
-    {
-      "id": "b877e173-6da9-4597-b1f3-add0e3c465cf",
-      "title": "Drop servicing: vendo \"análise de concorrentes\" para e-commerce por R$297. Crie: (1) proposta comercial pronta pra enviar, (2) execute o serviço completo com IA agora (resultado real para entregar ao cliente). Email: siriguejo@proton.me",
-      "description": "",
-      "status": "completed",
-      "startedAt": "2026-03-29T18:04:04.142Z",
-      "completedAt": "2026-03-29T18:04:22.740Z",
-      "result": "## [Drop Servicing - Análise de Concorrentes para E-commerce] — Relatório de Execução\n\n[Execução e resultados concretos]\n\n### 1. Criação da Proposta Comercial\n**Título:** Análise de Concorrentes para E-commerce\n\n**Proposta Comercial:**\nPrezado cliente,\n\nEstamos empolgados em apresentar a você nosso serviço de Análise de Concorrentes, desenvolvido para e-commerce, que custa apenas R$297. Nossa equipe especializada realizará uma análise aprofundada da atividade de seus concorrentes, fornecendo ins",
-      "durationMs": 18598
     }
   ],
   "activeContext": {
@@ -513,5 +513,5 @@
     "currentProject": null,
     "startedAt": null
   },
-  "lastActive": "2026-03-30T07:49:10.755Z"
+  "lastActive": "2026-03-30T08:20:41.465Z"
 }

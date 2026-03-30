@@ -1,20 +1,20 @@
 {
-  "timestamp": "2026-03-30 04:51",
+  "timestamp": "2026-03-30 05:12",
   "markets_total": 30,
   "opportunities": 3,
   "analyses": [
     {
       "question": "Will the Miami Heat make the NBA Playoffs?",
-      "yes": 0.485,
-      "no": 0.515,
+      "yes": 0.49,
+      "no": 0.51,
       "volume": 99998.98551500005,
       "analysis": {
-        "confianca": 75,
+        "confianca": 72,
         "direcao": "YES",
-        "razao": "Heat historicamente supera expectativas, tem Jimmy Butler como líder experiente, e Spoelstra é um dos melhores técnicos da NBA. Conferência Leste tem algumas equipes fracas que abrem vagas nos playoffs.",
+        "razao": "Heat historicamente forte em playoffs, tem Jimmy Butler e organização competente, odds ligeiramente favoráveis ao NO parecem subestimar o time",
         "risco": "medio"
       },
-      "timestamp": "2026-03-30 04:51",
+      "timestamp": "2026-03-30 05:12",
       "condition_id": "0xe538b3af4e8d0368cff984c05c06badcf1233c6c8074a36f0d6e2ba37f538444"
     },
     {
@@ -25,47 +25,47 @@
       "analysis": {
         "confianca": 75,
         "direcao": "NO",
-        "razao": "Processo legislativo federal complexo e lento, OpenAI tem recursos privados suficientes, prazo de 6 meses muito apertado para aprovação governamental",
+        "razao": "Processo regulatório federal é lento, resistência política a subsídios tech, e prazo muito curto para aprovação",
         "risco": "medio"
       },
-      "timestamp": "2026-03-30 04:51",
+      "timestamp": "2026-03-30 05:12",
       "condition_id": "0x388459f1cfd0d310154e13f16f49d31fd301e5e3502072c8b09d3a0697b2823f"
     },
     {
       "question": "Will Mikael Ishak score the most goals in the 2025-26 UEFA Europa Conference League?",
-      "yes": 0.665,
-      "no": 0.335,
+      "yes": 0.55,
+      "no": 0.45,
       "volume": 9958.918306,
       "analysis": {
         "confianca": 25,
         "direcao": "NO",
-        "razao": "Odds muito favoráveis para um jogador específico em competição com muitos atacantes talentosos",
+        "razao": "Mercado específico demais com pouca liquidez e incertezas sobre participação dos times e forma do jogador",
         "risco": "alto"
       },
-      "timestamp": "2026-03-30 04:51",
+      "timestamp": "2026-03-30 05:12",
       "condition_id": "0x71116149166610ae90c5bbda1b3fed3c202e31f3d31599e39866466c7b985114"
     }
   ],
   "top_events": [
     {
       "title": "Democratic Presidential Nominee 2028",
-      "volume": 936897374.3895922
+      "volume": 937158698.2610781
     },
     {
       "title": "Republican Presidential Nominee 2028",
-      "volume": 492186717.4016277
+      "volume": 492234482.90725374
     },
     {
       "title": "Presidential Election Winner 2028",
-      "volume": 471700386.245666
+      "volume": 471741373.870534
     },
     {
       "title": "2026 FIFA World Cup Winner ",
-      "volume": 426183094.3599792
+      "volume": 426288391.84476924
     },
     {
       "title": "English Premier League Winner ",
-      "volume": 312527153.78830385
+      "volume": 312528840.24230385
     }
   ]
 }
