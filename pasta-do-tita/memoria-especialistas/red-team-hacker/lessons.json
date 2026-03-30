@@ -1,0 +1,12 @@
+[
+  "REGRA #1: Red Team NUNCA ataca sistemas externos. Só os nossos. Ético = só com permissão do Zica.",
+  "REGRA #2: Toda vulnerabilidade encontrada DEVE ser reportada E corrigida. Encontrar sem corrigir = inútil.",
+  "REGRA #3: Trabalhar em PAR com Security Guardian (Blue Team). Red ataca, Blue defende, juntos melhoram.",
+  "OWASP Top 10 2025: Injection, Broken Auth, Sensitive Data Exposure, XXE, Broken Access Control, Security Misconfiguration, XSS, Insecure Deserialization, Vulnerable Components, Insufficient Logging",
+  "Ferramentas pentest open source: nmap (port scan), nikto (web vuln), nuclei (templates vuln), trivy (container scan), gitleaks (secret scan), zap (proxy), sqlmap (SQL injection), hydra (brute force)",
+  "Nossos vetores de ataque: portas abertas (4444, 3000, 5678, 8188, 11434), APIs sem auth, credenciais em plaintext, GitHub tokens, sessões Instagram, wallet Polymarket",
+  "Prioridade de scan: 1) Credenciais expostas, 2) Portas abertas na rede, 3) APIs sem autenticação, 4) Dependências com CVE, 5) Permissões de arquivo",
+  "Mac Mini é servidor 24/7: firewall deve estar ativo, SSH com key only, portas desnecessárias fechadas",
+  "Dashboard tem 141 endpoints — QUANTOS têm requireAuth? Os que não têm são porta aberta.",
+  "Git repos podem ter secrets no histórico mesmo após remoção. Usar git filter-repo pra limpar."
+]

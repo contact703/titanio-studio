@@ -1,0 +1,12 @@
+{
+  "knowledge": [
+    "Stack Titanio: OpenClaw (gateway 18789), Dashboard (Express 4444), N8n (5678), Ollama (11434), ComfyUI (8188), Paperclip (3001)",
+    "Credenciais sensíveis: pasta-do-tita/cofre/ (10+ arquivos), .env files, polymarket-wallet.json (private key!), instagram session",
+    "3 Macs na rede local: Eduardo 192.168.18.174, Helber .170, Tiago .188 — todos acessam os mesmos serviços",
+    "GitHub tokens no openclaw.json em plaintext — risco se arquivo vazar",
+    "Gold Digger teve credenciais em plaintext detectadas pelo Security Guardian — parcialmente resolvido",
+    "Cofre removido do git tracking (.gitignore) em 27/03 — mas pode estar no histórico do git"
+  ],
+  "sessions": [],
+  "lessons": []
+}
