@@ -328,3 +328,15 @@ Vou entregar um roteiro profissional, pronto para produção, com todas as camad
 ### Título do Vídeo
 "AI SECRETS REVEALED: 8 Mind-Blowing Fac
 
+
+## 2026-03-30 07:23 — Roteiro completo de vídeo YouTube 8min sobre "como ganhar di
+**Status:** ✅ Sucesso
+**Duração:** 22.1s
+- [integration] Integrações: youtube
+- [process] Roteiro completo de vídeo YouTube 8min sobre "como ganhar dinheiro online" para  → ## [Roteiro de Vídeo YouTube] — Relatório de Execução
+
+[Execução e resultados concretos]
+
+### Título do Vídeo
+"ONLINE GOLD RUSH: 8 Proven Ways to Make
+

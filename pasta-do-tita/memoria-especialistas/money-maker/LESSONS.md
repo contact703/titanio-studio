@@ -2329,3 +2329,25 @@ Foram criadas 5 DMs únicas e personaliza
 
 Foram criadas 5 DMs únicas e personaliz
 
+
+## 2026-03-30 07:22 — Gere 5 DMs únicas e personalizadas para abordar donos de loj
+**Status:** ✅ Sucesso
+**Duração:** 10.9s
+- [integration] Integrações: instagram
+- [process] Gere 5 DMs únicas e personalizadas para abordar donos de loja de roupas no Insta → ## [Geração de DMs para Dones de Loja de Roupas] — Relatório de Execução
+
+[Execução e resultados concretos]
+
+Foram criadas 5 DMs únicas e personalizad
+
+
+## 2026-03-30 07:22 — Drop servicing: vendo "relatório de redes sociais" para rest
+**Status:** ✅ Sucesso
+**Duração:** 13.9s
+- [integration] Integrações: apple
+- [process] Drop servicing: vendo "relatório de redes sociais" para restaurante por R$197. C → ## [Drop Servicing - Relatório de Redes Sociais para Restaurante] — Relatório de Execução
+
+[Execução e resultados concretos]
+
+### 1. Criação da Propos
+

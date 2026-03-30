@@ -2,14 +2,24 @@
   "sessions": [],
   "stats": {
     "sessionsCount": 0,
-    "tasksCompleted": 66,
+    "tasksCompleted": 67,
     "lessonsLearned": 46,
     "tokensUsed": 0,
-    "avgTaskDurationMs": 31883,
+    "avgTaskDurationMs": 31406,
     "tasksFailed": 3
   },
   "knowledge": [],
   "recentTasks": [
+    {
+      "id": "a99e1338-c58f-4487-9042-342b126d952e",
+      "title": "Roteiro completo de vídeo YouTube 8min sobre \"como ganhar dinheiro online\" para canal FACELESS. Inclui: título CTR alto, thumbnail (descrição), script por cena com direção de b-roll, CTA para afiliado.",
+      "description": "",
+      "status": "completed",
+      "startedAt": "2026-03-30T10:22:38.934Z",
+      "completedAt": "2026-03-30T10:23:01.084Z",
+      "result": "## [Roteiro de Vídeo YouTube] — Relatório de Execução\n\n[Execução e resultados concretos]\n\n### Título do Vídeo\n\"ONLINE GOLD RUSH: 8 Proven Ways to Make Money Online in 2026\"\n\n### Thumbnail Descrição\n\"Discover the secrets to earning a full-time income from the comfort of your home. Click to uncover 8 effective strategies for making money online in 2026.\"\n\n---\n\n### 📋 METADADOS DO VÍDEO\n\n| Campo | Conteúdo |\n|-------|----------|\n| **Duração** | 8 minutos |\n| **Formato** | Faceless (sem apresentador",
+      "durationMs": 22150
+    },
     {
       "id": "54c31208-3e2d-4d69-a90a-4d406a176075",
       "title": "Roteiro completo de vídeo YouTube 8min sobre \"curiosidades sobre IA\" para canal FACELESS. Inclui: título CTR alto, thumbnail (descrição), script por cena com direção de b-roll, CTA para afiliado.",
@@ -496,13 +506,6 @@
       "completedAt": "2026-03-26T06:24:25.036Z",
       "result": "## [Roteiro de Vídeo YouTube] — Relatório de Execução\n\n[Execução e resultados concretos]\n\n### Título do Vídeo\n\"AI SECRETS REVEALED: 8 Mind-Blowing Facts About Artificial Intelligence\"\n\n### Thumbnail Description\n\"Curiosidades incríveis sobre IA que vão mudar a tua perspectiva! Clica para descobrir!\"\n\n### Script por Cena\n\n**Cena 1: Introdução**\n- B-roll: Imagens de robôs e computadores avançados.\n- Direção: \"Olá, pessoal! Hoje, no FACELESS, vamos explorar o mundo fascinante da Inteligência Artific",
       "durationMs": 44413
-    },
-    {
-      "id": "192e644f-7642-46c5-a0f3-85192645e561",
-      "title": "Roteiro completo de vídeo YouTube 8min sobre \"dicas de finanças pessoais\" para canal FACELESS. Inclui: título CTR alto, thumbnail (descrição), script por cena com direção de b-roll, CTA para afiliado.",
-      "description": "",
-      "status": "in_progress",
-      "startedAt": "2026-03-26T04:16:38.150Z"
     }
   ],
   "activeContext": {
@@ -510,5 +513,5 @@
     "currentProject": null,
     "startedAt": null
   },
-  "lastActive": "2026-03-30T08:19:27.203Z"
+  "lastActive": "2026-03-30T10:23:01.084Z"
 }
