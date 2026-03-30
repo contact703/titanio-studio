@@ -2,14 +2,34 @@
   "sessions": [],
   "stats": {
     "sessionsCount": 0,
-    "tasksCompleted": 555,
+    "tasksCompleted": 557,
     "lessonsLearned": 61,
     "tokensUsed": 0,
-    "avgTaskDurationMs": 20622,
+    "avgTaskDurationMs": 20319,
     "tasksFailed": 7
   },
   "knowledge": [],
   "recentTasks": [
+    {
+      "id": "9c104c93-195e-466f-ac3d-c1f5f38009dd",
+      "title": "Ebook COMPLETO para vender na Hotmart sobre \"automação para pequenos negócios com ferramentas grátis\": título magnético, página de vendas (headline + 3 bullets + preço R$47 + CTA), sumário 7 capítulos, capítulo 1 completo (300 palavras).",
+      "description": "",
+      "status": "completed",
+      "startedAt": "2026-03-30T13:54:43.492Z",
+      "completedAt": "2026-03-30T13:55:04.676Z",
+      "result": "## [Criação de Ebook para Venda na Hotmart] — Relatório de Execução\n\n[Execução e resultados concretos]\n\n### 1. Criação do Título Magnético\n**Título Magnético:**\n\"Automação Ilimitada: Dobra o Seu Tempo e Triplica as Vendas com Ferramentas GRÁTIS\"\n\n### 2. Criação da Página de Vendas\n**Headline:**\n\"Desbloqueie o Potencial do Seu Negócio com Automação para Pequenos Negócios\"\n\n**3 Bullets:**\n- \"Acesso à Eficiência: Descubra como automatizar tarefas repetitivas e manter seu negócio um passo à frente.\"",
+      "durationMs": 21184
+    },
+    {
+      "id": "5f4f0861-fa2b-419c-9d17-e052668f9068",
+      "title": "Gere 5 DMs únicas e personalizadas para abordar donos de restaurante no Instagram oferecendo pack de legendas por R$97. Cada DM diferente, máx 3 linhas, casual, com [NOME] como placeholder. Email: siriguejo@proton.me",
+      "description": "",
+      "status": "completed",
+      "startedAt": "2026-03-30T13:54:43.484Z",
+      "completedAt": "2026-03-30T13:54:55.218Z",
+      "result": "## [Geração de DMs para Dones de Restaurante] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nForam criadas 5 DMs únicas e personalizadas para abordar donos de restaurante no Instagram oferecendo pack de legendas por R$97. Cada mensagem é diferente, contém no máximo 3 linhas e é casual, incluindo [NOME] como placeholder. Aqui estão as mensagens:\n\n1. \"Oi [NOME], tem um segredo de R$97 pra te fazer explodir as vendas no Instagram. Quer saber? 🔥\"\n2. \"Eae [NOME], sei que você quer mais ",
+      "durationMs": 11734
+    },
     {
       "id": "2ff1477d-0267-46cc-895e-ed12ecf3fd87",
       "title": "Gere 5 DMs únicas e personalizadas para abordar donos de pet shop no Instagram oferecendo pack de legendas por R$97. Cada DM diferente, máx 3 linhas, casual, com [NOME] como placeholder. Email: siriguejo@proton.me",
@@ -486,26 +506,6 @@
       "description": "",
       "status": "in_progress",
       "startedAt": "2026-03-30T00:08:22.961Z"
-    },
-    {
-      "id": "d8a76929-d7f5-4b45-927b-f324a15d9824",
-      "title": "Ebook COMPLETO para vender na Hotmart sobre \"automação para pequenos negócios com ferramentas grátis\": título magnético, página de vendas (headline + 3 bullets + preço R$47 + CTA), sumário 7 capítulos, capítulo 1 completo (300 palavras).",
-      "description": "",
-      "status": "completed",
-      "startedAt": "2026-03-30T00:08:22.958Z",
-      "completedAt": "2026-03-30T00:08:46.867Z",
-      "result": "## [Criação de Ebook para Venda na Hotmart] — Relatório de Execução\n\n[Execução e resultados concretos]\n\n### 1. Criação do Título Magnético\n**Título Magnético:**\n\"Automação Ilimitada: Domine as Ferramentas Grátis e dobre sua Produtividade\"\n\n### 2. Criação da Página de Vendas\n**Headline:**\n\"Acesso as Ferramentas de Automação que os Grandes Usam — Sem Gastar Nada\"\n\n**3 Bullets:**\n- \"Conheça as 7 Ferramentas de Automação Essenciais para Pequenos Negócios\"\n- \"Aprenda a Otimizar suas Operações com Fer",
-      "durationMs": 23909
-    },
-    {
-      "id": "88c425b9-ac3b-4b99-b09e-024bb79856fb",
-      "title": "Gere 5 DMs únicas e personalizadas para abordar donos de loja de roupas no Instagram oferecendo pack de legendas por R$97. Cada DM diferente, máx 3 linhas, casual, com [NOME] como placeholder. Email: siriguejo@proton.me",
-      "description": "",
-      "status": "completed",
-      "startedAt": "2026-03-30T00:08:22.939Z",
-      "completedAt": "2026-03-30T00:08:46.793Z",
-      "result": "## [Geração de DMs para Dones de Loja de Roupas] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nForam criadas 5 DMs únicas e personalizadas para abordar donos de loja de roupas no Instagram oferecendo pack de legendas por R$97. Cada mensagem é diferente, contém no máximo 3 linhas e é casual, incluindo [NOME] como placeholder. Aqui estão as mensagens:\n\n1. \"Oi [NOME], viu que sua loja de roupas está linda! Tem uma oportunidade de impulsionar suas vendas com nosso pack de legendas por ",
-      "durationMs": 23854
     }
   ],
   "activeContext": {
@@ -513,5 +513,5 @@
     "currentProject": null,
     "startedAt": null
   },
-  "lastActive": "2026-03-30T13:24:43.007Z"
+  "lastActive": "2026-03-30T13:55:04.676Z"
 }

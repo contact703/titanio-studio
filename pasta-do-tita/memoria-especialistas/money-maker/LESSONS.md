@@ -2473,3 +2473,26 @@ Foram criadas 5 DMs únicas e personalizadas par
 
 ### 1. Criação da Propos
 
+
+## 2026-03-30 10:54 — Gere 5 DMs únicas e personalizadas para abordar donos de res
+**Status:** ✅ Sucesso
+**Duração:** 11.7s
+- [integration] Integrações: instagram
+- [process] Gere 5 DMs únicas e personalizadas para abordar donos de restaurante no Instagra → ## [Geração de DMs para Dones de Restaurante] — Relatório de Execução
+
+[Execução e resultados concretos]
+
+Foram criadas 5 DMs únicas e personalizadas 
+
+
+## 2026-03-30 10:55 — Ebook COMPLETO para vender na Hotmart sobre "automação para 
+**Status:** ✅ Sucesso
+**Duração:** 21.2s
+- [integration] Integrações: apple
+- [process] Ebook COMPLETO para vender na Hotmart sobre "automação para pequenos negócios co → ## [Criação de Ebook para Venda na Hotmart] — Relatório de Execução
+
+[Execução e resultados concretos]
+
+### 1. Criação do Título Magnético
+**Título Ma
+
