@@ -12,7 +12,7 @@
     "mandaanota": 1,
     "hiclaw": 1,
     "ollama": 1,
-    "general": 7,
+    "general": 8,
     "n8n": 3,
     "lessons": 3,
     "decisions": 1,
@@ -354,7 +354,14 @@
       "subtopic": "memory-system",
       "date": "2026-03-30 03:23",
       "id": 47
+    },
+    {
+      "text": "Geradores de vídeo IA open source encontrados: 1) Wan2.1 (Alibaba) — SOTA, modelo 1.3B roda com 8.2GB VRAM, text-to-video + image-to-video. 2) HunyuanVideo (Tencent) — tem I2V (image-to-video), modelo FP8 pra menos VRAM. 3) CogVideoX (Zhipu) — 5B model, fine-tune numa 4090, text+image to video. Todos da China, todos open source.",
+      "category": "general",
+      "subtopic": null,
+      "date": "2026-03-30 03:43",
+      "id": 48
     }
   ],
-  "last_updated": "2026-03-30T03:23:42.501685"
+  "last_updated": "2026-03-30T03:43:30.200278"
 }

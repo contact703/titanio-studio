@@ -1,71 +1,57 @@
 {
-  "timestamp": "2026-03-30 03:16",
+  "timestamp": "2026-03-30 03:48",
   "markets_total": 30,
-  "opportunities": 4,
+  "opportunities": 2,
   "analyses": [
     {
-      "question": "Will the price of Bitcoin be above $68,000 on April 2?",
-      "yes": 0.45,
-      "no": 0.55,
-      "volume": 9992.179428000003,
-      "analysis": {
-        "confianca": 25,
-        "direcao": "NO",
-        "razao": "Bitcoin em território volátil, pressões regulatórias e incertezas macroeconômicas favorecem consolidação abaixo de $68k",
-        "risco": "alto"
-      },
-      "timestamp": "2026-03-30 03:16",
-      "condition_id": "0x58dc422324aaaae522f778774737d2977fca22d83e49cac7865f5489e1492438"
-    },
-    {
-      "question": "Will the price of Bitcoin be above $68,000 on April 4?",
-      "yes": 0.46,
-      "no": 0.54,
-      "volume": 9987.541018000004,
-      "analysis": {
-        "confianca": 35,
-        "direcao": "NO",
-        "razao": "Bitcoin enfrenta pressões regulatórias, alta volatilidade e incertezas macroeconômicas que dificultam atingir $68k até abril",
-        "risco": "alto"
-      },
-      "timestamp": "2026-03-30 03:16",
-      "condition_id": "0xd56c7cabd19a2196596a4399e4c300d77e6af6aeb0c227a1b902c556ab1bd630"
-    },
-    {
       "question": "Will the Miami Heat make the NBA Playoffs?",
-      "yes": 0.495,
-      "no": 0.505,
-      "volume": 99843.98551500005,
+      "yes": 0.5,
+      "no": 0.5,
+      "volume": 99848.98551500005,
       "analysis": {
         "confianca": 75,
         "direcao": "YES",
-        "razao": "Heat tem histórico forte nos playoffs, cultura vencedora com Spoelstra, e geralmente se fortalece na segunda metade da temporada",
+        "razao": "Heat tem histórico consistente de playoffs, cultura organizacional forte com Spoelstra/Riley, e costuma melhorar ao longo da temporada. Odds 50/50 subestimam essa consistência histórica.",
         "risco": "medio"
       },
-      "timestamp": "2026-03-30 03:16",
+      "timestamp": "2026-03-30 03:48",
       "condition_id": "0xe538b3af4e8d0368cff984c05c06badcf1233c6c8074a36f0d6e2ba37f538444"
+    },
+    {
+      "question": "OpenAI receives federal backstop for infrastructure before July?",
+      "yes": 0.2725,
+      "no": 0.7275,
+      "volume": 99738.73505899977,
+      "analysis": {
+        "confianca": 75,
+        "direcao": "NO",
+        "razao": "Processo legislativo federal é lento, resistência política a subsídios corporativos, e prazo até julho é muito curto para aprovação de backstop de infraestrutura",
+        "risco": "medio"
+      },
+      "timestamp": "2026-03-30 03:48",
+      "condition_id": "0x388459f1cfd0d310154e13f16f49d31fd301e5e3502072c8b09d3a0697b2823f"
     }
   ],
   "top_events": [
     {
       "title": "Democratic Presidential Nominee 2028",
-      "volume": 936541432.8577402
+      "volume": 936648875.1464742
     },
     {
       "title": "Republican Presidential Nominee 2028",
-      "volume": 491971276.4423507
+      "volume": 492022198.9257397
     },
     {
       "title": "Presidential Election Winner 2028",
-      "volume": 471536671.978728
+      "volume": 471615736.043304
     },
     {
       "title": "2026 FIFA World Cup Winner ",
-      "volume": 425073484.0726292
+      "volume": 425284817.8667982
     },
     {
       "title": "English Premier League Winner ",
-      "volume": 312514742.53382987
+      "volume": 312518115.85382986
     }
   ]
 }
