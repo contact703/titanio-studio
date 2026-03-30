@@ -12,7 +12,7 @@
     "mandaanota": 1,
     "hiclaw": 1,
     "ollama": 1,
-    "general": 5,
+    "general": 6,
     "n8n": 2,
     "lessons": 3,
     "decisions": 1
@@ -290,7 +290,14 @@
       "subtopic": "n8n",
       "date": "2026-03-30 01:56",
       "id": 38
+    },
+    {
+      "text": "5 prioridades implementadas e testadas 30/03: health-check (5min), backup diário (04h), self-heal (2min), monitor recursos, CI/CD auto-push. 8 LaunchAgents rodando 24/7.",
+      "category": "general",
+      "subtopic": null,
+      "date": "2026-03-30 02:04",
+      "id": 39
     }
   ],
-  "last_updated": "2026-03-30T01:56:16.958629"
+  "last_updated": "2026-03-30T02:04:48.557472"
 }
