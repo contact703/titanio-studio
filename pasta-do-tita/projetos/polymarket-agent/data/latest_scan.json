@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-30 02:22",
+  "timestamp": "2026-03-30 02:43",
   "markets_total": 30,
   "opportunities": 2,
   "analyses": [
@@ -11,10 +11,10 @@
       "analysis": {
         "confianca": 75,
         "direcao": "YES",
-        "razao": "Heat tem histórico consistente de playoffs, cultura organizacional forte com Spoelstra/Riley, e geralmente supera expectativas mesmo sem superstars",
+        "razao": "Heat historicamente forte nos playoffs, Eastern Conference menos competitiva, cultura organizacional sólida com Spoelstra",
         "risco": "medio"
       },
-      "timestamp": "2026-03-30 02:22",
+      "timestamp": "2026-03-30 02:43",
       "condition_id": "0xe538b3af4e8d0368cff984c05c06badcf1233c6c8074a36f0d6e2ba37f538444"
     },
     {
@@ -25,33 +25,33 @@
       "analysis": {
         "confianca": 75,
         "direcao": "NO",
-        "razao": "Prazo muito curto (6 meses) para aprovação de backstop federal complexo, considerando burocracia governamental e debates regulatórios necessários",
+        "razao": "Processo regulatório federal é lento, sem precedentes claros para backstop de IA privada, e resistência política provável",
         "risco": "medio"
       },
-      "timestamp": "2026-03-30 02:22",
+      "timestamp": "2026-03-30 02:43",
       "condition_id": "0x388459f1cfd0d310154e13f16f49d31fd301e5e3502072c8b09d3a0697b2823f"
     }
   ],
   "top_events": [
     {
       "title": "Democratic Presidential Nominee 2028",
-      "volume": 936435196.5104642
+      "volume": 936479043.2029543
     },
     {
       "title": "Republican Presidential Nominee 2028",
-      "volume": 491894337.8326457
+      "volume": 491916950.6204787
     },
     {
       "title": "Presidential Election Winner 2028",
-      "volume": 471457008.385104
+      "volume": 471478854.112967
     },
     {
       "title": "2026 FIFA World Cup Winner ",
-      "volume": 423770002.65279716
+      "volume": 424771134.8265102
     },
     {
       "title": "English Premier League Winner ",
-      "volume": 312508426.01929784
+      "volume": 312512640.3248299
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "topics": {
     "polymarket": 5,
-    "zica": 5,
+    "zica": 6,
     "comfyui": 1,
     "eduardo": 1,
     "titanio-media": 2,
@@ -12,7 +12,7 @@
     "mandaanota": 1,
     "hiclaw": 1,
     "ollama": 1,
-    "general": 6,
+    "general": 7,
     "n8n": 3,
     "lessons": 3,
     "decisions": 1
@@ -318,7 +318,21 @@
       "subtopic": "memory-system",
       "date": "2026-03-30 02:22",
       "id": 42
+    },
+    {
+      "text": "Oracle criado (39o especialista): Estrategista Visionário. Gera relatório semanal automático (domingo 10h). Analisa GitHub Trending, Reddit, mercado IA, nosso trabalho, perfil do Zica. 5 próximos passos toda semana.",
+      "category": "people",
+      "subtopic": "zica",
+      "date": "2026-03-30 02:35",
+      "id": 43
+    },
+    {
+      "text": "Oracle v2: 20+ fontes (HN, GitHub, Reddit 6 subs, Product Hunt, HuggingFace Papers, Google Trends BR). Collector automático sábado 22h. 59 items na primeira coleta. Insights: Cinema+IA ético, Trace2Skill, ShotStream, Ente cofre cloud, Agentes Honestos.",
+      "category": "general",
+      "subtopic": null,
+      "date": "2026-03-30 02:49",
+      "id": 44
     }
   ],
-  "last_updated": "2026-03-30T02:22:03.303067"
+  "last_updated": "2026-03-30T02:49:41.078621"
 }

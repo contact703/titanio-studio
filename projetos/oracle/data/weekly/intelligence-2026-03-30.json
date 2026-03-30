@@ -1,0 +1,258 @@
+{
+  "date": "2026-03-30",
+  "hackernews": [
+    {
+      "title": "Founder of GitLab battles cancer by founding companies",
+      "url": "https://sytse.com/cancer/",
+      "score": 1347,
+      "comments": 248
+    },
+    {
+      "title": "Spanish legislation as a Git repo",
+      "url": "https://github.com/EnriqueLop/legalize-es",
+      "score": 794,
+      "comments": 227
+    },
+    {
+      "title": "AI overly affirms users asking for personal advice",
+      "url": "https://news.stanford.edu/stories/2026/03/ai-advice-sycophantic-models-research",
+      "score": 761,
+      "comments": 597
+    },
+    {
+      "title": "LinkedIn uses 2.4 GB RAM across two tabs",
+      "url": "",
+      "score": 681,
+      "comments": 394
+    },
+    {
+      "title": "I decompiled the White House's new app",
+      "url": "https://thereallo.dev/blog/decompiling-the-white-house-app",
+      "score": 629,
+      "comments": 231
+    },
+    {
+      "title": "Say No to Palantir in Europe",
+      "url": "https://action.wemove.eu/sign/2026-03-palantir-petition-EN",
+      "score": 536,
+      "comments": 151
+    },
+    {
+      "title": "Nitrile and latex gloves may cause overestimation of microplastics",
+      "url": "https://news.umich.edu/nitrile-and-latex-gloves-may-cause-overestimation-of-microplastics-u-m-study-reveals/",
+      "score": 534,
+      "comments": 241
+    },
+    {
+      "title": "CSS is DOOMed",
+      "url": "https://nielsleenheer.com/articles/2026/css-is-doomed-rendering-doom-in-3d-with-css/",
+      "score": 479,
+      "comments": 108
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "PaperMC / Paper",
+      "description": "The most widely used, high performance Minecraft server that aims to fix gameplay and mechanics inconsistencies"
+    },
+    {
+      "name": "microsoft / PowerToys",
+      "description": "Microsoft PowerToys is a collection of utilities that supercharge productivity and customization on Windows"
+    },
+    {
+      "name": "ente-io / ente",
+      "description": "💚 End-to-end encrypted cloud for everything."
+    },
+    {
+      "name": "Z4nzu / hackingtool",
+      "description": "ALL IN ONE Hacking Tool For Hackers"
+    },
+    {
+      "name": "aquasecurity / trivy",
+      "description": "Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more"
+    },
+    {
+      "name": "meshery / meshery",
+      "description": "Meshery, the cloud native manager"
+    },
+    {
+      "name": "pocketbase / pocketbase",
+      "description": "Open Source realtime backend in 1 file"
+    },
+    {
+      "name": "public-api-lists / public-api-lists",
+      "description": "A curated list of free public APIs across 48 categories — searchable, community-maintained, with a free JSON API."
+    },
+    {
+      "name": "plankanban / planka",
+      "description": "PLANKA is the Kanban-style project mastering tool for everyone"
+    },
+    {
+      "name": "coollabsio / coolify",
+      "description": "An open-source, self-hostable PaaS alternative to Vercel, Heroku & Netlify that lets you easily deploy static sites, dat"
+    }
+  ],
+  "reddit": {
+    "ClaudeAI": [
+      {
+        "title": "Update on Session Limits",
+        "score": 1023
+      },
+      {
+        "title": "Jean-Claude",
+        "score": 417
+      },
+      {
+        "title": "Nicolas Carlini (67.2k citations on Google Scholar) says Claude is a better security researcher than",
+        "score": 484
+      },
+      {
+        "title": "Claude Usage Limits Discussion Megathread Ongoing (sort this by New!)",
+        "score": 80
+      }
+    ],
+    "SaaS": [
+      {
+        "title": "Monthly Post: SaaS Deals + Offers",
+        "score": 30
+      },
+      {
+        "title": "Customer asked if they could pay us more. I thought it was a joke. It wasn't.",
+        "score": 292
+      },
+      {
+        "title": "Lost our entire database at 3am because I ran a migration script on production instead of staging. N",
+        "score": 104
+      },
+      {
+        "title": "I'll be your first user. No catch.",
+        "score": 27
+      }
+    ],
+    "MachineLearning": [
+      {
+        "title": "[D] Self-Promotion Thread",
+        "score": 16
+      },
+      {
+        "title": "[D] Monthly Who's Hiring and Who wants to be Hired?",
+        "score": 14
+      },
+      {
+        "title": "[P] Built an open source tool to find the location of any street picture",
+        "score": 175
+      },
+      {
+        "title": "[P] Implemented TurboQuant in Python",
+        "score": 25
+      }
+    ],
+    "Entrepreneur": [
+      {
+        "title": "🎙️ Episode 003: AMA Ellie Heisler (Attorney - Entertainment Law) ) | /r/Entrepreneur Podcast",
+        "score": 9
+      },
+      {
+        "title": "Accomplishments and Lessons-Learned Saturday! - March 28, 2026",
+        "score": 14
+      },
+      {
+        "title": "Building is the easiest part, Distribution is challenging",
+        "score": 11
+      },
+      {
+        "title": "Buying a company 4x profit",
+        "score": 9
+      },
+      {
+        "title": "Sold my business for over $100k",
+        "score": 61
+      }
+    ],
+    "Filmmakers": [
+      {
+        "title": "New Rules Regarding AI on /r/filmmakers!",
+        "score": 473
+      },
+      {
+        "title": "READ THIS BEFORE ASKING A QUESTION! Official Filmmaking FAQ and Information Post",
+        "score": 976
+      },
+      {
+        "title": "Is this just a really well-trained horse or is there some trickery going on?",
+        "score": 174
+      },
+      {
+        "title": "I physically printed every single frame of my short film on embossed paper and rescanned them. Thoug",
+        "score": 481
+      },
+      {
+        "title": "Francis Ford Coppola's Former California Home Where He Wrote \"The Godfather\" Lists For $6.75 Million",
+        "score": 68
+      }
+    ]
+  },
+  "producthunt": [
+    {
+      "name": "Performing security verification"
+    },
+    {
+      "name": "Ray ID: 9e44d2959b5397cc"
+    },
+    {
+      "name": "Performance and Security by Cloudflare"
+    }
+  ],
+  "huggingface": [
+    {
+      "title": "Out of Sight but Not Out of Mind: Hybrid Memory for Dynamic Video World Models"
+    },
+    {
+      "title": "ShotStream: Streaming Multi-Shot Video Generation for Interactive Storytelling"
+    },
+    {
+      "title": "PackForcing: Short Video Training Suffices for Long Video Sampling and Long Context Inference"
+    },
+    {
+      "title": "Trace2Skill: Distill Trajectory-Local Lessons into Transferable Agent Skills"
+    },
+    {
+      "title": "Know3D: Prompting 3D Generation with Knowledge from Vision-Language Models"
+    },
+    {
+      "title": "Sommelier: Scalable Open Multi-turn Audio Pre-processing for Full-duplex Speech Language Models"
+    }
+  ],
+  "google_trends_br": [
+    {
+      "term": "Trends"
+    },
+    {
+      "term": "Explore"
+    },
+    {
+      "term": "Trending now"
+    },
+    {
+      "term": "Sign in"
+    },
+    {
+      "term": "Trending Now - Google Trends"
+    },
+    {
+      "term": "location_on"
+    },
+    {
+      "term": "Brazil"
+    },
+    {
+      "term": "calendar_month"
+    },
+    {
+      "term": "Past 24 hours"
+    },
+    {
+      "term": "category"
+    }
+  ]
+}

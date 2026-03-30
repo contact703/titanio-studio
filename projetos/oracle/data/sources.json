@@ -1,0 +1,41 @@
+{
+  "sources": {
+    "tier1_essential": [
+      {"name": "HackerNews Best", "url": "https://news.ycombinator.com/best", "type": "aggregator", "frequency": "daily", "why": "Top developers/founders discutem tendências reais"},
+      {"name": "GitHub Trending", "url": "https://github.com/trending?since=weekly", "type": "code", "frequency": "weekly", "why": "O que devs estão construindo AGORA"},
+      {"name": "Reddit r/LocalLLaMA", "url": "https://www.reddit.com/r/LocalLLaMA/hot.json", "type": "community", "frequency": "daily", "why": "Modelos locais, hardware, benchmarks"},
+      {"name": "Reddit r/ClaudeAI", "url": "https://www.reddit.com/r/ClaudeAI/hot.json", "type": "community", "frequency": "daily", "why": "Updates Claude, limits, uso real"},
+      {"name": "Reddit r/SaaS", "url": "https://www.reddit.com/r/SaaS/hot.json", "type": "business", "frequency": "weekly", "why": "Estratégias SaaS, pricing, growth"},
+      {"name": "Product Hunt", "url": "https://www.producthunt.com", "type": "products", "frequency": "daily", "why": "Novos produtos IA lançando TODO DIA"}
+    ],
+    "tier2_intelligence": [
+      {"name": "ArXiv AI", "url": "https://arxiv.org/list/cs.AI/recent", "type": "research", "frequency": "weekly", "why": "Papers de pesquisa — o que vem ANTES do mercado"},
+      {"name": "Hugging Face Papers", "url": "https://huggingface.co/papers", "type": "research", "frequency": "weekly", "why": "Papers mais hypados da semana"},
+      {"name": "Reddit r/MachineLearning", "url": "https://www.reddit.com/r/MachineLearning/hot.json", "type": "research", "frequency": "weekly", "why": "ML avançado, novos modelos"},
+      {"name": "OpenClaw GitHub", "url": "https://github.com/openclaw/openclaw/releases", "type": "platform", "frequency": "weekly", "why": "Updates da nossa plataforma base"},
+      {"name": "OpenClaw Discord", "url": "https://discord.com/invite/clawd", "type": "community", "frequency": "weekly", "why": "Comunidade, bugs, features pedidas"},
+      {"name": "ClaHub", "url": "https://clawhub.com", "type": "skills", "frequency": "weekly", "why": "Novos skills pro OpenClaw"}
+    ],
+    "tier3_market": [
+      {"name": "TechCrunch AI", "url": "https://techcrunch.com/category/artificial-intelligence/", "type": "news", "frequency": "daily", "why": "Funding, exits, M&A em IA"},
+      {"name": "The Information", "url": "https://www.theinformation.com", "type": "news", "frequency": "weekly", "why": "Intel de bastidores da indústria"},
+      {"name": "Reddit r/Entrepreneur", "url": "https://www.reddit.com/r/Entrepreneur/hot.json", "type": "business", "frequency": "weekly", "why": "Ideias, validação, PMF"},
+      {"name": "IndieHackers", "url": "https://www.indiehackers.com", "type": "business", "frequency": "weekly", "why": "Founders solo, receita, growth hacks"},
+      {"name": "Google Trends", "url": "https://trends.google.com/trending?geo=BR", "type": "trends", "frequency": "daily", "why": "O que o Brasil tá buscando"}
+    ],
+    "tier4_niche": [
+      {"name": "Film Industry Network", "url": "https://www.reddit.com/r/Filmmakers/hot.json", "type": "cinema", "frequency": "weekly", "why": "Tendências cinema — relevante pra H2O"},
+      {"name": "Polymarket", "url": "https://polymarket.com", "type": "prediction", "frequency": "daily", "why": "Mercados de previsão — nosso trade"},
+      {"name": "Instagram @synthixlabs", "url": "https://instagram.com/synthixlabs", "type": "social", "frequency": "weekly", "why": "Conteúdo tech IA no Instagram"},
+      {"name": "Anthropic Blog", "url": "https://www.anthropic.com/research", "type": "provider", "frequency": "weekly", "why": "Updates do Claude (nosso modelo principal)"},
+      {"name": "ANCINE", "url": "https://www.gov.br/ancine", "type": "cinema", "frequency": "monthly", "why": "Editais, regulação cinema BR — H2O"}
+    ]
+  },
+  "scraping_rules": {
+    "respect_rate_limits": true,
+    "max_requests_per_source": 3,
+    "cooldown_seconds": 5,
+    "save_raw": true,
+    "extract_headlines_only": true
+  }
+}
