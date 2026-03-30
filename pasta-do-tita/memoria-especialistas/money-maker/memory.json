@@ -11,6 +11,20 @@
   "knowledge": [],
   "recentTasks": [
     {
+      "id": "2ff1477d-0267-46cc-895e-ed12ecf3fd87",
+      "title": "Gere 5 DMs únicas e personalizadas para abordar donos de pet shop no Instagram oferecendo pack de legendas por R$97. Cada DM diferente, máx 3 linhas, casual, com [NOME] como placeholder. Email: siriguejo@proton.me",
+      "description": "",
+      "status": "in_progress",
+      "startedAt": "2026-03-30T13:24:14.331Z"
+    },
+    {
+      "id": "3ca8128f-b0d8-40d5-997b-fdf5668f5bde",
+      "title": "Drop servicing: vendo \"relatório de redes sociais\" para restaurante por R$197. Crie: (1) proposta comercial pronta pra enviar, (2) execute o serviço completo com IA agora (resultado real para entregar ao cliente). Email: siriguejo@proton.me",
+      "description": "",
+      "status": "in_progress",
+      "startedAt": "2026-03-30T13:24:14.322Z"
+    },
+    {
       "id": "29f5d067-007c-4d77-989f-c1783c73623c",
       "title": "Gere 5 DMs únicas e personalizadas para abordar donos de loja de roupas no Instagram oferecendo pack de legendas por R$97. Cada DM diferente, máx 3 linhas, casual, com [NOME] como placeholder. Email: siriguejo@proton.me",
       "description": "",
@@ -509,9 +523,9 @@
     }
   ],
   "activeContext": {
-    "currentTask": null,
+    "currentTask": "2ff1477d-0267-46cc-895e-ed12ecf3fd87",
     "currentProject": null,
-    "startedAt": null
+    "startedAt": "2026-03-30T13:24:14.331Z"
   },
-  "lastActive": "2026-03-30T12:54:13.902Z"
+  "lastActive": "2026-03-30T13:24:14.331Z"
 }

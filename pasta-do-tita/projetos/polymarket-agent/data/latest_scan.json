@@ -1,8 +1,22 @@
 {
-  "timestamp": "2026-03-30 09:49",
+  "timestamp": "2026-03-30 10:21",
   "markets_total": 30,
   "opportunities": 3,
   "analyses": [
+    {
+      "question": "Will TISZA – Respect and Freedom Party (TISZA) win the most seats in the next Hungarian parliamentary election?",
+      "yes": 0.685,
+      "no": 0.315,
+      "volume": 998439.8260620043,
+      "analysis": {
+        "confianca": 25,
+        "direcao": "NO",
+        "razao": "Fidesz de Orbán mantém forte controle do sistema político húngaro há 14 anos, com vantagens estruturais significativas",
+        "risco": "alto"
+      },
+      "timestamp": "2026-03-30 10:21",
+      "condition_id": "0xfcde02af15efe40e336d67f0ef9aa49e9d40c37b92961fb890afc4afdbfe54d6"
+    },
     {
       "question": "OpenAI receives federal backstop for infrastructure before July?",
       "yes": 0.275,
@@ -11,25 +25,11 @@
       "analysis": {
         "confianca": 75,
         "direcao": "NO",
-        "razao": "Processo legislativo americano é lento e complexo, especialmente para subsídios federais a empresas privadas. Julho é prazo muito curto para aprovação congressual.",
+        "razao": "Processo regulatório federal é lento, resistência política a subsídios tech, e prazo muito curto para aprovação",
         "risco": "medio"
       },
-      "timestamp": "2026-03-30 09:49",
+      "timestamp": "2026-03-30 10:21",
       "condition_id": "0x388459f1cfd0d310154e13f16f49d31fd301e5e3502072c8b09d3a0697b2823f"
-    },
-    {
-      "question": "Will TISZA – Respect and Freedom Party (TISZA) win the most seats in the next Hungarian parliamentary election?",
-      "yes": 0.685,
-      "no": 0.315,
-      "volume": 996449.7379770045,
-      "analysis": {
-        "confianca": 25,
-        "direcao": "NO",
-        "razao": "Fidesz mantém forte controle há 14 anos, sistema eleitoral favorável ao partido no poder, TISZA é relativamente novo (2024)",
-        "risco": "alto"
-      },
-      "timestamp": "2026-03-30 09:49",
-      "condition_id": "0xfcde02af15efe40e336d67f0ef9aa49e9d40c37b92961fb890afc4afdbfe54d6"
     },
     {
       "question": "Will USD reach 1.8M Iranian rials by April 30?",
@@ -39,33 +39,33 @@
       "analysis": {
         "confianca": 75,
         "direcao": "YES",
-        "razao": "Rial iraniano historicamente volátil com tendência de desvalorização contínua devido a sanções e instabilidade econômica",
+        "razao": "Rial iraniano em queda acelerada devido a sanções intensas, instabilidade regional e pressões econômicas contínuas",
         "risco": "medio"
       },
-      "timestamp": "2026-03-30 09:49",
+      "timestamp": "2026-03-30 10:21",
       "condition_id": "0x699093850ff73cf30baa4c571272900c3162932f9745400256a6455d6b2d0789"
     }
   ],
   "top_events": [
     {
       "title": "Democratic Presidential Nominee 2028",
-      "volume": 939517818.0846708
+      "volume": 939833943.457423
     },
     {
       "title": "Republican Presidential Nominee 2028",
-      "volume": 493870344.99954134
+      "volume": 494042750.20017344
     },
     {
       "title": "Presidential Election Winner 2028",
-      "volume": 473211381.04278946
+      "volume": 473356571.45983267
     },
     {
       "title": "2026 FIFA World Cup Winner ",
-      "volume": 427940600.4854232
+      "volume": 428334569.0852772
     },
     {
       "title": "English Premier League Winner ",
-      "volume": 312565223.4273829
+      "volume": 312570364.5270479
     }
   ]
 }
