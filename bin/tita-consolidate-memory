@@ -1,0 +1,27 @@
+#!/bin/bash
+# tita-consolidate-memory — Consolida memória diária em MEMORY.md
+WORKSPACE="/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace"
+MEMORY="$WORKSPACE/MEMORY.md"
+TODAY=$(date +%Y-%m-%d)
+DAILY="$WORKSPACE/memory/$TODAY.md"
+
+echo "[$(date)] 🔄 Consolidando memória do dia $TODAY..."
+
+if [ ! -f "$DAILY" ]; then
+    echo "[$(date)] ⚠️ Nenhum arquivo diário encontrado: $DAILY"
+    exit 0
+fi
+
+LINES=$(wc -l < "$DAILY")
+echo "[$(date)] 📊 Arquivo diário: $LINES linhas"
+
+# Append date header + summary to MEMORY.md if not already there
+if ! grep -q "## 📅 $TODAY" "$MEMORY" 2>/dev/null; then
+    echo "" >> "$MEMORY"
+    echo "## 📅 $TODAY — Consolidação Automática" >> "$MEMORY"
+    echo "- Linhas registradas: $LINES" >> "$MEMORY"
+    echo "- Consolidado: $(date '+%H:%M BRT')" >> "$MEMORY"
+    echo "[$(date)] ✅ Consolidado com sucesso"
+else
+    echo "[$(date)] ℹ️ Já consolidado hoje"
+fi

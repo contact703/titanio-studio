@@ -2562,3 +2562,14 @@ Foram criadas 5 DMs únicas e personalizad
 ### 1. Criação do Título Magnético
 **Título Ma
 
+
+## 2026-03-30 12:56 — Gere 5 DMs únicas e personalizadas para abordar donos de pet
+**Status:** ✅ Sucesso
+**Duração:** 11.2s
+- [integration] Integrações: instagram
+- [process] Gere 5 DMs únicas e personalizadas para abordar donos de pet shop no Instagram o → ## [Geração de DMs para Dones de Pet Shop] — Relatório de Execução
+
+[Execução e resultados concretos]
+
+Foram criadas 5 DMs únicas e personalizadas par
+

@@ -1,4 +1,4 @@
-# 🧠 Contexto de Sessão — Auto-gerado 2026-03-30 12:54 BRT
+# 🧠 Contexto de Sessão — Auto-gerado 2026-03-30 13:24 BRT
 
 > LEIA ISTO ANTES DE RESPONDER QUALQUER COISA.
 > Este arquivo contém o que aconteceu nos últimos dias.
@@ -18,7 +18,7 @@
 | **OpenMOSS Tradução** | 🟡 SETUP PRONTO. Guardrails + monitoramento configurados. Aguardando workflow de Zica (tradução de livros autônoma por 7 dias). OPENMOSS-SETUP.md + openmoss-monitoring.json prontos. | 2026-03-21 00h |
 | **🎮 ENEM Game (Local Ollama)** | ✅ **PRONTO PABERTO** (15:40 BRT). 4 workflows N8n REAIS: game-designer, content-creator, code-generator, qa-tester. Modelo: Qwen 2.5 32B (Local Ollama rodando). Custo: R$ 0.00. Execução: http://localhost:11434 (zero dependências externas). README-LOCAL.md com instruções. Apenas importar em N8n (http://5678) e clicar Execute. | 2026-03-21 15h |
 | **HiClaw Quick Win** | ✅ **IMPLEMENTADO** — Task manager multi-agente. 4 endpoints, 8 pipelines, WebSocket, anti-loop. Print + .md enviados no grupo. Helber/Tiago precisam `git pull`. | 2026-03-27 23:40h |
-| Gold Digger | 🔴 **MORTO** — 44 propostas em 305 ciclos (ZERO propostas novas em 105+ ciclos). Bot reporta canais "ativos" mas não gera nada. PRECISA KILL SWITCH + INVESTIGAÇÃO URGENTE. | 2026-03-29 18:03h |
+| Gold Digger | 🔴 **MORTO** — 44 propostas em **340 ciclos** (ZERO propostas novas em **150+ ciclos**). Bot reporta canais "ativos" mas não gera nada. KILL SWITCH URGENTÍSSIMO. | 2026-03-30 12:56h |
 | **Polymarket Bot** | 🟡 Scanner + monitor rodando 24/7. Conta $44.86. **BLOQUEADO:** falta private key wallet (Tiago precisa PC). Playwright como alternativa. | 2026-03-27 00:03h |
 | Maricá Film Commission | Site WordPress/Elementor ativo | 2026-03-12 |
 | Titanio 47 | App Android na Play Console | 2026-03-12 |
@@ -26,7 +26,8 @@
 | KidsHQ Kids Swift | github.com/contact703/kidshq-kids-swift (FamilyControls pendente) | 2026-03-14 |
 | **Dashboard Gospia/Bots** | ✅ TOTALMENTE FUNCIONAL. 31 especialistas + **SYNC COMPLETO (OPERACIONAL)**. **3 instâncias ativas:** Eduardo (4444), Helber (4445), Tiago (4446). Gateway cluster em 192.168.18.174:18789. **Sync:** `/Volumes/TITA_039/shared-projects.json` + `/Volumes/TITA_039/shared-specialists.json` (196k lições!). Botão "Sincronizar Tudo" implementado + auto-export. Watchdog-dashboard.sh ativo. **GitHub:** Commitado + pronto pra Helber/Tiago. **FIX-COMPLETO-TIAGO.md** enviado (nome Helber→Tiago + conexão claw↔dashboard). | 2026-03-26 00:03h |
 | **Bots Design Instagram** | ✅ Migrados para **Kimi (moonshot-v1-128k)**. 3 bots rodando. Instagram @titaniodashboard ativo via instagrapi. **3 posts publicados 28/03** (2 fotos IA + 1 Reels). | 2026-03-28 18:03h |
-| **tmem (Titanio Memory CLI)** | ✅ **NOVO — OPERACIONAL.** CLI local de memória (alternativa ao ByteRover). 14 conhecimentos curados, 4 pessoas, 6 projetos. Integra Engine+Graph+Score. Zero cloud/API. | 2026-03-29 18:03h |
+| **tmem (Titanio Memory CLI)** | ✅ **OPERACIONAL.** CLI local de memória (alternativa ao ByteRover). 14 conhecimentos curados, 4 pessoas, 6 projetos. Integra Engine+Graph+Score. Zero cloud/API. | 2026-03-29 18:03h |
+| **Titanio Direct Tools** | ✅ **NOVO — OPERACIONAL.** 12 tools Python chamáveis direto sem MCP overhead. Economia de tokens. MD enviado pro time. | 2026-03-30 12:56h |
 | **Paperclip** | ✅ **ONLINE localhost:3001** — Orquestrador IA (7 agentes, 3 goals). Empresa Titanio Studio. DB backup a cada hora. | 2026-03-27 18:03h |
 
 ---
@@ -53,7 +54,7 @@
 - Script: ~/.openclaw/workspace/bin/video-analyze.sh "URL"
 - Tempo: ~15 segundos por vídeo
 
-## 📅 Memória 2026-03-30 (     218 linhas)
+## 📅 Memória 2026-03-30 (     220 linhas)
 
 - **21:08** [Content Writer] Roteiro completo de vídeo YouTube 8min sobre "dicas de finanças pessoais" para c → ✅ (14s)
 
@@ -84,9 +85,9 @@
 - **00:14** [Money Maker] Drop servicing: vendo "análise de concorrentes" para e-commerce por R$297. Crie: → ✅ (15s)
 
 - **00:14** [Money Maker] Ebook COMPLETO para vender na Hotmart sobre "guia completo de legendas que vende → ✅ (24s)
-... (mais 188 linhas em memory/2026-03-30.md)
+... (mais 190 linhas em memory/2026-03-30.md)
 
-## 🔄 Último Flush 2026-03-30 (2026-03-30_00h.md)
+## 🔄 Último Flush 2026-03-30 (2026-03-30_12h.md)
 
 ## 📅 Memória 2026-03-29 (     192 linhas)
 
@@ -292,4 +293,4 @@ Recomendação: $30 Polymarket + $20 Grid Trading
 - **Dashboard Titanio 2.0** — 3 instâncias (Eduardo:4444, Helber:4445, Tiago:4446)
 
 ---
-_Gerado: 12:54 BRT 30/03/2026 | 292 linhas, 16468 bytes | Refresh: a cada 30min_
+_Gerado: 13:24 BRT 30/03/2026 | 293 linhas, 16622 bytes | Refresh: a cada 30min_

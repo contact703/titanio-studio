@@ -7,8 +7,8 @@
 
 ## ⚠️ Status do Flush
 
-**Último flush:** 2026-03-30 03:03 UTC (00:03 BRT 30/03) ← **AGORA** ✨  
-**Anterior:** 2026-03-29 21:03 UTC (18:03 BRT 29/03)  
+**Último flush:** 2026-03-30 15:56 UTC (12:56 BRT 30/03) ← **AGORA** ✨  
+**Anterior:** 2026-03-30 03:03 UTC (00:03 BRT 30/03)  
 **Anteriores:** 2026-03-29 15:03 UTC, 2026-03-29 09:03 UTC, 2026-03-29 03:03 UTC, 2026-03-28 15:03 UTC, 2026-03-28 03:03 UTC, 2026-03-27 21:03 UTC, 2026-03-27 03:03 UTC, 2026-03-26 09:03 UTC  
 **Volume Tita_DEV_02:** ❌ HD queimou — usando TITA_039/MAC_MINI_03  
 **Nota:** Usar SEMPRE `/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/pasta-do-tita/`
@@ -58,7 +58,7 @@
 | **OpenMOSS Tradução** | 🟡 SETUP PRONTO. Guardrails + monitoramento configurados. Aguardando workflow de Zica (tradução de livros autônoma por 7 dias). OPENMOSS-SETUP.md + openmoss-monitoring.json prontos. | 2026-03-21 00h |
 | **🎮 ENEM Game (Local Ollama)** | ✅ **PRONTO PABERTO** (15:40 BRT). 4 workflows N8n REAIS: game-designer, content-creator, code-generator, qa-tester. Modelo: Qwen 2.5 32B (Local Ollama rodando). Custo: R$ 0.00. Execução: http://localhost:11434 (zero dependências externas). README-LOCAL.md com instruções. Apenas importar em N8n (http://5678) e clicar Execute. | 2026-03-21 15h |
 | **HiClaw Quick Win** | ✅ **IMPLEMENTADO** — Task manager multi-agente. 4 endpoints, 8 pipelines, WebSocket, anti-loop. Print + .md enviados no grupo. Helber/Tiago precisam `git pull`. | 2026-03-27 23:40h |
-| Gold Digger | 🔴 **MORTO** — 44 propostas em 305 ciclos (ZERO propostas novas em 105+ ciclos). Bot reporta canais "ativos" mas não gera nada. PRECISA KILL SWITCH + INVESTIGAÇÃO URGENTE. | 2026-03-29 18:03h |
+| Gold Digger | 🔴 **MORTO** — 44 propostas em **340 ciclos** (ZERO propostas novas em **150+ ciclos**). Bot reporta canais "ativos" mas não gera nada. KILL SWITCH URGENTÍSSIMO. | 2026-03-30 12:56h |
 | **Polymarket Bot** | 🟡 Scanner + monitor rodando 24/7. Conta $44.86. **BLOQUEADO:** falta private key wallet (Tiago precisa PC). Playwright como alternativa. | 2026-03-27 00:03h |
 | Maricá Film Commission | Site WordPress/Elementor ativo | 2026-03-12 |
 | Titanio 47 | App Android na Play Console | 2026-03-12 |
@@ -66,7 +66,8 @@
 | KidsHQ Kids Swift | github.com/contact703/kidshq-kids-swift (FamilyControls pendente) | 2026-03-14 |
 | **Dashboard Gospia/Bots** | ✅ TOTALMENTE FUNCIONAL. 31 especialistas + **SYNC COMPLETO (OPERACIONAL)**. **3 instâncias ativas:** Eduardo (4444), Helber (4445), Tiago (4446). Gateway cluster em 192.168.18.174:18789. **Sync:** `/Volumes/TITA_039/shared-projects.json` + `/Volumes/TITA_039/shared-specialists.json` (196k lições!). Botão "Sincronizar Tudo" implementado + auto-export. Watchdog-dashboard.sh ativo. **GitHub:** Commitado + pronto pra Helber/Tiago. **FIX-COMPLETO-TIAGO.md** enviado (nome Helber→Tiago + conexão claw↔dashboard). | 2026-03-26 00:03h |
 | **Bots Design Instagram** | ✅ Migrados para **Kimi (moonshot-v1-128k)**. 3 bots rodando. Instagram @titaniodashboard ativo via instagrapi. **3 posts publicados 28/03** (2 fotos IA + 1 Reels). | 2026-03-28 18:03h |
-| **tmem (Titanio Memory CLI)** | ✅ **NOVO — OPERACIONAL.** CLI local de memória (alternativa ao ByteRover). 14 conhecimentos curados, 4 pessoas, 6 projetos. Integra Engine+Graph+Score. Zero cloud/API. | 2026-03-29 18:03h |
+| **tmem (Titanio Memory CLI)** | ✅ **OPERACIONAL.** CLI local de memória (alternativa ao ByteRover). 14 conhecimentos curados, 4 pessoas, 6 projetos. Integra Engine+Graph+Score. Zero cloud/API. | 2026-03-29 18:03h |
+| **Titanio Direct Tools** | ✅ **NOVO — OPERACIONAL.** 12 tools Python chamáveis direto sem MCP overhead. Economia de tokens. MD enviado pro time. | 2026-03-30 12:56h |
 | **Paperclip** | ✅ **ONLINE localhost:3001** — Orquestrador IA (7 agentes, 3 goals). Empresa Titanio Studio. DB backup a cada hora. | 2026-03-27 18:03h |
 
 ---
@@ -231,7 +232,7 @@ App offline, PT-BR, conformidade NBR 15290. Stack: Python + PySide6 + WhisperX +
 | 14 | FIX-COMPLETO-TIAGO.md (nome + conexão dashboard) | ✅ ENVIADO | 1 | Enviado para Tiago via Zica (25/03 ~20h BRT). Aguardando Tiago executar. |
 | 15 | Polymarket bot — private key Tiago | 🟠 PENDENTE | 1 | Tiago prometeu 27/03. Verificar se obteve. |
 | 16 | HiClaw print + md para Helber/Tiago | ✅ CUMPRIDA | 0 | Screenshot + ATUALIZAR-DASHBOARDS.md enviados (27/03 23:40 BRT) |
-| 17 | Gold Digger investigar efetividade | 🔴 URGENTE | 3 | **305 ciclos**, 44 propostas, 0 novas em **105+ ciclos** — bot morto reportando como ativo. PRECISA KILL SWITCH. |
+| 17 | Gold Digger investigar efetividade | 🔴 **CRÍTICO** | 6 | **340 ciclos**, 44 propostas, 0 novas em **150+ ciclos** — bot morto reportando como ativo. KILL SWITCH URGENTÍSSIMO. |
 | 18 | Instagram posts publicados (Zica pediu) | ✅ CUMPRIDA | 0 | 3 posts @titaniodashboard (2 fotos IA + 1 Reels) — 28/03 18h |
 | 19 | Debug Hunter teste completo (Zica pediu) | ✅ CUMPRIDA | 0 | 7/7 infra, 5/5 endpoints, 9 projetos zero issues — 28/03 18h |
 | 20 | tmem (Titanio Memory CLI) — Zica pediu | ✅ CUMPRIDA | 0 | CLI criado, 14 conhecimentos curados, operacional — 29/03 18h |
@@ -336,12 +337,13 @@ Anterior: `2026-03-24_00h.md`
 
 ---
 
-**Atualizado:** 2026-03-29 18:03 BRT (21:03 UTC 29/03) ← FLUSH ATUAL  
-**Próximo flush automático:** ~21:03 BRT (2026-03-30 00:03 UTC) — **VERIFICAR: GOLD DIGGER MORTO (305 ciclos 0 novas em 105+), ASC CAMPOS ZICA (11+ DIAS!), BUILD iOS MORTO (12+ DIAS!), POLYMARKET KEY TIAGO**
+**Atualizado:** 2026-03-30 12:56 BRT (15:56 UTC 30/03) ← FLUSH ATUAL  
+**Próximo flush automático:** ~15:56 BRT (2026-03-30 18:56 UTC) — **VERIFICAR: GOLD DIGGER MORTO (340 ciclos 0 novas em 150+), ASC CAMPOS ZICA (13+ DIAS!), BUILD iOS MORTO (13+ DIAS!), POLYMARKET KEY TIAGO**
 
-**Memória persistente:** 24 entradas (2026-03-22 03h até 2026-03-29 18h)  
+**Memória persistente:** 25 entradas (2026-03-22 03h até 2026-03-30 12h)  
 **Relatórios recentes:** 
-- `memoria-persistente/2026-03-29_18h.md` ← **ESTE FLUSH** (domingo 18h, Gold Digger 305 ciclos morto, tmem criado, Polymarket scan)
+- `memoria-persistente/2026-03-30_12h.md` ← **ESTE FLUSH** (segunda 12:56, Gold Digger 340 ciclos morto, Direct Tools criado, zero interação humana)
+- `memoria-persistente/2026-03-29_18h.md` (domingo 18h, Gold Digger 305 ciclos morto, tmem criado, Polymarket scan)
 - `memoria-persistente/2026-03-29_12h.md` (domingo meio-dia, Gold Digger 295 ciclos morto, zero interação humana)
 - `memoria-persistente/2026-03-29_06h.md` (domingo manhã, Gold Digger 280 ciclos morto, zero interação humana)
 - `memoria-persistente/2026-03-29_00h.md` (madrugada, Gold Digger 270 ciclos morto, zero interação humana)

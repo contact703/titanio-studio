@@ -1,7 +1,7 @@
 {
-  "lastCheck": "2026-03-30T15:30:58Z",
+  "lastCheck": "2026-03-30T16:00:01Z",
   "status": "ok",
-  "contextLines":      387,
-  "memoryFiles":      159,
+  "contextLines":      389,
+  "memoryFiles":      160,
   "note": "Sentinel rodando via OpenRouter"
 }

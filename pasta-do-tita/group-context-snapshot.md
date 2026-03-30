@@ -1,5 +1,5 @@
 # 🧠 Snapshot de Contexto — Tita nos Grupos
-> Gerado automaticamente em: 2026-03-30 12:30 BRT
+> Gerado automaticamente em: 2026-03-30 13:00 BRT
 > Para injetar em sessões de grupo quando necessário
 
 ## Status dos Projetos Críticos
@@ -13,7 +13,7 @@
 --
 | **Dashboard Gospia/Bots** | ✅ TOTALMENTE FUNCIONAL. 31 especialistas + **SYNC COMPLETO (OPERACIONAL)**. **3 instâncias ativas:** Eduardo (4444), Helber (4445), Tiago (4446). Gateway cluster em 192.168.18.174:18789. **Sync:** `/Volumes/TITA_039/shared-projects.json` + `/Volumes/TITA_039/shared-specialists.json` (196k lições!). Botão "Sincronizar Tudo" implementado + auto-export. Watchdog-dashboard.sh ativo. **GitHub:** Commitado + pronto pra Helber/Tiago. **FIX-COMPLETO-TIAGO.md** enviado (nome Helber→Tiago + conexão claw↔dashboard). | 2026-03-26 00:03h |
 | **Bots Design Instagram** | ✅ Migrados para **Kimi (moonshot-v1-128k)**. 3 bots rodando. Instagram @titaniodashboard ativo via instagrapi. **3 posts publicados 28/03** (2 fotos IA + 1 Reels). | 2026-03-28 18:03h |
-| **tmem (Titanio Memory CLI)** | ✅ **NOVO — OPERACIONAL.** CLI local de memória (alternativa ao ByteRover). 14 conhecimentos curados, 4 pessoas, 6 projetos. Integra Engine+Graph+Score. Zero cloud/API. | 2026-03-29 18:03h |
+| **tmem (Titanio Memory CLI)** | ✅ **OPERACIONAL.** CLI local de memória (alternativa ao ByteRover). 14 conhecimentos curados, 4 pessoas, 6 projetos. Integra Engine+Graph+Score. Zero cloud/API. | 2026-03-29 18:03h |
 --
 ## 🚀 GospIA iOS — Status Atual
 
@@ -62,4 +62,4 @@
 - Tempo: ~15 segundos por vídeo
 
 ## Última Atualização de Memória
-2026-03-30_00h.md
+2026-03-30_12h.md
