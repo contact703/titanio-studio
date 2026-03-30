@@ -2318,3 +2318,14 @@ Foram criadas 5 DMs únicas e personaliza
 **Duração:** 90.3s
 - [process] Tarefa demorou 90s — considerar otimização
 
+
+## 2026-03-30 06:52 — Gere 5 DMs únicas e personalizadas para abordar donos de clí
+**Status:** ✅ Sucesso
+**Duração:** 13.8s
+- [integration] Integrações: instagram
+- [process] Gere 5 DMs únicas e personalizadas para abordar donos de clínica estética no Ins → ## [Geração de DMs para Dones de Clínica Estética] — Relatório de Execução
+
+[Execução e resultados concretos]
+
+Foram criadas 5 DMs únicas e personaliz
+

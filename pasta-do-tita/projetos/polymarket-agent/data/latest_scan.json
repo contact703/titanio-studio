@@ -1,34 +1,20 @@
 {
-  "timestamp": "2026-03-30 06:16",
+  "timestamp": "2026-03-30 06:48",
   "markets_total": 30,
-  "opportunities": 3,
+  "opportunities": 2,
   "analyses": [
     {
-      "question": "Will the price of Bitcoin be above $66,000 on April 3?",
-      "yes": 0.68,
-      "no": 0.32,
-      "volume": 9997.461552000063,
-      "analysis": {
-        "confianca": 25,
-        "direcao": "NO",
-        "razao": "Bitcoin em alta volatilidade, resistência em $66k, incertezas macroeconômicas e sazonalidade Q2 historicamente mais fraca",
-        "risco": "alto"
-      },
-      "timestamp": "2026-03-30 06:16",
-      "condition_id": "0xf2b4fdd920a609d50af500233d03f0f7b240ede276cbb4c2778f2828d48c1db3"
-    },
-    {
       "question": "OpenAI receives federal backstop for infrastructure before July?",
-      "yes": 0.275,
-      "no": 0.725,
+      "yes": 0.27,
+      "no": 0.73,
       "volume": 99743.73505899977,
       "analysis": {
         "confianca": 75,
         "direcao": "NO",
-        "razao": "Prazo muito curto para aprovação de legislação federal complexa sobre IA, especialmente com processo político lento nos EUA",
+        "razao": "Governos demoram para criar novos programas de apoio, especialmente com mudança de administração recente e foco em outras prioridades",
         "risco": "medio"
       },
-      "timestamp": "2026-03-30 06:16",
+      "timestamp": "2026-03-30 06:48",
       "condition_id": "0x388459f1cfd0d310154e13f16f49d31fd301e5e3502072c8b09d3a0697b2823f"
     },
     {
@@ -37,35 +23,35 @@
       "no": 0.345,
       "volume": 9958.918306,
       "analysis": {
-        "confianca": 15,
+        "confianca": 25,
         "direcao": "NO",
-        "razao": "Mikael Ishak tem 35 anos e joga na liga sueca, mercado com pouco volume e odds parecem infladas",
+        "razao": "Odds muito favoráveis para um jogador específico em competição com muitos atacantes talentosos de diferentes times",
         "risco": "alto"
       },
-      "timestamp": "2026-03-30 06:16",
+      "timestamp": "2026-03-30 06:48",
       "condition_id": "0x71116149166610ae90c5bbda1b3fed3c202e31f3d31599e39866466c7b985114"
     }
   ],
   "top_events": [
     {
       "title": "Democratic Presidential Nominee 2028",
-      "volume": 937488144.0293432
+      "volume": 937834302.1379294
     },
     {
       "title": "Republican Presidential Nominee 2028",
-      "volume": 492401032.25294477
+      "volume": 492647752.92866886
     },
     {
       "title": "Presidential Election Winner 2028",
-      "volume": 471919996.9272731
+      "volume": 472128030.4257593
     },
     {
       "title": "2026 FIFA World Cup Winner ",
-      "volume": 426679155.3169552
+      "volume": 427017682.2108032
     },
     {
       "title": "English Premier League Winner ",
-      "volume": 312535644.21962684
+      "volume": 312541089.80913484
     }
   ]
 }
