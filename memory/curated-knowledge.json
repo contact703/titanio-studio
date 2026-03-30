@@ -6,7 +6,7 @@
     "eduardo": 1,
     "titanio-media": 2,
     "dashboard": 3,
-    "memory-system": 6,
+    "memory-system": 7,
     "helber": 1,
     "tiago": 2,
     "mandaanota": 1,
@@ -311,7 +311,14 @@
       "subtopic": "memory-system",
       "date": "2026-03-30 02:17",
       "id": 41
+    },
+    {
+      "text": "FIX SEGURANÇA: tita-specialist-learned.sh ANTES truncava lições >500 linhas. CORRIGIDO: nunca mais apaga. 25 scripts auditados, ZERO apagam memória. Backup NUNCA deleta (6.3TB livres).",
+      "category": "projects",
+      "subtopic": "memory-system",
+      "date": "2026-03-30 02:22",
+      "id": 42
     }
   ],
-  "last_updated": "2026-03-30T02:17:02.920012"
+  "last_updated": "2026-03-30T02:22:03.303067"
 }

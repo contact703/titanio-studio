@@ -122,6 +122,10 @@
       {
         "text": "DECISÃO: NUNCA apagar backups no TITA_039. 6.3TB livres, 23MB/dia = 0.16% em 10 anos. Memória é ouro, disco aguenta décadas. Só alertar se <500GB.",
         "date": "2026-03-30 02:17"
+      },
+      {
+        "text": "FIX SEGURANÇA: tita-specialist-learned.sh ANTES truncava lições >500 linhas. CORRIGIDO: nunca mais apaga. 25 scripts auditados, ZERO apagam memória. Backup NUNCA deleta (6.3TB livres).",
+        "date": "2026-03-30 02:22"
       }
     ],
     "mandaanota": [
@@ -181,5 +185,5 @@
   ],
   "credentials": {},
   "workflows": {},
-  "last_updated": "2026-03-30T02:17:02.941196"
+  "last_updated": "2026-03-30T02:22:03.303317"
 }

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-30 02:12",
+  "timestamp": "2026-03-30 02:22",
   "markets_total": 30,
   "opportunities": 2,
   "analyses": [
@@ -9,49 +9,49 @@
       "no": 0.505,
       "volume": 99837.02473200005,
       "analysis": {
-        "confianca": 65,
+        "confianca": 75,
         "direcao": "YES",
-        "razao": "Heat tem histórico consistente de playoffs, cultura organizacional forte com Spoelstra/Riley, e competem bem no Leste",
+        "razao": "Heat tem histórico consistente de playoffs, cultura organizacional forte com Spoelstra/Riley, e geralmente supera expectativas mesmo sem superstars",
         "risco": "medio"
       },
-      "timestamp": "2026-03-30 02:12",
+      "timestamp": "2026-03-30 02:22",
       "condition_id": "0xe538b3af4e8d0368cff984c05c06badcf1233c6c8074a36f0d6e2ba37f538444"
     },
     {
       "question": "OpenAI receives federal backstop for infrastructure before July?",
-      "yes": 0.2735,
-      "no": 0.7265,
+      "yes": 0.2775,
+      "no": 0.7225,
       "volume": 99736.03235899977,
       "analysis": {
         "confianca": 75,
         "direcao": "NO",
-        "razao": "Apoio federal para infraestrutura de IA requer aprovação congressual complexa, improvável em 6 meses",
+        "razao": "Prazo muito curto (6 meses) para aprovação de backstop federal complexo, considerando burocracia governamental e debates regulatórios necessários",
         "risco": "medio"
       },
-      "timestamp": "2026-03-30 02:12",
+      "timestamp": "2026-03-30 02:22",
       "condition_id": "0x388459f1cfd0d310154e13f16f49d31fd301e5e3502072c8b09d3a0697b2823f"
     }
   ],
   "top_events": [
     {
       "title": "Democratic Presidential Nominee 2028",
-      "volume": 936421614.8134472
+      "volume": 936435196.5104642
     },
     {
       "title": "Republican Presidential Nominee 2028",
-      "volume": 491873421.8436697
+      "volume": 491894337.8326457
     },
     {
       "title": "Presidential Election Winner 2028",
-      "volume": 471450018.547273
+      "volume": 471457008.385104
     },
     {
       "title": "2026 FIFA World Cup Winner ",
-      "volume": 423686863.0184332
+      "volume": 423770002.65279716
     },
     {
       "title": "English Premier League Winner ",
-      "volume": 312502387.7443139
+      "volume": 312508426.01929784
     }
   ]
 }
