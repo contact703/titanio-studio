@@ -1,20 +1,20 @@
 {
-  "timestamp": "2026-03-30 07:51",
+  "timestamp": "2026-03-30 08:23",
   "markets_total": 30,
   "opportunities": 2,
   "analyses": [
     {
       "question": "OpenAI receives federal backstop for infrastructure before July?",
-      "yes": 0.265,
-      "no": 0.735,
+      "yes": 0.27,
+      "no": 0.73,
       "volume": 99743.73505899977,
       "analysis": {
         "confianca": 75,
         "direcao": "NO",
-        "razao": "Prazo muito curto para aprovação de backstop federal complexo, especialmente com mudança de governo recente e prioridades orçamentárias concorrentes",
+        "razao": "Apoio federal específico para infraestrutura de IA requer processo legislativo longo e complexo, improvável em 6 meses",
         "risco": "medio"
       },
-      "timestamp": "2026-03-30 07:51",
+      "timestamp": "2026-03-30 08:23",
       "condition_id": "0x388459f1cfd0d310154e13f16f49d31fd301e5e3502072c8b09d3a0697b2823f"
     },
     {
@@ -25,33 +25,33 @@
       "analysis": {
         "confianca": 75,
         "direcao": "YES",
-        "razao": "Rial iraniano tem histórico de desvalorização contínua devido a sanções econômicas e instabilidade política. Taxa atual já próxima deste valor.",
+        "razao": "Rial iraniano em queda acelerada devido a sanções intensificadas, instabilidade política e pressões econômicas crescentes",
         "risco": "medio"
       },
-      "timestamp": "2026-03-30 07:51",
+      "timestamp": "2026-03-30 08:23",
       "condition_id": "0x699093850ff73cf30baa4c571272900c3162932f9745400256a6455d6b2d0789"
     }
   ],
   "top_events": [
     {
       "title": "Democratic Presidential Nominee 2028",
-      "volume": 938440902.8191677
+      "volume": 938726253.565279
     },
     {
       "title": "Republican Presidential Nominee 2028",
-      "volume": 493041488.630083
+      "volume": 493254518.96946716
     },
     {
       "title": "Presidential Election Winner 2028",
-      "volume": 472536325.24793166
+      "volume": 472718635.30119085
     },
     {
       "title": "2026 FIFA World Cup Winner ",
-      "volume": 427319396.10906523
+      "volume": 427469554.9707632
     },
     {
       "title": "English Premier League Winner ",
-      "volume": 312552756.62436587
+      "volume": 312555411.8965409
     }
   ]
 }
