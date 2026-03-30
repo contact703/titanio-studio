@@ -231,14 +231,14 @@ async def generate_image_comfyui(prompt, output=None):
                     "latent_image": ["5", 0]
                 }
             },
-            "4": {"class_type": "UNETLoader", "inputs": {"unet_name": "flux1-schnell-Q4_K_S.gguf"}},
+            "4": {"class_type": "UnetLoaderGGUF", "inputs": {"unet_name": "flux1-schnell-Q4_K_S.gguf"}},
             "5": {"class_type": "EmptyLatentImage", "inputs": {"width": 1024, "height": 1024, "batch_size": 1}},
             "6": {"class_type": "CLIPTextEncode", "inputs": {"text": prompt, "clip": ["10", 0]}},
             "7": {"class_type": "CLIPTextEncode", "inputs": {"text": "", "clip": ["10", 0]}},
             "8": {"class_type": "VAEDecode", "inputs": {"samples": ["3", 0], "vae": ["11", 0]}},
             "9": {"class_type": "SaveImage", "inputs": {"filename_prefix": "titanio", "images": ["8", 0]}},
-            "10": {"class_type": "DualCLIPLoader", "inputs": {"clip_name1": "t5xxl_fp8_e4m3fn.safetensors", "clip_name2": "clip_l.safetensors"}},
-            "11": {"class_type": "VAELoader", "inputs": {"vae_name": "ae.safetensors"}}
+            "10": {"class_type": "DualCLIPLoader", "inputs": {"clip_name1": "t5xxl_fp8_e4m3fn.safetensors", "clip_name2": "clip_l.safetensors", "type": "flux"}},
+            "11": {"class_type": "VAELoader", "inputs": {"vae_name": "flux_vae.safetensors"}}
         }
     }
     
@@ -364,6 +364,54 @@ async def test_all():
     return results
 
 
+
+async def generate_image_free_api(prompt, output=None):
+    """Generate image using free APIs (Pollinations, HF Inference, etc.)."""
+    import urllib.request
+    import time
+    
+    if not output:
+        slug = prompt[:20].replace(" ", "_").replace("/", "_")
+        output = os.path.join(OUTPUT_DIR, f"ai_image_{slug}_{datetime.now().strftime('%H%M')}.png")
+    
+    # Try Pollinations.ai first (truly free, no auth)
+    encoded_prompt = urllib.parse.quote(prompt)
+    apis = [
+        f"https://image.pollinations.ai/prompt/{encoded_prompt}?width=1024&height=1024&nologo=true&seed={random.randint(0,999999)}",
+    ]
+    
+    for api_url in apis:
+        try:
+            print(f"🎨 Generating image via free API...")
+            req = urllib.request.Request(api_url, headers={'User-Agent': 'TitanioMedia/1.0'})
+            
+            # Pollinations can take up to 60s for complex prompts
+            response = urllib.request.urlopen(req, timeout=90)
+            
+            # Check if it's an image
+            content_type = response.headers.get('Content-Type', '')
+            if 'image' in content_type:
+                with open(output, 'wb') as f:
+                    f.write(response.read())
+                print(f"✅ AI Image saved: {output}")
+                return output
+            else:
+                data = response.read().decode('utf-8', errors='ignore')
+                if 'error' in data.lower() or 'queue' in data.lower():
+                    print(f"⚠️ API busy, retrying in 5s...")
+                    time.sleep(5)
+                    continue
+        except Exception as e:
+            print(f"⚠️ API error: {e}")
+            continue
+    
+    # Fallback to banner
+    print("⚠️ Free APIs unavailable, using banner fallback")
+    return generate_banner(prompt, style="neon")
+
+
+
+
 def main():
     if len(sys.argv) < 2:
         print("Titanio Media v1.0\n")
@@ -396,7 +444,10 @@ def main():
     elif cmd == "video":
         generate_video(text or "Titanio Media", style=style)
     elif cmd == "image":
-        asyncio.run(generate_image_comfyui(text or "a futuristic robot"))
+        if "--comfyui" in sys.argv:
+            asyncio.run(generate_image_comfyui(text or "a futuristic robot"))
+        else:
+            asyncio.run(generate_image_free_api(text or "a futuristic robot"))
     elif cmd == "pipeline":
         asyncio.run(full_pipeline(text or "Inteligência Artificial", style=style))
     elif cmd == "test":

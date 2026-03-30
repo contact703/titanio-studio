@@ -1,5 +1,10 @@
 # MEMORY.md — Memória de Longo Prazo do Kratos
 
+> ⚠️ **IMPORTANTE:** Sempre leia `SESSION-CONTEXT.md` no início de cada sessão para contexto recente!
+> O arquivo é auto-gerado pelo bin/tita-session-boot.sh e contém os últimos 5 dias de atividade.
+
+
+
 _Destilado do livro "KRATOS — Crônicas de um Guerreiro Digital" (Fev 2026)_
 _Restaurado em 04/03/2026 após perda de dados_
 
