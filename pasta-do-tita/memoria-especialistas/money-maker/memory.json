@@ -2,14 +2,44 @@
   "sessions": [],
   "stats": {
     "sessionsCount": 0,
-    "tasksCompleted": 539,
+    "tasksCompleted": 541,
     "lessonsLearned": 61,
     "tokensUsed": 0,
-    "avgTaskDurationMs": 17055,
-    "tasksFailed": 6
+    "avgTaskDurationMs": 20374,
+    "tasksFailed": 7
   },
   "knowledge": [],
   "recentTasks": [
+    {
+      "id": "33bdfd2a-8f6a-4e8e-bf1f-27b92a4fc773",
+      "title": "Drop servicing: vendo \"análise de concorrentes\" para e-commerce por R$297. Crie: (1) proposta comercial pronta pra enviar, (2) execute o serviço completo com IA agora (resultado real para entregar ao cliente). Email: siriguejo@proton.me",
+      "description": "",
+      "status": "failed",
+      "startedAt": "2026-03-30T09:20:54.323Z",
+      "completedAt": "2026-03-30T09:22:24.597Z",
+      "result": "⚠️ Money Maker encontrou um problema: Nenhuma API disponível. Verifique a conexão com o OpenClaw Gateway.",
+      "durationMs": 90274
+    },
+    {
+      "id": "6a124235-794f-44e7-9e4c-dc731205af20",
+      "title": "Gere 5 DMs únicas e personalizadas para abordar donos de salão de beleza no Instagram oferecendo pack de legendas por R$97. Cada DM diferente, máx 3 linhas, casual, com [NOME] como placeholder. Email: siriguejo@proton.me",
+      "description": "",
+      "status": "completed",
+      "startedAt": "2026-03-30T09:20:54.319Z",
+      "completedAt": "2026-03-30T09:21:21.558Z",
+      "result": "## [Geração de DMs para Dones de Salão de Beleza] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nForam criadas 5 DMs únicas e personalizadas para abordar donos de salão de beleza no Instagram oferecendo pack de legendas por R$97. Cada mensagem é diferente, contém no máximo 3 linhas e é casual, incluindo [NOME] como placeholder. Aqui estão as mensagens:\n\n1. \"Oi [NOME], tem um pack de legendas que vai fazer sua marca brilhar no Instagram por apenas R$97. Vamos fazê-lo crescer? 💡\"\n\n2.",
+      "durationMs": 27239
+    },
+    {
+      "id": "286b57a5-68f7-4ecc-a0f2-54d37f95a6e9",
+      "title": "Ebook COMPLETO para vender na Hotmart sobre \"automação para pequenos negócios com ferramentas grátis\": título magnético, página de vendas (headline + 3 bullets + preço R$47 + CTA), sumário 7 capítulos, capítulo 1 completo (300 palavras).",
+      "description": "",
+      "status": "completed",
+      "startedAt": "2026-03-30T09:20:54.313Z",
+      "completedAt": "2026-03-30T09:22:20.253Z",
+      "result": "Olá! Como você não é um usuário conectado, não tenho acesso às suas preferências ou informações de autenticação. No entanto, posso ajudar a analisar as tarefas que você forneceu relacionadas ao seu ebook.\n\nCom base nas informações fornecidas, parece que você está trabalhando em criar um ebook sobre \"automação para pequenos negócios com ferramentas grátis\". Você precisa criar o título magnético, página de vendas, sumário e capítulo 1 completo. Aqui está uma sugestão de como estruturar esses compo",
+      "durationMs": 85940
+    },
     {
       "id": "0a11452b-7bea-4e7d-893e-acd8f3f55bd4",
       "title": "Gere 5 DMs únicas e personalizadas para abordar donos de restaurante no Instagram oferecendo pack de legendas por R$97. Cada DM diferente, máx 3 linhas, casual, com [NOME] como placeholder. Email: siriguejo@proton.me",
@@ -476,36 +506,6 @@
       "completedAt": "2026-03-29T20:06:04.027Z",
       "result": "## [Geração de DMs para Dones de Restaurante] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nForam criadas 5 DMs únicas e personalizadas para abordar donos de restaurante no Instagram oferecendo pack de legendas por R$97. Cada mensagem é diferente, contém no máximo 3 linhas e é casual, incluindo [NOME] como placeholder. Aqui estão as mensagens:\n\n1. \"Oi [NOME], tem um segredo de como seus posts podem ficar mais appetitosos? Nosso pack de legendas por apenas R$97 vai deixar sua comida",
       "durationMs": 11807
-    },
-    {
-      "id": "265936db-7a04-448d-bd8c-3628d426f5bf",
-      "title": "Ebook COMPLETO para vender na Hotmart sobre \"automação para pequenos negócios com ferramentas grátis\": título magnético, página de vendas (headline + 3 bullets + preço R$47 + CTA), sumário 7 capítulos, capítulo 1 completo (300 palavras).",
-      "description": "",
-      "status": "completed",
-      "startedAt": "2026-03-29T19:35:34.031Z",
-      "completedAt": "2026-03-29T19:35:48.621Z",
-      "result": "## [Criação de Ebook para Venda na Hotmart] — Relatório de Execução\n\n[Execução e resultados concretos]\n\n### 1. Criação do Título Magnético\n**Título Magnético:**\n\"Automação Ilimitada: Domine as Ferramentas Grátis e Reduza seu Tempo de Trabalho Drasticamente\"\n\n### 2. Criação da Página de Vendas\n**Headline:**\n\"Desbloqueie o Potencial do Seu Negócio com Automação para Pequenos Negócios\"\n\n**3 Bullets:**\n- \"Acesso às melhores ferramentas de automação gratuitas para impulsionar sua empresa\"\n- \"Aprenda ",
-      "durationMs": 14590
-    },
-    {
-      "id": "732bcb14-cd3b-4152-a825-ccd54bc88f26",
-      "title": "Gere 5 DMs únicas e personalizadas para abordar donos de pet shop no Instagram oferecendo pack de legendas por R$97. Cada DM diferente, máx 3 linhas, casual, com [NOME] como placeholder. Email: siriguejo@proton.me",
-      "description": "",
-      "status": "completed",
-      "startedAt": "2026-03-29T19:35:34.027Z",
-      "completedAt": "2026-03-29T19:35:44.203Z",
-      "result": "## [Geração de DMs para Dones de Pet Shop] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nForam criadas 5 DMs únicas e personalizadas para abordar donos de pet shop no Instagram oferecendo pack de legendas por R$97. Cada mensagem é diferente, contém no máximo 3 linhas e é casual, incluindo [NOME] como placeholder. Aqui estão as mensagens:\n\n1. \"Oi [NOME], viu que seu pet shop é show! Tem uma oportunidade de impulsionar suas vendas com nosso pack de legendas personalizadas por apenas ",
-      "durationMs": 10176
-    },
-    {
-      "id": "20efa991-6797-404e-95b2-79f72e47154a",
-      "title": "Drop servicing: vendo \"relatório de redes sociais\" para restaurante por R$197. Crie: (1) proposta comercial pronta pra enviar, (2) execute o serviço completo com IA agora (resultado real para entregar ao cliente). Email: siriguejo@proton.me",
-      "description": "",
-      "status": "completed",
-      "startedAt": "2026-03-29T19:04:54.101Z",
-      "completedAt": "2026-03-29T19:05:13.451Z",
-      "result": "## [Drop Servicing - Relatório de Redes Sociais para Restaurante] — Relatório de Execução\n\n[Execução e resultados concretos]\n\n### 1. Criação da Proposta Comercial\n**Título:** Análise de Redes Sociais para Restaurantes\n\n**Proposta Comercial:**\nPrezado proprietário de restaurante,\n\nNosso time especializado em inteligência de redes sociais está oferecendo um serviço de análise de redes sociais que vai revelar insights valiosos para impulsionar a presença digital de seu restaurante. Por apenas R$197",
-      "durationMs": 19350
     }
   ],
   "activeContext": {
@@ -513,5 +513,5 @@
     "currentProject": null,
     "startedAt": null
   },
-  "lastActive": "2026-03-30T08:50:53.446Z"
+  "lastActive": "2026-03-30T09:22:24.597Z"
 }

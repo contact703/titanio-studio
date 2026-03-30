@@ -2293,3 +2293,28 @@ Foram criadas 5 DMs únicas e personalizadas par
 
 Foram criadas 5 DMs únicas e personalizadas 
 
+
+## 2026-03-30 06:21 — Gere 5 DMs únicas e personalizadas para abordar donos de sal
+**Status:** ✅ Sucesso
+**Duração:** 27.2s
+- [integration] Integrações: instagram
+- [process] Gere 5 DMs únicas e personalizadas para abordar donos de salão de beleza no Inst → ## [Geração de DMs para Dones de Salão de Beleza] — Relatório de Execução
+
+[Execução e resultados concretos]
+
+Foram criadas 5 DMs únicas e personaliza
+
+
+## 2026-03-30 06:22 — Ebook COMPLETO para vender na Hotmart sobre "automação para 
+**Status:** ✅ Sucesso
+**Duração:** 85.9s
+- [integration] Integrações: apple
+- [process] Tarefa demorou 86s — considerar otimização
+- [process] Ebook COMPLETO para vender na Hotmart sobre "automação para pequenos negócios co → Olá! Como você não é um usuário conectado, não tenho acesso às suas preferências ou informações de autenticação. No entanto, posso ajudar a analisar a
+
+
+## 2026-03-30 06:22 — Drop servicing: vendo "análise de concorrentes" para e-comme
+**Status:** ❌ Falhou
+**Duração:** 90.3s
+- [process] Tarefa demorou 90s — considerar otimização
+
