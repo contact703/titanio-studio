@@ -575,3 +575,53 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+def animate_portrait(image_path, output_path=None, driving="d0"):
+    """Animate a portrait image using LivePortrait (open source)."""
+    import subprocess
+    import os
+    
+    lp_dir = "/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/LivePortrait"
+    
+    if not output_path:
+        base = os.path.basename(image_path).replace('.png', '').replace('.jpg', '')
+        output_path = os.path.join(OUTPUT_DIR, f"animated_{base}.mp4")
+    
+    # Find driving video/template
+    driving_path = f"{lp_dir}/assets/examples/driving/{driving}.mp4"
+    if not os.path.exists(driving_path):
+        driving_path = f"{lp_dir}/assets/examples/driving/{driving}.pkl"
+    
+    if not os.path.exists(driving_path):
+        print(f"⚠️ Driving template not found: {driving}")
+        driving_path = f"{lp_dir}/assets/examples/driving/d0.mp4"
+    
+    print(f"🎭 Animating portrait with LivePortrait...")
+    print(f"   Source: {image_path}")
+    print(f"   Driving: {driving_path}")
+    
+    result = subprocess.run([
+        sys.executable, f"{lp_dir}/inference.py",
+        "-s", image_path,
+        "-d", driving_path,
+        "-o", os.path.dirname(output_path) + "/",
+        "--no-flag-use-half-precision"
+    ], capture_output=True, text=True, cwd=lp_dir)
+    
+    # Find the generated video
+    base = os.path.basename(image_path).replace('.png', '').replace('.jpg', '')
+    driving_base = os.path.basename(driving_path).replace('.mp4', '').replace('.pkl', '')
+    generated = os.path.join(os.path.dirname(output_path), f"{base}--{driving_base}.mp4")
+    
+    if os.path.exists(generated):
+        os.rename(generated, output_path)
+        print(f"✅ Animated video: {output_path}")
+        return output_path
+    else:
+        print(f"⚠️ Animation failed: {result.stderr[-500:] if result.stderr else 'unknown error'}")
+        return None
+
+
+# Add to main() command handling
+# Usage: titanio-media.py animate <image> [--driving talking|d0|d10]
