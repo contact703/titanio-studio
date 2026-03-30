@@ -174,7 +174,7 @@ else:
 caption = """$CAPTION"""
 thumbnail = "$THUMBNAIL" if os.path.exists("$THUMBNAIL") else None
 
-media = cl.clip_upload("$VIDEO_FILE", caption, thumbnail_path=thumbnail)
+media = cl.clip_upload("$VIDEO_FILE", caption, thumbnail=thumbnail)
 print(f"✅ Reels publicado! Media ID: {media.pk}")
 PYEOF
     

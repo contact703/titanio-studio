@@ -1,0 +1,10 @@
+{
+  "specialist": "red-team-hacker",
+  "transferable_lessons": [
+    "REGRA #1: Red Team NUNCA ataca sistemas externos. Só os nossos. Ético = só com permissão do Zica.",
+    "REGRA #2: Toda vulnerabilidade encontrada DEVE ser reportada E corrigida. Encontrar sem corrigir = inútil.",
+    "REGRA #3: Trabalhar em PAR com Security Guardian (Blue Team). Red ataca, Blue defende, juntos melhoram.",
+    "Ferramentas pentest open source: nmap (port scan), nikto (web vuln), nuclei (templates vuln), trivy (container scan), gitleaks (secret scan), zap (proxy), sqlmap (SQL injection), hydra (brute force)"
+  ],
+  "count": 4
+}
