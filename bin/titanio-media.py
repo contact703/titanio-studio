@@ -112,8 +112,8 @@ def generate_banner(text, style="neon", size="1080x1350", output=None):
     draw.text((w - 200, h - 50), "TITANIO", fill=(*s["accent"][:3],), font=font_small)
     
     if not output:
-        slug = text[:30].replace(" ", "_").replace("/", "")
-        output = os.path.join(OUTPUT_DIR, f"banner_{slug}_{datetime.now().strftime('%H%M')}.png")
+        slug = text[:30].replace(" ", "_").replace("/", "").replace("\n", "_")
+        output = os.path.join(OUTPUT_DIR, f"banner_{slug}_{datetime.now().strftime('%H%M%S')}_{random.randint(100,999)}.png")
     
     img.save(output, quality=95)
     print(f"✅ Banner saved: {output} ({w}x{h}, {style})")
@@ -272,10 +272,25 @@ async def full_pipeline(tema, style="reels"):
         f"Siga @titaniofilms para mais",
     ]
     
+    size = "1080x1920" if style == "reels" else "1920x1080"
+    w, h = map(int, size.split("x"))
+    
+    # Generate AI images for all frames, fallback to banners
     for i, (scene, s) in enumerate(zip(scenes, styles)):
-        size = "1080x1920" if style == "reels" else "1920x1080"
-        img = generate_banner(scene, style=s, size=size)
-        images.append(img)
+        # Try SDXL-Turbo local first
+        img = generate_image_sdxl_turbo(scene, width=min(w, 512), height=min(h, 512))
+        if img and os.path.exists(img):
+            # Upscale to target size
+            from PIL import Image as PILImage
+            pil_img = PILImage.open(img)
+            if pil_img.size != (w, h):
+                pil_img = pil_img.resize((w, h), PILImage.LANCZOS)
+                pil_img.save(img)
+            images.append(img)
+        else:
+            # Banner fallback
+            img = generate_banner(scene, style=s, size=size)
+            images.append(img)
     
     # 2. Generate narration
     print("\n🎙️ Gerando narração...")
@@ -365,52 +380,152 @@ async def test_all():
 
 
 
-async def generate_image_free_api(prompt, output=None):
-    """Generate image using free APIs (Pollinations, HF Inference, etc.)."""
-    import urllib.request
-    import time
+
+# Global SDXL-Turbo pipeline cache
+_sdxl_pipe = None
+
+def generate_image_sdxl_turbo(prompt, output=None, width=512, height=512):
+    """Generate image using SDXL-Turbo locally (M4 chip, ~7s per image)."""
+    global _sdxl_pipe
     
     if not output:
-        slug = prompt[:20].replace(" ", "_").replace("/", "_")
-        output = os.path.join(OUTPUT_DIR, f"ai_image_{slug}_{datetime.now().strftime('%H%M')}.png")
+        slug = prompt[:20].replace(" ", "_").replace("/", "_").replace("\n", "_")
+        output = os.path.join(OUTPUT_DIR, f"ai_sdxl_{slug}_{datetime.now().strftime('%H%M%S')}_{random.randint(100,999)}.png")
     
-    # Try Pollinations.ai first (truly free, no auth)
-    encoded_prompt = urllib.parse.quote(prompt)
-    apis = [
-        f"https://image.pollinations.ai/prompt/{encoded_prompt}?width=1024&height=1024&nologo=true&seed={random.randint(0,999999)}",
-    ]
+    try:
+        import torch
+        from diffusers import AutoPipelineForText2Image
+        
+        if _sdxl_pipe is None:
+            print("🎨 Loading SDXL-Turbo (first time takes ~60s)...")
+            _sdxl_pipe = AutoPipelineForText2Image.from_pretrained(
+                "stabilityai/sdxl-turbo",
+                torch_dtype=torch.float16 if torch.backends.mps.is_available() else torch.float32,
+                variant="fp16" if torch.backends.mps.is_available() else None,
+                local_files_only=True
+            )
+            device = "mps" if torch.backends.mps.is_available() else "cpu"
+            _sdxl_pipe.to(device)
+            print(f"  ✅ Model loaded on {device}")
+        
+        print(f"🎨 Generating image...")
+        import time
+        start = time.time()
+        image = _sdxl_pipe(
+            prompt=prompt + ", high quality, professional, 4k",
+            num_inference_steps=4,
+            guidance_scale=0.0,
+            width=width,
+            height=height
+        ).images[0]
+        
+        image.save(output)
+        gen_time = time.time() - start
+        print(f"✅ AI Image saved: {output} ({gen_time:.1f}s, SDXL-Turbo local)")
+        return output
+        
+    except Exception as e:
+        print(f"⚠️ SDXL-Turbo error: {str(e)[:80]}")
+        return None
+
+
+async def generate_image_free_api(prompt, output=None, width=1024, height=1024):
+    """Generate image using Stable Horde (free, no API key needed)."""
+    import urllib.request
+    import urllib.parse
+    import time
+    import base64
     
-    for api_url in apis:
-        try:
-            print(f"🎨 Generating image via free API...")
-            req = urllib.request.Request(api_url, headers={'User-Agent': 'TitanioMedia/1.0'})
+    if not output:
+        slug = prompt[:20].replace(" ", "_").replace("/", "_").replace("\n", "_")
+        output = os.path.join(OUTPUT_DIR, f"ai_image_{slug}_{datetime.now().strftime('%H%M%S')}_{random.randint(100,999)}.png")
+    
+    # Stable Horde - free community GPU cluster
+    # Anonymous key = 0000000000 (free, slower queue)
+    horde_url = "https://stablehorde.net/api/v2/generate/async"
+    
+    # Limit to 768x768 for free tier (above 885x885 needs kudos)
+    w = min(width, 768)
+    h = min(height, 768)
+    
+    payload = json.dumps({
+        "prompt": prompt + ", high quality, professional, 4k",
+        "params": {
+            "width": w, "height": h,
+            "steps": 20, "sampler_name": "k_euler",
+            "cfg_scale": 7, "seed": str(random.randint(0, 999999))
+        },
+        "nsfw": False,
+        "models": ["FLUX.1 [schnell]", "AlbedoBase XL (SDXL)", "Juggernaut XL"]
+    })
+    
+    try:
+        print(f"🎨 Generating AI image via Stable Horde (free)...")
+        req = urllib.request.Request(horde_url, data=payload.encode(),
+              headers={"Content-Type": "application/json", "apikey": "0000000000"})
+        resp = urllib.request.urlopen(req, timeout=15)
+        result = json.loads(resp.read())
+        job_id = result.get("id")
+        
+        if not job_id:
+            print(f"⚠️ Horde error: {result}")
+            return generate_banner(prompt, style="neon")
+        
+        # Poll for completion (max 2 min)
+        print(f"⏳ Queued (ID: {job_id[:8]}...)...")
+        for attempt in range(24):
+            time.sleep(5)
+            check = urllib.request.urlopen(
+                f"https://stablehorde.net/api/v2/generate/check/{job_id}", timeout=10)
+            status = json.loads(check.read())
             
-            # Pollinations can take up to 60s for complex prompts
-            response = urllib.request.urlopen(req, timeout=90)
+            if status.get("done"):
+                break
             
-            # Check if it's an image
-            content_type = response.headers.get('Content-Type', '')
-            if 'image' in content_type:
-                with open(output, 'wb') as f:
-                    f.write(response.read())
-                print(f"✅ AI Image saved: {output}")
-                return output
+            pos = status.get("queue_position", "?")
+            wait = status.get("wait_time", "?")
+            if attempt % 4 == 0:
+                print(f"  ⏳ Position: {pos}, ETA: {wait}s")
+        
+        # Get the result
+        result_url = f"https://stablehorde.net/api/v2/generate/status/{job_id}"
+        result_resp = urllib.request.urlopen(result_url, timeout=15)
+        result_data = json.loads(result_resp.read())
+        
+        generations = result_data.get("generations", [])
+        if generations:
+            img_data = generations[0].get("img", "")
+            model_used = generations[0].get("model", "unknown")
+            
+            if img_data.startswith("http"):
+                img_resp = urllib.request.urlopen(img_data, timeout=30)
+                img_bytes = img_resp.read()
             else:
-                data = response.read().decode('utf-8', errors='ignore')
-                if 'error' in data.lower() or 'queue' in data.lower():
-                    print(f"⚠️ API busy, retrying in 5s...")
-                    time.sleep(5)
-                    continue
-        except Exception as e:
-            print(f"⚠️ API error: {e}")
-            continue
-    
-    # Fallback to banner
-    print("⚠️ Free APIs unavailable, using banner fallback")
-    return generate_banner(prompt, style="neon")
-
-
-
+                img_bytes = base64.b64decode(img_data)
+            
+            # Save and convert to PNG
+            temp_path = output.replace(".png", "_raw.webp")
+            with open(temp_path, "wb") as f:
+                f.write(img_bytes)
+            
+            # Convert to PNG
+            from PIL import Image as PILImage
+            img = PILImage.open(temp_path)
+            # Upscale to target size if smaller
+            if img.size[0] < width or img.size[1] < height:
+                img = img.resize((width, height), PILImage.LANCZOS)
+            img.save(output)
+            os.remove(temp_path)
+            
+            print(f"✅ AI Image saved: {output} (model: {model_used})")
+            return output
+        
+        print("⚠️ No image generated")
+        return generate_banner(prompt, style="neon")
+        
+    except Exception as e:
+        print(f"⚠️ Stable Horde error: {str(e)[:80]}")
+        return generate_banner(prompt, style="neon")
 
 def main():
     if len(sys.argv) < 2:
@@ -447,7 +562,9 @@ def main():
         if "--comfyui" in sys.argv:
             asyncio.run(generate_image_comfyui(text or "a futuristic robot"))
         else:
-            asyncio.run(generate_image_free_api(text or "a futuristic robot"))
+            result = generate_image_sdxl_turbo(text or "a futuristic robot")
+            if not result:
+                asyncio.run(generate_image_free_api(text or "a futuristic robot"))
     elif cmd == "pipeline":
         asyncio.run(full_pipeline(text or "Inteligência Artificial", style=style))
     elif cmd == "test":
