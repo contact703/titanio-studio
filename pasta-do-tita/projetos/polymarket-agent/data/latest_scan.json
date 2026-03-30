@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-03-30 14:17",
+  "timestamp": "2026-03-30 14:50",
   "markets_total": 30,
-  "opportunities": 3,
+  "opportunities": 4,
   "analyses": [
     {
       "question": "Will a dozen eggs cost between $2.25–2.50 in March?",
@@ -11,61 +11,61 @@
       "analysis": {
         "confianca": 65,
         "direcao": "YES",
-        "razao": "Preços de ovos historicamente sazonais, faixa $2.25-2.50 alinha com padrões típicos de março pós-picos de inverno",
+        "razao": "Preços de ovos historicamente estáveis nessa faixa, influenza aviária controlada, sazonalidade favorável",
         "risco": "medio"
       },
-      "timestamp": "2026-03-30 14:17",
+      "timestamp": "2026-03-30 14:50",
       "condition_id": "0x1987acaadb70417227fdf1aa56697fc04a157c9562146124dd1394d6dabf201e"
     },
     {
       "question": "OpenAI receives federal backstop for infrastructure before July?",
-      "yes": 0.275,
-      "no": 0.725,
+      "yes": 0.2785,
+      "no": 0.7215,
       "volume": 99804.27453899977,
       "analysis": {
         "confianca": 75,
         "direcao": "NO",
-        "razao": "Processo legislativo federal é lento, prazo até julho muito apertado para aprovação de backstop de infraestrutura específico para OpenAI",
+        "razao": "Apoio federal direto para infraestrutura de IA privada é politicamente complexo e improvável em prazo tão curto, especialmente com debates regulatórios em andamento",
         "risco": "medio"
       },
-      "timestamp": "2026-03-30 14:17",
+      "timestamp": "2026-03-30 14:50",
       "condition_id": "0x388459f1cfd0d310154e13f16f49d31fd301e5e3502072c8b09d3a0697b2823f"
     },
     {
-      "question": "Will Mikael Ishak score the most goals in the 2025-26 UEFA Europa Conference League?",
-      "yes": 0.695,
-      "no": 0.305,
-      "volume": 9958.918306,
+      "question": "Will Real Madrid CF win on 2026-04-04?",
+      "yes": 0.625,
+      "no": 0.375,
+      "volume": 99767.42308699936,
       "analysis": {
-        "confianca": 25,
+        "confianca": 15,
         "direcao": "NO",
-        "razao": "Odds muito altas para um jogador específico em competição com muitas variáveis - lesões, forma, qualificação do clube",
+        "razao": "Data muito distante, impossível prever adversário, forma da equipe ou contexto específico da partida",
         "risco": "alto"
       },
-      "timestamp": "2026-03-30 14:17",
-      "condition_id": "0x71116149166610ae90c5bbda1b3fed3c202e31f3d31599e39866466c7b985114"
+      "timestamp": "2026-03-30 14:50",
+      "condition_id": "0x161ab8edd553f3de4366a6abe952f6de261d5f443135ce60248ac63e73a45f69"
     }
   ],
   "top_events": [
     {
       "title": "Democratic Presidential Nominee 2028",
-      "volume": 942140653.9256415
+      "volume": 942373027.6960849
     },
     {
       "title": "Republican Presidential Nominee 2028",
-      "volume": 495700530.49512875
+      "volume": 495853332.4385689
     },
     {
       "title": "Presidential Election Winner 2028",
-      "volume": 474725046.07766074
+      "volume": 474878403.94398785
     },
     {
       "title": "2026 FIFA World Cup Winner ",
-      "volume": 429942064.52170914
+      "volume": 430133145.7371941
     },
     {
       "title": "English Premier League Winner ",
-      "volume": 312637853.18514484
+      "volume": 312641290.8796438
     }
   ]
 }
