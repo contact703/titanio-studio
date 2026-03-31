@@ -1,4 +1,4 @@
-# 🧠 Contexto de Sessão — Auto-gerado 2026-03-30 15:25 BRT
+# 🧠 Contexto de Sessão — Auto-gerado 2026-03-31 17:39 BRT
 
 > LEIA ISTO ANTES DE RESPONDER QUALQUER COISA.
 > Este arquivo contém o que aconteceu nos últimos dias.
@@ -18,7 +18,8 @@
 | **OpenMOSS Tradução** | 🟡 SETUP PRONTO. Guardrails + monitoramento configurados. Aguardando workflow de Zica (tradução de livros autônoma por 7 dias). OPENMOSS-SETUP.md + openmoss-monitoring.json prontos. | 2026-03-21 00h |
 | **🎮 ENEM Game (Local Ollama)** | ✅ **PRONTO PABERTO** (15:40 BRT). 4 workflows N8n REAIS: game-designer, content-creator, code-generator, qa-tester. Modelo: Qwen 2.5 32B (Local Ollama rodando). Custo: R$ 0.00. Execução: http://localhost:11434 (zero dependências externas). README-LOCAL.md com instruções. Apenas importar em N8n (http://5678) e clicar Execute. | 2026-03-21 15h |
 | **HiClaw Quick Win** | ✅ **IMPLEMENTADO** — Task manager multi-agente. 4 endpoints, 8 pipelines, WebSocket, anti-loop. Print + .md enviados no grupo. Helber/Tiago precisam `git pull`. | 2026-03-27 23:40h |
-| Gold Digger | 🔴 **MORTO** — 44 propostas em **340 ciclos** (ZERO propostas novas em **150+ ciclos**). Bot reporta canais "ativos" mas não gera nada. KILL SWITCH URGENTÍSSIMO. | 2026-03-30 12:56h |
+| Gold Digger | 🔴 **MORTO** — 44 propostas em **340+ ciclos** (ZERO propostas novas em **150+ ciclos**). Bot reporta canais "ativos" mas não gera nada. KILL SWITCH URGENTÍSSIMO. | 2026-03-30 18:03h |
+| **Titanio Video Factory** | 🟡 Zeroscope funciona grátis (qualidade básica), Wan2.1 em fila (qualidade alta). 1 vídeo real gerado e enviado. | 2026-03-30 18:03h |
 | **Polymarket Bot** | 🟡 Scanner + monitor rodando 24/7. Conta $44.86. **BLOQUEADO:** falta private key wallet (Tiago precisa PC). Playwright como alternativa. | 2026-03-27 00:03h |
 | Maricá Film Commission | Site WordPress/Elementor ativo | 2026-03-12 |
 | Titanio 47 | App Android na Play Console | 2026-03-12 |
@@ -54,7 +55,7 @@
 - Script: ~/.openclaw/workspace/bin/video-analyze.sh "URL"
 - Tempo: ~15 segundos por vídeo
 
-## 📅 Memória 2026-03-30 (     220 linhas)
+## 📅 Memória 2026-03-30 (     288 linhas)
 
 - **21:08** [Content Writer] Roteiro completo de vídeo YouTube 8min sobre "dicas de finanças pessoais" para c → ✅ (14s)
 
@@ -85,9 +86,9 @@
 - **00:14** [Money Maker] Drop servicing: vendo "análise de concorrentes" para e-commerce por R$297. Crie: → ✅ (15s)
 
 - **00:14** [Money Maker] Ebook COMPLETO para vender na Hotmart sobre "guia completo de legendas que vende → ✅ (24s)
-... (mais 190 linhas em memory/2026-03-30.md)
+... (mais 258 linhas em memory/2026-03-30.md)
 
-## 🔄 Último Flush 2026-03-30 (2026-03-30_12h.md)
+## 🔄 Último Flush 2026-03-30 (2026-03-30_18h.md)
 
 ## 📅 Memória 2026-03-29 (     192 linhas)
 
@@ -194,52 +195,17 @@
 
 ## 🔄 Último Flush 2026-03-27 (2026-03-27_18h.md)
 
-## 📅 Memória 2026-03-26 (     192 linhas)
-# 2026-03-26 — Polymarket Bot Day
-
-## 🎰 Polymarket Trading Bot — Setup Completo
-
-### Contexto
-Zica mandou 4 vídeos sobre bots de trading no Polymarket (mercado de previsões). Exemplos:
-- $900 → $7k em 1 dia (copy trading)
-- $43.8k ganhos (news arbitrage + timezone)
-
-Eles querem testar com $50 pra ver se funciona.
-
-### O Que Foi Feito
-
-#### 1. Pesquisa e Análise
-- Polymarket = mercado de previsões (tipo bolsa, mas de eventos sim/não)
-- Não é investimento tradicional nem aposta pura — é trading de probabilidades
-- Pode vender antes do resultado (igual ação)
-- Risco real: maioria perde dinheiro
-
-#### 2. Alternativas Avaliadas
-Pesquisei onde bots IA têm vantagem:
-- **Polymarket** (prediction markets) — IA lê notícias 24/7 ✅
-- **Arbitragem DEX** — detecta diferença de preço entre exchanges
-- **Grid Trading** — compra barato/vende caro em faixas
-- **Copy Trading** — copia melhores traders
-
-Recomendação: $30 Polymarket + $20 Grid Trading
-
-#### 3. Stack Técnica
-```
-... (mais 162 linhas em memory/2026-03-26.md)
-
-## 🔄 Último Flush 2026-03-26 (2026-03-26_12h.md)
-
 ## 📝 Memórias Recentes (últimos 3 dias)
-- **relatorio-memoria-evermind-vs-tita.md** (8724 bytes)
-- **pesquisa-problema-memoria-recall-2026-03-28.md** (7056 bytes)
-- **debug-report-memory-engine-2026-03-28.md** (3844 bytes)
-- **debug-hunter-full-test-2026-03-28.md** (1332 bytes)
-- **debug-full-test-2026-03-28.md** (2807 bytes)
-- **auditoria-mds-completa-2026-03-28.md** (19312 bytes)
-- **auditoria-honesta-28-03-2026.md** (3358 bytes)
-- **relatorio-memoria-evermind-vs-tita.md** (8724 bytes)
-- **network-study-2026-03-14.md** (8068 bytes)
-- **network-map.md** (1602 bytes)
+- **TESTE-APIS-VIDEO-FREE.md** (5027 bytes)
+- **REGRA-ABSOLUTA-MEMORIA.md** (1602 bytes)
+- **PESQUISA-VIDEO-IA-REAL.md** (13528 bytes)
+- **PESQUISA-MEMORIA-PERSISTENTE.md** (18517 bytes)
+- **PESQUISA-API-VIDEO-IA-FREE.md** (20066 bytes)
+- **DIAGNOSTICO-MEMORIA-29-03-2026.md** (2496 bytes)
+- **2026-03-30.md** (15268 bytes)
+- **2026-03-29.md** (11880 bytes)
+- **2026-03-29-media-fix.md** (2402 bytes)
+- **2026-03-28.md** (16884 bytes)
 
 ## ⚠️ Lições Críticas
 
@@ -268,11 +234,6 @@ Recomendação: $30 Polymarket + $20 Grid Trading
 ## 🔑 CREDENCIAIS REFERENCIADAS
 
 ## 📄 Últimos Arquivos Criados (workspace root)
-- **fix-dashboard-tiago.md** (27/03 14:04)
-- **debug-session-analysis.md** (27/03 10:51)
-- **debug-memory-scan.md** (27/03 10:49)
-- **debug-md-envio.md** (27/03 10:50)
-- **dashboard-troubleshooting-tiago.md** (27/03 10:15)
 - **UPGRADE-TIAGO-MEMORY-AUDIT.md** (28/03 09:51)
 - **UPGRADE-ORACLE-TRACE2SKILL-HELBER-TIAGO.md** (30/03 03:01)
 - **UPGRADE-MEMORIA-V2-COMPLETO.md** (28/03 10:11)
@@ -283,6 +244,11 @@ Recomendação: $30 Polymarket + $20 Grid Trading
 - **UPGRADE-DIRECT-TOOLS-HELBER-TIAGO.md** (30/03 04:01)
 - **UPGRADE-AAA-MEMORIA-FINAL.md** (28/03 10:18)
 - **TITANIO-BROWSER-SETUP.md** (28/03 14:51)
+- **SOUL.md** (30/03 03:01)
+- **SOLUCAO-MEMORIA-SQUAD.md** (29/03 12:52)
+- **SETUP-ORGANIZACAO-CLAWS.md** (28/03 13:43)
+- **RELATORIO-SISTEMA-COMPLETO-28-03-2026.md** (28/03 14:23)
+- **RELATORIO-ESPECIALISTAS-AUTONOMIA.md** (28/03 10:38)
 
 ## 🛠️ Ferramentas Instaladas
 - **titanio-media.py** — Pipeline mídia IA (banners, narração, vídeo, imagens FLUX)
@@ -293,4 +259,4 @@ Recomendação: $30 Polymarket + $20 Grid Trading
 - **Dashboard Titanio 2.0** — 3 instâncias (Eduardo:4444, Helber:4445, Tiago:4446)
 
 ---
-_Gerado: 15:25 BRT 30/03/2026 | 293 linhas, 16622 bytes | Refresh: a cada 30min_
+_Gerado: 17:39 BRT 31/03/2026 | 259 linhas, 15551 bytes | Refresh: a cada 30min_

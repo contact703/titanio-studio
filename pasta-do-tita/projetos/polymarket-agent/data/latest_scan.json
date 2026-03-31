@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-30 15:22",
+  "timestamp": "2026-03-30 15:44",
   "markets_total": 30,
   "opportunities": 3,
   "analyses": [
@@ -9,12 +9,12 @@
       "no": 0.44,
       "volume": 9996.513810999993,
       "analysis": {
-        "confianca": 72,
+        "confianca": 65,
         "direcao": "YES",
-        "razao": "Preços de ovos historicamente se estabilizam após surtos de gripe aviária, e $2.25-2.50 está próximo da média sazonal pós-pico inflacionário",
+        "razao": "Preços de ovos estão normalizando após pico da gripe aviária H5N1 em 2022-2023. Faixa $2.25-2.50 está alinhada com tendência atual de estabilização no varejo americano.",
         "risco": "medio"
       },
-      "timestamp": "2026-03-30 15:22",
+      "timestamp": "2026-03-30 15:44",
       "condition_id": "0x1987acaadb70417227fdf1aa56697fc04a157c9562146124dd1394d6dabf201e"
     },
     {
@@ -25,47 +25,47 @@
       "analysis": {
         "confianca": 25,
         "direcao": "NO",
-        "razao": "Data muito distante (2026), impossível prever adversário, lesões, forma da equipe ou contexto do jogo",
+        "razao": "Data muito distante (2026) com muitas variáveis imprevisíveis - lesões, transferências, adversário desconhecido",
         "risco": "alto"
       },
-      "timestamp": "2026-03-30 15:22",
+      "timestamp": "2026-03-30 15:44",
       "condition_id": "0x161ab8edd553f3de4366a6abe952f6de261d5f443135ce60248ac63e73a45f69"
     },
     {
       "question": "OpenAI receives federal backstop for infrastructure before July?",
-      "yes": 0.266,
-      "no": 0.734,
-      "volume": 99855.16801599976,
+      "yes": 0.27,
+      "no": 0.73,
+      "volume": 99882.16801599976,
       "analysis": {
         "confianca": 75,
         "direcao": "NO",
-        "razao": "Apoio federal para infraestrutura de IA requer aprovação congressual complexa e demorada, improvável até julho",
+        "razao": "Processo regulatório federal é lento, resistência política ao subsídio de empresas privadas, e prazo muito apertado para julho",
         "risco": "medio"
       },
-      "timestamp": "2026-03-30 15:22",
+      "timestamp": "2026-03-30 15:44",
       "condition_id": "0x388459f1cfd0d310154e13f16f49d31fd301e5e3502072c8b09d3a0697b2823f"
     }
   ],
   "top_events": [
     {
       "title": "Democratic Presidential Nominee 2028",
-      "volume": 942619956.828546
+      "volume": 942749049.3543072
     },
     {
       "title": "Republican Presidential Nominee 2028",
-      "volume": 496030445.92483395
+      "volume": 496114606.365173
     },
     {
       "title": "Presidential Election Winner 2028",
-      "volume": 475014984.896326
+      "volume": 475110576.1728031
     },
     {
       "title": "2026 FIFA World Cup Winner ",
-      "volume": 430227080.14608115
+      "volume": 430311300.0890781
     },
     {
       "title": "English Premier League Winner ",
-      "volume": 312643437.1649178
+      "volume": 312645275.99930084
     }
   ]
 }
