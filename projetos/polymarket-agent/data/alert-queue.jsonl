@@ -7,3 +7,6 @@
 {"timestamp": "2026-03-31T23:02:39Z", "message": "ERRO CRÍTICO: [2026-03-31 20:02:39] [ERROR] Erro na análise Claude: Client error '429 Too Many Requests' for url 'https://api.anthropic.com/v1/messages'"}
 {"timestamp": "2026-03-31T23:12:41Z", "message": "ERRO CRÍTICO: [2026-03-31 20:12:41] [ERROR] Erro na análise Claude: Client error '429 Too Many Requests' for url 'https://api.anthropic.com/v1/messages'"}
 {"timestamp": "2026-03-31T23:22:42Z", "message": "ERRO CRÍTICO: [2026-03-31 20:22:42] [ERROR] Erro na análise Claude: Client error '429 Too Many Requests' for url 'https://api.anthropic.com/v1/messages'"}
+{"timestamp": "2026-03-31T23:32:44Z", "message": "ERRO CRÍTICO: [2026-03-31 20:32:44] [ERROR] Erro na análise Claude: Client error '429 Too Many Requests' for url 'https://api.anthropic.com/v1/messages'"}
+{"timestamp": "2026-03-31T23:42:46Z", "message": "ERRO CRÍTICO: [2026-03-31 20:42:46] [ERROR] Erro na análise Claude: Client error '429 Too Many Requests' for url 'https://api.anthropic.com/v1/messages'"}
+{"timestamp": "2026-03-31T23:52:47Z", "message": "ERRO CRÍTICO: [2026-03-31 20:52:47] [ERROR] Erro na análise Claude: Client error '429 Too Many Requests' for url 'https://api.anthropic.com/v1/messages'"}
