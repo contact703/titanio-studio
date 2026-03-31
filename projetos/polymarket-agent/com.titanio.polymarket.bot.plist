@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.titanio.polymarket.bot</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/projetos/polymarket-agent/polymarket-launchagent.sh</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <dict>
+        <key>SuccessfulExit</key>
+        <false/>
+    </dict>
+    <key>ThrottleInterval</key>
+    <integer>30</integer>
+    <key>StandardOutPath</key>
+    <string>/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/projetos/polymarket-agent/data/launchagent.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/projetos/polymarket-agent/data/launchagent-error.log</string>
+    <key>WorkingDirectory</key>
+    <string>/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/projetos/polymarket-agent</string>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
+        <key>PYTHONPATH</key>
+        <string>/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/projetos/polymarket-agent</string>
+    </dict>
+</dict>
+</plist>

@@ -1,6 +1,60 @@
 {
   "lessons": [
     {
+      "id": "be1e8353-0562-40b1-8ffd-06ae1c85b6d7",
+      "date": "2026-03-27",
+      "time": "22:15",
+      "category": "technical",
+      "domain": "n8n-workflows",
+      "lesson": "Brazilian Classics: Workflow 'Tradutor Literário' (ID: 06C4w3q8g0SCYiim) criado com 7 camadas: Webhook → Prep → Claude → Kimi Router → Gemini Revisão → Validador → Learning. Endpoint: POST /webhook/tradutor-literario. Multi-LLM chain com Claude (tradução principal), Kimi (idiomas asiáticos), Gemini (revisão de fluência).",
+      "context": "Projeto Great Brazilian Classics Collection. Pipeline traduz livros brasileiros para 10+ idiomas via N8n. Custo ~$0.42/capítulo.",
+      "impact": "high",
+      "tags": [
+        "brazilian-classics",
+        "n8n",
+        "multi-llm",
+        "tradução"
+      ],
+      "successRate": 100,
+      "source": "setup-automation"
+    },
+    {
+      "id": "fd0f9da1-4c43-4040-80f5-8568fc1e5618",
+      "date": "2026-03-27",
+      "time": "22:15",
+      "category": "technical",
+      "domain": "n8n-workflows",
+      "lesson": "Brazilian Classics: Workflow 'Cover Generator' (ID: uorwR3ikpaJh5BHB) criado com 5 nodes: Webhook → Validar Config → Gerar Capa → Parsear → Response. Endpoint: POST /webhook/cover-generator. Gera capas KDP 1600x2560px. Script Python em projetos/brazilian-classics/scripts/generate_cover.py.",
+      "context": "Capas padrão KDP Kindle: 1600x2560px, 300 DPI, JPEG 95%. Fontes: Playfair Display (título), Raleway (labels). Cores: gold #D4AF37, cream #FFF8DC.",
+      "impact": "high",
+      "tags": [
+        "brazilian-classics",
+        "n8n",
+        "cover-generator",
+        "kdp"
+      ],
+      "successRate": 100,
+      "source": "setup-automation"
+    },
+    {
+      "id": "d0482523-48f3-4459-b588-1f8baf66a4f9",
+      "date": "2026-03-27",
+      "time": "22:15",
+      "category": "technical",
+      "domain": "n8n-api",
+      "lesson": "N8n API Key atualizada: JWT token gerado via REST API /rest/api-keys. Owner setup: contact@titaniofilms.com. API key precisa de header X-N8N-API-KEY. A key antiga (n8n_api_37b62...) estava inválida - precisou criar via session auth.",
+      "context": "N8n não tinha owner configurado. Setup feito via POST /rest/owner/setup, login via /rest/login, e criação de API key via /rest/api-keys.",
+      "impact": "high",
+      "tags": [
+        "n8n",
+        "api",
+        "auth",
+        "setup"
+      ],
+      "successRate": 100,
+      "source": "setup-automation"
+    },
+    {
       "id": "mem-5",
       "date": "2026-03-22",
       "time": "23:00",
@@ -594,60 +648,6 @@
       ],
       "successRate": 100,
       "source": "eduardo-lessons"
-    },
-    {
-      "id": "be1e8353-0562-40b1-8ffd-06ae1c85b6d7",
-      "date": "2026-03-27",
-      "time": "22:15",
-      "category": "technical",
-      "domain": "n8n-workflows",
-      "lesson": "Brazilian Classics: Workflow 'Tradutor Literário' (ID: 06C4w3q8g0SCYiim) criado com 7 camadas: Webhook → Prep → Claude → Kimi Router → Gemini Revisão → Validador → Learning. Endpoint: POST /webhook/tradutor-literario. Multi-LLM chain com Claude (tradução principal), Kimi (idiomas asiáticos), Gemini (revisão de fluência).",
-      "context": "Projeto Great Brazilian Classics Collection. Pipeline traduz livros brasileiros para 10+ idiomas via N8n. Custo ~$0.42/capítulo.",
-      "impact": "high",
-      "tags": [
-        "brazilian-classics",
-        "n8n",
-        "multi-llm",
-        "tradução"
-      ],
-      "successRate": 100,
-      "source": "setup-automation"
-    },
-    {
-      "id": "fd0f9da1-4c43-4040-80f5-8568fc1e5618",
-      "date": "2026-03-27",
-      "time": "22:15",
-      "category": "technical",
-      "domain": "n8n-workflows",
-      "lesson": "Brazilian Classics: Workflow 'Cover Generator' (ID: uorwR3ikpaJh5BHB) criado com 5 nodes: Webhook → Validar Config → Gerar Capa → Parsear → Response. Endpoint: POST /webhook/cover-generator. Gera capas KDP 1600x2560px. Script Python em projetos/brazilian-classics/scripts/generate_cover.py.",
-      "context": "Capas padrão KDP Kindle: 1600x2560px, 300 DPI, JPEG 95%. Fontes: Playfair Display (título), Raleway (labels). Cores: gold #D4AF37, cream #FFF8DC.",
-      "impact": "high",
-      "tags": [
-        "brazilian-classics",
-        "n8n",
-        "cover-generator",
-        "kdp"
-      ],
-      "successRate": 100,
-      "source": "setup-automation"
-    },
-    {
-      "id": "d0482523-48f3-4459-b588-1f8baf66a4f9",
-      "date": "2026-03-27",
-      "time": "22:15",
-      "category": "technical",
-      "domain": "n8n-api",
-      "lesson": "N8n API Key atualizada: JWT token gerado via REST API /rest/api-keys. Owner setup: contact@titaniofilms.com. API key precisa de header X-N8N-API-KEY. A key antiga (n8n_api_37b62...) estava inválida - precisou criar via session auth.",
-      "context": "N8n não tinha owner configurado. Setup feito via POST /rest/owner/setup, login via /rest/login, e criação de API key via /rest/api-keys.",
-      "impact": "high",
-      "tags": [
-        "n8n",
-        "api",
-        "auth",
-        "setup"
-      ],
-      "successRate": 100,
-      "source": "setup-automation"
     }
   ],
   "version": 2

@@ -1,4 +1,4 @@
-# 🧠 Contexto de Sessão — Auto-gerado 2026-03-31 17:39 BRT
+# 🧠 Contexto de Sessão — Auto-gerado 2026-03-31 19:55 BRT
 
 > LEIA ISTO ANTES DE RESPONDER QUALQUER COISA.
 > Este arquivo contém o que aconteceu nos últimos dias.
@@ -54,6 +54,39 @@
 - yt-dlp + ffmpeg + Claude vision = análise de reels ✅
 - Script: ~/.openclaw/workspace/bin/video-analyze.sh "URL"
 - Tempo: ~15 segundos por vídeo
+
+## 📅 Memória 2026-03-31 (      32 linhas)
+# 2026-03-31 — Memórias Duráveis
+
+## Vídeo IA real (prioridade Zica)
+- Zica pediu explicitamente **text-to-video real** (ação completa de personagem), não slideshow, não Ken Burns, não só lip-sync.
+- Solução confirmada: **Google Veo 2.0 via API** (Google AI Studio key já disponível no ambiente Titanio).
+- Teste real concluído com sucesso: operação assíncrona concluída, download de **2 vídeos de 8s** (`veo2_video_1.mp4`, `veo2_video_2.mp4`) em `pasta-do-tita/projetos/titanio-media/outputs/`.
+- Prompt de referência usado: personagem levanta, pega smartphone e começa a falar para a câmera.
+
+## Descobertas práticas de stack de vídeo
+- **LivePortrait** funciona no Mac Apple Silicon (animação facial), útil para presenter/avatar, mas não substitui T2V de ação completa.
+- **HuggingFace Spaces**: zeroscope pode funcionar grátis (qualidade menor e fila), Wan2.1 funciona mas com fila/instabilidade.
+- Para objetivo “estilo Higgs/Kling”, Veo 2.0 foi o melhor resultado prático encontrado nessa sessão.
+
+## Infra/Operação
+- O envio automático para o grupo falhou em momento crítico por **WhatsApp listener desconectado** no gateway (mensagem de erro: sem active WhatsApp Web listener).
+- Dossiê recebido no grupo e salvo localmente: `pasta-do-tita/DOSSIE-APIs-GRATUITAS-2026.md`.
+
+## Regra de comunicação aprendida
+- Quando Zica pede “vídeo real”, responder com entrega alinhada ao benchmark (Kling/Higgs): ação corporal completa, não apenas efeitos visuais em imagem estática.
+
+## Continuação (31/03 fim de tarde)
+- `bin/titanio-media.py` atualizado com comando nativo `veo` (Google Veo API) + ajuste de entrypoint.
+- Teste concluído no novo comando:
+  - `python3 bin/titanio-media.py veo "A young woman stands up, picks up a phone from the table and speaks to camera" --duration 8 --ratio 9:16`
+  - output: `veo_A_young_woman_stands_up,_180433.mp4`
+- Vídeo publicado no Instagram com sucesso:
+  - `https://www.instagram.com/reel/DWkDMI2jH10/`
+- Novo vídeo postado (31/03 18:12): `https://www.instagram.com/reel/DWkF3sNDBbf/` — demonstração do comando `pipeline-real` funcionando
+- **18:34** — Vídeo final gerado e postado: https://www.instagram.com/reel/DWkF3sNDBbf/
+  Comando usado: `python3 bin/titanio-media.py pipeline-real "A Brazilian filmmaker stands up, picks up a phone..."`
+... (mais 2 linhas em memory/2026-03-31.md)
 
 ## 📅 Memória 2026-03-30 (     288 linhas)
 
@@ -202,10 +235,10 @@
 - **PESQUISA-MEMORIA-PERSISTENTE.md** (18517 bytes)
 - **PESQUISA-API-VIDEO-IA-FREE.md** (20066 bytes)
 - **DIAGNOSTICO-MEMORIA-29-03-2026.md** (2496 bytes)
+- **2026-03-31.md** (2545 bytes)
 - **2026-03-30.md** (15268 bytes)
 - **2026-03-29.md** (11880 bytes)
 - **2026-03-29-media-fix.md** (2402 bytes)
-- **2026-03-28.md** (16884 bytes)
 
 ## ⚠️ Lições Críticas
 
@@ -259,4 +292,4 @@
 - **Dashboard Titanio 2.0** — 3 instâncias (Eduardo:4444, Helber:4445, Tiago:4446)
 
 ---
-_Gerado: 17:39 BRT 31/03/2026 | 259 linhas, 15551 bytes | Refresh: a cada 30min_
+_Gerado: 19:55 BRT 31/03/2026 | 292 linhas, 17994 bytes | Refresh: a cada 30min_

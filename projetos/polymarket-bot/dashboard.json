@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-03-31T19:08:44.513117",
+  "bot_status": {
+    "status": "running",
+    "pid": 10714,
+    "uptime": 1085.5596227645874
+  },
+  "balance": {
+    "total": 44.86,
+    "today_change": 0.0,
+    "currency": "USD"
+  },
+  "latest_trades": [],
+  "markets_monitored": [
+    "US forces enter Iran by...?",
+    "2026 NCAA Tournament Winner",
+    "Bitcoin 5 min up or down"
+  ],
+  "strategy": "Day-trade/scalping com an\u00e1lises atualizadas",
+  "last_update": "2026-03-31 19:08:44"
+}

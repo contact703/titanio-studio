@@ -527,6 +527,114 @@ async def generate_image_free_api(prompt, output=None, width=1024, height=1024):
         print(f"⚠️ Stable Horde error: {str(e)[:80]}")
         return generate_banner(prompt, style="neon")
 
+def generate_video_veo(prompt, output=None, duration=8, aspect_ratio="9:16", model="veo-2.0-generate-001"):
+    """Generate real text-to-video using Google Veo API (async long-running op)."""
+    import urllib.request
+    import urllib.parse
+    import time
+
+    api_key = os.environ.get("GOOGLE_AI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
+    if not api_key:
+        print("❌ GOOGLE_AI_API_KEY não configurada")
+        return None
+
+    if not output:
+        slug = prompt[:24].replace(" ", "_").replace("/", "_")
+        output = os.path.join(OUTPUT_DIR, f"veo_{slug}_{datetime.now().strftime('%H%M%S')}.mp4")
+
+    submit_url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:predictLongRunning?key={api_key}"
+    payload = {
+        "instances": [{"prompt": prompt}],
+        "parameters": {
+            "aspectRatio": aspect_ratio,
+            "personGeneration": "allow_all",
+            "durationSeconds": int(duration),
+        },
+    }
+
+    print(f"🎬 Veo submit ({model})...")
+    req = urllib.request.Request(
+        submit_url,
+        data=json.dumps(payload).encode("utf-8"),
+        headers={"Content-Type": "application/json"},
+    )
+
+    try:
+        submit_resp = urllib.request.urlopen(req, timeout=30)
+        submit_data = json.loads(submit_resp.read())
+    except Exception as e:
+        print(f"❌ Submit failed: {e}")
+        return None
+
+    op_name = submit_data.get("name")
+    if not op_name:
+        print(f"❌ Operação inválida: {submit_data}")
+        return None
+
+    print(f"⏳ Operation: {op_name}")
+    poll_url = f"https://generativelanguage.googleapis.com/v1beta/{op_name}?key={api_key}"
+
+    done = None
+    for _ in range(80):  # ~10 min max
+        time.sleep(8)
+        try:
+            data = json.loads(urllib.request.urlopen(poll_url, timeout=20).read())
+        except Exception as e:
+            print(f"⚠️ Poll error: {e}")
+            continue
+
+        if data.get("done"):
+            done = data
+            break
+
+    if not done:
+        print("❌ Timeout aguardando Veo")
+        return None
+
+    if "error" in done:
+        print(f"❌ Veo error: {done['error']}")
+        return None
+
+    samples = (
+        done.get("response", {})
+        .get("generateVideoResponse", {})
+        .get("generatedSamples", [])
+    )
+    if not samples:
+        print(f"❌ Sem samples no response: {done}")
+        return None
+
+    video_uri = samples[0].get("video", {}).get("uri")
+    if not video_uri:
+        print("❌ Sem URI de vídeo")
+        return None
+
+    sep = "&" if "?" in video_uri else "?"
+    download_url = f"{video_uri}{sep}key={api_key}"
+    try:
+        video_bytes = urllib.request.urlopen(download_url, timeout=120).read()
+        with open(output, "wb") as f:
+            f.write(video_bytes)
+    except Exception as e:
+        print(f"❌ Download failed: {e}")
+        return None
+
+    print(f"✅ Veo video saved: {output}")
+    return output
+
+
+def pipeline_real(prompt, duration=8, ratio="9:16"):
+    """One-command real pipeline using Veo text-to-video."""
+    print(f"🚀 Pipeline REAL: {prompt}")
+    video = generate_video_veo(prompt, duration=duration, aspect_ratio=ratio)
+    if not video:
+        print("❌ Falha na geração Veo")
+        return None
+    print("✅ Pipeline REAL concluída")
+    print(f"🎬 Vídeo: {video}")
+    return video
+
+
 def main():
     if len(sys.argv) < 2:
         print("Titanio Media v1.0\n")
@@ -534,6 +642,9 @@ def main():
         print("  narrar <texto> [--voice antonio|francisca]")
         print("  video <texto> [--style reels|youtube|story]")
         print("  image <prompt> [--comfyui]")
+        print("  animate <image_path> [--driving d0|d10|talking]")
+        print("  veo <prompt> [--duration 8] [--ratio 9:16]")
+        print("  pipeline-real <prompt> [--duration 8] [--ratio 9:16]")
         print("  pipeline <tema> [--style reels|youtube]")
         print("  test")
         sys.exit(1)
@@ -544,6 +655,9 @@ def main():
     # Parse --style and --voice flags
     style = "neon"
     voice = "antonio"
+    driving = "d0"
+    duration = 8
+    ratio = "9:16"
     for i, arg in enumerate(sys.argv):
         if arg == "--style" and i + 1 < len(sys.argv):
             style = sys.argv[i + 1]
@@ -551,6 +665,18 @@ def main():
         if arg == "--voice" and i + 1 < len(sys.argv):
             voice = sys.argv[i + 1]
             text = text.replace(f"--voice {voice}", "").strip()
+        if arg == "--driving" and i + 1 < len(sys.argv):
+            driving = sys.argv[i + 1]
+            text = text.replace(f"--driving {driving}", "").strip()
+        if arg == "--duration" and i + 1 < len(sys.argv):
+            try:
+                duration = int(sys.argv[i + 1])
+            except:
+                duration = 8
+            text = text.replace(f"--duration {sys.argv[i + 1]}", "").strip()
+        if arg == "--ratio" and i + 1 < len(sys.argv):
+            ratio = sys.argv[i + 1]
+            text = text.replace(f"--ratio {ratio}", "").strip()
     
     if cmd == "banner":
         generate_banner(text or "Titanio Media", style=style)
@@ -565,16 +691,29 @@ def main():
             result = generate_image_sdxl_turbo(text or "a futuristic robot")
             if not result:
                 asyncio.run(generate_image_free_api(text or "a futuristic robot"))
+    elif cmd == "animate":
+        if not text:
+            print("❌ Uso: animate <image_path> [--driving d0|d10|talking]")
+            sys.exit(1)
+        animate_portrait(text, driving=driving)
+    elif cmd == "veo":
+        generate_video_veo(
+            text or "A person stands up, picks up a phone and starts talking to camera",
+            duration=duration,
+            aspect_ratio=ratio,
+        )
+    elif cmd == "pipeline-real":
+        pipeline_real(
+            text or "A person stands up, picks up a phone and starts talking to camera",
+            duration=duration,
+            ratio=ratio,
+        )
     elif cmd == "pipeline":
         asyncio.run(full_pipeline(text or "Inteligência Artificial", style=style))
     elif cmd == "test":
         asyncio.run(test_all())
     else:
         print(f"Unknown: {cmd}")
-
-
-if __name__ == "__main__":
-    main()
 
 
 def animate_portrait(image_path, output_path=None, driving="d0"):
@@ -625,3 +764,7 @@ def animate_portrait(image_path, output_path=None, driving="d0"):
 
 # Add to main() command handling
 # Usage: titanio-media.py animate <image> [--driving talking|d0|d10]
+
+
+if __name__ == "__main__":
+    main()

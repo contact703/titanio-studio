@@ -1,0 +1,6 @@
+{"timestamp": "2026-03-31T22:12:30Z", "message": "ERRO CRÍTICO: [2026-03-31 19:12:30] [ERROR] Erro na análise Claude: Client error '429 Too Many Requests' for url 'https://api.anthropic.com/v1/messages'"}
+{"timestamp": "2026-03-31T22:14:30Z", "message": "✅ Sistema Polymarket Bot inicializado com sucesso! Dashboard: http://192.168.18.174:8080"}
+{"timestamp": "2026-03-31T22:22:32Z", "message": "ERRO CRÍTICO: [2026-03-31 19:22:32] [ERROR] Erro na análise Claude: Client error '429 Too Many Requests' for url 'https://api.anthropic.com/v1/messages'"}
+{"timestamp": "2026-03-31T22:32:34Z", "message": "ERRO CRÍTICO: [2026-03-31 19:32:33] [ERROR] Erro na análise Claude: Client error '429 Too Many Requests' for url 'https://api.anthropic.com/v1/messages'"}
+{"timestamp": "2026-03-31T22:42:36Z", "message": "ERRO CRÍTICO: [2026-03-31 19:42:36] [ERROR] Erro na análise Claude: Client error '429 Too Many Requests' for url 'https://api.anthropic.com/v1/messages'"}
+{"timestamp": "2026-03-31T22:52:37Z", "message": "ERRO CRÍTICO: [2026-03-31 19:52:37] [ERROR] Erro na análise Claude: Client error '429 Too Many Requests' for url 'https://api.anthropic.com/v1/messages'"}
