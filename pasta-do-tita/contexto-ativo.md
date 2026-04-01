@@ -1,17 +1,33 @@
 # 🧠 Contexto Ativo - Tita
 
-> Atualizado: 2026-04-01 15:03 UTC (12:03 BRT) — FLUSH AUTOMÁTICO
+> Atualizado: 2026-04-01 21:03 UTC (18:03 BRT) — FLUSH AUTOMÁTICO
 > Arquivo gerado pelo flush de memória persistente
 
 ---
 
 ## ⚠️ Status do Flush
 
-**Último flush:** 2026-04-01 15:03 UTC (12:03 BRT 01/04) ← **AGORA** ✨  
+**Último flush:** 2026-04-01 21:03 UTC (18:03 BRT 01/04) ← **AGORA** ✨  
+**Anterior:** 2026-04-01 15:03 UTC (12:03 BRT)  
 **Anterior:** 2026-03-30 15:56 UTC (12:56 BRT 30/03)  
 **Anteriores:** 2026-03-29 15:03 UTC, 2026-03-29 09:03 UTC, 2026-03-29 03:03 UTC, 2026-03-28 15:03 UTC, 2026-03-28 03:03 UTC, 2026-03-27 21:03 UTC, 2026-03-27 03:03 UTC, 2026-03-26 09:03 UTC  
 **Volume Tita_DEV_02:** ❌ HD queimou — usando TITA_039/MAC_MINI_03  
 **Nota:** Usar SEMPRE `/Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/pasta-do-tita/`
+
+---
+
+## 🚨 ALERTAS URGENTES (01/04/2026)
+
+### ❌ KIMI/MOONSHOT CONTA SUSPENSA
+- **Erro:** saldo insuficiente — org-e5349e3f371f4bf394c478332fdfb158
+- **Impacto:** Bots Instagram (3x), web_search via Kimi — OFFLINE
+- **Ação:** Eduardo recarregar conta Moonshot
+- **Fallback atual:** claude-sonnet-4-6 via Anthropic
+
+### ⚠️ Polymarket Bot — Alertas Anteriores eram FALSOS
+- monitor.py e auto_trader.py: ✅ RODANDO
+- Trade real ainda não executado — aguarda private key Tiago (0xf847...)
+- Bug de gateway gerava alertas falsos de "bot parado"
 
 ---
 
