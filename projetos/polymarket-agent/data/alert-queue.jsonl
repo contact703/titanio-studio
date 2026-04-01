@@ -95,3 +95,9 @@
 {"timestamp": "2026-04-01T13:45:48Z", "message": "ERRO CRÍTICO: [2026-04-01 10:45:48] [ERROR] Erro na análise Claude: Client error '429 Too Many Requests' for url 'https://api.anthropic.com/v1/messages'"}
 {"timestamp": "2026-04-01T13:55:49Z", "message": "ERRO CRÍTICO: [2026-04-01 10:55:49] [ERROR] Erro na análise Claude: Client error '429 Too Many Requests' for url 'https://api.anthropic.com/v1/messages'"}
 {"timestamp": "2026-04-01T14:05:51Z", "message": "ERRO CRÍTICO: [2026-04-01 11:05:51] [ERROR] Erro na análise Claude: Client error '429 Too Many Requests' for url 'https://api.anthropic.com/v1/messages'"}
+{"timestamp": "2026-04-01T14:15:52Z", "message": "ERRO CRÍTICO: [2026-04-01 11:15:52] [ERROR] Erro na análise Claude: Client error '429 Too Many Requests' for url 'https://api.anthropic.com/v1/messages'"}
+{"timestamp": "2026-04-01T14:25:54Z", "message": "ERRO CRÍTICO: [2026-04-01 11:25:54] [ERROR] Erro na análise Claude: Client error '429 Too Many Requests' for url 'https://api.anthropic.com/v1/messages'"}
+{"timestamp": "2026-04-01T14:35:56Z", "message": "ERRO CRÍTICO: [2026-04-01 11:35:56] [ERROR] Erro na análise Claude: Client error '429 Too Many Requests' for url 'https://api.anthropic.com/v1/messages'"}
+{"timestamp": "2026-04-01T14:45:57Z", "message": "ERRO CRÍTICO: [2026-04-01 11:45:57] [ERROR] Erro na análise Claude: Client error '429 Too Many Requests' for url 'https://api.anthropic.com/v1/messages'"}
+{"timestamp": "2026-04-01T14:55:58Z", "message": "ERRO CRÍTICO: [2026-04-01 11:55:58] [ERROR] Erro na análise Claude: Client error '429 Too Many Requests' for url 'https://api.anthropic.com/v1/messages'"}
+{"timestamp": "2026-04-01T15:06:00Z", "message": "ERRO CRÍTICO: [2026-04-01 12:06:00] [ERROR] Erro na análise Claude: Client error '429 Too Many Requests' for url 'https://api.anthropic.com/v1/messages'"}
