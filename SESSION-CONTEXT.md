@@ -1,4 +1,4 @@
-# 🧠 Contexto de Sessão — Auto-gerado 2026-04-01 07:02 BRT
+# 🧠 Contexto de Sessão — Auto-gerado 2026-04-01 08:32 BRT
 
 > LEIA ISTO ANTES DE RESPONDER QUALQUER COISA.
 > Este arquivo contém o que aconteceu nos últimos dias.
@@ -54,6 +54,11 @@
 - yt-dlp + ffmpeg + Claude vision = análise de reels ✅
 - Script: ~/.openclaw/workspace/bin/video-analyze.sh "URL"
 - Tempo: ~15 segundos por vídeo
+
+## 📅 Memória 2026-04-01 (       3 linhas)
+- [HEARTBEAT 2026-04-01 07:02:54 -03] ⚠️ RAM baixa detectada: FREE_PAGES=42937 (<50000).
+- [HEARTBEAT 2026-04-01 07:32:44 -03] ⚠️ RAM baixa detectada: FREE_PAGES=45139 (<50000).
+- [HEARTBEAT 2026-04-01 08:02:39 -03] ⚠️ RAM baixa detectada: FREE_PAGES=43350 (<50000).
 
 ## 📅 Memória 2026-03-31 (      32 linhas)
 # 2026-03-31 — Memórias Duráveis
@@ -200,10 +205,10 @@
 - **PESQUISA-MEMORIA-PERSISTENTE.md** (18517 bytes)
 - **PESQUISA-API-VIDEO-IA-FREE.md** (20066 bytes)
 - **DIAGNOSTICO-MEMORIA-29-03-2026.md** (2496 bytes)
+- **2026-04-01.md** (279 bytes)
 - **2026-03-31.md** (2545 bytes)
 - **2026-03-30.md** (15268 bytes)
 - **2026-03-29.md** (11880 bytes)
-- **2026-03-29-media-fix.md** (2402 bytes)
 
 ## ⚠️ Lições Críticas
 
@@ -257,4 +262,4 @@
 - **Dashboard Titanio 2.0** — 3 instâncias (Eduardo:4444, Helber:4445, Tiago:4446)
 
 ---
-_Gerado: 07:02 BRT 01/04/2026 | 257 linhas, 16203 bytes | Refresh: a cada 30min_
+_Gerado: 08:32 BRT 01/04/2026 | 262 linhas, 16518 bytes | Refresh: a cada 30min_
