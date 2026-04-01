@@ -31,3 +31,57 @@
 {"timestamp": "2026-04-01T00:32:52.718149+00:00", "opportunities_count": 12, "signals": []}
 {"timestamp": "2026-04-01T00:42:54.239393+00:00", "opportunities_count": 12, "signals": []}
 {"timestamp": "2026-04-01T00:52:57.307201+00:00", "opportunities_count": 12, "signals": []}
+{"timestamp": "2026-04-01T01:02:59.788819+00:00", "opportunities_count": 12, "signals": []}
+{"timestamp": "2026-04-01T01:13:01.590979+00:00", "opportunities_count": 12, "signals": []}
+{"timestamp": "2026-04-01T01:23:02.988332+00:00", "opportunities_count": 12, "signals": []}
+{"timestamp": "2026-04-01T01:33:04.500932+00:00", "opportunities_count": 13, "signals": [{"numero": 1, "direcao": "NO", "confianca": 83, "razao": "Baixa probabilidade", "question": "Will the San Antonio Spurs win the 2026 NBA Finals?", "yes_price": 0.171, "market_id": "553866"}, {"numero": 2, "direcao": "NO", "confianca": 62, "razao": "Equipe mediana", "question": "Will the Oklahoma City Thunder win the 2026 NBA Finals?", "yes_price": 0.375, "market_id": "553856"}, {"numero": 3, "direcao": "NEUTRO", "confianca": 0, "razao": "Impossivel prever", "question": "Will Jesus Christ return before GTA VI?", "yes_price": 0.485, "market_id": "540819"}]}
+{"timestamp": "2026-04-01T01:43:22.727637+00:00", "opportunities_count": 13, "signals": []}
+{"timestamp": "2026-04-01T01:53:24.440870+00:00", "opportunities_count": 12, "signals": []}
+{"timestamp": "2026-04-01T02:03:26.168384+00:00", "opportunities_count": 12, "signals": []}
+{"timestamp": "2026-04-01T02:13:27.910925+00:00", "opportunities_count": 12, "signals": []}
+{"timestamp": "2026-04-01T02:23:29.442013+00:00", "opportunities_count": 12, "signals": []}
+{"timestamp": "2026-04-01T02:33:31.058828+00:00", "opportunities_count": 12, "signals": [{"numero": 1, "direcao": "NO", "confianca": 83, "razao": "Baixa prob", "question": "Will the San Antonio Spurs win the 2026 NBA Finals?", "yes_price": 0.1715, "market_id": "553866"}, {"numero": 2, "direcao": "NO", "confianca": 62, "razao": "Altas odds", "question": "Will the Oklahoma City Thunder win the 2026 NBA Finals?", "yes_price": 0.375, "market_id": "553856"}, {"numero": 3, "direcao": "NEUTRO", "confianca": 50, "razao": "Imprevis", "question": "Will Jesus Christ return before GTA VI?", "yes_price": 0.485, "market_id": "540819"}]}
+{"timestamp": "2026-04-01T02:43:41.841620+00:00", "opportunities_count": 12, "signals": [{"numero": 1, "direcao": "NO", "confianca": 83, "razao": "Baixa prob", "question": "Will the San Antonio Spurs win the 2026 NBA Finals?", "yes_price": 0.1715, "market_id": "553866"}, {"numero": 2, "direcao": "NO", "confianca": 62, "razao": "Alta incerteza", "question": "Will the Oklahoma City Thunder win the 2026 NBA Finals?", "yes_price": 0.375, "market_id": "553856"}, {"numero": 3, "direcao": "NEUTRO", "confianca": 0, "razao": "Imprevisivel", "question": "Will Jesus Christ return before GTA VI?", "yes_price": 0.485, "market_id": "540819"}]}
+{"timestamp": "2026-04-01T02:53:50.819523+00:00", "opportunities_count": 12, "signals": [{"numero": 1, "direcao": "NO", "confianca": 83, "razao": "Baque hist\u00f3rico", "question": "Will the San Antonio Spurs win the 2026 NBA Finals?", "yes_price": 0.1715, "market_id": "553866"}, {"numero": 2, "direcao": "NO", "confianca": 62, "razao": "Equipe nova", "question": "Will the Oklahoma City Thunder win the 2026 NBA Finals?", "yes_price": 0.375, "market_id": "553856"}, {"numero": 3, "direcao": "NEUTRO", "confianca": 0, "razao": "Incognita", "question": "Will Jesus Christ return before GTA VI?", "yes_price": 0.485, "market_id": "540819"}]}
+{"timestamp": "2026-04-01T03:03:59.036947+00:00", "opportunities_count": 11, "signals": []}
+{"timestamp": "2026-04-01T03:14:00.511560+00:00", "opportunities_count": 11, "signals": []}
+{"timestamp": "2026-04-01T03:24:02.037597+00:00", "opportunities_count": 11, "signals": []}
+{"timestamp": "2026-04-01T03:34:03.582886+00:00", "opportunities_count": 11, "signals": []}
+{"timestamp": "2026-04-01T03:44:05.059598+00:00", "opportunities_count": 11, "signals": []}
+{"timestamp": "2026-04-01T03:54:06.648951+00:00", "opportunities_count": 11, "signals": []}
+{"timestamp": "2026-04-01T04:04:08.189926+00:00", "opportunities_count": 11, "signals": []}
+{"timestamp": "2026-04-01T04:14:09.556701+00:00", "opportunities_count": 10, "signals": []}
+{"timestamp": "2026-04-01T04:24:11.033504+00:00", "opportunities_count": 10, "signals": []}
+{"timestamp": "2026-04-01T04:34:12.479989+00:00", "opportunities_count": 10, "signals": []}
+{"timestamp": "2026-04-01T04:44:13.998995+00:00", "opportunities_count": 11, "signals": []}
+{"timestamp": "2026-04-01T04:54:15.423896+00:00", "opportunities_count": 10, "signals": []}
+{"timestamp": "2026-04-01T05:04:16.738574+00:00", "opportunities_count": 10, "signals": []}
+{"timestamp": "2026-04-01T05:14:18.167964+00:00", "opportunities_count": 10, "signals": []}
+{"timestamp": "2026-04-01T05:24:19.751175+00:00", "opportunities_count": 10, "signals": []}
+{"timestamp": "2026-04-01T05:34:24.277559+00:00", "opportunities_count": 9, "signals": []}
+{"timestamp": "2026-04-01T05:44:25.645528+00:00", "opportunities_count": 9, "signals": []}
+{"timestamp": "2026-04-01T05:54:27.069836+00:00", "opportunities_count": 9, "signals": []}
+{"timestamp": "2026-04-01T06:04:28.522292+00:00", "opportunities_count": 9, "signals": []}
+{"timestamp": "2026-04-01T06:14:29.971131+00:00", "opportunities_count": 9, "signals": []}
+{"timestamp": "2026-04-01T06:24:31.379942+00:00", "opportunities_count": 9, "signals": []}
+{"timestamp": "2026-04-01T06:34:32.820219+00:00", "opportunities_count": 9, "signals": []}
+{"timestamp": "2026-04-01T06:44:34.316068+00:00", "opportunities_count": 9, "signals": []}
+{"timestamp": "2026-04-01T06:54:36.021351+00:00", "opportunities_count": 9, "signals": []}
+{"timestamp": "2026-04-01T07:04:37.451601+00:00", "opportunities_count": 9, "signals": []}
+{"timestamp": "2026-04-01T07:14:38.862848+00:00", "opportunities_count": 9, "signals": []}
+{"timestamp": "2026-04-01T07:24:40.103330+00:00", "opportunities_count": 9, "signals": []}
+{"timestamp": "2026-04-01T07:34:41.666526+00:00", "opportunities_count": 9, "signals": []}
+{"timestamp": "2026-04-01T07:44:43.044814+00:00", "opportunities_count": 9, "signals": []}
+{"timestamp": "2026-04-01T07:54:44.740879+00:00", "opportunities_count": 9, "signals": []}
+{"timestamp": "2026-04-01T08:04:46.177921+00:00", "opportunities_count": 9, "signals": []}
+{"timestamp": "2026-04-01T08:14:47.745197+00:00", "opportunities_count": 9, "signals": []}
+{"timestamp": "2026-04-01T08:24:50.840249+00:00", "opportunities_count": 9, "signals": []}
+{"timestamp": "2026-04-01T08:34:52.328876+00:00", "opportunities_count": 9, "signals": []}
+{"timestamp": "2026-04-01T08:44:53.738661+00:00", "opportunities_count": 9, "signals": []}
+{"timestamp": "2026-04-01T08:54:55.450214+00:00", "opportunities_count": 9, "signals": []}
+{"timestamp": "2026-04-01T09:04:56.842557+00:00", "opportunities_count": 9, "signals": []}
+{"timestamp": "2026-04-01T09:14:58.207719+00:00", "opportunities_count": 9, "signals": []}
+{"timestamp": "2026-04-01T09:24:59.983839+00:00", "opportunities_count": 9, "signals": []}
+{"timestamp": "2026-04-01T09:35:02.123633+00:00", "opportunities_count": 9, "signals": []}
+{"timestamp": "2026-04-01T09:45:03.683510+00:00", "opportunities_count": 9, "signals": []}
+{"timestamp": "2026-04-01T09:55:05.292256+00:00", "opportunities_count": 9, "signals": []}

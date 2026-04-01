@@ -1,4 +1,4 @@
-# 🧠 Contexto de Sessão — Auto-gerado 2026-03-31 21:58 BRT
+# 🧠 Contexto de Sessão — Auto-gerado 2026-04-01 07:02 BRT
 
 > LEIA ISTO ANTES DE RESPONDER QUALQUER COISA.
 > Este arquivo contém o que aconteceu nos últimos dias.
@@ -193,41 +193,6 @@
 
 ## 🔄 Último Flush 2026-03-28 (2026-03-28_18h.md)
 
-## 📅 Memória 2026-03-27 (     193 linhas)
-# 2026-03-27 — Memória do Dia
-
-## 10:22 — Preferência de Modelo Permanente
-**Zica:** "muda pro opus e nunca mais vai pra sonnet se eu te pedir"
-- ✅ Sessão mudada para Opus 4-6
-- 📝 Regra registrada: sempre usar Opus por padrão neste grupo
-- WhatsApp grupo Gospia deve rodar sempre em Opus salvo instrução contrária explícita
-
-## Tarefas do Dia
-- [x] 3 bots de pesquisa design relançados (modelo gratuito Nvidia)
-- [x] Dashboard troubleshooting .md criado para Tiago
-- [ ] Polymarket aberto para Tiago logar manualmente
-
-- **11:18** [Money Maker] Drop servicing: vendo "análise de concorrentes" para e-commerce por R$297. Crie: → ✅ (14s)
-
-- **11:18** [Money Maker] Drop servicing: vendo "análise de concorrentes" para e-commerce por R$297. Crie: → ✅ (14s)
-
-- **11:18** [Money Maker] Gere 5 DMs únicas e personalizadas para abordar donos de pet shop no Instagram o → ✅ (32s)
-
-- **11:18** [Money Maker] Gere 5 DMs únicas e personalizadas para abordar donos de pet shop no Instagram o → ✅ (32s)
-
-- **11:50** [Money Maker] Gere 5 DMs únicas e personalizadas para abordar donos de restaurante no Instagra → ✅ (15s)
-
-- **11:50** [Money Maker] Gere 5 DMs únicas e personalizadas para abordar donos de restaurante no Instagra → ✅ (15s)
-
-- **12:21** [Money Maker] Drop servicing: vendo "relatório de redes sociais" para restaurante por R$197. C → ✅ (15s)
-
-- **12:21** [Money Maker] Drop servicing: vendo "relatório de redes sociais" para restaurante por R$197. C → ✅ (15s)
-
-- **12:21** [Money Maker] Gere 5 DMs únicas e personalizadas para abordar donos de salão de beleza no Inst → ✅ (19s)
-... (mais 163 linhas em memory/2026-03-27.md)
-
-## 🔄 Último Flush 2026-03-27 (2026-03-27_18h.md)
-
 ## 📝 Memórias Recentes (últimos 3 dias)
 - **TESTE-APIS-VIDEO-FREE.md** (5027 bytes)
 - **REGRA-ABSOLUTA-MEMORIA.md** (1602 bytes)
@@ -292,4 +257,4 @@
 - **Dashboard Titanio 2.0** — 3 instâncias (Eduardo:4444, Helber:4445, Tiago:4446)
 
 ---
-_Gerado: 21:58 BRT 31/03/2026 | 292 linhas, 17994 bytes | Refresh: a cada 30min_
+_Gerado: 07:02 BRT 01/04/2026 | 257 linhas, 16203 bytes | Refresh: a cada 30min_
