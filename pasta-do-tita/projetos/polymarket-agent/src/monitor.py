@@ -45,51 +45,46 @@ _model_idx = 0
 # ══════════════════════════════════════
 
 def ask_ai(prompt: str, max_tokens: int = 500) -> str:
-    """Pergunta pra IA gratuita com fallback automático."""
+    """Pergunta pra IA com fallback rápido (não trava monitor)."""
     global _key_idx, _model_idx
-    
-    # Tentar OpenRouter free (rotacionar modelo e key)
-    for attempt in range(len(FREE_MODELS) * len(OR_KEYS)):
+
+    # Tentar poucas vezes no OpenRouter pra evitar travar scan
+    for _ in range(min(3, len(FREE_MODELS) * len(OR_KEYS))):
         model = FREE_MODELS[_model_idx % len(FREE_MODELS)]
         key = OR_KEYS[_key_idx % len(OR_KEYS)]
-        
         try:
             resp = requests.post(
                 "https://openrouter.ai/api/v1/chat/completions",
                 headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"},
                 json={"model": model, "messages": [{"role": "user", "content": prompt}], "max_tokens": max_tokens},
-                timeout=20
+                timeout=8,
             )
             if resp.status_code == 200:
                 text = resp.json()["choices"][0]["message"]["content"]
                 if text and text.strip() and text.strip() != "None":
                     return text.strip()
-                else:
-                    _model_idx += 1
-                    continue
-            elif resp.status_code == 429:
-                _model_idx += 1
-                _key_idx += 1
-                continue
-        except:
             _model_idx += 1
-            continue
-    
-    # Fallback IMEDIATO: Claude (OpenRouter free retorna None quando rate limited)
+            _key_idx += 1
+        except Exception:
+            _model_idx += 1
+            _key_idx += 1
+
+    # Fallback curto no Claude
     try:
         resp = requests.post(
             "https://api.anthropic.com/v1/messages",
             headers={"x-api-key": ANTHROPIC_KEY, "anthropic-version": "2023-06-01", "content-type": "application/json"},
             json={"model": "claude-sonnet-4-20250514", "max_tokens": max_tokens,
                   "messages": [{"role": "user", "content": prompt}]},
-            timeout=30
+            timeout=10,
         )
         if resp.status_code == 200:
             return resp.json()["content"][0]["text"].strip()
-    except:
+    except Exception:
         pass
-    
-    return "ERRO: Nenhuma IA disponível"
+
+    # Último fallback: heurística local
+    return '{"confianca": 35, "direcao": "HOLD", "razao": "Sem resposta de IA no timeout", "risco": "alto"}'
 
 
 # ══════════════════════════════════════
@@ -128,32 +123,33 @@ def parse_odds(market):
 # ══════════════════════════════════════
 
 def analyze_opportunity(market):
-    """Pede pra IA analisar uma oportunidade específica."""
-    question = market.get('question', '?')
+    """Análise heurística rápida (modo day-trade local, sem travar em API externa)."""
     yes, no = parse_odds(market)
     volume = float(market.get('volume', 0) or 0)
-    
-    prompt = f"""Analise esta oportunidade no Polymarket (mercado de previsões):
 
-Pergunta: {question}
-Odds: YES={yes:.0%}, NO={no:.0%}
-Volume: ${volume:,.0f}
+    # edge simples: distância de 50%
+    edge = abs((yes or 0.5) - 0.5)
+    confianca = int(min(85, 35 + edge * 100 + min(volume / 50000, 20)))
 
-Responda em JSON:
-{{"confianca": 0-100, "direcao": "YES" ou "NO", "razao": "motivo curto", "risco": "baixo/medio/alto"}}
+    if yes is None:
+        return {"confianca": 0, "direcao": "HOLD", "razao": "Sem odds válidas", "risco": "alto"}
 
-Baseie-se em conhecimento atual de eventos mundiais."""
+    if yes >= 0.62:
+        direcao = "YES"
+    elif yes <= 0.38:
+        direcao = "NO"
+    else:
+        direcao = "HOLD"
 
-    response = ask_ai(prompt, 200)
-    try:
-        # Extrair JSON da resposta
-        if "```json" in response:
-            response = response.split("```json")[1].split("```")[0]
-        elif "```" in response:
-            response = response.split("```")[1].split("```")[0]
-        return json.loads(response)
-    except:
-        return {"confianca": 0, "direcao": "HOLD", "razao": response[:100], "risco": "desconhecido"}
+    if volume < 5000:
+        risco = "alto"
+    elif volume < 25000:
+        risco = "medio"
+    else:
+        risco = "baixo"
+
+    razao = f"Heurística local: YES={yes:.0%}, volume=${volume:,.0f}, edge={edge:.1%}"
+    return {"confianca": confianca, "direcao": direcao, "razao": razao, "risco": risco}
 
 
 # ══════════════════════════════════════

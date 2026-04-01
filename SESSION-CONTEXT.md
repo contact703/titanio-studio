@@ -1,4 +1,4 @@
-# 🧠 Contexto de Sessão — Auto-gerado 2026-04-01 12:15 BRT
+# 🧠 Contexto de Sessão — Auto-gerado 2026-04-01 13:43 BRT
 
 > LEIA ISTO ANTES DE RESPONDER QUALQUER COISA.
 > Este arquivo contém o que aconteceu nos últimos dias.
@@ -55,7 +55,7 @@
 - Script: ~/.openclaw/workspace/bin/video-analyze.sh "URL"
 - Tempo: ~15 segundos por vídeo
 
-## 📅 Memória 2026-04-01 (       7 linhas)
+## 📅 Memória 2026-04-01 (      48 linhas)
 - [HEARTBEAT 2026-04-01 07:02:54 -03] ⚠️ RAM baixa detectada: FREE_PAGES=42937 (<50000).
 - [HEARTBEAT 2026-04-01 07:32:44 -03] ⚠️ RAM baixa detectada: FREE_PAGES=45139 (<50000).
 - [HEARTBEAT 2026-04-01 08:02:39 -03] ⚠️ RAM baixa detectada: FREE_PAGES=43350 (<50000).
@@ -63,6 +63,30 @@
 - [HEARTBEAT 2026-04-01 09:02:35 -03] ⚠️ RAM baixa detectada: FREE_PAGES=39001 (<50000).
 - [HEARTBEAT 2026-04-01 09:32:42 -03] ⚠️ RAM baixa detectada: FREE_PAGES=3966 (<50000).
 - [HEARTBEAT 2026-04-01 10:02:33 -03] ⚠️ RAM baixa detectada: FREE_PAGES=35393 (<50000).
+- [HEARTBEAT 2026-04-01 12:15:31 -03] ⚠️ RAM baixa detectada: FREE_PAGES=47026 (<50000).
+
+## 13:25 — Polymarket day-trade: correção + reativação real
+- Zica cobrou divergência entre mensagem anterior ("bot ousado rodando") e estado real.
+- Verificação técnica confirmou: bot de execução automática de ordens NÃO estava operacional; havia monitor/scanner parado em dados antigos (último snapshot 30/03).
+- Ação aplicada:
+  - Ajustado `start-monitor.sh` para modo day-trade (scan 5min) e log sem buffer (`python3 -u`).
+  - Ajustado `src/monitor.py` para análise heurística local (sem bloqueio por APIs externas), evitando travamento.
+  - Reiniciado monitor com sucesso.
+- Evidência:
+  - Novo scan em `2026-04-01 13:23`.
+  - `data/latest_scan.json` atualizado com oportunidades e análises.
+  - Log ativo em `/tmp/polymarket-monitor.log` com ciclos a cada 5 min.
+- Status atual: scanner/sinais funcionando em tempo real; execução automática de trade ainda não habilitada.
+
+## 13:38 — Polymarket: auto-trader ativado com execução real condicionada a saldo
+- Zica autorizou execução real e operação contínua.
+- Ação técnica:
+  - Criado `src/auto_trader.py` (loop 5min, seleção de oportunidades, tentativa de market buy FOK, log de trades).
+  - Auto-trader iniciado em background (PID 21944).
+  - Monitor de sinais mantido ativo (PID 20186).
+- Validação inicial:
+  - Auto-trader subiu corretamente.
+... (mais 18 linhas em memory/2026-04-01.md)
 
 ## 🔄 Último Flush 2026-04-01 (2026-04-01_12h.md)
 
@@ -206,15 +230,14 @@
 
 ## 📝 Memórias Recentes (últimos 3 dias)
 - **TESTE-APIS-VIDEO-FREE.md** (5027 bytes)
-- **REGRA-ABSOLUTA-MEMORIA.md** (1602 bytes)
 - **PESQUISA-VIDEO-IA-REAL.md** (13528 bytes)
 - **PESQUISA-MEMORIA-PERSISTENTE.md** (18517 bytes)
 - **PESQUISA-API-VIDEO-IA-FREE.md** (20066 bytes)
-- **DIAGNOSTICO-MEMORIA-29-03-2026.md** (2496 bytes)
-- **2026-04-01.md** (650 bytes)
+- **2026-04-01.md** (3155 bytes)
 - **2026-03-31.md** (2545 bytes)
 - **2026-03-30.md** (15268 bytes)
 - **2026-03-29.md** (11880 bytes)
+- **2026-03-29-media-fix.md** (2402 bytes)
 
 ## ⚠️ Lições Críticas
 
@@ -268,4 +291,4 @@
 - **Dashboard Titanio 2.0** — 3 instâncias (Eduardo:4444, Helber:4445, Tiago:4446)
 
 ---
-_Gerado: 12:15 BRT 01/04/2026 | 268 linhas, 16943 bytes | Refresh: a cada 30min_
+_Gerado: 13:43 BRT 01/04/2026 | 291 linhas, 18371 bytes | Refresh: a cada 30min_

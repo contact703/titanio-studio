@@ -1,71 +1,71 @@
 {
-  "timestamp": "2026-03-30 15:44",
+  "timestamp": "2026-04-01 13:38",
   "markets_total": 30,
-  "opportunities": 3,
+  "opportunities": 5,
   "analyses": [
     {
-      "question": "Will a dozen eggs cost between $2.25–2.50 in March?",
-      "yes": 0.56,
-      "no": 0.44,
-      "volume": 9996.513810999993,
+      "question": "Will The Super Mario Galaxy Movie be the top grossing movie of 2026?",
+      "yes": 0.315,
+      "no": 0.685,
+      "volume": 99971.4805910001,
       "analysis": {
-        "confianca": 65,
+        "confianca": 55,
+        "direcao": "NO",
+        "razao": "Heurística local: YES=32%, volume=$99,971, edge=18.5%",
+        "risco": "baixo"
+      },
+      "timestamp": "2026-04-01 13:38",
+      "condition_id": "0xec181db4470b152493b58229862af3f6335b77cc719f5a0e7ed58c9f9848b992"
+    },
+    {
+      "question": "Military action against Iran continues through April 30, 2026?",
+      "yes": 0.505,
+      "no": 0.495,
+      "volume": 9996.722598,
+      "analysis": {
+        "confianca": 35,
+        "direcao": "HOLD",
+        "razao": "Heurística local: YES=50%, volume=$9,997, edge=0.5%",
+        "risco": "medio"
+      },
+      "timestamp": "2026-04-01 13:38",
+      "condition_id": "0xe05bfd5efc54b5e3cd2ea7cd3e83298839620bfe9fa5986ff4c531cc008e55e2"
+    },
+    {
+      "question": "Copa Colsanitas: Katarzyna Kawa vs Tatjana Maria",
+      "yes": 0.695,
+      "no": 0.305,
+      "volume": 9975.949217999996,
+      "analysis": {
+        "confianca": 54,
         "direcao": "YES",
-        "razao": "Preços de ovos estão normalizando após pico da gripe aviária H5N1 em 2022-2023. Faixa $2.25-2.50 está alinhada com tendência atual de estabilização no varejo americano.",
+        "razao": "Heurística local: YES=70%, volume=$9,976, edge=19.5%",
         "risco": "medio"
       },
-      "timestamp": "2026-03-30 15:44",
-      "condition_id": "0x1987acaadb70417227fdf1aa56697fc04a157c9562146124dd1394d6dabf201e"
-    },
-    {
-      "question": "Will Real Madrid CF win on 2026-04-04?",
-      "yes": 0.625,
-      "no": 0.375,
-      "volume": 99929.39054299936,
-      "analysis": {
-        "confianca": 25,
-        "direcao": "NO",
-        "razao": "Data muito distante (2026) com muitas variáveis imprevisíveis - lesões, transferências, adversário desconhecido",
-        "risco": "alto"
-      },
-      "timestamp": "2026-03-30 15:44",
-      "condition_id": "0x161ab8edd553f3de4366a6abe952f6de261d5f443135ce60248ac63e73a45f69"
-    },
-    {
-      "question": "OpenAI receives federal backstop for infrastructure before July?",
-      "yes": 0.27,
-      "no": 0.73,
-      "volume": 99882.16801599976,
-      "analysis": {
-        "confianca": 75,
-        "direcao": "NO",
-        "razao": "Processo regulatório federal é lento, resistência política ao subsídio de empresas privadas, e prazo muito apertado para julho",
-        "risco": "medio"
-      },
-      "timestamp": "2026-03-30 15:44",
-      "condition_id": "0x388459f1cfd0d310154e13f16f49d31fd301e5e3502072c8b09d3a0697b2823f"
+      "timestamp": "2026-04-01 13:38",
+      "condition_id": "0x5cae80f36408e42090e02efa361532664f123e7f18c31319f5aba5a5cae72070"
     }
   ],
   "top_events": [
     {
       "title": "Democratic Presidential Nominee 2028",
-      "volume": 942749049.3543072
+      "volume": 959150865.9685943
     },
     {
       "title": "Republican Presidential Nominee 2028",
-      "volume": 496114606.365173
+      "volume": 504745095.3184593
     },
     {
       "title": "Presidential Election Winner 2028",
-      "volume": 475110576.1728031
+      "volume": 481694462.88356274
     },
     {
       "title": "2026 FIFA World Cup Winner ",
-      "volume": 430311300.0890781
+      "volume": 456759123.40179396
     },
     {
       "title": "English Premier League Winner ",
-      "volume": 312645275.99930084
+      "volume": 312960633.05986786
     }
   ]
 }
