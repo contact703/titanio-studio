@@ -351,8 +351,10 @@ Source: memory/LICAO-CRITICA-MD-ENVIO.md
 ## 📎 Envio de Arquivos .md no WhatsApp (Lição 02/04/2026)
 
 **Problema:** Gateway OpenClaw bloqueia envio local de .md (MIME text/markdown não permitido).
-**Solução que funciona:** Subir o .md em repo GitHub PÚBLICO e enviar via URL raw.
-- Repo criado: `contact703/titanio-docs-public` (público)
-- URL pattern: `https://raw.githubusercontent.com/contact703/titanio-docs-public/main/ARQUIVO.md`
-- Upload via API: `PUT /repos/.../contents/ARQUIVO.md` com content base64
+**Solução automatizada:** `bash bin/enviar-md.sh /caminho/arquivo.md`
+- Script faz: upload GitHub → envia URL no WhatsApp → deleta do GitHub em 10s
+- Repo: `contact703/titanio-docs-public` (público, só README + instalador permanentes)
+- ⚠️ **NUNCA deixar .md sensível no repo público** — script já deleta automaticamente
+- ❌ `--media /local/arquivo.md` NÃO funciona (gateway bloqueia MIME local)
+- ✅ `--media https://URL/arquivo.md` FUNCIONA (via URL passa)
 - **NUNCA converter .md para PDF/DOCX quando pedirem .md** — usar essa rota.

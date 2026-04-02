@@ -1,4 +1,4 @@
-# 🧠 Contexto de Sessão — Auto-gerado 2026-04-02 14:32 BRT
+# 🧠 Contexto de Sessão — Auto-gerado 2026-04-02 16:19 BRT
 
 > LEIA ISTO ANTES DE RESPONDER QUALQUER COISA.
 > Este arquivo contém o que aconteceu nos últimos dias.
@@ -57,7 +57,7 @@
 - Script: ~/.openclaw/workspace/bin/video-analyze.sh "URL"
 - Tempo: ~15 segundos por vídeo
 
-## 📅 Memória 2026-04-02 (      68 linhas)
+## 📅 Memória 2026-04-02 (      70 linhas)
 
 - **21:40** [Oracle] Analise o plano H2O Films (Titanio Agency). Entregar: (1) TOP 3 gaps críticos an → ✅ (56s)
 
@@ -88,7 +88,7 @@ PLANO H2O FILM → ✅ (55s)
 - Causa provável: RAM insuficiente, macOS mata processos do WhatsApp Web
 - Gateway reconecta automaticamente mas cai em ~60s
 
-... (mais 38 linhas em memory/2026-04-02.md)
+... (mais 40 linhas em memory/2026-04-02.md)
 
 ## 🔄 Último Flush 2026-04-02 (2026-04-02_12h.md)
 
@@ -231,11 +231,8 @@ PLANO H2O FILM → ✅ (55s)
 ## 🔄 Último Flush 2026-03-29 (2026-03-29_18h.md)
 
 ## 📝 Memórias Recentes (últimos 3 dias)
-- **TESTE-APIS-VIDEO-FREE.md** (5027 bytes)
-- **PESQUISA-VIDEO-IA-REAL.md** (13528 bytes)
-- **PESQUISA-API-VIDEO-IA-FREE.md** (20066 bytes)
 - **LICAO-CRITICA-MD-ENVIO.md** (3183 bytes)
-- **2026-04-02.md** (3694 bytes)
+- **2026-04-02.md** (3745 bytes)
 - **2026-04-01.md** (8468 bytes)
 - **2026-03-31.md** (2545 bytes)
 - **2026-03-30.md** (15268 bytes)
@@ -271,17 +268,17 @@ PLANO H2O FILM → ✅ (55s)
 - **UPGRADE-INFRAESTRUTURA-HELBER-TIAGO.md** (30/03 02:12)
 - **UPGRADE-HICLAW-DEERFLOW.md** (29/03 21:39)
 - **UPGRADE-DIRECT-TOOLS-HELBER-TIAGO.md** (30/03 04:01)
-- **TITANIO-BROWSER-SETUP.md** (28/03 14:51)
 - **SOUL.md** (30/03 03:01)
 - **SOLUCAO-MEMORIA-SQUAD.md** (29/03 12:52)
 - **RELATORIO-COMPLETO-29-30-MARCO.md** (30/03 04:01)
 - **PROMPT-TIAGO-RELATORIO-COMPLETO.md** (01/04 11:55)
-- **MEMORY.md** (02/04 09:43)
+- **MEMORY.md** (02/04 16:17)
 - **LESSONS.md** (30/03 01:14)
 - **INSTALAR-TMEM-HELBER-TIAGO.md** (29/03 19:09)
 - **INSTALAR-TITANIO-BROWSER-TIAGO.md** (02/04 09:42)
-- **INSTALAR-TITANIO-BROWSER-CLAW.md** (28/03 14:56)
-- **INSTALAR-TITANIO-BROWSER-AUTO.md** (28/03 14:54)
+- **HEARTBEAT.md** (02/04 14:34)
+- **DIAGNOSTICO-COMPLETO-TIAGO.md** (02/04 09:42)
+- **BOOTSTRAP-NOVO-MAC-MINI.md** (30/03 14:15)
 
 ## 🛠️ Ferramentas Instaladas
 - **titanio-media.py** — Pipeline mídia IA (banners, narração, vídeo, imagens FLUX)
@@ -292,4 +289,4 @@ PLANO H2O FILM → ✅ (55s)
 - **Dashboard Titanio 2.0** — 3 instâncias (Eduardo:4444, Helber:4445, Tiago:4446)
 
 ---
-_Gerado: 14:32 BRT 02/04/2026 | 292 linhas, 18392 bytes | Refresh: a cada 30min_
+_Gerado: 16:19 BRT 02/04/2026 | 289 linhas, 18231 bytes | Refresh: a cada 30min_
