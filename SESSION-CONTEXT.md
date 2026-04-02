@@ -1,4 +1,4 @@
-# 🧠 Contexto de Sessão — Auto-gerado 2026-04-01 21:50 BRT
+# 🧠 Contexto de Sessão — Auto-gerado 2026-04-02 07:25 BRT
 
 > LEIA ISTO ANTES DE RESPONDER QUALQUER COISA.
 > Este arquivo contém o que aconteceu nos últimos dias.
@@ -55,7 +55,41 @@
 - Script: ~/.openclaw/workspace/bin/video-analyze.sh "URL"
 - Tempo: ~15 segundos por vídeo
 
-## 📅 Memória 2026-04-01 (     115 linhas)
+## 📅 Memória 2026-04-02 (      30 linhas)
+
+- **21:40** [Oracle] Analise o plano H2O Films (Titanio Agency). Entregar: (1) TOP 3 gaps críticos an → ✅ (56s)
+
+- **21:43** [Oracle] Analise o plano Titanio Agency para H2O Films. Entregar: (1) top 3 gaps criticos → ❌ (61s)
+
+- **21:43** [Oracle] Liste os 3 maiores gaps do plano H2O Films da Titanio Agency para fechar o contr → ❌ (62s)
+
+- **21:45** [Oracle] Liste em 5 bullets os pontos mais importantes do plano H2O Films da Titanio Agen → ✅ (29s)
+
+- **21:46** [Oracle] Analise o plano H2O Films da Titanio Agency. Entregue: (1) top 3 gaps criticos p → ✅ (50s)
+
+- **21:47** [Oracle] Voce e o Oracle da Titanio. Analise o plano H2O Films (6 especialistas cinema, 1 → ✅ (32s)
+
+- **21:48** [Oracle] Analise plano H2O Films da Titanio Agency: 6 especialistas cinema (Film Promoter → ✅ (56s)
+
+- **21:50** [Oracle] IGNORE os dados do sistema. Foque 100% nessa analise de negocio:
+
+PLANO H2O FILM → ✅ (55s)
+
+- **21:58** [Oracle] Analise o plano H2O Films da Titanio Agency e entregue em max 300 palavras: (1)  → ❌ (61s)
+
+- **21:59** [Oracle] Analise o plano H2O Films da Titanio Agency. Entregue em max 300 palavras:
+1. TO → ✅ (45s)
+
+## 02/04/2026 07:05 — Gateway loop 499 continua
+- FREE_PAGES=25285 (pior que ontem, 29364)
+- Loop disconnect/reconnect desde 22:25 do dia anterior
+- Causa provável: RAM insuficiente, macOS mata processos do WhatsApp Web
+- Gateway reconecta automaticamente mas cai em ~60s
+
+
+## 🔄 Último Flush 2026-04-02 (2026-04-02_06h.md)
+
+## 📅 Memória 2026-04-01 (     123 linhas)
 - [HEARTBEAT 2026-04-01 07:02:54 -03] ⚠️ RAM baixa detectada: FREE_PAGES=42937 (<50000).
 - [HEARTBEAT 2026-04-01 07:32:44 -03] ⚠️ RAM baixa detectada: FREE_PAGES=45139 (<50000).
 - [HEARTBEAT 2026-04-01 08:02:39 -03] ⚠️ RAM baixa detectada: FREE_PAGES=43350 (<50000).
@@ -86,7 +120,7 @@
   - Monitor de sinais mantido ativo (PID 20186).
 - Validação inicial:
   - Auto-trader subiu corretamente.
-... (mais 85 linhas em memory/2026-04-01.md)
+... (mais 93 linhas em memory/2026-04-01.md)
 
 ## 🔄 Último Flush 2026-04-01 (2026-04-01_18h.md)
 
@@ -193,48 +227,13 @@
 
 ## 🔄 Último Flush 2026-03-29 (2026-03-29_18h.md)
 
-## 📅 Memória 2026-03-28 (     286 linhas)
-
-- **21:04** [Money Maker] Gere 5 DMs únicas e personalizadas para abordar donos de loja de roupas no Insta → ✅ (14s)
-
-- **21:35** [Money Maker] Gere 5 DMs únicas e personalizadas para abordar donos de pet shop no Instagram o → ✅ (11s)
-
-- **21:35** [Money Maker] Drop servicing: vendo "relatório de redes sociais" para restaurante por R$197. C → ✅ (23s)
-
-- **22:05** [Money Maker] Gere 5 DMs únicas e personalizadas para abordar donos de restaurante no Instagra → ✅ (15s)
-
-- **22:05** [Money Maker] Ebook COMPLETO para vender na Hotmart sobre "guia completo de legendas que vende → ✅ (22s)
-
-- **22:36** [Money Maker] Gere 5 DMs únicas e personalizadas para abordar donos de salão de beleza no Inst → ✅ (14s)
-
-- **22:36** [Money Maker] Drop servicing: vendo "kit de conteúdo mensal" para clínica por R$397. Crie: (1) → ✅ (22s)
-
-- **22:36** [Content Writer] Roteiro completo de vídeo YouTube 8min sobre "curiosidades sobre IA" para canal  → ✅ (29s)
-
-- **23:06** [Money Maker] Gere 5 DMs únicas e personalizadas para abordar donos de clínica estética no Ins → ✅ (13s)
-
-- **23:36** [Money Maker] Gere 5 DMs únicas e personalizadas para abordar donos de loja de roupas no Insta → ✅ (10s)
-
-- **23:37** [Money Maker] Drop servicing: vendo "análise de concorrentes" para e-commerce por R$297. Crie: → ✅ (14s)
-
-- **23:37** [Money Maker] Ebook COMPLETO para vender na Hotmart sobre "automação para pequenos negócios co → ✅ (17s)
-
-- **00:07** [Money Maker] Gere 5 DMs únicas e personalizadas para abordar donos de pet shop no Instagram o → ✅ (13s)
-
-- **00:37** [Money Maker] Gere 5 DMs únicas e personalizadas para abordar donos de restaurante no Instagra → ✅ (15s)
-
-- **00:37** [Content Writer] Roteiro completo de vídeo YouTube 8min sobre "como ganhar dinheiro online" para  → ✅ (21s)
-... (mais 256 linhas em memory/2026-03-28.md)
-
-## 🔄 Último Flush 2026-03-28 (2026-03-28_18h.md)
-
 ## 📝 Memórias Recentes (últimos 3 dias)
 - **TESTE-APIS-VIDEO-FREE.md** (5027 bytes)
 - **PESQUISA-VIDEO-IA-REAL.md** (13528 bytes)
 - **PESQUISA-MEMORIA-PERSISTENTE.md** (18517 bytes)
 - **PESQUISA-API-VIDEO-IA-FREE.md** (20066 bytes)
-- **2026-04-02.md** (937 bytes)
-- **2026-04-01.md** (8171 bytes)
+- **2026-04-02.md** (1448 bytes)
+- **2026-04-01.md** (8468 bytes)
 - **2026-03-31.md** (2545 bytes)
 - **2026-03-30.md** (15268 bytes)
 
@@ -290,4 +289,4 @@
 - **Dashboard Titanio 2.0** — 3 instâncias (Eduardo:4444, Helber:4445, Tiago:4446)
 
 ---
-_Gerado: 21:50 BRT 01/04/2026 | 290 linhas, 18326 bytes | Refresh: a cada 30min_
+_Gerado: 07:25 BRT 02/04/2026 | 289 linhas, 17873 bytes | Refresh: a cada 30min_

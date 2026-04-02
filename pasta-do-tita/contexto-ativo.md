@@ -1,14 +1,14 @@
 # 🧠 Contexto Ativo - Tita
 
-> Atualizado: 2026-04-01 21:03 UTC (18:03 BRT) — FLUSH AUTOMÁTICO
+> Atualizado: 2026-04-02 09:03 UTC (06:03 BRT) — FLUSH AUTOMÁTICO
 > Arquivo gerado pelo flush de memória persistente
 
 ---
 
 ## ⚠️ Status do Flush
 
-**Último flush:** 2026-04-01 21:03 UTC (18:03 BRT 01/04) ← **AGORA** ✨  
-**Anterior:** 2026-04-01 15:03 UTC (12:03 BRT)  
+**Último flush:** 2026-04-02 09:03 UTC (06:03 BRT 02/04) ← **AGORA** ✨  
+**Anterior:** 2026-04-02 03:03 UTC (00:03 BRT)  
 **Anterior:** 2026-03-30 15:56 UTC (12:56 BRT 30/03)  
 **Anteriores:** 2026-03-29 15:03 UTC, 2026-03-29 09:03 UTC, 2026-03-29 03:03 UTC, 2026-03-28 15:03 UTC, 2026-03-28 03:03 UTC, 2026-03-27 21:03 UTC, 2026-03-27 03:03 UTC, 2026-03-26 09:03 UTC  
 **Volume Tita_DEV_02:** ❌ HD queimou — usando TITA_039/MAC_MINI_03  
@@ -16,13 +16,20 @@
 
 ---
 
-## 🚨 ALERTAS URGENTES (01/04/2026)
+## 🚨 ALERTAS URGENTES (02/04/2026)
 
 ### ❌ KIMI/MOONSHOT CONTA SUSPENSA
 - **Erro:** saldo insuficiente — org-e5349e3f371f4bf394c478332fdfb158
 - **Impacto:** Bots Instagram (3x), web_search via Kimi — OFFLINE
 - **Ação:** Eduardo recarregar conta Moonshot
 - **Fallback atual:** claude-sonnet-4-6 via Anthropic
+
+### ⚠️ CRISE 01/04 NOITE (22:25–??) — EM ABERTO
+- **WhatsApp Gateway:** Loop disconnect/reconnect 499 a cada ~60s desde 22:25 BRT — verificar se ainda ativo
+- **Anthropic API:** Rate limiting 429 massivo em todas as sessões (22:35–?) — verificar se resolveu
+- **Causa provável:** RAM baixa (FREE_PAGES=29364 às 21h)
+- **Impacto:** Zica perguntou sobre modelo/HiClaw/Dashboard no grupo 3x e **ficou SEM RESPOSTA** (22:25 BRT)
+- **Ação IMEDIATA:** Responder Zica no grupo AGORA + verificar gateway
 
 ### ⚠️ Polymarket Bot — Alertas Anteriores eram FALSOS
 - monitor.py e auto_trader.py: ✅ RODANDO
@@ -357,9 +364,10 @@ Anterior: `2026-03-24_00h.md`
 **Atualizado:** 2026-03-30 18:03 BRT (21:03 UTC 30/03) ← FLUSH ATUAL  
 **Próximo flush automático:** ~21:03 BRT (2026-03-31 00:03 UTC) — **VERIFICAR: GOLD DIGGER MORTO (340+ ciclos), ASC CAMPOS ZICA (13+ DIAS!), BUILD iOS MORTO (13+ DIAS!), POLYMARKET KEY TIAGO, API RATE LIMITING**
 
-**Memória persistente:** 25 entradas (2026-03-22 03h até 2026-03-30 12h)  
+**Memória persistente:** 26 entradas (2026-03-22 03h até 2026-04-02 00h)  
 **Relatórios recentes:** 
-- `memoria-persistente/2026-03-30_18h.md` ← **ESTE FLUSH** (segunda 18:03, Eduardo trocou API keys, vídeo Zeroscope gerado, rate limiting Anthropic)
+- `memoria-persistente/2026-04-02_00h.md` ← **ESTE FLUSH** (quinta 00h, gateway 499 loop, rate limiting 429, Zica sem resposta no grupo)
+- `memoria-persistente/2026-03-30_18h.md` (segunda 18:03, Eduardo trocou API keys, vídeo Zeroscope gerado, rate limiting Anthropic)
 - `memoria-persistente/2026-03-30_12h.md` (segunda 12:56, Gold Digger 340 ciclos morto, Direct Tools criado, zero interação humana)
 - `memoria-persistente/2026-03-29_18h.md` (domingo 18h, Gold Digger 305 ciclos morto, tmem criado, Polymarket scan)
 - `memoria-persistente/2026-03-29_12h.md` (domingo meio-dia, Gold Digger 295 ciclos morto, zero interação humana)
