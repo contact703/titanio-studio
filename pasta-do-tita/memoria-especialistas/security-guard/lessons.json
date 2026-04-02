@@ -1,1 +1,580 @@
-{"lessons":[{"id":"86253199-a3c2-4813-8a6c-b2f134fdad2a","date":"2026-04-02","time":"12:18","successRate":1,"lesson":"Tarefa (N8n): Monteiro Aranha: crie o código TypeScript do modo confidencial. Quando ativado: 1) Sessão efêmera (s","context":"Resultado: # Monteiro Aranha — Modo Confidencial + Tokenização + Audit Trail | Execução\n\n---\n\n## 📋 Análise do Requisito\n\nLendo `PLANO-SEGURANCA-MONTEIRO-ARANHA.md` para extrair contexto...\n\n**Requisitos extraíd","category":"process","domain":"security-guard","impact":"medium","tags":["n8n-captured"]},{"id":"1b48c5c9-b5a2-496f-90f9-232837535c62","date":"2026-04-02","time":"12:18","successRate":1,"lesson":"Tarefa executada: Monteiro Aranha: crie o código TypeScript do modo confidencial. Quando ativado: 1) Sessão efêmera (s","context":"Resultado: # Monteiro Aranha — Modo Confidencial + Tokenização + Audit Trail | Execução\n\n---\n\n## 📋 Análise do Requisito\n\nLendo `PLANO-SEGURANCA-MONTEIRO-ARANHA.md` para extrair contexto...\n\n**Requisitos extraíd","category":"process","domain":"security-guard","impact":"medium","tags":["auto-task"]},{"id":"5558285f-df5d-4abe-894e-39aa8fc5ca5f","date":"2026-04-02","time":"12:05","successRate":1,"lesson":"Tarefa (N8n): Projeto Monteiro Aranha — leia PLANO-SEGURANCA-MONTEIRO-ARANHA.md na sua biblioteca. Implemente: 1) ","context":"Resultado: # Projeto Monteiro Aranha — Implementação Completa de Segurança\n\n## 📋 Leitura do Plano de Segurança\n\nLendo `PLANO-SEGURANCA-MONTEIRO-ARANHA.md` para extrair requisitos e contexto...\n\n---\n\n## ⚠️ PROBL","category":"process","domain":"security-guard","impact":"medium","tags":["n8n-captured"]},{"id":"03838530-967c-4c00-aa49-f5592b32c60c","date":"2026-04-02","time":"12:05","successRate":0,"lesson":"Tarefa (N8n): ","context":"Resultado: # Projeto Monteiro Aranha — Implementação Completa de Segurança\n\n## 📋 Leitura do Plano de Segurança\n\nLendo `PLANO-SEGURANCA-MONTEIRO-ARANHA.md` para extrair requisitos e contexto...\n\n---\n\n## ⚠️ PROBL","category":"process","domain":"security-guard","impact":"medium","tags":["n8n-captured"]},{"id":"986b7dc6-9f2b-49b2-af33-df0147149205","date":"2026-04-02","time":"12:05","successRate":1,"lesson":"Tarefa executada: Projeto Monteiro Aranha — leia PLANO-SEGURANCA-MONTEIRO-ARANHA.md na sua biblioteca. Implemente: 1) ","context":"Resultado: # Projeto Monteiro Aranha — Implementação Completa de Segurança\n\n## 📋 Leitura do Plano de Segurança\n\nLendo `PLANO-SEGURANCA-MONTEIRO-ARANHA.md` para extrair requisitos e contexto...\n\n---\n\n## ⚠️ PROBL","category":"process","domain":"security-guard","impact":"medium","tags":["auto-task"]},{"id":"c2798b57-67b5-4553-8e27-42183954638f","date":"2026-04-02","time":"11:33","successRate":1,"lesson":"Tarefa executada: Projete a segurança completa da Dashboard Titanio para clientes externos. Implemente em código TypeS","context":"Resultado: # Dashboard Titanio — Projeto Completo de Segurança | Execução\n\nVou **EXECUTAR** o projeto completo de segurança para a Dashboard Titanio. Entregando código funcional, testado e pronto para produção.\n","category":"process","domain":"security-guard","impact":"medium","tags":["auto-task"]},{"id":"37231ca8-1934-44a0-80d4-361e054027ee","date":"2026-04-02","time":"11:20","successRate":1,"lesson":"Tarefa executada: Projete a segurança da Dashboard Titanio para clientes externos (primeiro cliente: H2O Films). Cubra","context":"Resultado: ## Segurança Dashboard Titanio — Projeto Executivo\n\nVou EXECUTAR o projeto de segurança completo para a Dashboard Titanio, baseado na análise do cliente H2O Films e arquitetura existente.\n\n---\n\n## 1️⃣","category":"process","domain":"security-guard","impact":"medium","tags":["auto-task"]},{"id":"mem-5","date":"2026-03-22","time":"23:00","category":"technical","domain":"general","lesson":"Dizer \"não tenho ferramenta pra anexar\"","context":"From Eduardo MEMORY.md: 🔴 LIÇÃO CRÍTICA: ENVIAR ARQUIVOS VIA WHATSAPP (202","impact":"high","tags":["general","tita39","eduardo-memory"],"successRate":100,"source":"eduardo-memory"},{"id":"mem-6","date":"2026-03-22","time":"23:00","category":"technical","domain":"general","lesson":"Oferecer \"colocar no Desktop\" como solução","context":"From Eduardo MEMORY.md: 🔴 LIÇÃO CRÍTICA: ENVIAR ARQUIVOS VIA WHATSAPP (202","impact":"high","tags":["general","tita39","eduardo-memory"],"successRate":100,"source":"eduardo-memory"},{"id":"mem-7","date":"2026-03-22","time":"23:00","category":"technical","domain":"general","lesson":"Copiar/colar texto em vez de enviar arquivo","context":"From Eduardo MEMORY.md: 🔴 LIÇÃO CRÍTICA: ENVIAR ARQUIVOS VIA WHATSAPP (202","impact":"high","tags":["general","tita39","eduardo-memory"],"successRate":100,"source":"eduardo-memory"},{"id":"mem-9","date":"2026-03-22","time":"23:00","category":"technical","domain":"general","lesson":"ferramenta**: instaloader (pip3 install instaloader) ✅ instalado","context":"From Eduardo MEMORY.md: Instagram Video — Método Real (2026-03-19)","impact":"high","tags":["general","tita39","eduardo-memory"],"successRate":100,"source":"eduardo-memory"},{"id":"mem-10","date":"2026-03-22","time":"23:00","category":"technical","domain":"general","lesson":"login**: `python3 -m instaloader --login USUARIO` → sessão salva em ~/.config/instaloader/","context":"From Eduardo MEMORY.md: Instagram Video — Método Real (2026-03-19)","impact":"high","tags":["general","tita39","eduardo-memory"],"successRate":100,"source":"eduardo-memory"},{"id":"mem-12","date":"2026-03-22","time":"23:00","category":"technical","domain":"general","lesson":"só URL**: `python3 -c \"import instaloader; L=instaloader.Instaloader(); L.load_session_from_file('USER'); post=instaloader.Post.from_shortcode(L.context,'SHORTCODE'); print(post.video_url)\"`","context":"From Eduardo MEMORY.md: Instagram Video — Método Real (2026-03-19)","impact":"high","tags":["general","tita39","eduardo-memory"],"successRate":100,"source":"eduardo-memory"},{"id":"mem-14","date":"2026-03-22","time":"23:00","category":"technical","domain":"general","lesson":"NUNCA dizer que não consegue** — o método existe e funciona com autenticação","context":"From Eduardo MEMORY.md: Instagram Video — Método Real (2026-03-19)","impact":"high","tags":["general","tita39","eduardo-memory"],"successRate":100,"source":"eduardo-memory"},{"id":"mem-16","date":"2026-03-22","time":"23:00","category":"technical","domain":"general","lesson":"RAM warning: 45.6k pages (abaixo de 50k) — 2026-03-22 06:24 AM","context":"From Eduardo MEMORY.md: Semana 2026-03-22 — Auto-consolidação","impact":"high","tags":["general","tita39","eduardo-memory"],"successRate":100,"source":"eduardo-memory"},{"id":"mem-20","date":"2026-03-22","time":"23:00","category":"technical","domain":"general","lesson":"Playwright** — Automação de browser","context":"From Eduardo MEMORY.md: Sessão 22/03/2026 — Testes Completos + Deployment ","impact":"high","tags":["general","tita39","eduardo-memory"],"successRate":100,"source":"eduardo-memory"},{"id":"mem-26","date":"2026-03-22","time":"23:00","category":"technical","domain":"general","lesson":"Confirmei context transfer","context":"From Eduardo MEMORY.md: Sessão 22/03/2026 — Testes Completos + Deployment ","impact":"high","tags":["general","tita39","eduardo-memory"],"successRate":100,"source":"eduardo-memory"},{"id":"mem-27","date":"2026-03-22","time":"23:00","category":"technical","domain":"general","lesson":"Criei instalador automático","context":"From Eduardo MEMORY.md: Sessão 22/03/2026 — Testes Completos + Deployment ","impact":"high","tags":["general","tita39","eduardo-memory"],"successRate":100,"source":"eduardo-memory"},{"id":"mem-34","date":"2026-03-22","time":"23:00","category":"technical","domain":"general","lesson":"Confiar em screenshot/UI desconectada","context":"From Eduardo MEMORY.md: ✅ CRÍTICO RESOLVIDO: Model Sync — Todas as 3 Camad","impact":"high","tags":["general","tita39","eduardo-memory"],"successRate":100,"source":"eduardo-memory"},{"id":"mem-35","date":"2026-03-22","time":"23:00","category":"technical","domain":"general","lesson":"Inventar uma solução (dessa vez foi DE VERDADE)","context":"From Eduardo MEMORY.md: ✅ CRÍTICO RESOLVIDO: Model Sync — Todas as 3 Camad","impact":"high","tags":["general","tita39","eduardo-memory"],"successRate":100,"source":"eduardo-memory"},{"id":"mem-37","date":"2026-03-22","time":"23:00","category":"technical","domain":"general","lesson":"caffeinate ativo","context":"From Eduardo MEMORY.md: Heartbeat 2026-03-22 19:05","impact":"high","tags":["general","tita39","eduardo-memory"],"successRate":100,"source":"eduardo-memory"},{"id":"mem-38","date":"2026-03-22","time":"23:00","category":"technical","domain":"general","lesson":"watchdog.sh ativo","context":"From Eduardo MEMORY.md: Heartbeat 2026-03-22 19:05","impact":"high","tags":["general","tita39","eduardo-memory"],"successRate":100,"source":"eduardo-memory"},{"id":"mem-43","date":"2026-03-22","time":"23:00","category":"technical","domain":"general","lesson":"REAL-LEARNING-SYSTEM criado (especialistas aprendem de verdade)","context":"From Eduardo MEMORY.md: Heartbeat 2026-03-22 19:05","impact":"high","tags":["general","tita39","eduardo-memory"],"successRate":100,"source":"eduardo-memory"},{"id":"lessons-md-47","date":"2026-03-14","time":"00:00","category":"technical","domain":"general","lesson":"Nunca afirmar status de projeto sem ler `contexto-ativo.md` primeiro","context":"From Eduardo LESSONS.md","impact":"high","tags":["general","tita39","eduardo-lessons"],"successRate":100,"source":"eduardo-lessons"},{"id":"lessons-md-52","date":"2026-03-14","time":"00:00","category":"technical","domain":"general","lesson":"Respostas diretas, sem \"Claro!\", \"Com certeza!\", \"Ótima pergunta!\"","context":"From Eduardo LESSONS.md","impact":"high","tags":["general","tita39","eduardo-lessons"],"successRate":100,"source":"eduardo-lessons"},{"id":"lessons-md-54","date":"2026-03-14","time":"00:00","category":"technical","domain":"general","lesson":"Prefere soluções práticas entregues, não opções para escolher","context":"From Eduardo LESSONS.md","impact":"high","tags":["general","tita39","eduardo-lessons"],"successRate":100,"source":"eduardo-lessons"},{"id":"lessons-md-55","date":"2026-03-14","time":"00:00","category":"technical","domain":"general","lesson":"Quando offline 2+ dias: tarefas de infra podem ser feitas proativamente","context":"From Eduardo LESSONS.md","impact":"high","tags":["general","tita39","eduardo-lessons"],"successRate":100,"source":"eduardo-lessons"},{"id":"lessons-md-56","date":"2026-03-14","time":"00:00","category":"technical","domain":"general","lesson":"Flushes de memória a cada 3h funcionam — manter","context":"From Eduardo LESSONS.md","impact":"high","tags":["general","tita39","eduardo-lessons"],"successRate":100,"source":"eduardo-lessons"},{"id":"lessons-md-57","date":"2026-03-14","time":"00:00","category":"technical","domain":"general","lesson":"Estrutura MEMORY.md + daily notes é sólida","context":"From Eduardo LESSONS.md","impact":"high","tags":["general","tita39","eduardo-lessons"],"successRate":100,"source":"eduardo-lessons"},{"id":"lessons-md-58","date":"2026-03-14","time":"00:00","category":"technical","domain":"general","lesson":"Sub-agentes especializados (Code Ninja, DevOps, etc.) produzem resultado melhor","context":"From Eduardo LESSONS.md","impact":"high","tags":["general","tita39","eduardo-lessons"],"successRate":100,"source":"eduardo-lessons"},{"id":"lessons-md-61","date":"2026-03-14","time":"00:00","category":"technical","domain":"general","lesson":"Grupo Gospia ID: `120363405462114071@g.us`","context":"From Eduardo LESSONS.md","impact":"high","tags":["general","tita39","eduardo-lessons"],"successRate":100,"source":"eduardo-lessons"},{"id":"lessons-md-63","date":"2026-03-14","time":"00:00","category":"technical","domain":"security","lesson":"Nunca hardcodar tokens/senhas em arquivos de código","context":"From Eduardo LESSONS.md","impact":"high","tags":["security","tita39","eduardo-lessons"],"successRate":100,"source":"eduardo-lessons"},{"id":"lessons-md-64","date":"2026-03-14","time":"00:00","category":"technical","domain":"general","lesson":"Nunca criar \"mega-workflows\" — um workflow, uma responsabilidade","context":"From Eduardo LESSONS.md","impact":"high","tags":["general","tita39","eduardo-lessons"],"successRate":100,"source":"eduardo-lessons"},{"id":"lessons-md-65","date":"2026-03-14","time":"00:00","category":"technical","domain":"general","lesson":"Nunca assumir que endpoint REST segue convenção padrão sem verificar","context":"From Eduardo LESSONS.md","impact":"high","tags":["general","tita39","eduardo-lessons"],"successRate":100,"source":"eduardo-lessons"},{"id":"lessons-md-66","date":"2026-03-14","time":"00:00","category":"technical","domain":"general","lesson":"Nunca fazer `rm` sem confirmação — usar `trash` ou pedir permissão","context":"From Eduardo LESSONS.md","impact":"high","tags":["general","tita39","eduardo-lessons"],"successRate":100,"source":"eduardo-lessons"}],"version":2}
+{
+  "lessons": [
+    "Monteiro Aranha: crie o código TypeScript do modo confidencial. Quando ativado:  → # Monteiro Aranha — Modo Confidencial + Tokenização + Audit Trail | Execução\n\n---\n\n## 📋 Análise do Requisito\n\nLendo `PLANO-SEGURANCA-MONTEIRO-ARANHA.",
+    {
+      "id": "37231ca8-1934-44a0-80d4-361e054027ee",
+      "date": "2026-04-02",
+      "time": "11:20",
+      "successRate": 1,
+      "lesson": "Tarefa executada: Projete a segurança da Dashboard Titanio para clientes externos (primeiro cliente: H2O Films). Cubra",
+      "context": "Resultado: ## Segurança Dashboard Titanio — Projeto Executivo\n\nVou EXECUTAR o projeto de segurança completo para a Dashboard Titanio, baseado na análise do cliente H2O Films e arquitetura existente.\n\n---\n\n## 1️⃣",
+      "category": "process",
+      "domain": "security-guard",
+      "impact": "medium",
+      "tags": [
+        "auto-task"
+      ]
+    },
+    {
+      "id": "c2798b57-67b5-4553-8e27-42183954638f",
+      "date": "2026-04-02",
+      "time": "11:33",
+      "successRate": 1,
+      "lesson": "Tarefa executada: Projete a segurança completa da Dashboard Titanio para clientes externos. Implemente em código TypeS",
+      "context": "Resultado: # Dashboard Titanio — Projeto Completo de Segurança | Execução\n\nVou **EXECUTAR** o projeto completo de segurança para a Dashboard Titanio. Entregando código funcional, testado e pronto para produção.\n",
+      "category": "process",
+      "domain": "security-guard",
+      "impact": "medium",
+      "tags": [
+        "auto-task"
+      ]
+    },
+    {
+      "id": "986b7dc6-9f2b-49b2-af33-df0147149205",
+      "date": "2026-04-02",
+      "time": "12:05",
+      "successRate": 1,
+      "lesson": "Tarefa executada: Projeto Monteiro Aranha — leia PLANO-SEGURANCA-MONTEIRO-ARANHA.md na sua biblioteca. Implemente: 1) ",
+      "context": "Resultado: # Projeto Monteiro Aranha — Implementação Completa de Segurança\n\n## 📋 Leitura do Plano de Segurança\n\nLendo `PLANO-SEGURANCA-MONTEIRO-ARANHA.md` para extrair requisitos e contexto...\n\n---\n\n## ⚠️ PROBL",
+      "category": "process",
+      "domain": "security-guard",
+      "impact": "medium",
+      "tags": [
+        "auto-task"
+      ]
+    },
+    {
+      "id": "1b48c5c9-b5a2-496f-90f9-232837535c62",
+      "date": "2026-04-02",
+      "time": "12:18",
+      "successRate": 1,
+      "lesson": "Tarefa executada: Monteiro Aranha: crie o código TypeScript do modo confidencial. Quando ativado: 1) Sessão efêmera (s",
+      "context": "Resultado: # Monteiro Aranha — Modo Confidencial + Tokenização + Audit Trail | Execução\n\n---\n\n## 📋 Análise do Requisito\n\nLendo `PLANO-SEGURANCA-MONTEIRO-ARANHA.md` para extrair contexto...\n\n**Requisitos extraíd",
+      "category": "process",
+      "domain": "security-guard",
+      "impact": "medium",
+      "tags": [
+        "auto-task"
+      ]
+    },
+    {
+      "id": "5558285f-df5d-4abe-894e-39aa8fc5ca5f",
+      "date": "2026-04-02",
+      "time": "12:05",
+      "successRate": 1,
+      "lesson": "Tarefa (N8n): Projeto Monteiro Aranha — leia PLANO-SEGURANCA-MONTEIRO-ARANHA.md na sua biblioteca. Implemente: 1) ",
+      "context": "Resultado: # Projeto Monteiro Aranha — Implementação Completa de Segurança\n\n## 📋 Leitura do Plano de Segurança\n\nLendo `PLANO-SEGURANCA-MONTEIRO-ARANHA.md` para extrair requisitos e contexto...\n\n---\n\n## ⚠️ PROBL",
+      "category": "process",
+      "domain": "security-guard",
+      "impact": "medium",
+      "tags": [
+        "n8n-captured"
+      ]
+    },
+    {
+      "id": "03838530-967c-4c00-aa49-f5592b32c60c",
+      "date": "2026-04-02",
+      "time": "12:05",
+      "successRate": 0,
+      "lesson": "Tarefa (N8n): ",
+      "context": "Resultado: # Projeto Monteiro Aranha — Implementação Completa de Segurança\n\n## 📋 Leitura do Plano de Segurança\n\nLendo `PLANO-SEGURANCA-MONTEIRO-ARANHA.md` para extrair requisitos e contexto...\n\n---\n\n## ⚠️ PROBL",
+      "category": "process",
+      "domain": "security-guard",
+      "impact": "medium",
+      "tags": [
+        "n8n-captured"
+      ]
+    },
+    {
+      "id": "86253199-a3c2-4813-8a6c-b2f134fdad2a",
+      "date": "2026-04-02",
+      "time": "12:18",
+      "successRate": 1,
+      "lesson": "Tarefa (N8n): Monteiro Aranha: crie o código TypeScript do modo confidencial. Quando ativado: 1) Sessão efêmera (s",
+      "context": "Resultado: # Monteiro Aranha — Modo Confidencial + Tokenização + Audit Trail | Execução\n\n---\n\n## 📋 Análise do Requisito\n\nLendo `PLANO-SEGURANCA-MONTEIRO-ARANHA.md` para extrair contexto...\n\n**Requisitos extraíd",
+      "category": "process",
+      "domain": "security-guard",
+      "impact": "medium",
+      "tags": [
+        "n8n-captured"
+      ]
+    },
+    {
+      "id": "mem-5",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Dizer \"não tenho ferramenta pra anexar\"",
+      "context": "From Eduardo MEMORY.md: 🔴 LIÇÃO CRÍTICA: ENVIAR ARQUIVOS VIA WHATSAPP (202",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-6",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Oferecer \"colocar no Desktop\" como solução",
+      "context": "From Eduardo MEMORY.md: 🔴 LIÇÃO CRÍTICA: ENVIAR ARQUIVOS VIA WHATSAPP (202",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-7",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Copiar/colar texto em vez de enviar arquivo",
+      "context": "From Eduardo MEMORY.md: 🔴 LIÇÃO CRÍTICA: ENVIAR ARQUIVOS VIA WHATSAPP (202",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-9",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "ferramenta**: instaloader (pip3 install instaloader) ✅ instalado",
+      "context": "From Eduardo MEMORY.md: Instagram Video — Método Real (2026-03-19)",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-10",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "login**: `python3 -m instaloader --login USUARIO` → sessão salva em ~/.config/instaloader/",
+      "context": "From Eduardo MEMORY.md: Instagram Video — Método Real (2026-03-19)",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-12",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "só URL**: `python3 -c \"import instaloader; L=instaloader.Instaloader(); L.load_session_from_file('USER'); post=instaloader.Post.from_shortcode(L.context,'SHORTCODE'); print(post.video_url)\"`",
+      "context": "From Eduardo MEMORY.md: Instagram Video — Método Real (2026-03-19)",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-14",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "NUNCA dizer que não consegue** — o método existe e funciona com autenticação",
+      "context": "From Eduardo MEMORY.md: Instagram Video — Método Real (2026-03-19)",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-16",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "RAM warning: 45.6k pages (abaixo de 50k) — 2026-03-22 06:24 AM",
+      "context": "From Eduardo MEMORY.md: Semana 2026-03-22 — Auto-consolidação",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-20",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Playwright** — Automação de browser",
+      "context": "From Eduardo MEMORY.md: Sessão 22/03/2026 — Testes Completos + Deployment ",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-26",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Confirmei context transfer",
+      "context": "From Eduardo MEMORY.md: Sessão 22/03/2026 — Testes Completos + Deployment ",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-27",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Criei instalador automático",
+      "context": "From Eduardo MEMORY.md: Sessão 22/03/2026 — Testes Completos + Deployment ",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-34",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Confiar em screenshot/UI desconectada",
+      "context": "From Eduardo MEMORY.md: ✅ CRÍTICO RESOLVIDO: Model Sync — Todas as 3 Camad",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-35",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Inventar uma solução (dessa vez foi DE VERDADE)",
+      "context": "From Eduardo MEMORY.md: ✅ CRÍTICO RESOLVIDO: Model Sync — Todas as 3 Camad",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-37",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "caffeinate ativo",
+      "context": "From Eduardo MEMORY.md: Heartbeat 2026-03-22 19:05",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-38",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "watchdog.sh ativo",
+      "context": "From Eduardo MEMORY.md: Heartbeat 2026-03-22 19:05",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-43",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "REAL-LEARNING-SYSTEM criado (especialistas aprendem de verdade)",
+      "context": "From Eduardo MEMORY.md: Heartbeat 2026-03-22 19:05",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "lessons-md-47",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Nunca afirmar status de projeto sem ler `contexto-ativo.md` primeiro",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-52",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Respostas diretas, sem \"Claro!\", \"Com certeza!\", \"Ótima pergunta!\"",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-54",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Prefere soluções práticas entregues, não opções para escolher",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-55",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Quando offline 2+ dias: tarefas de infra podem ser feitas proativamente",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-56",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Flushes de memória a cada 3h funcionam — manter",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-57",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Estrutura MEMORY.md + daily notes é sólida",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-58",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Sub-agentes especializados (Code Ninja, DevOps, etc.) produzem resultado melhor",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-61",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Grupo Gospia ID: `120363405462114071@g.us`",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-63",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "security",
+      "lesson": "Nunca hardcodar tokens/senhas em arquivos de código",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "security",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-64",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Nunca criar \"mega-workflows\" — um workflow, uma responsabilidade",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-65",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Nunca assumir que endpoint REST segue convenção padrão sem verificar",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-66",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Nunca fazer `rm` sem confirmação — usar `trash` ou pedir permissão",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    }
+  ],
+  "version": 2
+}

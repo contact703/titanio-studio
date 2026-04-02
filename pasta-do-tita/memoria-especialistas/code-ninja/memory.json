@@ -2,14 +2,14 @@
   "specialistId": "code-ninja",
   "specialistName": "Code Ninja",
   "version": 2,
-  "lastActive": "2026-04-02T17:27:45.223Z",
+  "lastActive": "2026-04-02T18:05:47.350Z",
   "stats": {
-    "tasksCompleted": 9,
+    "tasksCompleted": 10,
     "tasksFailed": 0,
     "sessionsTotal": 0,
-    "lessonsLearned": 32272,
+    "lessonsLearned": 32273,
     "tokensUsed": 0,
-    "avgTaskDurationMs": 20163
+    "avgTaskDurationMs": 18533
   },
   "knowledge": [
     {
@@ -44,6 +44,30 @@
     }
   ],
   "recentTasks": [
+    {
+      "id": "a69b210b-db53-4681-93bc-872081219c84",
+      "title": "Responda OK",
+      "description": "",
+      "status": "completed",
+      "startedAt": "2026-04-02T18:05:41.859Z",
+      "completedAt": "2026-04-02T18:05:47.350Z",
+      "result": "OK",
+      "durationMs": 5491
+    },
+    {
+      "id": "354d79d5-c559-41e1-b1f8-7178f6b4f4e5",
+      "title": "Teste automático: responda apenas 'OK'",
+      "description": "",
+      "status": "in_progress",
+      "startedAt": "2026-04-02T18:03:45.054Z"
+    },
+    {
+      "id": "9e6b0889-6d5b-4b5b-90aa-6d2088e6c0b0",
+      "title": "Teste de sanidade: responda OK com a hora atual",
+      "description": "",
+      "status": "in_progress",
+      "startedAt": "2026-04-02T17:38:43.803Z"
+    },
     {
       "id": "11a8e43c-795f-4492-ba9c-728afef42baf",
       "title": "echo test",
@@ -159,8 +183,8 @@
     }
   ],
   "activeContext": {
-    "currentTask": "11a8e43c-795f-4492-ba9c-728afef42baf",
+    "currentTask": null,
     "currentProject": null,
-    "startedAt": "2026-04-02T17:27:45.223Z"
+    "startedAt": null
   }
 }

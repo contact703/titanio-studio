@@ -1,6 +1,42 @@
 {
   "lessons": [
     {
+      "id": "9445c715-67a2-4a05-a32f-d63b05c1dfa4",
+      "date": "2026-03-27",
+      "time": "22:15",
+      "category": "technical",
+      "domain": "tradução-literária",
+      "lesson": "Pipeline Multi-LLM para tradução literária: Claude (tradução principal, temp 0.3) → Kimi (otimização idiomas asiáticos ZH/JA/KO) → Gemini (revisão de fluência). Validador checa: ratio de comprimento (±50%), termos do glossário, texto residual PT, encoding UTF-8.",
+      "context": "Brazilian Classics Collection. Workflow N8n 'Tradutor Literário'. Suporta EN, ES, DE, FR, ZH, JA, KO, RU, AR. Glossário de termos regionais (sertão→backlands, retirante→refugee).",
+      "impact": "high",
+      "tags": [
+        "brazilian-classics",
+        "multi-llm",
+        "pipeline",
+        "tradução-literária"
+      ],
+      "successRate": 100,
+      "source": "setup-automation"
+    },
+    {
+      "id": "34051c14-0f6c-4082-90f0-ea309c085cb3",
+      "date": "2026-03-27",
+      "time": "22:15",
+      "category": "process",
+      "domain": "tradução-literária",
+      "lesson": "Regras de tradução literária brasileira: (1) Preservar ritmo e cadência do original, (2) Manter registro coloquial onde apropriado, (3) Adaptar expressões idiomáticas sem perder significado, (4) Manter pontuação estilística do autor. Custo estimado: ~$0.42/capítulo, ~$5.50/livro/idioma.",
+      "context": "Endpoint: POST http://localhost:5678/webhook/tradutor-literario. Campos obrigatórios: texto, idioma_destino. Opcionais: variante, genero, glossario, autor, obra, capitulo, gerar_capa.",
+      "impact": "high",
+      "tags": [
+        "brazilian-classics",
+        "tradução",
+        "regras",
+        "custo"
+      ],
+      "successRate": 100,
+      "source": "setup-automation"
+    },
+    {
       "id": "mem-5",
       "date": "2026-03-22",
       "time": "23:00",
@@ -458,42 +494,6 @@
       ],
       "successRate": 100,
       "source": "eduardo-lessons"
-    },
-    {
-      "id": "9445c715-67a2-4a05-a32f-d63b05c1dfa4",
-      "date": "2026-03-27",
-      "time": "22:15",
-      "category": "technical",
-      "domain": "tradução-literária",
-      "lesson": "Pipeline Multi-LLM para tradução literária: Claude (tradução principal, temp 0.3) → Kimi (otimização idiomas asiáticos ZH/JA/KO) → Gemini (revisão de fluência). Validador checa: ratio de comprimento (±50%), termos do glossário, texto residual PT, encoding UTF-8.",
-      "context": "Brazilian Classics Collection. Workflow N8n 'Tradutor Literário'. Suporta EN, ES, DE, FR, ZH, JA, KO, RU, AR. Glossário de termos regionais (sertão→backlands, retirante→refugee).",
-      "impact": "high",
-      "tags": [
-        "brazilian-classics",
-        "multi-llm",
-        "pipeline",
-        "tradução-literária"
-      ],
-      "successRate": 100,
-      "source": "setup-automation"
-    },
-    {
-      "id": "34051c14-0f6c-4082-90f0-ea309c085cb3",
-      "date": "2026-03-27",
-      "time": "22:15",
-      "category": "process",
-      "domain": "tradução-literária",
-      "lesson": "Regras de tradução literária brasileira: (1) Preservar ritmo e cadência do original, (2) Manter registro coloquial onde apropriado, (3) Adaptar expressões idiomáticas sem perder significado, (4) Manter pontuação estilística do autor. Custo estimado: ~$0.42/capítulo, ~$5.50/livro/idioma.",
-      "context": "Endpoint: POST http://localhost:5678/webhook/tradutor-literario. Campos obrigatórios: texto, idioma_destino. Opcionais: variante, genero, glossario, autor, obra, capitulo, gerar_capa.",
-      "impact": "high",
-      "tags": [
-        "brazilian-classics",
-        "tradução",
-        "regras",
-        "custo"
-      ],
-      "successRate": 100,
-      "source": "setup-automation"
     }
   ],
   "version": 2

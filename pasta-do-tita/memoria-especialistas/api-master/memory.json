@@ -3,12 +3,19 @@
   "stats": {
     "sessionsCount": 0,
     "tasksCompleted": 2,
-    "lessonsLearned": 46,
+    "lessonsLearned": 47,
     "tokensUsed": 0,
     "avgTaskDurationMs": 22142
   },
   "knowledge": [],
   "recentTasks": [
+    {
+      "id": "2fb5fd22-6d60-4f34-8eec-cb100b556404",
+      "title": "Teste automático — responda OK",
+      "description": "",
+      "status": "in_progress",
+      "startedAt": "2026-04-02T18:04:43.513Z"
+    },
     {
       "id": "b1e4f1fb-aa7c-4fb1-b6c0-480faf2fcd64",
       "title": "Projeto Monteiro Aranha — projete as INTEGRAÇÕES: 1) WhatsApp Business API para canal de acionistas (fluxo completo) 2) Integração com Active Directory (SSO/SAML) 3) API REST completa para o app (endpoints, auth, rate limiting) 4) Webhook system para notificações 5) Integração com sistemas legados da MA (ERP, CRM) via adapters 6) API de aprendizado (ensinar tarefas ao sistema). Specs OpenAPI + código.",
@@ -21,9 +28,9 @@
     }
   ],
   "activeContext": {
-    "currentTask": null,
+    "currentTask": "2fb5fd22-6d60-4f34-8eec-cb100b556404",
     "currentProject": null,
-    "startedAt": null
+    "startedAt": "2026-04-02T18:04:43.513Z"
   },
-  "lastActive": "2026-04-02T15:05:54.297Z"
+  "lastActive": "2026-04-02T18:04:43.513Z"
 }

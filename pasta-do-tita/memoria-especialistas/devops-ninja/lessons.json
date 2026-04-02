@@ -1,1 +1,822 @@
-{"lessons":[{"id":"7dbdf6a3-f999-4edc-a44a-ad21577ea48a","date":"2026-04-02","time":"12:18","successRate":1,"lesson":"Tarefa executada: Monteiro Aranha: crie o Docker Compose completo para deploy nos servidores da MA. Serviços: app-back","context":"Resultado: # Monteiro Aranha — Docker Compose Completo + Scripts de Deploy\n\nLendo contexto primeiro conforme lição aprendida.\n\n```bash\n📖 Verificando documentação\n```\n\nCarregando: MA-BRIEFING.md, PLANO-IMPLEMENT","category":"process","domain":"devops-ninja","impact":"medium","tags":["auto-task"]},{"id":"4455853f-5b31-4b96-bb50-af34b45e16e2","date":"2026-04-02","time":"12:05","successRate":1,"lesson":"Tarefa executada: Projeto Monteiro Aranha — projete a INFRAESTRUTURA de deploy: 1) Como instalar o sistema Titanio nos","context":"Resultado: # Infraestrutura Monteiro Aranha — Projeto Completo\n\nLendo contexto primeiro conforme lição aprendida. Verificando `contexto-ativo.md` e documentos da biblioteca.\n\n```bash\n📖 Verificando documentação ","category":"process","domain":"devops-ninja","impact":"medium","tags":["auto-task"]},{"id":"c3dc85cf-e431-4175-b81f-91cd66da7b48","date":"2026-04-02","time":"11:33","successRate":1,"lesson":"Tarefa (N8n): Crie COMPLETO o ecosystem.config.js do PM2 para Mac Mini Titanio com: openclaw-gateway (:18789), das","context":"Resultado: # Ecosystem PM2 + Monit Completo — Relatório de Execução\n\nVou criar a configuração **completa e pronta para produção** do PM2 + Monit para Mac Mini Titanio com todos os serviços. Executando agora.\n\n--","category":"process","domain":"devops-ninja","impact":"medium","tags":["n8n-captured"]},{"id":"bddee403-fce4-4692-a420-68c73138daaf","date":"2026-04-02","time":"11:33","successRate":0,"lesson":"Tarefa (N8n): ","context":"Resultado: # Ecosystem PM2 + Monit Completo — Relatório de Execução\n\nVou criar a configuração **completa e pronta para produção** do PM2 + Monit para Mac Mini Titanio com todos os serviços. Executando agora.\n\n--","category":"process","domain":"devops-ninja","impact":"medium","tags":["n8n-captured"]},{"id":"2246d37e-7225-4713-ab46-a0eb6219afb5","date":"2026-04-02","time":"11:33","successRate":1,"lesson":"Tarefa executada: Crie COMPLETO o ecosystem.config.js do PM2 para Mac Mini Titanio com: openclaw-gateway (:18789), das","context":"Resultado: # Ecosystem PM2 + Monit Completo — Relatório de Execução\n\nVou criar a configuração **completa e pronta para produção** do PM2 + Monit para Mac Mini Titanio com todos os serviços. Executando agora.\n\n--","category":"process","domain":"devops-ninja","impact":"medium","tags":["auto-task"]},{"id":"dd31d1cf-1848-42d1-94f2-b596ba44915f","date":"2026-04-02","time":"11:20","successRate":1,"lesson":"Tarefa executada: Crie o ecosystem.config.js do PM2 para nossos serviços: OpenClaw Gateway (:18789), Dashboard Backend","context":"Resultado: ## Criar Ecosystem PM2 + Config Monit — Relatório de Execução\n\nVou criar a configuração completa do PM2 e Monit para gerenciar seus serviços. Executando agora.\n\n---\n\n### 1️⃣ **ECOSYSTEM.CONFIG.JS** (P","category":"process","domain":"devops-ninja","impact":"medium","tags":["auto-task"]},{"id":"devops-ninja-2026-03-24-1774373333","date":"2026-03-24","time":"14:28","category":"technical","domain":"devops-ninja","lesson":"UPDATE-DASHBOARD-COMPLETO_1 executado","context":"Todos os passos verificados: git pull OK, backend OK, frontend OK (6 modais), 30 especialistas, 19 projetos, auto-folder funcionando, GospIA/KidsHQ/Maricá Film Commission criados.","impact":"medium","tags":["devops-ninja","dashboard"],"successRate":1,"sourceMachine":"Mac-mini-de-Macmini.local"},{"id":"kratos-1","date":"2026-03-23","time":"15:39","category":"technical","domain":"infra","lesson":"Dashboard v2 GitHub + fix paths Eduardo","context":"Sucesso - clonado repo, corrigido hardcoded paths TITA_039, todos servicos UP","impact":"high","tags":["infra","kratos","helber"],"successRate":100,"source":"kratos"},{"id":"kratos-2","date":"2026-03-23","time":"16:08","category":"technical","domain":"infra","lesson":"Diagnostico completo Dashboard v2","context":"Sucesso - usuario Helber ativo, 30 especialistas, watchdog, memoria 30 specs","impact":"high","tags":["infra","kratos","helber"],"successRate":100,"source":"kratos"},{"id":"kratos-3","date":"2026-03-23","time":"16:19","category":"technical","domain":"infra","lesson":"N8n workflows configurados via SQLite","context":"Sucesso - 5 workflows, 4 ativos, API key salva","impact":"high","tags":["infra","kratos","helber"],"successRate":100,"source":"kratos"},{"id":"gospia-devops-ninja-211","date":"2026-03-23","time":"19:37","category":"technical","domain":"devops-ninja","lesson":"Railway GraphQL API: usar variables(projectId, serviceId, environmentId) para ler env vars sem acesso ao dashboard","context":"Task: Deploy fix GospIA via GitHub → Railway autodeploy","impact":"high","tags":["devops-ninja","gospia","stripe","webhook"],"successRate":100,"source":"kratos"},{"id":"gospia-devops-ninja-212","date":"2026-03-23","time":"19:37","category":"technical","domain":"devops-ninja","lesson":"GospIA: repo contact703/Appgospia, deploy automático via push na main","context":"Task: Deploy fix GospIA via GitHub → Railway autodeploy","impact":"high","tags":["devops-ninja","gospia","stripe","webhook"],"successRate":100,"source":"kratos"},{"id":"gospia-devops-ninja-213","date":"2026-03-23","time":"19:37","category":"technical","domain":"devops-ninja","lesson":"DDL (ALTER TABLE) no Supabase: não é possível via service_role key + REST API. Precisaria de Management API token ou acesso direto ao Postgres","context":"Task: Deploy fix GospIA via GitHub → Railway autodeploy","impact":"medium","tags":["devops-ninja","gospia","stripe","webhook"],"successRate":100,"source":"kratos"},{"id":"devops-ninja-2026-03-23-0","date":"2026-03-23","time":"19:37","category":"technical","domain":"devops-ninja","lesson":"- Deploy fix GospIA via GitHub → Railway autodeploy","context":"- **Tarefa:** Deploy fix GospIA via GitHub → Railway autodeploy\n- **Solução:** Push para contact703/Appgospia branch main. Railway detecta automaticamente e faz redeploy. Railway token f9fde3ea usado para consultar env vars via GraphQL API.\n- ✅ **HIGH:** Railway GraphQL API: usar variables(projectId","impact":"medium","tags":["md-sync","devops-ninja"],"successRate":1,"sourceMachine":"Mac-mini-de-Macmini.local"},{"id":"mem-5","date":"2026-03-22","time":"23:00","category":"technical","domain":"general","lesson":"Dizer \"não tenho ferramenta pra anexar\"","context":"From Eduardo MEMORY.md: 🔴 LIÇÃO CRÍTICA: ENVIAR ARQUIVOS VIA WHATSAPP (202","impact":"high","tags":["general","tita39","eduardo-memory"],"successRate":100,"source":"eduardo-memory"},{"id":"mem-6","date":"2026-03-22","time":"23:00","category":"technical","domain":"general","lesson":"Oferecer \"colocar no Desktop\" como solução","context":"From Eduardo MEMORY.md: 🔴 LIÇÃO CRÍTICA: ENVIAR ARQUIVOS VIA WHATSAPP (202","impact":"high","tags":["general","tita39","eduardo-memory"],"successRate":100,"source":"eduardo-memory"},{"id":"mem-7","date":"2026-03-22","time":"23:00","category":"technical","domain":"general","lesson":"Copiar/colar texto em vez de enviar arquivo","context":"From Eduardo MEMORY.md: 🔴 LIÇÃO CRÍTICA: ENVIAR ARQUIVOS VIA WHATSAPP (202","impact":"high","tags":["general","tita39","eduardo-memory"],"successRate":100,"source":"eduardo-memory"},{"id":"mem-9","date":"2026-03-22","time":"23:00","category":"technical","domain":"general","lesson":"ferramenta**: instaloader (pip3 install instaloader) ✅ instalado","context":"From Eduardo MEMORY.md: Instagram Video — Método Real (2026-03-19)","impact":"high","tags":["general","tita39","eduardo-memory"],"successRate":100,"source":"eduardo-memory"},{"id":"mem-10","date":"2026-03-22","time":"23:00","category":"technical","domain":"general","lesson":"login**: `python3 -m instaloader --login USUARIO` → sessão salva em ~/.config/instaloader/","context":"From Eduardo MEMORY.md: Instagram Video — Método Real (2026-03-19)","impact":"high","tags":["general","tita39","eduardo-memory"],"successRate":100,"source":"eduardo-memory"},{"id":"mem-12","date":"2026-03-22","time":"23:00","category":"technical","domain":"general","lesson":"só URL**: `python3 -c \"import instaloader; L=instaloader.Instaloader(); L.load_session_from_file('USER'); post=instaloader.Post.from_shortcode(L.context,'SHORTCODE'); print(post.video_url)\"`","context":"From Eduardo MEMORY.md: Instagram Video — Método Real (2026-03-19)","impact":"high","tags":["general","tita39","eduardo-memory"],"successRate":100,"source":"eduardo-memory"},{"id":"mem-14","date":"2026-03-22","time":"23:00","category":"technical","domain":"general","lesson":"NUNCA dizer que não consegue** — o método existe e funciona com autenticação","context":"From Eduardo MEMORY.md: Instagram Video — Método Real (2026-03-19)","impact":"high","tags":["general","tita39","eduardo-memory"],"successRate":100,"source":"eduardo-memory"},{"id":"mem-16","date":"2026-03-22","time":"23:00","category":"technical","domain":"general","lesson":"RAM warning: 45.6k pages (abaixo de 50k) — 2026-03-22 06:24 AM","context":"From Eduardo MEMORY.md: Semana 2026-03-22 — Auto-consolidação","impact":"high","tags":["general","tita39","eduardo-memory"],"successRate":100,"source":"eduardo-memory"},{"id":"mem-20","date":"2026-03-22","time":"23:00","category":"technical","domain":"general","lesson":"Playwright** — Automação de browser","context":"From Eduardo MEMORY.md: Sessão 22/03/2026 — Testes Completos + Deployment ","impact":"high","tags":["general","tita39","eduardo-memory"],"successRate":100,"source":"eduardo-memory"},{"id":"mem-26","date":"2026-03-22","time":"23:00","category":"technical","domain":"general","lesson":"Confirmei context transfer","context":"From Eduardo MEMORY.md: Sessão 22/03/2026 — Testes Completos + Deployment ","impact":"high","tags":["general","tita39","eduardo-memory"],"successRate":100,"source":"eduardo-memory"},{"id":"mem-27","date":"2026-03-22","time":"23:00","category":"technical","domain":"general","lesson":"Criei instalador automático","context":"From Eduardo MEMORY.md: Sessão 22/03/2026 — Testes Completos + Deployment ","impact":"high","tags":["general","tita39","eduardo-memory"],"successRate":100,"source":"eduardo-memory"},{"id":"mem-28","date":"2026-03-22","time":"23:00","category":"technical","domain":"automation","lesson":"Preparei 4 docs + 32 especialistas + 8 workflows","context":"From Eduardo MEMORY.md: Sessão 22/03/2026 — Testes Completos + Deployment ","impact":"high","tags":["automation","tita39","eduardo-memory"],"successRate":100,"source":"eduardo-memory"},{"id":"mem-29","date":"2026-03-22","time":"23:00","category":"technical","domain":"devops","lesson":"Tudo pronto pra deployment amanhã","context":"From Eduardo MEMORY.md: Sessão 22/03/2026 — Testes Completos + Deployment ","impact":"high","tags":["devops","tita39","eduardo-memory"],"successRate":100,"source":"eduardo-memory"},{"id":"mem-34","date":"2026-03-22","time":"23:00","category":"technical","domain":"general","lesson":"Confiar em screenshot/UI desconectada","context":"From Eduardo MEMORY.md: ✅ CRÍTICO RESOLVIDO: Model Sync — Todas as 3 Camad","impact":"high","tags":["general","tita39","eduardo-memory"],"successRate":100,"source":"eduardo-memory"},{"id":"mem-35","date":"2026-03-22","time":"23:00","category":"technical","domain":"general","lesson":"Inventar uma solução (dessa vez foi DE VERDADE)","context":"From Eduardo MEMORY.md: ✅ CRÍTICO RESOLVIDO: Model Sync — Todas as 3 Camad","impact":"high","tags":["general","tita39","eduardo-memory"],"successRate":100,"source":"eduardo-memory"},{"id":"mem-37","date":"2026-03-22","time":"23:00","category":"technical","domain":"general","lesson":"caffeinate ativo","context":"From Eduardo MEMORY.md: Heartbeat 2026-03-22 19:05","impact":"high","tags":["general","tita39","eduardo-memory"],"successRate":100,"source":"eduardo-memory"},{"id":"mem-38","date":"2026-03-22","time":"23:00","category":"technical","domain":"general","lesson":"watchdog.sh ativo","context":"From Eduardo MEMORY.md: Heartbeat 2026-03-22 19:05","impact":"high","tags":["general","tita39","eduardo-memory"],"successRate":100,"source":"eduardo-memory"},{"id":"mem-43","date":"2026-03-22","time":"23:00","category":"technical","domain":"general","lesson":"REAL-LEARNING-SYSTEM criado (especialistas aprendem de verdade)","context":"From Eduardo MEMORY.md: Heartbeat 2026-03-22 19:05","impact":"high","tags":["general","tita39","eduardo-memory"],"successRate":100,"source":"eduardo-memory"},{"id":"lessons-md-46","date":"2026-03-14","time":"00:00","category":"technical","domain":"devops","lesson":"Verificar credenciais ANTES de iniciar qualquer deploy ou integração","context":"From Eduardo LESSONS.md","impact":"high","tags":["devops","tita39","eduardo-lessons"],"successRate":100,"source":"eduardo-lessons"},{"id":"lessons-md-47","date":"2026-03-14","time":"00:00","category":"technical","domain":"general","lesson":"Nunca afirmar status de projeto sem ler `contexto-ativo.md` primeiro","context":"From Eduardo LESSONS.md","impact":"high","tags":["general","tita39","eduardo-lessons"],"successRate":100,"source":"eduardo-lessons"},{"id":"lessons-md-49","date":"2026-03-14","time":"00:00","category":"technical","domain":"devops","lesson":"`GITHUB_TOKEN` sem scope `workflow` não cria GitHub Actions — confirmar escopos","context":"From Eduardo LESSONS.md","impact":"high","tags":["devops","tita39","eduardo-lessons"],"successRate":100,"source":"eduardo-lessons"},{"id":"lessons-md-50","date":"2026-03-14","time":"00:00","category":"technical","domain":"automation","lesson":"`N8N_ENCRYPTION_KEY` deve ser sempre a mesma após primeiro uso","context":"From Eduardo LESSONS.md","impact":"high","tags":["automation","tita39","eduardo-lessons"],"successRate":100,"source":"eduardo-lessons"},{"id":"lessons-md-52","date":"2026-03-14","time":"00:00","category":"technical","domain":"general","lesson":"Respostas diretas, sem \"Claro!\", \"Com certeza!\", \"Ótima pergunta!\"","context":"From Eduardo LESSONS.md","impact":"high","tags":["general","tita39","eduardo-lessons"],"successRate":100,"source":"eduardo-lessons"},{"id":"lessons-md-54","date":"2026-03-14","time":"00:00","category":"technical","domain":"general","lesson":"Prefere soluções práticas entregues, não opções para escolher","context":"From Eduardo LESSONS.md","impact":"high","tags":["general","tita39","eduardo-lessons"],"successRate":100,"source":"eduardo-lessons"},{"id":"lessons-md-55","date":"2026-03-14","time":"00:00","category":"technical","domain":"general","lesson":"Quando offline 2+ dias: tarefas de infra podem ser feitas proativamente","context":"From Eduardo LESSONS.md","impact":"high","tags":["general","tita39","eduardo-lessons"],"successRate":100,"source":"eduardo-lessons"},{"id":"lessons-md-56","date":"2026-03-14","time":"00:00","category":"technical","domain":"general","lesson":"Flushes de memória a cada 3h funcionam — manter","context":"From Eduardo LESSONS.md","impact":"high","tags":["general","tita39","eduardo-lessons"],"successRate":100,"source":"eduardo-lessons"},{"id":"lessons-md-57","date":"2026-03-14","time":"00:00","category":"technical","domain":"general","lesson":"Estrutura MEMORY.md + daily notes é sólida","context":"From Eduardo LESSONS.md","impact":"high","tags":["general","tita39","eduardo-lessons"],"successRate":100,"source":"eduardo-lessons"},{"id":"lessons-md-58","date":"2026-03-14","time":"00:00","category":"technical","domain":"general","lesson":"Sub-agentes especializados (Code Ninja, DevOps, etc.) produzem resultado melhor","context":"From Eduardo LESSONS.md","impact":"high","tags":["general","tita39","eduardo-lessons"],"successRate":100,"source":"eduardo-lessons"},{"id":"lessons-md-59","date":"2026-03-14","time":"00:00","category":"technical","domain":"automation","lesson":"N8n Docker: usar `host.docker.internal` para acessar serviços do Mac host","context":"From Eduardo LESSONS.md","impact":"high","tags":["automation","tita39","eduardo-lessons"],"successRate":100,"source":"eduardo-lessons"},{"id":"lessons-md-60","date":"2026-03-14","time":"00:00","category":"technical","domain":"automation","lesson":"Workflows N8n: criar sub-workflow \"Send WhatsApp\" reutilizável evita duplicação","context":"From Eduardo LESSONS.md","impact":"high","tags":["automation","tita39","eduardo-lessons"],"successRate":100,"source":"eduardo-lessons"},{"id":"lessons-md-61","date":"2026-03-14","time":"00:00","category":"technical","domain":"general","lesson":"Grupo Gospia ID: `120363405462114071@g.us`","context":"From Eduardo LESSONS.md","impact":"high","tags":["general","tita39","eduardo-lessons"],"successRate":100,"source":"eduardo-lessons"},{"id":"lessons-md-62","date":"2026-03-14","time":"00:00","category":"technical","domain":"automation","lesson":"N8n webhooks: URL de produção é `/webhook/`, URL de teste é `/webhook-test/` (só funciona com editor aberto)","context":"From Eduardo LESSONS.md","impact":"high","tags":["automation","tita39","eduardo-lessons"],"successRate":100,"source":"eduardo-lessons"},{"id":"lessons-md-64","date":"2026-03-14","time":"00:00","category":"technical","domain":"general","lesson":"Nunca criar \"mega-workflows\" — um workflow, uma responsabilidade","context":"From Eduardo LESSONS.md","impact":"high","tags":["general","tita39","eduardo-lessons"],"successRate":100,"source":"eduardo-lessons"},{"id":"lessons-md-65","date":"2026-03-14","time":"00:00","category":"technical","domain":"general","lesson":"Nunca assumir que endpoint REST segue convenção padrão sem verificar","context":"From Eduardo LESSONS.md","impact":"high","tags":["general","tita39","eduardo-lessons"],"successRate":100,"source":"eduardo-lessons"},{"id":"lessons-md-66","date":"2026-03-14","time":"00:00","category":"technical","domain":"general","lesson":"Nunca fazer `rm` sem confirmação — usar `trash` ou pedir permissão","context":"From Eduardo LESSONS.md","impact":"high","tags":["general","tita39","eduardo-lessons"],"successRate":100,"source":"eduardo-lessons"}],"version":2}
+{
+  "lessons": [
+    "Monteiro Aranha: crie o Docker Compose completo para deploy nos servidores da MA → # Monteiro Aranha — Docker Compose Completo + Scripts de Deploy\n\nLendo contexto primeiro conforme lição aprendida.\n\n```bash\n📖 Verificando documentaçã",
+    {
+      "id": "dd31d1cf-1848-42d1-94f2-b596ba44915f",
+      "date": "2026-04-02",
+      "time": "11:20",
+      "successRate": 1,
+      "lesson": "Tarefa executada: Crie o ecosystem.config.js do PM2 para nossos serviços: OpenClaw Gateway (:18789), Dashboard Backend",
+      "context": "Resultado: ## Criar Ecosystem PM2 + Config Monit — Relatório de Execução\n\nVou criar a configuração completa do PM2 e Monit para gerenciar seus serviços. Executando agora.\n\n---\n\n### 1️⃣ **ECOSYSTEM.CONFIG.JS** (P",
+      "category": "process",
+      "domain": "devops-ninja",
+      "impact": "medium",
+      "tags": [
+        "auto-task"
+      ]
+    },
+    {
+      "id": "2246d37e-7225-4713-ab46-a0eb6219afb5",
+      "date": "2026-04-02",
+      "time": "11:33",
+      "successRate": 1,
+      "lesson": "Tarefa executada: Crie COMPLETO o ecosystem.config.js do PM2 para Mac Mini Titanio com: openclaw-gateway (:18789), das",
+      "context": "Resultado: # Ecosystem PM2 + Monit Completo — Relatório de Execução\n\nVou criar a configuração **completa e pronta para produção** do PM2 + Monit para Mac Mini Titanio com todos os serviços. Executando agora.\n\n--",
+      "category": "process",
+      "domain": "devops-ninja",
+      "impact": "medium",
+      "tags": [
+        "auto-task"
+      ]
+    },
+    {
+      "id": "4455853f-5b31-4b96-bb50-af34b45e16e2",
+      "date": "2026-04-02",
+      "time": "12:05",
+      "successRate": 1,
+      "lesson": "Tarefa executada: Projeto Monteiro Aranha — projete a INFRAESTRUTURA de deploy: 1) Como instalar o sistema Titanio nos",
+      "context": "Resultado: # Infraestrutura Monteiro Aranha — Projeto Completo\n\nLendo contexto primeiro conforme lição aprendida. Verificando `contexto-ativo.md` e documentos da biblioteca.\n\n```bash\n📖 Verificando documentação ",
+      "category": "process",
+      "domain": "devops-ninja",
+      "impact": "medium",
+      "tags": [
+        "auto-task"
+      ]
+    },
+    {
+      "id": "c3dc85cf-e431-4175-b81f-91cd66da7b48",
+      "date": "2026-04-02",
+      "time": "11:33",
+      "successRate": 1,
+      "lesson": "Tarefa (N8n): Crie COMPLETO o ecosystem.config.js do PM2 para Mac Mini Titanio com: openclaw-gateway (:18789), das",
+      "context": "Resultado: # Ecosystem PM2 + Monit Completo — Relatório de Execução\n\nVou criar a configuração **completa e pronta para produção** do PM2 + Monit para Mac Mini Titanio com todos os serviços. Executando agora.\n\n--",
+      "category": "process",
+      "domain": "devops-ninja",
+      "impact": "medium",
+      "tags": [
+        "n8n-captured"
+      ]
+    },
+    {
+      "id": "bddee403-fce4-4692-a420-68c73138daaf",
+      "date": "2026-04-02",
+      "time": "11:33",
+      "successRate": 0,
+      "lesson": "Tarefa (N8n): ",
+      "context": "Resultado: # Ecosystem PM2 + Monit Completo — Relatório de Execução\n\nVou criar a configuração **completa e pronta para produção** do PM2 + Monit para Mac Mini Titanio com todos os serviços. Executando agora.\n\n--",
+      "category": "process",
+      "domain": "devops-ninja",
+      "impact": "medium",
+      "tags": [
+        "n8n-captured"
+      ]
+    },
+    {
+      "id": "7dbdf6a3-f999-4edc-a44a-ad21577ea48a",
+      "date": "2026-04-02",
+      "time": "12:18",
+      "successRate": 1,
+      "lesson": "Tarefa executada: Monteiro Aranha: crie o Docker Compose completo para deploy nos servidores da MA. Serviços: app-back",
+      "context": "Resultado: # Monteiro Aranha — Docker Compose Completo + Scripts de Deploy\n\nLendo contexto primeiro conforme lição aprendida.\n\n```bash\n📖 Verificando documentação\n```\n\nCarregando: MA-BRIEFING.md, PLANO-IMPLEMENT",
+      "category": "process",
+      "domain": "devops-ninja",
+      "impact": "medium",
+      "tags": [
+        "auto-task"
+      ]
+    },
+    {
+      "id": "devops-ninja-2026-03-24-1774373333",
+      "date": "2026-03-24",
+      "time": "14:28",
+      "category": "technical",
+      "domain": "devops-ninja",
+      "lesson": "UPDATE-DASHBOARD-COMPLETO_1 executado",
+      "context": "Todos os passos verificados: git pull OK, backend OK, frontend OK (6 modais), 30 especialistas, 19 projetos, auto-folder funcionando, GospIA/KidsHQ/Maricá Film Commission criados.",
+      "impact": "medium",
+      "tags": [
+        "devops-ninja",
+        "dashboard"
+      ],
+      "successRate": 1,
+      "sourceMachine": "Mac-mini-de-Macmini.local"
+    },
+    {
+      "id": "kratos-1",
+      "date": "2026-03-23",
+      "time": "15:39",
+      "category": "technical",
+      "domain": "infra",
+      "lesson": "Dashboard v2 GitHub + fix paths Eduardo",
+      "context": "Sucesso - clonado repo, corrigido hardcoded paths TITA_039, todos servicos UP",
+      "impact": "high",
+      "tags": [
+        "infra",
+        "kratos",
+        "helber"
+      ],
+      "successRate": 100,
+      "source": "kratos"
+    },
+    {
+      "id": "kratos-2",
+      "date": "2026-03-23",
+      "time": "16:08",
+      "category": "technical",
+      "domain": "infra",
+      "lesson": "Diagnostico completo Dashboard v2",
+      "context": "Sucesso - usuario Helber ativo, 30 especialistas, watchdog, memoria 30 specs",
+      "impact": "high",
+      "tags": [
+        "infra",
+        "kratos",
+        "helber"
+      ],
+      "successRate": 100,
+      "source": "kratos"
+    },
+    {
+      "id": "kratos-3",
+      "date": "2026-03-23",
+      "time": "16:19",
+      "category": "technical",
+      "domain": "infra",
+      "lesson": "N8n workflows configurados via SQLite",
+      "context": "Sucesso - 5 workflows, 4 ativos, API key salva",
+      "impact": "high",
+      "tags": [
+        "infra",
+        "kratos",
+        "helber"
+      ],
+      "successRate": 100,
+      "source": "kratos"
+    },
+    {
+      "id": "gospia-devops-ninja-211",
+      "date": "2026-03-23",
+      "time": "19:37",
+      "category": "technical",
+      "domain": "devops-ninja",
+      "lesson": "Railway GraphQL API: usar variables(projectId, serviceId, environmentId) para ler env vars sem acesso ao dashboard",
+      "context": "Task: Deploy fix GospIA via GitHub → Railway autodeploy",
+      "impact": "high",
+      "tags": [
+        "devops-ninja",
+        "gospia",
+        "stripe",
+        "webhook"
+      ],
+      "successRate": 100,
+      "source": "kratos"
+    },
+    {
+      "id": "gospia-devops-ninja-212",
+      "date": "2026-03-23",
+      "time": "19:37",
+      "category": "technical",
+      "domain": "devops-ninja",
+      "lesson": "GospIA: repo contact703/Appgospia, deploy automático via push na main",
+      "context": "Task: Deploy fix GospIA via GitHub → Railway autodeploy",
+      "impact": "high",
+      "tags": [
+        "devops-ninja",
+        "gospia",
+        "stripe",
+        "webhook"
+      ],
+      "successRate": 100,
+      "source": "kratos"
+    },
+    {
+      "id": "gospia-devops-ninja-213",
+      "date": "2026-03-23",
+      "time": "19:37",
+      "category": "technical",
+      "domain": "devops-ninja",
+      "lesson": "DDL (ALTER TABLE) no Supabase: não é possível via service_role key + REST API. Precisaria de Management API token ou acesso direto ao Postgres",
+      "context": "Task: Deploy fix GospIA via GitHub → Railway autodeploy",
+      "impact": "medium",
+      "tags": [
+        "devops-ninja",
+        "gospia",
+        "stripe",
+        "webhook"
+      ],
+      "successRate": 100,
+      "source": "kratos"
+    },
+    {
+      "id": "devops-ninja-2026-03-23-0",
+      "date": "2026-03-23",
+      "time": "19:37",
+      "category": "technical",
+      "domain": "devops-ninja",
+      "lesson": "- Deploy fix GospIA via GitHub → Railway autodeploy",
+      "context": "- **Tarefa:** Deploy fix GospIA via GitHub → Railway autodeploy\n- **Solução:** Push para contact703/Appgospia branch main. Railway detecta automaticamente e faz redeploy. Railway token f9fde3ea usado para consultar env vars via GraphQL API.\n- ✅ **HIGH:** Railway GraphQL API: usar variables(projectId",
+      "impact": "medium",
+      "tags": [
+        "md-sync",
+        "devops-ninja"
+      ],
+      "successRate": 1,
+      "sourceMachine": "Mac-mini-de-Macmini.local"
+    },
+    {
+      "id": "mem-5",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Dizer \"não tenho ferramenta pra anexar\"",
+      "context": "From Eduardo MEMORY.md: 🔴 LIÇÃO CRÍTICA: ENVIAR ARQUIVOS VIA WHATSAPP (202",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-6",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Oferecer \"colocar no Desktop\" como solução",
+      "context": "From Eduardo MEMORY.md: 🔴 LIÇÃO CRÍTICA: ENVIAR ARQUIVOS VIA WHATSAPP (202",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-7",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Copiar/colar texto em vez de enviar arquivo",
+      "context": "From Eduardo MEMORY.md: 🔴 LIÇÃO CRÍTICA: ENVIAR ARQUIVOS VIA WHATSAPP (202",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-9",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "ferramenta**: instaloader (pip3 install instaloader) ✅ instalado",
+      "context": "From Eduardo MEMORY.md: Instagram Video — Método Real (2026-03-19)",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-10",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "login**: `python3 -m instaloader --login USUARIO` → sessão salva em ~/.config/instaloader/",
+      "context": "From Eduardo MEMORY.md: Instagram Video — Método Real (2026-03-19)",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-12",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "só URL**: `python3 -c \"import instaloader; L=instaloader.Instaloader(); L.load_session_from_file('USER'); post=instaloader.Post.from_shortcode(L.context,'SHORTCODE'); print(post.video_url)\"`",
+      "context": "From Eduardo MEMORY.md: Instagram Video — Método Real (2026-03-19)",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-14",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "NUNCA dizer que não consegue** — o método existe e funciona com autenticação",
+      "context": "From Eduardo MEMORY.md: Instagram Video — Método Real (2026-03-19)",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-16",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "RAM warning: 45.6k pages (abaixo de 50k) — 2026-03-22 06:24 AM",
+      "context": "From Eduardo MEMORY.md: Semana 2026-03-22 — Auto-consolidação",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-20",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Playwright** — Automação de browser",
+      "context": "From Eduardo MEMORY.md: Sessão 22/03/2026 — Testes Completos + Deployment ",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-26",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Confirmei context transfer",
+      "context": "From Eduardo MEMORY.md: Sessão 22/03/2026 — Testes Completos + Deployment ",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-27",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Criei instalador automático",
+      "context": "From Eduardo MEMORY.md: Sessão 22/03/2026 — Testes Completos + Deployment ",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-28",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "automation",
+      "lesson": "Preparei 4 docs + 32 especialistas + 8 workflows",
+      "context": "From Eduardo MEMORY.md: Sessão 22/03/2026 — Testes Completos + Deployment ",
+      "impact": "high",
+      "tags": [
+        "automation",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-29",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "devops",
+      "lesson": "Tudo pronto pra deployment amanhã",
+      "context": "From Eduardo MEMORY.md: Sessão 22/03/2026 — Testes Completos + Deployment ",
+      "impact": "high",
+      "tags": [
+        "devops",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-34",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Confiar em screenshot/UI desconectada",
+      "context": "From Eduardo MEMORY.md: ✅ CRÍTICO RESOLVIDO: Model Sync — Todas as 3 Camad",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-35",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Inventar uma solução (dessa vez foi DE VERDADE)",
+      "context": "From Eduardo MEMORY.md: ✅ CRÍTICO RESOLVIDO: Model Sync — Todas as 3 Camad",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-37",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "caffeinate ativo",
+      "context": "From Eduardo MEMORY.md: Heartbeat 2026-03-22 19:05",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-38",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "watchdog.sh ativo",
+      "context": "From Eduardo MEMORY.md: Heartbeat 2026-03-22 19:05",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-43",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "REAL-LEARNING-SYSTEM criado (especialistas aprendem de verdade)",
+      "context": "From Eduardo MEMORY.md: Heartbeat 2026-03-22 19:05",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "lessons-md-46",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "devops",
+      "lesson": "Verificar credenciais ANTES de iniciar qualquer deploy ou integração",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "devops",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-47",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Nunca afirmar status de projeto sem ler `contexto-ativo.md` primeiro",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-49",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "devops",
+      "lesson": "`GITHUB_TOKEN` sem scope `workflow` não cria GitHub Actions — confirmar escopos",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "devops",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-50",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "automation",
+      "lesson": "`N8N_ENCRYPTION_KEY` deve ser sempre a mesma após primeiro uso",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "automation",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-52",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Respostas diretas, sem \"Claro!\", \"Com certeza!\", \"Ótima pergunta!\"",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-54",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Prefere soluções práticas entregues, não opções para escolher",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-55",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Quando offline 2+ dias: tarefas de infra podem ser feitas proativamente",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-56",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Flushes de memória a cada 3h funcionam — manter",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-57",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Estrutura MEMORY.md + daily notes é sólida",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-58",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Sub-agentes especializados (Code Ninja, DevOps, etc.) produzem resultado melhor",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-59",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "automation",
+      "lesson": "N8n Docker: usar `host.docker.internal` para acessar serviços do Mac host",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "automation",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-60",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "automation",
+      "lesson": "Workflows N8n: criar sub-workflow \"Send WhatsApp\" reutilizável evita duplicação",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "automation",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-61",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Grupo Gospia ID: `120363405462114071@g.us`",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-62",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "automation",
+      "lesson": "N8n webhooks: URL de produção é `/webhook/`, URL de teste é `/webhook-test/` (só funciona com editor aberto)",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "automation",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-64",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Nunca criar \"mega-workflows\" — um workflow, uma responsabilidade",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-65",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Nunca assumir que endpoint REST segue convenção padrão sem verificar",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-66",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Nunca fazer `rm` sem confirmação — usar `trash` ou pedir permissão",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    }
+  ],
+  "version": 2
+}

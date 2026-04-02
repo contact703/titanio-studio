@@ -2,21 +2,17 @@
 
 ## Primeiro (SEMPRE)
 - [ ] Verificar SESSION-CONTEXT.md tem < 1h: `find /Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/SESSION-CONTEXT.md -mmin -60 | grep .` Se vazio → rodar `bash bin/tita-session-boot.sh`
-- [ ] Verificar se Tita Memory Watchdog está rodando: `pgrep -f memory-watchdog.sh`
-- [ ] Se não estiver: `bash /tmp/start-tita-memory-watchdog.sh`
 - [ ] Verificar se session-boot LaunchAgent está ativo: `launchctl list | grep session-boot`
+- [x] ~~Memory Watchdog~~ — `memory-watchdog.sh` removido. Consolidação via LaunchAgents (23:59 automático)
 - [ ] Rodar teste de memória 2x/dia: `bash bin/tita-memory-test.sh` (09h e 18h)
 - [ ] Se teste < 90%: rodar `python3 bin/tita-memory-engine.py index` pra reindexar
 
 ## AUTO-MEMORY SYSTEM (Rodando 24/7)
 
-**Watchdog ativo:** Sim  
-**Status:** Memory-watchdog.sh (PID via pgrep)  
-**Consolidação:** 23:59 BRT automático  
-**Teste semanal:** Domingo 09:00 automático  
-**Logs:** /tmp/tita-memory-watchdog.log
-
-O sistema funciona continuamente. Não precisa de ação manual.
+**Watchdog:** ~~memory-watchdog.sh~~ (removido — script não existe mais)  
+**Consolidação:** 23:59 BRT automático via `com.tita.memory.consolidate` LaunchAgent  
+**Teste semanal:** Domingo 09:00 via `com.tita.memory.weekly` LaunchAgent  
+**⚠️ Atualizado em 02/04/2026** — checar referências ao watchdog no HEARTBEAT são inválidas
 
 ## Backups Disponíveis
 - Projetos: `/Volumes/TITA_039/backup-projetos/`
