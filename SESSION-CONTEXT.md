@@ -1,4 +1,4 @@
-# 🧠 Contexto de Sessão — Auto-gerado 2026-04-02 09:25 BRT
+# 🧠 Contexto de Sessão — Auto-gerado 2026-04-02 14:32 BRT
 
 > LEIA ISTO ANTES DE RESPONDER QUALQUER COISA.
 > Este arquivo contém o que aconteceu nos últimos dias.
@@ -19,6 +19,8 @@
 | **🎮 ENEM Game (Local Ollama)** | ✅ **PRONTO PABERTO** (15:40 BRT). 4 workflows N8n REAIS: game-designer, content-creator, code-generator, qa-tester. Modelo: Qwen 2.5 32B (Local Ollama rodando). Custo: R$ 0.00. Execução: http://localhost:11434 (zero dependências externas). README-LOCAL.md com instruções. Apenas importar em N8n (http://5678) e clicar Execute. | 2026-03-21 15h |
 | **HiClaw Quick Win** | ✅ **IMPLEMENTADO** — Task manager multi-agente. 4 endpoints, 8 pipelines, WebSocket, anti-loop. Print + .md enviados no grupo. Helber/Tiago precisam `git pull`. | 2026-03-27 23:40h |
 | Gold Digger | 🔴 **MORTO** — 44 propostas em **340+ ciclos** (ZERO propostas novas em **150+ ciclos**). Bot reporta canais "ativos" mas não gera nada. KILL SWITCH URGENTÍSSIMO. | 2026-03-30 18:03h |
+| **Monteiro Aranha** | 🟡 **EM ANDAMENTO** — Proposta R$180K implantação + R$12K/mês. 2 MDs criados e enviados (02/04 ~12h): PLANO-SEGURANCA-MONTEIRO-ARANHA.md + GARANTIAS-SEGURANCA-CLIENTE.md. Aguardando feedback Eduardo. Projeto em `projetos/monteiro-aranha/`. Backup Restore Point 3GB feito. | 2026-04-02 12h |
+| **Dashboard Gospia (PM2/Uptime Kuma)** | ⏸️ **PAUSADO por Eduardo** — Retomar quando sinalizar. 4 implementações prontas documentadas: PM2, Uptime Kuma, Tailscale, Multi-tenant. | 2026-04-02 12h |
 | **Titanio Video Factory** | 🟡 Zeroscope funciona grátis (qualidade básica), Wan2.1 em fila (qualidade alta). 1 vídeo real gerado e enviado. | 2026-03-30 18:03h |
 | **Polymarket Bot** | 🟡 Scanner + monitor rodando 24/7. Conta $44.86. **BLOQUEADO:** falta private key wallet (Tiago precisa PC). Playwright como alternativa. | 2026-03-27 00:03h |
 | Maricá Film Commission | Site WordPress/Elementor ativo | 2026-03-12 |
@@ -55,7 +57,7 @@
 - Script: ~/.openclaw/workspace/bin/video-analyze.sh "URL"
 - Tempo: ~15 segundos por vídeo
 
-## 📅 Memória 2026-04-02 (      30 linhas)
+## 📅 Memória 2026-04-02 (      68 linhas)
 
 - **21:40** [Oracle] Analise o plano H2O Films (Titanio Agency). Entregar: (1) TOP 3 gaps críticos an → ✅ (56s)
 
@@ -86,8 +88,9 @@ PLANO H2O FILM → ✅ (55s)
 - Causa provável: RAM insuficiente, macOS mata processos do WhatsApp Web
 - Gateway reconecta automaticamente mas cai em ~60s
 
+... (mais 38 linhas em memory/2026-04-02.md)
 
-## 🔄 Último Flush 2026-04-02 (2026-04-02_06h.md)
+## 🔄 Último Flush 2026-04-02 (2026-04-02_12h.md)
 
 ## 📅 Memória 2026-04-01 (     123 linhas)
 - [HEARTBEAT 2026-04-01 07:02:54 -03] ⚠️ RAM baixa detectada: FREE_PAGES=42937 (<50000).
@@ -230,9 +233,9 @@ PLANO H2O FILM → ✅ (55s)
 ## 📝 Memórias Recentes (últimos 3 dias)
 - **TESTE-APIS-VIDEO-FREE.md** (5027 bytes)
 - **PESQUISA-VIDEO-IA-REAL.md** (13528 bytes)
-- **PESQUISA-MEMORIA-PERSISTENTE.md** (18517 bytes)
 - **PESQUISA-API-VIDEO-IA-FREE.md** (20066 bytes)
-- **2026-04-02.md** (1448 bytes)
+- **LICAO-CRITICA-MD-ENVIO.md** (3183 bytes)
+- **2026-04-02.md** (3694 bytes)
 - **2026-04-01.md** (8468 bytes)
 - **2026-03-31.md** (2545 bytes)
 - **2026-03-30.md** (15268 bytes)
@@ -264,21 +267,21 @@ PLANO H2O FILM → ✅ (55s)
 ## 🔑 CREDENCIAIS REFERENCIADAS
 
 ## 📄 Últimos Arquivos Criados (workspace root)
-- **UPGRADE-TIAGO-MEMORY-AUDIT.md** (28/03 09:51)
 - **UPGRADE-ORACLE-TRACE2SKILL-HELBER-TIAGO.md** (30/03 03:01)
-- **UPGRADE-MEMORIA-V2-COMPLETO.md** (28/03 10:11)
 - **UPGRADE-INFRAESTRUTURA-HELBER-TIAGO.md** (30/03 02:12)
 - **UPGRADE-HICLAW-DEERFLOW.md** (29/03 21:39)
-- **UPGRADE-HELBER-MEMORY-ENGINE.md** (28/03 09:50)
-- **UPGRADE-FASE2-LIGHTNING-ESPECIALISTAS.md** (28/03 11:56)
 - **UPGRADE-DIRECT-TOOLS-HELBER-TIAGO.md** (30/03 04:01)
-- **UPGRADE-AAA-MEMORIA-FINAL.md** (28/03 10:18)
 - **TITANIO-BROWSER-SETUP.md** (28/03 14:51)
 - **SOUL.md** (30/03 03:01)
 - **SOLUCAO-MEMORIA-SQUAD.md** (29/03 12:52)
-- **SETUP-ORGANIZACAO-CLAWS.md** (28/03 13:43)
-- **RELATORIO-SISTEMA-COMPLETO-28-03-2026.md** (28/03 14:23)
-- **RELATORIO-ESPECIALISTAS-AUTONOMIA.md** (28/03 10:38)
+- **RELATORIO-COMPLETO-29-30-MARCO.md** (30/03 04:01)
+- **PROMPT-TIAGO-RELATORIO-COMPLETO.md** (01/04 11:55)
+- **MEMORY.md** (02/04 09:43)
+- **LESSONS.md** (30/03 01:14)
+- **INSTALAR-TMEM-HELBER-TIAGO.md** (29/03 19:09)
+- **INSTALAR-TITANIO-BROWSER-TIAGO.md** (02/04 09:42)
+- **INSTALAR-TITANIO-BROWSER-CLAW.md** (28/03 14:56)
+- **INSTALAR-TITANIO-BROWSER-AUTO.md** (28/03 14:54)
 
 ## 🛠️ Ferramentas Instaladas
 - **titanio-media.py** — Pipeline mídia IA (banners, narração, vídeo, imagens FLUX)
@@ -289,4 +292,4 @@ PLANO H2O FILM → ✅ (55s)
 - **Dashboard Titanio 2.0** — 3 instâncias (Eduardo:4444, Helber:4445, Tiago:4446)
 
 ---
-_Gerado: 09:25 BRT 02/04/2026 | 289 linhas, 17873 bytes | Refresh: a cada 30min_
+_Gerado: 14:32 BRT 02/04/2026 | 292 linhas, 18392 bytes | Refresh: a cada 30min_

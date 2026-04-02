@@ -1,57 +1,57 @@
 {
-  "timestamp": "2026-04-02 12:32",
+  "timestamp": "2026-04-02 14:12",
   "markets_total": 30,
   "opportunities": 2,
   "analyses": [
     {
       "question": "Will Russia capture all of Lyman by December 31, 2026?",
-      "yes": 0.665,
-      "no": 0.335,
-      "volume": 99893.96503099997,
+      "yes": 0.67,
+      "no": 0.33,
+      "volume": 99911.42503099998,
       "analysis": {
         "confianca": 53,
         "direcao": "YES",
-        "razao": "Heurística local: YES=66%, volume=$99,894, edge=16.5%",
+        "razao": "Heurística local: YES=67%, volume=$99,911, edge=17.0%",
         "risco": "baixo"
       },
-      "timestamp": "2026-04-02 12:32",
+      "timestamp": "2026-04-02 14:12",
       "condition_id": "0xb4aea2573ecac699851b042d39a99b26e43aed7a6b024a4bc827ba220f9fbb78"
     },
     {
-      "question": "LoL: Hanwha Life Esports Challengers vs T1 Academy - Game 2 Winner",
-      "yes": 0.315,
-      "no": 0.685,
-      "volume": 9976.649754999999,
+      "question": "Pelicans vs. Trail Blazers",
+      "yes": 0.305,
+      "no": 0.695,
+      "volume": 99613.40058799992,
       "analysis": {
-        "confianca": 53,
+        "confianca": 56,
         "direcao": "NO",
-        "razao": "Heurística local: YES=32%, volume=$9,977, edge=18.5%",
-        "risco": "medio"
+        "razao": "Heurística local: YES=30%, volume=$99,613, edge=19.5%",
+        "risco": "baixo"
       },
-      "timestamp": "2026-04-02 12:32",
-      "condition_id": "0x35ae2248a1aaddd0fa564a30cc716f2796f2f69ecd6caf6dba6b7b69f3c8bf6e"
+      "timestamp": "2026-04-02 14:12",
+      "condition_id": "0xf8f1cb6660fb074b4fe436df7adeb3a611c8dffafc97bb7fc8feb621db4741b5"
     }
   ],
   "top_events": [
     {
       "title": "Democratic Presidential Nominee 2028",
-      "volume": 967260507.4343534
+      "volume": 967657491.8525153
     },
     {
       "title": "Republican Presidential Nominee 2028",
-      "volume": 509019934.6679093
+      "volume": 509355136.2681993
     },
     {
       "title": "Presidential Election Winner 2028",
-      "volume": 484035062.76418287
+      "volume": 484121038.08364683
     },
     {
       "title": "2026 FIFA World Cup Winner ",
-      "volume": 469819561.0523497
+      "volume": 471592844.7057106
     },
     {
       "title": "English Premier League Winner ",
-      "volume": 313111273.3762058
+      "volume": 313120716.28662884
     }
   ]
 }

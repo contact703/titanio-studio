@@ -2,14 +2,14 @@
   "specialistId": "debug-hunter",
   "specialistName": "Debug Hunter",
   "version": 2,
-  "lastActive": "2026-04-02T14:33:19.623Z",
+  "lastActive": "2026-04-02T17:28:13.491Z",
   "stats": {
-    "tasksCompleted": 8,
+    "tasksCompleted": 9,
     "tasksFailed": 1,
     "sessionsTotal": 0,
     "lessonsLearned": 41936,
     "tokensUsed": 0,
-    "avgTaskDurationMs": 18758
+    "avgTaskDurationMs": 18224
   },
   "knowledge": [
     {
@@ -32,6 +32,30 @@
     }
   ],
   "recentTasks": [
+    {
+      "id": "e87c0844-29c8-4de4-90d1-11b8b32162fc",
+      "title": "ping test",
+      "description": "",
+      "status": "completed",
+      "startedAt": "2026-04-02T17:27:59.535Z",
+      "completedAt": "2026-04-02T17:28:13.491Z",
+      "result": "## Ping Test — Relatório de Execução\n\n**Alvo:** 8.8.8.8 (Google DNS)\n**Pacotes:** 4 enviados / 4 recebidos\n\n| Métrica | Valor |\n|---|---|\n| Packet Loss | **0%** ✅ |\n| Latência mín | 9.4 ms |\n| Latência média | **9.85 ms** |\n| Latência máx | 10.4 ms |\n| Jitter (stddev) | 0.39 ms |\n\n### ✅ Status Final\nConectividade externa **100% OK**. Latência excelente (~10ms), jitter mínimo, zero perda de pacotes. Rede estável.",
+      "durationMs": 13956
+    },
+    {
+      "id": "bcfbec7e-61e9-48e3-b380-5a5e1353e442",
+      "title": "AUDITORIA COMPLETA: 1) pm2 list status 2) Portas 4444,3000,5678,18789,5432,6379,11434 respondendo? 3) Endpoints backend /api/squad, /api/alerts 4) Frontend carrega? 5) Testar task num especialista 6) Memoria especialistas OK? 7) Logs com erros? 8) RAM/CPU uso 9) LaunchAgents conflitos? 10) Gateway roteando? Relatório COMPLETO com status cada item.",
+      "description": "",
+      "status": "in_progress",
+      "startedAt": "2026-04-02T17:27:17.848Z"
+    },
+    {
+      "id": "c93eef6b-6231-4444-9f4d-4a9c64010a77",
+      "title": "AUDITORIA COMPLETA DA DASHBOARD TITANIO E PROCESSOS. Verifique TUDO:\n\n1. PM2 STATUS: Execute pm2 list e confirme que dashboard-backend, dashboard-frontend e n8n estão online e estáveis (sem restarts em loop)\n\n2. PORTAS: Confirme que 4444 (backend), 3000 (frontend), 5678 (n8n), 18789 (gateway), 5432 (postgres), 6379 (redis), 11434 (ollama) estão respondendo\n\n3. BACKEND: Teste os endpoints principais — /api/squad (lista especialistas), /api/squad/*/status, /api/alerts, /api/health. Verifique se o backend compilado (dist/index.js) está funcionando igual ao dev\n\n4. FRONTEND: Acesse http://localhost:3000 e confirme que a página carrega sem erros. Verifique se o build de produção (next start) está servindo corretamente\n\n5. ESPECIALISTAS: Teste enviar uma task pra um especialista e confirme que o ciclo completo funciona (enviar → processar → resultado)\n\n6. MEMÓRIA ESPECIALISTAS: Verifique se os arquivos de memória dos especialistas estão sendo lidos/escritos corretamente (lessons.json, memory.json)\n\n7. LOGS: Verifique workspace/logs/ — tem erros recentes? Algum warning importante?\n\n8. RAM/CPU: Quanto estamos usando? Tem vazamento de memória?\n\n9. LaunchAgents: Confirme que não há conflitos entre PM2 e LaunchAgents restantes\n\n10. GATEWAY OPENCLAW: Teste se o gateway está roteando corretamente para o backend da squad\n\nRetorne um relatório COMPLETO com status de cada item, problemas encontrados e recomendações.",
+      "description": "",
+      "status": "in_progress",
+      "startedAt": "2026-04-02T17:26:52.108Z"
+    },
     {
       "id": "9e9b55a9-c444-4ef9-a2fd-71f48cb1146d",
       "title": "Analise o sistema Titanio Mac Mini M4 e as pesquisas de infra disponíveis na sua biblioteca. Responda: 1) Por que processos param no macOS (LaunchAgents vs LaunchDaemon, RAM killer) 2) PM2 vs Supervisor vs launchd - qual escolher e por que 3) Como garantir N8n 24/7 sem cair 4) Suas 5 recomendações mais importantes. Seja técnico e direto. Mínimo 1000 palavras.",
