@@ -1,71 +1,57 @@
 {
-  "timestamp": "2026-04-01 13:43",
+  "timestamp": "2026-04-02 12:32",
   "markets_total": 30,
-  "opportunities": 5,
+  "opportunities": 2,
   "analyses": [
     {
-      "question": "Will The Super Mario Galaxy Movie be the top grossing movie of 2026?",
-      "yes": 0.315,
-      "no": 0.685,
-      "volume": 99971.4805910001,
+      "question": "Will Russia capture all of Lyman by December 31, 2026?",
+      "yes": 0.665,
+      "no": 0.335,
+      "volume": 99893.96503099997,
       "analysis": {
-        "confianca": 55,
-        "direcao": "NO",
-        "razao": "Heurística local: YES=32%, volume=$99,971, edge=18.5%",
+        "confianca": 53,
+        "direcao": "YES",
+        "razao": "Heurística local: YES=66%, volume=$99,894, edge=16.5%",
         "risco": "baixo"
       },
-      "timestamp": "2026-04-01 13:43",
-      "condition_id": "0xec181db4470b152493b58229862af3f6335b77cc719f5a0e7ed58c9f9848b992"
+      "timestamp": "2026-04-02 12:32",
+      "condition_id": "0xb4aea2573ecac699851b042d39a99b26e43aed7a6b024a4bc827ba220f9fbb78"
     },
     {
-      "question": "Military action against Iran continues through April 30, 2026?",
-      "yes": 0.505,
-      "no": 0.495,
-      "volume": 9996.722598,
+      "question": "LoL: Hanwha Life Esports Challengers vs T1 Academy - Game 2 Winner",
+      "yes": 0.315,
+      "no": 0.685,
+      "volume": 9976.649754999999,
       "analysis": {
-        "confianca": 35,
-        "direcao": "HOLD",
-        "razao": "Heurística local: YES=50%, volume=$9,997, edge=0.5%",
+        "confianca": 53,
+        "direcao": "NO",
+        "razao": "Heurística local: YES=32%, volume=$9,977, edge=18.5%",
         "risco": "medio"
       },
-      "timestamp": "2026-04-01 13:43",
-      "condition_id": "0xe05bfd5efc54b5e3cd2ea7cd3e83298839620bfe9fa5986ff4c531cc008e55e2"
-    },
-    {
-      "question": "FC Andorra vs. Málaga CF: O/U 2.5",
-      "yes": 0.495,
-      "no": 0.505,
-      "volume": 9980.653153000007,
-      "analysis": {
-        "confianca": 35,
-        "direcao": "HOLD",
-        "razao": "Heurística local: YES=50%, volume=$9,981, edge=0.5%",
-        "risco": "medio"
-      },
-      "timestamp": "2026-04-01 13:43",
-      "condition_id": "0xd92a120d7d1e15562c2182d49562c45c272fb7832528303eebb4f9e8fdb969a6"
+      "timestamp": "2026-04-02 12:32",
+      "condition_id": "0x35ae2248a1aaddd0fa564a30cc716f2796f2f69ecd6caf6dba6b7b69f3c8bf6e"
     }
   ],
   "top_events": [
     {
       "title": "Democratic Presidential Nominee 2028",
-      "volume": 959157357.6685944
+      "volume": 967260507.4343534
     },
     {
       "title": "Republican Presidential Nominee 2028",
-      "volume": 504751245.33845925
+      "volume": 509019934.6679093
     },
     {
       "title": "Presidential Election Winner 2028",
-      "volume": 481698316.29096276
+      "volume": 484035062.76418287
     },
     {
       "title": "2026 FIFA World Cup Winner ",
-      "volume": 456787019.746997
+      "volume": 469819561.0523497
     },
     {
       "title": "English Premier League Winner ",
-      "volume": 312960969.55148685
+      "volume": 313111273.3762058
     }
   ]
 }

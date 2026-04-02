@@ -32,8 +32,8 @@
     }
   ],
   "activeContext": {
-    "currentTask": "Aguardando YC magic link",
-    "currentProject": "Victor Capital",
-    "startedAt": "2026-03-20"
+    "currentTask": null,
+    "currentProject": null,
+    "startedAt": null
   }
 }

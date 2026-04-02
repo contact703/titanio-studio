@@ -7,8 +7,8 @@
 
 ## ⚠️ Status do Flush
 
-**Último flush:** 2026-04-02 09:03 UTC (06:03 BRT 02/04) ← **AGORA** ✨  
-**Anterior:** 2026-04-02 03:03 UTC (00:03 BRT)  
+**Último flush:** 2026-04-02 15:03 UTC (12:03 BRT 02/04) ← **AGORA** ✨  
+**Anterior:** 2026-04-02 09:03 UTC (06:03 BRT)  
 **Anterior:** 2026-03-30 15:56 UTC (12:56 BRT 30/03)  
 **Anteriores:** 2026-03-29 15:03 UTC, 2026-03-29 09:03 UTC, 2026-03-29 03:03 UTC, 2026-03-28 15:03 UTC, 2026-03-28 03:03 UTC, 2026-03-27 21:03 UTC, 2026-03-27 03:03 UTC, 2026-03-26 09:03 UTC  
 **Volume Tita_DEV_02:** ❌ HD queimou — usando TITA_039/MAC_MINI_03  
@@ -24,12 +24,10 @@
 - **Ação:** Eduardo recarregar conta Moonshot
 - **Fallback atual:** claude-sonnet-4-6 via Anthropic
 
-### ⚠️ CRISE 01/04 NOITE (22:25–??) — EM ABERTO
-- **WhatsApp Gateway:** Loop disconnect/reconnect 499 a cada ~60s desde 22:25 BRT — verificar se ainda ativo
-- **Anthropic API:** Rate limiting 429 massivo em todas as sessões (22:35–?) — verificar se resolveu
-- **Causa provável:** RAM baixa (FREE_PAGES=29364 às 21h)
-- **Impacto:** Zica perguntou sobre modelo/HiClaw/Dashboard no grupo 3x e **ficou SEM RESPOSTA** (22:25 BRT)
-- **Ação IMEDIATA:** Responder Zica no grupo AGORA + verificar gateway
+### ✅ CRISE 01/04 NOITE — RESOLVIDA (02/04 07:55 BRT)
+- **WhatsApp Gateway:** Loop 499 da madrugada parou sozinho. Causa confirmada: heartbeat preventivo (reconnect após 30+ min idle) — comportamento normal.
+- **Anthropic API:** Rate limiting 429 resolveu. Sessões normais desde manhã 02/04.
+- **RAM 07:55 BRT:** FREE_PAGES=203146 — Chrome fechado liberou ~700MB
 
 ### ⚠️ Polymarket Bot — Alertas Anteriores eram FALSOS
 - monitor.py e auto_trader.py: ✅ RODANDO
@@ -82,6 +80,8 @@
 | **🎮 ENEM Game (Local Ollama)** | ✅ **PRONTO PABERTO** (15:40 BRT). 4 workflows N8n REAIS: game-designer, content-creator, code-generator, qa-tester. Modelo: Qwen 2.5 32B (Local Ollama rodando). Custo: R$ 0.00. Execução: http://localhost:11434 (zero dependências externas). README-LOCAL.md com instruções. Apenas importar em N8n (http://5678) e clicar Execute. | 2026-03-21 15h |
 | **HiClaw Quick Win** | ✅ **IMPLEMENTADO** — Task manager multi-agente. 4 endpoints, 8 pipelines, WebSocket, anti-loop. Print + .md enviados no grupo. Helber/Tiago precisam `git pull`. | 2026-03-27 23:40h |
 | Gold Digger | 🔴 **MORTO** — 44 propostas em **340+ ciclos** (ZERO propostas novas em **150+ ciclos**). Bot reporta canais "ativos" mas não gera nada. KILL SWITCH URGENTÍSSIMO. | 2026-03-30 18:03h |
+| **Monteiro Aranha** | 🟡 **EM ANDAMENTO** — Proposta R$180K implantação + R$12K/mês. 2 MDs criados e enviados (02/04 ~12h): PLANO-SEGURANCA-MONTEIRO-ARANHA.md + GARANTIAS-SEGURANCA-CLIENTE.md. Aguardando feedback Eduardo. Projeto em `projetos/monteiro-aranha/`. Backup Restore Point 3GB feito. | 2026-04-02 12h |
+| **Dashboard Gospia (PM2/Uptime Kuma)** | ⏸️ **PAUSADO por Eduardo** — Retomar quando sinalizar. 4 implementações prontas documentadas: PM2, Uptime Kuma, Tailscale, Multi-tenant. | 2026-04-02 12h |
 | **Titanio Video Factory** | 🟡 Zeroscope funciona grátis (qualidade básica), Wan2.1 em fila (qualidade alta). 1 vídeo real gerado e enviado. | 2026-03-30 18:03h |
 | **Polymarket Bot** | 🟡 Scanner + monitor rodando 24/7. Conta $44.86. **BLOQUEADO:** falta private key wallet (Tiago precisa PC). Playwright como alternativa. | 2026-03-27 00:03h |
 | Maricá Film Commission | Site WordPress/Elementor ativo | 2026-03-12 |
@@ -413,3 +413,12 @@ Anterior: `2026-03-24_00h.md`
 sh`
 /fix-gateway-once-and-for-all.sh`
 `scripts/fix-gateway-once-and-for-all.sh`
+
+## Monteiro Aranha (02/04/2026)
+- **Status:** Proposta pronta
+- **Docs:** projetos/monteiro-aranha/outputs/
+- **PDF apresentação:** APRESENTACAO-MONTEIRO-ARANHA.pdf
+- **Segurança cliente:** PLANO-SEGURANCA-MONTEIRO-ARANHA.md + GARANTIAS-SEGURANCA-CLIENTE.md
+- **Segurança interna:** SEGURANCA-OPERACAO-INTERNA.md (confidencial)
+- **Investimento:** R$180K + R$12K/mês
+- **Modelo:** Roda daqui, acessa lá via tunnel

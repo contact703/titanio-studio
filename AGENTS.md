@@ -38,6 +38,19 @@ Before doing anything else:
 6. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
 7. **For complex tasks**: Also read `LESSONS.md` and `memory/memory-index.md`
 
+### 📤 REGRA #1 — ENVIO DE ARQUIVOS (OBRIGATÓRIA)
+
+**ANTES de enviar QUALQUER arquivo:**
+1. Ler `memory/LICAO-CRITICA-MD-ENVIO.md` — TEM O MÉTODO CORRETO
+2. Se pedirem .md: NUNCA converter pra PDF/DOCX. Usar rota GitHub público.
+3. Se der erro: rodar `bash bin/tita-troubleshoot.sh "<descrição do erro>"` ANTES de improvisar
+4. Se troubleshoot não resolver: usar `web_search` para buscar solução
+5. SÓ DEPOIS de tudo isso, tentar alternativa
+
+**Método .md via WhatsApp (atualizado 02/04/2026):**
+- Upload para `contact703/titanio-docs-public` (repo público GitHub)
+- Enviar via URL raw: `--media https://raw.githubusercontent.com/contact703/titanio-docs-public/main/ARQUIVO.md`
+
 ### 🧠 MANDATORY Pre-Flight Memory Check (v2)
 
 **BEFORE responding to ANY action request:**

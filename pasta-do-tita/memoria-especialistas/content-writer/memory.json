@@ -354,8 +354,9 @@
       "id": "c4dc31f8-4beb-402d-83a9-321a75a613f3",
       "title": "Roteiro completo de vídeo YouTube 8min sobre \"dicas de finanças pessoais\" para canal FACELESS. Inclui: título CTR alto, thumbnail (descrição), script por cena com direção de b-roll, CTA para afiliado.",
       "description": "",
-      "status": "in_progress",
-      "startedAt": "2026-03-27T17:26:04.341Z"
+      "status": "failed",
+      "startedAt": "2026-03-27T17:26:04.341Z",
+      "result": "Aborted: API rate limit + backend crash"
     },
     {
       "id": "34b8f18e-9105-4114-ba7a-5c29d883e57f",

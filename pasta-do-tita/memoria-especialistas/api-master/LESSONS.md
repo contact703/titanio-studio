@@ -9,3 +9,12 @@
 - ✅ **CRITICAL:** billing_provider_customers é a tabela correta para mapear Stripe customer_id → user_id, não profiles.stripe_customer_id
 - ✅ **HIGH:** Para buscar customer Stripe por email: GET /v1/customers/search?query=email:'x@y.com'
 - ✅ **HIGH:** Assinatura past_due também precisa ser cancelada — não aparece em status=active mas continua tentando cobrar
+
+## 2026-04-02 12:05 — Projeto Monteiro Aranha — projete as INTEGRAÇÕES: 1) WhatsAp
+**Status:** ✅ Sucesso
+**Duração:** 22.1s
+- [integration] Integrações: whatsapp
+- [process] Projeto Monteiro Aranha — projete as INTEGRAÇÕES: 1) WhatsApp Business API para  → # Projeto Monteiro Aranha — Arquitetura Completa de Integrações & APIs
+
+Vou projetar a stack de integrações do zero. Lendo contexto do projeto primeir
+

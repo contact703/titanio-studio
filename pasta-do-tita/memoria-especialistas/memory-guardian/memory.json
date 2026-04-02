@@ -152,25 +152,8 @@
     }
   ],
   "activeContext": {
-    "problemas_atuais": [
-      "29 especialistas sem tasks registradas",
-      "Lições duplicadas em alguns especialistas",
-      "Gold Digger: status de conversão desconhecido",
-      "HD Tita_DEV_02 queimado — migração para TITA_039",
-      "GospIA iOS: build possivelmente travada",
-      "Tiago: falta private key wallet + App Password Gmail"
-    ],
-    "processos_ativos": [
-      "memory-watchdog (PID 24022) — consolidação 23:59 BRT",
-      "flush automático 6h — próximo em contexto-ativo.md",
-      "group-sentinel (PID 74426) — snapshot 30min",
-      "git sync N8n 30min → contact703/tita-memory"
-    ],
-    "metricas_memoria": {
-      "arquivos_memoria_diaria": "71+ arquivos em memory/",
-      "flushes_persistentes": "10 arquivos em memoria-persistente/",
-      "especialistas": 39,
-      "shared_specialists_licoes": "196k+"
-    }
+    "currentTask": null,
+    "currentProject": null,
+    "startedAt": null
   }
 }

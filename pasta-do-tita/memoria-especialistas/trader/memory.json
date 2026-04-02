@@ -63,36 +63,8 @@
     }
   ],
   "activeContext": {
-    "portfolio_aberto": [
-      {
-        "mercado": "Italy Copa 2026 FIFA",
-        "posicao": "YES",
-        "valor_investido": "$5",
-        "shares": "6.58 @ 76¢",
-        "potencial": "$6.58 se Italy qualificar"
-      },
-      {
-        "mercado": "Jesus Christ before GTA VI",
-        "posicao": "NO",
-        "valor_investido": "$15",
-        "nota": "GTA VI sai antes"
-      },
-      {
-        "mercado": "OKC Thunder NBA Finals 2026",
-        "posicao": "YES",
-        "valor_investido": "$12",
-        "nota": "Time jovem em ascensão"
-      },
-      {
-        "mercado": "Colorado Avalanche Stanley Cup 2026",
-        "posicao": "NO",
-        "valor_investido": "$8",
-        "nota": "Time não é favorito"
-      }
-    ],
-    "total_investido": "$40",
-    "saldo_restante": "$4.86",
-    "data_ultimo_trade": "2026-03-27",
-    "proximo_passo": "Monitorar posições, realizar trades adicionais quando scanner indicar novas oportunidades >= 70%"
+    "currentTask": null,
+    "currentProject": null,
+    "startedAt": null
   }
 }

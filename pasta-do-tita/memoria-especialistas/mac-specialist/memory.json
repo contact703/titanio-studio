@@ -2,7 +2,7 @@
   "specialistId": "mac-specialist",
   "specialistName": "🖥️ Mac Specialist",
   "version": 2,
-  "lastActive": "2026-03-28T01:50:00.000Z",
+  "lastActive": "2026-04-02T13:23:46.584Z",
   "stats": {
     "tasksCompleted": 2,
     "tasksFailed": 0,
@@ -51,6 +51,14 @@
     }
   ],
   "recentTasks": [
+    {
+      "id": "6fdaa6e7-89a5-4d54-a5ac-afed50902900",
+      "title": "Leia o checkup do Mac Mini e as pesquisas:\n1. /Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/pasta-do-tita/CHECKUP-MAC-MINI-02-04-2026.md\n2. /Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/pasta-do-tita/PESQUISA-AUTOMACAO-24-7.md\n\nCom sua experiência em macOS:\n1. Melhor forma de implementar PM2 no Apple Silicon M4\n2. Como otimizar RAM com 16GB e muitos serviços\n3. LaunchDaemons vs LaunchAgents: config REAL que funciona\n4. Monit no macOS: como instalar e configurar\n5. Plano de implementação seguro (passo a passo)\n\nSalve em: /Volumes/TITA_039/MAC_MINI_03/.openclaw/workspace/pasta-do-tita/ANALISE-MAC-SPECIALIST-INFRA.md",
+      "description": "",
+      "status": "failed",
+      "startedAt": "2026-04-02T13:23:46.584Z",
+      "result": "Aborted: API rate limit + backend crash"
+    },
     {
       "date": "2026-03-15",
       "task": "RAM monitoring — alertas de memória crítica",
