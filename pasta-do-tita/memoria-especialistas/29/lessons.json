@@ -1,0 +1,125 @@
+{
+  "lessons": [
+    {
+      "id": "initial-openclaw-specialist-0",
+      "date": "2026-03-26",
+      "time": "12:00",
+      "lesson": "heartbeat a cada 30m com activeHours 07:00-23:00",
+      "impact": "high",
+      "domain": "config",
+      "category": "technical",
+      "tags": [
+        "config",
+        "initial-knowledge"
+      ],
+      "successRate": 100,
+      "source": "tita-research-bot"
+    },
+    {
+      "id": "initial-openclaw-specialist-1",
+      "date": "2026-03-26",
+      "time": "12:00",
+      "lesson": "LaunchAgent > crontab no macOS (cron trava com instâncias múltiplas)",
+      "impact": "high",
+      "domain": "infra",
+      "category": "technical",
+      "tags": [
+        "infra",
+        "initial-knowledge"
+      ],
+      "successRate": 100,
+      "source": "tita-research-bot"
+    },
+    {
+      "id": "initial-openclaw-specialist-2",
+      "date": "2026-03-26",
+      "time": "12:00",
+      "lesson": "configure --oauth reescreve 14 configs — fazer merge cirúrgico depois",
+      "impact": "high",
+      "domain": "config",
+      "category": "technical",
+      "tags": [
+        "config",
+        "initial-knowledge"
+      ],
+      "successRate": 100,
+      "source": "tita-research-bot"
+    },
+    {
+      "id": "initial-openclaw-specialist-3",
+      "date": "2026-03-26",
+      "time": "12:00",
+      "lesson": "shared-specialists.json para sync de especialistas entre Macs",
+      "impact": "high",
+      "domain": "sync",
+      "category": "technical",
+      "tags": [
+        "sync",
+        "initial-knowledge"
+      ],
+      "successRate": 100,
+      "source": "tita-research-bot"
+    },
+    {
+      "id": "initial-openclaw-specialist-4",
+      "date": "2026-03-26",
+      "time": "12:00",
+      "lesson": "SquadManager deve carregar do shared na inicialização",
+      "impact": "high",
+      "domain": "architecture",
+      "category": "technical",
+      "tags": [
+        "architecture",
+        "initial-knowledge"
+      ],
+      "successRate": 100,
+      "source": "tita-research-bot"
+    },
+    {
+      "id": "initial-openclaw-specialist-5",
+      "date": "2026-03-26",
+      "time": "12:00",
+      "lesson": "Paths hardcoded em dist/*.js são problema recorrente em multi-Mac",
+      "impact": "high",
+      "domain": "infra",
+      "category": "technical",
+      "tags": [
+        "infra",
+        "initial-knowledge"
+      ],
+      "successRate": 100,
+      "source": "tita-research-bot"
+    },
+    {
+      "id": "initial-openclaw-specialist-6",
+      "date": "2026-03-26",
+      "time": "12:00",
+      "lesson": "Watchdog agressivo (2min) = 99% uptime do backend",
+      "impact": "high",
+      "domain": "reliability",
+      "category": "technical",
+      "tags": [
+        "reliability",
+        "initial-knowledge"
+      ],
+      "successRate": 100,
+      "source": "tita-research-bot"
+    },
+    {
+      "id": "initial-openclaw-specialist-7",
+      "date": "2026-03-26",
+      "time": "12:00",
+      "lesson": "contextPruning cache-ttl 30m economiza RAM sem perder dados",
+      "impact": "medium",
+      "domain": "config",
+      "category": "technical",
+      "tags": [
+        "config",
+        "initial-knowledge"
+      ],
+      "successRate": 100,
+      "source": "tita-research-bot"
+    }
+  ],
+  "version": 2
+}

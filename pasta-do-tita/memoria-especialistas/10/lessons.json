@@ -1,0 +1,829 @@
+{
+  "lessons": [
+    {
+      "id": "e0abec78-6511-4496-8b34-627ed218d86d",
+      "date": "2026-03-26",
+      "time": "14:06",
+      "successRate": 1,
+      "lesson": "Lições dos especialistas estavam só no LESSONS.md (markdown) mas não no memory.json. O sync n8n conta LESSONS.md mas a API /memory/lessons lê do memory.json. Precisa manter ambos sincronizados.",
+      "context": "iOS Specialist tinha 0 lições no memory.json mas 10 no LESSONS.md. Android Specialist foi criado com ambos.",
+      "category": "process",
+      "domain": "dashboard-sync",
+      "impact": "high",
+      "tags": [
+        "sync",
+        "lessons",
+        "memory",
+        "markdown"
+      ]
+    },
+    {
+      "id": "11472768-e545-468d-abe9-ccc70a5fe3d4",
+      "date": "2026-03-26",
+      "time": "14:06",
+      "successRate": 0,
+      "lesson": "Tarefa executada: Diagnosticar sync especialistas",
+      "context": "Resultado: ⚠️ Debug Hunter encontrou um problema: Nenhuma API disponível. Verifique a conexão com o OpenClaw Gateway.",
+      "category": "process",
+      "domain": "debug-hunter",
+      "impact": "medium",
+      "tags": [
+        "auto-task"
+      ]
+    },
+    {
+      "id": "3038d2f4-b388-41f7-89e7-e0da547f8752",
+      "date": "2026-03-26",
+      "time": "14:06",
+      "successRate": 0,
+      "lesson": "Tarefa executada: Diagnosticar sincronização de especialistas na dashboard Titanio",
+      "context": "Resultado: ⚠️ Debug Hunter encontrou um problema: Nenhuma API disponível. Verifique a conexão com o OpenClaw Gateway.",
+      "category": "process",
+      "domain": "debug-hunter",
+      "impact": "medium",
+      "tags": [
+        "auto-task"
+      ]
+    },
+    {
+      "id": "91b5b0b5-1262-4a46-a95c-11cc11ab6b65",
+      "date": "2026-03-26",
+      "time": "20:42",
+      "successRate": 1,
+      "lesson": "Tarefa executada: Teste do AutoLearn: verificar se lições são salvas automaticamente após completar uma tarefa",
+      "context": "Resultado: ## [Teste do AutoLearn] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nPara verificar se as lições são salvas automaticamente após a conclusão de uma tarefa, eu analisei a memória do espe",
+      "category": "process",
+      "domain": "debug-hunter",
+      "impact": "medium",
+      "tags": [
+        "auto-task"
+      ]
+    },
+    {
+      "id": "ef8fff5b-612f-4883-9e67-5a9b3685b26e",
+      "date": "2026-03-26",
+      "time": "20:52",
+      "successRate": 1,
+      "lesson": "Tarefa executada: Teste AutoLearn: confirmar que lições são salvas automaticamente",
+      "context": "Resultado: Uma grande quantidade de dados!\n\nVou tentar extrair as informações relevantes para responder à sua pergunta.\n\n**Especialistas**\n\nExistem 9 especialistas listados:\n\n1. Debug Hunter\n2. Rafa\n3. Andre\n4. ",
+      "category": "process",
+      "domain": "debug-hunter",
+      "impact": "medium",
+      "tags": [
+        "auto-task"
+      ]
+    },
+    {
+      "id": "f556b7a8-3dd9-4a30-a51f-538e50d28814",
+      "date": "2026-03-26",
+      "time": "19:46",
+      "successRate": 0,
+      "lesson": "Tarefa executada: Analisar formato da Shadow API NFS-e. O que sabemos pelos screenshots: (1) titulo dos cards mostra 0",
+      "context": "Resultado: ⚠️ Debug Hunter encontrou um problema: Nenhuma API disponível. Verifique a conexão com o OpenClaw Gateway.",
+      "category": "process",
+      "domain": "debug-hunter",
+      "impact": "medium",
+      "tags": [
+        "auto-task"
+      ]
+    },
+    {
+      "id": "ed1963d3-ad51-483e-9fc3-990b12841d2d",
+      "date": "2026-03-26",
+      "time": "20:42",
+      "successRate": 1,
+      "lesson": "Tarefa (N8n): Teste do AutoLearn: verificar se lições são salvas automaticamente após completar uma tarefa",
+      "context": "Resultado: ## [Teste do AutoLearn] — Relatório de Execução\n\n[Execução e resultados concretos]\n\nPara verificar se as lições são salvas automaticamente após a conclusão de uma tarefa, eu analisei a memória do espe",
+      "category": "process",
+      "domain": "debug-hunter",
+      "impact": "medium",
+      "tags": [
+        "n8n-captured"
+      ]
+    },
+    {
+      "id": "debug-hunter-2026-03-24-1774373153",
+      "date": "2026-03-24",
+      "time": "14:25",
+      "category": "error",
+      "domain": "debug-hunter",
+      "lesson": "Resolver Application error ao clicar em lições",
+      "context": "Root cause: lessons.json tinha lesson como objeto aninhado (lesson:{lesson:'...'}) em vez de string plana. Fix: converter todos para estrutura plana, corrigir task-complete.sh, limpar cache Next.js, rebuild frontend. Contagem agora: 8 lições corretamente na dashboard.",
+      "impact": "medium",
+      "tags": [
+        "debug-hunter",
+        "debug"
+      ],
+      "successRate": 1,
+      "sourceMachine": "Mac-mini-de-Macmini.local"
+    },
+    {
+      "id": "debug-hunter-2026-03-24-1774373017",
+      "date": "2026-03-24",
+      "time": "14:23",
+      "category": "error",
+      "domain": "debug-hunter",
+      "lesson": "Validação final do fluxo",
+      "context": "OK - tudo funcionando",
+      "impact": "medium",
+      "tags": [
+        "debug-hunter",
+        "debug"
+      ],
+      "successRate": 1,
+      "sourceMachine": "Mac-mini-de-Macmini.local"
+    },
+    {
+      "id": "debug-hunter-2026-03-24-1774372991",
+      "date": "2026-03-24",
+      "time": "14:23",
+      "category": "error",
+      "domain": "debug-hunter",
+      "lesson": "Fix lessons.json formato plano - frontend não quebra mais",
+      "context": "Estrutura lesson:string confirmada. Frontend renderiza corretamente.",
+      "impact": "medium",
+      "tags": [
+        "debug-hunter",
+        "debug"
+      ],
+      "successRate": 1,
+      "sourceMachine": "Mac-mini-de-Macmini.local"
+    },
+    {
+      "id": "debug-hunter-2026-03-24-1774372959",
+      "date": "2026-03-24",
+      "time": "14:22",
+      "category": "error",
+      "domain": "debug-hunter",
+      "lesson": "Fix lessons.json estrutura plana + task-complete.sh corrigido",
+      "context": "Todos lessons.json convertidos para estrutura string (não objeto). Frontend não quebra mais. task-complete.sh atualizado.",
+      "impact": "medium",
+      "tags": [
+        "debug-hunter",
+        "debug"
+      ],
+      "successRate": 1,
+      "sourceMachine": "Mac-mini-de-Macmini.local"
+    },
+    {
+      "id": "b37c9b76-a1dd-401e-b7a1-0fe4e13d160a",
+      "date": "2026-03-24",
+      "time": "14:11",
+      "category": "error",
+      "domain": "debug-hunter",
+      "lesson": "Corrigir 5 erros n8n-status-webhook na dashboard",
+      "context": "Root cause: Gerador de Relatórios reprocessava execuções antigas do N8N Status Webhook (que sempre falhou). Fix: deletar webhook do BD, inicializar tracker de último ID processado, reiniciar backend para limpar log em memória.",
+      "impact": "medium",
+      "tags": [
+        "auto"
+      ],
+      "successRate": 1,
+      "sourceMachine": "Mac-mini-de-Macmini.local"
+    },
+    {
+      "id": "e129b464-c6bd-4526-85d9-4af6d8130b7f",
+      "date": "2026-03-24",
+      "time": "13:15",
+      "category": "process",
+      "domain": "debug-hunter",
+      "lesson": "Integração dashboard+n8n+especialistas",
+      "context": "Fluxo universal de memória criado. task-complete.sh distribui para todos.",
+      "impact": "medium",
+      "tags": [
+        "auto"
+      ],
+      "successRate": 1,
+      "sourceMachine": "Mac-mini-de-Macmini.local"
+    },
+    {
+      "id": "debug-hunter-2026-03-24-1",
+      "date": "2026-03-24",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "debug-hunter",
+      "lesson": "- N8N_USER_FOLDER apontando para ~/.n8n cria subdiretório ~/.n8n/.n8n com BD vazio",
+      "context": "- ✅ Removido N8N_USER_FOLDER, BD correto restaurado",
+      "impact": "medium",
+      "tags": [
+        "md-sync",
+        "debug-hunter"
+      ],
+      "successRate": 1,
+      "sourceMachine": "Mac-mini-de-Macmini.local"
+    },
+    {
+      "id": "debug-hunter-2026-03-24-2",
+      "date": "2026-03-24",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "debug-hunter",
+      "lesson": "- Webhooks criados direto no SQLite não funcionam no n8n 2.9.4",
+      "context": "- ✅ Consultar BD diretamente é mais confiável",
+      "impact": "medium",
+      "tags": [
+        "md-sync",
+        "debug-hunter"
+      ],
+      "successRate": 1,
+      "sourceMachine": "Mac-mini-de-Macmini.local"
+    },
+    {
+      "id": "kratos-4",
+      "date": "2026-03-23",
+      "time": "16:39",
+      "category": "technical",
+      "domain": "debug",
+      "lesson": "Fix nome Zica→Helber: defaults hardcoded em page.tsx, Header.tsx, Sidebar.tsx. localStorage pode cachear user antigo.",
+      "context": "Sucesso",
+      "impact": "high",
+      "tags": [
+        "debug",
+        "kratos",
+        "helber"
+      ],
+      "successRate": 100,
+      "source": "kratos"
+    },
+    {
+      "id": "kratos-5",
+      "date": "2026-03-23",
+      "time": "16:39",
+      "category": "technical",
+      "domain": "debug",
+      "lesson": "Debug Hunter: fix nome Zica para Helber no frontend",
+      "context": "Sucesso - 4 arquivos corrigidos, rebuild feito",
+      "impact": "high",
+      "tags": [
+        "debug",
+        "kratos",
+        "helber"
+      ],
+      "successRate": 100,
+      "source": "kratos"
+    },
+    {
+      "id": "gospia-debug-hunter-201",
+      "date": "2026-03-23",
+      "time": "19:37",
+      "category": "technical",
+      "domain": "debug-hunter",
+      "lesson": "Ao diagnosticar 500 em webhook: verificar se todas as colunas/tabelas usadas no código existem no banco via OpenAPI do Supabase",
+      "context": "Task: Diagnóstico webhook Stripe GospIA — 500 em cascata",
+      "impact": "critical",
+      "tags": [
+        "debug-hunter",
+        "gospia",
+        "stripe",
+        "webhook"
+      ],
+      "successRate": 100,
+      "source": "kratos"
+    },
+    {
+      "id": "gospia-debug-hunter-202",
+      "date": "2026-03-23",
+      "time": "19:37",
+      "category": "technical",
+      "domain": "debug-hunter",
+      "lesson": "Supabase OpenAPI (/rest/v1/) lista todas as colunas existentes — usar para auditar código vs schema",
+      "context": "Task: Diagnóstico webhook Stripe GospIA — 500 em cascata",
+      "impact": "high",
+      "tags": [
+        "debug-hunter",
+        "gospia",
+        "stripe",
+        "webhook"
+      ],
+      "successRate": 100,
+      "source": "kratos"
+    },
+    {
+      "id": "gospia-debug-hunter-203",
+      "date": "2026-03-23",
+      "time": "19:37",
+      "category": "technical",
+      "domain": "debug-hunter",
+      "lesson": "Erros 500 constantes em webhook (não 400/401) geralmente indicam erro de código, não de autenticação",
+      "context": "Task: Diagnóstico webhook Stripe GospIA — 500 em cascata",
+      "impact": "high",
+      "tags": [
+        "debug-hunter",
+        "gospia",
+        "stripe",
+        "webhook"
+      ],
+      "successRate": 100,
+      "source": "kratos"
+    },
+    {
+      "id": "debug-hunter-2026-03-23-0",
+      "date": "2026-03-23",
+      "time": "19:37",
+      "category": "technical",
+      "domain": "debug-hunter",
+      "lesson": "- Diagnóstico webhook Stripe GospIA — 500 em cascata",
+      "context": "- **Tarefa:** Diagnóstico webhook Stripe GospIA — 500 em cascata\n- **Solução:** Coluna profiles.stripe_customer_id não existe no banco. Webhook invoice.payment_succeeded tentava buscar usuário por essa coluna inexistente, gerando 500 em toda renovação de assinatura.\n- ✅ **CRITICAL:** Ao diagnosticar",
+      "impact": "medium",
+      "tags": [
+        "md-sync",
+        "debug-hunter"
+      ],
+      "successRate": 1,
+      "sourceMachine": "Mac-mini-de-Macmini.local"
+    },
+    {
+      "id": "mem-5",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Dizer \"não tenho ferramenta pra anexar\"",
+      "context": "From Eduardo MEMORY.md: 🔴 LIÇÃO CRÍTICA: ENVIAR ARQUIVOS VIA WHATSAPP (202",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-6",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Oferecer \"colocar no Desktop\" como solução",
+      "context": "From Eduardo MEMORY.md: 🔴 LIÇÃO CRÍTICA: ENVIAR ARQUIVOS VIA WHATSAPP (202",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-7",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Copiar/colar texto em vez de enviar arquivo",
+      "context": "From Eduardo MEMORY.md: 🔴 LIÇÃO CRÍTICA: ENVIAR ARQUIVOS VIA WHATSAPP (202",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-9",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "ferramenta**: instaloader (pip3 install instaloader) ✅ instalado",
+      "context": "From Eduardo MEMORY.md: Instagram Video — Método Real (2026-03-19)",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-10",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "login**: `python3 -m instaloader --login USUARIO` → sessão salva em ~/.config/instaloader/",
+      "context": "From Eduardo MEMORY.md: Instagram Video — Método Real (2026-03-19)",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-12",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "só URL**: `python3 -c \"import instaloader; L=instaloader.Instaloader(); L.load_session_from_file('USER'); post=instaloader.Post.from_shortcode(L.context,'SHORTCODE'); print(post.video_url)\"`",
+      "context": "From Eduardo MEMORY.md: Instagram Video — Método Real (2026-03-19)",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-14",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "NUNCA dizer que não consegue** — o método existe e funciona com autenticação",
+      "context": "From Eduardo MEMORY.md: Instagram Video — Método Real (2026-03-19)",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-16",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "RAM warning: 45.6k pages (abaixo de 50k) — 2026-03-22 06:24 AM",
+      "context": "From Eduardo MEMORY.md: Semana 2026-03-22 — Auto-consolidação",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-20",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Playwright** — Automação de browser",
+      "context": "From Eduardo MEMORY.md: Sessão 22/03/2026 — Testes Completos + Deployment ",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-26",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Confirmei context transfer",
+      "context": "From Eduardo MEMORY.md: Sessão 22/03/2026 — Testes Completos + Deployment ",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-27",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Criei instalador automático",
+      "context": "From Eduardo MEMORY.md: Sessão 22/03/2026 — Testes Completos + Deployment ",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-34",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Confiar em screenshot/UI desconectada",
+      "context": "From Eduardo MEMORY.md: ✅ CRÍTICO RESOLVIDO: Model Sync — Todas as 3 Camad",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-35",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Inventar uma solução (dessa vez foi DE VERDADE)",
+      "context": "From Eduardo MEMORY.md: ✅ CRÍTICO RESOLVIDO: Model Sync — Todas as 3 Camad",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-37",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "caffeinate ativo",
+      "context": "From Eduardo MEMORY.md: Heartbeat 2026-03-22 19:05",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-38",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "watchdog.sh ativo",
+      "context": "From Eduardo MEMORY.md: Heartbeat 2026-03-22 19:05",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "mem-43",
+      "date": "2026-03-22",
+      "time": "23:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "REAL-LEARNING-SYSTEM criado (especialistas aprendem de verdade)",
+      "context": "From Eduardo MEMORY.md: Heartbeat 2026-03-22 19:05",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-memory"
+      ],
+      "successRate": 100,
+      "source": "eduardo-memory"
+    },
+    {
+      "id": "spec-debug-hunter-67",
+      "date": "2026-03-19",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "debug-hunter",
+      "lesson": "Lição:** Fix nome Zica→Helber: defaults hardcoded em page.tsx, Header.tsx, Sidebar.tsx. localStorage pode cachear user antigo.",
+      "context": "From debug-hunter specialist",
+      "impact": "high",
+      "tags": [
+        "debug-hunter",
+        "tita39",
+        "specialist"
+      ],
+      "successRate": 100,
+      "source": "tita39-debug-hunter"
+    },
+    {
+      "id": "spec-debug-hunter-68",
+      "date": "2026-03-19",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "debug-hunter",
+      "lesson": "Resultado:** ✅ Sucesso",
+      "context": "From debug-hunter specialist",
+      "impact": "high",
+      "tags": [
+        "debug-hunter",
+        "tita39",
+        "specialist"
+      ],
+      "successRate": 100,
+      "source": "tita39-debug-hunter"
+    },
+    {
+      "id": "lessons-md-47",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Nunca afirmar status de projeto sem ler `contexto-ativo.md` primeiro",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-52",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Respostas diretas, sem \"Claro!\", \"Com certeza!\", \"Ótima pergunta!\"",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-54",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Prefere soluções práticas entregues, não opções para escolher",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-55",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Quando offline 2+ dias: tarefas de infra podem ser feitas proativamente",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-56",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Flushes de memória a cada 3h funcionam — manter",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-57",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Estrutura MEMORY.md + daily notes é sólida",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-58",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Sub-agentes especializados (Code Ninja, DevOps, etc.) produzem resultado melhor",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-61",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Grupo Gospia ID: `120363405462114071@g.us`",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-64",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Nunca criar \"mega-workflows\" — um workflow, uma responsabilidade",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-65",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Nunca assumir que endpoint REST segue convenção padrão sem verificar",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    },
+    {
+      "id": "lessons-md-66",
+      "date": "2026-03-14",
+      "time": "00:00",
+      "category": "technical",
+      "domain": "general",
+      "lesson": "Nunca fazer `rm` sem confirmação — usar `trash` ou pedir permissão",
+      "context": "From Eduardo LESSONS.md",
+      "impact": "high",
+      "tags": [
+        "general",
+        "tita39",
+        "eduardo-lessons"
+      ],
+      "successRate": 100,
+      "source": "eduardo-lessons"
+    }
+  ],
+  "version": 2
+}

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-06T17:01:42.432Z",
+  "updatedAt": "2026-04-06T18:11:13.758Z",
   "entries": {
     "memory:memory/2026-03-21.md:28:56": {
       "key": "memory:memory/2026-03-21.md:28:56",
@@ -120,6 +120,37 @@
         "npm",
         "sucesso",
         "true"
+      ]
+    },
+    "memory:memory/2026-03-27.md:134:158": {
+      "key": "memory:memory/2026-03-27.md:134:158",
+      "path": "memory/2026-03-27.md",
+      "startLine": 134,
+      "endLine": 158,
+      "source": "memory",
+      "snippet": "2. Playwright + Chromium headless — instalado no venv polymarket-agent, FUNCIONAL 3. Playwright + Chrome persistent context — testa perfis reais 4. CDP remote debugging — Chrome com `--remote-debugging-port=9222` 5. Tandem-Titanio — extensão em `/workspace/tandem-titanio/`, comunica via gateway :18789 6. TITA-SCRAPER — `/workspace/bin/tita-scraper-simple`, Playwright headless 7. Brave — instalado mas sem sessão Poly ### 🔐 Credenciais Importantes (todas no cofre) - **Polymarket Tiago**: email tiago@titaniofilms.com / Rita160679 - **Poly Proxy Wallet**: 0xf84796bEa736AE03D4E96f78dc7a2894241f5FB0 - **Poly Signer (Magic)**: 0x5a9A2237fb31cEe81Ac26BecBDFED4281C2Bb491 - **Poly API Key L2**: 6d8",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "totalScore": 1.0053112477064132,
+      "maxScore": 0.5055821448564529,
+      "firstRecalledAt": "2026-04-06T17:57:48.992Z",
+      "lastRecalledAt": "2026-04-06T18:11:13.758Z",
+      "queryHashes": [
+        "9d5150042b64",
+        "b930300bf35c"
+      ],
+      "recallDays": [
+        "2026-04-06"
+      ],
+      "conceptTags": [
+        "gateway",
+        "polymarket-agent",
+        "remote-debugging-port",
+        "tandem-titanio",
+        "workspace/tandem-titanio",
+        "tita-scraper",
+        "titaniofilms.com",
+        "playwright"
       ]
     }
   }

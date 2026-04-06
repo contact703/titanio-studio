@@ -1,0 +1,156 @@
+{
+  "lessons": [
+    "Ferramentas usadas: openai",
+    {
+      "id": "initial-instagramer-0",
+      "date": "2026-03-26",
+      "time": "12:00",
+      "lesson": "Sempre tentar 5 técnicas antes de dizer que não conseguiu acessar Instagram",
+      "impact": "high",
+      "domain": "instagram",
+      "category": "technical",
+      "tags": [
+        "instagram",
+        "initial-knowledge"
+      ],
+      "successRate": 100,
+      "source": "tita-research-bot"
+    },
+    {
+      "id": "initial-instagramer-1",
+      "date": "2026-03-26",
+      "time": "12:00",
+      "lesson": "instagrapi com sessão JSON salva evita login repetido",
+      "impact": "high",
+      "domain": "instagram",
+      "category": "technical",
+      "tags": [
+        "instagram",
+        "initial-knowledge"
+      ],
+      "successRate": 100,
+      "source": "tita-research-bot"
+    },
+    {
+      "id": "initial-instagramer-2",
+      "date": "2026-03-26",
+      "time": "12:00",
+      "lesson": "Anti-ban: máx 50 follows, 100 likes, 20 DMs por dia",
+      "impact": "high",
+      "domain": "anti-ban",
+      "category": "technical",
+      "tags": [
+        "anti-ban",
+        "initial-knowledge"
+      ],
+      "successRate": 100,
+      "source": "tita-research-bot"
+    },
+    {
+      "id": "initial-instagramer-3",
+      "date": "2026-03-26",
+      "time": "12:00",
+      "lesson": "Reels 1080x1920px 9:16, zona segura 150px bordas",
+      "impact": "high",
+      "domain": "design",
+      "category": "technical",
+      "tags": [
+        "design",
+        "initial-knowledge"
+      ],
+      "successRate": 100,
+      "source": "tita-research-bot"
+    },
+    {
+      "id": "initial-instagramer-4",
+      "date": "2026-03-26",
+      "time": "12:00",
+      "lesson": "Feed retrato 1080x1350px tem melhor alcance",
+      "impact": "high",
+      "domain": "design",
+      "category": "technical",
+      "tags": [
+        "design",
+        "initial-knowledge"
+      ],
+      "successRate": 100,
+      "source": "tita-research-bot"
+    },
+    {
+      "id": "initial-instagramer-5",
+      "date": "2026-03-26",
+      "time": "12:00",
+      "lesson": "yt-dlp --no-check-certificates necessário pro Instagram",
+      "impact": "medium",
+      "domain": "scraping",
+      "category": "technical",
+      "tags": [
+        "scraping",
+        "initial-knowledge"
+      ],
+      "successRate": 100,
+      "source": "tita-research-bot"
+    },
+    {
+      "id": "initial-instagramer-6",
+      "date": "2026-03-26",
+      "time": "12:00",
+      "lesson": "Playwright com User-Agent real engana detecção do Instagram",
+      "impact": "high",
+      "domain": "scraping",
+      "category": "technical",
+      "tags": [
+        "scraping",
+        "initial-knowledge"
+      ],
+      "successRate": 100,
+      "source": "tita-research-bot"
+    },
+    {
+      "id": "initial-instagramer-7",
+      "date": "2026-03-26",
+      "time": "12:00",
+      "lesson": "Pillow + ImageFont para texto sobre imagens de post",
+      "impact": "medium",
+      "domain": "design",
+      "category": "technical",
+      "tags": [
+        "design",
+        "initial-knowledge"
+      ],
+      "successRate": 100,
+      "source": "tita-research-bot"
+    },
+    {
+      "id": "initial-instagramer-8",
+      "date": "2026-03-26",
+      "time": "12:00",
+      "lesson": "Conta @titaniodashboard sessão salva no cofre",
+      "impact": "high",
+      "domain": "credentials",
+      "category": "technical",
+      "tags": [
+        "credentials",
+        "initial-knowledge"
+      ],
+      "successRate": 100,
+      "source": "tita-research-bot"
+    },
+    {
+      "id": "initial-instagramer-9",
+      "date": "2026-03-26",
+      "time": "12:00",
+      "lesson": "Postar com delays de 10-15s entre ações para simular humano",
+      "impact": "high",
+      "domain": "anti-ban",
+      "category": "technical",
+      "tags": [
+        "anti-ban",
+        "initial-knowledge"
+      ],
+      "successRate": 100,
+      "source": "tita-research-bot"
+    }
+  ],
+  "version": 2
+}
