@@ -9,7 +9,8 @@ import {
   BarChart3, 
   MessageSquare,
   Settings,
-  Sparkles
+  Sparkles,
+  Bug
 } from 'lucide-react'
 
 const navigation = [
@@ -19,6 +20,7 @@ const navigation = [
   { name: 'Analytics', href: '/analytics', icon: BarChart3 },
   { name: 'IA Copywriter', href: '/copywriter', icon: Sparkles },
   { name: 'Chat', href: '/chat', icon: MessageSquare },
+  { name: 'Debug Hunter', href: '/debug', icon: Bug },
   { name: 'Configurações', href: '/config', icon: Settings },
 ]
 
