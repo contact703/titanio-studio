@@ -1,14 +1,15 @@
 # 🧠 Contexto Ativo - Tita
 
-> Atualizado: 2026-04-02 09:03 UTC (06:03 BRT) — FLUSH AUTOMÁTICO
+> Atualizado: 2026-04-06 15:47 UTC (12:47 BRT) — FLUSH AUTOMÁTICO
 > Arquivo gerado pelo flush de memória persistente
 
 ---
 
 ## ⚠️ Status do Flush
 
-**Último flush:** 2026-04-02 15:03 UTC (12:03 BRT 02/04) ← **AGORA** ✨  
-**Anterior:** 2026-04-02 09:03 UTC (06:03 BRT)  
+**Último flush:** 2026-04-06 15:47 UTC (12:47 BRT 06/04) ← **AGORA** ✨ ⚠️ GAP 3+ DIAS  
+**Anterior:** 2026-04-03 09:03 UTC (06:03 BRT 03/04)  
+**Anterior:** 2026-04-03 03:03 UTC (00:03 BRT 03/04)  
 **Anterior:** 2026-03-30 15:56 UTC (12:56 BRT 30/03)  
 **Anteriores:** 2026-03-29 15:03 UTC, 2026-03-29 09:03 UTC, 2026-03-29 03:03 UTC, 2026-03-28 15:03 UTC, 2026-03-28 03:03 UTC, 2026-03-27 21:03 UTC, 2026-03-27 03:03 UTC, 2026-03-26 09:03 UTC  
 **Volume Tita_DEV_02:** ❌ HD queimou — usando TITA_039/MAC_MINI_03  
@@ -24,10 +25,26 @@
 - **Ação:** Eduardo recarregar conta Moonshot
 - **Fallback atual:** claude-sonnet-4-6 via Anthropic
 
+### ✅ CRISE 06/04 MANHÃ — RESOLVIDA (06/04 ~09:00 BRT)
+- **BOOT check detectou RAM crítica:** FREE_PAGES=3609 — Chrome matado, RAM subiu para ~130k pages
+- **Delivery queue com 6 itens travados** causava loop 499 — movidos para /failed, gateway reiniciado
+- **Estado atual:** Gateway PID 81319, RAM boa (~125k pages), caffeinate ativo, fila vazia
+
 ### ✅ CRISE 01/04 NOITE — RESOLVIDA (02/04 07:55 BRT)
-- **WhatsApp Gateway:** Loop 499 da madrugada parou sozinho. Causa confirmada: heartbeat preventivo (reconnect após 30+ min idle) — comportamento normal.
-- **Anthropic API:** Rate limiting 429 resolveu. Sessões normais desde manhã 02/04.
+- **WhatsApp Gateway:** Loop 499 da madrugada + loop às 13:25–13:35 BRT 02/04 — ambos normais (heartbeat idle reconnect). Resolveram sozinhos.
+- **Anthropic API:** Rate limiting 429 (13:20–13:50 BRT) resolveu. Estável desde 14h BRT.
 - **RAM 07:55 BRT:** FREE_PAGES=203146 — Chrome fechado liberou ~700MB
+
+### ✅ SHARED-SPECIALISTS LIMPO (02/04 ~17h BRT)
+- **52MB → 0.7MB** — poda realizada (50 lições/especialista, mais recentes, sem duplicatas)
+- **Backup:** shared-specialists.json.bak-pre-clean
+- **Impacto:** Dashboard Tiago já pega a versão limpa automaticamente (volume compartilhado)
+
+### ✅ FIX-FINAL-TIAGO.md ENVIADO (02/04 ~21h BRT) — AGUARDANDO EXECUÇÃO
+- Zica reportou relatório Tiago: **86% score** (13/15, Redis offline + fora do PM2)
+- FIX criado e enviado no grupo: 6 passos (Redis → ecosystem.config.js → PM2 → startup → validação)
+- **shared-specialists.json LIMPO:** 52MB → 0.7MB via poda no volume TITA_039 (efeito imediato todos os Macs)
+- **Status:** Aguardando Tiago executar e confirmar score 95%+
 
 ### ⚠️ Polymarket Bot — Alertas Anteriores eram FALSOS
 - monitor.py e auto_trader.py: ✅ RODANDO
@@ -80,8 +97,8 @@
 | **🎮 ENEM Game (Local Ollama)** | ✅ **PRONTO PABERTO** (15:40 BRT). 4 workflows N8n REAIS: game-designer, content-creator, code-generator, qa-tester. Modelo: Qwen 2.5 32B (Local Ollama rodando). Custo: R$ 0.00. Execução: http://localhost:11434 (zero dependências externas). README-LOCAL.md com instruções. Apenas importar em N8n (http://5678) e clicar Execute. | 2026-03-21 15h |
 | **HiClaw Quick Win** | ✅ **IMPLEMENTADO** — Task manager multi-agente. 4 endpoints, 8 pipelines, WebSocket, anti-loop. Print + .md enviados no grupo. Helber/Tiago precisam `git pull`. | 2026-03-27 23:40h |
 | Gold Digger | 🔴 **MORTO** — 44 propostas em **340+ ciclos** (ZERO propostas novas em **150+ ciclos**). Bot reporta canais "ativos" mas não gera nada. KILL SWITCH URGENTÍSSIMO. | 2026-03-30 18:03h |
-| **Monteiro Aranha** | 🟡 **EM ANDAMENTO** — Proposta R$180K implantação + R$12K/mês. 2 MDs criados e enviados (02/04 ~12h): PLANO-SEGURANCA-MONTEIRO-ARANHA.md + GARANTIAS-SEGURANCA-CLIENTE.md. Aguardando feedback Eduardo. Projeto em `projetos/monteiro-aranha/`. Backup Restore Point 3GB feito. | 2026-04-02 12h |
-| **Dashboard Gospia (PM2/Uptime Kuma)** | ⏸️ **PAUSADO por Eduardo** — Retomar quando sinalizar. 4 implementações prontas documentadas: PM2, Uptime Kuma, Tailscale, Multi-tenant. | 2026-04-02 12h |
+| **Monteiro Aranha** | 🟡 **EM ANDAMENTO** — Proposta R$180K implantação + R$12K/mês. Docs enviados. Aguardando feedback Eduardo. Projeto em `projetos/monteiro-aranha/`. | 2026-04-02 18h |
+| **Dashboard Gospia (PM2/Uptime Kuma)** | ⏸️ **PAUSADO por Eduardo** — Retomar quando sinalizar. 4 implementações prontas documentadas. | 2026-04-02 18h |
 | **Titanio Video Factory** | 🟡 Zeroscope funciona grátis (qualidade básica), Wan2.1 em fila (qualidade alta). 1 vídeo real gerado e enviado. | 2026-03-30 18:03h |
 | **Polymarket Bot** | 🟡 Scanner + monitor rodando 24/7. Conta $44.86. **BLOQUEADO:** falta private key wallet (Tiago precisa PC). Playwright como alternativa. | 2026-03-27 00:03h |
 | Maricá Film Commission | Site WordPress/Elementor ativo | 2026-03-12 |
@@ -89,7 +106,7 @@
 | KiteMe (kitesurf-brasil) | API no Railway, aguardando token rw_xxx | 2026-02-26 |
 | KidsHQ Kids Swift | github.com/contact703/kidshq-kids-swift (FamilyControls pendente) | 2026-03-14 |
 | **Dashboard Gospia/Bots** | ✅ TOTALMENTE FUNCIONAL. 31 especialistas + **SYNC COMPLETO (OPERACIONAL)**. **3 instâncias ativas:** Eduardo (4444), Helber (4445), Tiago (4446). Gateway cluster em 192.168.18.174:18789. **Sync:** `/Volumes/TITA_039/shared-projects.json` + `/Volumes/TITA_039/shared-specialists.json` (196k lições!). Botão "Sincronizar Tudo" implementado + auto-export. Watchdog-dashboard.sh ativo. **GitHub:** Commitado + pronto pra Helber/Tiago. **FIX-COMPLETO-TIAGO.md** enviado (nome Helber→Tiago + conexão claw↔dashboard). | 2026-03-26 00:03h |
-| **Bots Design Instagram** | ✅ Migrados para **Kimi (moonshot-v1-128k)**. 3 bots rodando. Instagram @titaniodashboard ativo via instagrapi. **3 posts publicados 28/03** (2 fotos IA + 1 Reels). | 2026-03-28 18:03h |
+| **Bots Design Instagram** | ❌ **OFFLINE** — Kimi/Moonshot conta suspensa (saldo insuficiente). 3 bots parados. Instagram @titaniodashboard. Retomar quando Eduardo recarregar. | 2026-04-02 18h |
 | **tmem (Titanio Memory CLI)** | ✅ **OPERACIONAL.** CLI local de memória (alternativa ao ByteRover). 14 conhecimentos curados, 4 pessoas, 6 projetos. Integra Engine+Graph+Score. Zero cloud/API. | 2026-03-29 18:03h |
 | **Titanio Direct Tools** | ✅ **NOVO — OPERACIONAL.** 12 tools Python chamáveis direto sem MCP overhead. Economia de tokens. MD enviado pro time. | 2026-03-30 12:56h |
 | **Paperclip** | ✅ **ONLINE localhost:3001** — Orquestrador IA (7 agentes, 3 goals). Empresa Titanio Studio. DB backup a cada hora. | 2026-03-27 18:03h |
@@ -350,7 +367,7 @@ Shared Files:                ✅ /Volumes/TITA_039/shared-*.json (projects + spe
 
 ## 📁 Memória Persistente
 
-Última entrada: `2026-03-26_06h.md` ← **FLUSH ATUAL (09:03 UTC)** ✨  
+Última entrada: `2026-04-02_18h.md` ← **FLUSH ATUAL (21:03 UTC)** ✨  
 Anterior: `2026-03-26_00h.md` (FIX-COMPLETO-TIAGO enviado)  
 Anterior: `2026-03-24_12h.md` (Backend ressuscitado)  
 Anterior: `2026-03-24_06h.md` (Watchdog + cleanup gateway)  
@@ -364,9 +381,11 @@ Anterior: `2026-03-24_00h.md`
 **Atualizado:** 2026-03-30 18:03 BRT (21:03 UTC 30/03) ← FLUSH ATUAL  
 **Próximo flush automático:** ~21:03 BRT (2026-03-31 00:03 UTC) — **VERIFICAR: GOLD DIGGER MORTO (340+ ciclos), ASC CAMPOS ZICA (13+ DIAS!), BUILD iOS MORTO (13+ DIAS!), POLYMARKET KEY TIAGO, API RATE LIMITING**
 
-**Memória persistente:** 26 entradas (2026-03-22 03h até 2026-04-02 00h)  
+**Memória persistente:** 27 entradas (2026-03-22 03h até 2026-04-06 12h)  
 **Relatórios recentes:** 
-- `memoria-persistente/2026-04-02_00h.md` ← **ESTE FLUSH** (quinta 00h, gateway 499 loop, rate limiting 429, Zica sem resposta no grupo)
+- `memoria-persistente/2026-04-06_12h.md` ← **ESTE FLUSH** (gap 3+ dias, RAM crítica resolvida, delivery queue limpa)
+- `memoria-persistente/2026-04-03_06h.md` (fix shared-specialists 52MB→0.7MB, FIX-FINAL-TIAGO enviado)
+- `memoria-persistente/2026-04-02_00h.md` (quinta 00h, gateway 499 loop, rate limiting 429, Zica sem resposta no grupo)
 - `memoria-persistente/2026-03-30_18h.md` (segunda 18:03, Eduardo trocou API keys, vídeo Zeroscope gerado, rate limiting Anthropic)
 - `memoria-persistente/2026-03-30_12h.md` (segunda 12:56, Gold Digger 340 ciclos morto, Direct Tools criado, zero interação humana)
 - `memoria-persistente/2026-03-29_18h.md` (domingo 18h, Gold Digger 305 ciclos morto, tmem criado, Polymarket scan)

@@ -1,0 +1,126 @@
+{
+  "version": 1,
+  "updatedAt": "2026-04-06T17:01:42.432Z",
+  "entries": {
+    "memory:memory/2026-03-21.md:28:56": {
+      "key": "memory:memory/2026-03-21.md:28:56",
+      "path": "memory/2026-03-21.md",
+      "startLine": 28,
+      "endLine": 56,
+      "source": "memory",
+      "snippet": "### Erros Aprendidos Hoje 1. Disse \"19+ workflows\" quando tinha 0 em N8n (só documentação) 2. Criei curl direto em vez de rodar via N8n (atalho dishonest) 3. OpenRouter timeouts em requisições grandes 4. N8n UI complexa pra automatizar com Playwright ### Resolução Honesta Depois de descobrir erros, fiz a coisa certa: - Reinstalei N8n sem autenticação - Copiei workflows pra ~/.n8n/workflows/ - Rodei 4 workflows com Ollama (garantido funciona) - Salvei outputs reais no disco - Verificação final confirmou tudo ## 🔄 Sistemas Status (21/03 18:06) - ✅ Ollama (port 11434) - respondendo - ✅ N8n (port 5678) - 4 workflows carregados - ✅ Backend (port 4444) - online - ✅ Frontend (port 3000) - online",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.48369663059711454,
+      "maxScore": 0.48369663059711454,
+      "firstRecalledAt": "2026-04-06T17:01:42.432Z",
+      "lastRecalledAt": "2026-04-06T17:01:42.432Z",
+      "queryHashes": [
+        "c9e95fa30bae"
+      ],
+      "recallDays": [
+        "2026-04-06"
+      ],
+      "conceptTags": [
+        "router",
+        "n8n/workflows",
+        "21/03",
+        "erros",
+        "aprendidos",
+        "hoje",
+        "disse",
+        "workflows"
+      ]
+    },
+    "memory:memory/2026-03-21.md:1:35": {
+      "key": "memory:memory/2026-03-21.md:1:35",
+      "path": "memory/2026-03-21.md",
+      "startLine": 1,
+      "endLine": 35,
+      "source": "memory",
+      "snippet": "# Sessão 21/03/2026 — ENEM Game Deployment (N8n + Ollama + OpenRouter) ## 🎯 Projeto Completo: ENEM Game ### Entrega Final - ✅ 4 workflows N8n criados e testados (game-designer, content-creator, code-generator, qa-tester) - ✅ 4 outputs reais gerados no disco: - `game-final.json` (356B) - estrutura do jogo - `questions-final.json` (974B) - 3 questões ENEM - `main-final.gd` (6.7KB) - código GDScript funcional - `qa-final.json` (4.4KB) - relatório QA - ✅ Sistemas operacionais: Ollama + N8n + Backend + Frontend - ✅ **Custo total: R$ 0.00** (100% gratuito com Ollama local) ### IAs Testadas (Ambas Gratuitas) 1. **Ollama Local (Phi 3.8B)** — Funciona 100%, offline, zero custo 2. **OpenRo",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.48082189857959745,
+      "maxScore": 0.48082189857959745,
+      "firstRecalledAt": "2026-04-06T17:01:42.432Z",
+      "lastRecalledAt": "2026-04-06T17:01:42.432Z",
+      "queryHashes": [
+        "c9e95fa30bae"
+      ],
+      "recallDays": [
+        "2026-04-06"
+      ],
+      "conceptTags": [
+        "router",
+        "21/03/2026",
+        "game-designer",
+        "content-creator",
+        "code-generator",
+        "qa-tester",
+        "game-final.json",
+        "questions-final.json"
+      ]
+    },
+    "memory:memory/2026-03-30.md:85:118": {
+      "key": "memory:memory/2026-03-30.md:85:118",
+      "path": "memory/2026-03-30.md",
+      "startLine": 85,
+      "endLine": 118,
+      "source": "memory",
+      "snippet": "- Clonado e analisado (699 arquivos). Copiamos conceitos: memory middleware, per-agent memory, debounce - NÃO instalamos (Docker pesado, RAM 97%). Adaptamos pro nosso HiClaw - MD: UPGRADE-HICLAW-DEERFLOW.md ### Instagram Auto-Post - titanio-auto-post.sh: 3 posts/dia (09h,14h,19h) + 1 Reels/dia (20h) - 15 temas rotativos sobre IA, LaunchAgents ativos - Teste rodou: banner gerou com sucesso ### Segurança - Red Team Hacker criado (38º especialista) — pentest ético, só nossos sistemas - Scan: firewall OFF, 5 portas expostas, 14 endpoints sem auth, cofre no git history - Fixes: cofre 700, .gitignore reforçado, security-scan.sh + security-fix.sh - Falta: sudo pra firewall (Eduardo) ### Infraest",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.4805305242538452,
+      "maxScore": 0.4805305242538452,
+      "firstRecalledAt": "2026-04-06T17:01:42.432Z",
+      "lastRecalledAt": "2026-04-06T17:01:42.432Z",
+      "queryHashes": [
+        "c9e95fa30bae"
+      ],
+      "recallDays": [
+        "2026-04-06"
+      ],
+      "conceptTags": [
+        "per-agent",
+        "upgrade-hiclaw-deerflow.md",
+        "auto-post",
+        "titanio-auto-post.sh",
+        "posts/dia",
+        "reels/dia",
+        "security-scan.sh",
+        "security-fix.sh"
+      ]
+    },
+    "memory:memory/2026-03-14.md:95:147": {
+      "key": "memory:memory/2026-03-14.md:95:147",
+      "path": "memory/2026-03-14.md",
+      "startLine": 95,
+      "endLine": 147,
+      "source": "memory",
+      "snippet": "- **Tarefa:** Instalação N8n via npm - **Sucesso:** true - **Resultado:** Sucesso - v2.8.4 instalado ### 📝 Lição 13:14 — devops - **Tarefa:** Owner setup via Puppeteer - **Sucesso:** true - **Resultado:** Falhou - click Save não funcionava, usou REST API ### 📝 Lição 13:14 — auth - **Tarefa:** Senha N8n precisa uppercase - **Sucesso:** false - **Resultado:** Erro: titanio2026 rejeitada, correto: Titanio2026! ### 📝 Lição 13:14 — devops - **Tarefa:** API Key N8n pelo SQLite - **Sucesso:** true - **Resultado:** Sucesso após falha na UI - inseriu direto no SQLite ### 📝 Lição 13:14 — n8n - **Tarefa:** Import workflows N8n - **Sucesso:** true - **Resultado:** Falhou com JSON extra, OK c",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.47877491414546963,
+      "maxScore": 0.47877491414546963,
+      "firstRecalledAt": "2026-04-06T17:01:42.432Z",
+      "lastRecalledAt": "2026-04-06T17:01:42.432Z",
+      "queryHashes": [
+        "c9e95fa30bae"
+      ],
+      "recallDays": [
+        "2026-04-06"
+      ],
+      "conceptTags": [
+        "v2.8.4",
+        "tarefa",
+        "instalação",
+        "n8n",
+        "via",
+        "npm",
+        "sucesso",
+        "true"
+      ]
+    }
+  }
+}

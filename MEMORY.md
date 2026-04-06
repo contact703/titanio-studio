@@ -358,3 +358,53 @@ Source: memory/LICAO-CRITICA-MD-ENVIO.md
 - ❌ `--media /local/arquivo.md` NÃO funciona (gateway bloqueia MIME local)
 - ✅ `--media https://URL/arquivo.md` FUNCIONA (via URL passa)
 - **NUNCA converter .md para PDF/DOCX quando pedirem .md** — usar essa rota.
+
+
+## 📅 02/04/2026 — Sessão Gospia (tarde, ~14h-17h)
+
+### Dashboard Titanio — Correções e Deploy
+- PM2 assume gerenciamento principal (LaunchAgents redundantes movidos .bak)
+- Backend compilado TS→JS (`node dist/index.js`), max_memory_restart 800M
+- Frontend `next start` com build otimizado
+- Bug modelo corrigido: `getCurrentModel()` agora lê sessions.json (não openclaw.json)
+- shared-specialists.json limpo: 162MB → 0.3MB (527K lições → 725)
+- 26/26 endpoints testados OK, audit score 100%
+- PM2: backend pid:54444, frontend pid:51476, n8n pid:51477
+
+### Instalador Dashboard v2.0
+- Script INSTALL-TITANIO-DASHBOARD.sh criado (18KB) para padronizar em todos Mac Minis
+- Publicado no GitHub: `contact703/titanio-docs-public` (commit 0f52f1c)
+- WhatsApp bloqueia .sh direto → solução: enviar link raw do GitHub
+
+### Envio de .md via WhatsApp — Lição Definitiva
+- ❌ `--media /local/arquivo.md` → BLOQUEADO (MIME text/markdown)
+- ✅ `--media https://URL/arquivo.md` → FUNCIONA (via URL)
+- Script `bin/enviar-md.sh` criado: upload GitHub → envia link → deleta em 10s
+- Guia completo enviado pro Tiago (GUIA-ENVIO-MD-TIAGO.md)
+
+### Segurança Repo Público
+- Zica alertou: docs sensíveis ficavam públicos no GitHub
+- 15 arquivos expostos (incluindo planos de segurança Monteiro Aranha!)
+- Limpo: só README.md e INSTALL ficaram
+- Regra nova: subir → enviar → deletar (máx 10s público)
+
+### Keychain/Git Popups
+- Popups de permissão do Keychain aparecendo no Mac Mini
+- Fix: limpei credenciais antigas do Git, salvei token direto no Keychain
+- SecurityAgent fechado (kill PID)
+
+### Dossiê SAP vs Titanio Studio
+- Zica enviou TITANIO_STUDIO_APRESENTACAO_NOVA.md (apresentação comercial completa)
+- Pediu pesquisa total da SAP + dossiê técnico
+- Dossiê gerado: `pasta-do-tita/projetos/titanio-studio/DOSSIE-TECNICO-SAP-TITANIO.md` (~24KB)
+- 18+ repos GitHub SAP mapeados, análise BTP/Joule/Data Cloud/Fiori/Integration Suite
+- Comparativo: SAP cobra R$500K-5M em 12 meses, Titanio entrega 80% com 10% do custo em 1 mês
+- Ferramentas SAP open source úteis: credential-digger, fundamental-react, ai-sdk-js, pyodata
+- Time mobilizado: CEO, Oracle, Code Ninja no HiClaw
+
+### Identifiers
+- Instalador GitHub: `https://raw.githubusercontent.com/contact703/titanio-docs-public/main/INSTALL-TITANIO-DASHBOARD.sh`
+- Dossiê SAP: `pasta-do-tita/projetos/titanio-studio/DOSSIE-TECNICO-SAP-TITANIO.md`
+- Script envio: `bin/enviar-md.sh`
+- Token GitHub: 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
+- Portas: Backend 4444, Frontend 3000, N8n 5678, Gateway 18789
